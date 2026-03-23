@@ -1,13 +1,12 @@
 """
-Experiment 1 — Per-token mechanistic profiling of generated clinical notes.
+Experiment 1 — Per-token DLA and activation patching on generated clinical notes.
 
 Pipeline:
   1. Load ACI-Bench examples
-  2. Generate SOAP notes via Gemma 2 9B-IT (greedy decoding)
-  3. Run model.run_with_cache() on (prompt + generated note)
-  4. Compute per-token DLA, lookback ratio, extractive score, SOAP section labels
-  5. Compute per-encounter complexity features
-  6. Save per-token DataFrames (parquet) and per-encounter feature JSON
+  2. Generate clinical notes via Gemma 2 (greedy decoding)
+  3. run_with_cache → per-token DLA (attn_out / mlp_out per layer)
+  4. Zero-ablation patching sweep → per-layer importance per generated token
+  5. Save token DataFrame (parquet) + patching arrays (npz) per encounter
 
 Usage:
     python run_exp1.py [--n 10] [--results-dir results] [--device cuda]
@@ -19,8 +18,8 @@ import json
 import time
 from pathlib import Path
 
+import numpy as np
 import torch
-import pandas as pd
 from transformer_lens import HookedTransformer
 from transformers import AutoTokenizer
 
@@ -28,11 +27,9 @@ from config import (
     MODEL_NAME, DTYPE, SOAP_PROMPT_TEMPLATE,
     MAX_NEW_TOKENS, GENERATION_TEMP,
     N_PILOT, RESULTS_DIR, CACHE_DIR,
-    EARLY_LAYERS, MID_LAYERS, LATE_LAYERS,
 )
-from data import load_aci_examples, segment_soap, assign_token_sections, compute_complexity_features
-from mechanistic import profile_example, aggregate_encounter_features, cache_filter
-from visualise import plot_token_profile
+from data import load_aci_examples
+from mechanistic import profile_example, run_activation_patching, cache_filter
 
 
 # ── Note generation ────────────────────────────────────────────────────────────
@@ -65,24 +62,24 @@ def generate_note(
     prompt_len    = prompt_tokens.shape[1]
 
     with torch.inference_mode():
-        if GENERATION_TEMP == 0:
-            output_tokens = model.generate(
-                prompt_tokens,
-                max_new_tokens=MAX_NEW_TOKENS,
-                temperature=None,
-                do_sample=False,
-                stop_at_eos=True,
-                verbose=False,
-            )
-        else:
-            output_tokens = model.generate(
-                prompt_tokens,
-                max_new_tokens=MAX_NEW_TOKENS,
-                temperature=GENERATION_TEMP,
-                do_sample=True,
-                stop_at_eos=True,
-                verbose=False,
-            )
+        output_tokens = model.generate(
+            prompt_tokens,
+            max_new_tokens=MAX_NEW_TOKENS,
+            temperature=GENERATION_TEMP if GENERATION_TEMP > 0 else 1.0,
+            do_sample=GENERATION_TEMP > 0,
+            freq_penalty=2.0,
+            prepend_bos=False,
+            stop_at_eos=True,
+            verbose=False,
+        )
+
+    # Gemma 2 IT ends turns with <end_of_turn>; TL's stop_at_eos only checks
+    # <eos> (id=1), so truncate manually at whichever stop token comes first.
+    stop_ids = {tokenizer.eos_token_id,
+                tokenizer.convert_tokens_to_ids("<end_of_turn>")}
+    gen_list = output_tokens[0, prompt_len:].tolist()
+    cut = next((j for j, t in enumerate(gen_list) if t in stop_ids), len(gen_list))
+    output_tokens = output_tokens[:, :prompt_len + cut]
 
     generated_ids  = output_tokens[0, prompt_len:]
     generated_text = tokenizer.decode(generated_ids, skip_special_tokens=True)
@@ -110,27 +107,26 @@ def main():
     cache_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"Loading model: {MODEL_NAME}")
-    model = HookedTransformer.from_pretrained(
+    model = HookedTransformer.from_pretrained_no_processing(
         MODEL_NAME,
         dtype=getattr(torch, DTYPE),
         default_padding_side="left",
         device=args.device,
     )
+    torch.set_default_dtype(getattr(torch, DTYPE))
     model.eval()
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
     examples = load_aci_examples(n=args.n)
 
-    all_encounter_features = []
-    all_example_meta       = []
+    all_example_meta = []
 
     for ex in examples:
         parquet_path = out_dir / f"tokens_enc{ex.idx}.parquet"
-        if args.skip_existing and parquet_path.exists():
-            print(f"  enc{ex.idx} — skipping (parquet exists)")
-            token_df = pd.read_parquet(parquet_path)
-            feats = aggregate_encounter_features(token_df)
-            all_encounter_features.append(feats)
+        patch_path   = out_dir / f"patch_enc{ex.idx}.npz"
+
+        if args.skip_existing and parquet_path.exists() and patch_path.exists():
+            print(f"  enc{ex.idx} — skipping (outputs exist)")
             continue
 
         print(f"\n── Encounter {ex.idx} ──────────────────────────────────────")
@@ -139,84 +135,47 @@ def main():
         # ── Step 1: generate note ────────────────────────────────────────
         gen_note, full_tokens, prompt_len = generate_note(model, tokenizer, ex.dialogue)
         ex.generated_note = gen_note
-        print(f"  Generated {full_tokens.shape[1] - prompt_len} tokens in "
-              f"{time.time()-t0:.1f}s")
+        n_gen = full_tokens.shape[1] - prompt_len
+        print(f"  Generated {n_gen} tokens in {time.time()-t0:.1f}s")
         print(f"  Note preview: {gen_note[:120].replace(chr(10),' ')}")
 
-        # ── Step 2: SOAP segmentation ─────────────────────────────────────
-        sections = segment_soap(gen_note)
-        ex.soap_sections = sections
-        print(f"  Sections detected: {list(sections.keys())}")
-
-        # ── Step 3: run_with_cache ────────────────────────────────────────
-        print("  Running forward pass with cache ...")
+        # ── Step 2: DLA via run_with_cache ────────────────────────────────
+        print("  Computing DLA ...")
         with torch.inference_mode():
             _, cache = model.run_with_cache(
                 full_tokens,
                 names_filter=cache_filter,
                 return_type=None,
             )
-
-        # ── Step 4: per-token mechanistic profile ─────────────────────────
-        # Build section labels for each generated token
-        gen_token_strs = [
-            tokenizer.decode([tid])
-            for tid in full_tokens[0, prompt_len:].tolist()
-        ]
-        section_labels = assign_token_sections(gen_token_strs, gen_note, sections)
-
-        token_df = profile_example(model, cache, full_tokens, prompt_len, section_labels)
-        del cache  # free VRAM before next example
+        token_df = profile_example(model, cache, full_tokens, prompt_len)
+        del cache
         torch.cuda.empty_cache()
 
-        # ── Step 5: complexity features ───────────────────────────────────
-        complexity = compute_complexity_features(ex.dialogue, tokenizer)
-        compression = (
-            (full_tokens.shape[1] - prompt_len) / max(prompt_len, 1)
-        )
-        complexity["compression_ratio"] = round(compression, 3)
+        # ── Step 3: zero-ablation activation patching ─────────────────────
+        print(f"  Running activation patching ({2 * model.cfg.n_layers} passes) ...")
+        attn_patch, mlp_patch = run_activation_patching(model, full_tokens, prompt_len)
 
-        # ── Aggregate and save ────────────────────────────────────────────
-        feats = aggregate_encounter_features(token_df)
-        feats.update(complexity)
-        feats["encounter_idx"]  = ex.idx
-        all_encounter_features.append(feats)
-
+        # ── Save ──────────────────────────────────────────────────────────
         token_df.to_parquet(parquet_path)
-        ex.token_df_path = str(parquet_path)
+        np.savez(patch_path, attn=attn_patch, mlp=mlp_patch)
 
-        plot_token_profile(token_df, ex.idx, out_dir=out_dir)
-
-        # Save note text alongside
         all_example_meta.append({
-            "idx":             ex.idx,
-            "generated_note":  ex.generated_note,
-            "soap_sections":   ex.soap_sections,
-            "token_df_path":   ex.token_df_path,
-            "complexity":      complexity,
+            "idx":            ex.idx,
+            "n_gen_tokens":   n_gen,
+            "prompt_len":     prompt_len,
+            "generated_note": ex.generated_note,
+            "parquet_path":   str(parquet_path),
+            "patch_path":     str(patch_path),
         })
 
-        print(f"  Done in {time.time()-t0:.1f}s")
+        print(f"  Done in {time.time()-t0:.1f}s  |  "
+              f"DLA → {parquet_path.name}  patch → {patch_path.name}")
 
-    # ── Save aggregate outputs ────────────────────────────────────────────────
-    feat_path = out_dir / "encounter_features.json"
-    with open(feat_path, "w") as f:
-        json.dump(all_encounter_features, f, indent=2)
-    print(f"\nEncounter features → {feat_path}")
-
+    # ── Save metadata ─────────────────────────────────────────────────────────
     meta_path = out_dir / "example_meta.json"
     with open(meta_path, "w") as f:
         json.dump(all_example_meta, f, indent=2)
-    print(f"Example metadata  → {meta_path}")
-
-    # Summary stats
-    print("\n── Summary ──────────────────────────────────────────────────")
-    feat_df = pd.DataFrame(all_encounter_features)
-    for col in ["attn_fraction", "mlp_fraction", "lookback_ratio",
-                "extractive_score", "entity_density"]:
-        if col in feat_df.columns:
-            print(f"  {col:<30} mean={feat_df[col].mean():.3f}  "
-                  f"std={feat_df[col].std():.3f}")
+    print(f"\nMetadata → {meta_path}")
 
 
 if __name__ == "__main__":
