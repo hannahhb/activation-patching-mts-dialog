@@ -27,9 +27,13 @@ from config import (
     MODEL_NAME, DTYPE, SOAP_PROMPT_TEMPLATE,
     MAX_NEW_TOKENS, GENERATION_TEMP,
     N_PILOT, RESULTS_DIR, CACHE_DIR,
+    EARLY_LAYERS, MID_LAYERS, LATE_LAYERS, UPPER_LAYERS,
 )
-from data import load_aci_examples
-from mechanistic import profile_example, run_activation_patching, cache_filter
+from data import load_aci_examples, assign_sections, extract_soap_sections
+from mechanistic import (
+    profile_example, run_activation_patching, cache_filter,
+    aggregate_encounter_features,
+)
 
 
 # ── Note generation ────────────────────────────────────────────────────────────
@@ -119,7 +123,8 @@ def main():
 
     examples = load_aci_examples(n=args.n)
 
-    all_example_meta = []
+    all_example_meta     = []
+    all_encounter_feats  = []
 
     for ex in examples:
         parquet_path = out_dir / f"tokens_enc{ex.idx}.parquet"
@@ -151,19 +156,41 @@ def main():
         del cache
         torch.cuda.empty_cache()
 
+        # Tag each generated token with its SOAP section
+        token_df = assign_sections(token_df, tokenizer, gen_note)
+
         # ── Step 3: zero-ablation activation patching ─────────────────────
         print(f"  Running activation patching ({2 * model.cfg.n_layers} passes) ...")
         attn_patch, mlp_patch = run_activation_patching(model, full_tokens, prompt_len)
+
+        # ── Step 4: aggregate encounter-level features ────────────────────
+        enc_feats = aggregate_encounter_features(
+            token_df        = token_df,
+            attn_patch      = attn_patch,
+            mlp_patch       = mlp_patch,
+            generated_note  = gen_note,
+            source_dialogue = ex.dialogue,
+            tokenizer       = tokenizer,
+            early_layers    = EARLY_LAYERS,
+            mid_layers      = MID_LAYERS,
+            late_layers     = LATE_LAYERS,
+            upper_layers    = UPPER_LAYERS,
+        )
+        enc_feats["encounter_idx"] = ex.idx
+        all_encounter_feats.append(enc_feats)
 
         # ── Save ──────────────────────────────────────────────────────────
         token_df.to_parquet(parquet_path)
         np.savez(patch_path, attn=attn_patch, mlp=mlp_patch)
 
+        soap_sections = extract_soap_sections(gen_note)
         all_example_meta.append({
             "idx":            ex.idx,
             "n_gen_tokens":   n_gen,
             "prompt_len":     prompt_len,
-            "generated_note": ex.generated_note,
+            "generated_note": gen_note,
+            "soap_sections":  soap_sections,
+            "token_df_path":  str(parquet_path),
             "parquet_path":   str(parquet_path),
             "patch_path":     str(patch_path),
         })
@@ -171,11 +198,16 @@ def main():
         print(f"  Done in {time.time()-t0:.1f}s  |  "
               f"DLA → {parquet_path.name}  patch → {patch_path.name}")
 
-    # ── Save metadata ─────────────────────────────────────────────────────────
+    # ── Save metadata + encounter features ───────────────────────────────────
     meta_path = out_dir / "example_meta.json"
     with open(meta_path, "w") as f:
         json.dump(all_example_meta, f, indent=2)
     print(f"\nMetadata → {meta_path}")
+
+    feats_path = out_dir / "encounter_features.json"
+    with open(feats_path, "w") as f:
+        json.dump(all_encounter_feats, f, indent=2)
+    print(f"Encounter features → {feats_path}")
 
 
 if __name__ == "__main__":

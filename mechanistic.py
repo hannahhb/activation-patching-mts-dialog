@@ -15,6 +15,8 @@ Activation Patching (zero-ablation)
 
 from __future__ import annotations
 
+from typing import Dict, List
+
 import numpy as np
 import pandas as pd
 import torch
@@ -181,3 +183,139 @@ def run_activation_patching(
 
     print()
     return attn_patch, mlp_patch
+
+
+# ── Lookback Ratio ─────────────────────────────────────────────────────────────
+
+def lookback_ratio(token_df: pd.DataFrame, early_layers: List[int]) -> float:
+    """
+    Fraction of total attention DLA that comes from early layers.
+
+    High (→1) = model relies on early-layer attention (direct source retrieval).
+    Low (→0)  = attention attribution concentrated in later layers.
+    """
+    early_cols  = [f"attn_dla_L{L}" for L in early_layers
+                   if f"attn_dla_L{L}" in token_df.columns]
+    all_attn    = [c for c in token_df.columns if c.startswith("attn_dla_L")]
+    if not all_attn:
+        return 0.0
+    early_mass = float(token_df[early_cols].abs().values.sum()) if early_cols else 0.0
+    total_mass = float(token_df[all_attn].abs().values.sum()) + 1e-8
+    return round(early_mass / total_mass, 4)
+
+
+# ── Source Attention Entropy ───────────────────────────────────────────────────
+
+def source_attention_entropy(
+    token_df:     pd.DataFrame,
+    upper_layers: List[int],
+) -> float:
+    """
+    Normalised Shannon entropy of per-layer attention DLA magnitudes in the
+    upper half of the network.
+
+    High = attribution spread across many upper layers (diffuse processing).
+    Low  = concentrated on a few upper layers (focused retrieval).
+    """
+    upper_cols = [f"attn_dla_L{L}" for L in upper_layers
+                  if f"attn_dla_L{L}" in token_df.columns]
+    if not upper_cols:
+        return 0.0
+
+    mean_abs = token_df[upper_cols].abs().mean(axis=0).values
+    total    = mean_abs.sum() + 1e-10
+    p        = mean_abs / total
+    entropy  = -float(np.sum(p * np.log(p + 1e-10)))
+    max_ent  = float(np.log(len(upper_cols)))
+    return round(entropy / max_ent, 4) if max_ent > 0 else 0.0
+
+
+# ── Extractive Score ───────────────────────────────────────────────────────────
+
+def extractive_score(
+    generated_note:  str,
+    source_dialogue: str,
+    n:               int = 4,
+) -> float:
+    """
+    Fraction of n-grams in the generated note that appear in the source dialogue.
+
+    1.0 = fully extractive (every n-gram copied from source).
+    0.0 = fully abstractive (no n-gram overlap).
+    """
+    def _ngrams(text: str, k: int):
+        words = text.lower().split()
+        return {tuple(words[i: i + k]) for i in range(len(words) - k + 1)}
+
+    gen_grams = _ngrams(generated_note,  n)
+    src_grams = _ngrams(source_dialogue, n)
+    if not gen_grams:
+        return 0.0
+    return round(len(gen_grams & src_grams) / len(gen_grams), 4)
+
+
+# ── Aggregate Encounter Features ───────────────────────────────────────────────
+
+def aggregate_encounter_features(
+    token_df:        pd.DataFrame,
+    attn_patch:      np.ndarray,
+    mlp_patch:       np.ndarray,
+    generated_note:  str,
+    source_dialogue: str,
+    tokenizer,
+    early_layers:    List[int],
+    mid_layers:      List[int],
+    late_layers:     List[int],
+    upper_layers:    List[int],
+) -> Dict:
+    """
+    Collapse per-token DLA and patching arrays into a single encounter-level
+    feature dict compatible with ``analysis.build_signature_matrix``.
+
+    Band DLA contributions are mean absolute DLA across tokens and layers in
+    that band.  Patching importance uses mean positive patch score (importance
+    of the component for the actual generated tokens).
+    """
+    def _band_mean(prefix: str, layers: List[int]) -> float:
+        cols = [f"{prefix}_L{L}" for L in layers if f"{prefix}_L{L}" in token_df.columns]
+        return float(token_df[cols].abs().mean().mean()) if cols else 0.0
+
+    def _patch_band_mean(patch_arr: np.ndarray, layers: List[int]) -> float:
+        rows = [L for L in layers if L < patch_arr.shape[0]]
+        if not rows:
+            return 0.0
+        return float(patch_arr[rows, :].clip(min=0).mean())
+
+    feat: Dict = {
+        # ── DLA band contributions ────────────────────────────────────────────
+        "attn_contribution_early": _band_mean("attn_dla", early_layers),
+        "attn_contribution_mid":   _band_mean("attn_dla", mid_layers),
+        "attn_contribution_late":  _band_mean("attn_dla", late_layers),
+        "mlp_contribution_early":  _band_mean("mlp_dla",  early_layers),
+        "mlp_contribution_mid":    _band_mean("mlp_dla",  mid_layers),
+        "mlp_contribution_late":   _band_mean("mlp_dla",  late_layers),
+        # ── Patching importance (mean positive drop when ablated) ─────────────
+        "attn_patch_early": _patch_band_mean(attn_patch, early_layers),
+        "attn_patch_mid":   _patch_band_mean(attn_patch, mid_layers),
+        "attn_patch_late":  _patch_band_mean(attn_patch, late_layers),
+        "mlp_patch_early":  _patch_band_mean(mlp_patch,  early_layers),
+        "mlp_patch_mid":    _patch_band_mean(mlp_patch,  mid_layers),
+        "mlp_patch_late":   _patch_band_mean(mlp_patch,  late_layers),
+        # ── Aggregate ratios ──────────────────────────────────────────────────
+        "attn_fraction":            round(float(token_df["attn_fraction"].mean()), 4),
+        "mlp_fraction":             round(float(token_df["mlp_fraction"].mean()),  4),
+        "lookback_ratio":           lookback_ratio(token_df, early_layers),
+        "source_attention_entropy": source_attention_entropy(token_df, upper_layers),
+        "extractive_score":         extractive_score(generated_note, source_dialogue),
+    }
+
+    # ── Per-section mlp fractions (requires 'section' column) ─────────────────
+    if "section" in token_df.columns:
+        for sec_name, sub in token_df.groupby("section"):
+            feat[f"mlp_frac_{sec_name}"] = round(float(sub["mlp_fraction"].mean()), 4)
+
+    # ── Input complexity features ─────────────────────────────────────────────
+    from data import compute_complexity_features
+    feat.update(compute_complexity_features(source_dialogue, tokenizer))
+
+    return feat
