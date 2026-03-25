@@ -1,17 +1,24 @@
 """
 Data loading for ACI-Bench.
+
+Also provides:
+  - extract_soap_sections(note_text)  → dict[section_name, section_text]
+  - assign_sections(token_df, tokenizer, generated_note) → token_df with 'section' col
+  - compute_complexity_features(dialogue, tokenizer)      → dict of scalar features
 """
 
 from __future__ import annotations
+import re
 import random
 from dataclasses import dataclass
-from typing import List
+from typing import Dict, List
 
+import numpy as np
 from datasets import load_dataset
 
 from config import (
     DATASET_HF_ID, DATASET_SPLIT, DIALOGUE_COL, NOTE_COL,
-    N_FULL, RANDOM_SEED,
+    N_FULL, RANDOM_SEED, SOAP_SECTIONS,
 )
 
 
