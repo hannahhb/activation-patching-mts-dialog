@@ -30,6 +30,8 @@ from config import (
     EARLY_LAYERS, MID_LAYERS, LATE_LAYERS, UPPER_LAYERS,
 )
 from data import load_aci_examples, assign_sections, extract_soap_sections
+from entities import extract_entities
+from entity_dla import run_entity_analysis, save_entity_summaries, EncounterEntitySummary
 from mechanistic import (
     profile_example, run_activation_patching, cache_filter,
     aggregate_encounter_features,
@@ -123,8 +125,9 @@ def main():
 
     examples = load_aci_examples(n=args.n)
 
-    all_example_meta     = []
-    all_encounter_feats  = []
+    all_example_meta       = []
+    all_encounter_feats    = []
+    all_entity_summaries: list[EncounterEntitySummary] = []
 
     for ex in examples:
         parquet_path = out_dir / f"tokens_enc{ex.idx}.parquet"
@@ -179,6 +182,27 @@ def main():
         enc_feats["encounter_idx"] = ex.idx
         all_encounter_feats.append(enc_feats)
 
+        # ── Step 5: entity-level DLA ──────────────────────────────────────
+        print("  Extracting clinical entities ...")
+        full_ids = full_tokens[0].tolist()
+        entities = extract_entities(
+            dialogue       = ex.dialogue,
+            generated_note = gen_note,
+            tokenizer      = tokenizer,
+            full_token_ids = full_ids,
+            prompt_len     = prompt_len,
+        )
+        print(f"  Found {len(entities)} entities reproduced in note — running entity DLA ...")
+        entity_summary = run_entity_analysis(
+            model          = model,
+            full_tokens    = full_tokens,
+            prompt_len     = prompt_len,
+            entities       = entities,
+            encounter_idx  = ex.idx,
+        )
+        all_entity_summaries.append(entity_summary)
+        print(f"  Entity DLA done ({entity_summary.n_entities_analysed} analysed)")
+
         # ── Save ──────────────────────────────────────────────────────────
         token_df.to_parquet(parquet_path)
         np.savez(patch_path, attn=attn_patch, mlp=mlp_patch)
@@ -208,6 +232,9 @@ def main():
     with open(feats_path, "w") as f:
         json.dump(all_encounter_feats, f, indent=2)
     print(f"Encounter features → {feats_path}")
+
+    entity_path = out_dir / "entity_dla.json"
+    save_entity_summaries(all_entity_summaries, entity_path)
 
 
 if __name__ == "__main__":
