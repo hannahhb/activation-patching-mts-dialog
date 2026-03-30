@@ -68,9 +68,18 @@ def load_exp1_outputs(exp1_dir: Path):
 
 def parse_args():
     p = argparse.ArgumentParser(description="Experiment 2: PDSQI-9 scoring + correlation")
-    p.add_argument("--exp1-dir",   type=str, default="results/exp1")
-    p.add_argument("--results-dir",type=str, default=RESULTS_DIR)
-    p.add_argument("--judge-model",type=str, default=JUDGE_MODEL)
+    p.add_argument("--exp1-dir",      type=str, default="results/exp1")
+    p.add_argument("--results-dir",   type=str, default=RESULTS_DIR)
+    p.add_argument("--judge-model",   type=str, default=JUDGE_MODEL,
+                   help="Model identifier (meaning depends on --judge-backend)")
+    p.add_argument("--judge-backend", type=str, default="openai",
+                   choices=["openai", "hf", "bedrock"],
+                   help=(
+                       "Inference backend for the PDSQI-9 judge. "
+                       "openai: OpenAI API (needs OPENAI_API_KEY); "
+                       "hf: HuggingFace Inference API (needs HF_API_KEY); "
+                       "bedrock: AWS Bedrock (needs AWS credentials)"
+                   ))
     p.add_argument("--skip-scoring", action="store_true",
                    help="Skip API scoring; load cached scores only")
     return p.parse_args()
@@ -94,7 +103,7 @@ def main():
         with open(scores_path) as f:
             all_scores = json.load(f)
     else:
-        judge = PDSQI9Judge(model=args.judge_model)
+        judge = PDSQI9Judge(model=args.judge_model, backend=args.judge_backend)
         all_scores = []
 
         for i, meta in enumerate(example_meta):

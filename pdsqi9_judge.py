@@ -1,5 +1,10 @@
 """
-Experiment 2 — PDSQI-9 LLM-as-a-Judge via GPT-4o with 5-shot prompting.
+Experiment 2 — PDSQI-9 LLM-as-a-Judge with 5-shot prompting.
+
+Supports three inference backends:
+  - "openai"  : OpenAI-compatible API (default; requires OPENAI_API_KEY)
+  - "hf"      : HuggingFace Inference API (requires HF_API_KEY)
+  - "bedrock" : AWS Bedrock (requires AWS credentials in env/profile)
 
 Scores each generated note (and optionally each SOAP section) on all 9
 PDSQI-9 attributes.  Results are cached to disk so API calls are not
@@ -16,8 +21,6 @@ import json
 import os
 from pathlib import Path
 from typing import Dict, List, Optional
-
-from openai import OpenAI
 
 from config import (
     PDSQI9_ATTRIBUTES, JUDGE_MODEL, JUDGE_TEMPERATURE,
@@ -459,12 +462,121 @@ class _ScoreCache:
 _cache = _ScoreCache(Path(CACHE_DIR) / "pdsqi9_scores.json")
 
 
+# ── Backend implementations ────────────────────────────────────────────────────
+
+class _OpenAIBackend:
+    """OpenAI-compatible API (also works with Azure OpenAI via OPENAI_BASE_URL)."""
+
+    def __init__(self, model: str):
+        from openai import OpenAI
+        self.client = OpenAI()   # reads OPENAI_API_KEY from env
+        self.model  = model
+
+    def call(self, prompt: str) -> str:
+        resp = self.client.chat.completions.create(
+            model=self.model,
+            temperature=JUDGE_TEMPERATURE,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        return resp.choices[0].message.content.strip()
+
+
+class _HFBackend:
+    """
+    HuggingFace Inference API (serverless or dedicated endpoint).
+
+    Set HF_API_KEY (or HUGGINGFACE_API_KEY) in your environment.
+    `model` should be a repo ID, e.g. "mistralai/Mixtral-8x7B-Instruct-v0.1".
+    """
+
+    def __init__(self, model: str):
+        from huggingface_hub import InferenceClient
+        api_key = os.environ.get("HF_API_KEY") or os.environ.get("HUGGINGFACE_API_KEY")
+        self.client = InferenceClient(model=model, token=api_key)
+        self.model  = model
+
+    def call(self, prompt: str) -> str:
+        resp = self.client.chat_completion(
+            messages=[{"role": "user", "content": prompt}],
+            temperature=max(JUDGE_TEMPERATURE, 1e-3),  # HF API rejects 0
+            max_tokens=64,
+        )
+        return resp.choices[0].message.content.strip()
+
+
+class _BedrockBackend:
+    """
+    AWS Bedrock — Converse API (works with Claude, Llama, Mistral, etc.).
+
+    Credentials are read from env vars (AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY)
+    or the default AWS profile.  Set AWS_DEFAULT_REGION if needed.
+
+    `model` should be a Bedrock model ID, e.g.
+      "anthropic.claude-3-5-sonnet-20241022-v2:0"
+      "meta.llama3-70b-instruct-v1:0"
+    """
+
+    def __init__(self, model: str):
+        import boto3
+        region = os.environ.get("AWS_DEFAULT_REGION", "us-east-1")
+        self.client = boto3.client("bedrock-runtime", region_name=region)
+        self.model  = model
+
+    def call(self, prompt: str) -> str:
+        import json as _json
+        body = _json.dumps({
+            "messages": [{"role": "user", "content": prompt}],
+            "temperature": JUDGE_TEMPERATURE,
+            "max_tokens": 64,
+        })
+        resp = self.client.invoke_model(
+            modelId=self.model,
+            body=body,
+            contentType="application/json",
+            accept="application/json",
+        )
+        payload = _json.loads(resp["body"].read())
+        # Claude-style response
+        if "content" in payload:
+            return payload["content"][0]["text"].strip()
+        # Llama-style response
+        if "generation" in payload:
+            return payload["generation"].strip()
+        # Mistral-style
+        if "outputs" in payload:
+            return payload["outputs"][0]["text"].strip()
+        raise ValueError(f"Unrecognised Bedrock response shape: {list(payload.keys())}")
+
+
+def _make_backend(backend: str, model: str):
+    backend = backend.lower()
+    if backend == "openai":
+        return _OpenAIBackend(model)
+    if backend in ("hf", "huggingface"):
+        return _HFBackend(model)
+    if backend in ("bedrock", "aws", "aws_bedrock"):
+        return _BedrockBackend(model)
+    raise ValueError(f"Unknown judge backend {backend!r}. Choose: openai, hf, bedrock")
+
+
 # ── Judge class ────────────────────────────────────────────────────────────────
 
 class PDSQI9Judge:
-    def __init__(self, model: str = JUDGE_MODEL):
-        self.client = OpenAI()  # reads OPENAI_API_KEY from env
-        self.model  = model
+    def __init__(self, model: str = JUDGE_MODEL, backend: str = "openai"):
+        """
+        Parameters
+        ----------
+        model:
+            Model identifier — meaning depends on backend:
+            - openai  : OpenAI model name, e.g. "gpt-4o"
+            - hf      : HuggingFace repo ID, e.g. "mistralai/Mixtral-8x7B-Instruct-v0.1"
+            - bedrock : Bedrock model ID, e.g. "anthropic.claude-3-5-sonnet-20241022-v2:0"
+        backend:
+            One of "openai", "hf", "bedrock".
+        """
+        self._backend = _make_backend(backend, model)
+        self.model    = model
+        self.backend  = backend
 
     def score_attribute(
         self,
@@ -486,17 +598,12 @@ class PDSQI9Judge:
 
         for attempt in range(retries + 1):
             try:
-                resp = self.client.chat.completions.create(
-                    model=self.model,
-                    temperature=JUDGE_TEMPERATURE,
-                    messages=[{"role": "user", "content": prompt}],
-                )
-                text = resp.choices[0].message.content.strip()
+                text  = self._backend.call(prompt)
                 score = int(text.splitlines()[0].strip())
                 _cache.set(attribute, dialogue, note, section_name, {"score": score})
                 return score
             except Exception as e:
-                print(f"    [Judge] {attribute} attempt {attempt+1} failed: {e}")
+                print(f"    [Judge/{self.backend}] {attribute} attempt {attempt+1} failed: {e}")
 
         return None
 
@@ -522,11 +629,9 @@ class PDSQI9Judge:
         """
         result: Dict[str, Dict] = {"full": {}, "sections": {}}
 
-        # Full-note scores
         for attr in PDSQI9_ATTRIBUTES:
             result["full"][attr] = self.score_attribute(attr, dialogue, note)
 
-        # Per-section scores
         if sections:
             for sec_name, sec_text in sections.items():
                 if not sec_text.strip():
