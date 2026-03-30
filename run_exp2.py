@@ -80,6 +80,8 @@ def parse_args():
                        "hf: HuggingFace Inference API (needs HF_API_KEY); "
                        "bedrock: AWS Bedrock (needs AWS credentials)"
                    ))
+    p.add_argument("--zero-shot", action="store_true",
+                   help="Use zero-shot prompting (no few-shot examples)")
     p.add_argument("--skip-scoring", action="store_true",
                    help="Skip API scoring; load cached scores only")
     return p.parse_args()
@@ -103,7 +105,7 @@ def main():
         with open(scores_path) as f:
             all_scores = json.load(f)
     else:
-        judge = PDSQI9Judge(model=args.judge_model, backend=args.judge_backend)
+        judge = PDSQI9Judge(model=args.judge_model, backend=args.judge_backend, zero_shot=args.zero_shot)
         all_scores = []
 
         for i, meta in enumerate(example_meta):

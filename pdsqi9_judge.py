@@ -393,13 +393,14 @@ _SHOTS: Dict[str, List[tuple]] = {
 # ── Prompt builder ─────────────────────────────────────────────────────────────
 
 def _build_prompt(
-    attribute:   str,
-    dialogue:    str,
-    note:        str,
+    attribute:    str,
+    dialogue:     str,
+    note:         str,
     section_name: Optional[str] = None,
+    zero_shot:    bool = False,
 ) -> str:
     rubric = _RUBRICS[attribute]
-    shots  = _SHOTS.get(attribute, [])
+    shots  = [] if zero_shot else _SHOTS.get(attribute, [])
 
     scope = f"the '{section_name}' section of " if section_name else ""
     scale = "an integer 0 or 1" if attribute == "stigmatizing" else "an integer from 1 to 5"
@@ -410,17 +411,19 @@ def _build_prompt(
         "",
         f"RUBRIC:\n{rubric}",
         "",
-        "--- EXAMPLES ---",
     ]
-    for i, (ex_dial, ex_note, ex_score, ex_just) in enumerate(shots, 1):
-        lines += [
-            f"Example {i}:",
-            f"Dialogue excerpt: {ex_dial}",
-            f"Note excerpt: {ex_note}",
-            f"Score: {ex_score}",
-            f"Justification: {ex_just}",
-            "",
-        ]
+
+    if shots:
+        lines.append("--- EXAMPLES ---")
+        for i, (ex_dial, ex_note, ex_score, ex_just) in enumerate(shots, 1):
+            lines += [
+                f"Example {i}:",
+                f"Dialogue excerpt: {ex_dial}",
+                f"Note excerpt: {ex_note}",
+                f"Score: {ex_score}",
+                f"Justification: {ex_just}",
+                "",
+            ]
 
     lines += [
         "--- YOUR TASK ---",
@@ -562,7 +565,7 @@ def _make_backend(backend: str, model: str):
 # ── Judge class ────────────────────────────────────────────────────────────────
 
 class PDSQI9Judge:
-    def __init__(self, model: str = JUDGE_MODEL, backend: str = "openai"):
+    def __init__(self, model: str = JUDGE_MODEL, backend: str = "openai", zero_shot: bool = False):
         """
         Parameters
         ----------
@@ -573,10 +576,13 @@ class PDSQI9Judge:
             - bedrock : Bedrock model ID, e.g. "anthropic.claude-3-5-sonnet-20241022-v2:0"
         backend:
             One of "openai", "hf", "bedrock".
+        zero_shot:
+            If True, omit the few-shot examples from the prompt.
         """
-        self._backend = _make_backend(backend, model)
-        self.model    = model
-        self.backend  = backend
+        self._backend  = _make_backend(backend, model)
+        self.model     = model
+        self.backend   = backend
+        self.zero_shot = zero_shot
 
     def score_attribute(
         self,
@@ -594,7 +600,7 @@ class PDSQI9Judge:
         if cached is not None:
             return cached["score"]
 
-        prompt = _build_prompt(attribute, dialogue, note, section_name)
+        prompt = _build_prompt(attribute, dialogue, note, section_name, zero_shot=self.zero_shot)
 
         for attempt in range(retries + 1):
             try:
