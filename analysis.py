@@ -225,29 +225,57 @@ def complexity_interaction_anova(
 
     Returns dict with F-stats and p-values for main effects and interaction.
     """
+    _COMPLEXITY_FALLBACKS = [
+        "entity_density", "source_len_tokens", "hedge_density",
+        "negation_density", "type_token_ratio",
+    ]
+
     feat_df = pd.DataFrame(encounter_features)
-    if complexity_key not in feat_df.columns:
-        return {"error": f"{complexity_key} not in features"}
+
+    # Pick a complexity key that has non-zero variance
+    chosen_key = None
+    for ck in [complexity_key] + [f for f in _COMPLEXITY_FALLBACKS if f != complexity_key]:
+        if ck in feat_df.columns and feat_df[ck].nunique() > 1:
+            chosen_key = ck
+            break
+    if chosen_key is None:
+        return {"error": f"no complexity key with variance found (tried {_COMPLEXITY_FALLBACKS})"}
+    if chosen_key != complexity_key:
+        print(f"  [complexity_anova] '{complexity_key}' has zero variance — using '{chosen_key}' instead")
 
     # Median-split on complexity
-    median_complexity = feat_df[complexity_key].median()
+    median_complexity = feat_df[chosen_key].median()
     feat_df["complexity_group"] = (
-        feat_df[complexity_key] > median_complexity
+        feat_df[chosen_key] > median_complexity
     ).map({True: "high", False: "low"})
 
-    # Extractive vs abstractive section means per encounter
-    # Pull from per-section mlp contributions if available
+    # Classify whatever mlp_frac_* keys exist by section name
+    sample = encounter_features[0] if encounter_features else {}
+    present_mlp_keys = [k for k in sample if k.startswith("mlp_frac_")]
+
+    def _section_type(key: str) -> Optional[str]:
+        sec = key[len("mlp_frac_"):]
+        if sec in EXTRACTIVE_SECTIONS:
+            return "extractive"
+        if sec in ABSTRACTIVE_SECTIONS:
+            return "abstractive"
+        return None  # unclassified — skip
+
     rows = []
     for i, ef in enumerate(encounter_features):
         cgroup = feat_df.loc[i, "complexity_group"]
-        for sec in EXTRACTIVE_SECTIONS:
-            key = f"mlp_frac_{sec}"
-            if key in ef:
-                rows.append({"complexity": cgroup, "section_type": "extractive", "value": ef[key]})
-        for sec in ABSTRACTIVE_SECTIONS:
-            key = f"mlp_frac_{sec}"
-            if key in ef:
-                rows.append({"complexity": cgroup, "section_type": "abstractive", "value": ef[key]})
+        for key in present_mlp_keys:
+            stype = _section_type(key)
+            if stype and key in ef:
+                rows.append({"complexity": cgroup, "section_type": stype, "value": ef[key]})
+
+    # If no sections matched the taxonomy, fall back to aggregate mlp_fraction
+    if not rows and "mlp_fraction" in feat_df.columns:
+        print("  [complexity_anova] no per-section mlp keys matched taxonomy — "
+              "using aggregate mlp_fraction as single section_type='aggregate'")
+        for i, ef in enumerate(encounter_features):
+            cgroup = feat_df.loc[i, "complexity_group"]
+            rows.append({"complexity": cgroup, "section_type": "aggregate", "value": ef["mlp_fraction"]})
 
     if not rows:
         return {"error": "no per-section mlp features found in encounter_features"}
