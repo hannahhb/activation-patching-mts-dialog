@@ -178,7 +178,10 @@ def main():
         anova_path = out_dir / "section_anova.csv"
         anova_df.to_csv(anova_path)
         print(f"  ANOVA results → {anova_path}")
-        print(anova_df.sort_values("eta_sq", ascending=False).head(8).to_string())
+        if not anova_df.empty:
+            print(anova_df.sort_values("eta_sq", ascending=False).head(8).to_string())
+        else:
+            print("  (no features had sufficient data for ANOVA)")
 
         anova_plot = plot_section_anova(anova_df, out_dir=out_dir)
         print(f"  ANOVA plot    → {anova_plot}")

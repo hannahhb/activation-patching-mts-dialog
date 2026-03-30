@@ -157,6 +157,8 @@ def section_anova(token_dfs: List[pd.DataFrame]) -> pd.DataFrame:
             "eta_sq":  round(eta_sq, 3),
         })
 
+    if not rows:
+        return pd.DataFrame(columns=["F_stat", "p_value", "eta_sq"])
     return pd.DataFrame(rows).set_index("feature")
 
 
