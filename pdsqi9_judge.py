@@ -509,46 +509,74 @@ class _HFBackend:
 
 class _BedrockBackend:
     """
-    AWS Bedrock — Converse API (works with Claude, Llama, Mistral, etc.).
+    AWS Bedrock — Converse API (works with Claude, Llama, Mistral, Qwen, etc.).
 
     Credentials are read from env vars (AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY)
-    or the default AWS profile.  Set AWS_DEFAULT_REGION if needed.
+    or the default AWS profile.  Set AWS_DEFAULT_REGION or AWS_REGION if needed.
 
     `model` should be a Bedrock model ID, e.g.
       "anthropic.claude-3-5-sonnet-20241022-v2:0"
-      "meta.llama3-70b-instruct-v1:0"
+      "us.meta.llama3-3-70b-instruct-v1:0"
+      "qwen.qwen3-235b-a22b-2507-v1:0"
     """
 
-    def __init__(self, model: str):
+    def __init__(self, model: str, pool_size: int = 3):
         import boto3
-        region = os.environ.get("AWS_DEFAULT_REGION", "us-east-1")
-        self.client = boto3.client("bedrock-runtime", region_name=region)
+        import itertools
+        import threading
+        from botocore.config import Config as BotoConfig
+
+        region = os.environ.get("AWS_REGION") or os.environ.get("AWS_DEFAULT_REGION", "us-east-1")
+        cfg = BotoConfig(
+            retries={"max_attempts": 5, "mode": "adaptive"},
+            connect_timeout=20,
+            read_timeout=180,
+            max_pool_connections=25,
+        )
+        self._clients = [
+            boto3.client("bedrock-runtime", region_name=region, config=cfg)
+            for _ in range(pool_size)
+        ]
+        self._cycle = itertools.cycle(self._clients)
+        self._lock  = threading.Lock()
         self.model  = model
 
+    def _client(self):
+        with self._lock:
+            return next(self._cycle)
+
+    @staticmethod
+    def _extract_text(resp: dict) -> str:
+        out = resp.get("output")
+        if isinstance(out, dict) and "message" in out:
+            for c in out["message"].get("content", []):
+                if "text" in c:
+                    return c["text"]
+        if isinstance(out, list):
+            for c in out:
+                if isinstance(c, dict) and "text" in c:
+                    return c["text"]
+        return json.dumps(resp)[:512]
+
     def call(self, prompt: str) -> str:
-        import json as _json
-        body = _json.dumps({
-            "messages": [{"role": "user", "content": prompt}],
-            "temperature": JUDGE_TEMPERATURE,
-            "max_tokens": 64,
-        })
-        resp = self.client.invoke_model(
-            modelId=self.model,
-            body=body,
-            contentType="application/json",
-            accept="application/json",
-        )
-        payload = _json.loads(resp["body"].read())
-        # Claude-style response
-        if "content" in payload:
-            return payload["content"][0]["text"].strip()
-        # Llama-style response
-        if "generation" in payload:
-            return payload["generation"].strip()
-        # Mistral-style
-        if "outputs" in payload:
-            return payload["outputs"][0]["text"].strip()
-        raise ValueError(f"Unrecognised Bedrock response shape: {list(payload.keys())}")
+        params = {
+            "modelId": self.model,
+            "messages": [{"role": "user", "content": [{"text": prompt}]}],
+            "inferenceConfig": {
+                "maxTokens": 64,
+                "temperature": float(max(JUDGE_TEMPERATURE, 1e-3)),
+                "topP": 0.9,
+            },
+        }
+        import time
+        for attempt in range(3):
+            try:
+                resp = self._client().converse(**params)
+                return self._extract_text(resp).strip()
+            except Exception:
+                if attempt == 2:
+                    raise
+                time.sleep(2 ** attempt)
 
 
 def _make_backend(backend: str, model: str):
