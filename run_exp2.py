@@ -158,6 +158,16 @@ def main():
     plot_path = plot_signature_matrix(corr_df, pval_df, out_dir=out_dir)
     print(f"  Heatmap            → {plot_path}")
 
+    # Warn about zero-variance attributes (constant scores across encounters)
+    score_df_full = pd.DataFrame(flat_scores)
+    zero_var = [a for a in PDSQI9_ATTRIBUTES if a in score_df_full and score_df_full[a].nunique() <= 1]
+    if zero_var:
+        print(f"\n  ⚠ Zero-variance attributes (all encounters scored identically — "
+              f"correlation undefined, need more data):")
+        for a in zero_var:
+            val = score_df_full[a].iloc[0]
+            print(f"    {a:<18}: always {val}")
+
     # Print top correlations
     melted = corr_df.stack().dropna()
     melted = melted[melted.abs() > 0.3].sort_values(key=abs, ascending=False)

@@ -42,6 +42,7 @@ MECH_RATIO_FEATURES = [
 def build_signature_matrix(
     encounter_features: List[Dict],
     pdsqi9_scores:      List[Dict],
+    min_n: int = 3,
 ) -> pd.DataFrame:
     """
     Build a (n_attributes × n_mech_features) Pearson correlation matrix.
@@ -70,7 +71,7 @@ def build_signature_matrix(
         for feat in all_features:
             x = pd.to_numeric(feat_df[feat], errors="coerce")
             mask = x.notna() & y.notna()
-            if mask.sum() < 5:
+            if mask.sum() < min_n:
                 row[feat] = np.nan
             else:
                 r, _ = stats.pearsonr(x[mask], y[mask])
@@ -83,6 +84,7 @@ def build_signature_matrix(
 def signature_matrix_pvalues(
     encounter_features: List[Dict],
     pdsqi9_scores:      List[Dict],
+    min_n: int = 3,
 ) -> pd.DataFrame:
     """Same shape as build_signature_matrix but values are p-values."""
     feat_df  = pd.DataFrame(encounter_features)
@@ -100,7 +102,7 @@ def signature_matrix_pvalues(
         for feat in all_features:
             x = pd.to_numeric(feat_df[feat], errors="coerce")
             mask = x.notna() & y.notna()
-            if mask.sum() < 5:
+            if mask.sum() < min_n:
                 row[feat] = np.nan
             else:
                 _, p = stats.pearsonr(x[mask], y[mask])
