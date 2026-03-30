@@ -1,27 +1,22 @@
 """
 Experiment 2 — Statistical analyses linking mechanistic features to PDSQI-9 scores.
 
-Three analyses:
+Two analyses:
   A. Mechanistic Signature Matrix   — Pearson r between DLA band features and
                                        PDSQI-9 attributes across encounters.
   B. Section-level ANOVA            — Does SOAP section type predict each
                                        mechanistic feature?  Correlate deviations
                                        with per-section Accuracy scores.
-  C. Input complexity interaction   — Two-way ANOVA: complexity × section type
-                                       → MLP contribution.
 """
 
 from __future__ import annotations
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 import numpy as np
 import pandas as pd
 from scipy import stats
 
-from config import (
-    PDSQI9_ATTRIBUTES, RETRIEVAL_ATTRS, SYNTHESIS_ATTRS,
-    EXTRACTIVE_SECTIONS, ABSTRACTIVE_SECTIONS,
-)
+from config import PDSQI9_ATTRIBUTES
 
 
 # ── A. Mechanistic Signature Matrix ───────────────────────────────────────────
@@ -209,174 +204,3 @@ def section_mechanistic_deviations(
             })
 
     return pd.DataFrame(rows)
-
-
-# ── C. Input complexity interaction ───────────────────────────────────────────
-
-def complexity_interaction_anova(
-    encounter_features: List[Dict],
-    pdsqi9_scores:      List[Dict],
-    mech_feature:       str = "mlp_contribution_mid",
-    complexity_key:     str = "entity_density",
-) -> Dict:
-    """
-    Two-way ANOVA: complexity (high/low, median-split) × section_type
-    (extractive vs abstractive) → mean MLP contribution.
-
-    Returns dict with F-stats and p-values for main effects and interaction.
-    """
-    _COMPLEXITY_FALLBACKS = [
-        "entity_density", "source_len_tokens", "hedge_density",
-        "negation_density", "type_token_ratio",
-    ]
-
-    feat_df = pd.DataFrame(encounter_features)
-
-    # Pick a complexity key that has non-zero variance
-    chosen_key = None
-    for ck in [complexity_key] + [f for f in _COMPLEXITY_FALLBACKS if f != complexity_key]:
-        if ck in feat_df.columns and feat_df[ck].nunique() > 1:
-            chosen_key = ck
-            break
-    if chosen_key is None:
-        return {"error": f"no complexity key with variance found (tried {_COMPLEXITY_FALLBACKS})"}
-    if chosen_key != complexity_key:
-        print(f"  [complexity_anova] '{complexity_key}' has zero variance — using '{chosen_key}' instead")
-
-    # Median-split on complexity
-    median_complexity = feat_df[chosen_key].median()
-    feat_df["complexity_group"] = (
-        feat_df[chosen_key] > median_complexity
-    ).map({True: "high", False: "low"})
-
-    # Classify whatever mlp_frac_* keys exist by section name
-    sample = encounter_features[0] if encounter_features else {}
-    present_mlp_keys = [k for k in sample if k.startswith("mlp_frac_")]
-
-    def _section_type(key: str) -> Optional[str]:
-        sec = key[len("mlp_frac_"):]
-        if sec in EXTRACTIVE_SECTIONS:
-            return "extractive"
-        if sec in ABSTRACTIVE_SECTIONS:
-            return "abstractive"
-        return None  # unclassified — skip
-
-    rows = []
-    for i, ef in enumerate(encounter_features):
-        cgroup = feat_df.loc[i, "complexity_group"]
-        for key in present_mlp_keys:
-            stype = _section_type(key)
-            if stype and key in ef:
-                rows.append({"complexity": cgroup, "section_type": stype, "value": ef[key]})
-
-    # If no sections matched the taxonomy, fall back to aggregate mlp_fraction
-    if not rows and "mlp_fraction" in feat_df.columns:
-        print("  [complexity_anova] no per-section mlp keys matched taxonomy — "
-              "using aggregate mlp_fraction as single section_type='aggregate'")
-        for i, ef in enumerate(encounter_features):
-            cgroup = feat_df.loc[i, "complexity_group"]
-            rows.append({"complexity": cgroup, "section_type": "aggregate", "value": ef["mlp_fraction"]})
-
-    if not rows:
-        return {"error": "no per-section mlp features found in encounter_features"}
-
-    df = pd.DataFrame(rows).dropna()
-
-    # Simple 2×2 ANOVA via OLS (statsmodels) or fallback to F-tests
-    try:
-        import statsmodels.formula.api as smf
-        model  = smf.ols("value ~ C(complexity) * C(section_type)", data=df).fit()
-        anova  = sm_anova(model)
-        return {
-            "main_complexity":   {
-                "F": round(anova.loc["C(complexity)",    "F"], 3),
-                "p": round(anova.loc["C(complexity)",    "PR(>F)"], 4),
-            },
-            "main_section_type": {
-                "F": round(anova.loc["C(section_type)",  "F"], 3),
-                "p": round(anova.loc["C(section_type)",  "PR(>F)"], 4),
-            },
-            "interaction":       {
-                "F": round(anova.loc["C(complexity):C(section_type)", "F"], 3),
-                "p": round(anova.loc["C(complexity):C(section_type)", "PR(>F)"], 4),
-            },
-        }
-    except ImportError:
-        # Fallback: manual F-tests for each effect
-        return _manual_two_way_anova(df)
-
-
-def sm_anova(model):
-    from statsmodels.stats.anova import anova_lm
-    return anova_lm(model, typ=2)
-
-
-def _manual_two_way_anova(df: pd.DataFrame) -> Dict:
-    """Fallback two-way ANOVA without statsmodels."""
-    high_ext  = df[(df.complexity == "high") & (df.section_type == "extractive")]["value"]
-    high_abs  = df[(df.complexity == "high") & (df.section_type == "abstractive")]["value"]
-    low_ext   = df[(df.complexity == "low")  & (df.section_type == "extractive")]["value"]
-    low_abs   = df[(df.complexity == "low")  & (df.section_type == "abstractive")]["value"]
-
-    F_main_complexity, p_main_complexity = stats.f_oneway(
-        pd.concat([high_ext, high_abs]), pd.concat([low_ext, low_abs])
-    )
-    F_main_section, p_main_section = stats.f_oneway(
-        pd.concat([high_ext, low_ext]), pd.concat([high_abs, low_abs])
-    )
-    F_inter, p_inter = stats.f_oneway(high_ext - high_abs, low_ext - low_abs)
-
-    return {
-        "main_complexity":   {"F": round(F_main_complexity, 3), "p": round(p_main_complexity, 4)},
-        "main_section_type": {"F": round(F_main_section,    3), "p": round(p_main_section,    4)},
-        "interaction":       {"F": round(F_inter,            3), "p": round(p_inter,            4)},
-        "note": "fallback manual F-tests; install statsmodels for proper two-way ANOVA",
-    }
-
-
-def complexity_correlation_table(
-    encounter_features: List[Dict],
-    pdsqi9_scores:      List[Dict],
-    complexity_keys:    Optional[List[str]] = None,
-) -> pd.DataFrame:
-    """
-    Pearson correlations between input complexity features and both mechanistic
-    features and PDSQI-9 scores.
-    """
-    if complexity_keys is None:
-        complexity_keys = [
-            "entity_density", "hedge_density", "negation_density",
-            "speaker_turns", "source_len_tokens", "type_token_ratio",
-        ]
-
-    feat_df  = pd.DataFrame(encounter_features)
-    score_df = pd.DataFrame(pdsqi9_scores)
-
-    target_cols = (
-        [f for f in MECH_BAND_FEATURES if f in feat_df.columns]
-        + PDSQI9_ATTRIBUTES
-    )
-
-    rows = {}
-    for ck in complexity_keys:
-        if ck not in feat_df.columns:
-            continue
-        x = pd.to_numeric(feat_df[ck], errors="coerce")
-        row = {}
-        for tc in target_cols:
-            y = (
-                pd.to_numeric(feat_df[tc],  errors="coerce")
-                if tc in feat_df.columns
-                else pd.to_numeric(score_df[tc], errors="coerce")
-                if tc in score_df.columns
-                else pd.Series(dtype=float)
-            )
-            mask = x.notna() & y.notna()
-            if mask.sum() < 5:
-                row[tc] = np.nan
-            else:
-                r, _ = stats.pearsonr(x[mask], y[mask])
-                row[tc] = round(r, 3)
-        rows[ck] = row
-
-    return pd.DataFrame(rows).T

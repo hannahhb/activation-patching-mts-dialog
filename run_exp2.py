@@ -30,13 +30,10 @@ from analysis import (
     signature_matrix_pvalues,
     section_anova,
     section_mechanistic_deviations,
-    complexity_interaction_anova,
-    complexity_correlation_table,
 )
 from visualise import (
     plot_signature_matrix,
     plot_section_anova,
-    plot_complexity_scatter,
 )
 
 
@@ -186,40 +183,29 @@ def main():
         anova_plot = plot_section_anova(anova_df, out_dir=out_dir)
         print(f"  ANOVA plot    → {anova_plot}")
 
-        # Deviation vs accuracy
-        dev_df = section_mechanistic_deviations(valid_dfs, all_scores)
-        if not dev_df.empty:
-            dev_path = out_dir / "section_deviations.csv"
+        # Deviation vs each PDSQI-9 attribute
+        from scipy import stats as _stats
+        dev_rows = []
+        for attr in PDSQI9_ATTRIBUTES:
+            dev_df = section_mechanistic_deviations(valid_dfs, all_scores, accuracy_key=attr)
+            if dev_df.empty:
+                continue
+            dev_df["pdsqi_attr"] = attr
+            dev_path = out_dir / f"section_deviations_{attr}.csv"
             dev_df.to_csv(dev_path, index=False)
-            print(f"  Section deviations → {dev_path}")
-            from scipy import stats
-            mask = dev_df["accurate"].notna() & dev_df["deviation"].notna()
+            mask = dev_df[attr].notna() & dev_df["deviation"].notna()
             if mask.sum() >= 5:
-                r, p = stats.pearsonr(dev_df.loc[mask, "deviation"],
-                                      dev_df.loc[mask, "accurate"])
-                print(f"  Deviation ↔ accuracy: r={r:+.3f}, p={p:.4f}")
+                r, p = _stats.pearsonr(dev_df.loc[mask, "deviation"], dev_df.loc[mask, attr])
+                dev_rows.append({"attribute": attr, "r": round(r, 3), "p": round(p, 4), "n": int(mask.sum())})
+                print(f"  Deviation ↔ {attr:<18}: r={r:+.3f}  p={p:.4f}  n={mask.sum()}")
+            else:
+                print(f"  Deviation ↔ {attr:<18}: insufficient data (n={mask.sum()})")
 
-    # ── Analysis C: Complexity interaction ────────────────────────────────────
-    print("\n── Analysis C: Input Complexity Interaction ──────────────────────")
-    anova_result = complexity_interaction_anova(encounter_features, all_scores)
-    anova_c_path = out_dir / "complexity_anova.json"
-    with open(anova_c_path, "w") as f:
-        json.dump(anova_result, f, indent=2)
-    print(f"  Two-way ANOVA → {anova_c_path}")
-    print(json.dumps(anova_result, indent=4))
-
-    corr_table = complexity_correlation_table(encounter_features, flat_scores)
-    corr_table_path = out_dir / "complexity_correlations.csv"
-    corr_table.to_csv(corr_table_path)
-    print(f"  Complexity correlation table → {corr_table_path}")
-
-    for x_key in ["entity_density", "source_len_tokens"]:
-        for y_key in ["mlp_contribution_mid", "lookback_ratio"]:
-            plot_complexity_scatter(
-                encounter_features, flat_scores,
-                x_key=x_key, y_key=y_key,
-                out_dir=out_dir,
-            )
+        if dev_rows:
+            dev_summary = pd.DataFrame(dev_rows).set_index("attribute")
+            dev_summary_path = out_dir / "section_deviations_summary.csv"
+            dev_summary.to_csv(dev_summary_path)
+            print(f"\n  Deviation summary → {dev_summary_path}")
 
     print("\n── Experiment 2 complete ─────────────────────────────────────────")
     print(f"All outputs in: {out_dir}")
