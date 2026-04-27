@@ -27,7 +27,7 @@ Experiment 2b — Contrastive gold reference vs model-generated note
     heatmap, and a token-level CSV.
 
 Supported models (white-box access required):
-    "google/gemma-2-2b"          ~5 GB VRAM / ~10 GB RAM
+    "google/gemma-2-2b-instruct"          ~5 GB VRAM / ~10 GB RAM
     "meta-llama/Meta-Llama-3-8B" ~16 GB VRAM / ~32 GB RAM
     Any model supported by TransformerLens.
 
@@ -67,9 +67,9 @@ class Config:
     """Central configuration.  Override at the bottom of this file or via CLI."""
 
     # ── Model ──────────────────────────────────────────────────────────────────
-    # "google/gemma-2-2b"  is faster and fits on most GPUs / large-RAM laptops.
+    # "google/gemma-2-2b-instruct"  is faster and fits on most GPUs / large-RAM laptops.
     # "meta-llama/Meta-Llama-3-8B"  gives better clinical coverage.
-    model_name: str = "google/gemma-2-2b"
+    model_name: str = "google/gemma-2-2b-instruct"
 
     # ── Device ─────────────────────────────────────────────────────────────────
     device: str = "cuda" if torch.cuda.is_available() else "cpu"
@@ -198,12 +198,11 @@ def tokenize_pair(
 # Prompt template for SOAP note generation.
 # Kept simple so any instruction-following LLM can follow it.
 _GENERATION_PROMPT = (
-    "You are a clinical documentation assistant.  "
-    "Given the following patient-clinician conversation, write a concise SOAP note.\n\n"
+    "You are a clinical documentation assistant."
+    "Given the following patient-clinician conversation, write a summary of the conversation with six sections: CHIEF COMPLAINT, HISTORY OF PRESENT ILLNESS, REVIEW OF SYSTEMS, PHYSICAL EXAMINATION, RESULTS, ASSESSMENT AND PLAN."
     "### Conversation\n{transcript}\n\n"
-    "### SOAP Note\n"
+    "### Note: \n"
 )
-
 
 def generate_note(
     model: HookedTransformer,
@@ -546,63 +545,204 @@ def plot_risk_bar(
     return ax
 
 
-def plot_line_trace(
-    ecs_a: np.ndarray, ecs_b: np.ndarray,
-    pks_a: np.ndarray, pks_b: np.ndarray,
-    diff_pos: List[int],
-    label_a: str, label_b: str,
-    axes,
+# ─────────────────────────────────────────────
+# 8. Experiment 2b helpers
+# ─────────────────────────────────────────────
+
+def plot_distribution_comparison(
+    ecs_gold: np.ndarray,
+    pks_gold: np.ndarray,
+    ecs_gen: np.ndarray,
+    pks_gen: np.ndarray,
+    out_path: Path,
+    model_name: str,
 ) -> None:
     """
-    Line traces of ECS and PKS across token positions for two notes.
-    Vertical grey dashed lines mark positions where the notes differ.
+    Compare the *distributions* of ECS and PKS between gold and generated notes.
+
+    This is the correct cross-note comparison: we never subtract scores at
+    matched token positions (the notes may be structurally different and both
+    valid).  Instead we ask whether the shape of the score distribution differs
+    — i.e. does the generated note as a whole draw on the transcript as much as
+    the gold note does?
     """
-    L = min(len(ecs_a), len(ecs_b))
+    fig, axes = plt.subplots(1, 2, figsize=(12, 4))
 
-    # ECS trace
-    axes[0].plot(ecs_a[:L], label=label_a, color="#2196F3", lw=1.4, alpha=0.9)
-    axes[0].plot(ecs_b[:L], label=label_b, color="#F44336", lw=1.4, alpha=0.9, ls="--")
-    for p in diff_pos:
-        if p < L:
-            axes[0].axvline(p, color="gray", ls=":", lw=0.8, alpha=0.5)
-    axes[0].set_ylabel("ECS", fontsize=10)
-    axes[0].set_xlabel("Note token position", fontsize=9)
-    axes[0].set_title("ECS across token positions", fontsize=10, fontweight="bold")
-    axes[0].legend(fontsize=8)
+    for ax, vals_g, vals_m, label in [
+        (axes[0], ecs_gold, ecs_gen, "ECS"),
+        (axes[1], pks_gold, pks_gen, "PKS"),
+    ]:
+        sns.kdeplot(vals_g, ax=ax, label="Gold reference",
+                    color="#4CAF50", fill=True, alpha=0.25, linewidth=1.8)
+        sns.kdeplot(vals_m, ax=ax, label="Model generated",
+                    color="#F44336", fill=True, alpha=0.25, linewidth=1.8)
 
-    # PKS trace
-    axes[1].plot(pks_a[:L], label=label_a, color="#FF9800", lw=1.4, alpha=0.9)
-    axes[1].plot(pks_b[:L], label=label_b, color="#9C27B0", lw=1.4, alpha=0.9, ls="--")
-    for p in diff_pos:
-        if p < L:
-            axes[1].axvline(p, color="gray", ls=":", lw=0.8, alpha=0.5)
-    axes[1].set_ylabel("PKS", fontsize=10)
-    axes[1].set_xlabel("Note token position", fontsize=9)
-    axes[1].set_title("PKS across token positions", fontsize=10, fontweight="bold")
-    axes[1].legend(fontsize=8)
+        # Mark medians
+        ax.axvline(np.median(vals_g), color="#4CAF50", ls="--", lw=1.2, alpha=0.8)
+        ax.axvline(np.median(vals_m), color="#F44336", ls="--", lw=1.2, alpha=0.8)
+
+        ax.set_xlabel(label, fontsize=11)
+        ax.set_ylabel("Density", fontsize=10)
+        ax.set_title(f"{label} distribution: Gold vs Generated",
+                     fontsize=11, fontweight="bold")
+        ax.legend(fontsize=9)
+
+    fig.suptitle(f"Exp 2b — Distributional Comparison  ({model_name})",
+                 fontsize=12, fontweight="bold")
+    plt.tight_layout()
+    fig.savefig(out_path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
 
 
-# ─────────────────────────────────────────────
-# 8. Differing-position detection (for 2b)
-# ─────────────────────────────────────────────
-
-def find_differing_positions(
-    tokens_a: List[str],
-    tokens_b: List[str],
-    top_k: int = 30,
-) -> List[int]:
+def build_html_report(
+    scatter_png: Path,
+    tokens: List[str],
+    ecs: np.ndarray,
+    pks: np.ndarray,
+    generated_note: str,
+    model_name: str,
+    sample_idx: int,
+    out_path: Path,
+) -> None:
     """
-    Simple character-level comparison to find token positions that differ
-    between two sequences of the same approximate length.
-    Returns the first `top_k` differing positions (shared index space).
+    Build a self-contained HTML report containing:
+      1. The ECS/PKS scatter plot (embedded as base64 PNG).
+      2. The full generated note with hallucination-risk tokens highlighted.
+
+    Hallucination-risk tokens are those below the median on *both* ECS and PKS
+    simultaneously (the Low-ECS + Low-PKS quadrant).  They are shown with a
+    red background in the note text.
+
+    The token-to-text reconstruction preserves the original spacing by checking
+    the leading-space marker used by SentencePiece / BPE tokenisers (▁ / Ġ).
     """
-    min_len = min(len(tokens_a), len(tokens_b))
-    diffs = [
-        i for i in range(min_len)
-        if tokens_a[i].strip().lower() != tokens_b[i].strip().lower()
-        and tokens_a[i].strip() and tokens_b[i].strip()
-    ]
-    return diffs[:top_k]
+    import base64
+
+    # ── Embed scatter as base64 ───────────────────────────────────────────────
+    with open(scatter_png, "rb") as fh:
+        img_b64 = base64.b64encode(fh.read()).decode()
+
+    # ── Compute risk mask ─────────────────────────────────────────────────────
+    em = float(np.median(ecs))
+    pm = float(np.median(pks))
+    risk_mask = (ecs < em) & (pks < pm)   # True = hallucination risk
+
+    # ── Reconstruct highlighted HTML from tokens ──────────────────────────────
+    # Each token is decoded to its display string.
+    # Leading ▁ / Ġ means "preceded by a space" in SentencePiece / GPT-2 BPE.
+    html_parts: List[str] = []
+    for tok, is_risky in zip(tokens, risk_mask):
+        # Determine whether this token starts a new word (has leading space)
+        if tok.startswith("▁") or tok.startswith("Ġ"):
+            space = " "
+            word  = tok[1:]
+        else:
+            space = ""
+            word  = tok
+
+        # Escape HTML special characters
+        word_esc = (word
+                    .replace("&", "&amp;")
+                    .replace("<", "&lt;")
+                    .replace(">", "&gt;")
+                    .replace("\n", "<br>\n"))
+
+        if is_risky:
+            html_parts.append(
+                f'{space}<mark class="risk">{word_esc}</mark>'
+            )
+        else:
+            html_parts.append(f"{space}{word_esc}")
+
+    note_html = "".join(html_parts)
+
+    # ── Quadrant summary table ────────────────────────────────────────────────
+    n          = len(ecs)
+    hi_ecs     = ecs >= em
+    hi_pks     = pks >= pm
+    pct_extr   = 100 * float(np.mean( hi_ecs & ~hi_pks))
+    pct_param  = 100 * float(np.mean(~hi_ecs &  hi_pks))
+    pct_synth  = 100 * float(np.mean( hi_ecs &  hi_pks))
+    pct_risk   = 100 * float(np.mean(~hi_ecs & ~hi_pks))
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Exp 2b — Hallucination Risk Report</title>
+  <style>
+    body      {{ font-family: Georgia, serif; max-width: 960px;
+                margin: 40px auto; padding: 0 24px; color: #222; }}
+    h2        {{ border-bottom: 2px solid #eee; padding-bottom: 8px; color: #333; }}
+    h3        {{ color: #555; margin-top: 32px; }}
+    img       {{ max-width: 100%; border: 1px solid #ddd;
+                border-radius: 6px; margin: 12px 0; }}
+    .meta     {{ font-size: 13px; color: #777; margin-bottom: 24px; }}
+    .legend   {{ display: flex; gap: 20px; flex-wrap: wrap;
+                margin: 12px 0 20px; font-size: 13px; }}
+    .leg-item {{ display: flex; align-items: center; gap: 8px; }}
+    .swatch   {{ width: 18px; height: 18px; border-radius: 3px;
+                border: 1px solid rgba(0,0,0,.15); flex-shrink: 0; }}
+    .note-box {{ background: #fafafa; border: 1px solid #ddd;
+                border-radius: 6px; padding: 22px 26px;
+                line-height: 2.0; font-size: 14px; white-space: pre-wrap; }}
+    mark.risk {{ background: #FFCDD2; color: #B71C1C;
+                border-radius: 3px; padding: 1px 3px;
+                font-style: normal; }}
+    table     {{ border-collapse: collapse; width: 100%; font-size: 13px; }}
+    th, td    {{ border: 1px solid #ddd; padding: 7px 12px; text-align: left; }}
+    th        {{ background: #f5f5f5; }}
+    .risk-row {{ background: #FFEBEE; font-weight: bold; }}
+  </style>
+</head>
+<body>
+
+<h2>Experiment 2b — ECS/PKS Hallucination Risk Report</h2>
+<p class="meta">
+  Model: <strong>{model_name}</strong> &nbsp;|&nbsp;
+  ACI-Bench sample index: <strong>{sample_idx}</strong> &nbsp;|&nbsp;
+  Note tokens: <strong>{n}</strong><br>
+  ECS threshold (median): <strong>{em:.4f}</strong> &nbsp;|&nbsp;
+  PKS threshold (median): <strong>{pm:.4f}</strong>
+</p>
+
+<h3>ECS vs PKS Scatter — Model-Generated Note</h3>
+<img src="data:image/png;base64,{img_b64}" alt="ECS/PKS scatter">
+
+<h3>Quadrant Distribution</h3>
+<table>
+  <tr><th>Quadrant</th><th>Condition</th><th>% of tokens</th></tr>
+  <tr><td>Extractive</td>
+      <td>High ECS, Low PKS — copied from transcript</td>
+      <td>{pct_extr:.1f}%</td></tr>
+  <tr><td>Parametric</td>
+      <td>Low ECS, High PKS — drawn from medical knowledge</td>
+      <td>{pct_param:.1f}%</td></tr>
+  <tr><td>Synthesized</td>
+      <td>High ECS, High PKS — grounded reasoning</td>
+      <td>{pct_synth:.1f}%</td></tr>
+  <tr class="risk-row"><td>Hallucination Risk</td>
+      <td>Low ECS, Low PKS — grounded in neither source</td>
+      <td>{pct_risk:.1f}%</td></tr>
+</table>
+
+<h3>Generated Note — Highlighted Tokens</h3>
+<div class="legend">
+  <div class="leg-item">
+    <div class="swatch" style="background:#FFCDD2;"></div>
+    <span>Hallucination risk (Low ECS + Low PKS — below both medians)</span>
+  </div>
+  <div class="leg-item">
+    <div class="swatch" style="background:#fff;"></div>
+    <span>Extractive, parametric, or synthesized</span>
+  </div>
+</div>
+<div class="note-box">{note_html}</div>
+
+</body>
+</html>"""
+
+    out_path.write_text(html, encoding="utf-8")
 
 
 # ─────────────────────────────────────────────
@@ -689,165 +829,99 @@ def run_experiment_2b(
     gold_note: str,
 ) -> Dict:
     """
-    Experiment 2b: Contrastive ECS/PKS — gold reference vs model-generated note.
+    Experiment 2b: ECS/PKS scatter + hallucination-risk highlights for the
+    model-generated note, compared distributionally against the gold reference.
 
-    The model is used to generate a SOAP note autoregressively from the
-    transcript.  Because the model has no guarantee of faithfulness, this
-    generated note is the natural source of hallucinations.
+    We do NOT subtract scores token-by-token.  The generated note may be
+    structurally different from the gold note and still be clinically valid —
+    per-token positional subtraction would be meaningless in that case.
 
-    Hypothesis:
-        Tokens in the generated note that do NOT appear in the gold reference
-        will cluster in the Low-ECS + Low-PKS quadrant — grounded in neither
-        the transcript nor correct parametric knowledge.
-
-    Parameters
-    ----------
-    transcript : patient-clinician dialogue (from ACI-Bench)
-    gold_note  : reference SOAP note (from ACI-Bench)
+    Instead we compare:
+      1. The ECS/PKS scatter of the generated note with highlighted risk tokens.
+      2. The *distributions* of ECS and PKS (gold vs generated) via KDE — a
+         valid comparison that requires no token alignment.
 
     Outputs
     -------
-    exp2b_scatter_gold.png    — quadrant scatter for gold note (stars on diff positions)
-    exp2b_scatter_gen.png     — quadrant scatter for generated note (stars on diff positions)
-    exp2b_line_traces.png     — ECS and PKS line traces for both notes overlaid
-    exp2b_delta_heatmap.png   — heatmap of ΔECS and ΔPKS at shared token positions
-    exp2b_summary.csv         — numeric delta table for downstream use
-    exp2b_generated_note.txt  — the raw generated note text (for inspection)
+    exp2b_scatter_gen.png      — ECS/PKS scatter for the generated note
+    exp2b_highlighted_note.html — scatter embedded + note with risk highlights
+    exp2b_distributions.png    — KDE: gold vs generated ECS and PKS distributions
+    exp2b_generated_note.txt   — raw generated note text
     """
     print("\n" + "═"*54)
-    print("  EXPERIMENT 2b — Contrastive Gold vs Model-Generated")
+    print("  EXPERIMENT 2b — Generated Note: Scatter + Risk Highlights")
     print("═"*54)
 
     # ── Generate note from transcript ─────────────────────────────────────────
     generated_note = generate_note(model, transcript, cfg)
-
-    # Save generated note for inspection
     (out / "exp2b_generated_note.txt").write_text(generated_note, encoding="utf-8")
     print("  Saved → exp2b_generated_note.txt")
 
     # ── Tokenise ──────────────────────────────────────────────────────────────
-    tok_gold, tl_gold, nt_gold = tokenize_pair(model, transcript, gold_note)
     tok_gen,  tl_gen,  nt_gen  = tokenize_pair(model, transcript, generated_note)
-    tok_gold = tok_gold.to(cfg.device)
+    tok_gold, tl_gold, nt_gold = tokenize_pair(model, transcript, gold_note)
     tok_gen  = tok_gen.to(cfg.device)
+    tok_gold = tok_gold.to(cfg.device)
 
-    print(f"  Gold note      : {len(nt_gold)} tokens")
     print(f"  Generated note : {len(nt_gen)} tokens")
+    print(f"  Gold note      : {len(nt_gold)} tokens  (for distribution comparison only)")
 
-    # ── Compute scores ────────────────────────────────────────────────────────
-    print("  Computing ECS/PKS for gold note …")
-    ecs_acc, pks_acc = compute_ecs_pks(model, tok_gold, tl_gold, cfg)
+    # ── Compute ECS/PKS ───────────────────────────────────────────────────────
     print("  Computing ECS/PKS for generated note …")
-    ecs_hal, pks_hal = compute_ecs_pks(model, tok_gen, tl_gen, cfg)
+    ecs_gen, pks_gen = compute_ecs_pks(model, tok_gen, tl_gen, cfg)
+    print("  Computing ECS/PKS for gold note (distribution baseline) …")
+    ecs_gold, pks_gold = compute_ecs_pks(model, tok_gold, tl_gold, cfg)
 
-    # Alias for the rest of the function (keeping internal var names stable)
-    nt_acc, nt_hal = nt_gold, nt_gen
+    stats_gen  = quadrant_stats(ecs_gen,  pks_gen,  f"2b — Generated Note (sample {cfg.sample_idx})")
+    stats_gold = quadrant_stats(ecs_gold, pks_gold, f"2b — Gold Note      (sample {cfg.sample_idx})")
 
-    stats_acc = quadrant_stats(ecs_acc, pks_acc, f"2b — Gold Note (sample {cfg.sample_idx})")
-    stats_hal = quadrant_stats(ecs_hal, pks_hal, f"2b — Generated Note (sample {cfg.sample_idx})")
-
-    # ── Delta summary ─────────────────────────────────────────────────────────
-    print(f"\n  Δ (Hallucinated − Accurate)")
-    print(f"  {'metric':<30} {'Δ':>8}")
-    print(f"  {'─'*38}")
-    delta_keys = ["mean_ecs", "mean_pks", "mean_risk",
-                  "extractive_frac", "parametric_frac",
-                  "synthesized_frac", "hallucinatory_frac"]
-    for k in delta_keys:
-        delta = stats_hal[k] - stats_acc[k]
+    # Print distributional delta (aggregate, not per-token)
+    print(f"\n  Distributional delta (Generated − Gold):")
+    print(f"  {'─'*42}")
+    for k in ["mean_ecs", "mean_pks", "mean_risk",
+              "extractive_frac", "parametric_frac",
+              "synthesized_frac", "hallucinatory_frac"]:
+        delta = stats_gen[k] - stats_gold[k]
         print(f"  {k:<30} {delta:>+8.4f}")
 
-    # ── Find differing positions ──────────────────────────────────────────────
-    diff_pos = find_differing_positions(nt_acc, nt_hal)
-    print(f"\n  Detected {len(diff_pos)} differing token positions")
-
-    # Report ECS/PKS shift at each differing position
-    print(f"\n  {'pos':>4}  {'acc_tok':>12}  {'hal_tok':>12}  "
-          f"{'ECS_acc':>8}  {'ECS_hal':>8}  {'ΔECS':>8}  "
-          f"{'PKS_acc':>8}  {'PKS_hal':>8}  {'ΔPKS':>8}")
-    print(f"  {'─'*90}")
-    rows = []
-    for p in diff_pos:
-        ta  = nt_acc[p].strip()[:12] if p < len(nt_acc) else "–"
-        th  = nt_hal[p].strip()[:12] if p < len(nt_hal) else "–"
-        ea  = ecs_acc[p] if p < len(ecs_acc) else float("nan")
-        eh  = ecs_hal[p] if p < len(ecs_hal) else float("nan")
-        pa_ = pks_acc[p] if p < len(pks_acc) else float("nan")
-        ph  = pks_hal[p] if p < len(pks_hal) else float("nan")
-        de  = eh - ea
-        dp  = ph - pa_
-        print(f"  {p:>4}  {ta:>12}  {th:>12}  {ea:>8.3f}  {eh:>8.3f}  {de:>+8.3f}  "
-              f"{pa_:>8.3f}  {ph:>8.3f}  {dp:>+8.3f}")
-        rows.append({"pos": p, "acc_tok": ta, "hal_tok": th,
-                     "ecs_acc": ea, "ecs_hal": eh, "delta_ecs": de,
-                     "pks_acc": pa_, "pks_hal": ph, "delta_pks": dp})
-
-    # Save CSV
-    df = pd.DataFrame(rows)
-    df.to_csv(out / "exp2b_summary.csv", index=False)
-    print("  Saved → exp2b_summary.csv")
-
-    # ── Scatter plots (gold) ──────────────────────────────────────────────────
+    # ── Scatter for generated note ────────────────────────────────────────────
     fig, ax = plt.subplots(figsize=(9, 8))
-    plot_scatter(ecs_acc, pks_acc, nt_acc,
-                 f"Exp 2b — Gold Reference Note\n({cfg.model_name})",
-                 ax=ax, highlight=diff_pos, annotate_stride=5)
+    plot_scatter(ecs_gen, pks_gen, nt_gen,
+                 f"Exp 2b — Model-Generated Note: ECS vs PKS\n({cfg.model_name})",
+                 ax=ax, annotate_stride=5)
     plt.tight_layout()
-    fig.savefig(out / "exp2b_scatter_gold.png", dpi=150, bbox_inches="tight")
-    plt.close(fig)
-    print("  Saved → exp2b_scatter_gold.png")
-
-    # ── Scatter plots (generated) ─────────────────────────────────────────────
-    fig, ax = plt.subplots(figsize=(9, 8))
-    plot_scatter(ecs_hal, pks_hal, nt_hal,
-                 f"Exp 2b — Model-Generated Note\n({cfg.model_name})",
-                 ax=ax, highlight=diff_pos, annotate_stride=5)
-    plt.tight_layout()
-    fig.savefig(out / "exp2b_scatter_gen.png", dpi=150, bbox_inches="tight")
+    scatter_path = out / "exp2b_scatter_gen.png"
+    fig.savefig(scatter_path, dpi=150, bbox_inches="tight")
     plt.close(fig)
     print("  Saved → exp2b_scatter_gen.png")
 
-    # ── Line traces ───────────────────────────────────────────────────────────
-    fig, axes = plt.subplots(1, 2, figsize=(16, 4))
-    plot_line_trace(
-        ecs_acc, ecs_hal, pks_acc, pks_hal, diff_pos,
-        "Gold Reference", "Model Generated", axes,
+    # ── HTML: scatter embedded + highlighted note text ────────────────────────
+    html_path = out / "exp2b_highlighted_note.html"
+    build_html_report(
+        scatter_png=scatter_path,
+        tokens=nt_gen,
+        ecs=ecs_gen,
+        pks=pks_gen,
+        generated_note=generated_note,
+        model_name=cfg.model_name,
+        sample_idx=cfg.sample_idx,
+        out_path=html_path,
     )
-    fig.suptitle(f"Exp 2b — ECS/PKS Line Traces  |  ★ = differing positions  ({cfg.model_name})",
-                 fontsize=11, fontweight="bold")
-    plt.tight_layout()
-    fig.savefig(out / "exp2b_line_traces.png", dpi=150, bbox_inches="tight")
-    plt.close(fig)
-    print("  Saved → exp2b_line_traces.png")
+    print("  Saved → exp2b_highlighted_note.html")
 
-    # ── Δ ECS / Δ PKS heatmap at shared positions ─────────────────────────────
-    L = min(len(ecs_acc), len(ecs_hal))
-    delta_ecs = ecs_hal[:L] - ecs_acc[:L]
-    delta_pks = pks_hal[:L] - pks_acc[:L]
-    shared_toks = nt_acc[:L]
-    disp = [t.replace("▁", "").replace("Ġ", "").strip()[:7] for t in shared_toks]
-
-    fig, ax = plt.subplots(figsize=(max(16, L // 2), 3))
-    data = np.stack([delta_ecs, delta_pks])
-    sns.heatmap(data, ax=ax, xticklabels=disp,
-                yticklabels=["ΔECS", "ΔPKS"],
-                cmap="RdBu_r", center=0,
-                linewidths=0.2, linecolor="white",
-                cbar_kws={"shrink": 0.6, "label": "Hallucinated − Accurate"})
-    ax.tick_params(axis="x", labelsize=5.5, rotation=60)
-    ax.tick_params(axis="y", labelsize=9,   rotation=0)
-    ax.set_title("Exp 2b — ΔECS and ΔPKS (Hallucinated − Accurate)",
-                 fontsize=10, fontweight="bold")
-    plt.tight_layout()
-    fig.savefig(out / "exp2b_delta_heatmap.png", dpi=150, bbox_inches="tight")
-    plt.close(fig)
-    print("  Saved → exp2b_delta_heatmap.png")
+    # ── Distributional comparison: gold vs generated ──────────────────────────
+    plot_distribution_comparison(
+        ecs_gold, pks_gold, ecs_gen, pks_gen,
+        out / "exp2b_distributions.png",
+        cfg.model_name,
+    )
+    print("  Saved → exp2b_distributions.png")
 
     return {
-        "ecs_acc": ecs_acc, "pks_acc": pks_acc,
-        "ecs_hal": ecs_hal, "pks_hal": pks_hal,
-        "stats_acc": stats_acc, "stats_hal": stats_hal,
-        "diff_pos": diff_pos,
+        "ecs_gen":    ecs_gen,    "pks_gen":    pks_gen,
+        "ecs_gold":   ecs_gold,   "pks_gold":   pks_gold,
+        "stats_gen":  stats_gen,  "stats_gold": stats_gold,
+        "generated_note": generated_note,
     }
 
 
@@ -858,7 +932,7 @@ def run_experiment_2b(
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="REDEEP ECS/PKS — clinical note experiments")
     p.add_argument("--model", choices=["gemma", "llama"], default="gemma",
-                   help="gemma → google/gemma-2-2b  |  llama → meta-llama/Meta-Llama-3-8B")
+                   help="gemma → google/gemma-2-2b-instruct  |  llama → meta-llama/Meta-Llama-3-8B")
     p.add_argument("--exp", choices=["2a", "2b", "both"], default="both",
                    help="Which experiment(s) to run (default: both)")
     p.add_argument("--ecs-layers", choices=["all", "last_half"], default="all",
@@ -880,7 +954,7 @@ def main() -> None:
 
     cfg = Config(
         model_name=(
-            "google/gemma-2-2b"
+            "google/gemma-2-2b-instruct"
             if args.model == "gemma"
             else "meta-llama/Meta-Llama-3-8B"
         ),
