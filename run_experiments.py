@@ -1,0 +1,749 @@
+"""
+run_experiments.py
+==================
+Experiment runner for ECS/PKS-based factuality analysis of clinical notes.
+Imports all metrics and helpers from ecs_pks.py.
+
+Experiments
+-----------
+2a  Token-level ECS/PKS mapping on the gold reference SOAP note.
+    Outputs: scatter, heatmap, per-token risk bar chart.
+
+2b  Model-generated note: scatter + HTML report with highlighted risk tokens
+    + distributional comparison (KDE) against the gold note.
+    Outputs: scatter, highlighted HTML, KDE distribution plots, raw note text.
+
+2c  Hallucination screening validation via synthetic injection.
+    Injects plausible-but-wrong terms into the gold note, runs ECS/PKS, and
+    reports where the known-bad tokens fall in the quadrant space.
+    Outputs: scatter with injected tokens starred, per-token CSV, corrupted note.
+
+Usage
+-----
+    python run_experiments.py                        # 2a + 2b, gemma, sample 0
+    python run_experiments.py --exp 2c               # only 2c
+    python run_experiments.py --exp all              # 2a + 2b + 2c
+    python run_experiments.py --model llama          # Llama 3 8B
+    python run_experiments.py --sample 3             # ACI-Bench row 3
+    python run_experiments.py --max-new-tokens 300
+"""
+
+import argparse
+import random
+import re
+import warnings
+from pathlib import Path
+from typing import Dict, List, Tuple
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import torch
+from transformer_lens import HookedTransformer
+
+from ecs_pks import (
+    Config,
+    Q_COLORS,
+    compute_ecs_pks,
+    generate_note,
+    hallucination_risk,
+    load_aci_sample,
+    plot_heatmap,
+    plot_risk_bar,
+    plot_scatter,
+    quadrant_stats,
+    tokenize_pair,
+)
+
+warnings.filterwarnings("ignore")
+
+
+# ─────────────────────────────────────────────
+# 8. Experiment 2b helpers
+# ─────────────────────────────────────────────
+
+def plot_distribution_comparison(
+    ecs_gold: np.ndarray,
+    pks_gold: np.ndarray,
+    ecs_gen: np.ndarray,
+    pks_gen: np.ndarray,
+    out_path: Path,
+    model_name: str,
+) -> None:
+    """
+    Compare the *distributions* of ECS and PKS between the gold and generated
+    notes via KDE.
+
+    Per-token positional subtraction is invalid when the two notes have
+    different structures (both may be clinically correct but worded differently).
+    Distributional comparison requires no alignment and is always valid.
+    """
+    fig, axes = plt.subplots(1, 2, figsize=(12, 4))
+
+    for ax, vals_g, vals_m, label in [
+        (axes[0], ecs_gold, ecs_gen, "ECS"),
+        (axes[1], pks_gold, pks_gen, "PKS"),
+    ]:
+        sns.kdeplot(vals_g, ax=ax, label="Gold reference",
+                    color="#4CAF50", fill=True, alpha=0.25, linewidth=1.8)
+        sns.kdeplot(vals_m, ax=ax, label="Model generated",
+                    color="#F44336", fill=True, alpha=0.25, linewidth=1.8)
+        ax.axvline(np.median(vals_g), color="#4CAF50", ls="--", lw=1.2, alpha=0.8)
+        ax.axvline(np.median(vals_m), color="#F44336", ls="--", lw=1.2, alpha=0.8)
+        ax.set_xlabel(label, fontsize=11)
+        ax.set_ylabel("Density", fontsize=10)
+        ax.set_title(f"{label} distribution: Gold vs Generated",
+                     fontsize=11, fontweight="bold")
+        ax.legend(fontsize=9)
+
+    fig.suptitle(f"Exp 2b — Distributional Comparison  ({model_name})",
+                 fontsize=12, fontweight="bold")
+    plt.tight_layout()
+    fig.savefig(out_path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+
+
+def build_html_report(
+    scatter_png: Path,
+    tokens: List[str],
+    ecs: np.ndarray,
+    pks: np.ndarray,
+    generated_note: str,
+    model_name: str,
+    sample_idx: int,
+    out_path: Path,
+) -> None:
+    """
+    Self-contained HTML report containing:
+      1. ECS/PKS scatter (embedded as base64 PNG).
+      2. Full generated note with hallucination-risk tokens highlighted.
+
+    Risk tokens = those below the median on BOTH ECS and PKS (Low-Low quadrant).
+    Token spacing is reconstructed from SentencePiece / BPE leading-space markers.
+    """
+    import base64
+
+    with open(scatter_png, "rb") as fh:
+        img_b64 = base64.b64encode(fh.read()).decode()
+
+    em        = float(np.median(ecs))
+    pm        = float(np.median(pks))
+    risk_mask = (ecs < em) & (pks < pm)
+
+    html_parts: List[str] = []
+    for tok, is_risky in zip(tokens, risk_mask):
+        space = " " if (tok.startswith("▁") or tok.startswith("Ġ")) else ""
+        word  = tok[1:] if space else tok
+        word_esc = (word
+                    .replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                    .replace("\n", "<br>\n"))
+        if is_risky:
+            html_parts.append(f'{space}<mark class="risk">{word_esc}</mark>')
+        else:
+            html_parts.append(f"{space}{word_esc}")
+    note_html = "".join(html_parts)
+
+    n         = len(ecs)
+    hi_ecs    = ecs >= em
+    hi_pks    = pks >= pm
+    pct_extr  = 100 * float(np.mean( hi_ecs & ~hi_pks))
+    pct_param = 100 * float(np.mean(~hi_ecs &  hi_pks))
+    pct_synth = 100 * float(np.mean( hi_ecs &  hi_pks))
+    pct_risk  = 100 * float(np.mean(~hi_ecs & ~hi_pks))
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Exp 2b — Hallucination Risk Report</title>
+  <style>
+    body      {{ font-family: Georgia, serif; max-width: 960px;
+                margin: 40px auto; padding: 0 24px; color: #222; }}
+    h2        {{ border-bottom: 2px solid #eee; padding-bottom: 8px; color: #333; }}
+    h3        {{ color: #555; margin-top: 32px; }}
+    img       {{ max-width: 100%; border: 1px solid #ddd;
+                border-radius: 6px; margin: 12px 0; }}
+    .meta     {{ font-size: 13px; color: #777; margin-bottom: 24px; }}
+    .legend   {{ display: flex; gap: 20px; flex-wrap: wrap;
+                margin: 12px 0 20px; font-size: 13px; }}
+    .leg-item {{ display: flex; align-items: center; gap: 8px; }}
+    .swatch   {{ width: 18px; height: 18px; border-radius: 3px;
+                border: 1px solid rgba(0,0,0,.15); flex-shrink: 0; }}
+    .note-box {{ background: #fafafa; border: 1px solid #ddd;
+                border-radius: 6px; padding: 22px 26px;
+                line-height: 2.0; font-size: 14px; white-space: pre-wrap; }}
+    mark.risk {{ background: #FFCDD2; color: #B71C1C;
+                border-radius: 3px; padding: 1px 3px; font-style: normal; }}
+    table     {{ border-collapse: collapse; width: 100%; font-size: 13px; }}
+    th, td    {{ border: 1px solid #ddd; padding: 7px 12px; text-align: left; }}
+    th        {{ background: #f5f5f5; }}
+    .risk-row {{ background: #FFEBEE; font-weight: bold; }}
+  </style>
+</head>
+<body>
+<h2>Experiment 2b — ECS/PKS Hallucination Risk Report</h2>
+<p class="meta">
+  Model: <strong>{model_name}</strong> &nbsp;|&nbsp;
+  ACI-Bench sample: <strong>{sample_idx}</strong> &nbsp;|&nbsp;
+  Note tokens: <strong>{n}</strong><br>
+  ECS threshold (median): <strong>{em:.4f}</strong> &nbsp;|&nbsp;
+  PKS threshold (median): <strong>{pm:.4f}</strong>
+</p>
+
+<h3>ECS vs PKS Scatter — Model-Generated Note</h3>
+<img src="data:image/png;base64,{img_b64}" alt="ECS/PKS scatter">
+
+<h3>Quadrant Distribution</h3>
+<table>
+  <tr><th>Quadrant</th><th>Condition</th><th>% of tokens</th></tr>
+  <tr><td>Extractive</td>
+      <td>High ECS, Low PKS — copied from transcript</td>
+      <td>{pct_extr:.1f}%</td></tr>
+  <tr><td>Parametric</td>
+      <td>Low ECS, High PKS — drawn from medical knowledge</td>
+      <td>{pct_param:.1f}%</td></tr>
+  <tr><td>Synthesized</td>
+      <td>High ECS, High PKS — grounded reasoning</td>
+      <td>{pct_synth:.1f}%</td></tr>
+  <tr class="risk-row"><td>Hallucination Risk</td>
+      <td>Low ECS, Low PKS — grounded in neither source</td>
+      <td>{pct_risk:.1f}%</td></tr>
+</table>
+
+<h3>Generated Note — Highlighted Tokens</h3>
+<div class="legend">
+  <div class="leg-item">
+    <div class="swatch" style="background:#FFCDD2;"></div>
+    <span>Hallucination risk (Low ECS + Low PKS)</span>
+  </div>
+  <div class="leg-item">
+    <div class="swatch" style="background:#fff;"></div>
+    <span>Extractive, parametric, or synthesized</span>
+  </div>
+</div>
+<div class="note-box">{note_html}</div>
+</body>
+</html>"""
+
+    out_path.write_text(html, encoding="utf-8")
+
+
+# ─────────────────────────────────────────────
+# 9. Experiment 2a
+# ─────────────────────────────────────────────
+
+def run_experiment_2a(
+    model: HookedTransformer,
+    cfg: Config,
+    out: Path,
+    transcript: str,
+    gold_note: str,
+) -> Tuple[np.ndarray, np.ndarray, List[str], Dict]:
+    """
+    Experiment 2a: ECS/PKS token-level mapping for the gold reference SOAP note.
+
+    Outputs
+    -------
+    exp2a_scatter.png  — quadrant scatter
+    exp2a_heatmap.png  — ECS/PKS heatmap across token positions
+    exp2a_risk.png     — per-token hallucination risk bar chart
+    """
+    print("\n" + "═"*54)
+    print("  EXPERIMENT 2a — ECS/PKS Token-Level Mapping")
+    print("═"*54)
+
+    tokens, t_len, note_toks = tokenize_pair(model, transcript, gold_note)
+    tokens = tokens.to(cfg.device)
+    print(f"  Transcript : {t_len} tokens")
+    print(f"  Note       : {len(note_toks)} tokens")
+
+    print("  Running forward pass + computing ECS / PKS …")
+    ecs, pks = compute_ecs_pks(model, tokens, t_len, cfg)
+    stats    = quadrant_stats(ecs, pks, f"2a — Gold Note (ACI-Bench sample {cfg.sample_idx})")
+
+    fig, ax = plt.subplots(figsize=(9, 8))
+    plot_scatter(ecs, pks, note_toks,
+                 f"Exp 2a — ECS vs PKS: Clinical Note Tokens\n({cfg.model_name})",
+                 ax=ax, annotate_stride=4)
+    plt.tight_layout()
+    fig.savefig(out / "exp2a_scatter.png", dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print("  Saved → exp2a_scatter.png")
+
+    fig, ax = plt.subplots(figsize=(max(16, len(note_toks) // 2), 3))
+    plot_heatmap(ecs, pks, note_toks, "Exp 2a — ECS/PKS Heatmap across Note Tokens", ax=ax)
+    plt.tight_layout()
+    fig.savefig(out / "exp2a_heatmap.png", dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print("  Saved → exp2a_heatmap.png")
+
+    fig, ax = plt.subplots(figsize=(max(16, len(note_toks) // 2), 3))
+    plot_risk_bar(ecs, pks, note_toks,
+                  "Exp 2a — Per-Token Hallucination Risk (Low ECS + Low PKS)", ax=ax)
+    plt.tight_layout()
+    fig.savefig(out / "exp2a_risk.png", dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print("  Saved → exp2a_risk.png")
+
+    return ecs, pks, note_toks, stats
+
+
+# ─────────────────────────────────────────────
+# 10. Experiment 2b
+# ─────────────────────────────────────────────
+
+def run_experiment_2b(
+    model: HookedTransformer,
+    cfg: Config,
+    out: Path,
+    transcript: str,
+    gold_note: str,
+) -> Dict:
+    """
+    Experiment 2b: ECS/PKS scatter + HTML risk report for the model-generated
+    note, with distributional comparison against the gold reference.
+
+    We never subtract scores at matched token positions — the notes may be
+    structured differently while both being clinically valid.  Instead we
+    compare score *distributions* (KDE), which requires no alignment.
+
+    Outputs
+    -------
+    exp2b_scatter_gen.png       — ECS/PKS scatter for the generated note
+    exp2b_highlighted_note.html — scatter + note with risk-highlighted tokens
+    exp2b_distributions.png     — KDE: gold vs generated ECS and PKS
+    exp2b_generated_note.txt    — raw generated note text
+    """
+    print("\n" + "═"*54)
+    print("  EXPERIMENT 2b — Generated Note: Scatter + Risk Highlights")
+    print("═"*54)
+
+    generated_note = generate_note(model, transcript, cfg)
+    (out / "exp2b_generated_note.txt").write_text(generated_note, encoding="utf-8")
+    print("  Saved → exp2b_generated_note.txt")
+
+    tok_gen,  tl_gen,  nt_gen  = tokenize_pair(model, transcript, generated_note)
+    tok_gold, tl_gold, nt_gold = tokenize_pair(model, transcript, gold_note)
+    tok_gen  = tok_gen.to(cfg.device)
+    tok_gold = tok_gold.to(cfg.device)
+
+    print(f"  Generated note : {len(nt_gen)} tokens")
+    print(f"  Gold note      : {len(nt_gold)} tokens  (distribution baseline only)")
+
+    print("  Computing ECS/PKS for generated note …")
+    ecs_gen, pks_gen   = compute_ecs_pks(model, tok_gen,  tl_gen,  cfg)
+    print("  Computing ECS/PKS for gold note …")
+    ecs_gold, pks_gold = compute_ecs_pks(model, tok_gold, tl_gold, cfg)
+
+    stats_gen  = quadrant_stats(ecs_gen,  pks_gen,  f"2b — Generated Note (sample {cfg.sample_idx})")
+    stats_gold = quadrant_stats(ecs_gold, pks_gold, f"2b — Gold Note      (sample {cfg.sample_idx})")
+
+    print(f"\n  Distributional delta (Generated − Gold):")
+    print(f"  {'─'*42}")
+    for k in ["mean_ecs", "mean_pks", "mean_risk",
+              "extractive_frac", "parametric_frac",
+              "synthesized_frac", "hallucinatory_frac"]:
+        print(f"  {k:<30} {stats_gen[k] - stats_gold[k]:>+8.4f}")
+
+    fig, ax = plt.subplots(figsize=(9, 8))
+    plot_scatter(ecs_gen, pks_gen, nt_gen,
+                 f"Exp 2b — Model-Generated Note: ECS vs PKS\n({cfg.model_name})",
+                 ax=ax, annotate_stride=5)
+    plt.tight_layout()
+    scatter_path = out / "exp2b_scatter_gen.png"
+    fig.savefig(scatter_path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print("  Saved → exp2b_scatter_gen.png")
+
+    build_html_report(
+        scatter_png=scatter_path,
+        tokens=nt_gen,
+        ecs=ecs_gen,
+        pks=pks_gen,
+        generated_note=generated_note,
+        model_name=cfg.model_name,
+        sample_idx=cfg.sample_idx,
+        out_path=out / "exp2b_highlighted_note.html",
+    )
+    print("  Saved → exp2b_highlighted_note.html")
+
+    plot_distribution_comparison(
+        ecs_gold, pks_gold, ecs_gen, pks_gen,
+        out / "exp2b_distributions.png",
+        cfg.model_name,
+    )
+    print("  Saved → exp2b_distributions.png")
+
+    return {
+        "ecs_gen":  ecs_gen,  "pks_gen":  pks_gen,
+        "ecs_gold": ecs_gold, "pks_gold": pks_gold,
+        "stats_gen": stats_gen, "stats_gold": stats_gold,
+        "generated_note": generated_note,
+    }
+
+
+# ─────────────────────────────────────────────
+# 11. Experiment 2c — hallucination validation
+# ─────────────────────────────────────────────
+
+_HALLUC_RULES: List[Tuple[str, str, str]] = [
+    # ── Medications ───────────────────────────────────────────────────────────
+    (r"\balbuterol\b",           "salmeterol",            "wrong_medication"),
+    (r"\bSingulair\b",           "Symbicort",             "wrong_medication"),
+    (r"\bmontelukast\b",         "fluticasone",           "wrong_medication"),
+    (r"\bmetformin\b",           "lisinopril",            "wrong_medication"),
+    (r"\blisinopril\b",          "metformin",             "wrong_medication"),
+    (r"\batorvastatin\b",        "rosuvastatin",          "wrong_medication"),
+    (r"\baspirin\b",             "warfarin",              "wrong_medication"),
+    (r"\bamoxicillin\b",         "azithromycin",          "wrong_medication"),
+    (r"\bibuprofen\b",           "naproxen",              "wrong_medication"),
+    (r"\bomeprazole\b",          "pantoprazole",          "wrong_medication"),
+    (r"\bsertraline\b",          "fluoxetine",            "wrong_medication"),
+    # ── Dosages ───────────────────────────────────────────────────────────────
+    (r"\b10\s*mg\b",             "20 mg",                 "wrong_dosage"),
+    (r"\b5\s*mg\b",              "10 mg",                 "wrong_dosage"),
+    (r"\b500\s*mg\b",            "250 mg",                "wrong_dosage"),
+    (r"\b20\s*mg\b",             "40 mg",                 "wrong_dosage"),
+    (r"\b25\s*mg\b",             "50 mg",                 "wrong_dosage"),
+    (r"\b50\s*mg\b",             "100 mg",                "wrong_dosage"),
+    # ── Diagnoses ────────────────────────────────────────────────────────────
+    (r"\basthma\b",              "COPD",                  "wrong_diagnosis"),
+    (r"\bhypertension\b",        "hypotension",           "wrong_diagnosis"),
+    (r"\bdiabetes\b",            "hypothyroidism",        "wrong_diagnosis"),
+    (r"\ballergic\s+rhinitis\b", "chronic sinusitis",     "wrong_diagnosis"),
+    (r"\bangina\b",              "myocardial infarction", "wrong_diagnosis"),
+    (r"\beczema\b",              "psoriasis",             "wrong_diagnosis"),
+    # ── Vitals / findings ────────────────────────────────────────────────────
+    (r"\b120\s*/\s*80\b",        "180/110",               "wrong_vital"),
+    (r"\b98\.6\b",               "101.4",                 "wrong_vital"),
+    (r"\bnormal\b",              "elevated",              "wrong_finding"),
+    (r"\bnegative\b",            "positive",              "wrong_finding"),
+]
+
+_FALLBACK_HALLUC = (
+    " Additionally, patient reports recent chest tightness at rest; "
+    "troponin I elevated at 0.8 ng/mL on last draw."
+)
+
+
+def inject_hallucinations(
+    note: str,
+    max_injections: int = 3,
+    seed: int = 42,
+) -> Tuple[str, List[Dict]]:
+    """
+    Apply a shuffled subset of _HALLUC_RULES to the note (up to max_injections).
+
+    Rules are shuffled with `seed` so different dataset samples exercise
+    different hallucination categories.  Each rule fires at most once.
+    Falls back to appending a fabricated finding if no rule matches.
+
+    Returns
+    -------
+    corrupted_note : note text with injected hallucinations.
+    injections     : list of {char_start, char_end, original, replacement, category}.
+    """
+    rng   = random.Random(seed)
+    rules = list(_HALLUC_RULES)
+    rng.shuffle(rules)
+
+    injections: List[Dict] = []
+    text = note
+
+    for pattern, replacement, category in rules:
+        if len(injections) >= max_injections:
+            break
+        m = re.search(pattern, text, re.IGNORECASE)
+        if m:
+            cs = m.start()
+            ce = m.end()
+            injections.append({
+                "char_start":  cs,
+                "char_end":    cs + len(replacement),
+                "original":    m.group(0),
+                "replacement": replacement,
+                "category":    category,
+            })
+            text = text[:cs] + replacement + text[ce:]
+
+    if not injections:
+        cs   = len(text)
+        text += _FALLBACK_HALLUC
+        injections.append({
+            "char_start":  cs,
+            "char_end":    len(text),
+            "original":    "",
+            "replacement": _FALLBACK_HALLUC.strip(),
+            "category":    "inserted_hallucination",
+        })
+
+    return text, injections
+
+
+def halluc_token_indices(
+    model: HookedTransformer,
+    hallucinated_note: str,
+    injections: List[Dict],
+) -> List[int]:
+    """
+    Map char-level injection spans → token indices in the tokenized note.
+
+    Tries HF tokenizer offset_mapping (exact), falls back to cumulative decode.
+    A token is flagged if its char span overlaps any injection span.
+    """
+    tok        = model.tokenizer
+    halluc_idx: List[int] = []
+
+    try:
+        enc     = tok(hallucinated_note, return_offsets_mapping=True, add_special_tokens=False)
+        offsets = enc["offset_mapping"]
+        for i, (cs, ce) in enumerate(offsets):
+            if ce == cs:
+                continue
+            for inj in injections:
+                if cs < inj["char_end"] and ce > inj["char_start"]:
+                    halluc_idx.append(i)
+                    break
+        return sorted(set(halluc_idx))
+    except Exception:
+        pass
+
+    ids    = model.to_tokens(hallucinated_note, prepend_bos=False)[0]
+    cursor = 0
+    for i, tid in enumerate(ids):
+        piece = tok.decode([tid.item()])
+        end   = cursor + len(piece)
+        for inj in injections:
+            if cursor < inj["char_end"] and end > inj["char_start"]:
+                halluc_idx.append(i)
+                break
+        cursor = end
+
+    return sorted(set(halluc_idx))
+
+
+def run_experiment_2c(
+    model: HookedTransformer,
+    cfg: Config,
+    out: Path,
+    transcript: str,
+    gold_note: str,
+) -> Dict:
+    """
+    Experiment 2c: ECS/PKS hallucination screening validation via synthetic
+    injection into the gold reference note.
+
+    Procedure
+    ---------
+    1. Inject up to 3 plausible-but-wrong substitutions (wrong drug, dosage,
+       diagnosis, vital) into the gold note, recording exact char spans.
+    2. Compute ECS and PKS for every token of the corrupted note against the
+       original transcript.
+    3. Map injection spans to token indices (ground-truth hallucination labels).
+    4. Report quadrant breakdown: injected vs. clean tokens.
+    5. Plot scatter with injected tokens starred and labelled.
+
+    Expected finding: injected tokens cluster in Low-ECS + Low-PKS because they
+    are neither grounded in the transcript nor supported by in-context parametric
+    knowledge.  This validates ECS/PKS as a screening signal.
+
+    Outputs
+    -------
+    exp2c_scatter.png         — quadrant scatter; ★ = injected tokens
+    exp2c_tokens.csv          — per-token ECS, PKS, risk, quadrant, injected flag
+    exp2c_corrupted_note.txt  — the hallucinated note (for inspection)
+    """
+    print("\n" + "═"*54)
+    print("  EXPERIMENT 2c — Hallucination Screening Validation")
+    print("═"*54)
+
+    corrupted_note, injections = inject_hallucinations(
+        gold_note, max_injections=3, seed=cfg.sample_idx + 42
+    )
+
+    print(f"\n  Injected {len(injections)} hallucination(s):")
+    for inj in injections:
+        orig = f"'{inj['original']}'" if inj["original"] else "(nothing — appended)"
+        print(f"    [{inj['category']:22s}]  {orig}  →  '{inj['replacement']}'")
+
+    (out / "exp2c_corrupted_note.txt").write_text(corrupted_note, encoding="utf-8")
+    print("  Saved → exp2c_corrupted_note.txt")
+
+    tokens, t_len, note_toks = tokenize_pair(model, transcript, corrupted_note)
+    tokens = tokens.to(cfg.device)
+    print(f"\n  Transcript : {t_len} tokens")
+    print(f"  Note       : {len(note_toks)} tokens")
+
+    halluc_idx = halluc_token_indices(model, corrupted_note, injections)
+    print(f"\n  Hallucinated token positions ({len(halluc_idx)} tokens):")
+    for i in halluc_idx:
+        label = note_toks[i].replace("▁", "").replace("Ġ", "").strip() if i < len(note_toks) else "?"
+        print(f"    [{i:4d}] '{label}'")
+
+    print("\n  Computing ECS/PKS for corrupted note …")
+    ecs, pks = compute_ecs_pks(model, tokens, t_len, cfg)
+
+    em = float(np.median(ecs))
+    pm = float(np.median(pks))
+
+    def _quadrant(e: float, p: float) -> str:
+        if   e >= em and p <  pm: return "extractive"
+        elif e <  em and p >= pm: return "parametric"
+        elif e >= em and p >= pm: return "synthesized"
+        else:                      return "hallucinatory"
+
+    risk      = hallucination_risk(ecs, pks)
+    is_halluc = [i in set(halluc_idx) for i in range(len(note_toks))]
+
+    rows = [
+        {
+            "token_idx": i,
+            "token":     t.replace("▁", "").replace("Ġ", "").strip(),
+            "ecs":       round(float(e), 4),
+            "pks":       round(float(p), 4),
+            "risk":      round(float(r), 4),
+            "injected":  int(h),
+            "quadrant":  _quadrant(e, p),
+        }
+        for i, (t, e, p, r, h) in enumerate(zip(note_toks, ecs, pks, risk, is_halluc))
+    ]
+    df = pd.DataFrame(rows)
+    df.to_csv(out / "exp2c_tokens.csv", index=False)
+    print("  Saved → exp2c_tokens.csv")
+
+    df_h = df[df["injected"] == 1]
+    df_c = df[df["injected"] == 0]
+    n_h  = max(len(df_h), 1)
+    n_c  = max(len(df_c), 1)
+
+    print(f"\n  ── Quadrant breakdown  (thresholds: ECS≥{em:.3f}, PKS≥{pm:.3f}) ──")
+    print(f"  {'quadrant':<18}  {'injected':>14}  {'clean':>14}")
+    print("  " + "─" * 50)
+    for q in ["hallucinatory", "extractive", "parametric", "synthesized"]:
+        ni     = int((df_h["quadrant"] == q).sum()) if len(df_h) else 0
+        nc     = int((df_c["quadrant"] == q).sum())
+        marker = "  ◄ expected" if q == "hallucinatory" else ""
+        print(f"  {q:<18}  {ni:>4} / {len(df_h):>3} ({ni/n_h:>4.0%})  "
+              f"{nc:>4} / {len(df_c):>3} ({nc/n_c:>4.0%}){marker}")
+
+    if len(df_h):
+        print(f"\n  ── Injected token scores ──")
+        print(f"  {'token':<18}  {'ECS':>6}  {'PKS':>6}  {'risk':>6}  {'quadrant'}")
+        print("  " + "─" * 60)
+        for _, row in df_h.iterrows():
+            print(f"  {row['token']:<18}  {row['ecs']:>6.3f}  "
+                  f"{row['pks']:>6.3f}  {row['risk']:>6.3f}  {row['quadrant']}")
+
+    fig, ax = plt.subplots(figsize=(9, 8))
+    plot_scatter(
+        ecs, pks, note_toks,
+        (f"Exp 2c — Gold Note + Injected Hallucinations\n"
+         f"({cfg.model_name})   ★ = injected hallucination tokens"),
+        ax=ax, highlight=halluc_idx, annotate_stride=5,
+    )
+
+    for i in halluc_idx:
+        if i >= len(note_toks):
+            continue
+        label = note_toks[i].replace("▁", "").replace("Ġ", "").strip()[:16]
+        ax.annotate(label, (ecs[i], pks[i]),
+                    fontsize=7, color="#B71C1C", fontweight="bold",
+                    xytext=(8, 8), textcoords="offset points",
+                    arrowprops=dict(arrowstyle="-", color="#B71C1C", lw=0.8))
+
+    if len(df_h):
+        n_low_low = int((df_h["quadrant"] == "hallucinatory").sum())
+        ax.text(
+            0.02, 0.98,
+            f"Injected tokens\nin Low-ECS + Low-PKS:\n"
+            f"{n_low_low} / {len(df_h)} = {n_low_low/len(df_h):.0%}",
+            transform=ax.transAxes, fontsize=8, verticalalignment="top",
+            bbox=dict(boxstyle="round,pad=0.4", facecolor="white", alpha=0.85,
+                      edgecolor=Q_COLORS["hallucinatory"], linewidth=1.5),
+        )
+
+    plt.tight_layout()
+    fig.savefig(out / "exp2c_scatter.png", dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print("  Saved → exp2c_scatter.png")
+
+    return {
+        "ecs": ecs, "pks": pks,
+        "halluc_idx": halluc_idx, "injections": injections, "df": df,
+    }
+
+
+# ─────────────────────────────────────────────
+# 12. Entry point
+# ─────────────────────────────────────────────
+
+def parse_args() -> argparse.Namespace:
+    p = argparse.ArgumentParser(description="REDEEP ECS/PKS — clinical note experiments")
+    p.add_argument("--model", choices=["gemma", "llama"], default="gemma",
+                   help="gemma → google/gemma-2-2b-it  |  llama → meta-llama/Meta-Llama-3-8B-instruct")
+    p.add_argument("--exp", choices=["2a", "2b", "2c", "both", "all"], default="both",
+                   help="Which experiment(s) to run  (both=2a+2b [default]  |  all=2a+2b+2c)")
+    p.add_argument("--sample", type=int, default=0,
+                   help="Row index from ACI-Bench test1 split (default: 0)")
+    p.add_argument("--max-new-tokens", type=int, default=256,
+                   help="Max tokens for generated note in Exp 2b (default: 256)")
+    p.add_argument("--temperature", type=float, default=0.0,
+                   help="Sampling temperature for generation (0.0 = greedy)")
+    p.add_argument("--out", default=".", help="Output directory for plots and CSV")
+    return p.parse_args()
+
+
+def main() -> None:
+    args = parse_args()
+
+    cfg = Config(
+        model_name=(
+            "google/gemma-2-2b-it"
+            if args.model == "gemma"
+            else "meta-llama/Meta-Llama-3-8B-instruct"
+        ),
+        sample_idx=args.sample,
+        max_new_tokens=args.max_new_tokens,
+        gen_temperature=args.temperature,
+        output_dir=args.out,
+    )
+    out = Path(cfg.output_dir)
+    out.mkdir(parents=True, exist_ok=True)
+
+    print(f"\n  Model          : {cfg.model_name}")
+    print(f"  Device         : {cfg.device}  |  dtype: {cfg.dtype}")
+    print(f"  Dataset        : {cfg.dataset_repo}  [{cfg.dataset_config} / {cfg.dataset_split}]")
+    print(f"  Sample index   : {cfg.sample_idx}")
+    print(f"  Max new tokens : {cfg.max_new_tokens}  |  temperature: {cfg.gen_temperature}")
+    print(f"  Output dir     : {out.resolve()}")
+
+    transcript, gold_note = load_aci_sample(cfg)
+
+    print(f"\nLoading {cfg.model_name} via TransformerLens …")
+    model = HookedTransformer.from_pretrained(
+        cfg.model_name,
+        dtype=cfg.dtype,
+        default_padding_side="right",
+    )
+    model.eval()
+    model.to(cfg.device)
+    print(f"  Layers: {model.cfg.n_layers}  |  Heads: {model.cfg.n_heads}"
+          f"  |  d_model: {model.cfg.d_model}")
+
+    if args.exp in ("2a", "both", "all"):
+        run_experiment_2a(model, cfg, out, transcript, gold_note)
+
+    if args.exp in ("2b", "both", "all"):
+        run_experiment_2b(model, cfg, out, transcript, gold_note)
+
+    if args.exp in ("2c", "all"):
+        run_experiment_2c(model, cfg, out, transcript, gold_note)
+
+    print("\n" + "═"*54)
+    print("  Done.  All outputs written to:", out.resolve())
+    print("═"*54 + "\n")
+
+
+if __name__ == "__main__":
+    main()
