@@ -27,7 +27,7 @@ Experiment 2b — Contrastive gold reference vs model-generated note
     heatmap, and a token-level CSV.
 
 Supported models (white-box access required):
-    "google/gemma-2-2b-instruct"          ~5 GB VRAM / ~10 GB RAM
+    "google/gemma-2-2b-it"          ~5 GB VRAM / ~10 GB RAM
     "meta-llama/Meta-Llama-3-8B" ~16 GB VRAM / ~32 GB RAM
     Any model supported by TransformerLens.
 
@@ -69,9 +69,9 @@ class Config:
     """Central configuration.  Override at the bottom of this file or via CLI."""
 
     # ── Model ──────────────────────────────────────────────────────────────────
-    # "google/gemma-2-2b-instruct"  is faster and fits on most GPUs / large-RAM laptops.
+    # "google/gemma-2-2b-it"  is faster and fits on most GPUs / large-RAM laptops.
     # "meta-llama/Meta-Llama-3-8B"  gives better clinical coverage.
-    model_name: str = "google/gemma-2-2b-instruct"
+    model_name: str = "google/gemma-2-2b-it"
 
     # ── Device ─────────────────────────────────────────────────────────────────
     device: str = "cuda" if torch.cuda.is_available() else "cpu"
@@ -339,10 +339,10 @@ def _logit_lens(model: HookedTransformer, x: torch.Tensor) -> torch.Tensor:
     -------
     logits : (N, d_vocab) raw (pre-softmax) vocabulary scores.
     """
-    x = x.unsqueeze(0)    # (1, N, d_model) — batch dim required by TL modules
-    x = model.ln_final(x) # (1, N, d_model)
-    x = model.unembed(x)  # (1, N, d_vocab)
-    return x.squeeze(0)   # (N, d_vocab)
+    x = x.unsqueeze(0)           # (1, N, d_model) — batch dim required by TL modules
+    x = model.ln_final(x)        # (1, N, d_model)  — output dtype follows model weights
+    x = model.unembed(x)         # (1, N, d_vocab)
+    return x.squeeze(0).float()  # (N, d_vocab) — upcast to float32; numpy has no bfloat16
 
 
 def compute_pks(
@@ -1361,7 +1361,7 @@ def run_experiment_2c(
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="REDEEP ECS/PKS — clinical note experiments")
     p.add_argument("--model", choices=["gemma", "llama"], default="gemma",
-                   help="gemma → google/gemma-2-2b-instruct  |  llama → meta-llama/Meta-Llama-3-8B")
+                   help="gemma → google/gemma-2-2b-it  |  llama → meta-llama/Meta-Llama-3-8B")
     p.add_argument("--exp", choices=["2a", "2b", "2c", "both", "all"], default="both",
                    help="Which experiment(s) to run  "
                         "(both=2a+2b [default]  |  all=2a+2b+2c)")
@@ -1384,7 +1384,7 @@ def main() -> None:
 
     cfg = Config(
         model_name=(
-            "google/gemma-2-2b-instruct"
+            "google/gemma-2-2b-it"
             if args.model == "gemma"
             else "meta-llama/Meta-Llama-3-8B"
         ),
