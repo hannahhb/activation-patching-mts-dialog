@@ -264,6 +264,133 @@ def generate_note(
 # 5. ECS / PKS computation
 # ─────────────────────────────────────────────
 
+def compute_ecs(
+    model: HookedTransformer,
+    cache,
+    transcript_len: int,
+    note_len: int,
+) -> np.ndarray:
+    """
+    External Context Score — paper eq. (3/4).
+
+    For each note token n at every (layer l, head h):
+
+        e^{l,h}_n = Σ_j  attn[l,h,n,j] · x^L_j        (j ∈ transcript positions)
+        ECS^{l,h}_n = cosine_similarity( e^{l,h}_n , x^L_n )
+
+    where x^L_j denotes the LAST-LAYER residual stream hidden state of token j
+    (Luo et al. 2024; Chen et al. 2024a).  The attention pattern at (l, h)
+    supplies the soft membership weights over I^{l,h}_n; using all transcript
+    positions weighted by their attention probabilities is the continuous
+    relaxation of the set-mean in the paper's eq. (3).
+
+    Token-level ECS is the mean over all (layer, head) pairs.
+    """
+    n_layers = model.cfg.n_layers
+    n_heads  = model.cfg.n_heads
+
+    # Last-layer residual stream for ALL tokens: (S, D)
+    x_last       = cache["resid_post", n_layers - 1][0].float().cpu().numpy()
+    x_transcript = x_last[:transcript_len]   # (T, D) — source token representations
+    x_note       = x_last[transcript_len:]   # (N, D) — note token representations
+
+    # Pre-compute note-token ℓ2 norms once (reused across every layer / head)
+    norm_x = np.linalg.norm(x_note, axis=-1)  # (N,)
+
+    ecs = np.zeros(note_len, dtype=np.float64)
+
+    for layer in range(n_layers):
+        # attn_pat: (H, S, S)
+        attn_pat = cache["pattern", layer][0].float().cpu().numpy()
+
+        # Slice attention weights: note queries → transcript keys  (H, N, T)
+        w = attn_pat[:, transcript_len:, :transcript_len]
+
+        # Attention-weighted context vectors e: (H, N, D)
+        e = np.einsum("hnt,td->hnd", w, x_transcript)
+
+        # Cosine similarity  dot(e[h,n], x_note[n]) / (||e[h,n]|| · ||x_note[n]||)
+        dot    = np.einsum("hnd,nd->hn", e, x_note)  # (H, N)
+        norm_e = np.linalg.norm(e, axis=-1)           # (H, N)
+        denom  = norm_e * norm_x[None, :]             # (H, N)
+
+        valid = denom > 1e-8
+        cos   = np.where(valid, dot / np.where(valid, denom, 1.0), 0.0)  # (H, N)
+
+        ecs += cos.sum(axis=0)   # accumulate sum over heads
+
+    ecs /= (n_layers * n_heads)  # average over all (layer, head) pairs
+    return np.clip(ecs, 0.0, 1.0)
+
+
+def _logit_lens(model: HookedTransformer, x: torch.Tensor) -> torch.Tensor:
+    """
+    Apply the LogitLens projection to an intermediate residual-stream tensor.
+
+    LogitLens(x) = Unembed( LayerNorm_final(x) )
+
+    Parameters
+    ----------
+    x : (N, d_model) tensor on the model's device.
+
+    Returns
+    -------
+    logits : (N, d_vocab) raw (pre-softmax) vocabulary scores.
+    """
+    x = x.unsqueeze(0)    # (1, N, d_model) — batch dim required by TL modules
+    x = model.ln_final(x) # (1, N, d_model)
+    x = model.unembed(x)  # (1, N, d_vocab)
+    return x.squeeze(0)   # (N, d_vocab)
+
+
+def compute_pks(
+    model: HookedTransformer,
+    cache,
+    transcript_len: int,
+    note_len: int,
+    device: str,
+) -> np.ndarray:
+    """
+    Parametric Knowledge Score — paper eq. (5).
+
+    For each note token n at every layer l:
+
+        q(x) = softmax( LogitLens(x) )
+        P^l_n = JSD( q(x^{mid,l}_n)  ‖  q(x^l_n) )
+
+    where x^{mid,l}_n is the residual stream BEFORE the FFN (after attention)
+    and x^l_n is the residual stream AFTER the FFN.  A large JSD means the FFN
+    shifted the next-token distribution substantially — i.e. parametric
+    knowledge stored in the MLP weights drove the token choice.
+
+    Token-level PKS is the mean over all layers.
+    """
+    n_layers = model.cfg.n_layers
+    pks = np.zeros(note_len, dtype=np.float64)
+
+    for layer in range(n_layers):
+        # Residual stream BEFORE FFN (after attention sub-layer): (N, D)
+        x_mid  = cache["resid_mid",  layer][0, transcript_len:].to(
+            device=device, dtype=torch.float32)
+        # Residual stream AFTER FFN: (N, D)
+        x_post = cache["resid_post", layer][0, transcript_len:].to(
+            device=device, dtype=torch.float32)
+
+        with torch.no_grad():
+            q_mid  = torch.softmax(_logit_lens(model, x_mid),  dim=-1).cpu().numpy()
+            q_post = torch.softmax(_logit_lens(model, x_post), dim=-1).cpu().numpy()
+
+        # Jensen-Shannon Divergence  JSD(P‖Q) = ½ KL(P‖M) + ½ KL(Q‖M),  M = ½(P+Q)
+        m   = 0.5 * (q_mid + q_post)
+        eps = 1e-10
+        kl1 = np.sum(q_mid  * (np.log(q_mid  + eps) - np.log(m + eps)), axis=-1)
+        kl2 = np.sum(q_post * (np.log(q_post + eps) - np.log(m + eps)), axis=-1)
+        pks += 0.5 * kl1 + 0.5 * kl2
+
+    pks /= n_layers
+    return np.clip(pks, 0.0, 1.0)
+
+
 def compute_ecs_pks(
     model: HookedTransformer,
     tokens: torch.Tensor,
@@ -271,93 +398,42 @@ def compute_ecs_pks(
     cfg: Config,
 ) -> Tuple[np.ndarray, np.ndarray]:
     """
-    Compute External Context Score and Parametric Knowledge Score for every note token.
+    Run a single cached forward pass then delegate to compute_ecs / compute_pks.
 
-    ECS[i]
-        Mean (over layers × heads) of the total attention weight that note token i
-        places on transcript tokens.  Ranges [0, 1].
-        High → the token is strongly grounded in the transcript (extractive signal).
+    ECS[i]  — cosine similarity between the attention-weighted mean-pool of
+               LAST-LAYER transcript hidden states and the note token's own
+               last-layer hidden state, averaged over all (layer, head) pairs.
+               Ranges [0, 1].  High → token is semantically grounded in the
+               transcript.  Paper eq. (3/4).
 
-    PKS[i]
-        Mean (over layers) of MLP_out's share of the combined MLP + Attn output norm.
-        Ranges [0, 1].
-        High → parametric knowledge (MLP weights) is driving the prediction (abstractive
-        / medical-reasoning signal).
+    PKS[i]  — mean (over layers) JSD between LogitLens vocabulary distributions
+               before and after each FFN.  Ranges [0, 1].  High → the FFN made
+               a large parametric update to the next-token prediction.
+               Paper eq. (5).
 
     Quadrant interpretation
     ───────────────────────
-        High ECS, Low  PKS  → Extractive        (copying from transcript)
-        Low  ECS, High PKS  → Parametric        (drawing on medical knowledge)
+        High ECS, Low  PKS  → Extractive        (copied from transcript)
+        Low  ECS, High PKS  → Parametric        (driven by stored knowledge)
         High ECS, High PKS  → Synthesized       (grounded reasoning)
-        Low  ECS, Low  PKS  → Hallucination risk (neither source is driving output)
+        Low  ECS, Low  PKS  → Hallucination risk (neither source explains token)
     """
-    n_layers   = model.cfg.n_layers
-    n_heads    = model.cfg.n_heads
-    seq_len    = tokens.shape[1]
-    note_len   = seq_len - transcript_len
-
+    note_len = tokens.shape[1] - transcript_len
     assert note_len > 0, "note_len must be > 0: check tokenisation"
 
-    # ── Forward pass with full activation cache ──────────────────────────────
+    # Single forward pass — cache attention patterns + pre/post-FFN residuals
     with torch.no_grad():
         _, cache = model.run_with_cache(
             tokens,
             names_filter=lambda name: (
-                "pattern" in name or
-                "mlp_out" in name or
-                "attn_out" in name
+                "pattern"    in name or   # attention weights              → ECS
+                "resid_mid"  in name or   # residual before FFN            → PKS
+                "resid_post" in name      # residual after FFN; last layer → ECS
             ),
         )
 
-    # ── Layer range for ECS ───────────────────────────────────────────────────
-    if cfg.ecs_layers == "last_half":
-        ecs_layers = range(n_layers // 2, n_layers)
-    else:
-        ecs_layers = range(n_layers)
-
-    # ── ECS ───────────────────────────────────────────────────────────────────
-    # cache["pattern", L] : (batch=1, n_heads, seq, seq)
-    ecs = np.zeros(note_len, dtype=np.float64)
-
-    for layer in ecs_layers:
-        # attn_pat[head, query, key]
-        attn_pat = cache["pattern", layer][0].float().cpu().numpy()  # (H, S, S)
-
-        for k in range(note_len):
-            q = transcript_len + k   # absolute position of this note token
-            # sum of weights this query places on all transcript key positions
-            context_weight = attn_pat[:, q, :transcript_len].sum(axis=-1)  # (H,)
-            ecs[k] += context_weight.mean()
-
-    ecs /= len(ecs_layers)
-
-    # ── PKS ───────────────────────────────────────────────────────────────────
-    # cache["mlp_out",  L] : (batch=1, seq, d_model)
-    # cache["attn_out", L] : (batch=1, seq, d_model)
-    pks = np.zeros(note_len, dtype=np.float64)
-
-    for layer in range(n_layers):
-        mlp_out  = cache["mlp_out",  layer][0].float().cpu().numpy()  # (S, D)
-        attn_out = cache["attn_out", layer][0].float().cpu().numpy()  # (S, D)
-
-        for k in range(note_len):
-            q = transcript_len + k
-            mlp_norm  = float(np.linalg.norm(mlp_out[q]))
-            attn_norm = float(np.linalg.norm(attn_out[q]))
-            denom     = mlp_norm + attn_norm
-            if denom > 1e-8:
-                if cfg.pks_method == "norm_ratio":
-                    pks[k] += mlp_norm / denom
-                else:  # resid_frac — normalise by residual stream norm instead
-                    resid = cache["resid_post", layer][0, q].float().cpu().numpy()
-                    resid_norm = float(np.linalg.norm(resid))
-                    pks[k] += mlp_norm / (resid_norm + 1e-8)
-
-    pks /= n_layers
-
-    # Clip to [0, 1] to handle any floating-point edge cases
-    ecs = np.clip(ecs, 0.0, 1.0)
-    pks = np.clip(pks, 0.0, 1.0)
+    ecs = compute_ecs(model, cache, transcript_len, note_len)
+    pks = compute_pks(model, cache, transcript_len, note_len, cfg.device)
 
     return ecs, pks
 
