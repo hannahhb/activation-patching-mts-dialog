@@ -41,6 +41,8 @@ Usage:
 """
 
 import argparse
+import random
+import re
 import textwrap
 import warnings
 from dataclasses import dataclass, field
@@ -1002,15 +1004,367 @@ def run_experiment_2b(
 
 
 # ─────────────────────────────────────────────
-# 10. Entry point
+# 11. Experiment 2c — hallucination validation
+# ─────────────────────────────────────────────
+
+# Substitution rules for synthetic hallucination injection.
+# Each entry: (regex_pattern, replacement_text, category_label).
+# Patterns use word boundaries where appropriate to avoid partial matches.
+_HALLUC_RULES: List[Tuple[str, str, str]] = [
+    # ── Medications ───────────────────────────────────────────────────────────
+    (r"\balbuterol\b",           "salmeterol",         "wrong_medication"),
+    (r"\bSingulair\b",           "Symbicort",          "wrong_medication"),
+    (r"\bmontelukast\b",         "fluticasone",        "wrong_medication"),
+    (r"\bmetformin\b",           "lisinopril",         "wrong_medication"),
+    (r"\blisinopril\b",          "metformin",          "wrong_medication"),
+    (r"\batorvastatin\b",        "rosuvastatin",       "wrong_medication"),
+    (r"\baspirin\b",             "warfarin",           "wrong_medication"),
+    (r"\bamoxicillin\b",         "azithromycin",       "wrong_medication"),
+    (r"\bibuprofen\b",           "naproxen",           "wrong_medication"),
+    (r"\bomeprazole\b",          "pantoprazole",       "wrong_medication"),
+    (r"\bsertraline\b",          "fluoxetine",         "wrong_medication"),
+    # ── Dosages ───────────────────────────────────────────────────────────────
+    (r"\b10\s*mg\b",             "20 mg",              "wrong_dosage"),
+    (r"\b5\s*mg\b",              "10 mg",              "wrong_dosage"),
+    (r"\b500\s*mg\b",            "250 mg",             "wrong_dosage"),
+    (r"\b20\s*mg\b",             "40 mg",              "wrong_dosage"),
+    (r"\b25\s*mg\b",             "50 mg",              "wrong_dosage"),
+    (r"\b50\s*mg\b",             "100 mg",             "wrong_dosage"),
+    # ── Diagnoses ────────────────────────────────────────────────────────────
+    (r"\basthma\b",              "COPD",               "wrong_diagnosis"),
+    (r"\bhypertension\b",        "hypotension",        "wrong_diagnosis"),
+    (r"\bdiabetes\b",            "hypothyroidism",     "wrong_diagnosis"),
+    (r"\ballergic\s+rhinitis\b", "chronic sinusitis",  "wrong_diagnosis"),
+    (r"\bangina\b",              "myocardial infarction", "wrong_diagnosis"),
+    (r"\beczema\b",              "psoriasis",          "wrong_diagnosis"),
+    # ── Vitals / findings ────────────────────────────────────────────────────
+    (r"\b120\s*/\s*80\b",        "180/110",            "wrong_vital"),
+    (r"\b98\.6\b",               "101.4",              "wrong_vital"),
+    (r"\bnormal\b",              "elevated",           "wrong_finding"),
+    (r"\bnegative\b",            "positive",           "wrong_finding"),
+]
+
+# Used when no rule fires on the note text (unusual vocabulary).
+_FALLBACK_HALLUC = (
+    " Additionally, patient reports recent chest tightness at rest; "
+    "troponin I elevated at 0.8 ng/mL on last draw."
+)
+
+
+def inject_hallucinations(
+    note: str,
+    max_injections: int = 3,
+    seed: int = 42,
+) -> Tuple[str, List[Dict]]:
+    """
+    Inject synthetic hallucinations into a clinical note by applying a shuffled
+    subset of _HALLUC_RULES (word/phrase substitutions).
+
+    Rules are shuffled deterministically with `seed` so different samples
+    exercise different hallucination categories.  Each rule fires at most once
+    (first regex match in the current text).  If no rule matches at all, a
+    fabricated sentence is appended as a fallback.
+
+    Parameters
+    ----------
+    note           : original clinical note text.
+    max_injections : maximum number of substitutions to apply.
+    seed           : random seed for rule shuffling.
+
+    Returns
+    -------
+    corrupted_note : note text with injected hallucinations.
+    injections     : list of dicts, each with keys
+                       char_start, char_end, original, replacement, category.
+    """
+    rng   = random.Random(seed)
+    rules = list(_HALLUC_RULES)
+    rng.shuffle(rules)
+
+    injections: List[Dict] = []
+    text = note
+
+    for pattern, replacement, category in rules:
+        if len(injections) >= max_injections:
+            break
+        m = re.search(pattern, text, re.IGNORECASE)
+        if m:
+            cs = m.start()
+            ce = m.end()
+            injections.append({
+                "char_start":  cs,
+                "char_end":    cs + len(replacement),
+                "original":    m.group(0),
+                "replacement": replacement,
+                "category":    category,
+            })
+            text = text[:cs] + replacement + text[ce:]
+
+    # Fallback: append a fabricated clinical finding not grounded in the transcript
+    if not injections:
+        cs = len(text)
+        text += _FALLBACK_HALLUC
+        injections.append({
+            "char_start":  cs,
+            "char_end":    len(text),
+            "original":    "",
+            "replacement": _FALLBACK_HALLUC.strip(),
+            "category":    "inserted_hallucination",
+        })
+
+    return text, injections
+
+
+def halluc_token_indices(
+    model: HookedTransformer,
+    hallucinated_note: str,
+    injections: List[Dict],
+) -> List[int]:
+    """
+    Map character-level injection spans to token indices in the tokenized note.
+
+    Strategy 1 — HuggingFace tokenizer `offset_mapping` (exact char offsets).
+    Strategy 2 — Cumulative decode: reconstruct character positions by
+                 concatenating per-token decoded strings and checking overlap.
+
+    A token is flagged as hallucinated if its character span overlaps with any
+    injection span.
+    """
+    tok = model.tokenizer
+    halluc_idx: List[int] = []
+
+    # ── Strategy 1: offset_mapping ───────────────────────────────────────────
+    try:
+        enc     = tok(hallucinated_note, return_offsets_mapping=True, add_special_tokens=False)
+        offsets = enc["offset_mapping"]
+        for i, (cs, ce) in enumerate(offsets):
+            if ce == cs:
+                continue  # null span (special / padding token)
+            for inj in injections:
+                if cs < inj["char_end"] and ce > inj["char_start"]:
+                    halluc_idx.append(i)
+                    break
+        return sorted(set(halluc_idx))
+    except Exception:
+        pass
+
+    # ── Strategy 2: cumulative decode ────────────────────────────────────────
+    ids    = model.to_tokens(hallucinated_note, prepend_bos=False)[0]
+    cursor = 0
+    for i, tid in enumerate(ids):
+        piece = tok.decode([tid.item()])
+        end   = cursor + len(piece)
+        for inj in injections:
+            if cursor < inj["char_end"] and end > inj["char_start"]:
+                halluc_idx.append(i)
+                break
+        cursor = end
+
+    return sorted(set(halluc_idx))
+
+
+def run_experiment_2c(
+    model: HookedTransformer,
+    cfg: Config,
+    out: Path,
+    transcript: str,
+    gold_note: str,
+) -> Dict:
+    """
+    Experiment 2c: ECS/PKS as a hallucination screening tool — validation via
+    synthetic injection into the gold reference note.
+
+    Procedure
+    ---------
+    1. Inject a small number of clinically plausible but factually incorrect
+       substitutions into the gold SOAP note (wrong drug names, dosages,
+       diagnoses, vitals).  The injection positions are recorded precisely.
+    2. Compute ECS and PKS for every token of the corrupted note, with the
+       original transcript as the external context source.
+    3. Map injection character spans back to token indices so we know the
+       ground-truth hallucination locations.
+    4. Plot the ECS/PKS scatter with injected tokens starred and labelled.
+    5. Report the quadrant breakdown for injected vs. clean tokens.
+
+    Interpretation
+    --------------
+    Injected tokens are NOT grounded in the transcript (low ECS expected)
+    and are unlikely to be well-supported by parametric knowledge in the
+    current context (low PKS expected) — they should therefore cluster in the
+    Low-ECS + Low-PKS quadrant.
+
+    This validates ECS and PKS as a *screening* signal: the low-low quadrant
+    identifies tokens worth inspecting, not tokens that are definitively wrong.
+
+    Outputs
+    -------
+    exp2c_scatter.png         — quadrant scatter; ★ marks injected tokens
+    exp2c_tokens.csv          — per-token ECS, PKS, risk, quadrant, injected flag
+    exp2c_corrupted_note.txt  — the hallucinated note text (for inspection)
+    """
+    print("\n" + "═"*54)
+    print("  EXPERIMENT 2c — Hallucination Screening Validation")
+    print("═"*54)
+
+    # ── Inject hallucinations ─────────────────────────────────────────────────
+    corrupted_note, injections = inject_hallucinations(
+        gold_note, max_injections=3, seed=cfg.sample_idx + 42
+    )
+
+    print(f"\n  Injected {len(injections)} hallucination(s):")
+    for inj in injections:
+        orig = f"'{inj['original']}'" if inj["original"] else "(nothing — appended)"
+        print(f"    [{inj['category']:22s}]  {orig}  →  '{inj['replacement']}'")
+
+    (out / "exp2c_corrupted_note.txt").write_text(corrupted_note, encoding="utf-8")
+    print("  Saved → exp2c_corrupted_note.txt")
+
+    # ── Tokenise ──────────────────────────────────────────────────────────────
+    tokens, t_len, note_toks = tokenize_pair(model, transcript, corrupted_note)
+    tokens = tokens.to(cfg.device)
+    print(f"\n  Transcript : {t_len} tokens")
+    print(f"  Note       : {len(note_toks)} tokens")
+
+    # ── Map injection spans → token indices ──────────────────────────────────
+    halluc_idx = halluc_token_indices(model, corrupted_note, injections)
+    print(f"\n  Hallucinated token positions ({len(halluc_idx)} tokens):")
+    for i in halluc_idx:
+        label = note_toks[i].replace("▁", "").replace("Ġ", "").strip() if i < len(note_toks) else "?"
+        print(f"    [{i:4d}] '{label}'")
+
+    # ── Compute ECS / PKS ────────────────────────────────────────────────────
+    print("\n  Computing ECS/PKS for corrupted note …")
+    ecs, pks = compute_ecs_pks(model, tokens, t_len, cfg)
+
+    # ── Quadrant classification ───────────────────────────────────────────────
+    em = float(np.median(ecs))
+    pm = float(np.median(pks))
+
+    def _quadrant(e: float, p: float) -> str:
+        if   e >= em and p <  pm: return "extractive"
+        elif e <  em and p >= pm: return "parametric"
+        elif e >= em and p >= pm: return "synthesized"
+        else:                      return "hallucinatory"
+
+    # ── Per-token DataFrame ───────────────────────────────────────────────────
+    risk      = hallucination_risk(ecs, pks)
+    is_halluc = [i in set(halluc_idx) for i in range(len(note_toks))]
+
+    rows = [
+        {
+            "token_idx": i,
+            "token":     t.replace("▁", "").replace("Ġ", "").strip(),
+            "ecs":       round(float(e), 4),
+            "pks":       round(float(p), 4),
+            "risk":      round(float(r), 4),
+            "injected":  int(h),
+            "quadrant":  _quadrant(e, p),
+        }
+        for i, (t, e, p, r, h) in enumerate(zip(note_toks, ecs, pks, risk, is_halluc))
+    ]
+    df = pd.DataFrame(rows)
+    df.to_csv(out / "exp2c_tokens.csv", index=False)
+    print("  Saved → exp2c_tokens.csv")
+
+    # ── Quadrant breakdown report ─────────────────────────────────────────────
+    df_h = df[df["injected"] == 1]
+    df_c = df[df["injected"] == 0]
+    n_h  = max(len(df_h), 1)
+    n_c  = max(len(df_c), 1)
+
+    print(f"\n  ── Quadrant breakdown  (thresholds: ECS≥{em:.3f}, PKS≥{pm:.3f}) ──")
+    print(f"  {'quadrant':<18}  {'injected':>14}  {'clean':>14}")
+    print("  " + "─" * 50)
+    for q in ["hallucinatory", "extractive", "parametric", "synthesized"]:
+        ni = int((df_h["quadrant"] == q).sum()) if len(df_h) else 0
+        nc = int((df_c["quadrant"] == q).sum())
+        marker = "  ◄ expected" if q == "hallucinatory" else ""
+        print(f"  {q:<18}  {ni:>4} / {len(df_h):>3} ({ni/n_h:>4.0%})  "
+              f"{nc:>4} / {len(df_c):>3} ({nc/n_c:>4.0%}){marker}")
+
+    # ── ECS / PKS stats for injected tokens ──────────────────────────────────
+    if len(df_h):
+        print(f"\n  ── Injected token scores ──")
+        print(f"  {'token':<18}  {'ECS':>6}  {'PKS':>6}  {'risk':>6}  {'quadrant'}")
+        print("  " + "─" * 60)
+        for _, row in df_h.iterrows():
+            print(f"  {row['token']:<18}  {row['ecs']:>6.3f}  "
+                  f"{row['pks']:>6.3f}  {row['risk']:>6.3f}  {row['quadrant']}")
+
+    # ── Scatter plot ──────────────────────────────────────────────────────────
+    fig, ax = plt.subplots(figsize=(9, 8))
+    plot_scatter(
+        ecs, pks, note_toks,
+        (f"Exp 2c — Gold Note + Injected Hallucinations\n"
+         f"({cfg.model_name})   ★ = injected hallucination tokens"),
+        ax=ax,
+        highlight=halluc_idx,
+        annotate_stride=5,
+    )
+
+    # Bold red labels on each injected token
+    for i in halluc_idx:
+        if i >= len(note_toks):
+            continue
+        label = note_toks[i].replace("▁", "").replace("Ġ", "").strip()[:16]
+        ax.annotate(
+            label,
+            (ecs[i], pks[i]),
+            fontsize=7,
+            color="#B71C1C",
+            fontweight="bold",
+            xytext=(8, 8),
+            textcoords="offset points",
+            arrowprops=dict(arrowstyle="-", color="#B71C1C", lw=0.8),
+        )
+
+    # Summary box: fraction of injected tokens in the hallucinatory quadrant
+    if len(df_h):
+        n_low_low   = int((df_h["quadrant"] == "hallucinatory").sum())
+        frac_low    = n_low_low / len(df_h)
+        summary_txt = (
+            f"Injected tokens\nin Low-ECS + Low-PKS:\n"
+            f"{n_low_low} / {len(df_h)} = {frac_low:.0%}"
+        )
+        ax.text(
+            0.02, 0.98, summary_txt,
+            transform=ax.transAxes,
+            fontsize=8,
+            verticalalignment="top",
+            bbox=dict(
+                boxstyle="round,pad=0.4",
+                facecolor="white",
+                alpha=0.85,
+                edgecolor=Q_COLORS["hallucinatory"],
+                linewidth=1.5,
+            ),
+        )
+
+    plt.tight_layout()
+    fig.savefig(out / "exp2c_scatter.png", dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print("  Saved → exp2c_scatter.png")
+
+    return {
+        "ecs":        ecs,
+        "pks":        pks,
+        "halluc_idx": halluc_idx,
+        "injections": injections,
+        "df":         df,
+    }
+
+
+# ─────────────────────────────────────────────
+# 12. Entry point
 # ─────────────────────────────────────────────
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="REDEEP ECS/PKS — clinical note experiments")
     p.add_argument("--model", choices=["gemma", "llama"], default="gemma",
                    help="gemma → google/gemma-2-2b-instruct  |  llama → meta-llama/Meta-Llama-3-8B")
-    p.add_argument("--exp", choices=["2a", "2b", "both"], default="both",
-                   help="Which experiment(s) to run (default: both)")
+    p.add_argument("--exp", choices=["2a", "2b", "2c", "both", "all"], default="both",
+                   help="Which experiment(s) to run  "
+                        "(both=2a+2b [default]  |  all=2a+2b+2c)")
     p.add_argument("--ecs-layers", choices=["all", "last_half"], default="all",
                    help="Layers used for ECS averaging (default: all)")
     p.add_argument("--pks-method", choices=["norm_ratio", "resid_frac"], default="norm_ratio",
@@ -1069,11 +1423,14 @@ def main() -> None:
           f"  |  d_model: {model.cfg.d_model}")
 
     # ── Run experiments ───────────────────────────────────────────────────────
-    if args.exp in ("2a", "both"):
+    if args.exp in ("2a", "both", "all"):
         run_experiment_2a(model, cfg, out, transcript, gold_note)
 
-    if args.exp in ("2b", "both"):
+    if args.exp in ("2b", "both", "all"):
         run_experiment_2b(model, cfg, out, transcript, gold_note)
+
+    if args.exp in ("2c", "all"):
+        run_experiment_2c(model, cfg, out, transcript, gold_note)
 
     print("\n" + "═"*54)
     print("  Done.  All outputs written to:", out.resolve())
