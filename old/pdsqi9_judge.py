@@ -22,7 +22,7 @@ import os
 from pathlib import Path
 from typing import Dict, List, Optional
 
-from config import (
+from sae_experiments.old.config import (
     PDSQI9_ATTRIBUTES, JUDGE_MODEL, JUDGE_TEMPERATURE,
     CACHE_DIR,
 )

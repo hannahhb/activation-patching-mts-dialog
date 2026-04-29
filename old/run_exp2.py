@@ -21,17 +21,17 @@ from pathlib import Path
 
 import pandas as pd
 
-from config import (
+from sae_experiments.old.config import (
     PDSQI9_ATTRIBUTES, RESULTS_DIR, JUDGE_MODEL,
 )
-from pdsqi9_judge import PDSQI9Judge
-from analysis import (
+from sae_experiments.old.pdsqi9_judge import PDSQI9Judge
+from sae_experiments.old.analysis import (
     build_signature_matrix,
     signature_matrix_pvalues,
     section_anova,
     section_mechanistic_deviations,
 )
-from visualise import (
+from sae_experiments.old.visualise import (
     plot_signature_matrix,
     plot_section_anova,
 )
@@ -114,7 +114,7 @@ def main():
             # Load dialogue from ACI-Bench if not in meta
             if not dialogue:
                 try:
-                    from data import load_aci_examples
+                    from sae_experiments.old.data import load_aci_examples
                     # cache: only load once
                     if not hasattr(main, "_aci_cache"):
                         main._aci_cache = {

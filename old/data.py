@@ -16,7 +16,7 @@ from typing import Dict, List
 import numpy as np
 from datasets import load_dataset
 
-from config import (
+from sae_experiments.old.config import (
     DATASET_HF_ID, DATASET_SPLIT, DIALOGUE_COL, NOTE_COL,
     N_FULL, RANDOM_SEED, SOAP_SECTIONS,
 )

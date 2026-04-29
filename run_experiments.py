@@ -48,8 +48,10 @@ from ecs_pks import (
     compute_ecs_pks,
     generate_note,
     hallucination_risk,
+    layer_discriminability,
     load_aci_sample,
     plot_heatmap,
+    plot_layer_discriminability,
     plot_risk_bar,
     plot_scatter,
     quadrant_stats,
@@ -57,6 +59,13 @@ from ecs_pks import (
 )
 
 warnings.filterwarnings("ignore")
+
+# Optional LLM-based hallucination generator (requires huggingface_hub or boto3)
+try:
+    from halluc_llm import HallucinationGenerationError, inject_hallucinations_llm, inject_hallucinations, halluc_token_indices
+    _LLM_HALLUC_AVAILABLE = True
+except ImportError:
+    _LLM_HALLUC_AVAILABLE = False
 
 
 # ─────────────────────────────────────────────
@@ -259,8 +268,8 @@ def run_experiment_2a(
     print(f"  Note       : {len(note_toks)} tokens")
 
     print("  Running forward pass + computing ECS / PKS …")
-    ecs, pks = compute_ecs_pks(model, tokens, t_len, cfg)
-    stats    = quadrant_stats(ecs, pks, f"2a — Gold Note (ACI-Bench sample {cfg.sample_idx})")
+    ecs, pks, _, _ = compute_ecs_pks(model, tokens, t_len, cfg)
+    stats          = quadrant_stats(ecs, pks, f"2a — Gold Note (ACI-Bench sample {cfg.sample_idx})")
 
     fig, ax = plt.subplots(figsize=(9, 8))
     plot_scatter(ecs, pks, note_toks,
@@ -332,9 +341,9 @@ def run_experiment_2b(
     print(f"  Gold note      : {len(nt_gold)} tokens  (distribution baseline only)")
 
     print("  Computing ECS/PKS for generated note …")
-    ecs_gen, pks_gen   = compute_ecs_pks(model, tok_gen,  tl_gen,  cfg)
+    ecs_gen, pks_gen, _, _   = compute_ecs_pks(model, tok_gen,  tl_gen,  cfg)
     print("  Computing ECS/PKS for gold note …")
-    ecs_gold, pks_gold = compute_ecs_pks(model, tok_gold, tl_gold, cfg)
+    ecs_gold, pks_gold, _, _ = compute_ecs_pks(model, tok_gold, tl_gold, cfg)
 
     stats_gen  = quadrant_stats(ecs_gen,  pks_gen,  f"2b — Generated Note (sample {cfg.sample_idx})")
     stats_gold = quadrant_stats(ecs_gold, pks_gold, f"2b — Gold Note      (sample {cfg.sample_idx})")
@@ -387,140 +396,6 @@ def run_experiment_2b(
 # 11. Experiment 2c — hallucination validation
 # ─────────────────────────────────────────────
 
-_HALLUC_RULES: List[Tuple[str, str, str]] = [
-    # ── Medications ───────────────────────────────────────────────────────────
-    (r"\balbuterol\b",           "salmeterol",            "wrong_medication"),
-    (r"\bSingulair\b",           "Symbicort",             "wrong_medication"),
-    (r"\bmontelukast\b",         "fluticasone",           "wrong_medication"),
-    (r"\bmetformin\b",           "lisinopril",            "wrong_medication"),
-    (r"\blisinopril\b",          "metformin",             "wrong_medication"),
-    (r"\batorvastatin\b",        "rosuvastatin",          "wrong_medication"),
-    (r"\baspirin\b",             "warfarin",              "wrong_medication"),
-    (r"\bamoxicillin\b",         "azithromycin",          "wrong_medication"),
-    (r"\bibuprofen\b",           "naproxen",              "wrong_medication"),
-    (r"\bomeprazole\b",          "pantoprazole",          "wrong_medication"),
-    (r"\bsertraline\b",          "fluoxetine",            "wrong_medication"),
-    # ── Dosages ───────────────────────────────────────────────────────────────
-    (r"\b10\s*mg\b",             "20 mg",                 "wrong_dosage"),
-    (r"\b5\s*mg\b",              "10 mg",                 "wrong_dosage"),
-    (r"\b500\s*mg\b",            "250 mg",                "wrong_dosage"),
-    (r"\b20\s*mg\b",             "40 mg",                 "wrong_dosage"),
-    (r"\b25\s*mg\b",             "50 mg",                 "wrong_dosage"),
-    (r"\b50\s*mg\b",             "100 mg",                "wrong_dosage"),
-    # ── Diagnoses ────────────────────────────────────────────────────────────
-    (r"\basthma\b",              "COPD",                  "wrong_diagnosis"),
-    (r"\bhypertension\b",        "hypotension",           "wrong_diagnosis"),
-    (r"\bdiabetes\b",            "hypothyroidism",        "wrong_diagnosis"),
-    (r"\ballergic\s+rhinitis\b", "chronic sinusitis",     "wrong_diagnosis"),
-    (r"\bangina\b",              "myocardial infarction", "wrong_diagnosis"),
-    (r"\beczema\b",              "psoriasis",             "wrong_diagnosis"),
-    # ── Vitals / findings ────────────────────────────────────────────────────
-    (r"\b120\s*/\s*80\b",        "180/110",               "wrong_vital"),
-    (r"\b98\.6\b",               "101.4",                 "wrong_vital"),
-    (r"\bnormal\b",              "elevated",              "wrong_finding"),
-    (r"\bnegative\b",            "positive",              "wrong_finding"),
-]
-
-_FALLBACK_HALLUC = (
-    " Additionally, patient reports recent chest tightness at rest; "
-    "troponin I elevated at 0.8 ng/mL on last draw."
-)
-
-
-def inject_hallucinations(
-    note: str,
-    max_injections: int = 3,
-    seed: int = 42,
-) -> Tuple[str, List[Dict]]:
-    """
-    Apply a shuffled subset of _HALLUC_RULES to the note (up to max_injections).
-
-    Rules are shuffled with `seed` so different dataset samples exercise
-    different hallucination categories.  Each rule fires at most once.
-    Falls back to appending a fabricated finding if no rule matches.
-
-    Returns
-    -------
-    corrupted_note : note text with injected hallucinations.
-    injections     : list of {char_start, char_end, original, replacement, category}.
-    """
-    rng   = random.Random(seed)
-    rules = list(_HALLUC_RULES)
-    rng.shuffle(rules)
-
-    injections: List[Dict] = []
-    text = note
-
-    for pattern, replacement, category in rules:
-        if len(injections) >= max_injections:
-            break
-        m = re.search(pattern, text, re.IGNORECASE)
-        if m:
-            cs = m.start()
-            ce = m.end()
-            injections.append({
-                "char_start":  cs,
-                "char_end":    cs + len(replacement),
-                "original":    m.group(0),
-                "replacement": replacement,
-                "category":    category,
-            })
-            text = text[:cs] + replacement + text[ce:]
-
-    if not injections:
-        cs   = len(text)
-        text += _FALLBACK_HALLUC
-        injections.append({
-            "char_start":  cs,
-            "char_end":    len(text),
-            "original":    "",
-            "replacement": _FALLBACK_HALLUC.strip(),
-            "category":    "inserted_hallucination",
-        })
-
-    return text, injections
-
-
-def halluc_token_indices(
-    model: HookedTransformer,
-    hallucinated_note: str,
-    injections: List[Dict],
-) -> List[int]:
-    """
-    Map char-level injection spans → token indices in the tokenized note.
-
-    Tries HF tokenizer offset_mapping (exact), falls back to cumulative decode.
-    A token is flagged if its char span overlaps any injection span.
-    """
-    tok        = model.tokenizer
-    halluc_idx: List[int] = []
-
-    try:
-        enc     = tok(hallucinated_note, return_offsets_mapping=True, add_special_tokens=False)
-        offsets = enc["offset_mapping"]
-        for i, (cs, ce) in enumerate(offsets):
-            if ce == cs:
-                continue
-            for inj in injections:
-                if cs < inj["char_end"] and ce > inj["char_start"]:
-                    halluc_idx.append(i)
-                    break
-        return sorted(set(halluc_idx))
-    except Exception:
-        pass
-
-    ids    = model.to_tokens(hallucinated_note, prepend_bos=False)[0]
-    cursor = 0
-    for i, tid in enumerate(ids):
-        piece = tok.decode([tid.item()])
-        end   = cursor + len(piece)
-        for inj in injections:
-            if cursor < inj["char_end"] and end > inj["char_start"]:
-                halluc_idx.append(i)
-                break
-        cursor = end
-
-    return sorted(set(halluc_idx))
 
 
 def run_experiment_2c(
@@ -529,6 +404,7 @@ def run_experiment_2c(
     out: Path,
     transcript: str,
     gold_note: str,
+    inject_fn=None,
 ) -> Dict:
     """
     Experiment 2c: ECS/PKS hallucination screening validation via synthetic
@@ -558,7 +434,8 @@ def run_experiment_2c(
     print("  EXPERIMENT 2c — Hallucination Screening Validation")
     print("═"*54)
 
-    corrupted_note, injections = inject_hallucinations(
+    _inject = inject_fn or inject_hallucinations
+    corrupted_note, injections = _inject(
         gold_note, max_injections=3, seed=cfg.sample_idx + 42
     )
 
@@ -582,7 +459,7 @@ def run_experiment_2c(
         print(f"    [{i:4d}] '{label}'")
 
     print("\n  Computing ECS/PKS for corrupted note …")
-    ecs, pks = compute_ecs_pks(model, tokens, t_len, cfg)
+    ecs, pks, ecs_layers, pks_layers = compute_ecs_pks(model, tokens, t_len, cfg)
 
     em = float(np.median(ecs))
     pm = float(np.median(pks))
@@ -668,15 +545,113 @@ def run_experiment_2c(
     plt.close(fig)
     print("  Saved → exp2c_scatter.png")
 
+    # ── Layer-wise discriminability ───────────────────────────────────────────
+    halluc_mask = np.array(is_halluc, dtype=bool)
+    disc = layer_discriminability(pks_layers, ecs_layers, halluc_mask)
+
+    if disc is not None:
+        n_layers = pks_layers.shape[0]
+
+        # Print summary table
+        best_pks_layer = int(np.argmax(np.abs(disc["pks_cohens_d"])))
+        best_ecs_layer = int(np.argmax(np.abs(disc["ecs_cohens_d"])))
+        print(f"\n  ── Layer-wise discriminability  ({n_layers} layers) ──")
+        print(f"  {'layer':>6}  {'PKS AUROC':>10}  {'PKS d':>8}  {'ECS AUROC':>10}  {'ECS d':>8}")
+        print("  " + "─" * 50)
+        for l in range(n_layers):
+            marker = ""
+            if l == best_pks_layer: marker += "  ← best PKS"
+            if l == best_ecs_layer: marker += "  ← best ECS"
+            print(f"  {l:>6}  {disc['pks_auroc'][l]:>10.4f}  {disc['pks_cohens_d'][l]:>8.3f}"
+                  f"  {disc['ecs_auroc'][l]:>10.4f}  {disc['ecs_cohens_d'][l]:>8.3f}{marker}")
+
+        # Save CSV
+        disc_df = pd.DataFrame({
+            "layer":        np.arange(n_layers),
+            "pks_auroc":    disc["pks_auroc"],
+            "pks_cohens_d": disc["pks_cohens_d"],
+            "ecs_auroc":    disc["ecs_auroc"],
+            "ecs_cohens_d": disc["ecs_cohens_d"],
+        })
+        disc_df.to_csv(out / "exp2c_layer_discriminability.csv", index=False)
+        print("  Saved → exp2c_layer_discriminability.csv")
+
+        # Plot
+        fig, axes = plt.subplots(2, 1, figsize=(max(10, n_layers // 2), 8),
+                                 sharex=True)
+        fig.suptitle(
+            f"Exp 2c — Layer-wise Discriminability  ({cfg.model_name})\n"
+            f"Hallucinated ({halluc_mask.sum()}) vs. clean ({(~halluc_mask).sum()}) tokens",
+            fontsize=11, fontweight="bold",
+        )
+        plot_layer_discriminability(disc, title="", axes=(axes[0], axes[1]))
+        plt.tight_layout()
+        fig.savefig(out / "exp2c_layer_discriminability.png", dpi=150, bbox_inches="tight")
+        plt.close(fig)
+        print("  Saved → exp2c_layer_discriminability.png")
+    else:
+        print("  [2c] Skipping layer discriminability — need ≥1 token in each class.")
+
     return {
         "ecs": ecs, "pks": pks,
+        "ecs_layers": ecs_layers, "pks_layers": pks_layers,
         "halluc_idx": halluc_idx, "injections": injections, "df": df,
+        "disc": disc,
     }
 
 
 # ─────────────────────────────────────────────
 # 12. Entry point
 # ─────────────────────────────────────────────
+
+def _resolve_inject_fn(args):
+    """
+    Return the injection callable to use for Experiment 2c.
+
+    Priority:
+      1. --halluc-backend regex  → always use the built-in regex injector
+      2. --halluc-backend hf/bedrock  → use inject_hallucinations_llm if the
+         halluc_llm module loaded successfully, else warn and fall back to regex
+    """
+    backend = args.halluc_backend
+
+    if backend == "regex":
+        print("  [2c] Hallucination backend: regex (rule-based)")
+        return inject_hallucinations   # defined in this file
+
+    if not _LLM_HALLUC_AVAILABLE:
+        warnings.warn(
+            f"[2c] --halluc-backend={backend} requested but halluc_llm could not "
+            f"be imported (missing huggingface_hub or boto3).  "
+            f"Falling back to regex-based injection."
+        )
+        return inject_hallucinations
+
+    # Build kwargs for inject_hallucinations_llm
+    llm_kwargs: Dict = {"backend": backend}
+    if backend == "hf" and args.hf_model:
+        llm_kwargs["hf_model"] = args.hf_model
+    if backend == "bedrock":
+        if args.bedrock_model:
+            llm_kwargs["bedrock_model"] = args.bedrock_model
+        if args.bedrock_region:
+            llm_kwargs["bedrock_region"] = args.bedrock_region
+
+    def _llm_inject(note: str, max_injections: int = 3, seed: int = 42):
+        """Thin wrapper so inject_hallucinations_llm matches the (note, max, seed) signature."""
+        try:
+            return inject_hallucinations_llm(note, max_injections=max_injections, **llm_kwargs)
+        except HallucinationGenerationError as exc:
+            warnings.warn(
+                f"[2c] LLM injection failed ({exc}).  "
+                f"Falling back to regex-based injection."
+            )
+            return inject_hallucinations(note, max_injections=max_injections, seed=seed)
+
+    model_id = llm_kwargs.get("hf_model") or llm_kwargs.get("bedrock_model") or "(default)"
+    print(f"  [2c] Hallucination backend: {backend}  model: {model_id}")
+    return _llm_inject
+
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="REDEEP ECS/PKS — clinical note experiments")
@@ -690,6 +665,18 @@ def parse_args() -> argparse.Namespace:
                    help="Max tokens for generated note in Exp 2b (default: 256)")
     p.add_argument("--temperature", type=float, default=0.0,
                    help="Sampling temperature for generation (0.0 = greedy)")
+    p.add_argument("--halluc-backend", choices=["regex", "hf", "bedrock"], default="hf",
+                   help="Hallucination injection method for Exp 2c  "
+                        "(regex=rule-based fallback  |  hf=HuggingFace API  |  bedrock=AWS Bedrock)")
+    p.add_argument("--hf-model", default=None,
+                   help="HuggingFace model ID for --halluc-backend hf  "
+                        "(default: Qwen/Qwen2.5-72B-Instruct)")
+    p.add_argument("--bedrock-model", default=None,
+                   help="Bedrock model ID for --halluc-backend bedrock  "
+                        "(default: anthropic.claude-3-haiku-20240307-v1:0)")
+    p.add_argument("--bedrock-region", default=None,
+                   help="AWS region for --halluc-backend bedrock  "
+                        "(default: AWS_DEFAULT_REGION env var or us-east-1)")
     p.add_argument("--out", default=".", help="Output directory for plots and CSV")
     return p.parse_args()
 
@@ -738,7 +725,8 @@ def main() -> None:
         run_experiment_2b(model, cfg, out, transcript, gold_note)
 
     if args.exp in ("2c", "all"):
-        run_experiment_2c(model, cfg, out, transcript, gold_note)
+        inject_fn = _resolve_inject_fn(args)
+        run_experiment_2c(model, cfg, out, transcript, gold_note, inject_fn=inject_fn)
 
     print("\n" + "═"*54)
     print("  Done.  All outputs written to:", out.resolve())

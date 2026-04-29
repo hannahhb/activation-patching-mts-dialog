@@ -43,7 +43,7 @@ import numpy as np
 import torch
 from transformer_lens import HookedTransformer
 
-from entities import ClinicalEntity
+from sae_experiments.old.entities import ClinicalEntity
 
 
 # ── Result Dataclasses ─────────────────────────────────────────────────────────

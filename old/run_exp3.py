@@ -33,11 +33,11 @@ import torch
 from transformer_lens import HookedTransformer
 from transformers import AutoTokenizer
 
-from config import (
+from sae_experiments.old.config import (
     MODEL_NAME, DTYPE, SOAP_PROMPT_TEMPLATE, RESULTS_DIR,
 )
-from data import load_aci_examples, segment_soap
-from patching import (
+from sae_experiments.old.data import load_aci_examples, segment_soap
+from sae_experiments.old.patching import (
     PatchingCandidate,
     select_candidates,
     run_patching_candidate,
@@ -45,7 +45,7 @@ from patching import (
     corrupt_dosage_swap,
     corrupt_negation_flip,
 )
-from visualise import plot_patching_sweep, plot_blind_spot_summary
+from sae_experiments.old.visualise import plot_patching_sweep, plot_blind_spot_summary
 
 
 # ── Prompt builder (same as Experiment 1) ─────────────────────────────────────

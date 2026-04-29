@@ -23,16 +23,16 @@ import torch
 from transformer_lens import HookedTransformer
 from transformers import AutoTokenizer
 
-from config import (
+from sae_experiments.old.config import (
     MODEL_NAME, DTYPE, SOAP_PROMPT_TEMPLATE,
     MAX_NEW_TOKENS, GENERATION_TEMP,
     N_PILOT, RESULTS_DIR, CACHE_DIR,
     EARLY_LAYERS, MID_LAYERS, LATE_LAYERS, UPPER_LAYERS,
 )
-from data import load_aci_examples, assign_sections, extract_soap_sections
-from entities import extract_entities
-from entity_dla import run_entity_analysis, save_entity_summaries, EncounterEntitySummary
-from mechanistic import (
+from sae_experiments.old.data import load_aci_examples, assign_sections, extract_soap_sections
+from sae_experiments.old.entities import extract_entities
+from sae_experiments.old.entity_dla import run_entity_analysis, save_entity_summaries, EncounterEntitySummary
+from sae_experiments.old.mechanistic import (
     profile_example, run_activation_patching, cache_filter,
     aggregate_encounter_features,
 )

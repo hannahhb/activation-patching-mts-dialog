@@ -315,7 +315,7 @@ def aggregate_encounter_features(
             feat[f"mlp_frac_{sec_name}"] = round(float(sub["mlp_fraction"].mean()), 4)
 
     # ── Input complexity features ─────────────────────────────────────────────
-    from data import compute_complexity_features
+    from sae_experiments.old.data import compute_complexity_features
     feat.update(compute_complexity_features(source_dialogue, tokenizer))
 
     return feat

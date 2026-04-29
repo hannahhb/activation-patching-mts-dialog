@@ -10,15 +10,17 @@ Provides
   load_aci_sample         load one (transcript, gold_note) pair from ACI-Bench
   tokenize_pair           concatenate transcript + note into one token sequence
   generate_note           autoregressively generate a SOAP note from a transcript
-  compute_ecs             ECS per note token — paper eq. (3/4)
-  compute_pks             PKS per note token — paper eq. (5)
-  compute_ecs_pks         single forward pass → (ecs, pks)
+  compute_ecs             ECS per note token — paper eq. (3/4); returns (ecs, ecs_layers)
+  compute_pks             PKS per note token — paper eq. (5);   returns (pks, pks_layers)
+  compute_ecs_pks         single forward pass → (ecs, pks, ecs_layers, pks_layers)
+  layer_discriminability  AUROC + Cohen's d per layer (hallucinated vs. clean)
   hallucination_risk      scalar risk score: 1 − (ECS + PKS) / 2
   quadrant_stats          fraction of tokens in each quadrant
   Q_COLORS                quadrant colour palette (shared across all plots)
   plot_scatter            ECS vs PKS quadrant scatter
   plot_heatmap            two-row ECS / PKS heatmap across token positions
   plot_risk_bar           per-token hallucination risk bar chart
+  plot_layer_discriminability  two-panel AUROC + Cohen's d figure
 
 Imported by run_experiments.py; can also be used interactively.
 
@@ -221,7 +223,7 @@ def compute_ecs(
     cache,
     transcript_len: int,
     note_len: int,
-) -> np.ndarray:
+) -> Tuple[np.ndarray, np.ndarray]:
     """
     External Context Score — paper eq. (3/4).
 
@@ -235,7 +237,10 @@ def compute_ecs(
     The attention pattern at (l, h) provides soft weights over transcript tokens;
     this is the continuous relaxation of the set-mean in paper eq. (3).
 
-    Token-level ECS is the mean over all (layer, head) pairs.
+    Returns
+    -------
+    ecs        : (note_len,)          mean ECS over all (layer, head) pairs.
+    ecs_layers : (n_layers, note_len) per-layer ECS (averaged over heads at each layer).
     """
     n_layers = model.cfg.n_layers
     n_heads  = model.cfg.n_heads
@@ -247,7 +252,8 @@ def compute_ecs(
 
     norm_x = np.linalg.norm(x_note, axis=-1)   # (N,) — pre-computed once
 
-    ecs = np.zeros(note_len, dtype=np.float64)
+    ecs        = np.zeros(note_len,           dtype=np.float64)
+    ecs_layers = np.zeros((n_layers, note_len), dtype=np.float64)
 
     for layer in range(n_layers):
         attn_pat = cache["pattern", layer][0].float().cpu().numpy()   # (H, S, S)
@@ -264,12 +270,13 @@ def compute_ecs(
         denom  = norm_e * norm_x[None, :]              # (H, N)
 
         valid = denom > 1e-8
-        cos   = np.where(valid, dot / np.where(valid, denom, 1.0), 0.0)
+        cos   = np.where(valid, dot / np.where(valid, denom, 1.0), 0.0)  # (H, N)
 
-        ecs += cos.sum(axis=0)   # sum over heads
+        ecs_layers[layer] = cos.mean(axis=0)   # mean over heads at this layer
+        ecs += cos.sum(axis=0)                 # accumulate for global mean
 
     ecs /= (n_layers * n_heads)
-    return np.clip(ecs, 0.0, 1.0)
+    return np.clip(ecs, 0.0, 1.0), np.clip(ecs_layers, 0.0, 1.0)
 
 
 def _logit_lens(model: HookedTransformer, x: torch.Tensor) -> torch.Tensor:
@@ -298,7 +305,7 @@ def compute_pks(
     transcript_len: int,
     note_len: int,
     device: str,
-) -> np.ndarray:
+) -> Tuple[np.ndarray, np.ndarray]:
     """
     Parametric Knowledge Score — paper eq. (5).
 
@@ -313,10 +320,14 @@ def compute_pks(
     A large JSD means the FFN shifted the next-token distribution substantially,
     indicating parametric knowledge stored in the MLP weights drove the choice.
 
-    Token-level PKS is the mean over all layers.
+    Returns
+    -------
+    pks        : (note_len,)           mean PKS over all layers.
+    pks_layers : (n_layers, note_len)  per-layer JSD (not averaged).
     """
-    n_layers = model.cfg.n_layers
-    pks = np.zeros(note_len, dtype=np.float64)
+    n_layers   = model.cfg.n_layers
+    pks        = np.zeros(note_len,            dtype=np.float64)
+    pks_layers = np.zeros((n_layers, note_len), dtype=np.float64)
 
     for layer in range(n_layers):
         x_mid  = cache["resid_mid",  layer][0, transcript_len:].to(
@@ -333,10 +344,13 @@ def compute_pks(
         eps = 1e-10
         kl1 = np.sum(q_mid  * (np.log(q_mid  + eps) - np.log(m + eps)), axis=-1)
         kl2 = np.sum(q_post * (np.log(q_post + eps) - np.log(m + eps)), axis=-1)
-        pks += 0.5 * kl1 + 0.5 * kl2
+        layer_jsd = 0.5 * kl1 + 0.5 * kl2
+
+        pks_layers[layer] = np.clip(layer_jsd, 0.0, 1.0)
+        pks += layer_jsd
 
     pks /= n_layers
-    return np.clip(pks, 0.0, 1.0)
+    return np.clip(pks, 0.0, 1.0), pks_layers
 
 
 def compute_ecs_pks(
@@ -344,18 +358,16 @@ def compute_ecs_pks(
     tokens: torch.Tensor,
     transcript_len: int,
     cfg: Config,
-) -> Tuple[np.ndarray, np.ndarray]:
+) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
     """
-    Single cached forward pass → (ECS, PKS) arrays for every note token.
+    Single cached forward pass → (ECS, PKS, ECS-per-layer, PKS-per-layer).
 
-    ECS[i]  — cosine similarity between the attention-weighted mean-pool of
-               last-layer transcript hidden states and the note token's own
-               last-layer hidden state, averaged over all (layer, head) pairs.
-               High → token is semantically grounded in the transcript.
-
-    PKS[i]  — mean-layer JSD between LogitLens vocab distributions before and
-               after each FFN.
-               High → the FFN made a large parametric update to the prediction.
+    ECS[i]            — cosine similarity averaged over all (layer, head) pairs.
+                        High → token is semantically grounded in the transcript.
+    PKS[i]            — mean-layer JSD over all FFN layers.
+                        High → parametric knowledge drove the prediction.
+    ecs_layers[l, i]  — ECS at layer l (averaged over heads), shape (L, N).
+    pks_layers[l, i]  — JSD at layer l (not averaged),        shape (L, N).
 
     Quadrant interpretation
     ───────────────────────
@@ -377,14 +389,16 @@ def compute_ecs_pks(
             ),
         )
 
-    ecs = compute_ecs(model, cache, transcript_len, note_len)
-    pks = compute_pks(model, cache, transcript_len, note_len, cfg.device)
-    return ecs, pks
+    ecs, ecs_layers = compute_ecs(model, cache, transcript_len, note_len)
+    pks, pks_layers = compute_pks(model, cache, transcript_len, note_len, cfg.device)
+    return ecs, pks, ecs_layers, pks_layers
 
 
 # ─────────────────────────────────────────────
 # 6. Derived metrics
 # ─────────────────────────────────────────────
+
+
 
 def hallucination_risk(ecs: np.ndarray, pks: np.ndarray) -> np.ndarray:
     """
@@ -429,6 +443,149 @@ def quadrant_stats(ecs: np.ndarray, pks: np.ndarray, label: str) -> Dict:
         print(f"  {k:<{width}} {v:.4f}" if isinstance(v, float) else f"  {k:<{width}} {v}")
 
     return stats
+
+
+def layer_discriminability(
+    pks_layers: np.ndarray,
+    ecs_layers: np.ndarray,
+    halluc_mask: np.ndarray,
+) -> Optional[Dict]:
+    """
+    Per-layer AUROC and Cohen's d for both PKS and ECS, separating
+    hallucinated from non-hallucinated tokens.
+
+    Parameters
+    ----------
+    pks_layers  : (n_layers, note_len) per-layer PKS values.
+    ecs_layers  : (n_layers, note_len) per-layer ECS values.
+    halluc_mask : (note_len,) bool — True for injected/hallucinated tokens.
+
+    Returns
+    -------
+    Dict with keys pks_auroc, pks_cohens_d, ecs_auroc, ecs_cohens_d
+    (each a 1-D array of length n_layers), or None if both classes are not
+    present in halluc_mask.
+
+    Interpretation
+    --------------
+    AUROC > 0.5  → higher scores → hallucinated (or lower if < 0.5).
+    Cohen's d    → standardised mean difference (hallucinated − clean).
+    For PKS: expect d < 0 (hallucinated tokens have *lower* FFN shift because
+    they are not supported by parametric knowledge).
+    For ECS: expect d < 0 (hallucinated tokens attend less to the transcript).
+    """
+    try:
+        from sklearn.metrics import roc_auc_score
+    except ImportError as exc:
+        raise ImportError(
+            "scikit-learn is required for layer_discriminability: "
+            "pip install scikit-learn"
+        ) from exc
+
+    h_mask = halluc_mask.astype(bool)
+    c_mask = ~h_mask
+
+    if h_mask.sum() < 1 or c_mask.sum() < 1:
+        warnings.warn(
+            "layer_discriminability: need both hallucinated and clean tokens; "
+            "returning None."
+        )
+        return None
+
+    n_layers = pks_layers.shape[0]
+    result: Dict = {
+        "pks_auroc":    np.zeros(n_layers),
+        "pks_cohens_d": np.zeros(n_layers),
+        "ecs_auroc":    np.zeros(n_layers),
+        "ecs_cohens_d": np.zeros(n_layers),
+    }
+
+    def _cohens_d(a: np.ndarray, b: np.ndarray) -> float:
+        """Cohen's d = (mean_a − mean_b) / pooled_std."""
+        na, nb = len(a), len(b)
+        if na < 2 or nb < 2:
+            return float("nan")
+        pooled = np.sqrt(((na - 1) * a.std() ** 2 + (nb - 1) * b.std() ** 2) / (na + nb - 2))
+        return float((a.mean() - b.mean()) / (pooled + 1e-10))
+
+    y = h_mask.astype(int)
+    for layer in range(n_layers):
+        for scores, auroc_key, d_key in [
+            (pks_layers[layer], "pks_auroc", "pks_cohens_d"),
+            (ecs_layers[layer], "ecs_auroc", "ecs_cohens_d"),
+        ]:
+            try:
+                result[auroc_key][layer] = roc_auc_score(y, scores)
+            except ValueError:
+                result[auroc_key][layer] = 0.5
+
+            result[d_key][layer] = _cohens_d(scores[h_mask], scores[c_mask])
+
+    return result
+
+
+def plot_layer_discriminability(
+    disc: Dict,
+    title: str,
+    axes: Optional[Tuple] = None,
+) -> Tuple[plt.Axes, plt.Axes]:
+    """
+    Two-panel figure showing layer-wise discriminability of ECS and PKS.
+
+    Top panel  : AUROC per layer — how well each layer separates hallucinated
+                 from clean tokens (chance = 0.5 dashed line).
+    Bottom panel: Cohen's d per layer — standardised mean difference
+                  (hallucinated − clean); negative = hallucinated tokens
+                  score lower, which is the expected direction for both ECS
+                  and PKS.
+
+    Parameters
+    ----------
+    disc  : dict returned by layer_discriminability().
+    title : suptitle string (e.g. model name + experiment tag).
+    axes  : optional (ax_auroc, ax_d) tuple; created if None.
+    """
+    n_layers = len(disc["pks_auroc"])
+    layers   = np.arange(n_layers)
+    width    = 0.35
+
+    if axes is None:
+        fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(max(10, n_layers // 2), 8),
+                                        sharex=True)
+        fig.suptitle(title, fontsize=12, fontweight="bold")
+    else:
+        ax1, ax2 = axes
+
+    # ── AUROC panel ──────────────────────────────────────────────────────────
+    ax1.plot(layers, disc["pks_auroc"], marker="o", color="#FF9800",
+             label="PKS AUROC", lw=1.8, markersize=4)
+    ax1.plot(layers, disc["ecs_auroc"], marker="s", color="#2196F3",
+             label="ECS AUROC", lw=1.8, markersize=4)
+    ax1.axhline(0.5, color="gray", ls="--", lw=1.0, alpha=0.7, label="Chance (0.5)")
+    ax1.fill_between(layers, 0.5, disc["pks_auroc"],
+                     where=disc["pks_auroc"] > 0.5, alpha=0.12, color="#FF9800")
+    ax1.fill_between(layers, 0.5, disc["ecs_auroc"],
+                     where=disc["ecs_auroc"] > 0.5, alpha=0.12, color="#2196F3")
+    ax1.set_ylabel("AUROC", fontsize=10)
+    ax1.set_ylim(0, 1.05)
+    ax1.legend(fontsize=8, loc="lower right")
+    ax1.set_title("Layer-wise AUROC — hallucinated vs. clean tokens", fontsize=10)
+
+    # ── Cohen's d panel ──────────────────────────────────────────────────────
+    ax2.bar(layers - width / 2, disc["pks_cohens_d"], width,
+            color="#FF9800", alpha=0.75, label="PKS Cohen's d")
+    ax2.bar(layers + width / 2, disc["ecs_cohens_d"], width,
+            color="#2196F3", alpha=0.75, label="ECS Cohen's d")
+    ax2.axhline(0, color="gray", ls="-", lw=0.8, alpha=0.6)
+    ax2.set_ylabel("Cohen's d  (halluc − clean)", fontsize=10)
+    ax2.set_xlabel("Layer", fontsize=10)
+    ax2.legend(fontsize=8)
+    ax2.set_title(
+        "Layer-wise Cohen's d  (negative = hallucinated tokens score lower, expected)",
+        fontsize=10,
+    )
+
+    return ax1, ax2
 
 
 # ─────────────────────────────────────────────

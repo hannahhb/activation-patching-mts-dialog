@@ -29,7 +29,7 @@ import torch
 from transformer_lens import HookedTransformer
 from transformer_lens.hook_points import HookPoint
 
-from config import N_LAYERS
+from sae_experiments.old.config import N_LAYERS
 
 
 # ── Hook name templates ────────────────────────────────────────────────────────
@@ -150,7 +150,7 @@ def select_candidates(
     This function outputs a scaffold list with category labels and encounter
     indices. The run_exp3.py script completes the corruption strings.
     """
-    from config import (
+    from sae_experiments.old.config import (
         COINCIDENTAL_CORRECTNESS_MLP_FRAC,
         COINCIDENTAL_CORRECTNESS_LOOKBACK,
         PENALISED_INFERENCE_ACCURATE_MAX,

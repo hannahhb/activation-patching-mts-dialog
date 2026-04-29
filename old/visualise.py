@@ -14,7 +14,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from config import RESULTS_DIR, PDSQI9_ATTRIBUTES, N_LAYERS
+from sae_experiments.old.config import RESULTS_DIR, PDSQI9_ATTRIBUTES, N_LAYERS
 
 _OUT = Path(RESULTS_DIR)
 _OUT.mkdir(parents=True, exist_ok=True)

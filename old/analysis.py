@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-from config import PDSQI9_ATTRIBUTES
+from sae_experiments.old.config import PDSQI9_ATTRIBUTES
 
 
 # ── A. Mechanistic Signature Matrix ───────────────────────────────────────────
