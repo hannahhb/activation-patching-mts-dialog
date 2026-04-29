@@ -42,6 +42,7 @@ Model overrides (kwargs to inject_hallucinations_llm)
 
 import json
 import os
+import random
 import re
 import warnings
 from typing import Any, Dict, List, Optional, Tuple
@@ -508,21 +509,27 @@ def inject_hallucinations(
 
 
 def halluc_token_indices(
-    model: HookedTransformer,
+    tokenizer,
     hallucinated_note: str,
     injections: List[Dict],
 ) -> List[int]:
     """
     Map char-level injection spans → token indices in the tokenized note.
 
-    Tries HF tokenizer offset_mapping (exact), falls back to cumulative decode.
-    A token is flagged if its char span overlaps any injection span.
+    Parameters
+    ----------
+    tokenizer : any HuggingFace tokenizer (PreTrainedTokenizer / Fast variant).
+                Pass ``model.tokenizer`` when calling from run_experiments.py.
+
+    Tries offset_mapping (fast tokenizers, exact), falls back to cumulative
+    decode.  A token is flagged if its char span overlaps any injection span.
     """
-    tok        = model.tokenizer
     halluc_idx: List[int] = []
 
+    # ── Primary path: offset_mapping (fast tokenizers) ───────────────────────
     try:
-        enc     = tok(hallucinated_note, return_offsets_mapping=True, add_special_tokens=False)
+        enc     = tokenizer(hallucinated_note, return_offsets_mapping=True,
+                            add_special_tokens=False)
         offsets = enc["offset_mapping"]
         for i, (cs, ce) in enumerate(offsets):
             if ce == cs:
@@ -535,10 +542,11 @@ def halluc_token_indices(
     except Exception:
         pass
 
-    ids    = model.to_tokens(hallucinated_note, prepend_bos=False)[0]
+    # ── Fallback: cumulative decode ───────────────────────────────────────────
+    ids    = tokenizer.encode(hallucinated_note, add_special_tokens=False)
     cursor = 0
     for i, tid in enumerate(ids):
-        piece = tok.decode([tid.item()])
+        piece = tokenizer.decode([tid])
         end   = cursor + len(piece)
         for inj in injections:
             if cursor < inj["char_end"] and end > inj["char_start"]:

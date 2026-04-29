@@ -452,7 +452,7 @@ def run_experiment_2c(
     print(f"\n  Transcript : {t_len} tokens")
     print(f"  Note       : {len(note_toks)} tokens")
 
-    halluc_idx = halluc_token_indices(model, corrupted_note, injections)
+    halluc_idx = halluc_token_indices(model.tokenizer, corrupted_note, injections)
     print(f"\n  Hallucinated token positions ({len(halluc_idx)} tokens):")
     for i in halluc_idx:
         label = note_toks[i].replace("▁", "").replace("Ġ", "").strip() if i < len(note_toks) else "?"
