@@ -45,7 +45,9 @@ from transformer_lens import HookedTransformer
 from ecs_pks import (
     Config,
     Q_COLORS,
+    compute_dla,
     compute_ecs_pks,
+    dla_discriminability,
     generate_note,
     hallucination_risk,
     layer_discriminability,
@@ -55,6 +57,7 @@ from ecs_pks import (
     plot_risk_bar,
     plot_scatter,
     quadrant_stats,
+    tokenize_as_generated,
     tokenize_pair,
 )
 
@@ -447,10 +450,10 @@ def run_experiment_2c(
     (out / "exp2c_corrupted_note.txt").write_text(corrupted_note, encoding="utf-8")
     print("  Saved → exp2c_corrupted_note.txt")
 
-    tokens, t_len, note_toks = tokenize_pair(model, transcript, corrupted_note)
+    tokens, t_len, note_toks = tokenize_as_generated(model, transcript, corrupted_note)
     tokens = tokens.to(cfg.device)
-    print(f"\n  Transcript : {t_len} tokens")
-    print(f"  Note       : {len(note_toks)} tokens")
+    print(f"\n  Prompt (instruction + transcript) : {t_len} tokens")
+    print(f"  Note                              : {len(note_toks)} tokens")
 
     halluc_idx = halluc_token_indices(model.tokenizer, corrupted_note, injections)
     print(f"\n  Hallucinated token positions ({len(halluc_idx)} tokens):")
@@ -601,7 +604,236 @@ def run_experiment_2c(
 
 
 # ─────────────────────────────────────────────
-# 12. Entry point
+# 12. Experiment 2d — Direct Logit Attribution
+# ─────────────────────────────────────────────
+
+def run_experiment_2d(
+    model: HookedTransformer,
+    cfg: Config,
+    out: Path,
+    transcript: str,
+    gold_note: str,
+    inject_fn=None,
+) -> Dict:
+    """
+    Experiment 2d: Direct Logit Attribution (DLA) — attention vs MLP contribution
+    for hallucinated vs clean tokens.
+
+    Procedure
+    ---------
+    1. Inject hallucinations into the gold note (same setup as 2c).
+    2. Tokenize with the generation prompt (same as 2c).
+    3. Decompose each note token's residual stream into per-layer attention and
+       MLP contributions via DLA: component_out · W_U[:, token].
+    4. Compute layer-wise discriminability (AUROC + Cohen's d) for attn and MLP.
+    5. Sum DLA over layers → total attn vs total MLP per token.
+    6. Scatter: total attn DLA vs total MLP DLA, hallucinated tokens starred.
+
+    Expected findings
+    -----------------
+    Hallucinated tokens should show:
+      - Lower attention DLA  (attn heads are not copying relevant transcript info)
+      - Higher MLP DLA       (parametric memory fires, overriding the transcript)
+
+    Outputs
+    -------
+    exp2d_scatter.png               — total attn vs total MLP DLA; ★ = injected
+    exp2d_layer_discriminability.png — AUROC + Cohen's d per layer
+    exp2d_tokens.csv                 — per-token total + per-layer attn/mlp DLA
+    exp2d_layer_discriminability.csv — per-layer AUROC and Cohen's d
+    exp2d_corrupted_note.txt         — corrupted note text
+    """
+    print("\n" + "═"*54)
+    print("  EXPERIMENT 2d — Direct Logit Attribution")
+    print("═"*54)
+
+    # ── 1. Inject hallucinations ─────────────────────────────────────────────
+    _inject = inject_fn or inject_hallucinations
+    corrupted_note, injections = _inject(
+        gold_note, max_injections=3, seed=cfg.sample_idx + 42
+    )
+
+    print(f"\n  Injected {len(injections)} hallucination(s):")
+    for inj in injections:
+        orig = f"'{inj['original']}'" if inj["original"] else "(nothing — appended)"
+        print(f"    [{inj['category']:22s}]  {orig}  →  '{inj['replacement']}'")
+
+    (out / "exp2d_corrupted_note.txt").write_text(corrupted_note, encoding="utf-8")
+    print("  Saved → exp2d_corrupted_note.txt")
+
+    # ── 2. Tokenise with generation prompt ───────────────────────────────────
+    tokens, t_len, note_toks = tokenize_as_generated(model, transcript, corrupted_note)
+    tokens = tokens.to(cfg.device)
+    note_len = len(note_toks)
+    print(f"\n  Prompt (instruction + transcript) : {t_len} tokens")
+    print(f"  Note                              : {note_len} tokens")
+
+    # ── 3. Map injections to token indices ───────────────────────────────────
+    halluc_idx = halluc_token_indices(model.tokenizer, corrupted_note, injections)
+    print(f"\n  Hallucinated token positions ({len(halluc_idx)} tokens):")
+    for i in halluc_idx:
+        label = note_toks[i].replace("▁", "").replace("Ġ", "").strip() if i < note_len else "?"
+        print(f"    [{i:4d}] '{label}'")
+
+    halluc_mask = np.zeros(note_len, dtype=bool)
+    halluc_mask[halluc_idx] = True
+
+    # ── 4. Compute DLA ────────────────────────────────────────────────────────
+    print("\n  Computing DLA (attention + MLP per layer) …")
+    attn_dla, mlp_dla = compute_dla(model, tokens, t_len, cfg)
+
+    # ── 5. Layer-wise discriminability ───────────────────────────────────────
+    disc = dla_discriminability(attn_dla, mlp_dla, halluc_mask)
+
+    n_layers = attn_dla.shape[0]
+
+    if disc is not None:
+        best_attn = int(np.argmax(np.abs(disc["attn_cohens_d"])))
+        best_mlp  = int(np.argmax(np.abs(disc["mlp_cohens_d"])))
+        print(f"\n  ── Layer-wise DLA discriminability ({n_layers} layers) ──")
+        print(f"  {'layer':>6}  {'Attn AUROC':>11}  {'Attn d':>8}  {'MLP AUROC':>11}  {'MLP d':>8}")
+        print("  " + "─" * 54)
+        for l in range(n_layers):
+            marker = ""
+            if l == best_attn: marker += "  ← peak attn"
+            if l == best_mlp:  marker += "  ← peak MLP"
+            print(f"  {l:>6}  {disc['attn_auroc'][l]:>11.4f}  {disc['attn_cohens_d'][l]:>8.3f}"
+                  f"  {disc['mlp_auroc'][l]:>11.4f}  {disc['mlp_cohens_d'][l]:>8.3f}{marker}")
+
+        disc_df = pd.DataFrame({
+            "layer":        np.arange(n_layers),
+            "attn_auroc":   disc["attn_auroc"],
+            "attn_cohens_d":disc["attn_cohens_d"],
+            "mlp_auroc":    disc["mlp_auroc"],
+            "mlp_cohens_d": disc["mlp_cohens_d"],
+        })
+        disc_df.to_csv(out / "exp2d_layer_discriminability.csv", index=False)
+        print("  Saved → exp2d_layer_discriminability.csv")
+
+        fig, axes = plt.subplots(2, 1, figsize=(max(10, n_layers // 2), 8), sharex=True)
+        fig.suptitle(
+            f"Exp 2d — DLA Layer-wise Discriminability  ({cfg.model_name})\n"
+            f"Hallucinated ({halluc_mask.sum()}) vs. clean ({(~halluc_mask).sum()}) tokens",
+            fontsize=11, fontweight="bold",
+        )
+        plot_layer_discriminability(
+            disc, title="",
+            axes=(axes[0], axes[1]),
+            metric_a="attn", metric_b="mlp",
+            label_a="Attention DLA", label_b="MLP DLA",
+            color_a="#9C27B0", color_b="#F44336",
+        )
+        plt.tight_layout()
+        fig.savefig(out / "exp2d_layer_discriminability.png", dpi=150, bbox_inches="tight")
+        plt.close(fig)
+        print("  Saved → exp2d_layer_discriminability.png")
+    else:
+        print("  [2d] Skipping layer discriminability — need ≥1 token in each class.")
+
+    # ── 6. Total DLA and per-token CSV ───────────────────────────────────────
+    total_attn = attn_dla.sum(axis=0)   # (note_len,)
+    total_mlp  = mlp_dla.sum(axis=0)
+
+    rows = [
+        {
+            "token_idx":  i,
+            "token":      note_toks[i].replace("▁", "").replace("Ġ", "").strip(),
+            "injected":   int(halluc_mask[i]),
+            "total_attn": round(float(total_attn[i]), 5),
+            "total_mlp":  round(float(total_mlp[i]),  5),
+            **{f"attn_l{l}": round(float(attn_dla[l, i]), 5) for l in range(n_layers)},
+            **{f"mlp_l{l}":  round(float(mlp_dla [l, i]), 5) for l in range(n_layers)},
+        }
+        for i in range(note_len)
+    ]
+    df = pd.DataFrame(rows)
+    df.to_csv(out / "exp2d_tokens.csv", index=False)
+    print("  Saved → exp2d_tokens.csv")
+
+    if len(halluc_idx):
+        df_h = df[df["injected"] == 1]
+        print(f"\n  ── Injected token DLA summary ──")
+        print(f"  {'token':<18}  {'total_attn':>11}  {'total_mlp':>11}")
+        print("  " + "─" * 46)
+        for _, row in df_h.iterrows():
+            print(f"  {row['token']:<18}  {row['total_attn']:>11.4f}  {row['total_mlp']:>11.4f}")
+        print(f"\n  Mean (hallucinated) — attn: {df_h['total_attn'].mean():.4f}"
+              f"  mlp: {df_h['total_mlp'].mean():.4f}")
+        df_c = df[df["injected"] == 0]
+        print(f"  Mean (clean)        — attn: {df_c['total_attn'].mean():.4f}"
+              f"  mlp: {df_c['total_mlp'].mean():.4f}")
+
+    # ── 7. Scatter: total attn DLA vs total MLP DLA ──────────────────────────
+    fig, ax = plt.subplots(figsize=(8, 7))
+
+    em = float(np.median(total_attn))
+    pm = float(np.median(total_mlp))
+
+    colors = []
+    for a, m in zip(total_attn, total_mlp):
+        if   a >= em and m <  pm: colors.append(Q_COLORS["extractive"])    # high attn, low mlp
+        elif a <  em and m >= pm: colors.append(Q_COLORS["parametric"])    # low attn, high mlp
+        elif a >= em and m >= pm: colors.append(Q_COLORS["synthesized"])   # both high
+        else:                     colors.append(Q_COLORS["hallucinatory"]) # both low
+
+    ax.scatter(total_attn, total_mlp, c=colors, s=55, alpha=0.75,
+               edgecolors="white", linewidth=0.4)
+
+    # Annotate every 5th token
+    for i, (a, m, tok) in enumerate(zip(total_attn, total_mlp, note_toks)):
+        if i % 5 == 0:
+            label = tok.replace("▁", "").replace("Ġ", "").strip()[:10]
+            ax.annotate(label, (a, m), fontsize=5.5, alpha=0.7,
+                        xytext=(3, 3), textcoords="offset points")
+
+    # Star hallucinated tokens
+    if halluc_idx:
+        hx = [total_attn[i] for i in halluc_idx if i < note_len]
+        hy = [total_mlp [i] for i in halluc_idx if i < note_len]
+        ax.scatter(hx, hy, s=220, c="black", marker="*", zorder=6,
+                   label="Hallucinated token")
+        for i in halluc_idx:
+            if i >= note_len: continue
+            label = note_toks[i].replace("▁", "").replace("Ġ", "").strip()[:16]
+            ax.annotate(label, (total_attn[i], total_mlp[i]),
+                        fontsize=7, color="#B71C1C", fontweight="bold",
+                        xytext=(8, 8), textcoords="offset points",
+                        arrowprops=dict(arrowstyle="-", color="#B71C1C", lw=0.8))
+
+    ax.axvline(em, color="gray", ls="--", lw=0.8, alpha=0.5)
+    ax.axhline(pm, color="gray", ls="--", lw=0.8, alpha=0.5)
+
+    import matplotlib.patches as mpatches
+    legend_patches = [
+        mpatches.Patch(color=Q_COLORS["extractive"],    label="High Attn, Low MLP"),
+        mpatches.Patch(color=Q_COLORS["parametric"],    label="Low Attn, High MLP"),
+        mpatches.Patch(color=Q_COLORS["synthesized"],   label="Both high"),
+        mpatches.Patch(color=Q_COLORS["hallucinatory"], label="Both low"),
+    ]
+    ax.legend(handles=legend_patches, fontsize=7, loc="lower right")
+
+    ax.set_xlabel("Total Attention DLA  (Σ layers)", fontsize=10)
+    ax.set_ylabel("Total MLP DLA  (Σ layers)", fontsize=10)
+    ax.set_title(
+        f"Exp 2d — Attention vs MLP DLA: Corrupted Note Tokens\n"
+        f"({cfg.model_name})   ★ = injected hallucination tokens",
+        fontsize=11, fontweight="bold",
+    )
+    plt.tight_layout()
+    fig.savefig(out / "exp2d_scatter.png", dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print("  Saved → exp2d_scatter.png")
+
+    return {
+        "attn_dla": attn_dla, "mlp_dla": mlp_dla,
+        "total_attn": total_attn, "total_mlp": total_mlp,
+        "halluc_idx": halluc_idx, "injections": injections,
+        "disc": disc, "df": df,
+    }
+
+
+# ─────────────────────────────────────────────
+# 13. Entry point
 # ─────────────────────────────────────────────
 
 def _resolve_inject_fn(args):
@@ -657,8 +889,8 @@ def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="REDEEP ECS/PKS — clinical note experiments")
     p.add_argument("--model", choices=["gemma", "llama"], default="gemma",
                    help="gemma → google/gemma-2-2b-it  |  llama → meta-llama/Meta-Llama-3-8B-instruct")
-    p.add_argument("--exp", choices=["2a", "2b", "2c", "both", "all"], default="both",
-                   help="Which experiment(s) to run  (both=2a+2b [default]  |  all=2a+2b+2c)")
+    p.add_argument("--exp", choices=["2a", "2b", "2c", "2d", "both", "all"], default="both",
+                   help="Which experiment(s) to run  (both=2a+2b [default]  |  all=2a+2b+2c+2d)")
     p.add_argument("--sample", type=int, default=0,
                    help="Row index from ACI-Bench test1 split (default: 0)")
     p.add_argument("--max-new-tokens", type=int, default=256,
@@ -727,6 +959,10 @@ def main() -> None:
     if args.exp in ("2c", "all"):
         inject_fn = _resolve_inject_fn(args)
         run_experiment_2c(model, cfg, out, transcript, gold_note, inject_fn=inject_fn)
+
+    if args.exp in ("2d", "all"):
+        inject_fn = _resolve_inject_fn(args)
+        run_experiment_2d(model, cfg, out, transcript, gold_note, inject_fn=inject_fn)
 
     print("\n" + "═"*54)
     print("  Done.  All outputs written to:", out.resolve())

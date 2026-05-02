@@ -13,7 +13,9 @@ Provides
   compute_ecs             ECS per note token — paper eq. (3/4); returns (ecs, ecs_layers)
   compute_pks             PKS per note token — paper eq. (5);   returns (pks, pks_layers)
   compute_ecs_pks         single forward pass → (ecs, pks, ecs_layers, pks_layers)
-  layer_discriminability  AUROC + Cohen's d per layer (hallucinated vs. clean)
+  compute_dla             single forward pass → (attn_dla, mlp_dla) per layer
+  layer_discriminability  AUROC + Cohen's d per layer for ECS/PKS
+  dla_discriminability    AUROC + Cohen's d per layer for attn/mlp DLA
   hallucination_risk      scalar risk score: 1 − (ECS + PKS) / 2
   quadrant_stats          fraction of tokens in each quadrant
   Q_COLORS                quadrant colour palette (shared across all plots)
@@ -167,6 +169,7 @@ def tokenize_pair(
 # 4. Model-based note generation (Experiment 2b)
 # ─────────────────────────────────────────────
 
+# Defined here so both tokenize_as_generated and generate_note can use it.
 _GENERATION_PROMPT = (
     "You are a clinical documentation assistant."
     "Given the following patient-clinician conversation, write a summary of the "
@@ -175,6 +178,38 @@ _GENERATION_PROMPT = (
     "### Conversation\n{transcript}\n\n"
     "### Note: \n"
 )
+
+
+def tokenize_as_generated(
+    model: HookedTransformer,
+    transcript: str,
+    note: str,
+) -> Tuple[torch.Tensor, int, List[str]]:
+    """
+    Tokenize a note in the same prompt context used for actual generation
+    (Experiment 2b), so that note-token activations are conditioned identically
+    to how the model would condition them during autoregressive generation.
+
+    For a causal (decoder-only) model, teacher-forcing with the full sequence
+    [prompt | note] produces exactly the same hidden states at each note position
+    as step-by-step generation would — this is a fundamental property of causal
+    attention.  The only thing that matters for correctness is that the *prefix*
+    matches what was used during generation, which this function ensures.
+
+    Returns
+    -------
+    tokens      : LongTensor (1, prompt_len + note_len)
+    prompt_len  : number of tokens in the generation prompt prefix
+                  (drop-in replacement for transcript_len in compute_ecs_pks)
+    note_strs   : decoded string for each note token (for plot labels)
+    """
+    prompt     = _GENERATION_PROMPT.format(transcript=transcript.strip())
+    prompt_tok = model.to_tokens(prompt, prepend_bos=True)    # (1, P)
+    note_tok   = model.to_tokens(note,   prepend_bos=False)   # (1, N)
+    combined   = torch.cat([prompt_tok, note_tok], dim=1)     # (1, P+N)
+    prompt_len = prompt_tok.shape[1]
+    note_strs  = [model.tokenizer.decode([t.item()]) for t in note_tok[0]]
+    return combined, prompt_len, note_strs
 
 
 def generate_note(
@@ -394,6 +429,75 @@ def compute_ecs_pks(
     return ecs, pks, ecs_layers, pks_layers
 
 
+def compute_dla(
+    model: HookedTransformer,
+    tokens: torch.Tensor,
+    transcript_len: int,
+    cfg: Config,
+) -> Tuple[np.ndarray, np.ndarray]:
+    """
+    Direct Logit Attribution (DLA) — attention vs MLP contribution per layer.
+
+    Decomposes each note token's position in the residual stream into additive
+    contributions from every attention and MLP layer:
+
+        attn_DLA^l_n = attn_out^l_n · W_U[:, t_n]
+        mlp_DLA^l_n  = mlp_out^l_n  · W_U[:, t_n]
+
+    where t_n is the token id at note position n and W_U is the unembedding
+    matrix.  A large positive value means that component strongly pushes the
+    residual stream toward t_n's direction in vocabulary space.
+
+    Approximation note
+    ------------------
+    The final LayerNorm (ln_final) is non-linear and cannot be split per
+    component.  DLA therefore bypasses it and projects directly through W_U.
+    This is the standard approximation used in mechanistic interpretability
+    (Elhage et al. 2021; Nanda & Lieberum 2022).  For *comparative* analysis
+    (hallucinated vs. clean tokens at the same layer) the bias is symmetric
+    and the approximation is justified.
+
+    Parameters
+    ----------
+    tokens         : (1, S) full token sequence [prompt | note].
+    transcript_len : number of prompt tokens (boundary between prefix and note).
+    cfg            : Config (cfg.device used for cache transfer).
+
+    Returns
+    -------
+    attn_dla : (n_layers, note_len) float64
+               Signed attention DLA per layer per note token.
+    mlp_dla  : (n_layers, note_len) float64
+               Signed MLP DLA per layer per note token.
+    """
+    note_len = tokens.shape[1] - transcript_len
+    n_layers = model.cfg.n_layers
+
+    with torch.no_grad():
+        _, cache = model.run_with_cache(
+            tokens,
+            names_filter=lambda name: "attn_out" in name or "mlp_out" in name,
+        )
+
+    # Grab unembedding columns for each note token — avoids materialising the
+    # full (note_len, d_vocab) logit matrix which can be hundreds of MB.
+    note_token_ids = tokens[0, transcript_len:].cpu()              # (N,)
+    W_U_rows = model.W_U[:, note_token_ids].T.float().cpu()        # (N, d_model)
+
+    attn_dla = np.zeros((n_layers, note_len), dtype=np.float64)
+    mlp_dla  = np.zeros((n_layers, note_len), dtype=np.float64)
+
+    for layer in range(n_layers):
+        attn_out = cache["attn_out", layer][0, transcript_len:].float().cpu()  # (N, D)
+        mlp_out  = cache["mlp_out",  layer][0, transcript_len:].float().cpu()  # (N, D)
+
+        # Element-wise dot with the unembedding column → scalar DLA per token
+        attn_dla[layer] = (attn_out * W_U_rows).sum(dim=-1).numpy()
+        mlp_dla [layer] = (mlp_out  * W_U_rows).sum(dim=-1).numpy()
+
+    return attn_dla, mlp_dla
+
+
 # ─────────────────────────────────────────────
 # 6. Derived metrics
 # ─────────────────────────────────────────────
@@ -524,28 +628,111 @@ def layer_discriminability(
     return result
 
 
+def dla_discriminability(
+    attn_dla: np.ndarray,
+    mlp_dla: np.ndarray,
+    halluc_mask: np.ndarray,
+) -> Optional[Dict]:
+    """
+    Per-layer AUROC and Cohen's d for attention DLA and MLP DLA, separating
+    hallucinated from non-hallucinated tokens.
+
+    Parameters
+    ----------
+    attn_dla    : (n_layers, note_len) per-layer attention DLA values.
+    mlp_dla     : (n_layers, note_len) per-layer MLP DLA values.
+    halluc_mask : (note_len,) bool — True for injected/hallucinated tokens.
+
+    Returns
+    -------
+    Dict with keys attn_auroc, attn_cohens_d, mlp_auroc, mlp_cohens_d
+    (each a 1-D array of length n_layers), or None if both classes absent.
+
+    Interpretation
+    --------------
+    For hallucinated tokens, expect:
+      attn_cohens_d < 0  → attention contributes less (not copying from prompt)
+      mlp_cohens_d  > 0  → MLP contributes more (parametric knowledge firing)
+    """
+    try:
+        from sklearn.metrics import roc_auc_score
+    except ImportError as exc:
+        raise ImportError(
+            "scikit-learn is required for dla_discriminability: "
+            "pip install scikit-learn"
+        ) from exc
+
+    h_mask = halluc_mask.astype(bool)
+    c_mask = ~h_mask
+
+    if h_mask.sum() < 1 or c_mask.sum() < 1:
+        warnings.warn(
+            "dla_discriminability: need both hallucinated and clean tokens; "
+            "returning None."
+        )
+        return None
+
+    n_layers = attn_dla.shape[0]
+    result: Dict = {
+        "attn_auroc":    np.zeros(n_layers),
+        "attn_cohens_d": np.zeros(n_layers),
+        "mlp_auroc":     np.zeros(n_layers),
+        "mlp_cohens_d":  np.zeros(n_layers),
+    }
+
+    def _cohens_d(a: np.ndarray, b: np.ndarray) -> float:
+        na, nb = len(a), len(b)
+        if na < 2 or nb < 2:
+            return float("nan")
+        pooled = np.sqrt(((na - 1) * a.std() ** 2 + (nb - 1) * b.std() ** 2) / (na + nb - 2))
+        return float((a.mean() - b.mean()) / (pooled + 1e-10))
+
+    y = h_mask.astype(int)
+    for layer in range(n_layers):
+        for scores, auroc_key, d_key in [
+            (attn_dla[layer], "attn_auroc", "attn_cohens_d"),
+            (mlp_dla [layer], "mlp_auroc",  "mlp_cohens_d"),
+        ]:
+            try:
+                result[auroc_key][layer] = roc_auc_score(y, scores)
+            except ValueError:
+                result[auroc_key][layer] = 0.5
+            result[d_key][layer] = _cohens_d(scores[h_mask], scores[c_mask])
+
+    return result
+
+
 def plot_layer_discriminability(
     disc: Dict,
     title: str,
     axes: Optional[Tuple] = None,
+    metric_a: str = "ecs",
+    metric_b: str = "pks",
+    label_a: str = "ECS",
+    label_b: str = "PKS",
+    color_a: str = "#2196F3",
+    color_b: str = "#FF9800",
 ) -> Tuple[plt.Axes, plt.Axes]:
     """
-    Two-panel figure showing layer-wise discriminability of ECS and PKS.
+    Two-panel figure showing layer-wise discriminability for two metrics.
 
-    Top panel  : AUROC per layer — how well each layer separates hallucinated
-                 from clean tokens (chance = 0.5 dashed line).
-    Bottom panel: Cohen's d per layer — standardised mean difference
-                  (hallucinated − clean); negative = hallucinated tokens
-                  score lower, which is the expected direction for both ECS
-                  and PKS.
+    Top panel   : AUROC per layer (chance = 0.5).
+    Bottom panel: Cohen's d per layer (hallucinated − clean; negative = lower
+                  for hallucinated tokens).
 
     Parameters
     ----------
-    disc  : dict returned by layer_discriminability().
-    title : suptitle string (e.g. model name + experiment tag).
-    axes  : optional (ax_auroc, ax_d) tuple; created if None.
+    disc     : dict from layer_discriminability() or dla_discriminability().
+    title    : suptitle string.
+    axes     : optional (ax_auroc, ax_d) tuple; created if None.
+    metric_a : key prefix for first metric  (default "ecs" → "ecs_auroc" etc.)
+    metric_b : key prefix for second metric (default "pks" → "pks_auroc" etc.)
+    label_a  : display label for first metric  (default "ECS").
+    label_b  : display label for second metric (default "PKS").
+    color_a  : line/bar colour for metric_a.
+    color_b  : line/bar colour for metric_b.
     """
-    n_layers = len(disc["pks_auroc"])
+    n_layers = len(disc[f"{metric_a}_auroc"])
     layers   = np.arange(n_layers)
     width    = 0.35
 
@@ -556,32 +743,37 @@ def plot_layer_discriminability(
     else:
         ax1, ax2 = axes
 
+    auroc_a = disc[f"{metric_a}_auroc"]
+    auroc_b = disc[f"{metric_b}_auroc"]
+    d_a     = disc[f"{metric_a}_cohens_d"]
+    d_b     = disc[f"{metric_b}_cohens_d"]
+
     # ── AUROC panel ──────────────────────────────────────────────────────────
-    ax1.plot(layers, disc["pks_auroc"], marker="o", color="#FF9800",
-             label="PKS AUROC", lw=1.8, markersize=4)
-    ax1.plot(layers, disc["ecs_auroc"], marker="s", color="#2196F3",
-             label="ECS AUROC", lw=1.8, markersize=4)
+    ax1.plot(layers, auroc_a, marker="s", color=color_a,
+             label=f"{label_a} AUROC", lw=1.8, markersize=4)
+    ax1.plot(layers, auroc_b, marker="o", color=color_b,
+             label=f"{label_b} AUROC", lw=1.8, markersize=4)
     ax1.axhline(0.5, color="gray", ls="--", lw=1.0, alpha=0.7, label="Chance (0.5)")
-    ax1.fill_between(layers, 0.5, disc["pks_auroc"],
-                     where=disc["pks_auroc"] > 0.5, alpha=0.12, color="#FF9800")
-    ax1.fill_between(layers, 0.5, disc["ecs_auroc"],
-                     where=disc["ecs_auroc"] > 0.5, alpha=0.12, color="#2196F3")
+    ax1.fill_between(layers, 0.5, auroc_a,
+                     where=auroc_a > 0.5, alpha=0.12, color=color_a)
+    ax1.fill_between(layers, 0.5, auroc_b,
+                     where=auroc_b > 0.5, alpha=0.12, color=color_b)
     ax1.set_ylabel("AUROC", fontsize=10)
     ax1.set_ylim(0, 1.05)
     ax1.legend(fontsize=8, loc="lower right")
     ax1.set_title("Layer-wise AUROC — hallucinated vs. clean tokens", fontsize=10)
 
     # ── Cohen's d panel ──────────────────────────────────────────────────────
-    ax2.bar(layers - width / 2, disc["pks_cohens_d"], width,
-            color="#FF9800", alpha=0.75, label="PKS Cohen's d")
-    ax2.bar(layers + width / 2, disc["ecs_cohens_d"], width,
-            color="#2196F3", alpha=0.75, label="ECS Cohen's d")
+    ax2.bar(layers - width / 2, d_a, width, color=color_a, alpha=0.75,
+            label=f"{label_a} Cohen's d")
+    ax2.bar(layers + width / 2, d_b, width, color=color_b, alpha=0.75,
+            label=f"{label_b} Cohen's d")
     ax2.axhline(0, color="gray", ls="-", lw=0.8, alpha=0.6)
     ax2.set_ylabel("Cohen's d  (halluc − clean)", fontsize=10)
     ax2.set_xlabel("Layer", fontsize=10)
     ax2.legend(fontsize=8)
     ax2.set_title(
-        "Layer-wise Cohen's d  (negative = hallucinated tokens score lower, expected)",
+        "Layer-wise Cohen's d  (negative = hallucinated tokens score lower)",
         fontsize=10,
     )
 
