@@ -482,7 +482,7 @@ def compute_dla(
     # Grab unembedding columns for each note token — avoids materialising the
     # full (note_len, d_vocab) logit matrix which can be hundreds of MB.
     note_token_ids = tokens[0, transcript_len:].cpu()              # (N,)
-    W_U_rows = model.W_U[:, note_token_ids].T.float().cpu()        # (N, d_model)
+    W_U_rows = model.W_U[:, note_token_ids].T.float().cpu().detach()  # (N, d_model)
 
     attn_dla = np.zeros((n_layers, note_len), dtype=np.float64)
     mlp_dla  = np.zeros((n_layers, note_len), dtype=np.float64)

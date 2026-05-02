@@ -243,7 +243,7 @@ class HFHallucinator:
 # 5. AWS Bedrock backend
 # ─────────────────────────────────────────────────────────────────────────────
 
-_BEDROCK_DEFAULT_MODEL  = "anthropic.claude-3-haiku-20240307-v1:0"
+_BEDROCK_DEFAULT_MODEL  = "us.meta.llama3-3-70b-instruct-v1:0"
 _BEDROCK_DEFAULT_REGION = "us-east-1"
 
 

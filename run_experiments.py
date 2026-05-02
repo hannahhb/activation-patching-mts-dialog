@@ -869,7 +869,7 @@ def _resolve_inject_fn(args):
         if args.bedrock_region:
             llm_kwargs["bedrock_region"] = args.bedrock_region
 
-    def _llm_inject(note: str, max_injections: int = 3, seed: int = 42):
+    def _llm_inject(note: str, max_injections: int = 10, seed: int = 42):
         """Thin wrapper so inject_hallucinations_llm matches the (note, max, seed) signature."""
         try:
             return inject_hallucinations_llm(note, max_injections=max_injections, **llm_kwargs)
@@ -893,11 +893,11 @@ def parse_args() -> argparse.Namespace:
                    help="Which experiment(s) to run  (both=2a+2b [default]  |  all=2a+2b+2c+2d)")
     p.add_argument("--sample", type=int, default=0,
                    help="Row index from ACI-Bench test1 split (default: 0)")
-    p.add_argument("--max-new-tokens", type=int, default=256,
-                   help="Max tokens for generated note in Exp 2b (default: 256)")
+    p.add_argument("--max-new-tokens", type=int, default=512,
+                   help="Max tokens for generated note in Exp 2b (default: 512)")
     p.add_argument("--temperature", type=float, default=0.0,
                    help="Sampling temperature for generation (0.0 = greedy)")
-    p.add_argument("--halluc-backend", choices=["regex", "hf", "bedrock"], default="hf",
+    p.add_argument("--halluc-backend", choices=["regex", "hf", "bedrock"], default="bedrock",
                    help="Hallucination injection method for Exp 2c  "
                         "(regex=rule-based fallback  |  hf=HuggingFace API  |  bedrock=AWS Bedrock)")
     p.add_argument("--hf-model", default=None,
@@ -950,17 +950,17 @@ def main() -> None:
     print(f"  Layers: {model.cfg.n_layers}  |  Heads: {model.cfg.n_heads}"
           f"  |  d_model: {model.cfg.d_model}")
 
-    if args.exp in ("2a", "both", "all"):
+    if args.exp in ("2a", "all"):
         run_experiment_2a(model, cfg, out, transcript, gold_note)
 
-    if args.exp in ("2b", "both", "all"):
+    if args.exp in ("2b", "all"):
         run_experiment_2b(model, cfg, out, transcript, gold_note)
 
-    if args.exp in ("2c", "all"):
+    if args.exp in ("2c", "both", "all"):
         inject_fn = _resolve_inject_fn(args)
         run_experiment_2c(model, cfg, out, transcript, gold_note, inject_fn=inject_fn)
 
-    if args.exp in ("2d", "all"):
+    if args.exp in ("2d", "both", "all"):
         inject_fn = _resolve_inject_fn(args)
         run_experiment_2d(model, cfg, out, transcript, gold_note, inject_fn=inject_fn)
 
