@@ -14,9 +14,14 @@ Provides
   compute_pks             PKS per note token — paper eq. (5);   returns (pks, pks_layers)
   compute_ecs_pks         single forward pass → (ecs, pks, ecs_layers, pks_layers)
   compute_dla             single forward pass → (attn_dla, mlp_dla) per layer
-  layer_discriminability  AUROC + Cohen's d per layer for ECS/PKS
-  dla_discriminability    AUROC + Cohen's d per layer for attn/mlp DLA
-  hallucination_risk      scalar risk score: 1 − (ECS + PKS) / 2
+  layer_discriminability       AUROC + Cohen's d + Pearson r per layer for ECS/PKS
+  dla_discriminability         AUROC + Cohen's d per layer for attn/mlp DLA
+  identify_knowledge_ffns      top-k layers (set F) by most positive PKS Pearson r
+  identify_copy_head_layers    top-k layers (set A) by most negative ECS Pearson r
+  fit_hallucination_regressor  fit logistic regression for Ht(t) = Σα·P^l − Σβ·E^{l,h}
+  calibrate_layer_thresholds   Youden-J optimal thresholds from labeled synthetic data
+  apply_layer_thresholds       AUROC-weighted per-layer vote → per-token halluc prob
+  hallucination_risk           scalar risk score: 1 − (ECS + PKS) / 2
   quadrant_stats          fraction of tokens in each quadrant
   Q_COLORS                quadrant colour palette (shared across all plots)
   plot_scatter            ECS vs PKS quadrant scatter
@@ -555,7 +560,7 @@ def layer_discriminability(
     halluc_mask: np.ndarray,
 ) -> Optional[Dict]:
     """
-    Per-layer AUROC and Cohen's d for both PKS and ECS, separating
+    Per-layer AUROC, Cohen's d, and Pearson r for both PKS and ECS, separating
     hallucinated from non-hallucinated tokens.
 
     Parameters
@@ -566,17 +571,20 @@ def layer_discriminability(
 
     Returns
     -------
-    Dict with keys pks_auroc, pks_cohens_d, ecs_auroc, ecs_cohens_d
+    Dict with keys pks_auroc, pks_cohens_d, pks_pearson_r,
+                       ecs_auroc, ecs_cohens_d, ecs_pearson_r
     (each a 1-D array of length n_layers), or None if both classes are not
     present in halluc_mask.
 
     Interpretation
     --------------
-    AUROC > 0.5  → higher scores → hallucinated (or lower if < 0.5).
-    Cohen's d    → standardised mean difference (hallucinated − clean).
-    For PKS: expect d < 0 (hallucinated tokens have *lower* FFN shift because
-    they are not supported by parametric knowledge).
-    For ECS: expect d < 0 (hallucinated tokens attend less to the transcript).
+    AUROC > 0.5   → higher score → hallucinated (or lower if < 0.5).
+    Cohen's d     → standardised mean difference (hallucinated − clean).
+    Pearson r     → point-biserial correlation with hallucination label (0/1).
+      pks_pearson_r > 0 : higher PKS at this layer → more hallucinated
+                          → candidate Knowledge FFN (set F)
+      ecs_pearson_r < 0 : higher ECS at this layer → less hallucinated
+                          → candidate Copying Head layer (set A)
     """
     try:
         from sklearn.metrics import roc_auc_score
@@ -584,6 +592,13 @@ def layer_discriminability(
         raise ImportError(
             "scikit-learn is required for layer_discriminability: "
             "pip install scikit-learn"
+        ) from exc
+    try:
+        from scipy.stats import pearsonr as _pearsonr
+    except ImportError as exc:
+        raise ImportError(
+            "scipy is required for layer_discriminability: "
+            "pip install scipy"
         ) from exc
 
     h_mask = halluc_mask.astype(bool)
@@ -598,10 +613,12 @@ def layer_discriminability(
 
     n_layers = pks_layers.shape[0]
     result: Dict = {
-        "pks_auroc":    np.zeros(n_layers),
-        "pks_cohens_d": np.zeros(n_layers),
-        "ecs_auroc":    np.zeros(n_layers),
-        "ecs_cohens_d": np.zeros(n_layers),
+        "pks_auroc":     np.zeros(n_layers),
+        "pks_cohens_d":  np.zeros(n_layers),
+        "pks_pearson_r": np.zeros(n_layers),
+        "ecs_auroc":     np.zeros(n_layers),
+        "ecs_cohens_d":  np.zeros(n_layers),
+        "ecs_pearson_r": np.zeros(n_layers),
     }
 
     def _cohens_d(a: np.ndarray, b: np.ndarray) -> float:
@@ -614,9 +631,9 @@ def layer_discriminability(
 
     y = h_mask.astype(int)
     for layer in range(n_layers):
-        for scores, auroc_key, d_key in [
-            (pks_layers[layer], "pks_auroc", "pks_cohens_d"),
-            (ecs_layers[layer], "ecs_auroc", "ecs_cohens_d"),
+        for scores, auroc_key, d_key, r_key in [
+            (pks_layers[layer], "pks_auroc", "pks_cohens_d", "pks_pearson_r"),
+            (ecs_layers[layer], "ecs_auroc", "ecs_cohens_d", "ecs_pearson_r"),
         ]:
             try:
                 result[auroc_key][layer] = roc_auc_score(y, scores)
@@ -625,7 +642,131 @@ def layer_discriminability(
 
             result[d_key][layer] = _cohens_d(scores[h_mask], scores[c_mask])
 
+            # Pearson r: point-biserial correlation with binary hallucination label
+            try:
+                r_val, _ = _pearsonr(scores.astype(float), y.astype(float))
+                result[r_key][layer] = float(r_val) if np.isfinite(r_val) else 0.0
+            except Exception:
+                result[r_key][layer] = 0.0
+
     return result
+
+
+def identify_knowledge_ffns(pks_pearson_r: np.ndarray, top_k: int = 5) -> List[int]:
+    """
+    Select the top-k layers (set F — Knowledge FFNs) with the most *positive*
+    Pearson r between per-layer PKS and the hallucination label.
+
+    According to REDEEP, these are layers where high PKS (large LogitLens
+    vocab shift after the FFN) correlates with hallucination — i.e. the model
+    is over-relying on parametric memory rather than the grounded transcript.
+
+    Parameters
+    ----------
+    pks_pearson_r : (n_layers,) Pearson r values from layer_discriminability().
+    top_k         : number of layers to select.
+
+    Returns
+    -------
+    Sorted list of layer indices (ascending).
+    """
+    k = max(1, min(top_k, len(pks_pearson_r)))
+    ranked = np.argsort(pks_pearson_r)[::-1]  # descending (most positive first)
+    return sorted(int(l) for l in ranked[:k])
+
+
+def identify_copy_head_layers(ecs_pearson_r: np.ndarray, top_k: int = 5) -> List[int]:
+    """
+    Select the top-k layers (set A — Copying Head layers) with the most
+    *negative* Pearson r between per-layer ECS and the hallucination label.
+
+    According to REDEEP, these are layers where low ECS (weak grounding in the
+    transcript) correlates most strongly with hallucination — indicating that
+    the copying heads in these layers fail to attend to the source context.
+
+    Parameters
+    ----------
+    ecs_pearson_r : (n_layers,) Pearson r values from layer_discriminability().
+    top_k         : number of layers to select.
+
+    Returns
+    -------
+    Sorted list of layer indices (ascending).
+    """
+    k = max(1, min(top_k, len(ecs_pearson_r)))
+    ranked = np.argsort(ecs_pearson_r)  # ascending (most negative first)
+    return sorted(int(l) for l in ranked[:k])
+
+
+def fit_hallucination_regressor(
+    pks_layers_all: np.ndarray,
+    ecs_layers_all: np.ndarray,
+    halluc_mask_all: np.ndarray,
+    F: List[int],
+    A: List[int],
+) -> Tuple:
+    """
+    Fit the REDEEP hallucination regressor:
+
+        Ht(t) = Σ_{l∈F} α · P^l_t  −  Σ_{l∈A} β · E^{l,h}_t
+
+    α and β are learned via logistic regression on the training set, where
+    features are the per-layer PKS values at layers F (Knowledge FFNs) and
+    per-layer ECS values at layers A (Copying Head layers).
+
+    Parameters
+    ----------
+    pks_layers_all  : (n_layers, N_total) — per-layer PKS from all training samples.
+    ecs_layers_all  : (n_layers, N_total) — per-layer ECS from all training samples.
+    halluc_mask_all : (N_total,) bool — True for known hallucinated tokens.
+    F : layer indices for Knowledge FFNs (set F).
+    A : layer indices for Copying Head layers (set A).
+
+    Returns
+    -------
+    (clf, scaler, alpha, beta) where:
+      clf    : fitted LogisticRegression (operates on StandardScaler-normalised features)
+      scaler : fitted StandardScaler (apply before clf.predict_proba)
+      alpha  : mean positive logistic coefficient for PKS features (set F)
+      beta   : mean positive logistic contribution of ECS features (set A, sign-flipped)
+    """
+    try:
+        from sklearn.linear_model import LogisticRegression
+        from sklearn.preprocessing import StandardScaler
+    except ImportError as exc:
+        raise ImportError(
+            "scikit-learn is required for fit_hallucination_regressor: "
+            "pip install scikit-learn"
+        ) from exc
+
+    # Feature matrix: [pks at F layers | ecs at A layers]  shape (N_total, |F|+|A|)
+    pks_feats = pks_layers_all[F].T   # (N_total, |F|)
+    ecs_feats = ecs_layers_all[A].T   # (N_total, |A|)
+    X = np.concatenate([pks_feats, ecs_feats], axis=1).astype(np.float64)
+    y = halluc_mask_all.astype(int)
+
+    scaler   = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
+
+    clf = LogisticRegression(
+        class_weight="balanced",   # handle heavy class imbalance
+        max_iter=1000,
+        solver="lbfgs",
+        C=1.0,
+    )
+    clf.fit(X_scaled, y)
+
+    # Decompose coefficients into α (PKS) and β (ECS)
+    coefs     = clf.coef_[0]          # (|F| + |A|,)
+    pks_coefs = coefs[:len(F)]
+    ecs_coefs = coefs[len(F):]
+
+    # α: mean positive contribution of PKS layers (REDEEP: α > 0 → high PKS → hallucinated)
+    alpha = float(np.mean(np.maximum(pks_coefs, 0.0)))
+    # β: mean positive contribution of ECS layers (sign-flipped: low ECS → hallucinated)
+    beta  = float(np.mean(np.maximum(-ecs_coefs, 0.0)))
+
+    return clf, scaler, alpha, beta
 
 
 def dla_discriminability(
@@ -781,7 +922,125 @@ def plot_layer_discriminability(
 
 
 # ─────────────────────────────────────────────
-# 7. Visualisation helpers
+# 7. Calibration helpers (Experiment 3)
+# ─────────────────────────────────────────────
+
+def calibrate_layer_thresholds(
+    scores_layers: np.ndarray,
+    halluc_mask: np.ndarray,
+    min_j: float = 0.05,
+) -> Optional[Dict[int, Dict]]:
+    """
+    Derive a per-layer operating threshold from labeled synthetic hallucination
+    data using Youden's J statistic (J = TPR − FPR).
+
+    Parameters
+    ----------
+    scores_layers : (n_layers, note_len) per-layer scores from the calibration
+                    sequence (e.g. ecs_layers or pks_layers from Exp 2c).
+    halluc_mask   : (note_len,) bool — True = known hallucinated token.
+    min_j         : minimum J-statistic to include a layer (filters noise).
+                    Default 0.05 keeps layers that are only marginally useful.
+
+    Returns
+    -------
+    Dict mapping layer_index → {threshold, direction, auroc, j_stat}
+
+    ``direction`` encodes which side of the threshold flags hallucination:
+      -1  hallucinated tokens score *lower*  → flag when score < threshold
+      +1  hallucinated tokens score *higher* → flag when score > threshold
+    """
+    try:
+        from sklearn.metrics import roc_auc_score, roc_curve
+    except ImportError as exc:
+        raise ImportError(
+            "scikit-learn is required for calibrate_layer_thresholds: "
+            "pip install scikit-learn"
+        ) from exc
+
+    h = halluc_mask.astype(bool)
+    if h.sum() < 1 or (~h).sum() < 1:
+        warnings.warn("calibrate_layer_thresholds: both classes required; returning None.")
+        return None
+
+    y = h.astype(int)
+    result: Dict[int, Dict] = {}
+
+    for layer in range(scores_layers.shape[0]):
+        scores = scores_layers[layer]
+        auroc  = float(roc_auc_score(y, scores))
+        # direction: +1 if higher = hallucinated, -1 if lower = hallucinated
+        direction = 1 if auroc >= 0.5 else -1
+
+        # Flip so ROC always measures "higher = hallucinated"
+        fpr, tpr, thresh = roc_curve(y, direction * scores)
+        j     = tpr - fpr
+        best  = int(np.argmax(j))
+        j_val = float(j[best])
+
+        if j_val < min_j:
+            continue
+
+        # Threshold in original score space
+        raw_thresh = float(thresh[best]) * direction
+
+        result[layer] = {
+            "threshold": raw_thresh,
+            "direction": direction,
+            "auroc":     float(max(auroc, 1.0 - auroc)),
+            "j_stat":    j_val,
+        }
+
+    return result or None
+
+
+def apply_layer_thresholds(
+    scores_layers: np.ndarray,
+    thresholds: Dict[int, Dict],
+    top_k: int = 5,
+) -> np.ndarray:
+    """
+    Apply calibrated layer thresholds to a new sequence, returning a per-token
+    hallucination probability in [0, 1].
+
+    Selects the top-K layers ranked by Youden's J and combines them via an
+    AUROC-weighted soft vote: each selected layer contributes a binary flag
+    (0 or 1) weighted by its AUROC above 0.5.
+
+    Parameters
+    ----------
+    scores_layers : (n_layers, note_len) per-layer scores for the *target*
+                    sequence (must use the same metric and model as calibration).
+    thresholds    : dict returned by calibrate_layer_thresholds().
+    top_k         : number of layers to include in the vote.
+
+    Returns
+    -------
+    halluc_prob : (note_len,) float — estimated hallucination probability.
+    """
+    if not thresholds:
+        return np.zeros(scores_layers.shape[1])
+
+    # Select top-K by J-statistic, then weight votes by AUROC
+    selected = sorted(thresholds, key=lambda l: thresholds[l]["j_stat"], reverse=True)[:top_k]
+
+    note_len   = scores_layers.shape[1]
+    vote_sum   = np.zeros(note_len, dtype=np.float64)
+    weight_sum = 0.0
+
+    for layer in selected:
+        t = thresholds[layer]
+        w = t["auroc"] - 0.5          # weight = discriminability above chance
+        s = scores_layers[layer]
+        flag = (s < t["threshold"]) if t["direction"] == -1 else (s > t["threshold"])
+        vote_sum   += w * flag.astype(np.float64)
+        weight_sum += w
+
+    return np.clip(vote_sum / (weight_sum + 1e-8), 0.0, 1.0)
+
+
+# ─────────────────────────────────────────────
+# 8. Visualisation helpers
 # ─────────────────────────────────────────────
 
 # Shared colour palette — used by all plots in both files

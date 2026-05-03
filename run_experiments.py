@@ -18,13 +18,22 @@ Experiments
     reports where the known-bad tokens fall in the quadrant space.
     Outputs: scatter with injected tokens starred, per-token CSV, corrupted note.
 
+3   REDEEP hallucination scoring on real generated text.
+    Collects multi-sample training data, computes Pearson r per layer,
+    identifies Knowledge FFNs (set F) and Copying Head layers (set A),
+    fits logistic α/β coefficients, scores the generated note.
+    Outputs: training_correlations.csv, selected_layers.txt, tokens.csv,
+             scatter_calibrated.png, report.html.
+
 Usage
 -----
-    python run_experiments.py                        # 2a + 2b, gemma, sample 0
-    python run_experiments.py --exp 2c               # only 2c
-    python run_experiments.py --exp all              # 2a + 2b + 2c
-    python run_experiments.py --model llama          # Llama 3 8B
-    python run_experiments.py --sample 3             # ACI-Bench row 3
+    python run_experiments.py                              # 2a + 2b, gemma, sample 0
+    python run_experiments.py --exp 2c                    # only 2c
+    python run_experiments.py --exp 3                     # Exp 3 (REDEEP scoring)
+    python run_experiments.py --exp 3 --n-train-samples 5 --n-ffn-layers 3
+    python run_experiments.py --exp all                   # 2a + 2b + 2c + 2d + 3
+    python run_experiments.py --model llama               # Llama 3 8B
+    python run_experiments.py --sample 3                  # ACI-Bench row 3
     python run_experiments.py --max-new-tokens 300
 """
 
@@ -45,11 +54,16 @@ from transformer_lens import HookedTransformer
 from ecs_pks import (
     Config,
     Q_COLORS,
+    apply_layer_thresholds,
+    calibrate_layer_thresholds,
     compute_dla,
     compute_ecs_pks,
     dla_discriminability,
+    fit_hallucination_regressor,
     generate_note,
     hallucination_risk,
+    identify_copy_head_layers,
+    identify_knowledge_ffns,
     layer_discriminability,
     load_aci_sample,
     plot_heatmap,
@@ -568,13 +582,15 @@ def run_experiment_2c(
             print(f"  {l:>6}  {disc['pks_auroc'][l]:>10.4f}  {disc['pks_cohens_d'][l]:>8.3f}"
                   f"  {disc['ecs_auroc'][l]:>10.4f}  {disc['ecs_cohens_d'][l]:>8.3f}{marker}")
 
-        # Save CSV
+        # Save CSV (includes Pearson r from updated layer_discriminability)
         disc_df = pd.DataFrame({
-            "layer":        np.arange(n_layers),
-            "pks_auroc":    disc["pks_auroc"],
-            "pks_cohens_d": disc["pks_cohens_d"],
-            "ecs_auroc":    disc["ecs_auroc"],
-            "ecs_cohens_d": disc["ecs_cohens_d"],
+            "layer":         np.arange(n_layers),
+            "pks_auroc":     disc["pks_auroc"],
+            "pks_cohens_d":  disc["pks_cohens_d"],
+            "pks_pearson_r": disc["pks_pearson_r"],
+            "ecs_auroc":     disc["ecs_auroc"],
+            "ecs_cohens_d":  disc["ecs_cohens_d"],
+            "ecs_pearson_r": disc["ecs_pearson_r"],
         })
         disc_df.to_csv(out / "exp2c_layer_discriminability.csv", index=False)
         print("  Saved → exp2c_layer_discriminability.csv")
@@ -833,7 +849,774 @@ def run_experiment_2d(
 
 
 # ─────────────────────────────────────────────
-# 13. Entry point
+# 13. Experiment 3 — Calibrated hallucination flagging
+# ─────────────────────────────────────────────
+
+def _gold_coverage_labels(
+    generated_note: str,
+    gold_note: str,
+    note_toks: List[str],
+    ngram: int = 3,
+) -> np.ndarray:
+    """
+    Token-level pseudo-labels derived from n-gram coverage of the gold note.
+
+    For each token position, reconstruct overlapping n-grams of decoded text
+    centred on that token.  If none of the n-grams appear in the (normalised)
+    gold note, the token is flagged as potentially hallucinated (label = 1).
+
+    Returns
+    -------
+    labels : (note_len,) float in {0.0, 1.0}
+    """
+    import re as _re
+
+    def _normalise(text: str) -> str:
+        return _re.sub(r"\s+", " ", text.lower().strip())
+
+    gold_norm = _normalise(gold_note)
+    # Pre-tokenise gold into word n-grams for fast lookup
+    gold_words = gold_norm.split()
+    gold_ngrams: set = set()
+    for i in range(len(gold_words) - ngram + 1):
+        gold_ngrams.add(" ".join(gold_words[i: i + ngram]))
+
+    # Decode note tokens to plain words
+    cleaned = [t.replace("▁", " ").replace("Ġ", " ").strip() for t in note_toks]
+    n = len(cleaned)
+    labels = np.ones(n, dtype=np.float64)   # default: not covered
+
+    for i in range(n):
+        # Build n-gram window centred roughly on position i
+        start = max(0, i - ngram + 1)
+        end   = min(n, i + ngram)
+        window = " ".join(cleaned[start:end])
+        window_norm = _normalise(window)
+        window_words = window_norm.split()
+        for j in range(len(window_words) - ngram + 1):
+            cand = " ".join(window_words[j: j + ngram])
+            if cand in gold_ngrams:
+                labels[i] = 0.0   # covered by gold → not flagged
+                break
+
+    return labels
+
+
+def _nli_sentence_labels(
+    transcript: str,
+    generated_note: str,
+    note_toks: List[str],
+    nli_model_name: str = "cross-encoder/nli-deberta-v3-small",
+) -> Optional[np.ndarray]:
+    """
+    Sentence-level NLI pseudo-labels mapped to token positions.
+
+    For each sentence in the generated note, queries an NLI cross-encoder to
+    compute P(entailment | transcript, sentence).  Low entailment probability
+    → the sentence makes a claim unsupported by the transcript → tokens in that
+    sentence get label ≈ 1.
+
+    Requires:  pip install sentence-transformers
+
+    Returns
+    -------
+    labels : (note_len,) float in [0, 1] — 1 = likely hallucinated.
+             Returns None if sentence-transformers is not installed.
+    """
+    try:
+        from sentence_transformers import CrossEncoder
+    except ImportError:
+        warnings.warn(
+            "[Exp 3] sentence-transformers not installed — skipping NLI validation. "
+            "Install with:  pip install sentence-transformers"
+        )
+        return None
+
+    import re as _re
+
+    # Split generated note into sentences (simple split on . ? !)
+    sentence_spans: List[Tuple[int, int]] = []   # (char_start, char_end)
+    sentences: List[str] = []
+    for m in _re.finditer(r"[^.!?\n]+[.!?\n]?", generated_note):
+        s = m.group(0).strip()
+        if len(s) > 10:
+            sentence_spans.append((m.start(), m.end()))
+            sentences.append(s)
+
+    if not sentences:
+        return None
+
+    print(f"  [NLI] Loading {nli_model_name} …")
+    nli = CrossEncoder(nli_model_name)
+
+    # NLI: premise = transcript, hypothesis = each generated sentence
+    pairs   = [(transcript[:2000], sent) for sent in sentences]   # truncate transcript
+    logits  = nli.predict(pairs, apply_softmax=True)               # (S, 3): contra/neut/entail
+    entail_prob = logits[:, 2]                                      # entailment column
+
+    # Map sentence-level score to token-level via character offsets
+    n = len(note_toks)
+    token_labels = np.zeros(n, dtype=np.float64)
+
+    # Build cumulative char position for each token
+    cursor = 0
+    tok_char_starts = []
+    for tok in note_toks:
+        piece = tok.replace("▁", " ").replace("Ġ", " ")
+        tok_char_starts.append(cursor)
+        cursor += len(piece)
+
+    for (cs, ce), ep in zip(sentence_spans, entail_prob):
+        halluc_score = float(1.0 - ep)
+        for i, tc in enumerate(tok_char_starts):
+            if cs <= tc < ce:
+                token_labels[i] = halluc_score
+
+    return token_labels
+
+
+def _build_exp3_html(
+    scatter_png: Path,
+    note_toks: List[str],
+    halluc_prob: np.ndarray,
+    ecs: np.ndarray,
+    pks: np.ndarray,
+    gold_labels: Optional[np.ndarray],
+    nli_labels: Optional[np.ndarray],
+    calib_summary: Dict,
+    generated_note: str,
+    model_name: str,
+    sample_idx: int,
+    threshold: float,
+    out_path: Path,
+) -> None:
+    """
+    Self-contained HTML report for Experiment 3.
+
+    Sections
+    --------
+    1. Calibration summary table (selected layers, J-stat, AUROC, threshold).
+    2. ECS/PKS scatter of the generated note, points coloured by halluc_prob.
+    3. Validation metrics (gold coverage, NLI) if available.
+    4. Generated note with gradient highlighting (white → red ∝ halluc_prob).
+    """
+    import base64
+
+    with open(scatter_png, "rb") as fh:
+        img_b64 = base64.b64encode(fh.read()).decode()
+
+    # ── Token HTML ────────────────────────────────────────────────────────────
+    def _prob_to_style(p: float) -> str:
+        if p < 0.15:
+            return ""
+        # Interpolate white → #FFCDD2 (light red) → #F44336 (red)
+        g = int(255 - (255 - 67)  * p)
+        b = int(255 - (255 - 54)  * p)
+        r = 255
+        return f"background:rgb({r},{g},{b});border-radius:3px;padding:1px 2px;"
+
+    html_toks: List[str] = []
+    for tok, p in zip(note_toks, halluc_prob):
+        space = " " if (tok.startswith("▁") or tok.startswith("Ġ")) else ""
+        word  = tok[1:] if space else tok
+        word_esc = (word
+                    .replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                    .replace("\n", "<br>"))
+        style = _prob_to_style(float(p))
+        title = f'title="p={p:.3f}"'
+        if style:
+            html_toks.append(f'{space}<span style="{style}" {title}>{word_esc}</span>')
+        else:
+            html_toks.append(f"{space}{word_esc}")
+    note_html = "".join(html_toks)
+
+    # ── Calibration table rows ────────────────────────────────────────────────
+    cal_rows = ""
+    for metric, layers_info in calib_summary.items():
+        if not layers_info:
+            continue
+        for layer, info in sorted(layers_info.items(), key=lambda x: -x[1]["j_stat"]):
+            dir_sym = "↓ low" if info["direction"] == -1 else "↑ high"
+            cal_rows += (
+                f"<tr><td>{metric}</td><td>{layer}</td>"
+                f"<td>{info['auroc']:.3f}</td><td>{info['j_stat']:.3f}</td>"
+                f"<td>{info['threshold']:.4f}</td><td>{dir_sym}</td></tr>\n"
+            )
+
+    # ── Validation rows ────────────────────────────────────────────────────────
+    val_rows = ""
+    flagged  = halluc_prob >= threshold
+    if gold_labels is not None:
+        from sklearn.metrics import roc_auc_score as _auc
+        try:
+            auc_gold = _auc(gold_labels, halluc_prob)
+            prec = float(np.mean(gold_labels[flagged])) if flagged.any() else float("nan")
+            recall = float(np.sum(flagged & (gold_labels > 0.5)) / (gold_labels > 0.5).sum()) if (gold_labels > 0.5).any() else float("nan")
+            val_rows += (
+                f"<tr><td>Gold n-gram coverage</td>"
+                f"<td>{auc_gold:.3f}</td><td>{prec:.3f}</td><td>{recall:.3f}</td></tr>"
+            )
+        except Exception:
+            pass
+    if nli_labels is not None:
+        from sklearn.metrics import roc_auc_score as _auc
+        try:
+            auc_nli = _auc(nli_labels > 0.5, halluc_prob)
+            prec = float(np.mean((nli_labels > 0.5)[flagged])) if flagged.any() else float("nan")
+            val_rows += (
+                f"<tr><td>NLI (low entailment)</td>"
+                f"<td>{auc_nli:.3f}</td><td>{prec:.3f}</td><td>—</td></tr>"
+            )
+        except Exception:
+            pass
+
+    n_flagged = int(flagged.sum())
+    n_total   = len(halluc_prob)
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Exp 3 — Calibrated Hallucination Flagging</title>
+  <style>
+    body      {{ font-family: Georgia, serif; max-width: 1000px;
+                margin: 40px auto; padding: 0 24px; color: #222; }}
+    h2        {{ border-bottom: 2px solid #eee; padding-bottom: 8px; }}
+    h3        {{ color: #555; margin-top: 32px; }}
+    img       {{ max-width: 100%; border: 1px solid #ddd; border-radius: 6px; margin: 12px 0; }}
+    .meta     {{ font-size: 13px; color: #777; margin-bottom: 24px; }}
+    .note-box {{ background: #fafafa; border: 1px solid #ddd; border-radius: 6px;
+                padding: 22px 26px; line-height: 2.2; font-size: 14px;
+                white-space: pre-wrap; word-break: break-word; }}
+    table     {{ border-collapse: collapse; width: 100%; font-size: 13px; margin: 12px 0; }}
+    th, td    {{ border: 1px solid #ddd; padding: 7px 12px; text-align: left; }}
+    th        {{ background: #f5f5f5; }}
+    .legend   {{ display: flex; gap: 16px; flex-wrap: wrap; margin: 12px 0;
+                font-size: 13px; align-items: center; }}
+    .grad     {{ width: 180px; height: 16px; border-radius: 4px;
+                background: linear-gradient(to right, #ffffff, #f44336);
+                border: 1px solid #ddd; }}
+  </style>
+</head>
+<body>
+<h2>Experiment 3 — Calibrated Token-Level Hallucination Flagging</h2>
+<p class="meta">
+  Model: <strong>{model_name}</strong> &nbsp;|&nbsp;
+  Sample: <strong>{sample_idx}</strong> &nbsp;|&nbsp;
+  Tokens: <strong>{n_total}</strong> &nbsp;|&nbsp;
+  Flagged (prob ≥ {threshold:.2f}): <strong>{n_flagged}</strong>
+  ({100*n_flagged/n_total:.1f}%)
+</p>
+
+<h3>ECS vs PKS — Generated Note (coloured by hallucination probability)</h3>
+<img src="data:image/png;base64,{img_b64}" alt="Exp 3 scatter">
+
+<h3>Calibration — Selected Layers from Exp 2c</h3>
+<table>
+  <tr><th>Metric</th><th>Layer</th><th>AUROC</th><th>Youden J</th>
+      <th>Threshold</th><th>Flag when</th></tr>
+  {cal_rows}
+</table>
+
+{"<h3>Validation</h3><table><tr><th>Signal</th><th>AUROC vs halluc_prob</th><th>Precision@flagged</th><th>Recall@flagged</th></tr>" + val_rows + "</table>" if val_rows else ""}
+
+<h3>Generated Note — Hallucination Probability Highlights</h3>
+<div class="legend">
+  <span>Low risk</span>
+  <div class="grad"></div>
+  <span>High risk</span>
+  &nbsp; (hover token for exact probability)
+</div>
+<div class="note-box">{note_html}</div>
+</body>
+</html>"""
+
+    out_path.write_text(html, encoding="utf-8")
+
+
+def collect_training_data(
+    model: HookedTransformer,
+    cfg: Config,
+    inject_fn,
+    sample_indices: List[int],
+    n_injections: int = 5,
+) -> Dict:
+    """
+    Accumulate (ecs_layers, pks_layers, halluc_mask) training data for Exp 3
+    by running synthetic hallucination injection on multiple ACI-Bench samples.
+
+    Each sample goes through: load → inject → tokenize → ECS/PKS forward pass.
+    Samples where injection yields zero hallucinated tokens are skipped.
+
+    Parameters
+    ----------
+    sample_indices : list of integer row indices into ACI-Bench test1 split.
+    n_injections   : maximum hallucinations injected per sample.
+
+    Returns
+    -------
+    Dict with keys:
+      ecs_layers_all  : (n_layers, N_total) — concatenated ECS layers
+      pks_layers_all  : (n_layers, N_total) — concatenated PKS layers
+      halluc_mask_all : (N_total,) bool
+      n_samples       : number of samples successfully processed
+      sample_stats    : list of per-sample dicts for logging
+    """
+    from dataclasses import replace as _dc_replace
+
+    ecs_layers_list:  List[np.ndarray] = []
+    pks_layers_list:  List[np.ndarray] = []
+    halluc_mask_list: List[np.ndarray] = []
+    sample_stats: List[Dict] = []
+
+    for si in sample_indices:
+        print(f"\n  [Training] Sample {si} …")
+        # Build a per-sample config with the correct sample_idx
+        cfg_i = _dc_replace(cfg, sample_idx=si)
+        try:
+            tr_i, note_i = load_aci_sample(cfg_i)
+        except Exception as exc:
+            print(f"  [Training] Sample {si}: load failed — {exc}")
+            continue
+
+        # Inject hallucinations
+        try:
+            corrupted, injections = inject_fn(note_i, max_injections=n_injections, seed=si)
+        except Exception as exc:
+            print(f"  [Training] Sample {si}: injection failed — {exc}")
+            continue
+
+        if not injections:
+            print(f"  [Training] Sample {si}: no injections produced, skipping.")
+            continue
+
+        # Map injected spans → token positions
+        halluc_idx = halluc_token_indices(model.tokenizer, corrupted, injections)
+
+        # Tokenise with generation prompt prefix (teacher-forcing equivalent)
+        tokens, t_len, note_toks = tokenize_as_generated(model, tr_i, corrupted)
+        tokens   = tokens.to(cfg.device)
+        note_len = len(note_toks)
+
+        # Build halluc mask
+        mask = np.zeros(note_len, dtype=bool)
+        for idx in halluc_idx:
+            if idx < note_len:
+                mask[idx] = True
+
+        if mask.sum() == 0:
+            print(f"  [Training] Sample {si}: no hallucinated tokens in note span, skipping.")
+            continue
+
+        # Forward pass → per-layer ECS/PKS
+        ecs_i, pks_i, ecs_layers_i, pks_layers_i = compute_ecs_pks(model, tokens, t_len, cfg)
+
+        ecs_layers_list.append(ecs_layers_i)
+        pks_layers_list.append(pks_layers_i)
+        halluc_mask_list.append(mask)
+
+        n_h = int(mask.sum())
+        n_c = int((~mask).sum())
+        sample_stats.append({
+            "sample_idx":   si,
+            "note_len":     note_len,
+            "n_halluc":     n_h,
+            "n_clean":      n_c,
+            "n_injections": len(injections),
+        })
+        print(f"  [Training] Sample {si}: {note_len} tokens  "
+              f"({n_h} hallucinated / {n_c} clean)")
+
+    if not ecs_layers_list:
+        raise RuntimeError(
+            "collect_training_data: no samples collected — "
+            "all samples failed during load/inject/tokenize."
+        )
+
+    ecs_layers_all  = np.concatenate(ecs_layers_list,  axis=1)
+    pks_layers_all  = np.concatenate(pks_layers_list,  axis=1)
+    halluc_mask_all = np.concatenate(halluc_mask_list)
+
+    n_h_total = int(halluc_mask_all.sum())
+    n_c_total = int((~halluc_mask_all).sum())
+    print(f"\n  Training set: {len(ecs_layers_list)} samples  |  "
+          f"{halluc_mask_all.shape[0]} tokens total  "
+          f"({n_h_total} hallucinated / {n_c_total} clean)")
+
+    return {
+        "ecs_layers_all":  ecs_layers_all,
+        "pks_layers_all":  pks_layers_all,
+        "halluc_mask_all": halluc_mask_all,
+        "n_samples":       len(ecs_layers_list),
+        "sample_stats":    sample_stats,
+    }
+
+
+def run_experiment_3(
+    model: HookedTransformer,
+    cfg: Config,
+    out: Path,
+    transcript: str,
+    gold_note: str,
+    inject_fn=None,
+    n_train_samples: int = 3,
+    n_injections: int = 5,
+    n_ffn_layers: int = 5,
+    n_copy_layers: int = 5,
+    halluc_threshold: float = 0.5,
+    nli_model: Optional[str] = None,
+) -> Dict:
+    """
+    Experiment 3: REDEEP hallucination scoring on a real generated note.
+
+    Implements the paper formula:
+        Ht(t) = Σ_{l∈F} α·P^l_t  −  Σ_{l∈A} β·E^{l,h}_t
+
+    where α, β > 0 are learned via logistic regression on a multi-sample
+    training set with synthetic hallucination injection.
+
+    Pipeline
+    --------
+    1. Collect training data — run ECS/PKS with hallucination injection on
+       `n_train_samples` ACI-Bench samples (not the target sample).
+    2. Layer-wise Pearson r — compute point-biserial correlation between
+       per-layer ECS/PKS and the binary hallucination labels.
+    3. Identify set F (Knowledge FFNs) — top-`n_ffn_layers` by PKS Pearson r.
+    4. Identify set A (Copying Head layers) — top-`n_copy_layers` by most
+       negative ECS Pearson r.
+    5. Fit α, β — logistic regression on [PKS_F | ECS_A] features with
+       class_weight="balanced" to handle heavy class imbalance.
+    6. Score the generated note — compute halluc_prob via clf.predict_proba.
+    7. Validate — gold n-gram coverage + optional NLI cross-encoder.
+    8. Outputs — CSV, scatter, HTML report.
+
+    Parameters
+    ----------
+    n_train_samples  : number of ACI-Bench samples to collect training data from.
+                       Samples are drawn from the same split, skipping the
+                       target sample index.
+    n_injections     : max hallucinations injected per training sample.
+    n_ffn_layers     : size of set F (Knowledge FFN layers).
+    n_copy_layers    : size of set A (Copying Head layers).
+    halluc_threshold : probability cutoff for binary flag in HTML/CSV.
+    nli_model        : HuggingFace NLI cross-encoder ID (optional).
+
+    Outputs
+    -------
+    exp3_training_correlations.csv — per-layer Pearson r, AUROC, Cohen's d
+    exp3_training_summary.csv      — per training sample stats
+    exp3_selected_layers.txt       — F layers, A layers, α, β
+    exp3_tokens.csv                — per-token halluc_prob, ecs, pks, flag
+    exp3_scatter_calibrated.png    — ECS/PKS scatter coloured by halluc_prob
+    exp3_report.html               — gradient-highlighted generated note
+    """
+    print("\n" + "═"*54)
+    print("  EXPERIMENT 3 — REDEEP Hallucination Scoring")
+    print("═"*54)
+
+    _inject = inject_fn or inject_hallucinations
+
+    # ── 1. Collect training data ─────────────────────────────────────────────
+    print(f"\n  Step 1/8 — Collecting training data "
+          f"({n_train_samples} samples, {n_injections} injections each) …")
+
+    # Use samples adjacent to the target (skip cfg.sample_idx)
+    dataset_size = 250   # ACI-Bench test1 has ~250 rows; safe upper bound
+    all_indices  = [i for i in range(dataset_size) if i != cfg.sample_idx]
+    train_indices = all_indices[:n_train_samples]
+
+    try:
+        train_data = collect_training_data(
+            model, cfg, _inject, train_indices, n_injections=n_injections
+        )
+    except RuntimeError as exc:
+        print(f"\n  [Exp 3] Training data collection failed: {exc}")
+        print("  Falling back to single-sample calibration from Exp 2c …")
+        calib_2c = run_experiment_2c(
+            model, cfg, out, transcript, gold_note, inject_fn=_inject
+        )
+        ecs_layers_all  = calib_2c["ecs_layers"]
+        pks_layers_all  = calib_2c["pks_layers"]
+        note_len_cal    = ecs_layers_all.shape[1]
+        halluc_mask_all = np.array(
+            [i in set(calib_2c["halluc_idx"]) for i in range(note_len_cal)],
+            dtype=bool,
+        )
+        train_data = {
+            "ecs_layers_all":  ecs_layers_all,
+            "pks_layers_all":  pks_layers_all,
+            "halluc_mask_all": halluc_mask_all,
+            "n_samples":       1,
+            "sample_stats":    [],
+        }
+
+    ecs_layers_all  = train_data["ecs_layers_all"]
+    pks_layers_all  = train_data["pks_layers_all"]
+    halluc_mask_all = train_data["halluc_mask_all"]
+    n_layers        = ecs_layers_all.shape[0]
+    n_h_total       = int(halluc_mask_all.sum())
+    n_c_total       = int((~halluc_mask_all).sum())
+
+    # Save training summary CSV
+    if train_data["sample_stats"]:
+        pd.DataFrame(train_data["sample_stats"]).to_csv(
+            out / "exp3_training_summary.csv", index=False
+        )
+        print("  Saved → exp3_training_summary.csv")
+
+    # ── 2. Layer-wise Pearson r (and AUROC/Cohen's d) ────────────────────────
+    print(f"\n  Step 2/8 — Computing layer-wise discriminability "
+          f"({n_layers} layers, {n_h_total} hallucinated / {n_c_total} clean tokens) …")
+
+    disc = layer_discriminability(pks_layers_all, ecs_layers_all, halluc_mask_all)
+    if disc is None:
+        raise RuntimeError(
+            "Exp 3: layer_discriminability returned None — "
+            "both classes must be present in training data."
+        )
+
+    pks_pearson_r = disc["pks_pearson_r"]
+    ecs_pearson_r = disc["ecs_pearson_r"]
+
+    # Save correlations CSV
+    corr_df = pd.DataFrame({
+        "layer":         np.arange(n_layers),
+        "pks_pearson_r": pks_pearson_r,
+        "ecs_pearson_r": ecs_pearson_r,
+        "pks_auroc":     disc["pks_auroc"],
+        "ecs_auroc":     disc["ecs_auroc"],
+        "pks_cohens_d":  disc["pks_cohens_d"],
+        "ecs_cohens_d":  disc["ecs_cohens_d"],
+    })
+    corr_df.to_csv(out / "exp3_training_correlations.csv", index=False)
+    print("  Saved → exp3_training_correlations.csv")
+
+    # Print top-5 by Pearson r for each metric
+    print(f"\n  ── Top layers by PKS Pearson r (most positive → set F) ──")
+    top_pks = np.argsort(pks_pearson_r)[::-1][:5]
+    for l in top_pks:
+        print(f"    layer {l:>3}  r={pks_pearson_r[l]:+.4f}  "
+              f"AUROC={disc['pks_auroc'][l]:.4f}  d={disc['pks_cohens_d'][l]:+.3f}")
+
+    print(f"\n  ── Top layers by ECS Pearson r (most negative → set A) ──")
+    top_ecs = np.argsort(ecs_pearson_r)[:5]
+    for l in top_ecs:
+        print(f"    layer {l:>3}  r={ecs_pearson_r[l]:+.4f}  "
+              f"AUROC={disc['ecs_auroc'][l]:.4f}  d={disc['ecs_cohens_d'][l]:+.3f}")
+
+    # ── 3. Identify set F (Knowledge FFNs) ───────────────────────────────────
+    print(f"\n  Step 3/8 — Identifying set F (top-{n_ffn_layers} Knowledge FFN layers) …")
+    F = identify_knowledge_ffns(pks_pearson_r, top_k=n_ffn_layers)
+    print(f"  Set F = {F}  (r values: {[round(float(pks_pearson_r[l]),4) for l in F]})")
+
+    # ── 4. Identify set A (Copying Head layers) ───────────────────────────────
+    print(f"\n  Step 4/8 — Identifying set A (top-{n_copy_layers} Copying Head layers) …")
+    A = identify_copy_head_layers(ecs_pearson_r, top_k=n_copy_layers)
+    print(f"  Set A = {A}  (r values: {[round(float(ecs_pearson_r[l]),4) for l in A]})")
+
+    # ── 5. Fit logistic regression (α, β) ────────────────────────────────────
+    print(f"\n  Step 5/8 — Fitting REDEEP logistic regressor (|F|={len(F)}, |A|={len(A)}) …")
+    clf, scaler, alpha, beta = fit_hallucination_regressor(
+        pks_layers_all, ecs_layers_all, halluc_mask_all, F, A
+    )
+    print(f"  α (PKS weight) = {alpha:.6f}")
+    print(f"  β (ECS weight) = {beta:.6f}")
+
+    # Training-set AUROC
+    try:
+        from sklearn.metrics import roc_auc_score as _auc
+        pks_feats_tr = pks_layers_all[F].T
+        ecs_feats_tr = ecs_layers_all[A].T
+        X_tr = np.concatenate([pks_feats_tr, ecs_feats_tr], axis=1)
+        X_tr_sc = scaler.transform(X_tr)
+        prob_tr  = clf.predict_proba(X_tr_sc)[:, 1]
+        auc_tr   = _auc(halluc_mask_all.astype(int), prob_tr)
+        print(f"  Training AUROC = {auc_tr:.4f}")
+    except Exception as exc:
+        print(f"  [Exp 3] Training AUROC skipped: {exc}")
+
+    # Save selected layers info
+    sel_txt = (
+        f"Set F (Knowledge FFNs, top-{n_ffn_layers} by PKS Pearson r): {F}\n"
+        f"Set A (Copying Heads,  top-{n_copy_layers} by ECS Pearson r): {A}\n"
+        f"alpha (PKS coefficient): {alpha:.8f}\n"
+        f"beta  (ECS coefficient): {beta:.8f}\n"
+        f"\nPKS Pearson r at F layers: {[round(float(pks_pearson_r[l]),6) for l in F]}\n"
+        f"ECS Pearson r at A layers: {[round(float(ecs_pearson_r[l]),6) for l in A]}\n"
+        f"\nTraining samples: {train_data['n_samples']}  |  "
+        f"Tokens: {halluc_mask_all.shape[0]}  "
+        f"({n_h_total} hallucinated / {n_c_total} clean)\n"
+    )
+    (out / "exp3_selected_layers.txt").write_text(sel_txt, encoding="utf-8")
+    print("  Saved → exp3_selected_layers.txt")
+
+    # ── 6. Score the generated note ───────────────────────────────────────────
+    print(f"\n  Step 6/8 — Scoring the generated note …")
+
+    gen_txt_path = out / "exp2b_generated_note.txt"
+    if gen_txt_path.exists():
+        generated_note = gen_txt_path.read_text(encoding="utf-8")
+        print(f"  Loaded generated note from {gen_txt_path}  "
+              f"({len(generated_note)} chars)")
+    else:
+        print("  Generating note (no cached exp2b output found) …")
+        generated_note = generate_note(model, transcript, cfg)
+        gen_txt_path.write_text(generated_note, encoding="utf-8")
+
+    tokens, t_len, note_toks = tokenize_as_generated(model, transcript, generated_note)
+    tokens   = tokens.to(cfg.device)
+    note_len = len(note_toks)
+    print(f"  Prompt  : {t_len} tokens  |  Note: {note_len} tokens")
+
+    ecs, pks, ecs_layers, pks_layers = compute_ecs_pks(model, tokens, t_len, cfg)
+
+    # Build feature matrix for generated note
+    pks_feats_gen = pks_layers[F].T   # (note_len, |F|)
+    ecs_feats_gen = ecs_layers[A].T   # (note_len, |A|)
+    X_gen   = np.concatenate([pks_feats_gen, ecs_feats_gen], axis=1)
+    X_gen_sc = scaler.transform(X_gen)
+    halluc_prob = clf.predict_proba(X_gen_sc)[:, 1]   # (note_len,)
+    halluc_prob = np.clip(halluc_prob, 0.0, 1.0)
+    flagged     = halluc_prob >= halluc_threshold
+
+    print(f"  Tokens flagged (prob ≥ {halluc_threshold}): "
+          f"{int(flagged.sum())} / {note_len}  ({100*flagged.mean():.1f}%)")
+    print(f"  Mean halluc_prob : {halluc_prob.mean():.4f}  "
+          f"Median: {np.median(halluc_prob):.4f}")
+
+    # ── 7. Validation signals ─────────────────────────────────────────────────
+    print(f"\n  Step 7/8 — Validation …")
+    gold_labels = _gold_coverage_labels(generated_note, gold_note, note_toks, ngram=3)
+    n_uncovered = int((gold_labels > 0.5).sum())
+    print(f"  Gold n-gram coverage: {n_uncovered} / {note_len} tokens not in gold note "
+          f"({100*n_uncovered/note_len:.1f}%)")
+
+    nli_labels: Optional[np.ndarray] = None
+    if nli_model:
+        print(f"  NLI validation with {nli_model} …")
+        nli_labels = _nli_sentence_labels(transcript, generated_note, note_toks, nli_model)
+        if nli_labels is not None:
+            print(f"  NLI: {int((nli_labels > 0.5).sum())} / {note_len} tokens in "
+                  f"low-entailment sentences")
+
+    try:
+        from sklearn.metrics import roc_auc_score as _auc
+        print(f"\n  ── Validation AUROC (halluc_prob vs pseudo-labels) ──")
+        auc_gold = _auc(gold_labels, halluc_prob)
+        print(f"  Gold n-gram coverage   AUROC = {auc_gold:.4f}")
+        if nli_labels is not None:
+            auc_nli = _auc((nli_labels > 0.5).astype(int), halluc_prob)
+            print(f"  NLI low-entailment     AUROC = {auc_nli:.4f}")
+    except Exception as exc:
+        print(f"  [validation] AUROC could not be computed: {exc}")
+
+    # ── 8. Outputs ────────────────────────────────────────────────────────────
+    print(f"\n  Step 8/8 — Writing outputs …")
+
+    # Per-token CSV
+    rows = [
+        {
+            "token_idx":   i,
+            "token":       note_toks[i].replace("▁", "").replace("Ġ", "").strip(),
+            "ecs":         round(float(ecs[i]),         4),
+            "pks":         round(float(pks[i]),         4),
+            "halluc_prob": round(float(halluc_prob[i]), 4),
+            "flagged":     int(flagged[i]),
+            "gold_label":  round(float(gold_labels[i]), 4),
+            "nli_label":   round(float(nli_labels[i]),  4) if nli_labels is not None else None,
+        }
+        for i in range(note_len)
+    ]
+    df = pd.DataFrame(rows)
+    df.to_csv(out / "exp3_tokens.csv", index=False)
+    print("  Saved → exp3_tokens.csv")
+
+    # Scatter: ECS vs PKS coloured by halluc_prob
+    fig, ax = plt.subplots(figsize=(8, 7))
+    sc = ax.scatter(
+        ecs, pks,
+        c=halluc_prob,
+        cmap="RdYlGn_r",
+        vmin=0.0, vmax=1.0,
+        s=55, alpha=0.80, edgecolors="white", linewidth=0.4,
+    )
+    plt.colorbar(sc, ax=ax, label="Hallucination probability  (REDEEP logistic)", shrink=0.75)
+
+    top_idx = np.argsort(halluc_prob)[-10:]
+    ax.scatter(ecs[top_idx], pks[top_idx], s=180, c="black", marker="*",
+               zorder=6, label="Top-10 risk tokens")
+    for i in top_idx:
+        lbl = note_toks[i].replace("▁", "").replace("Ġ", "").strip()[:14]
+        ax.annotate(lbl, (ecs[i], pks[i]),
+                    fontsize=6.5, color="#B71C1C", fontweight="bold",
+                    xytext=(6, 6), textcoords="offset points",
+                    arrowprops=dict(arrowstyle="-", color="#B71C1C", lw=0.7))
+
+    em = float(np.median(ecs))
+    pm = float(np.median(pks))
+    ax.axvline(em, color="gray", ls="--", lw=0.8, alpha=0.5)
+    ax.axhline(pm, color="gray", ls="--", lw=0.8, alpha=0.5)
+    ax.legend(fontsize=8)
+    ax.set_xlabel("External Context Score (ECS)", fontsize=10)
+    ax.set_ylabel("Parametric Knowledge Score (PKS)", fontsize=10)
+    ax.set_title(
+        f"Exp 3 — Generated Note: ECS vs PKS  ({cfg.model_name})\n"
+        f"Colour = REDEEP hallucination probability  "
+        f"(F={F[:3]}…, A={A[:3]}…, α={alpha:.3f}, β={beta:.3f})",
+        fontsize=10, fontweight="bold",
+    )
+    plt.tight_layout()
+    scatter_path = out / "exp3_scatter_calibrated.png"
+    fig.savefig(scatter_path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print("  Saved → exp3_scatter_calibrated.png")
+
+    # HTML report (reuse existing helper)
+    calib_summary = {
+        "F (Knowledge FFNs)":   {l: {"pearson_r": float(pks_pearson_r[l])} for l in F},
+        "A (Copying Heads)":    {l: {"pearson_r": float(ecs_pearson_r[l])} for l in A},
+    }
+    _build_exp3_html(
+        scatter_png=scatter_path,
+        note_toks=note_toks,
+        halluc_prob=halluc_prob,
+        ecs=ecs,
+        pks=pks,
+        gold_labels=gold_labels,
+        nli_labels=nli_labels,
+        calib_summary=calib_summary,
+        generated_note=generated_note,
+        model_name=cfg.model_name,
+        sample_idx=cfg.sample_idx,
+        threshold=halluc_threshold,
+        out_path=out / "exp3_report.html",
+    )
+    print("  Saved → exp3_report.html")
+
+    return {
+        "halluc_prob":      halluc_prob,
+        "flagged":          flagged,
+        "ecs":              ecs,
+        "pks":              pks,
+        "ecs_layers":       ecs_layers,
+        "pks_layers":       pks_layers,
+        "F":                F,
+        "A":                A,
+        "alpha":            alpha,
+        "beta":             beta,
+        "pks_pearson_r":    pks_pearson_r,
+        "ecs_pearson_r":    ecs_pearson_r,
+        "gold_labels":      gold_labels,
+        "nli_labels":       nli_labels,
+        "df":               df,
+        "generated_note":   generated_note,
+        "clf":              clf,
+        "scaler":           scaler,
+    }
+
+
+# ─────────────────────────────────────────────
+# 14. Entry point
 # ─────────────────────────────────────────────
 
 def _resolve_inject_fn(args):
@@ -889,8 +1672,8 @@ def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="REDEEP ECS/PKS — clinical note experiments")
     p.add_argument("--model", choices=["gemma", "llama"], default="gemma",
                    help="gemma → google/gemma-2-2b-it  |  llama → meta-llama/Meta-Llama-3-8B-instruct")
-    p.add_argument("--exp", choices=["2a", "2b", "2c", "2d", "both", "all"], default="both",
-                   help="Which experiment(s) to run  (both=2a+2b [default]  |  all=2a+2b+2c+2d)")
+    p.add_argument("--exp", choices=["2a", "2b", "2c", "2d", "3", "both", "all"], default="both",
+                   help="Which experiment(s) to run  (both=2a+2b [default]  |  all=2a+2b+2c+2d+3)")
     p.add_argument("--sample", type=int, default=0,
                    help="Row index from ACI-Bench test1 split (default: 0)")
     p.add_argument("--max-new-tokens", type=int, default=512,
@@ -910,6 +1693,21 @@ def parse_args() -> argparse.Namespace:
                    help="AWS region for --halluc-backend bedrock  "
                         "(default: AWS_DEFAULT_REGION env var or us-east-1)")
     p.add_argument("--out", default=".", help="Output directory for plots and CSV")
+    p.add_argument("--n-train-samples", type=int, default=3,
+                   help="Number of ACI-Bench samples used to build Exp 3 training set (default: 3)")
+    p.add_argument("--n-injections", type=int, default=5,
+                   help="Max hallucinations injected per training sample in Exp 3 (default: 5)")
+    p.add_argument("--n-ffn-layers", type=int, default=5,
+                   help="Size of set F (Knowledge FFN layers selected by PKS Pearson r) in Exp 3 "
+                        "(default: 5)")
+    p.add_argument("--n-copy-layers", type=int, default=5,
+                   help="Size of set A (Copying Head layers selected by ECS Pearson r) in Exp 3 "
+                        "(default: 5)")
+    p.add_argument("--halluc-threshold", type=float, default=0.5,
+                   help="Probability cutoff for binary hallucination flag in Exp 3 (default: 0.5)")
+    p.add_argument("--nli-model", default=None,
+                   help="HuggingFace NLI cross-encoder for Exp 3 validation, e.g. "
+                        "cross-encoder/nli-deberta-v3-small  (requires sentence-transformers)")
     return p.parse_args()
 
 
@@ -963,6 +1761,19 @@ def main() -> None:
     if args.exp in ("2d", "both", "all"):
         inject_fn = _resolve_inject_fn(args)
         run_experiment_2d(model, cfg, out, transcript, gold_note, inject_fn=inject_fn)
+
+    if args.exp in ("3", "all"):
+        inject_fn = _resolve_inject_fn(args)
+        run_experiment_3(
+            model, cfg, out, transcript, gold_note,
+            inject_fn=inject_fn,
+            n_train_samples=args.n_train_samples,
+            n_injections=args.n_injections,
+            n_ffn_layers=args.n_ffn_layers,
+            n_copy_layers=args.n_copy_layers,
+            halluc_threshold=args.halluc_threshold,
+            nli_model=args.nli_model,
+        )
 
     print("\n" + "═"*54)
     print("  Done.  All outputs written to:", out.resolve())
