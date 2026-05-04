@@ -140,9 +140,6 @@ def parse_args() -> argparse.Namespace:
                    help="Size of set A (Copying Head layers) in Exp 3 (default: 5)")
     p.add_argument("--halluc-threshold", type=float, default=0.5,
                    help="Probability cutoff for binary hallucination flag in Exp 3 (default: 0.5)")
-    p.add_argument("--nli-model", default=None,
-                   help="HuggingFace NLI cross-encoder for Exp 3 validation "
-                        "(e.g. cross-encoder/nli-deberta-v3-small; requires sentence-transformers)")
     p.add_argument("--exp4-out", default=None,
                    help="Path to a previous Exp 4 output directory.  If set, Exp 3 loads "
                         "pre-computed discriminability stats and saved activations from that "
@@ -222,7 +219,6 @@ def main() -> None:
             n_ffn_layers=args.n_ffn_layers,
             n_copy_layers=args.n_copy_layers,
             halluc_threshold=args.halluc_threshold,
-            nli_model=args.nli_model,
             exp4_out=Path(args.exp4_out) if args.exp4_out else None,
         )
 

@@ -24,12 +24,13 @@ from config import Config
 # ─────────────────────────────────────────────
 
 _GENERATION_PROMPT = (
-    "You are a clinical documentation assistant."
-    "Given the following patient-clinician conversation, write a summary of the "
-    "conversation with six sections: CHIEF COMPLAINT, HISTORY OF PRESENT ILLNESS, "
-    "REVIEW OF SYSTEMS, PHYSICAL EXAMINATION, RESULTS, ASSESSMENT AND PLAN."
+    "You are a clinical documentation assistant.\n"
+    "Given the following patient-clinician conversation, write a concise clinical note "
+    "with exactly six sections: CHIEF COMPLAINT, HISTORY OF PRESENT ILLNESS, "
+    "REVIEW OF SYSTEMS, PHYSICAL EXAMINATION, RESULTS, ASSESSMENT AND PLAN.\n"
+    "Use only information present in the conversation. Do not add disclaimers or preamble.\n\n"
     "### Conversation\n{transcript}\n\n"
-    "### Note: \n"
+    "### Note:\n"
 )
 
 
@@ -112,14 +113,17 @@ def generate_note(
     print(f"  Generating note  (max_new_tokens={cfg.max_new_tokens}, "
           f"temperature={cfg.gen_temperature}) …")
 
+    do_sample = cfg.gen_temperature > 0.0
+    gen_kwargs = dict(
+        max_new_tokens=cfg.max_new_tokens,
+        do_sample=do_sample,
+        verbose=False,
+    )
+    if do_sample:
+        gen_kwargs["temperature"] = cfg.gen_temperature
+
     with torch.no_grad():
-        output_ids = model.generate(
-            input_ids,
-            max_new_tokens=cfg.max_new_tokens,
-            temperature=1.0 if cfg.gen_temperature == 0.0 else cfg.gen_temperature,
-            do_sample=(cfg.gen_temperature != 0.0),
-            verbose=False,
-        )
+        output_ids = model.generate(input_ids, **gen_kwargs)
 
     prompt_len    = input_ids.shape[1]
     new_token_ids = output_ids[0, prompt_len:]

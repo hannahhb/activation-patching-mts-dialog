@@ -929,7 +929,6 @@ def run_experiment_3(
     n_ffn_layers: int = 5,
     n_copy_layers: int = 5,
     halluc_threshold: float = 0.5,
-    nli_model: Optional[str] = None,
     exp4_out: Optional[Path] = None,
 ) -> Dict:
     """
@@ -1339,17 +1338,7 @@ def run_experiment_3(
     # ── 6. Score the generated note ──────────────────────────────────────────
     print(f"\n  Step 6/8 — Scoring the generated note …")
 
-    gen_txt_path = out / "exp2b_generated_note.txt"
-    if gen_txt_path.exists():
-        generated_note = gen_txt_path.read_text(encoding="utf-8")
-        print(
-            f"  Loaded generated note from {gen_txt_path}  "
-            f"({len(generated_note)} chars)"
-        )
-    else:
-        print("  Generating note (no cached exp2b output found) …")
-        generated_note = generate_note(model, transcript, cfg)
-        gen_txt_path.write_text(generated_note, encoding="utf-8")
+    generated_note = generate_note(model, transcript, cfg)
 
     tokens, t_len, note_toks = tokenize_as_generated(model, transcript, generated_note)
     tokens = tokens.to(cfg.device)
@@ -1377,54 +1366,17 @@ def run_experiment_3(
         f"Median: {np.median(halluc_prob):.4f}"
     )
 
-    # ── 7. Validation signals ────────────────────────────────────────────────
-    print(f"\n  Step 7/8 — Validation …")
-
-    gold_labels = _gold_coverage_labels(generated_note, gold_note, note_toks, ngram=3)
-    n_uncovered = int((gold_labels > 0.5).sum())
-
-    print(
-        f"  Gold n-gram coverage: {n_uncovered} / {note_len} tokens not in gold note "
-        f"({100 * n_uncovered / note_len:.1f}%)"
-    )
-
-    nli_labels: Optional[np.ndarray] = None
-    if nli_model:
-        print(f"  NLI validation with {nli_model} …")
-        nli_labels = _nli_sentence_labels(transcript, generated_note, note_toks, nli_model)
-        if nli_labels is not None:
-            print(
-                f"  NLI: {int((nli_labels > 0.5).sum())} / {note_len} tokens in "
-                f"low-entailment sentences"
-            )
-
-    try:
-        from sklearn.metrics import roc_auc_score as _auc
-
-        print(f"\n  ── Validation AUROC (halluc_prob vs pseudo-labels) ──")
-        auc_gold = _auc(gold_labels, halluc_prob)
-        print(f"  Gold n-gram coverage   AUROC = {auc_gold:.4f}")
-
-        if nli_labels is not None:
-            auc_nli = _auc((nli_labels > 0.5).astype(int), halluc_prob)
-            print(f"  NLI low-entailment     AUROC = {auc_nli:.4f}")
-
-    except Exception as exc:
-        print(f"  [validation] AUROC could not be computed: {exc}")
-
-    # ── 8. Outputs ──────────────────────────────────────────────────────────
-    print(f"\n  Step 8/8 — Writing outputs …")
+    # ── 7. Outputs ───────────────────────────────────────────────────────────
+    print(f"\n  Step 7/8 — Writing outputs …")
 
     rows = [
         {
-            "token_idx": i,
-            "token": note_toks[i].replace("▁", "").replace("Ġ", "").strip(),
-            "ecs": round(float(ecs[i]), 4),
-            "pks": round(float(pks[i]), 4),
+            "token_idx":   i,
+            "token":       note_toks[i].replace("▁", "").replace("Ġ", "").strip(),
+            "ecs":         round(float(ecs[i]),         4),
+            "pks":         round(float(pks[i]),         4),
             "halluc_prob": round(float(halluc_prob[i]), 4),
-            "flagged": int(flagged[i]),
-            "gold_label": round(float(gold_labels[i]), 4),
-            "nli_label": round(float(nli_labels[i]), 4) if nli_labels is not None else None,
+            "flagged":     int(flagged[i]),
         }
         for i in range(note_len)
     ]
@@ -1529,8 +1481,8 @@ def run_experiment_3(
         halluc_prob=halluc_prob,
         ecs=ecs,
         pks=pks,
-        gold_labels=gold_labels,
-        nli_labels=nli_labels,
+        gold_labels=None,
+        nli_labels=None,
         calib_summary=calib_summary,
         generated_note=generated_note,
         model_name=cfg.model_name,
@@ -1542,26 +1494,24 @@ def run_experiment_3(
     print("  Saved → exp3_report.html")
 
     return {
-        "halluc_prob": halluc_prob,
-        "flagged": flagged,
-        "ecs": ecs,
-        "pks": pks,
-        "ecs_layers": ecs_layers,
-        "pks_layers": pks_layers,
-        "F": F,
-        "A": A,
-        "alpha": alpha,
-        "beta": beta,
-        "pks_pearson_r": pks_pearson_r,
-        "ecs_pearson_r": ecs_pearson_r,
-        "pks_auroc": pks_auroc,
-        "ecs_auroc": ecs_auroc,
-        "gold_labels": gold_labels,
-        "nli_labels": nli_labels,
-        "df": df,
+        "halluc_prob":    halluc_prob,
+        "flagged":        flagged,
+        "ecs":            ecs,
+        "pks":            pks,
+        "ecs_layers":     ecs_layers,
+        "pks_layers":     pks_layers,
+        "F":              F,
+        "A":              A,
+        "alpha":          alpha,
+        "beta":           beta,
+        "pks_pearson_r":  pks_pearson_r,
+        "ecs_pearson_r":  ecs_pearson_r,
+        "pks_auroc":      pks_auroc,
+        "ecs_auroc":      ecs_auroc,
+        "df":             df,
         "generated_note": generated_note,
-        "clf": clf,
-        "scaler": scaler,
+        "clf":            clf,
+        "scaler":         scaler,
     }
 
 # ─────────────────────────────────────────────

@@ -49,8 +49,8 @@ class Config:
     sample_idx:     int = 0
 
     # ── Generation (Experiment 2b) ─────────────────────────────────────────────
-    max_new_tokens:  int   = 256
-    gen_temperature: float = 0.0   # 0.0 = greedy
+    max_new_tokens:  int   = 512
+    gen_temperature: float = 0.5
 
     # ── Output ─────────────────────────────────────────────────────────────────
     output_dir: str = "."
