@@ -1,8 +1,7 @@
 
-from ast import List, Tuple
-from typing import Dict, Optional
+from typing import Dict, List, Optional, Tuple
 import warnings
-from zipfile import Path
+from pathlib import Path
 import numpy as np
 
 
