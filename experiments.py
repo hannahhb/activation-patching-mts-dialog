@@ -941,50 +941,33 @@ def run_experiment_3(
     where α, β > 0 are learned via logistic regression on a multi-sample
     training set with synthetic hallucination injection.
 
+    Updated version:
+    ----------------
+    Layers are selected using AUROC rather than Pearson r.
+
+    F = top-k layers by highest PKS AUROC
+        because higher PKS should indicate hallucination.
+
+    A = top-k layers by lowest raw ECS AUROC
+        because lower ECS should indicate hallucination.
+
     Pipeline
     --------
     1. Collect training data — run ECS/PKS with hallucination injection on
-       `n_train_samples` ACI-Bench samples (not the target sample).
-       Skipped for layer-selection (Steps 2–4) if ``exp4_out`` is given and
-       ``exp4_layer_stats.csv`` exists there — those pre-computed per-example
-       stats are loaded directly instead.
-    2. Layer-wise Pearson r — compute point-biserial correlation between
-       per-layer ECS/PKS and the binary hallucination labels.
-    3. Identify set F (Knowledge FFNs) — top-`n_ffn_layers` by PKS Pearson r.
-    4. Identify set A (Copying Head layers) — top-`n_copy_layers` by most
-       negative ECS Pearson r.
+       `n_train_samples` ACI-Bench samples, not the target sample.
+       Skipped for layer-selection if ``exp4_out`` is given and
+       ``exp4_layer_stats.csv`` exists there.
+    2. Layer-wise discriminability — compute Pearson r, AUROC, Cohen's d.
+    3. Identify set F — top-`n_ffn_layers` by PKS AUROC.
+    4. Identify set A — top-`n_copy_layers` by lowest raw ECS AUROC.
     5. Fit α, β — logistic regression on [PKS_F | ECS_A] features.
-       Always requires a fresh forward pass (raw token activations are not
-       stored by Exp 4); uses `n_train_samples` samples.
     6. Score the generated note — compute halluc_prob via clf.predict_proba.
     7. Validate — gold n-gram coverage + optional NLI cross-encoder.
     8. Outputs — CSV, scatter, HTML report.
-
-    Parameters
-    ----------
-    n_train_samples  : number of ACI-Bench samples for regressor training (Step 5).
-    n_injections     : max hallucinations injected per training sample.
-    n_ffn_layers     : size of set F (Knowledge FFN layers).
-    n_copy_layers    : size of set A (Copying Head layers).
-    halluc_threshold : probability cutoff for binary flag in HTML/CSV.
-    nli_model        : HuggingFace NLI cross-encoder ID (optional).
-    exp4_out         : path to a previous Exp 4 output directory.  If set and
-                       ``exp4_layer_stats.csv`` is present, Steps 2–4 load
-                       pre-computed discriminability data instead of re-running
-                       forward passes.
-
-    Outputs
-    -------
-    exp3_training_correlations.csv — per-layer Pearson r, AUROC, Cohen's d
-    exp3_training_summary.csv      — per training sample stats
-    exp3_selected_layers.txt       — F layers, A layers, α, β
-    exp3_tokens.csv                — per-token halluc_prob, ecs, pks, flag
-    exp3_scatter_calibrated.png    — ECS/PKS scatter coloured by halluc_prob
-    exp3_report.html               — gradient-highlighted generated note
     """
-    print("\n" + "═"*54)
+    print("\n" + "═" * 54)
     print("  EXPERIMENT 3 — REDEEP Hallucination Scoring")
-    print("═"*54)
+    print("═" * 54)
 
     _inject = inject_fn or inject_hallucinations
 
@@ -1000,47 +983,50 @@ def run_experiment_3(
         # ── Path A: reuse Exp 4 discriminability stats + saved activations ──
         pks_pearson_r_per = exp4_data["pks_pearson_r_per"]
         ecs_pearson_r_per = exp4_data["ecs_pearson_r_per"]
-        pks_auroc_per     = exp4_data["pks_auroc_per"]
-        ecs_auroc_per     = exp4_data["ecs_auroc_per"]
-        pks_cohens_d_per  = exp4_data["pks_cohens_d_per"]
-        ecs_cohens_d_per  = exp4_data["ecs_cohens_d_per"]
-        n_layers          = exp4_data["n_layers"]
+        pks_auroc_per = exp4_data["pks_auroc_per"]
+        ecs_auroc_per = exp4_data["ecs_auroc_per"]
+        pks_cohens_d_per = exp4_data["pks_cohens_d_per"]
+        ecs_cohens_d_per = exp4_data["ecs_cohens_d_per"]
+        n_layers = exp4_data["n_layers"]
 
-        ecs_layers_all  = exp4_data["ecs_layers_all"]
-        pks_layers_all  = exp4_data["pks_layers_all"]
+        ecs_layers_all = exp4_data["ecs_layers_all"]
+        pks_layers_all = exp4_data["pks_layers_all"]
         halluc_mask_all = exp4_data["halluc_mask_all"]
 
         if ecs_layers_all is not None:
             n_h_total = int(halluc_mask_all.sum())
             n_c_total = int((~halluc_mask_all).sum())
-            print(f"  Loaded activations: {halluc_mask_all.shape[0]} tokens total  "
-                  f"({n_h_total} hallucinated / {n_c_total} clean)")
+            print(
+                f"  Loaded activations: {halluc_mask_all.shape[0]} tokens total  "
+                f"({n_h_total} hallucinated / {n_c_total} clean)"
+            )
         else:
             print("  No activations found in Exp 4 output — regressor step will re-run forward passes.")
             n_h_total = n_c_total = 0
 
-        # Build per_example_rows from loaded stats (skip recomputing disc)
         per_example_rows: List[Dict] = []
         for i, si in enumerate(exp4_data["sample_indices"][:len(pks_pearson_r_per)]):
             for l in range(n_layers):
                 per_example_rows.append({
-                    "sample_idx":    si,
-                    "layer":         l,
+                    "sample_idx": si,
+                    "layer": l,
                     "pks_pearson_r": round(float(pks_pearson_r_per[i][l]), 6),
                     "ecs_pearson_r": round(float(ecs_pearson_r_per[i][l]), 6),
-                    "pks_auroc":     round(float(pks_auroc_per[i][l]),     6),
-                    "ecs_auroc":     round(float(ecs_auroc_per[i][l]),     6),
-                    "pks_cohens_d":  round(float(pks_cohens_d_per[i][l]),  6),
-                    "ecs_cohens_d":  round(float(ecs_cohens_d_per[i][l]),  6),
+                    "pks_auroc": round(float(pks_auroc_per[i][l]), 6),
+                    "ecs_auroc": round(float(ecs_auroc_per[i][l]), 6),
+                    "pks_cohens_d": round(float(pks_cohens_d_per[i][l]), 6),
+                    "ecs_cohens_d": round(float(ecs_cohens_d_per[i][l]), 6),
                 })
 
     else:
         # ── Path B: fresh collection ─────────────────────────────────────────
-        print(f"\n  Step 1/8 — Collecting training data "
-              f"({n_train_samples} samples, {n_injections} injections each) …")
+        print(
+            f"\n  Step 1/8 — Collecting training data "
+            f"({n_train_samples} samples, {n_injections} injections each) …"
+        )
 
-        dataset_size  = 250
-        all_indices   = [i for i in range(dataset_size) if i != cfg.sample_idx]
+        dataset_size = 250
+        all_indices = [i for i in range(dataset_size) if i != cfg.sample_idx]
         train_indices = all_indices[:n_train_samples]
 
         try:
@@ -1053,28 +1039,28 @@ def run_experiment_3(
             calib_2c = run_experiment_2c(
                 model, cfg, out, transcript, gold_note, inject_fn=_inject
             )
-            ecs_layers_all  = calib_2c["ecs_layers"]
-            pks_layers_all  = calib_2c["pks_layers"]
-            note_len_cal    = ecs_layers_all.shape[1]
+            ecs_layers_all = calib_2c["ecs_layers"]
+            pks_layers_all = calib_2c["pks_layers"]
+            note_len_cal = ecs_layers_all.shape[1]
             halluc_mask_all = np.array(
                 [i in set(calib_2c["halluc_idx"]) for i in range(note_len_cal)],
                 dtype=bool,
             )
             train_data = {
-                "ecs_layers_all":  ecs_layers_all,
-                "pks_layers_all":  pks_layers_all,
+                "ecs_layers_all": ecs_layers_all,
+                "pks_layers_all": pks_layers_all,
                 "halluc_mask_all": halluc_mask_all,
-                "per_sample":      [],
-                "n_samples":       1,
-                "sample_stats":    [],
+                "per_sample": [],
+                "n_samples": 1,
+                "sample_stats": [],
             }
 
-        ecs_layers_all  = train_data["ecs_layers_all"]
-        pks_layers_all  = train_data["pks_layers_all"]
+        ecs_layers_all = train_data["ecs_layers_all"]
+        pks_layers_all = train_data["pks_layers_all"]
         halluc_mask_all = train_data["halluc_mask_all"]
-        n_layers        = ecs_layers_all.shape[0]
-        n_h_total       = int(halluc_mask_all.sum())
-        n_c_total       = int((~halluc_mask_all).sum())
+        n_layers = ecs_layers_all.shape[0]
+        n_h_total = int(halluc_mask_all.sum())
+        n_c_total = int((~halluc_mask_all).sum())
 
         if train_data["sample_stats"]:
             pd.DataFrame(train_data["sample_stats"]).to_csv(
@@ -1082,22 +1068,22 @@ def run_experiment_3(
             )
             print("  Saved → exp3_training_summary.csv")
 
-        # Compute per-example discriminability from raw activations
         print(f"\n  Step 2/8 — Computing per-example layer-wise discriminability …")
 
         pks_pearson_r_per: List[np.ndarray] = []
         ecs_pearson_r_per: List[np.ndarray] = []
-        pks_auroc_per:     List[np.ndarray] = []
-        ecs_auroc_per:     List[np.ndarray] = []
-        pks_cohens_d_per:  List[np.ndarray] = []
-        ecs_cohens_d_per:  List[np.ndarray] = []
-        per_example_rows:  List[Dict] = []
+        pks_auroc_per: List[np.ndarray] = []
+        ecs_auroc_per: List[np.ndarray] = []
+        pks_cohens_d_per: List[np.ndarray] = []
+        ecs_cohens_d_per: List[np.ndarray] = []
+        per_example_rows: List[Dict] = []
 
         for rec in train_data.get("per_sample", []):
-            si     = rec["sample_idx"]
+            si = rec["sample_idx"]
             disc_i = layer_discriminability(
                 rec["pks_layers"], rec["ecs_layers"], rec["halluc_mask"]
             )
+
             if disc_i is None:
                 print(f"  [Step 2] Sample {si}: skipped (single class in mask).")
                 continue
@@ -1111,18 +1097,23 @@ def run_experiment_3(
 
             for l in range(n_layers):
                 per_example_rows.append({
-                    "sample_idx":    si,
-                    "layer":         l,
+                    "sample_idx": si,
+                    "layer": l,
                     "pks_pearson_r": round(float(disc_i["pks_pearson_r"][l]), 6),
                     "ecs_pearson_r": round(float(disc_i["ecs_pearson_r"][l]), 6),
-                    "pks_auroc":     round(float(disc_i["pks_auroc"][l]),     6),
-                    "ecs_auroc":     round(float(disc_i["ecs_auroc"][l]),     6),
-                    "pks_cohens_d":  round(float(disc_i["pks_cohens_d"][l]),  6),
-                    "ecs_cohens_d":  round(float(disc_i["ecs_cohens_d"][l]),  6),
+                    "pks_auroc": round(float(disc_i["pks_auroc"][l]), 6),
+                    "ecs_auroc": round(float(disc_i["ecs_auroc"][l]), 6),
+                    "pks_cohens_d": round(float(disc_i["pks_cohens_d"][l]), 6),
+                    "ecs_cohens_d": round(float(disc_i["ecs_cohens_d"][l]), 6),
                 })
 
-            print(f"  Sample {si}: PKS r (mean={disc_i['pks_pearson_r'].mean():+.4f})  "
-                  f"ECS r (mean={disc_i['ecs_pearson_r'].mean():+.4f})")
+            print(
+                f"  Sample {si}: "
+                f"PKS r mean={disc_i['pks_pearson_r'].mean():+.4f}, "
+                f"PKS AUROC mean={disc_i['pks_auroc'].mean():.4f}  |  "
+                f"ECS r mean={disc_i['ecs_pearson_r'].mean():+.4f}, "
+                f"ECS AUROC mean={disc_i['ecs_auroc'].mean():.4f}"
+            )
 
     # ── end of Path A / Path B branching ────────────────────────────────────
 
@@ -1136,13 +1127,16 @@ def run_experiment_3(
     print(f"\n  Valid samples for aggregation: {n_valid_samples}")
 
     # Aggregate: mean across examples → shape (n_layers,)
-    pks_pearson_r = np.stack(pks_pearson_r_per, axis=0).mean(axis=0)   # (n_layers,)
+    pks_pearson_r = np.stack(pks_pearson_r_per, axis=0).mean(axis=0)
     ecs_pearson_r = np.stack(ecs_pearson_r_per, axis=0).mean(axis=0)
     pks_pearson_r_std = np.stack(pks_pearson_r_per, axis=0).std(axis=0)
     ecs_pearson_r_std = np.stack(ecs_pearson_r_per, axis=0).std(axis=0)
 
-    pks_auroc    = np.stack(pks_auroc_per,    axis=0).mean(axis=0)
-    ecs_auroc    = np.stack(ecs_auroc_per,    axis=0).mean(axis=0)
+    pks_auroc = np.stack(pks_auroc_per, axis=0).mean(axis=0)
+    ecs_auroc = np.stack(ecs_auroc_per, axis=0).mean(axis=0)
+    pks_auroc_std = np.stack(pks_auroc_per, axis=0).std(axis=0)
+    ecs_auroc_std = np.stack(ecs_auroc_per, axis=0).std(axis=0)
+
     pks_cohens_d = np.stack(pks_cohens_d_per, axis=0).mean(axis=0)
     ecs_cohens_d = np.stack(ecs_cohens_d_per, axis=0).mean(axis=0)
 
@@ -1153,20 +1147,24 @@ def run_experiment_3(
     print("  Saved → exp3_training_correlations_per_example.csv")
 
     corr_df = pd.DataFrame({
-        "layer":              np.arange(n_layers),
+        "layer": np.arange(n_layers),
         "pks_pearson_r_mean": pks_pearson_r,
-        "pks_pearson_r_std":  pks_pearson_r_std,
+        "pks_pearson_r_std": pks_pearson_r_std,
         "ecs_pearson_r_mean": ecs_pearson_r,
-        "ecs_pearson_r_std":  ecs_pearson_r_std,
-        "pks_auroc_mean":     pks_auroc,
-        "ecs_auroc_mean":     ecs_auroc,
-        "pks_cohens_d_mean":  pks_cohens_d,
-        "ecs_cohens_d_mean":  ecs_cohens_d,
+        "ecs_pearson_r_std": ecs_pearson_r_std,
+        "pks_auroc_mean": pks_auroc,
+        "pks_auroc_std": pks_auroc_std,
+        "ecs_auroc_mean": ecs_auroc,
+        "ecs_auroc_std": ecs_auroc_std,
+        "ecs_auroc_reversed_mean": 1.0 - ecs_auroc,
+        "ecs_auroc_reversed_std": ecs_auroc_std,
+        "pks_cohens_d_mean": pks_cohens_d,
+        "ecs_cohens_d_mean": ecs_cohens_d,
     })
     corr_df.to_csv(out / "exp3_training_correlations.csv", index=False)
     print("  Saved → exp3_training_correlations.csv")
 
-    # ── Band plot: AUROC, Cohen's d, Pearson r per layer (mean ± std) ────────
+    # ── Band plot: AUROC, Cohen's d, Pearson r per layer ─────────────────────
     _layers_ax = np.arange(n_layers)
     _colour_ecs = "#2196F3"
     _colour_pks = "#FF9800"
@@ -1176,29 +1174,35 @@ def run_experiment_3(
         f"Exp 3 — Training Discriminability per Layer  ({cfg.model_name})\n"
         f"Mean ± 1 SD across {n_valid_samples} training example(s)  "
         f"({n_injections} injections each)",
-        fontsize=12, fontweight="bold",
+        fontsize=12,
+        fontweight="bold",
     )
 
     _band_specs3 = [
-        # (per-example list,     ax,            title,             ylabel,      colour,      hline, hline_label)
-        (ecs_auroc_per,     axes3[0, 0], "ECS — AUROC",     "AUROC",     _colour_ecs, 0.5, "Chance"),
-        (pks_auroc_per,     axes3[0, 1], "PKS — AUROC",     "AUROC",     _colour_pks, 0.5, "Chance"),
-        (ecs_cohens_d_per,  axes3[1, 0], "ECS — Cohen's d", "Cohen's d", _colour_ecs, 0.0, "Zero"),
-        (pks_cohens_d_per,  axes3[1, 1], "PKS — Cohen's d", "Cohen's d", _colour_pks, 0.0, "Zero"),
+        (ecs_auroc_per, axes3[0, 0], "ECS — raw AUROC", "AUROC", _colour_ecs, 0.5, "Chance"),
+        (pks_auroc_per, axes3[0, 1], "PKS — AUROC", "AUROC", _colour_pks, 0.5, "Chance"),
+        (ecs_cohens_d_per, axes3[1, 0], "ECS — Cohen's d", "Cohen's d", _colour_ecs, 0.0, "Zero"),
+        (pks_cohens_d_per, axes3[1, 1], "PKS — Cohen's d", "Cohen's d", _colour_pks, 0.0, "Zero"),
         (ecs_pearson_r_per, axes3[2, 0], "ECS — Pearson r", "Pearson r", _colour_ecs, 0.0, "r = 0"),
         (pks_pearson_r_per, axes3[2, 1], "PKS — Pearson r", "Pearson r", _colour_pks, 0.0, "r = 0"),
     ]
 
     for per_list, ax, title, ylabel, colour, hline, hline_label in _band_specs3:
-        mat = np.stack(per_list, axis=0)   # (n_valid_samples, n_layers)
+        mat = np.stack(per_list, axis=0)
         mean_v = mat.mean(axis=0)
-        std_v  = mat.std(axis=0)
+        std_v = mat.std(axis=0)
 
         for row in mat:
             ax.plot(_layers_ax, row, color=colour, lw=0.7, alpha=0.25)
 
-        ax.fill_between(_layers_ax, mean_v - std_v, mean_v + std_v,
-                        color=colour, alpha=0.22, label="±1 SD")
+        ax.fill_between(
+            _layers_ax,
+            mean_v - std_v,
+            mean_v + std_v,
+            color=colour,
+            alpha=0.22,
+            label="±1 SD",
+        )
         ax.plot(_layers_ax, mean_v, color=colour, lw=2.2, label="Mean")
         ax.axhline(hline, color="gray", ls="--", lw=1.0, alpha=0.6, label=hline_label)
         ax.set_ylabel(ylabel, fontsize=10)
@@ -1215,193 +1219,273 @@ def run_experiment_3(
     plt.close(fig3)
     print("  Saved → exp3_training_layer_stats.png")
 
-    # Print top-5 by aggregated Pearson r for each metric
-    print(f"\n  ── Top layers by mean PKS Pearson r (most positive → set F) ──")
-    top_pks = np.argsort(pks_pearson_r)[::-1][:5]
+    # Print top-5 by aggregated AUROC for each metric
+    print(f"\n  ── Top layers by mean PKS AUROC (highest → set F) ──")
+    top_pks = np.argsort(pks_auroc)[::-1][:5]
     for l in top_pks:
-        print(f"    layer {l:>3}  r={pks_pearson_r[l]:+.4f} ±{pks_pearson_r_std[l]:.4f}  "
-              f"AUROC={pks_auroc[l]:.4f}  d={pks_cohens_d[l]:+.3f}")
+        print(
+            f"    layer {l:>3}  "
+            f"PKS AUROC={pks_auroc[l]:.4f} ±{pks_auroc_std[l]:.4f}  "
+            f"r={pks_pearson_r[l]:+.4f} ±{pks_pearson_r_std[l]:.4f}  "
+            f"d={pks_cohens_d[l]:+.3f}"
+        )
 
-    print(f"\n  ── Top layers by mean ECS Pearson r (most negative → set A) ──")
-    top_ecs = np.argsort(ecs_pearson_r)[:5]
+    print(f"\n  ── Top layers by mean raw ECS AUROC (lowest → set A) ──")
+    top_ecs = np.argsort(ecs_auroc)[:5]
     for l in top_ecs:
-        print(f"    layer {l:>3}  r={ecs_pearson_r[l]:+.4f} ±{ecs_pearson_r_std[l]:.4f}  "
-              f"AUROC={ecs_auroc[l]:.4f}  d={ecs_cohens_d[l]:+.3f}")
+        print(
+            f"    layer {l:>3}  "
+            f"raw ECS AUROC={ecs_auroc[l]:.4f} ±{ecs_auroc_std[l]:.4f}  "
+            f"reversed={1.0 - ecs_auroc[l]:.4f}  "
+            f"r={ecs_pearson_r[l]:+.4f} ±{ecs_pearson_r_std[l]:.4f}  "
+            f"d={ecs_cohens_d[l]:+.3f}"
+        )
 
-    # ── 3. Identify set F (Knowledge FFNs) ───────────────────────────────────
-    print(f"\n  Step 3/8 — Identifying set F (top-{n_ffn_layers} Knowledge FFN layers) …")
-    F = identify_knowledge_ffns(pks_pearson_r, top_k=n_ffn_layers)
-    print(f"  Set F = {F}  (r values: {[round(float(pks_pearson_r[l]),4) for l in F]})")
+    # ── 3. Identify set F by PKS AUROC ───────────────────────────────────────
+    print(
+        f"\n  Step 3/8 — Identifying set F "
+        f"(top-{n_ffn_layers} Knowledge FFN layers by PKS AUROC) …"
+    )
 
-    # ── 4. Identify set A (Copying Head layers) ───────────────────────────────
-    print(f"\n  Step 4/8 — Identifying set A (top-{n_copy_layers} Copying Head layers) …")
-    A = identify_copy_head_layers(ecs_pearson_r, top_k=n_copy_layers)
-    print(f"  Set A = {A}  (r values: {[round(float(ecs_pearson_r[l]),4) for l in A]})")
+    F = np.argsort(pks_auroc)[::-1][:n_ffn_layers].tolist()
 
-    # ── 5. Fit logistic regression (α, β) ────────────────────────────────────
+    print(
+        f"  Set F = {F}  "
+        f"(PKS AUROC values: {[round(float(pks_auroc[l]), 4) for l in F]})"
+    )
+
+    # ── 4. Identify set A by ECS AUROC ───────────────────────────────────────
+    print(
+        f"\n  Step 4/8 — Identifying set A "
+        f"(top-{n_copy_layers} Copying Head layers by lowest raw ECS AUROC) …"
+    )
+
+    # Raw ECS AUROC is low when clean tokens tend to have higher ECS than hallucinated tokens.
+    # Equivalently, these are the highest AUROC layers for -ECS.
+    A = np.argsort(ecs_auroc)[:n_copy_layers].tolist()
+
+    print(
+        f"  Set A = {A}  "
+        f"(raw ECS AUROC values: {[round(float(ecs_auroc[l]), 4) for l in A]}, "
+        f"reversed: {[round(float(1.0 - ecs_auroc[l]), 4) for l in A]})"
+    )
+
+    # ── 5. Fit logistic regression α, β ──────────────────────────────────────
     print(f"\n  Step 5/8 — Fitting REDEEP logistic regressor (|F|={len(F)}, |A|={len(A)}) …")
 
-    # If activations were not available from Exp 4, collect fresh forward passes now
     if ecs_layers_all is None:
         print("  No cached activations — running fresh forward passes for regressor …")
-        dataset_size  = 250
-        all_indices   = [i for i in range(dataset_size) if i != cfg.sample_idx]
+        dataset_size = 250
+        all_indices = [i for i in range(dataset_size) if i != cfg.sample_idx]
         train_indices = all_indices[:n_train_samples]
         train_data = collect_training_data(
             model, cfg, _inject, train_indices, n_injections=n_injections
         )
-        ecs_layers_all  = train_data["ecs_layers_all"]
-        pks_layers_all  = train_data["pks_layers_all"]
+        ecs_layers_all = train_data["ecs_layers_all"]
+        pks_layers_all = train_data["pks_layers_all"]
         halluc_mask_all = train_data["halluc_mask_all"]
 
     clf, scaler, alpha, beta = fit_hallucination_regressor(
         pks_layers_all, ecs_layers_all, halluc_mask_all, F, A
     )
+
     print(f"  α (PKS weight) = {alpha:.6f}")
     print(f"  β (ECS weight) = {beta:.6f}")
 
-    # Training-set AUROC
     try:
         from sklearn.metrics import roc_auc_score as _auc
+
         pks_feats_tr = pks_layers_all[F].T
         ecs_feats_tr = ecs_layers_all[A].T
         X_tr = np.concatenate([pks_feats_tr, ecs_feats_tr], axis=1)
         X_tr_sc = scaler.transform(X_tr)
-        prob_tr  = clf.predict_proba(X_tr_sc)[:, 1]
-        auc_tr   = _auc(halluc_mask_all.astype(int), prob_tr)
+        prob_tr = clf.predict_proba(X_tr_sc)[:, 1]
+        auc_tr = _auc(halluc_mask_all.astype(int), prob_tr)
         print(f"  Training AUROC = {auc_tr:.4f}")
+
     except Exception as exc:
         print(f"  [Exp 3] Training AUROC skipped: {exc}")
 
-    # Save selected layers info
     sel_txt = (
-        f"Set F (Knowledge FFNs, top-{n_ffn_layers} by mean PKS Pearson r): {F}\n"
-        f"Set A (Copying Heads,  top-{n_copy_layers} by mean ECS Pearson r): {A}\n"
+        f"Set F (Knowledge FFNs, top-{n_ffn_layers} by mean PKS AUROC): {F}\n"
+        f"Set A (Copying Heads,  top-{n_copy_layers} by lowest mean raw ECS AUROC): {A}\n"
         f"alpha (PKS coefficient): {alpha:.8f}\n"
         f"beta  (ECS coefficient): {beta:.8f}\n"
-        f"\nPKS Pearson r at F layers (mean ± std across {n_valid_samples} examples):\n"
+        f"\nPKS AUROC at F layers:\n"
         + "\n".join(
-            f"  layer {l}: {pks_pearson_r[l]:+.6f} ± {pks_pearson_r_std[l]:.6f}"
+            f"  layer {l}: AUROC={pks_auroc[l]:.6f}, "
+            f"Pearson r={pks_pearson_r[l]:+.6f} ± {pks_pearson_r_std[l]:.6f}, "
+            f"Cohen's d={pks_cohens_d[l]:+.6f}"
             for l in F
-        ) + "\n"
-        f"\nECS Pearson r at A layers (mean ± std across {n_valid_samples} examples):\n"
+        )
+        + "\n"
+        f"\nECS AUROC at A layers:\n"
         + "\n".join(
-            f"  layer {l}: {ecs_pearson_r[l]:+.6f} ± {ecs_pearson_r_std[l]:.6f}"
+            f"  layer {l}: raw AUROC={ecs_auroc[l]:.6f}, "
+            f"reversed AUROC={1.0 - ecs_auroc[l]:.6f}, "
+            f"Pearson r={ecs_pearson_r[l]:+.6f} ± {ecs_pearson_r_std[l]:.6f}, "
+            f"Cohen's d={ecs_cohens_d[l]:+.6f}"
             for l in A
-        ) + "\n"
-        f"\nTraining samples: {train_data['n_samples']}  |  "
+        )
+        + "\n"
+        f"\nTraining samples: {train_data['n_samples'] if 'train_data' in locals() else n_valid_samples}  |  "
         f"Tokens: {halluc_mask_all.shape[0]}  "
         f"({n_h_total} hallucinated / {n_c_total} clean)\n"
     )
+
     (out / "exp3_selected_layers.txt").write_text(sel_txt, encoding="utf-8")
     print("  Saved → exp3_selected_layers.txt")
 
-    # ── 6. Score the generated note ───────────────────────────────────────────
+    # ── 6. Score the generated note ──────────────────────────────────────────
     print(f"\n  Step 6/8 — Scoring the generated note …")
 
     gen_txt_path = out / "exp2b_generated_note.txt"
     if gen_txt_path.exists():
         generated_note = gen_txt_path.read_text(encoding="utf-8")
-        print(f"  Loaded generated note from {gen_txt_path}  "
-              f"({len(generated_note)} chars)")
+        print(
+            f"  Loaded generated note from {gen_txt_path}  "
+            f"({len(generated_note)} chars)"
+        )
     else:
         print("  Generating note (no cached exp2b output found) …")
         generated_note = generate_note(model, transcript, cfg)
         gen_txt_path.write_text(generated_note, encoding="utf-8")
 
     tokens, t_len, note_toks = tokenize_as_generated(model, transcript, generated_note)
-    tokens   = tokens.to(cfg.device)
+    tokens = tokens.to(cfg.device)
     note_len = len(note_toks)
+
     print(f"  Prompt  : {t_len} tokens  |  Note: {note_len} tokens")
 
     ecs, pks, ecs_layers, pks_layers = compute_ecs_pks(model, tokens, t_len, cfg)
 
-    # Build feature matrix for generated note
-    pks_feats_gen = pks_layers[F].T   # (note_len, |F|)
-    ecs_feats_gen = ecs_layers[A].T   # (note_len, |A|)
-    X_gen   = np.concatenate([pks_feats_gen, ecs_feats_gen], axis=1)
+    pks_feats_gen = pks_layers[F].T
+    ecs_feats_gen = ecs_layers[A].T
+    X_gen = np.concatenate([pks_feats_gen, ecs_feats_gen], axis=1)
     X_gen_sc = scaler.transform(X_gen)
-    halluc_prob = clf.predict_proba(X_gen_sc)[:, 1]   # (note_len,)
+
+    halluc_prob = clf.predict_proba(X_gen_sc)[:, 1]
     halluc_prob = np.clip(halluc_prob, 0.0, 1.0)
-    flagged     = halluc_prob >= halluc_threshold
+    flagged = halluc_prob >= halluc_threshold
 
-    print(f"  Tokens flagged (prob ≥ {halluc_threshold}): "
-          f"{int(flagged.sum())} / {note_len}  ({100*flagged.mean():.1f}%)")
-    print(f"  Mean halluc_prob : {halluc_prob.mean():.4f}  "
-          f"Median: {np.median(halluc_prob):.4f}")
+    print(
+        f"  Tokens flagged (prob ≥ {halluc_threshold}): "
+        f"{int(flagged.sum())} / {note_len}  ({100 * flagged.mean():.1f}%)"
+    )
+    print(
+        f"  Mean halluc_prob : {halluc_prob.mean():.4f}  "
+        f"Median: {np.median(halluc_prob):.4f}"
+    )
 
-    # ── 7. Validation signals ─────────────────────────────────────────────────
+    # ── 7. Validation signals ────────────────────────────────────────────────
     print(f"\n  Step 7/8 — Validation …")
+
     gold_labels = _gold_coverage_labels(generated_note, gold_note, note_toks, ngram=3)
     n_uncovered = int((gold_labels > 0.5).sum())
-    print(f"  Gold n-gram coverage: {n_uncovered} / {note_len} tokens not in gold note "
-          f"({100*n_uncovered/note_len:.1f}%)")
+
+    print(
+        f"  Gold n-gram coverage: {n_uncovered} / {note_len} tokens not in gold note "
+        f"({100 * n_uncovered / note_len:.1f}%)"
+    )
 
     nli_labels: Optional[np.ndarray] = None
     if nli_model:
         print(f"  NLI validation with {nli_model} …")
         nli_labels = _nli_sentence_labels(transcript, generated_note, note_toks, nli_model)
         if nli_labels is not None:
-            print(f"  NLI: {int((nli_labels > 0.5).sum())} / {note_len} tokens in "
-                  f"low-entailment sentences")
+            print(
+                f"  NLI: {int((nli_labels > 0.5).sum())} / {note_len} tokens in "
+                f"low-entailment sentences"
+            )
 
     try:
         from sklearn.metrics import roc_auc_score as _auc
+
         print(f"\n  ── Validation AUROC (halluc_prob vs pseudo-labels) ──")
         auc_gold = _auc(gold_labels, halluc_prob)
         print(f"  Gold n-gram coverage   AUROC = {auc_gold:.4f}")
+
         if nli_labels is not None:
             auc_nli = _auc((nli_labels > 0.5).astype(int), halluc_prob)
             print(f"  NLI low-entailment     AUROC = {auc_nli:.4f}")
+
     except Exception as exc:
         print(f"  [validation] AUROC could not be computed: {exc}")
 
-    # ── 8. Outputs ────────────────────────────────────────────────────────────
+    # ── 8. Outputs ──────────────────────────────────────────────────────────
     print(f"\n  Step 8/8 — Writing outputs …")
 
-    # Per-token CSV
     rows = [
         {
-            "token_idx":   i,
-            "token":       note_toks[i].replace("▁", "").replace("Ġ", "").strip(),
-            "ecs":         round(float(ecs[i]),         4),
-            "pks":         round(float(pks[i]),         4),
+            "token_idx": i,
+            "token": note_toks[i].replace("▁", "").replace("Ġ", "").strip(),
+            "ecs": round(float(ecs[i]), 4),
+            "pks": round(float(pks[i]), 4),
             "halluc_prob": round(float(halluc_prob[i]), 4),
-            "flagged":     int(flagged[i]),
-            "gold_label":  round(float(gold_labels[i]), 4),
-            "nli_label":   round(float(nli_labels[i]),  4) if nli_labels is not None else None,
+            "flagged": int(flagged[i]),
+            "gold_label": round(float(gold_labels[i]), 4),
+            "nli_label": round(float(nli_labels[i]), 4) if nli_labels is not None else None,
         }
         for i in range(note_len)
     ]
+
     df = pd.DataFrame(rows)
     df.to_csv(out / "exp3_tokens.csv", index=False)
     print("  Saved → exp3_tokens.csv")
 
     # Scatter: ECS vs PKS coloured by halluc_prob
     fig, ax = plt.subplots(figsize=(8, 7))
+
     sc = ax.scatter(
-        ecs, pks,
+        ecs,
+        pks,
         c=halluc_prob,
         cmap="RdYlGn_r",
-        vmin=0.0, vmax=1.0,
-        s=55, alpha=0.80, edgecolors="white", linewidth=0.4,
+        vmin=0.0,
+        vmax=1.0,
+        s=55,
+        alpha=0.80,
+        edgecolors="white",
+        linewidth=0.4,
     )
-    plt.colorbar(sc, ax=ax, label="Hallucination probability  (REDEEP logistic)", shrink=0.75)
+
+    plt.colorbar(
+        sc,
+        ax=ax,
+        label="Hallucination probability  (REDEEP logistic)",
+        shrink=0.75,
+    )
 
     top_idx = np.argsort(halluc_prob)[-10:]
-    ax.scatter(ecs[top_idx], pks[top_idx], s=180, c="black", marker="*",
-               zorder=6, label="Top-10 risk tokens")
+    ax.scatter(
+        ecs[top_idx],
+        pks[top_idx],
+        s=180,
+        c="black",
+        marker="*",
+        zorder=6,
+        label="Top-10 risk tokens",
+    )
+
     for i in top_idx:
         lbl = note_toks[i].replace("▁", "").replace("Ġ", "").strip()[:14]
-        ax.annotate(lbl, (ecs[i], pks[i]),
-                    fontsize=6.5, color="#B71C1C", fontweight="bold",
-                    xytext=(6, 6), textcoords="offset points",
-                    arrowprops=dict(arrowstyle="-", color="#B71C1C", lw=0.7))
+        ax.annotate(
+            lbl,
+            (ecs[i], pks[i]),
+            fontsize=6.5,
+            color="#B71C1C",
+            fontweight="bold",
+            xytext=(6, 6),
+            textcoords="offset points",
+            arrowprops=dict(arrowstyle="-", color="#B71C1C", lw=0.7),
+        )
 
     em = float(np.median(ecs))
     pm = float(np.median(pks))
+
     ax.axvline(em, color="gray", ls="--", lw=0.8, alpha=0.5)
     ax.axhline(pm, color="gray", ls="--", lw=0.8, alpha=0.5)
+
     ax.legend(fontsize=8)
     ax.set_xlabel("External Context Score (ECS)", fontsize=10)
     ax.set_ylabel("Parametric Knowledge Score (PKS)", fontsize=10)
@@ -1409,19 +1493,36 @@ def run_experiment_3(
         f"Exp 3 — Generated Note: ECS vs PKS  ({cfg.model_name})\n"
         f"Colour = REDEEP hallucination probability  "
         f"(F={F[:3]}…, A={A[:3]}…, α={alpha:.3f}, β={beta:.3f})",
-        fontsize=10, fontweight="bold",
+        fontsize=10,
+        fontweight="bold",
     )
+
     plt.tight_layout()
     scatter_path = out / "exp3_scatter_calibrated.png"
     fig.savefig(scatter_path, dpi=150, bbox_inches="tight")
     plt.close(fig)
     print("  Saved → exp3_scatter_calibrated.png")
 
-    # HTML report (reuse existing helper)
     calib_summary = {
-        "F (Knowledge FFNs)":   {l: {"pearson_r": float(pks_pearson_r[l])} for l in F},
-        "A (Copying Heads)":    {l: {"pearson_r": float(ecs_pearson_r[l])} for l in A},
+        "F (Knowledge FFNs, selected by PKS AUROC)": {
+            l: {
+                "pks_auroc": float(pks_auroc[l]),
+                "pearson_r": float(pks_pearson_r[l]),
+                "cohens_d": float(pks_cohens_d[l]),
+            }
+            for l in F
+        },
+        "A (Copying Heads, selected by lowest raw ECS AUROC)": {
+            l: {
+                "ecs_auroc_raw": float(ecs_auroc[l]),
+                "ecs_auroc_reversed": float(1.0 - ecs_auroc[l]),
+                "pearson_r": float(ecs_pearson_r[l]),
+                "cohens_d": float(ecs_cohens_d[l]),
+            }
+            for l in A
+        },
     }
+
     _build_exp3_html(
         scatter_png=scatter_path,
         note_toks=note_toks,
@@ -1437,29 +1538,31 @@ def run_experiment_3(
         threshold=halluc_threshold,
         out_path=out / "exp3_report.html",
     )
+
     print("  Saved → exp3_report.html")
 
     return {
-        "halluc_prob":      halluc_prob,
-        "flagged":          flagged,
-        "ecs":              ecs,
-        "pks":              pks,
-        "ecs_layers":       ecs_layers,
-        "pks_layers":       pks_layers,
-        "F":                F,
-        "A":                A,
-        "alpha":            alpha,
-        "beta":             beta,
-        "pks_pearson_r":    pks_pearson_r,
-        "ecs_pearson_r":    ecs_pearson_r,
-        "gold_labels":      gold_labels,
-        "nli_labels":       nli_labels,
-        "df":               df,
-        "generated_note":   generated_note,
-        "clf":              clf,
-        "scaler":           scaler,
+        "halluc_prob": halluc_prob,
+        "flagged": flagged,
+        "ecs": ecs,
+        "pks": pks,
+        "ecs_layers": ecs_layers,
+        "pks_layers": pks_layers,
+        "F": F,
+        "A": A,
+        "alpha": alpha,
+        "beta": beta,
+        "pks_pearson_r": pks_pearson_r,
+        "ecs_pearson_r": ecs_pearson_r,
+        "pks_auroc": pks_auroc,
+        "ecs_auroc": ecs_auroc,
+        "gold_labels": gold_labels,
+        "nli_labels": nli_labels,
+        "df": df,
+        "generated_note": generated_note,
+        "clf": clf,
+        "scaler": scaler,
     }
-
 
 # ─────────────────────────────────────────────
 # 14. Experiment 4 — Layer-wise statistics across examples
