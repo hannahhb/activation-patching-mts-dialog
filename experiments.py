@@ -772,6 +772,17 @@ def collect_training_data(
     pks_layers_all  = np.concatenate(pks_layers_list,  axis=1)
     halluc_mask_all = np.concatenate(halluc_mask_list)
 
+    # Per-sample records kept separately so callers can compute per-example stats
+    per_sample = [
+        {
+            "sample_idx":  sample_stats[i]["sample_idx"],
+            "ecs_layers":  ecs_layers_list[i],   # (n_layers, n_tokens_i)
+            "pks_layers":  pks_layers_list[i],   # (n_layers, n_tokens_i)
+            "halluc_mask": halluc_mask_list[i],  # (n_tokens_i,)
+        }
+        for i in range(len(ecs_layers_list))
+    ]
+
     n_h_total = int(halluc_mask_all.sum())
     n_c_total = int((~halluc_mask_all).sum())
     print(f"\n  Training set: {len(ecs_layers_list)} samples  |  "
@@ -782,6 +793,7 @@ def collect_training_data(
         "ecs_layers_all":  ecs_layers_all,
         "pks_layers_all":  pks_layers_all,
         "halluc_mask_all": halluc_mask_all,
+        "per_sample":      per_sample,
         "n_samples":       len(ecs_layers_list),
         "sample_stats":    sample_stats,
     }
@@ -899,45 +911,153 @@ def run_experiment_3(
         )
         print("  Saved → exp3_training_summary.csv")
 
-    # ── 2. Layer-wise Pearson r (and AUROC/Cohen's d) ────────────────────────
-    print(f"\n  Step 2/8 — Computing layer-wise discriminability "
-          f"({n_layers} layers, {n_h_total} hallucinated / {n_c_total} clean tokens) …")
+    # ── 2. Layer-wise Pearson r — per example, then aggregated ──────────────
+    print(f"\n  Step 2/8 — Computing per-example layer-wise discriminability …")
 
-    disc = layer_discriminability(pks_layers_all, ecs_layers_all, halluc_mask_all)
-    if disc is None:
+    per_sample = train_data.get("per_sample", [])
+
+    # Collect per-example Pearson r / AUROC / Cohen's d arrays, shape (n_layers,) each
+    pks_pearson_r_per: List[np.ndarray] = []
+    ecs_pearson_r_per: List[np.ndarray] = []
+    pks_auroc_per:     List[np.ndarray] = []
+    ecs_auroc_per:     List[np.ndarray] = []
+    pks_cohens_d_per:  List[np.ndarray] = []
+    ecs_cohens_d_per:  List[np.ndarray] = []
+
+    per_example_rows: List[Dict] = []
+
+    for rec in per_sample:
+        si   = rec["sample_idx"]
+        disc_i = layer_discriminability(
+            rec["pks_layers"], rec["ecs_layers"], rec["halluc_mask"]
+        )
+        if disc_i is None:
+            print(f"  [Step 2] Sample {si}: skipped (single class in mask).")
+            continue
+
+        pks_pearson_r_per.append(disc_i["pks_pearson_r"])
+        ecs_pearson_r_per.append(disc_i["ecs_pearson_r"])
+        pks_auroc_per.append(disc_i["pks_auroc"])
+        ecs_auroc_per.append(disc_i["ecs_auroc"])
+        pks_cohens_d_per.append(disc_i["pks_cohens_d"])
+        ecs_cohens_d_per.append(disc_i["ecs_cohens_d"])
+
+        for l in range(n_layers):
+            per_example_rows.append({
+                "sample_idx":    si,
+                "layer":         l,
+                "pks_pearson_r": round(float(disc_i["pks_pearson_r"][l]), 6),
+                "ecs_pearson_r": round(float(disc_i["ecs_pearson_r"][l]), 6),
+                "pks_auroc":     round(float(disc_i["pks_auroc"][l]),     6),
+                "ecs_auroc":     round(float(disc_i["ecs_auroc"][l]),     6),
+                "pks_cohens_d":  round(float(disc_i["pks_cohens_d"][l]),  6),
+                "ecs_cohens_d":  round(float(disc_i["ecs_cohens_d"][l]),  6),
+            })
+
+        print(f"  Sample {si}: PKS r (mean={disc_i['pks_pearson_r'].mean():+.4f})  "
+              f"ECS r (mean={disc_i['ecs_pearson_r'].mean():+.4f})")
+
+    if not pks_pearson_r_per:
         raise RuntimeError(
-            "Exp 3: layer_discriminability returned None — "
-            "both classes must be present in training data."
+            "Exp 3: no valid per-example discriminability results — "
+            "all training samples had single-class masks."
         )
 
-    pks_pearson_r = disc["pks_pearson_r"]
-    ecs_pearson_r = disc["ecs_pearson_r"]
+    n_valid_samples = len(pks_pearson_r_per)
+    print(f"\n  Valid samples for aggregation: {n_valid_samples} / {len(per_sample)}")
 
-    # Save correlations CSV
+    # Aggregate: mean across examples → shape (n_layers,)
+    pks_pearson_r = np.stack(pks_pearson_r_per, axis=0).mean(axis=0)   # (n_layers,)
+    ecs_pearson_r = np.stack(ecs_pearson_r_per, axis=0).mean(axis=0)
+    pks_pearson_r_std = np.stack(pks_pearson_r_per, axis=0).std(axis=0)
+    ecs_pearson_r_std = np.stack(ecs_pearson_r_per, axis=0).std(axis=0)
+
+    pks_auroc    = np.stack(pks_auroc_per,    axis=0).mean(axis=0)
+    ecs_auroc    = np.stack(ecs_auroc_per,    axis=0).mean(axis=0)
+    pks_cohens_d = np.stack(pks_cohens_d_per, axis=0).mean(axis=0)
+    ecs_cohens_d = np.stack(ecs_cohens_d_per, axis=0).mean(axis=0)
+
+    # Save: per-example detail + aggregate summary
+    pd.DataFrame(per_example_rows).to_csv(
+        out / "exp3_training_correlations_per_example.csv", index=False
+    )
+    print("  Saved → exp3_training_correlations_per_example.csv")
+
     corr_df = pd.DataFrame({
-        "layer":         np.arange(n_layers),
-        "pks_pearson_r": pks_pearson_r,
-        "ecs_pearson_r": ecs_pearson_r,
-        "pks_auroc":     disc["pks_auroc"],
-        "ecs_auroc":     disc["ecs_auroc"],
-        "pks_cohens_d":  disc["pks_cohens_d"],
-        "ecs_cohens_d":  disc["ecs_cohens_d"],
+        "layer":              np.arange(n_layers),
+        "pks_pearson_r_mean": pks_pearson_r,
+        "pks_pearson_r_std":  pks_pearson_r_std,
+        "ecs_pearson_r_mean": ecs_pearson_r,
+        "ecs_pearson_r_std":  ecs_pearson_r_std,
+        "pks_auroc_mean":     pks_auroc,
+        "ecs_auroc_mean":     ecs_auroc,
+        "pks_cohens_d_mean":  pks_cohens_d,
+        "ecs_cohens_d_mean":  ecs_cohens_d,
     })
     corr_df.to_csv(out / "exp3_training_correlations.csv", index=False)
     print("  Saved → exp3_training_correlations.csv")
 
-    # Print top-5 by Pearson r for each metric
-    print(f"\n  ── Top layers by PKS Pearson r (most positive → set F) ──")
+    # ── Band plot: AUROC, Cohen's d, Pearson r per layer (mean ± std) ────────
+    _layers_ax = np.arange(n_layers)
+    _colour_ecs = "#2196F3"
+    _colour_pks = "#FF9800"
+
+    fig3, axes3 = plt.subplots(3, 2, figsize=(max(14, n_layers // 2), 12), sharex=True)
+    fig3.suptitle(
+        f"Exp 3 — Training Discriminability per Layer  ({cfg.model_name})\n"
+        f"Mean ± 1 SD across {n_valid_samples} training example(s)  "
+        f"({n_injections} injections each)",
+        fontsize=12, fontweight="bold",
+    )
+
+    _band_specs3 = [
+        # (per-example list,     ax,            title,             ylabel,      colour,      hline, hline_label)
+        (ecs_auroc_per,     axes3[0, 0], "ECS — AUROC",     "AUROC",     _colour_ecs, 0.5, "Chance"),
+        (pks_auroc_per,     axes3[0, 1], "PKS — AUROC",     "AUROC",     _colour_pks, 0.5, "Chance"),
+        (ecs_cohens_d_per,  axes3[1, 0], "ECS — Cohen's d", "Cohen's d", _colour_ecs, 0.0, "Zero"),
+        (pks_cohens_d_per,  axes3[1, 1], "PKS — Cohen's d", "Cohen's d", _colour_pks, 0.0, "Zero"),
+        (ecs_pearson_r_per, axes3[2, 0], "ECS — Pearson r", "Pearson r", _colour_ecs, 0.0, "r = 0"),
+        (pks_pearson_r_per, axes3[2, 1], "PKS — Pearson r", "Pearson r", _colour_pks, 0.0, "r = 0"),
+    ]
+
+    for per_list, ax, title, ylabel, colour, hline, hline_label in _band_specs3:
+        mat = np.stack(per_list, axis=0)   # (n_valid_samples, n_layers)
+        mean_v = mat.mean(axis=0)
+        std_v  = mat.std(axis=0)
+
+        for row in mat:
+            ax.plot(_layers_ax, row, color=colour, lw=0.7, alpha=0.25)
+
+        ax.fill_between(_layers_ax, mean_v - std_v, mean_v + std_v,
+                        color=colour, alpha=0.22, label="±1 SD")
+        ax.plot(_layers_ax, mean_v, color=colour, lw=2.2, label="Mean")
+        ax.axhline(hline, color="gray", ls="--", lw=1.0, alpha=0.6, label=hline_label)
+        ax.set_ylabel(ylabel, fontsize=10)
+        ax.set_title(title, fontsize=10, fontweight="bold")
+        ax.legend(fontsize=8)
+        ax.grid(axis="y", ls=":", alpha=0.4)
+
+    for ax in axes3[2]:
+        ax.set_xlabel("Layer", fontsize=10)
+
+    plt.tight_layout()
+    training_stats_path = out / "exp3_training_layer_stats.png"
+    fig3.savefig(training_stats_path, dpi=150, bbox_inches="tight")
+    plt.close(fig3)
+    print("  Saved → exp3_training_layer_stats.png")
+
+    # Print top-5 by aggregated Pearson r for each metric
+    print(f"\n  ── Top layers by mean PKS Pearson r (most positive → set F) ──")
     top_pks = np.argsort(pks_pearson_r)[::-1][:5]
     for l in top_pks:
-        print(f"    layer {l:>3}  r={pks_pearson_r[l]:+.4f}  "
-              f"AUROC={disc['pks_auroc'][l]:.4f}  d={disc['pks_cohens_d'][l]:+.3f}")
+        print(f"    layer {l:>3}  r={pks_pearson_r[l]:+.4f} ±{pks_pearson_r_std[l]:.4f}  "
+              f"AUROC={pks_auroc[l]:.4f}  d={pks_cohens_d[l]:+.3f}")
 
-    print(f"\n  ── Top layers by ECS Pearson r (most negative → set A) ──")
+    print(f"\n  ── Top layers by mean ECS Pearson r (most negative → set A) ──")
     top_ecs = np.argsort(ecs_pearson_r)[:5]
     for l in top_ecs:
-        print(f"    layer {l:>3}  r={ecs_pearson_r[l]:+.4f}  "
-              f"AUROC={disc['ecs_auroc'][l]:.4f}  d={disc['ecs_cohens_d'][l]:+.3f}")
+        print(f"    layer {l:>3}  r={ecs_pearson_r[l]:+.4f} ±{ecs_pearson_r_std[l]:.4f}  "
+              f"AUROC={ecs_auroc[l]:.4f}  d={ecs_cohens_d[l]:+.3f}")
 
     # ── 3. Identify set F (Knowledge FFNs) ───────────────────────────────────
     print(f"\n  Step 3/8 — Identifying set F (top-{n_ffn_layers} Knowledge FFN layers) …")
@@ -972,12 +1092,20 @@ def run_experiment_3(
 
     # Save selected layers info
     sel_txt = (
-        f"Set F (Knowledge FFNs, top-{n_ffn_layers} by PKS Pearson r): {F}\n"
-        f"Set A (Copying Heads,  top-{n_copy_layers} by ECS Pearson r): {A}\n"
+        f"Set F (Knowledge FFNs, top-{n_ffn_layers} by mean PKS Pearson r): {F}\n"
+        f"Set A (Copying Heads,  top-{n_copy_layers} by mean ECS Pearson r): {A}\n"
         f"alpha (PKS coefficient): {alpha:.8f}\n"
         f"beta  (ECS coefficient): {beta:.8f}\n"
-        f"\nPKS Pearson r at F layers: {[round(float(pks_pearson_r[l]),6) for l in F]}\n"
-        f"ECS Pearson r at A layers: {[round(float(ecs_pearson_r[l]),6) for l in A]}\n"
+        f"\nPKS Pearson r at F layers (mean ± std across {n_valid_samples} examples):\n"
+        + "\n".join(
+            f"  layer {l}: {pks_pearson_r[l]:+.6f} ± {pks_pearson_r_std[l]:.6f}"
+            for l in F
+        ) + "\n"
+        f"\nECS Pearson r at A layers (mean ± std across {n_valid_samples} examples):\n"
+        + "\n".join(
+            f"  layer {l}: {ecs_pearson_r[l]:+.6f} ± {ecs_pearson_r_std[l]:.6f}"
+            for l in A
+        ) + "\n"
         f"\nTraining samples: {train_data['n_samples']}  |  "
         f"Tokens: {halluc_mask_all.shape[0]}  "
         f"({n_h_total} hallucinated / {n_c_total} clean)\n"
@@ -1214,6 +1342,13 @@ def run_experiment_4(
     csv_rows:     List[Dict] = []
     valid_sample_indices: List[int] = []
 
+    # Per-example output folders
+    auroc_dir    = out / "auroc"
+    cohens_d_dir = out / "cohens_d"
+    pearson_r_dir = out / "pearson_r"
+    for _d in (auroc_dir, cohens_d_dir, pearson_r_dir):
+        _d.mkdir(parents=True, exist_ok=True)
+
     for si in range(sample_start, sample_start + n_examples):
         print(f"\n  ── Sample {si} ──────────────────────────────────────")
         cfg_i = _dc_replace(cfg, sample_idx=si)
@@ -1271,6 +1406,29 @@ def run_experiment_4(
         ecs_cohens_d_all.append(disc["ecs_cohens_d"])
         ecs_pearson_r_all.append(disc["ecs_pearson_r"])
         valid_sample_indices.append(si)
+
+        # ── Save per-example CSVs ────────────────────────────────────────────
+        _layers_col = list(range(n_layers))
+
+        pd.DataFrame({
+            "layer":     _layers_col,
+            "ecs_auroc": [round(float(v), 6) for v in disc["ecs_auroc"]],
+            "pks_auroc": [round(float(v), 6) for v in disc["pks_auroc"]],
+        }).to_csv(auroc_dir / f"sample_{si:04d}_auroc.csv", index=False)
+
+        pd.DataFrame({
+            "layer":        _layers_col,
+            "ecs_cohens_d": [round(float(v), 6) for v in disc["ecs_cohens_d"]],
+            "pks_cohens_d": [round(float(v), 6) for v in disc["pks_cohens_d"]],
+        }).to_csv(cohens_d_dir / f"sample_{si:04d}_cohens_d.csv", index=False)
+
+        pd.DataFrame({
+            "layer":         _layers_col,
+            "ecs_pearson_r": [round(float(v), 6) for v in disc["ecs_pearson_r"]],
+            "pks_pearson_r": [round(float(v), 6) for v in disc["pks_pearson_r"]],
+        }).to_csv(pearson_r_dir / f"sample_{si:04d}_pearson_r.csv", index=False)
+
+        print(f"  Saved per-example CSVs → auroc/ | cohens_d/ | pearson_r/")
 
         # Summary row
         summary_rows.append({
