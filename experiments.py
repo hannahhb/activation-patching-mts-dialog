@@ -799,6 +799,124 @@ def collect_training_data(
     }
 
 
+def _load_exp4_data(exp4_out: Path) -> Optional[Dict]:
+    """
+    Load all reusable data from a previous Exp 4 run for use in Exp 3.
+
+    Reads:
+      - ``exp4_layer_stats.csv``          — per-example × per-layer discriminability
+      - ``activations/sample_*_activations.npz`` — raw token-level ecs_layers,
+            pks_layers, halluc_mask saved during Exp 4
+
+    Returns a dict with keys:
+        pks_pearson_r_per, ecs_pearson_r_per,
+        pks_auroc_per,     ecs_auroc_per,
+        pks_cohens_d_per,  ecs_cohens_d_per  — lists of (n_layers,) arrays
+        per_sample    — list of dicts {sample_idx, ecs_layers, pks_layers, halluc_mask}
+                        populated only for examples whose .npz file exists
+        ecs_layers_all, pks_layers_all, halluc_mask_all
+                      — concatenated activations across all loaded .npz files
+        n_layers      — int
+        sample_indices — list of int (from CSV)
+    Returns None if exp4_layer_stats.csv is missing or malformed.
+    """
+    csv_path = exp4_out / "exp4_layer_stats.csv"
+    if not csv_path.exists():
+        return None
+
+    try:
+        df = pd.read_csv(csv_path)
+    except Exception as exc:
+        print(f"  [Exp 3] Could not read {csv_path}: {exc}")
+        return None
+
+    required = {"sample_idx", "layer", "pks_pearson_r", "ecs_pearson_r",
+                "pks_auroc", "ecs_auroc", "pks_cohens_d", "ecs_cohens_d"}
+    if not required.issubset(df.columns):
+        print(f"  [Exp 3] exp4_layer_stats.csv missing columns: {required - set(df.columns)}")
+        return None
+
+    sample_indices = sorted(df["sample_idx"].unique().tolist())
+    n_layers = int(df["layer"].max()) + 1
+
+    pks_pearson_r_per: List[np.ndarray] = []
+    ecs_pearson_r_per: List[np.ndarray] = []
+    pks_auroc_per:     List[np.ndarray] = []
+    ecs_auroc_per:     List[np.ndarray] = []
+    pks_cohens_d_per:  List[np.ndarray] = []
+    ecs_cohens_d_per:  List[np.ndarray] = []
+
+    for si in sample_indices:
+        rows = df[df["sample_idx"] == si].sort_values("layer")
+        if len(rows) != n_layers:
+            print(f"  [Exp 3] Sample {si}: {len(rows)} layers in CSV (expected {n_layers}), skipping.")
+            continue
+        pks_pearson_r_per.append(rows["pks_pearson_r"].to_numpy())
+        ecs_pearson_r_per.append(rows["ecs_pearson_r"].to_numpy())
+        pks_auroc_per.append(rows["pks_auroc"].to_numpy())
+        ecs_auroc_per.append(rows["ecs_auroc"].to_numpy())
+        pks_cohens_d_per.append(rows["pks_cohens_d"].to_numpy())
+        ecs_cohens_d_per.append(rows["ecs_cohens_d"].to_numpy())
+
+    if not pks_pearson_r_per:
+        return None
+
+    # Load raw activations from .npz files
+    act_dir = exp4_out / "activations"
+    per_sample: List[Dict] = []
+    ecs_list, pks_list, mask_list = [], [], []
+
+    for si in sample_indices:
+        npz_path = act_dir / f"sample_{si:04d}_activations.npz"
+        if not npz_path.exists():
+            print(f"  [Exp 3] No activations file for sample {si} — skipping for regressor.")
+            continue
+        try:
+            npz = np.load(npz_path)
+            ecs_l = npz["ecs_layers"].astype(np.float64)   # (n_layers, n_tokens)
+            pks_l = npz["pks_layers"].astype(np.float64)
+            mask  = npz["halluc_mask"].astype(bool)
+        except Exception as exc:
+            print(f"  [Exp 3] Could not load {npz_path}: {exc}")
+            continue
+
+        per_sample.append({
+            "sample_idx":  si,
+            "ecs_layers":  ecs_l,
+            "pks_layers":  pks_l,
+            "halluc_mask": mask,
+        })
+        ecs_list.append(ecs_l)
+        pks_list.append(pks_l)
+        mask_list.append(mask)
+
+    if ecs_list:
+        ecs_layers_all  = np.concatenate(ecs_list,  axis=1)
+        pks_layers_all  = np.concatenate(pks_list,  axis=1)
+        halluc_mask_all = np.concatenate(mask_list)
+    else:
+        ecs_layers_all = pks_layers_all = halluc_mask_all = None
+
+    n_act = len(per_sample)
+    print(f"  [Exp 3] Loaded Exp 4 data: {len(pks_pearson_r_per)} examples (discriminability), "
+          f"{n_act} examples (activations)")
+
+    return {
+        "pks_pearson_r_per": pks_pearson_r_per,
+        "ecs_pearson_r_per": ecs_pearson_r_per,
+        "pks_auroc_per":     pks_auroc_per,
+        "ecs_auroc_per":     ecs_auroc_per,
+        "pks_cohens_d_per":  pks_cohens_d_per,
+        "ecs_cohens_d_per":  ecs_cohens_d_per,
+        "per_sample":        per_sample,
+        "ecs_layers_all":    ecs_layers_all,
+        "pks_layers_all":    pks_layers_all,
+        "halluc_mask_all":   halluc_mask_all,
+        "n_layers":          n_layers,
+        "sample_indices":    sample_indices,
+    }
+
+
 def run_experiment_3(
     model: HookedTransformer,
     cfg: Config,
@@ -812,6 +930,7 @@ def run_experiment_3(
     n_copy_layers: int = 5,
     halluc_threshold: float = 0.5,
     nli_model: Optional[str] = None,
+    exp4_out: Optional[Path] = None,
 ) -> Dict:
     """
     Experiment 3: REDEEP hallucination scoring on a real generated note.
@@ -826,27 +945,33 @@ def run_experiment_3(
     --------
     1. Collect training data — run ECS/PKS with hallucination injection on
        `n_train_samples` ACI-Bench samples (not the target sample).
+       Skipped for layer-selection (Steps 2–4) if ``exp4_out`` is given and
+       ``exp4_layer_stats.csv`` exists there — those pre-computed per-example
+       stats are loaded directly instead.
     2. Layer-wise Pearson r — compute point-biserial correlation between
        per-layer ECS/PKS and the binary hallucination labels.
     3. Identify set F (Knowledge FFNs) — top-`n_ffn_layers` by PKS Pearson r.
     4. Identify set A (Copying Head layers) — top-`n_copy_layers` by most
        negative ECS Pearson r.
-    5. Fit α, β — logistic regression on [PKS_F | ECS_A] features with
-       class_weight="balanced" to handle heavy class imbalance.
+    5. Fit α, β — logistic regression on [PKS_F | ECS_A] features.
+       Always requires a fresh forward pass (raw token activations are not
+       stored by Exp 4); uses `n_train_samples` samples.
     6. Score the generated note — compute halluc_prob via clf.predict_proba.
     7. Validate — gold n-gram coverage + optional NLI cross-encoder.
     8. Outputs — CSV, scatter, HTML report.
 
     Parameters
     ----------
-    n_train_samples  : number of ACI-Bench samples to collect training data from.
-                       Samples are drawn from the same split, skipping the
-                       target sample index.
+    n_train_samples  : number of ACI-Bench samples for regressor training (Step 5).
     n_injections     : max hallucinations injected per training sample.
     n_ffn_layers     : size of set F (Knowledge FFN layers).
     n_copy_layers    : size of set A (Copying Head layers).
     halluc_threshold : probability cutoff for binary flag in HTML/CSV.
     nli_model        : HuggingFace NLI cross-encoder ID (optional).
+    exp4_out         : path to a previous Exp 4 output directory.  If set and
+                       ``exp4_layer_stats.csv`` is present, Steps 2–4 load
+                       pre-computed discriminability data instead of re-running
+                       forward passes.
 
     Outputs
     -------
@@ -863,99 +988,143 @@ def run_experiment_3(
 
     _inject = inject_fn or inject_hallucinations
 
-    # ── 1. Collect training data ─────────────────────────────────────────────
-    print(f"\n  Step 1/8 — Collecting training data "
-          f"({n_train_samples} samples, {n_injections} injections each) …")
+    # ── 1. Training data — from Exp 4 cache or fresh forward passes ──────────
+    exp4_data = None
+    if exp4_out is not None:
+        print(f"\n  Step 1/8 — Loading training data from Exp 4 output: {exp4_out} …")
+        exp4_data = _load_exp4_data(exp4_out)
+        if exp4_data is None:
+            print("  [Exp 3] Exp 4 data could not be loaded — falling back to fresh collection.")
 
-    # Use samples adjacent to the target (skip cfg.sample_idx)
-    dataset_size = 250   # ACI-Bench test1 has ~250 rows; safe upper bound
-    all_indices  = [i for i in range(dataset_size) if i != cfg.sample_idx]
-    train_indices = all_indices[:n_train_samples]
+    if exp4_data is not None:
+        # ── Path A: reuse Exp 4 discriminability stats + saved activations ──
+        pks_pearson_r_per = exp4_data["pks_pearson_r_per"]
+        ecs_pearson_r_per = exp4_data["ecs_pearson_r_per"]
+        pks_auroc_per     = exp4_data["pks_auroc_per"]
+        ecs_auroc_per     = exp4_data["ecs_auroc_per"]
+        pks_cohens_d_per  = exp4_data["pks_cohens_d_per"]
+        ecs_cohens_d_per  = exp4_data["ecs_cohens_d_per"]
+        n_layers          = exp4_data["n_layers"]
 
-    try:
-        train_data = collect_training_data(
-            model, cfg, _inject, train_indices, n_injections=n_injections
-        )
-    except RuntimeError as exc:
-        print(f"\n  [Exp 3] Training data collection failed: {exc}")
-        print("  Falling back to single-sample calibration from Exp 2c …")
-        calib_2c = run_experiment_2c(
-            model, cfg, out, transcript, gold_note, inject_fn=_inject
-        )
-        ecs_layers_all  = calib_2c["ecs_layers"]
-        pks_layers_all  = calib_2c["pks_layers"]
-        note_len_cal    = ecs_layers_all.shape[1]
-        halluc_mask_all = np.array(
-            [i in set(calib_2c["halluc_idx"]) for i in range(note_len_cal)],
-            dtype=bool,
-        )
-        train_data = {
-            "ecs_layers_all":  ecs_layers_all,
-            "pks_layers_all":  pks_layers_all,
-            "halluc_mask_all": halluc_mask_all,
-            "n_samples":       1,
-            "sample_stats":    [],
-        }
+        ecs_layers_all  = exp4_data["ecs_layers_all"]
+        pks_layers_all  = exp4_data["pks_layers_all"]
+        halluc_mask_all = exp4_data["halluc_mask_all"]
 
-    ecs_layers_all  = train_data["ecs_layers_all"]
-    pks_layers_all  = train_data["pks_layers_all"]
-    halluc_mask_all = train_data["halluc_mask_all"]
-    n_layers        = ecs_layers_all.shape[0]
-    n_h_total       = int(halluc_mask_all.sum())
-    n_c_total       = int((~halluc_mask_all).sum())
+        if ecs_layers_all is not None:
+            n_h_total = int(halluc_mask_all.sum())
+            n_c_total = int((~halluc_mask_all).sum())
+            print(f"  Loaded activations: {halluc_mask_all.shape[0]} tokens total  "
+                  f"({n_h_total} hallucinated / {n_c_total} clean)")
+        else:
+            print("  No activations found in Exp 4 output — regressor step will re-run forward passes.")
+            n_h_total = n_c_total = 0
 
-    # Save training summary CSV
-    if train_data["sample_stats"]:
-        pd.DataFrame(train_data["sample_stats"]).to_csv(
-            out / "exp3_training_summary.csv", index=False
-        )
-        print("  Saved → exp3_training_summary.csv")
+        # Build per_example_rows from loaded stats (skip recomputing disc)
+        per_example_rows: List[Dict] = []
+        for i, si in enumerate(exp4_data["sample_indices"][:len(pks_pearson_r_per)]):
+            for l in range(n_layers):
+                per_example_rows.append({
+                    "sample_idx":    si,
+                    "layer":         l,
+                    "pks_pearson_r": round(float(pks_pearson_r_per[i][l]), 6),
+                    "ecs_pearson_r": round(float(ecs_pearson_r_per[i][l]), 6),
+                    "pks_auroc":     round(float(pks_auroc_per[i][l]),     6),
+                    "ecs_auroc":     round(float(ecs_auroc_per[i][l]),     6),
+                    "pks_cohens_d":  round(float(pks_cohens_d_per[i][l]),  6),
+                    "ecs_cohens_d":  round(float(ecs_cohens_d_per[i][l]),  6),
+                })
 
-    # ── 2. Layer-wise Pearson r — per example, then aggregated ──────────────
-    print(f"\n  Step 2/8 — Computing per-example layer-wise discriminability …")
+    else:
+        # ── Path B: fresh collection ─────────────────────────────────────────
+        print(f"\n  Step 1/8 — Collecting training data "
+              f"({n_train_samples} samples, {n_injections} injections each) …")
 
-    per_sample = train_data.get("per_sample", [])
+        dataset_size  = 250
+        all_indices   = [i for i in range(dataset_size) if i != cfg.sample_idx]
+        train_indices = all_indices[:n_train_samples]
 
-    # Collect per-example Pearson r / AUROC / Cohen's d arrays, shape (n_layers,) each
-    pks_pearson_r_per: List[np.ndarray] = []
-    ecs_pearson_r_per: List[np.ndarray] = []
-    pks_auroc_per:     List[np.ndarray] = []
-    ecs_auroc_per:     List[np.ndarray] = []
-    pks_cohens_d_per:  List[np.ndarray] = []
-    ecs_cohens_d_per:  List[np.ndarray] = []
+        try:
+            train_data = collect_training_data(
+                model, cfg, _inject, train_indices, n_injections=n_injections
+            )
+        except RuntimeError as exc:
+            print(f"\n  [Exp 3] Training data collection failed: {exc}")
+            print("  Falling back to single-sample calibration from Exp 2c …")
+            calib_2c = run_experiment_2c(
+                model, cfg, out, transcript, gold_note, inject_fn=_inject
+            )
+            ecs_layers_all  = calib_2c["ecs_layers"]
+            pks_layers_all  = calib_2c["pks_layers"]
+            note_len_cal    = ecs_layers_all.shape[1]
+            halluc_mask_all = np.array(
+                [i in set(calib_2c["halluc_idx"]) for i in range(note_len_cal)],
+                dtype=bool,
+            )
+            train_data = {
+                "ecs_layers_all":  ecs_layers_all,
+                "pks_layers_all":  pks_layers_all,
+                "halluc_mask_all": halluc_mask_all,
+                "per_sample":      [],
+                "n_samples":       1,
+                "sample_stats":    [],
+            }
 
-    per_example_rows: List[Dict] = []
+        ecs_layers_all  = train_data["ecs_layers_all"]
+        pks_layers_all  = train_data["pks_layers_all"]
+        halluc_mask_all = train_data["halluc_mask_all"]
+        n_layers        = ecs_layers_all.shape[0]
+        n_h_total       = int(halluc_mask_all.sum())
+        n_c_total       = int((~halluc_mask_all).sum())
 
-    for rec in per_sample:
-        si   = rec["sample_idx"]
-        disc_i = layer_discriminability(
-            rec["pks_layers"], rec["ecs_layers"], rec["halluc_mask"]
-        )
-        if disc_i is None:
-            print(f"  [Step 2] Sample {si}: skipped (single class in mask).")
-            continue
+        if train_data["sample_stats"]:
+            pd.DataFrame(train_data["sample_stats"]).to_csv(
+                out / "exp3_training_summary.csv", index=False
+            )
+            print("  Saved → exp3_training_summary.csv")
 
-        pks_pearson_r_per.append(disc_i["pks_pearson_r"])
-        ecs_pearson_r_per.append(disc_i["ecs_pearson_r"])
-        pks_auroc_per.append(disc_i["pks_auroc"])
-        ecs_auroc_per.append(disc_i["ecs_auroc"])
-        pks_cohens_d_per.append(disc_i["pks_cohens_d"])
-        ecs_cohens_d_per.append(disc_i["ecs_cohens_d"])
+        # Compute per-example discriminability from raw activations
+        print(f"\n  Step 2/8 — Computing per-example layer-wise discriminability …")
 
-        for l in range(n_layers):
-            per_example_rows.append({
-                "sample_idx":    si,
-                "layer":         l,
-                "pks_pearson_r": round(float(disc_i["pks_pearson_r"][l]), 6),
-                "ecs_pearson_r": round(float(disc_i["ecs_pearson_r"][l]), 6),
-                "pks_auroc":     round(float(disc_i["pks_auroc"][l]),     6),
-                "ecs_auroc":     round(float(disc_i["ecs_auroc"][l]),     6),
-                "pks_cohens_d":  round(float(disc_i["pks_cohens_d"][l]),  6),
-                "ecs_cohens_d":  round(float(disc_i["ecs_cohens_d"][l]),  6),
-            })
+        pks_pearson_r_per: List[np.ndarray] = []
+        ecs_pearson_r_per: List[np.ndarray] = []
+        pks_auroc_per:     List[np.ndarray] = []
+        ecs_auroc_per:     List[np.ndarray] = []
+        pks_cohens_d_per:  List[np.ndarray] = []
+        ecs_cohens_d_per:  List[np.ndarray] = []
+        per_example_rows:  List[Dict] = []
 
-        print(f"  Sample {si}: PKS r (mean={disc_i['pks_pearson_r'].mean():+.4f})  "
-              f"ECS r (mean={disc_i['ecs_pearson_r'].mean():+.4f})")
+        for rec in train_data.get("per_sample", []):
+            si     = rec["sample_idx"]
+            disc_i = layer_discriminability(
+                rec["pks_layers"], rec["ecs_layers"], rec["halluc_mask"]
+            )
+            if disc_i is None:
+                print(f"  [Step 2] Sample {si}: skipped (single class in mask).")
+                continue
+
+            pks_pearson_r_per.append(disc_i["pks_pearson_r"])
+            ecs_pearson_r_per.append(disc_i["ecs_pearson_r"])
+            pks_auroc_per.append(disc_i["pks_auroc"])
+            ecs_auroc_per.append(disc_i["ecs_auroc"])
+            pks_cohens_d_per.append(disc_i["pks_cohens_d"])
+            ecs_cohens_d_per.append(disc_i["ecs_cohens_d"])
+
+            for l in range(n_layers):
+                per_example_rows.append({
+                    "sample_idx":    si,
+                    "layer":         l,
+                    "pks_pearson_r": round(float(disc_i["pks_pearson_r"][l]), 6),
+                    "ecs_pearson_r": round(float(disc_i["ecs_pearson_r"][l]), 6),
+                    "pks_auroc":     round(float(disc_i["pks_auroc"][l]),     6),
+                    "ecs_auroc":     round(float(disc_i["ecs_auroc"][l]),     6),
+                    "pks_cohens_d":  round(float(disc_i["pks_cohens_d"][l]),  6),
+                    "ecs_cohens_d":  round(float(disc_i["ecs_cohens_d"][l]),  6),
+                })
+
+            print(f"  Sample {si}: PKS r (mean={disc_i['pks_pearson_r'].mean():+.4f})  "
+                  f"ECS r (mean={disc_i['ecs_pearson_r'].mean():+.4f})")
+
+    # ── end of Path A / Path B branching ────────────────────────────────────
 
     if not pks_pearson_r_per:
         raise RuntimeError(
@@ -964,7 +1133,7 @@ def run_experiment_3(
         )
 
     n_valid_samples = len(pks_pearson_r_per)
-    print(f"\n  Valid samples for aggregation: {n_valid_samples} / {len(per_sample)}")
+    print(f"\n  Valid samples for aggregation: {n_valid_samples}")
 
     # Aggregate: mean across examples → shape (n_layers,)
     pks_pearson_r = np.stack(pks_pearson_r_per, axis=0).mean(axis=0)   # (n_layers,)
@@ -1071,6 +1240,20 @@ def run_experiment_3(
 
     # ── 5. Fit logistic regression (α, β) ────────────────────────────────────
     print(f"\n  Step 5/8 — Fitting REDEEP logistic regressor (|F|={len(F)}, |A|={len(A)}) …")
+
+    # If activations were not available from Exp 4, collect fresh forward passes now
+    if ecs_layers_all is None:
+        print("  No cached activations — running fresh forward passes for regressor …")
+        dataset_size  = 250
+        all_indices   = [i for i in range(dataset_size) if i != cfg.sample_idx]
+        train_indices = all_indices[:n_train_samples]
+        train_data = collect_training_data(
+            model, cfg, _inject, train_indices, n_injections=n_injections
+        )
+        ecs_layers_all  = train_data["ecs_layers_all"]
+        pks_layers_all  = train_data["pks_layers_all"]
+        halluc_mask_all = train_data["halluc_mask_all"]
+
     clf, scaler, alpha, beta = fit_hallucination_regressor(
         pks_layers_all, ecs_layers_all, halluc_mask_all, F, A
     )
@@ -1343,10 +1526,11 @@ def run_experiment_4(
     valid_sample_indices: List[int] = []
 
     # Per-example output folders
-    auroc_dir    = out / "auroc"
-    cohens_d_dir = out / "cohens_d"
-    pearson_r_dir = out / "pearson_r"
-    for _d in (auroc_dir, cohens_d_dir, pearson_r_dir):
+    auroc_dir       = out / "auroc"
+    cohens_d_dir    = out / "cohens_d"
+    pearson_r_dir   = out / "pearson_r"
+    activations_dir = out / "activations"
+    for _d in (auroc_dir, cohens_d_dir, pearson_r_dir, activations_dir):
         _d.mkdir(parents=True, exist_ok=True)
 
     for si in range(sample_start, sample_start + n_examples):
@@ -1429,6 +1613,21 @@ def run_experiment_4(
         }).to_csv(pearson_r_dir / f"sample_{si:04d}_pearson_r.csv", index=False)
 
         print(f"  Saved per-example CSVs → auroc/ | cohens_d/ | pearson_r/")
+
+        # ── Save raw token-level activations ────────────────────────────────
+        # ecs_layers / pks_layers : (n_layers, note_len)  float32
+        # halluc_mask             : (note_len,)            bool
+        # These are required by Exp 3 to fit the logistic regressor without
+        # re-running forward passes.
+        np.savez_compressed(
+            activations_dir / f"sample_{si:04d}_activations.npz",
+            ecs_layers  = ecs_layers.astype(np.float32),
+            pks_layers  = pks_layers.astype(np.float32),
+            halluc_mask = halluc_mask,
+            sample_idx  = np.array(si),
+        )
+        print(f"  Saved activations → activations/sample_{si:04d}_activations.npz"
+              f"  ({ecs_layers.nbytes / 1024:.1f} KB)")
 
         # Summary row
         summary_rows.append({

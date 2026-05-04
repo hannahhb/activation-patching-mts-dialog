@@ -143,6 +143,10 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--nli-model", default=None,
                    help="HuggingFace NLI cross-encoder for Exp 3 validation "
                         "(e.g. cross-encoder/nli-deberta-v3-small; requires sentence-transformers)")
+    p.add_argument("--exp4-out", default=None,
+                   help="Path to a previous Exp 4 output directory.  If set, Exp 3 loads "
+                        "pre-computed discriminability stats and saved activations from that "
+                        "run instead of re-running forward passes for training data.")
 
     # ── Exp 4 ───────────────────────────────────────────────────────────────────
     p.add_argument("--n-examples", type=int, default=10,
@@ -219,6 +223,7 @@ def main() -> None:
             n_copy_layers=args.n_copy_layers,
             halluc_threshold=args.halluc_threshold,
             nli_model=args.nli_model,
+            exp4_out=Path(args.exp4_out) if args.exp4_out else None,
         )
 
     if args.exp in ("4", "all"):
