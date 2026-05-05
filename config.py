@@ -45,8 +45,8 @@ class Config:
     # ── Dataset ────────────────────────────────────────────────────────────────
     dataset_repo:   str = "mkieffer/ACI-Bench-MedARC"
     dataset_config: str = "aci"
-    dataset_split:  str = "test1"
-    sample_idx:     int = 0
+    dataset_split:  str = "test2"
+    sample_idx:     int = 1
 
     # ── Generation (Experiment 2b) ─────────────────────────────────────────────
     max_new_tokens:  int   = 512

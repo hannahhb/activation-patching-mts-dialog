@@ -294,7 +294,7 @@ def _nli_sentence_labels(
     return token_labels
 
 
-def _build_exp3_html(
+def build_exp3_html(
     scatter_png: Path,
     note_toks: List[str],
     halluc_prob: np.ndarray,

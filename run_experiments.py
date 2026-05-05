@@ -111,11 +111,11 @@ def parse_args() -> argparse.Namespace:
                    choices=["2a", "2b", "2c", "2d", "3", "4", "both", "all"],
                    default="both",
                    help="Experiment(s) to run  (both=2a+2b [default]  |  all=2a…4)")
-    p.add_argument("--sample", type=int, default=0,
+    p.add_argument("--sample", type=int, default=1,
                    help="ACI-Bench test1 row index for the primary sample (default: 0)")
     p.add_argument("--max-new-tokens", type=int, default=512,
                    help="Max tokens for note generation in Exp 2b (default: 512)")
-    p.add_argument("--temperature", type=float, default=0.0,
+    p.add_argument("--temperature", type=float, default=0.5,
                    help="Sampling temperature (0.0 = greedy)")
     p.add_argument("--out", default=".", help="Output directory for plots and CSV")
 
@@ -140,7 +140,7 @@ def parse_args() -> argparse.Namespace:
                    help="Size of set A (Copying Head layers) in Exp 3 (default: 5)")
     p.add_argument("--halluc-threshold", type=float, default=0.5,
                    help="Probability cutoff for binary hallucination flag in Exp 3 (default: 0.5)")
-    p.add_argument("--exp4-out", default=None,
+    p.add_argument("--exp4-out", default="exp_4_out",
                    help="Path to a previous Exp 4 output directory.  If set, Exp 3 loads "
                         "pre-computed discriminability stats and saved activations from that "
                         "run instead of re-running forward passes for training data.")

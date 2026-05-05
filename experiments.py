@@ -1475,7 +1475,7 @@ def run_experiment_3(
         },
     }
 
-    _build_exp3_html(
+    build_exp3_html(
         scatter_png=scatter_path,
         note_toks=note_toks,
         halluc_prob=halluc_prob,
