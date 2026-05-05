@@ -1455,42 +1455,71 @@ def run_experiment_3(
     plt.close(fig)
     print("  Saved → exp3_scatter_calibrated.png")
 
-    calib_summary = {
-        "F (Knowledge FFNs, selected by PKS AUROC)": {
-            l: {
-                "pks_auroc": float(pks_auroc[l]),
-                "pearson_r": float(pks_pearson_r[l]),
-                "cohens_d": float(pks_cohens_d[l]),
-            }
-            for l in F
-        },
-        "A (Copying Heads, selected by lowest raw ECS AUROC)": {
-            l: {
-                "ecs_auroc_raw": float(ecs_auroc[l]),
-                "ecs_auroc_reversed": float(1.0 - ecs_auroc[l]),
-                "pearson_r": float(ecs_pearson_r[l]),
-                "cohens_d": float(ecs_cohens_d[l]),
-            }
-            for l in A
-        },
-    }
+    # ── Inline HTML report ───────────────────────────────────────────────────
+    def _risk_colour(p: float) -> str:
+        r = int(255 * p)
+        g = int(255 * (1 - p))
+        return f"rgb({r},{g},60)"
 
-    build_exp3_html(
-        scatter_png=scatter_path,
-        note_toks=note_toks,
-        halluc_prob=halluc_prob,
-        ecs=ecs,
-        pks=pks,
-        gold_labels=None,
-        nli_labels=None,
-        calib_summary=calib_summary,
-        generated_note=generated_note,
-        model_name=cfg.model_name,
-        sample_idx=cfg.sample_idx,
-        threshold=halluc_threshold,
-        out_path=out / "exp3_report.html",
+    token_spans = "".join(
+        f'<span title="prob={halluc_prob[i]:.3f} | ecs={ecs[i]:.3f} | pks={pks[i]:.3f}" '
+        f'style="background:{_risk_colour(float(halluc_prob[i]))}; '
+        f'opacity:{0.35 + 0.65 * float(halluc_prob[i]):.2f}; '
+        f'border-radius:3px; padding:1px 2px; margin:1px;">'
+        f'{note_toks[i].replace("<", "&lt;").replace(">", "&gt;")}'
+        f'</span>'
+        for i in range(note_len)
     )
 
+    layer_rows = "".join(
+        f"<tr><td>{l}</td>"
+        f"<td>{pks_auroc[l]:.4f}</td><td>{pks_pearson_r[l]:+.4f}</td><td>{pks_cohens_d[l]:+.4f}</td>"
+        f"<td>{ecs_auroc[l]:.4f}</td><td>{ecs_pearson_r[l]:+.4f}</td><td>{ecs_cohens_d[l]:+.4f}</td>"
+        f"<td>{'★ F' if l in F else ''}{'★ A' if l in A else ''}</td></tr>"
+        for l in range(n_layers)
+    )
+
+    html = f"""<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<title>Exp 3 Report — {cfg.model_name}</title>
+<style>
+  body {{ font-family: sans-serif; max-width: 1100px; margin: 2em auto; color: #222; }}
+  h1 {{ font-size: 1.3em; }} h2 {{ font-size: 1.1em; margin-top: 1.5em; }}
+  table {{ border-collapse: collapse; width: 100%; font-size: 0.82em; }}
+  th, td {{ border: 1px solid #ccc; padding: 4px 8px; text-align: right; }}
+  th {{ background: #f0f0f0; text-align: center; }}
+  .note {{ line-height: 2.2; font-size: 0.9em; background: #fafafa;
+           border: 1px solid #ddd; padding: 1em; border-radius: 6px; }}
+  img {{ max-width: 100%; border: 1px solid #ccc; border-radius: 4px; }}
+  .meta {{ font-size: 0.85em; color: #555; }}
+</style></head><body>
+<h1>Experiment 3 — REDEEP Hallucination Report</h1>
+<p class="meta">Model: <b>{cfg.model_name}</b> &nbsp;|&nbsp;
+Sample: <b>{cfg.sample_idx}</b> &nbsp;|&nbsp;
+Threshold: <b>{halluc_threshold}</b> &nbsp;|&nbsp;
+Flagged: <b>{int(flagged.sum())} / {note_len}</b> tokens &nbsp;|&nbsp;
+α={alpha:.4f} &nbsp; β={beta:.4f}<br>
+Set F (PKS layers): {F}<br>
+Set A (ECS layers): {A}</p>
+
+<h2>Generated Note — colour = hallucination probability</h2>
+<div class="note">{token_spans}</div>
+
+<h2>ECS vs PKS Scatter</h2>
+<img src="{scatter_path.name}" alt="scatter">
+
+<h2>Layer-wise Discriminability (mean across training examples)</h2>
+<table>
+<tr><th>Layer</th>
+<th>PKS AUROC</th><th>PKS Pearson r</th><th>PKS Cohen d</th>
+<th>ECS AUROC</th><th>ECS Pearson r</th><th>ECS Cohen d</th>
+<th>Selected</th></tr>
+{layer_rows}
+</table>
+</body></html>"""
+
+    html_path = out / "exp3_report.html"
+    html_path.write_text(html, encoding="utf-8")
     print("  Saved → exp3_report.html")
 
     return {
