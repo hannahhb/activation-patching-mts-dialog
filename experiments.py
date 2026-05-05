@@ -1240,33 +1240,37 @@ def run_experiment_3(
             f"d={ecs_cohens_d[l]:+.3f}"
         )
 
-    # ── 3. Identify set F by PKS AUROC ───────────────────────────────────────
+    # ── 3. Identify set F — layers where high PKS predicts hallucination ────
+    # Use most positive PKS Cohen's d: hallucinated tokens score higher PKS
+    # (model over-relying on parametric memory).  Cohen's d sign is unambiguous
+    # and robust to class imbalance.
     print(
         f"\n  Step 3/8 — Identifying set F "
-        f"(top-{n_ffn_layers} Knowledge FFN layers by PKS AUROC) …"
+        f"(top-{n_ffn_layers} Knowledge FFN layers by most positive PKS Cohen's d) …"
     )
 
-    F = np.argsort(pks_auroc)[::-1][:n_ffn_layers].tolist()
+    F = np.argsort(pks_cohens_d)[::-1][:n_ffn_layers].tolist()
 
     print(
         f"  Set F = {F}  "
-        f"(PKS AUROC values: {[round(float(pks_auroc[l]), 4) for l in F]})"
+        f"(PKS Cohen's d: {[round(float(pks_cohens_d[l]), 4) for l in F]}, "
+        f"AUROC: {[round(float(pks_auroc[l]), 4) for l in F]})"
     )
 
-    # ── 4. Identify set A by ECS AUROC ───────────────────────────────────────
+    # ── 4. Identify set A — layers where low ECS predicts hallucination ──────
+    # Use most negative ECS Cohen's d: hallucinated tokens have lower ECS
+    # (copying heads fail to attend to the transcript).
     print(
         f"\n  Step 4/8 — Identifying set A "
-        f"(top-{n_copy_layers} Copying Head layers by lowest raw ECS AUROC) …"
+        f"(top-{n_copy_layers} Copying Head layers by most negative ECS Cohen's d) …"
     )
 
-    # Raw ECS AUROC is low when clean tokens tend to have higher ECS than hallucinated tokens.
-    # Equivalently, these are the highest AUROC layers for -ECS.
-    A = np.argsort(ecs_auroc)[:n_copy_layers].tolist()
+    A = np.argsort(ecs_cohens_d)[:n_copy_layers].tolist()
 
     print(
         f"  Set A = {A}  "
-        f"(raw ECS AUROC values: {[round(float(ecs_auroc[l]), 4) for l in A]}, "
-        f"reversed: {[round(float(1.0 - ecs_auroc[l]), 4) for l in A]})"
+        f"(ECS Cohen's d: {[round(float(ecs_cohens_d[l]), 4) for l in A]}, "
+        f"AUROC: {[round(float(ecs_auroc[l]), 4) for l in A]})"
     )
 
     # ── 5. Fit logistic regression α, β ──────────────────────────────────────
@@ -1306,8 +1310,8 @@ def run_experiment_3(
         print(f"  [Exp 3] Training AUROC skipped: {exc}")
 
     sel_txt = (
-        f"Set F (Knowledge FFNs, top-{n_ffn_layers} by mean PKS AUROC): {F}\n"
-        f"Set A (Copying Heads,  top-{n_copy_layers} by lowest mean raw ECS AUROC): {A}\n"
+        f"Set F (Knowledge FFNs, top-{n_ffn_layers} by most positive PKS Cohen's d): {F}\n"
+        f"Set A (Copying Heads,  top-{n_copy_layers} by most negative ECS Cohen's d): {A}\n"
         f"alpha (PKS coefficient): {alpha:.8f}\n"
         f"beta  (ECS coefficient): {beta:.8f}\n"
         f"\nPKS AUROC at F layers:\n"
