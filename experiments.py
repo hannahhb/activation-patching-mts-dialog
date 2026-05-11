@@ -235,23 +235,28 @@ def _load_exp4_data(exp4_out: Path) -> Optional[Dict]:
     if not pks_pearson_r_per:
         return None
 
-    # Load raw activations from .npz files
+    # Load raw activations — scan ALL .npz files in the activations directory,
+    # not just those referenced by the CSV.  This means a larger Exp 4 run
+    # (more .npz files) is fully utilised even if the CSV was written from a
+    # smaller run.
     act_dir = exp4_out / "activations"
     per_sample: List[Dict] = []
     ecs_list, pks_list, mask_list = [], [], []
 
-    for si in sample_indices:
-        npz_path = act_dir / f"sample_{si:04d}_activations.npz"
-        if not npz_path.exists():
-            print(f"  [Exp 3] No activations file for sample {si} — skipping for regressor.")
-            continue
+    if act_dir.exists():
+        npz_paths = sorted(act_dir.glob("sample_*_activations.npz"))
+    else:
+        npz_paths = []
+
+    for npz_path in npz_paths:
         try:
             npz = np.load(npz_path)
+            si    = int(npz["sample_idx"])
             ecs_l = npz["ecs_layers"].astype(np.float64)   # (n_layers, n_tokens)
             pks_l = npz["pks_layers"].astype(np.float64)
             mask  = npz["halluc_mask"].astype(bool)
         except Exception as exc:
-            print(f"  [Exp 3] Could not load {npz_path}: {exc}")
+            print(f"  [Exp 3] Could not load {npz_path.name}: {exc}")
             continue
 
         per_sample.append({
@@ -273,7 +278,7 @@ def _load_exp4_data(exp4_out: Path) -> Optional[Dict]:
 
     n_act = len(per_sample)
     print(f"  [Exp 3] Loaded Exp 4 data: {len(pks_pearson_r_per)} examples (discriminability), "
-          f"{n_act} examples (activations)")
+          f"{n_act} examples (activations — all .npz files in {act_dir.name}/)")
 
     return {
         "pks_pearson_r_per": pks_pearson_r_per,
