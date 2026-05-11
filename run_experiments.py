@@ -33,6 +33,7 @@ from exp3 import run_experiment_3
 from exp4 import run_experiment_4
 from exp5 import run_experiment_5
 from exp6 import run_experiment_6
+from exp7 import run_experiment_7, _BEDROCK_DEFAULT_MODEL as _EXP7_BEDROCK_DEFAULT
 
 warnings.filterwarnings("ignore")
 
@@ -110,7 +111,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--model", choices=["gemma", "llama"], default="gemma",
                    help="gemma → google/gemma-2-2b-it  |  llama → meta-llama/Meta-Llama-3-8B-instruct")
     p.add_argument("--exp",
-                   choices=["2a", "2b", "2c", "2d", "3", "4", "5", "6", "both", "all"],
+                   choices=["2a", "2b", "2c", "2d", "3", "4", "5", "6", "7", "both", "all"],
                    default="both",
                    help="Experiment(s) to run  (both=2a+2b [default]  |  all=2a…6)")
     p.add_argument("--sample", type=int, default=1,
@@ -168,6 +169,16 @@ def parse_args() -> argparse.Namespace:
                    help="Sentence-transformers CrossEncoder for NLI in Exp 6")
     p.add_argument("--n-train-examples-se", type=int, default=5,
                    help="Number of ACI-Bench training examples for SE probe (default: 5)")
+
+    # ── Exp 7 ───────────────────────────────────────────────────────────────────
+    p.add_argument("--n-claims", type=int, default=4,
+                   help="Claims to extract per transcript/note pair in Exp 7 (default: 4)")
+    p.add_argument("--exp7-bedrock-model", default=_EXP7_BEDROCK_DEFAULT,
+                   help="Bedrock model for Exp 7 contrastive pair generation")
+    p.add_argument("--exp7-bedrock-region", default=None,
+                   help="AWS region for Exp 7 Bedrock calls")
+    p.add_argument("--no-spacy", action="store_true",
+                   help="Disable spaCy span labelling in Exp 7 inference")
 
     return p.parse_args()
 
@@ -259,6 +270,17 @@ def main() -> None:
             n_injections=args.n_injections,
             sample_start=args.sample_start,
             components=args.patch_components,
+        )
+
+    if args.exp in ("7", "all"):
+        run_experiment_7(
+            model, cfg, out, transcript, gold_note,
+            n_claims=args.n_claims,
+            n_examples=args.n_examples,
+            sample_start=args.sample_start,
+            bedrock_model=args.exp7_bedrock_model,
+            bedrock_region=args.exp7_bedrock_region,
+            use_spacy=not args.no_spacy,
         )
 
     if args.exp in ("6", "all"):
