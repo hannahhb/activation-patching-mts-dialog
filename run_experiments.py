@@ -173,6 +173,8 @@ def parse_args() -> argparse.Namespace:
     # ── Exp 7 ───────────────────────────────────────────────────────────────────
     p.add_argument("--n-claims", type=int, default=4,
                    help="Claims to extract per transcript/note pair in Exp 7 (default: 4)")
+    p.add_argument("--test-fraction", type=float, default=0.3,
+                   help="Fraction of examples held out for probe evaluation in Exp 7 (default: 0.3)")
     p.add_argument("--exp7-bedrock-model", default=_EXP7_BEDROCK_DEFAULT,
                    help="Bedrock model for Exp 7 contrastive pair generation")
     p.add_argument("--exp7-bedrock-region", default=None,
@@ -278,6 +280,7 @@ def main() -> None:
             n_claims=args.n_claims,
             n_examples=args.n_examples,
             sample_start=args.sample_start,
+            test_fraction=args.test_fraction,
             bedrock_model=args.exp7_bedrock_model,
             bedrock_region=args.exp7_bedrock_region,
             use_spacy=not args.no_spacy,
