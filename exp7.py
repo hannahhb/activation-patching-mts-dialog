@@ -66,46 +66,12 @@ from transformer_lens import HookedTransformer
 from config import Config, load_aci_sample
 from metrics import compute_ecs, compute_pks, layer_discriminability
 from tokenization import tokenize_pair, generate_note
+from halluc_llm import BedrockHallucinator, _parse_json
 
 warnings.filterwarnings("ignore")
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Bedrock client
-# ─────────────────────────────────────────────────────────────────────────────
-
 _BEDROCK_DEFAULT_MODEL  = "us.meta.llama3-3-70b-instruct-v1:0"
 _BEDROCK_DEFAULT_REGION = "us-east-1"
-
-
-def _get_bedrock_client(model: str = _BEDROCK_DEFAULT_MODEL, region: Optional[str] = None):
-    try:
-        import boto3
-    except ImportError as exc:
-        raise ImportError("boto3 is required for Exp 7.  pip install boto3") from exc
-    resolved = region or os.environ.get("AWS_DEFAULT_REGION", _BEDROCK_DEFAULT_REGION)
-    client = boto3.client("bedrock-runtime", region_name=resolved)
-    return client, model
-
-
-def _bedrock_call(client, model: str, system: str, user: str,
-                  max_tokens: int = 1024, temperature: float = 0.2) -> str:
-    response = client.converse(
-        modelId=model,
-        system=[{"text": system}],
-        messages=[{"role": "user", "content": [{"text": user}]}],
-        inferenceConfig={"maxTokens": max_tokens, "temperature": temperature},
-    )
-    return response["output"]["message"]["content"][0]["text"]
-
-
-def _parse_json(text: str) -> dict:
-    text = text.strip()
-    text = re.sub(r"^```(?:json)?\s*", "", text)
-    text = re.sub(r"\s*```$", "", text).strip()
-    m = re.search(r"\{.*\}", text, re.DOTALL)
-    if m:
-        text = m.group(0)
-    return json.loads(text)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -113,11 +79,13 @@ def _parse_json(text: str) -> dict:
 # ─────────────────────────────────────────────────────────────────────────────
 
 _PAIR_SYSTEM = """\
-You are a clinical NLP researcher.  Your task is to identify factual claims in a
-clinical note that are directly supported by a specific sentence in the doctor-patient
-transcript, then generate a modified transcript that removes or weakens that support.
+You are a clinical NLP researcher helping to build a hallucination-detection dataset.
+Your task: given a doctor-patient transcript and the clinical note written from it,
+identify factual claims in the note that are directly supported by a specific
+utterance in the transcript.  Then produce ONE modified version of the transcript
+that removes or weakens that support.
 
-Return ONLY valid JSON — no markdown fences, no commentary."""
+Return ONLY valid JSON — no markdown fences, no prose."""
 
 _PAIR_TEMPLATE = """\
 TRANSCRIPT:
@@ -130,29 +98,51 @@ NOTE:
 {note}
 \"\"\"
 
-Identify up to {n_claims} factual note claims (e.g. diagnoses, medications, vital signs,
-findings) that are each supported by a specific transcript sentence.
+Find up to {n_claims} factual claims in the note (medications, diagnoses, vital signs,
+findings, dosages) where you can identify the exact transcript line that supports it.
 
-For each claim generate ALL THREE modification types of the transcript:
-  deletion     — remove the supporting sentence entirely
-  substitution — replace the supporting fact with a different plausible value
-  negation     — add a short phrase that explicitly contradicts the claim
+For each claim produce exactly ONE modified transcript using modification type
+"{mod_type}":
+  deletion     = remove the supporting line entirely (keep the rest unchanged)
+  substitution = change only the supporting fact to a different plausible value
+  negation     = insert a short denial of the claim near the supporting line
 
-Return this JSON (and nothing else):
+Rules:
+  1. "note_span" must be an exact copy-paste substring from the NOTE above.
+  2. "supporting_line" must be an exact copy-paste line from the TRANSCRIPT above.
+  3. "modified_transcript" is the full transcript text after the modification.
+  4. The modified transcript must differ from the original.
+
+Return this JSON and nothing else:
 {{
-  "claims": [
+  "pairs": [
     {{
-      "claim_text":          "<short description of the note claim>",
-      "note_span":           "<exact substring of the note that states the claim>",
-      "supporting_sentence": "<exact sentence from the transcript>",
-      "modified_transcripts": {{
-        "deletion":     "<full transcript with supporting sentence removed>",
-        "substitution": "<full transcript with the fact substituted>",
-        "negation":     "<full transcript with a contradicting phrase added>"
-      }}
+      "claim_text":          "<one-sentence description>",
+      "note_span":           "<exact substring from the note>",
+      "supporting_line":     "<exact line from the transcript>",
+      "modified_transcript": "<full modified transcript text>"
     }}
   ]
 }}"""
+
+
+def _fuzzy_find(text: str, span: str) -> Optional[int]:
+    """
+    Try exact match, then case-insensitive, then first-30-char prefix match.
+    Returns character start index or None.
+    """
+    idx = text.find(span)
+    if idx != -1:
+        return idx
+    idx = text.lower().find(span.lower())
+    if idx != -1:
+        return idx
+    # prefix match — useful when LLM truncates the span slightly
+    prefix = span[:30].lower()
+    idx = text.lower().find(prefix)
+    if idx != -1:
+        return idx
+    return None
 
 
 def generate_contrastive_pairs(
@@ -164,59 +154,123 @@ def generate_contrastive_pairs(
     max_retries: int = 3,
 ) -> List[Dict]:
     """
-    Use Bedrock to identify note claims supported by the transcript, and return
-    a list of contrastive pair records.
+    Use Bedrock to identify note claims supported by the transcript and produce
+    one modified transcript per claim per modification type.
 
-    Each record has keys:
-        claim_text, note_span, supporting_sentence, modification_type,
+    Mirrors the halluc_llm.py approach:
+    - One simple JSON structure per call
+    - Three separate calls, one per modification type (deletion / substitution /
+      negation), so the LLM only has to produce one full modified transcript at
+      a time — greatly reducing output length and JSON failure rate.
+    - Fuzzy note_span matching so minor LLM paraphrasing doesn't silently drop
+      all candidates.
+    - Warns loudly on every skipped candidate.
+
+    Each returned dict has keys:
+        claim_text, note_span, supporting_line, modification_type,
         transcript_a (original), transcript_b (modified)
-
-    Returns an empty list if all retries fail.
     """
-    client, model = _get_bedrock_client(bedrock_model, bedrock_region)
-    user_msg = _PAIR_TEMPLATE.format(
-        transcript=transcript, note=note, n_claims=n_claims
+    hallucinator = BedrockHallucinator(
+        model=bedrock_model,
+        region=bedrock_region,
     )
+    # Access the underlying boto3 client and model id directly
+    client    = hallucinator._client
+    model_id  = hallucinator.model
 
-    for attempt in range(max_retries):
-        temperature = 0.2 + attempt * 0.1
-        try:
-            raw  = _bedrock_call(client, model, _PAIR_SYSTEM, user_msg,
-                                 max_tokens=2048, temperature=temperature)
-            data = _parse_json(raw)
-        except Exception as exc:
-            warnings.warn(f"[Exp7] Pair generation attempt {attempt+1}: {exc}")
-            continue
+    pairs: List[Dict] = []
 
-        claims = data.get("claims", [])
-        pairs: List[Dict] = []
-        for c in claims:
-            note_span = c.get("note_span", "").strip()
-            if not note_span or note_span not in note:
+    for mod_type in ("deletion", "substitution", "negation"):
+        user_msg = _PAIR_TEMPLATE.format(
+            transcript=transcript,
+            note=note,
+            n_claims=n_claims,
+            mod_type=mod_type,
+        )
+
+        last_exc = None
+        for attempt in range(max_retries):
+            temperature = 0.3 + attempt * 0.1
+            try:
+                response = client.converse(
+                    modelId=model_id,
+                    system=[{"text": _PAIR_SYSTEM}],
+                    messages=[{"role": "user", "content": [{"text": user_msg}]}],
+                    inferenceConfig={"maxTokens": 2048, "temperature": temperature},
+                )
+                raw  = response["output"]["message"]["content"][0]["text"]
+                data = _parse_json(raw)
+            except (ValueError, KeyError, json.JSONDecodeError) as exc:
+                last_exc = exc
+                warnings.warn(
+                    f"[Exp7] mod={mod_type} attempt {attempt+1}/{max_retries} "
+                    f"— JSON parse failed: {exc}"
+                )
                 continue
-            modified = c.get("modified_transcripts", {})
-            for mod_type in ("deletion", "substitution", "negation"):
-                tr_b = modified.get(mod_type, "").strip()
-                if not tr_b or tr_b == transcript:
+            except Exception as exc:
+                warnings.warn(f"[Exp7] mod={mod_type} Bedrock call failed: {exc}")
+                last_exc = exc
+                break
+
+            candidates = data.get("pairs", [])
+            if not candidates:
+                warnings.warn(
+                    f"[Exp7] mod={mod_type} attempt {attempt+1}: LLM returned empty pairs list"
+                )
+                last_exc = ValueError("empty pairs list")
+                continue
+
+            accepted = 0
+            for cand in candidates:
+                note_span   = cand.get("note_span",           "").strip()
+                sup_line    = cand.get("supporting_line",     "").strip()
+                tr_b        = cand.get("modified_transcript", "").strip()
+                claim_text  = cand.get("claim_text",          "")
+
+                if not note_span:
+                    warnings.warn(f"[Exp7] mod={mod_type}: candidate missing note_span — skipping")
                     continue
+                if not tr_b or tr_b == transcript:
+                    warnings.warn(
+                        f"[Exp7] mod={mod_type}: modified_transcript identical to original "
+                        f"or empty for claim '{claim_text[:40]}' — skipping"
+                    )
+                    continue
+
+                # Fuzzy-match note_span into the actual note
+                match_idx = _fuzzy_find(note, note_span)
+                if match_idx is None:
+                    warnings.warn(
+                        f"[Exp7] mod={mod_type}: note_span '{note_span[:40]}' not found "
+                        f"in note (even with fuzzy match) — skipping"
+                    )
+                    continue
+
+                # Use the actual substring from the note (not the LLM's copy)
+                resolved_span = note[match_idx: match_idx + len(note_span)]
+
                 pairs.append({
-                    "claim_text":          c.get("claim_text", ""),
-                    "note_span":           note_span,
-                    "supporting_sentence": c.get("supporting_sentence", ""),
-                    "modification_type":   mod_type,
-                    "transcript_a":        transcript,
-                    "transcript_b":        tr_b,
+                    "claim_text":        claim_text,
+                    "note_span":         resolved_span,
+                    "supporting_line":   sup_line,
+                    "modification_type": mod_type,
+                    "transcript_a":      transcript,
+                    "transcript_b":      tr_b,
                 })
+                accepted += 1
 
-        if pairs:
-            print(f"  [Exp7] Generated {len(pairs)} contrastive pairs "
-                  f"({len(claims)} claims × modification types).")
-            return pairs
+            print(f"  [Exp7] mod={mod_type} attempt {attempt+1}: "
+                  f"{accepted}/{len(candidates)} candidates accepted")
+            break  # success — move to next mod_type
 
-        warnings.warn(f"[Exp7] Attempt {attempt+1}: no valid pairs extracted.")
+        else:
+            warnings.warn(
+                f"[Exp7] mod={mod_type}: all {max_retries} attempts failed. "
+                f"Last error: {last_exc}"
+            )
 
-    warnings.warn("[Exp7] All pair-generation attempts failed — returning empty list.")
-    return []
+    print(f"  [Exp7] Total pairs generated: {len(pairs)}")
+    return pairs
 
 
 # ─────────────────────────────────────────────────────────────────────────────
