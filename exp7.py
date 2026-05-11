@@ -127,60 +127,51 @@ def _parse_pairs_text(raw: str, transcript: str, note: str, mod_type: str) -> Li
     """
     Parse the plain-text block format returned by the LLM.
 
-    Expected block (repeated per claim):
-        CLAIM: ...
-        NOTE_SPAN: ...
-        SUPPORTING_LINE: ...
-        MODIFIED_TRANSCRIPT:
-        <transcript lines>
-        ---
+    Splits on CLAIM: lines so the response works with or without --- separators.
+    MODIFIED_TRANSCRIPT captures everything up to the next labelled field or
+    end-of-string.
     """
     pairs: List[Dict] = []
-    # Split on the --- separator (with some tolerance for whitespace)
-    blocks = re.split(r"\n\s*-{3,}\s*\n?", raw)
 
-    for block in blocks:
-        block = block.strip()
-        if not block:
+    # Split into per-claim chunks on lines that start with CLAIM:
+    # (handles both --- separated and unseparated responses)
+    chunks = re.split(r"(?=^CLAIM:)", raw, flags=re.MULTILINE)
+
+    for chunk in chunks:
+        chunk = chunk.strip()
+        if not chunk or not chunk.startswith("CLAIM:"):
             continue
 
-        claim_text   = ""
-        note_span    = ""
-        sup_line     = ""
-        modified_tr  = ""
+        claim_m = re.search(r"^CLAIM:\s*(.+)$",           chunk, re.MULTILINE)
+        span_m  = re.search(r"^NOTE_SPAN:\s*(.+)$",       chunk, re.MULTILINE)
+        sup_m   = re.search(r"^SUPPORTING_LINE:\s*(.+)$", chunk, re.MULTILINE)
+        # Capture from MODIFIED_TRANSCRIPT: through to the next labelled keyword
+        # or end of chunk.  The lookahead stops at any ALL_CAPS_WORD: pattern.
+        mod_m   = re.search(
+            r"^MODIFIED_TRANSCRIPT:\s*\n([\s\S]+?)(?=\n[A-Z_]+:|\Z)",
+            chunk, re.MULTILINE,
+        )
 
-        # Extract labelled fields
-        claim_m = re.search(r"^CLAIM:\s*(.+)$",            block, re.MULTILINE)
-        span_m  = re.search(r"^NOTE_SPAN:\s*(.+)$",        block, re.MULTILINE)
-        sup_m   = re.search(r"^SUPPORTING_LINE:\s*(.+)$",  block, re.MULTILINE)
-        mod_m   = re.search(r"^MODIFIED_TRANSCRIPT:\s*\n([\s\S]+)", block)
+        claim_text  = claim_m.group(1).strip() if claim_m else ""
+        note_span   = span_m.group(1).strip()  if span_m  else ""
+        sup_line    = sup_m.group(1).strip()   if sup_m   else ""
+        modified_tr = mod_m.group(1).strip()   if mod_m   else ""
 
-        if claim_m:
-            claim_text = claim_m.group(1).strip()
-        if span_m:
-            note_span  = span_m.group(1).strip()
-        if sup_m:
-            sup_line   = sup_m.group(1).strip()
-        if mod_m:
-            modified_tr = mod_m.group(1).strip()
-
-        # Validate
         if not note_span:
-            print(f"  [Exp7] block skipped — missing NOTE_SPAN  claim='{claim_text[:40]}'")
+            print(f"  [Exp7] block skipped — missing NOTE_SPAN  claim='{claim_text[:50]}'")
             continue
         if not modified_tr:
             print(f"  [Exp7] block skipped — missing MODIFIED_TRANSCRIPT  "
-                  f"note_span='{note_span[:40]}'")
+                  f"note_span='{note_span[:50]}'")
             continue
         if modified_tr == transcript:
             print(f"  [Exp7] block skipped — MODIFIED_TRANSCRIPT identical to original  "
-                  f"note_span='{note_span[:40]}'")
+                  f"note_span='{note_span[:50]}'")
             continue
 
-        # Fuzzy-match note_span into actual note text
         idx = _fuzzy_find(note, note_span)
         if idx is None:
-            print(f"  [Exp7] block skipped — NOTE_SPAN '{note_span[:40]}' not found in note")
+            print(f"  [Exp7] block skipped — NOTE_SPAN '{note_span[:50]}' not found in note")
             continue
         resolved_span = note[idx: idx + len(note_span)]
 
@@ -192,7 +183,7 @@ def _parse_pairs_text(raw: str, transcript: str, note: str, mod_type: str) -> Li
             "transcript_a":      transcript,
             "transcript_b":      modified_tr,
         })
-        print(f"  [Exp7]   accepted: mod={mod_type}  span='{resolved_span[:40]}'")
+        print(f"  [Exp7]   accepted: mod={mod_type}  span='{resolved_span[:50]}'")
 
     return pairs
 
