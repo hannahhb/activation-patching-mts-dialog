@@ -23,14 +23,16 @@ from pathlib import Path
 from transformer_lens import HookedTransformer
 
 from config import Config, load_aci_sample
-from experiments import (
+from exp2 import (
     run_experiment_2a,
     run_experiment_2b,
     run_experiment_2c,
     run_experiment_2d,
-    run_experiment_3,
-    run_experiment_4,
 )
+from exp3 import run_experiment_3
+from exp4 import run_experiment_4
+from exp5 import run_experiment_5
+from exp6 import run_experiment_6
 
 warnings.filterwarnings("ignore")
 
@@ -108,9 +110,9 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--model", choices=["gemma", "llama"], default="gemma",
                    help="gemma → google/gemma-2-2b-it  |  llama → meta-llama/Meta-Llama-3-8B-instruct")
     p.add_argument("--exp",
-                   choices=["2a", "2b", "2c", "2d", "3", "4", "both", "all"],
+                   choices=["2a", "2b", "2c", "2d", "3", "4", "5", "6", "both", "all"],
                    default="both",
-                   help="Experiment(s) to run  (both=2a+2b [default]  |  all=2a…4)")
+                   help="Experiment(s) to run  (both=2a+2b [default]  |  all=2a…6)")
     p.add_argument("--sample", type=int, default=1,
                    help="ACI-Bench test1 row index for the primary sample (default: 0)")
     p.add_argument("--max-new-tokens", type=int, default=512,
@@ -147,9 +149,25 @@ def parse_args() -> argparse.Namespace:
 
     # ── Exp 4 ───────────────────────────────────────────────────────────────────
     p.add_argument("--n-examples", type=int, default=10,
-                   help="Number of ACI-Bench examples to process in Exp 4 (default: 10)")
+                   help="Number of ACI-Bench examples to process in Exp 4/5 (default: 10)")
     p.add_argument("--sample-start", type=int, default=0,
-                   help="First ACI-Bench row index for Exp 4 range (default: 0)")
+                   help="First ACI-Bench row index for Exp 4/5 range (default: 0)")
+
+    # ── Exp 5 ───────────────────────────────────────────────────────────────────
+    p.add_argument("--patch-components", nargs="+",
+                   default=["resid_pre", "attn_out", "mlp_out"],
+                   help="Activation components to patch in Exp 5 "
+                        "(default: resid_pre attn_out mlp_out)")
+
+    # ── Exp 6 ───────────────────────────────────────────────────────────────────
+    p.add_argument("--se-k", type=int, default=5,
+                   help="Number of generations K for semantic entropy in Exp 6 (default: 5)")
+    p.add_argument("--se-threshold", type=float, default=0.5,
+                   help="SE binarisation threshold for probe training in Exp 6 (default: 0.5)")
+    p.add_argument("--se-nli-model", default="cross-encoder/nli-deberta-v3-small",
+                   help="Sentence-transformers CrossEncoder for NLI in Exp 6")
+    p.add_argument("--n-train-examples-se", type=int, default=5,
+                   help="Number of ACI-Bench training examples for SE probe (default: 5)")
 
     return p.parse_args()
 
@@ -229,6 +247,27 @@ def main() -> None:
             inject_fn=inject_fn,
             n_examples=args.n_examples,
             n_injections=args.n_injections,
+            sample_start=args.sample_start,
+        )
+
+    if args.exp in ("5", "all"):
+        inject_fn = _resolve_inject_fn(args)
+        run_experiment_5(
+            model, cfg, out,
+            inject_fn=inject_fn,
+            n_examples=args.n_examples,
+            n_injections=args.n_injections,
+            sample_start=args.sample_start,
+            components=args.patch_components,
+        )
+
+    if args.exp in ("6", "all"):
+        run_experiment_6(
+            model, cfg, out, transcript, gold_note,
+            K=args.se_k,
+            nli_model_name=args.se_nli_model,
+            se_threshold=args.se_threshold,
+            n_train_examples=args.n_train_examples_se,
             sample_start=args.sample_start,
         )
 
