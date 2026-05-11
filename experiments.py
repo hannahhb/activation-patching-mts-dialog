@@ -192,26 +192,13 @@ def _load_exp4_data(exp4_out: Path) -> Optional[Dict]:
                       — concatenated activations across all loaded .npz files
         n_layers      — int
         sample_indices — list of int (from CSV)
-    Returns None if exp4_layer_stats.csv is missing or malformed.
+    Returns None if no usable discriminability data is found.
     """
-    csv_path = exp4_out / "exp4_layer_stats.csv"
-    if not csv_path.exists():
-        return None
+    auroc_dir    = exp4_out / "auroc"
+    cohens_d_dir = exp4_out / "cohens_d"
+    pearson_r_dir= exp4_out / "pearson_r"
 
-    try:
-        df = pd.read_csv(csv_path)
-    except Exception as exc:
-        print(f"  [Exp 3] Could not read {csv_path}: {exc}")
-        return None
-
-    required = {"sample_idx", "layer", "pks_pearson_r", "ecs_pearson_r",
-                "pks_auroc", "ecs_auroc", "pks_cohens_d", "ecs_cohens_d"}
-    if not required.issubset(df.columns):
-        print(f"  [Exp 3] exp4_layer_stats.csv missing columns: {required - set(df.columns)}")
-        return None
-
-    sample_indices = sorted(df["sample_idx"].unique().tolist())
-    n_layers = int(df["layer"].max()) + 1
+    use_subdirs = auroc_dir.exists() and cohens_d_dir.exists() and pearson_r_dir.exists()
 
     pks_pearson_r_per: List[np.ndarray] = []
     ecs_pearson_r_per: List[np.ndarray] = []
@@ -219,18 +206,95 @@ def _load_exp4_data(exp4_out: Path) -> Optional[Dict]:
     ecs_auroc_per:     List[np.ndarray] = []
     pks_cohens_d_per:  List[np.ndarray] = []
     ecs_cohens_d_per:  List[np.ndarray] = []
+    sample_indices:    List[int]        = []
+    n_layers = None
 
-    for si in sample_indices:
-        rows = df[df["sample_idx"] == si].sort_values("layer")
-        if len(rows) != n_layers:
-            print(f"  [Exp 3] Sample {si}: {len(rows)} layers in CSV (expected {n_layers}), skipping.")
-            continue
-        pks_pearson_r_per.append(rows["pks_pearson_r"].to_numpy())
-        ecs_pearson_r_per.append(rows["ecs_pearson_r"].to_numpy())
-        pks_auroc_per.append(rows["pks_auroc"].to_numpy())
-        ecs_auroc_per.append(rows["ecs_auroc"].to_numpy())
-        pks_cohens_d_per.append(rows["pks_cohens_d"].to_numpy())
-        ecs_cohens_d_per.append(rows["ecs_cohens_d"].to_numpy())
+    if use_subdirs:
+        # ── Primary path: load per-example CSVs from auroc/ cohens_d/ pearson_r/ ──
+        # Discover all sample indices from the auroc directory (most reliable)
+        auroc_files = sorted(auroc_dir.glob("sample_*_auroc.csv"))
+        if not auroc_files:
+            use_subdirs = False  # fall through to aggregate CSV
+
+    if use_subdirs:
+        print(f"  [Exp 3] Loading per-example discriminability from subdirectories "
+              f"({len(auroc_files)} files found) …")
+
+        for auroc_path in auroc_files:
+            # Extract sample index from filename: sample_0007_auroc.csv → 7
+            try:
+                si = int(auroc_path.stem.split("_")[1])
+            except (IndexError, ValueError):
+                continue
+
+            cd_path = cohens_d_dir / f"sample_{si:04d}_cohens_d.csv"
+            pr_path = pearson_r_dir / f"sample_{si:04d}_pearson_r.csv"
+
+            if not cd_path.exists() or not pr_path.exists():
+                print(f"  [Exp 3] Sample {si}: missing cohens_d or pearson_r CSV, skipping.")
+                continue
+
+            try:
+                df_a  = pd.read_csv(auroc_path).sort_values("layer")
+                df_cd = pd.read_csv(cd_path).sort_values("layer")
+                df_pr = pd.read_csv(pr_path).sort_values("layer")
+            except Exception as exc:
+                print(f"  [Exp 3] Sample {si}: could not read CSVs — {exc}")
+                continue
+
+            # Validate all three have the same layer count
+            if not (len(df_a) == len(df_cd) == len(df_pr)):
+                print(f"  [Exp 3] Sample {si}: layer count mismatch in per-example CSVs, skipping.")
+                continue
+
+            if n_layers is None:
+                n_layers = len(df_a)
+            elif len(df_a) != n_layers:
+                print(f"  [Exp 3] Sample {si}: {len(df_a)} layers (expected {n_layers}), skipping.")
+                continue
+
+            pks_auroc_per.append(df_a["pks_auroc"].to_numpy())
+            ecs_auroc_per.append(df_a["ecs_auroc"].to_numpy())
+            pks_cohens_d_per.append(df_cd["pks_cohens_d"].to_numpy())
+            ecs_cohens_d_per.append(df_cd["ecs_cohens_d"].to_numpy())
+            pks_pearson_r_per.append(df_pr["pks_pearson_r"].to_numpy())
+            ecs_pearson_r_per.append(df_pr["ecs_pearson_r"].to_numpy())
+            sample_indices.append(si)
+
+    if not use_subdirs or not pks_pearson_r_per:
+        # ── Fallback: aggregate exp4_layer_stats.csv ─────────────────────────
+        csv_path = exp4_out / "exp4_layer_stats.csv"
+        if not csv_path.exists():
+            print(f"  [Exp 3] No per-example subdirectories and no exp4_layer_stats.csv found.")
+            return None
+
+        try:
+            df = pd.read_csv(csv_path)
+        except Exception as exc:
+            print(f"  [Exp 3] Could not read {csv_path}: {exc}")
+            return None
+
+        required = {"sample_idx", "layer", "pks_pearson_r", "ecs_pearson_r",
+                    "pks_auroc", "ecs_auroc", "pks_cohens_d", "ecs_cohens_d"}
+        if not required.issubset(df.columns):
+            print(f"  [Exp 3] exp4_layer_stats.csv missing columns: {required - set(df.columns)}")
+            return None
+
+        print(f"  [Exp 3] Loading discriminability from exp4_layer_stats.csv (fallback) …")
+        sample_indices = sorted(df["sample_idx"].unique().tolist())
+        n_layers = int(df["layer"].max()) + 1
+
+        for si in sample_indices:
+            rows = df[df["sample_idx"] == si].sort_values("layer")
+            if len(rows) != n_layers:
+                print(f"  [Exp 3] Sample {si}: {len(rows)} layers in CSV (expected {n_layers}), skipping.")
+                continue
+            pks_pearson_r_per.append(rows["pks_pearson_r"].to_numpy())
+            ecs_pearson_r_per.append(rows["ecs_pearson_r"].to_numpy())
+            pks_auroc_per.append(rows["pks_auroc"].to_numpy())
+            ecs_auroc_per.append(rows["ecs_auroc"].to_numpy())
+            pks_cohens_d_per.append(rows["pks_cohens_d"].to_numpy())
+            ecs_cohens_d_per.append(rows["ecs_cohens_d"].to_numpy())
 
     if not pks_pearson_r_per:
         return None
