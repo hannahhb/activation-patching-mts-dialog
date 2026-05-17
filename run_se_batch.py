@@ -40,6 +40,7 @@ Usage
 """
 
 import argparse
+import re
 import warnings
 from dataclasses import replace as _dc_replace
 from pathlib import Path
@@ -202,7 +203,255 @@ def compute_token_predictive_entropy(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# NLI-based semantic entropy  (reuses metrics.py helpers)
+# NLI helper — entailment index resolved from model config
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _get_entailment_idx(nli_model) -> int:
+    """
+    Return the column index for the ENTAILMENT class in this NLI model's output.
+
+    Many NLI models use the label order (contradiction=0, neutral=1, entailment=2),
+    but some use (entailment=0, neutral=1, contradiction=2).  We resolve this
+    by inspecting the model's id2label config rather than hardcoding an index.
+    Falls back to index 0 if the config is unavailable.
+    """
+    try:
+        id2label = nli_model.model.config.id2label  # {0: 'contradiction', 1: 'neutral', 2: 'entailment'}
+        for idx, label in id2label.items():
+            if "entail" in label.lower():
+                return int(idx)
+    except AttributeError:
+        pass
+    # Safe fallback: nli-deberta-v3-small uses contradiction=0, neutral=1, entailment=2
+    return 2
+
+
+def _bfs_components(adj: np.ndarray) -> List[List[int]]:
+    """Connected components of a boolean adjacency matrix via BFS."""
+    n       = adj.shape[0]
+    visited = [False] * n
+    components: List[List[int]] = []
+    for start in range(n):
+        if visited[start]:
+            continue
+        cluster, queue = [], [start]
+        while queue:
+            node = queue.pop()
+            if visited[node]:
+                continue
+            visited[node] = True
+            cluster.append(node)
+            queue.extend(j for j in range(n) if adj[node, j] and not visited[j])
+        components.append(cluster)
+    return components
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Atomic claim extraction
+# ─────────────────────────────────────────────────────────────────────────────
+
+_CLAIM_SPLIT = re.compile(
+    r"(?<=[.!?])\s+|"          # sentence boundary
+    r"(?<=\w)\s*;\s*|"         # semicolons
+    r"\s+and\s+(?=[A-Z])|"     # ' and ' before capitalised word
+    r"\s*,\s*(?=[A-Z])",       # comma before capitalised word
+)
+
+_SECTION_HEADER = re.compile(
+    r"^(CHIEF COMPLAINT|HISTORY OF PRESENT ILLNESS|REVIEW OF SYSTEMS|"
+    r"PHYSICAL EXAMINATION|RESULTS|ASSESSMENT AND PLAN)\s*$",
+    re.MULTILINE | re.IGNORECASE,
+)
+
+
+def _extract_claims(note: str) -> List[Dict]:
+    """
+    Split a clinical note into atomic claims.
+
+    Returns a list of dicts:
+        text       : str   — the claim text
+        section    : str   — SOAP section header
+        char_start : int   — start in note
+        char_end   : int   — end in note
+    """
+    # Find section boundaries
+    section_spans: List[Tuple[str, int, int]] = []
+    prev_end   = 0
+    prev_label = "PREAMBLE"
+    for m in _SECTION_HEADER.finditer(note):
+        section_spans.append((prev_label, prev_end, m.start()))
+        prev_label = m.group(0).strip().upper()
+        prev_end   = m.end()
+    section_spans.append((prev_label, prev_end, len(note)))
+
+    claims: List[Dict] = []
+    for section_label, sec_start, sec_end in section_spans:
+        block = note[sec_start:sec_end].strip()
+        if not block:
+            continue
+        # Split on claim boundaries
+        for raw_claim in _CLAIM_SPLIT.split(block):
+            text = raw_claim.strip()
+            if len(text) < 8:          # skip header fragments and punctuation
+                continue
+            # Locate in original note
+            idx = note.find(text, sec_start)
+            if idx == -1:
+                idx = sec_start
+            claims.append({
+                "text":       text,
+                "section":    section_label,
+                "char_start": idx,
+                "char_end":   idx + len(text),
+            })
+    return claims
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Atomic-claim semantic entropy
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _compute_claim_se(
+    all_claims_per_note: List[List[Dict]],
+    nli_model,
+    nli_threshold: float,
+    K: int,
+) -> Tuple[List[Dict], np.ndarray]:
+    """
+    Pool all atomic claims across K notes, cluster semantically equivalent ones,
+    then compute per-cluster binary entropy over claim presence.
+
+    Missing claims (a cluster absent from some notes) are treated as their own
+    evidence: if only k out of K notes include a claim cluster, the entropy is
+    H_binary(k/K) = -(k/K)log(k/K) - ((K-k)/K)log((K-k)/K).
+    High entropy → uncertain whether this fact belongs in the note.
+
+    Returns
+    -------
+    clusters  : list of cluster dicts:
+                    members      : list of claim dicts
+                    k_present    : int — how many of the K notes contain it
+                    se           : float — binary entropy
+                    section      : str — majority section
+    claim_se  : (total_ref_claims,) — SE score for each claim in note 0 (reference)
+    """
+    entail_idx = _get_entailment_idx(nli_model)
+
+    # Reference note is notes[0]; we will score its claims
+    ref_claims = all_claims_per_note[0]
+
+    # Pool all claims with a note-of-origin tag
+    all_claims: List[Dict] = []
+    for note_idx, claims in enumerate(all_claims_per_note):
+        for c in claims:
+            all_claims.append({**c, "_note_idx": note_idx})
+
+    if not all_claims:
+        return [], np.zeros(len(ref_claims))
+
+    # Pairwise NLI among all claims (batched)
+    texts = [c["text"] for c in all_claims]
+    n     = len(texts)
+    pairs = [(texts[i], texts[j]) for i in range(n) for j in range(n) if i != j]
+
+    try:
+        raw = np.array(nli_model.predict(pairs, apply_softmax=True))
+        if raw.ndim == 2:
+            entail_scores = raw[:, entail_idx]
+        else:
+            entail_scores = raw
+    except Exception as exc:
+        print(f"    [SE] NLI predict failed: {exc}")
+        return [], np.zeros(len(ref_claims))
+
+    # Build symmetric entailment adjacency: both A→B and B→A must exceed threshold
+    adj = np.zeros((n, n), dtype=bool)
+    pair_idx = 0
+    for i in range(n):
+        for j in range(n):
+            if i != j:
+                adj[i, j] = entail_scores[pair_idx] > nli_threshold
+                pair_idx += 1
+    sym = adj & adj.T
+
+    # Cluster via connected components
+    raw_components = _bfs_components(sym)
+
+    # Build cluster records
+    eps = 1e-10
+    clusters: List[Dict] = []
+    for comp in raw_components:
+        members     = [all_claims[i] for i in comp]
+        note_ids    = {m["_note_idx"] for m in members}
+        k_present   = len(note_ids)
+        # Binary presence entropy: H(k/K) + H((K-k)/K)
+        p = k_present / K
+        se = -(p * np.log(p + eps) + (1 - p) * np.log(1 - p + eps)) if 0 < p < 1 else 0.0
+        # Majority section
+        section_counts: Dict[str, int] = {}
+        for m in members:
+            section_counts[m["section"]] = section_counts.get(m["section"], 0) + 1
+        majority_section = max(section_counts, key=section_counts.get)
+        clusters.append({
+            "members":   members,
+            "k_present": k_present,
+            "se":        se,
+            "section":   majority_section,
+        })
+
+    # Assign SE to each reference claim via cluster membership
+    # Build a map: claim text → cluster SE
+    claim_to_se: Dict[str, float] = {}
+    for cluster in clusters:
+        for m in cluster["members"]:
+            if m["_note_idx"] == 0:
+                claim_to_se[m["text"]] = cluster["se"]
+
+    claim_se = np.array([
+        claim_to_se.get(c["text"], 0.0) for c in ref_claims
+    ], dtype=np.float64)
+
+    print(f"    [SE] {n} claims pooled → {len(clusters)} clusters  "
+          f"({len(ref_claims)} ref claims)")
+
+    return clusters, claim_se
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Token-level SE mapping
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _map_claims_to_tokens(
+    note: str,
+    ref_claims: List[Dict],
+    claim_se: np.ndarray,
+    model,
+    note_len: int,
+) -> np.ndarray:
+    """
+    Assign each note token the SE of the claim whose char span covers it.
+    Tokens not covered by any claim get SE = 0.
+    """
+    token_se = np.zeros(note_len, dtype=np.float64)
+    try:
+        enc     = model.tokenizer(note, return_offsets_mapping=True, add_special_tokens=False)
+        offsets = enc["offset_mapping"]
+    except Exception:
+        return token_se
+
+    for ti, (cs, ce) in enumerate(offsets):
+        if ti >= note_len:
+            break
+        mid = (cs + ce) / 2.0
+        for ci, claim in enumerate(ref_claims):
+            if claim["char_start"] <= mid < claim["char_end"]:
+                token_se[ti] = claim_se[ci]
+                break
+    return token_se
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Main per-sample computation
 # ─────────────────────────────────────────────────────────────────────────────
 
 def compute_se_for_sample(
@@ -215,22 +464,32 @@ def compute_se_for_sample(
     nli_threshold: float = 0.5,
 ) -> Optional[Dict]:
     """
-    Generate K notes with rotating prompt variants + temperature sampling,
-    then compute sentence-level semantic entropy and token-level predictive entropy.
+    Generate K notes → extract atomic claims → cluster with NLI → binary-entropy SE.
+
+    Key methodological improvements over sentence-position alignment:
+    • Atomic claim extraction splits on sentence boundaries, semicolons, and
+      conjunctions → smaller, more comparable units.
+    • Claims are pooled across ALL K notes and clustered globally, so two notes
+      that express the same fact in different sentences are correctly merged.
+    • Absent claims (cluster present in k < K notes) contribute
+      H_binary(k/K) entropy — absence is treated as meaningful evidence of
+      uncertainty, not ignored.
+    • NLI entailment index is resolved from model.config.id2label — not hardcoded.
 
     Returns dict with keys:
-        notes            : List[str] — K generated notes
-        token_se         : (note_len,) — NLI-based SE per token (sentence granularity)
-        token_pred_ent   : (note_len,) — predictive entropy per token (logit-based)
-        note_tokens      : List[str]   — decoded note tokens
+        notes            : List[str]
+        token_se         : (note_len,) — claim-cluster SE per token
+        token_pred_ent   : (note_len,) — predictive entropy per token
+        note_tokens      : List[str]
         note_len         : int
-        mean_se          : float
-        mean_pred_ent    : float
-        se_scores        : (n_sentences,) — sentence-level SE
-        sentences        : List[str]   — sentences from first generated note
-    Returns None on failure.
+        mean_se, mean_pred_ent : float
+        clusters         : cluster dicts (k_present, se, section, members)
+        ref_claims       : atomic claims from reference note (note 0)
+        claim_se         : (n_ref_claims,) — SE per reference claim
     """
-    # ── Step 1: K generations with rotating prompt variants ──────────────────
+    from metrics import _get_nli_model
+
+    # ── Step 1: K generations ─────────────────────────────────────────────────
     notes: List[str] = []
     for k in range(K):
         try:
@@ -245,129 +504,46 @@ def compute_se_for_sample(
         return None
 
     K_actual = len(notes)
-    print(f"    [SE] generated {K_actual} notes")
+    print(f"    [SE] {K_actual} notes generated")
 
-    # ── Step 2: NLI-based semantic entropy via metrics.py ────────────────────
-    # Import the internal helpers directly to reuse the existing implementation
-    from metrics import _split_sentences, _section_aligned_sentences, _get_nli_model
+    # ── Step 2: Extract atomic claims from each note ──────────────────────────
+    all_claims_per_note = [_extract_claims(n) for n in notes]
+    total_claims        = sum(len(c) for c in all_claims_per_note)
+    print(f"    [SE] {total_claims} atomic claims extracted across {K_actual} notes")
 
-    sentences_per_sample = [_split_sentences(n) for n in notes]
-    position_groups      = _section_aligned_sentences(sentences_per_sample)
-    n_positions          = len(position_groups)
-
+    # ── Step 3: Load NLI model ────────────────────────────────────────────────
     try:
         nli_model = _get_nli_model(nli_model_name)
     except Exception as exc:
         print(f"    [SE] NLI model load failed: {exc}")
         return None
 
-    se_scores = np.zeros(n_positions, dtype=np.float64)
+    # ── Step 4: Cluster claims + compute binary-entropy SE ───────────────────
+    clusters, claim_se = _compute_claim_se(
+        all_claims_per_note, nli_model, nli_threshold, K_actual
+    )
+    ref_claims = all_claims_per_note[0]
 
-    for pos_idx, group in enumerate(position_groups):
-        valid = [s for s in group if s.strip()]
-        if len(valid) < 2:
-            se_scores[pos_idx] = 0.0
-            continue
-
-        pairs = [(a, b) for i, a in enumerate(valid)
-                 for j, b in enumerate(valid) if i != j]
-        try:
-            raw = np.array(nli_model.predict(pairs, apply_softmax=True))
-            entail_scores = raw[:, 0] if raw.ndim == 2 else raw
-        except Exception:
-            se_scores[pos_idx] = 0.0
-            continue
-
-        n_v = len(valid)
-        adj = np.zeros((n_v, n_v), dtype=bool)
-        pair_idx = 0
-        for i in range(n_v):
-            for j in range(n_v):
-                if i != j:
-                    adj[i, j] = entail_scores[pair_idx] > nli_threshold
-                    pair_idx += 1
-        # Bidirectional: both directions must hold
-        sym = adj & adj.T
-
-        # Connected components via BFS
-        visited = [False] * n_v
-        clusters = []
-        for start in range(n_v):
-            if visited[start]:
-                continue
-            cluster = []
-            queue   = [start]
-            while queue:
-                node = queue.pop()
-                if visited[node]:
-                    continue
-                visited[node] = True
-                cluster.append(node)
-                queue.extend(j for j in range(n_v) if sym[node, j] and not visited[j])
-            clusters.append(cluster)
-
-        eps = 1e-10
-        se_scores[pos_idx] = -sum(
-            (len(c) / n_v) * np.log(len(c) / n_v + eps)
-            for c in clusters
-        )
-
-    # ── Step 3: Map sentence SE → token level using first note ───────────────
+    # ── Step 5: Map claim SE → token level ───────────────────────────────────
     ref_note    = notes[0]
     note_ids    = model.tokenizer.encode(ref_note, add_special_tokens=False)
     note_len    = len(note_ids)
     note_tokens = [model.tokenizer.decode([tid]) for tid in note_ids]
 
-    ref_sentences = _split_sentences(ref_note)
-    token_se      = np.zeros(note_len, dtype=np.float64)
+    token_se = _map_claims_to_tokens(ref_note, ref_claims, claim_se, model, note_len)
 
-    # Map each token to its sentence via character offset
-    try:
-        enc     = model.tokenizer(ref_note, return_offsets_mapping=True,
-                                  add_special_tokens=False)
-        offsets = enc["offset_mapping"]   # list of (char_start, char_end)
-    except Exception:
-        offsets = None
-
-    if offsets:
-        # Build sentence char spans
-        cursor      = 0
-        sent_spans  = []
-        for sent in ref_sentences:
-            idx = ref_note.find(sent, cursor)
-            if idx == -1:
-                idx = cursor
-            sent_spans.append((idx, idx + len(sent)))
-            cursor = idx + len(sent)
-
-        # Assign each token the SE of the sentence whose span contains it
-        # Use the sentence's position index in position_groups
-        for ti, (cs, ce) in enumerate(offsets):
-            if ti >= note_len:
-                break
-            mid = (cs + ce) / 2
-            best_sent = 0
-            for si, (ss, se_end) in enumerate(sent_spans):
-                if ss <= mid < se_end:
-                    best_sent = si
-                    break
-            # Map sent index → position_groups index (capped)
-            pos_idx = min(best_sent, n_positions - 1)
-            token_se[ti] = se_scores[pos_idx]
-    else:
-        # Fallback: divide note tokens evenly across sentence positions
-        for ti in range(note_len):
-            pos_idx = min(int(ti * n_positions / note_len), n_positions - 1)
-            token_se[ti] = se_scores[pos_idx]
-
-    # ── Step 4: Token predictive entropy (single forward pass) ───────────────
+    # ── Step 6: Token predictive entropy (one forward pass) ──────────────────
     token_pred_ent = compute_token_predictive_entropy(model, transcript, ref_note, cfg)
-    # Align length (generation may be slightly longer/shorter than encoding)
-    min_len = min(note_len, len(token_pred_ent))
+
+    min_len        = min(note_len, len(token_pred_ent))
     token_se       = token_se[:min_len]
     token_pred_ent = token_pred_ent[:min_len]
     note_tokens    = note_tokens[:min_len]
     note_len       = min_len
+
+    print(f"    [SE] mean_SE={token_se.mean():.4f}  "
+          f"mean_PredEnt={token_pred_ent.mean():.4f}  "
+          f"note_len={note_len}")
 
     return {
         "notes":          notes,
@@ -377,8 +553,9 @@ def compute_se_for_sample(
         "note_len":       note_len,
         "mean_se":        float(token_se.mean()),
         "mean_pred_ent":  float(token_pred_ent.mean()),
-        "se_scores":      se_scores,
-        "sentences":      ref_sentences,
+        "clusters":       clusters,
+        "ref_claims":     ref_claims,
+        "claim_se":       claim_se,
     }
 
 
