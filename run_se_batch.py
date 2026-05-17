@@ -12,13 +12,16 @@ For each transcript we generate K=10 notes using:
     following the paper's recommendation that prompt perturbation improves
     cluster separation compared to temperature alone.
 
-Semantic entropy is then computed as:
-  1. Sentence-split each of the K notes.
-  2. Align sentences across K samples by SOAP section then position index.
-  3. For each sentence position, run bidirectional NLI on all K(K-1) pairs.
-  4. Connected-component clustering on the entailment adjacency matrix.
-  5. SE[pos] = -Σ_c (|c|/K) * log(|c|/K)   (Shannon entropy over clusters)
-  6. Each token inherits the SE of its sentence → token_se_scores (note_len,)
+Semantic entropy is then computed via atomic claim clustering:
+  1. Extract atomic claims from each of the K generated notes (split on
+     sentence boundaries, semicolons, and conjunctions; assign SOAP section).
+  2. Pool all K×N claims; run pairwise bidirectional NLI entailment.
+  3. Connected-component clustering on the entailment adjacency matrix.
+  4. For each cluster c spanning k_c of K notes:
+       SE[c] = H_binary(k_c / K)  — binary presence entropy.
+     A cluster present in all K notes → SE=0; present in ~half → SE≈1.
+  5. Each token in the reference note inherits the SE of the cluster whose
+     centroid claim overlaps that token's character span.
 
 Additionally we compute token-level predictive entropy:
   H[t] = -Σ_v  p(v | context_t) * log p(v | context_t)
@@ -59,72 +62,128 @@ warnings.filterwarnings("ignore")
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Prompt variations  (Farquhar et al. §3 — prompt perturbation)
+#
+# Core structure adapted from Asgari et al. (2025) npj Digital Medicine,
+# Experiment 8 — the best-performing configuration in their clinical SOAP-note
+# benchmark.  All six variants share:
+#   • "DO NOT ADD any content that isn't specifically mentioned IN THE TRANSCRIPT"
+#   • SOAP template (Subjective/Objective/Assessment/Plan)
+#   • Style preferences: first person, ultra-concise, bullet points,
+#     [NOT MENTIONED] for absent information, drug allergies always documented,
+#     examination findings = physical exam signs only, preserve quantities,
+#     include ALL negations.
+#   • Only the framing / persona sentence and minor phrasing differ across
+#     variants, following the prompt-perturbation strategy of Farquhar et al.
 # ─────────────────────────────────────────────────────────────────────────────
 
+# Shared SOAP template block (Asgari et al. 2025, Table 1, Exp 8)
+_SOAP_TEMPLATE = """\
+SUBJECTIVE:
+- Chief Complaint:
+- History of Present Illness:
+- Past Medical History:
+- Review of Systems:
+- Current Medications: [DRUG NAME] [DOSE] [FREQUENCY] [INDICATION]
+- Drug Allergies:
+
+OBJECTIVE:
+- Vital Signs:
+- Physical Exam:
+- Test Results:
+
+ASSESSMENT/PROBLEM LIST:
+
+PLAN:
+
+FOLLOW-UP:\
+"""
+
+# Shared style block (Asgari et al. 2025, Table 1, Exp 8)
+_STYLE_PREFERENCES = """\
+Style preferences:
+- Write in first person from the physician's perspective.
+- Be ultra-concise and ultra-precise; use bullet points throughout.
+- Use [NOT MENTIONED] for any template field not discussed in the transcript.
+- Always document drug allergies even if the patient reports none.
+- Examination findings = physical exam signs only (do not conflate with symptoms).
+- Preserve exact quantities, doses, frequencies, and durations as stated.
+- Include ALL negations (e.g. "denies chest pain", "no fever").
+- Do not add any content not explicitly mentioned in the transcript.
+- Do not repeat information across sections.\
+"""
+
 _PROMPT_VARIANTS = [
-    # Variant 0 — baseline (identical to _GENERATION_PROMPT)
+    # Variant 0 — medical office assistant (closest to Asgari et al. Exp 8 wording)
     (
-        "You are a clinical documentation assistant.\n"
-        "Given the following patient-clinician conversation, write a concise clinical note "
-        "with exactly six sections: CHIEF COMPLAINT, HISTORY OF PRESENT ILLNESS, "
-        "REVIEW OF SYSTEMS, PHYSICAL EXAMINATION, RESULTS, ASSESSMENT AND PLAN.\n"
-        "Use only information present in the conversation. Do not add disclaimers or preamble.\n\n"
-        "### Conversation\n{transcript}\n\n"
-        "### Note:\n"
+        "You are a medical office assistant drafting documentation for a physician.\n"
+        "DO NOT ADD any content that isn't specifically mentioned IN THE TRANSCRIPT.\n"
+        "From the transcript below, generate a SOAP note for the physician to review. "
+        "Include all relevant information and omit anything not explicitly mentioned. "
+        "If nothing is mentioned for a section, return [NOT MENTIONED]. "
+        "It is VITAL that all information in the note is as accurate as possible. "
+        "Avoid repeating the same information in different sections. "
+        "Write the note from the perspective of the physician.\n\n"
+        f"{_STYLE_PREFERENCES}\n\n"
+        f"Use this template:\n{_SOAP_TEMPLATE}\n\n"
+        "Transcript:\n{transcript}\n\n"
+        "SUBJECTIVE:\n- Chief Complaint:"
     ),
-    # Variant 1 — re-ordered instruction emphasis
+    # Variant 1 — clinical scribe framing
     (
-        
-        "You are a clinical documentation assistant.\n"
-        "Read the conversation below and produce a structured clinical note "
-        "with exactly six sections: CHIEF COMPLAINT, HISTORY OF PRESENT ILLNESS, "
-        "REVIEW OF SYSTEMS, PHYSICAL EXAMINATION, RESULTS, ASSESSMENT AND PLAN.\n"
-        "Base the note strictly on what is said in the conversation. "
-        "Do not add disclaimers or preamble.\n\n"
-        "### Conversation\n{transcript}\n\n"
-        "### Note:\n"
-
-    ),
-    # Variant 2 — patient-centred framing
-    (
-        "As a clinical documentation specialist, summarise the following "
-        "doctor-patient encounter into a formal clinical note.\n"
-        "Include these sections: CHIEF COMPLAINT, HISTORY OF PRESENT ILLNESS, "
-        "REVIEW OF SYSTEMS, PHYSICAL EXAMINATION, RESULTS, ASSESSMENT AND PLAN.\n"
-        "Only include facts explicitly mentioned in the conversation.\n\n"
-        "Conversation:\n{transcript}\n\n"
-        "Note:\n"
-    ),
-    # Variant 3 — brief instruction
-    (
-        "Write a clinical note from the conversation.\n"
-        "Sections required: CHIEF COMPLAINT, HISTORY OF PRESENT ILLNESS, "
-        "REVIEW OF SYSTEMS, PHYSICAL EXAMINATION, RESULTS, ASSESSMENT AND PLAN.\n"
-        "Stick to information in the conversation only.\n\n"
-        "{transcript}\n\n"
-        "### Note:\n"
-    ),
-    # Variant 4 — formal EHR framing
-    (
-        "You are generating an electronic health record entry.\n"
-        "Transcribe the clinical encounter below into a structured note with sections: "
-        "CHIEF COMPLAINT, HISTORY OF PRESENT ILLNESS, REVIEW OF SYSTEMS, "
-        "PHYSICAL EXAMINATION, RESULTS, ASSESSMENT AND PLAN.\n"
-        "Do not fabricate information not present in the conversation.\n\n"
+        "You are a clinical scribe producing an accurate SOAP note for the attending physician.\n"
+        "DO NOT ADD any content that isn't specifically mentioned IN THE TRANSCRIPT.\n"
+        "Document the encounter below faithfully. "
+        "If a template field was not discussed, write [NOT MENTIONED]. "
+        "Accuracy is paramount — do not invent or infer details beyond what is stated.\n\n"
+        f"{_STYLE_PREFERENCES}\n\n"
+        f"Template:\n{_SOAP_TEMPLATE}\n\n"
         "Encounter transcript:\n{transcript}\n\n"
-        "EHR Note:\n"
+        "SUBJECTIVE:\n- Chief Complaint:"
     ),
-    # Variant 5 — imperative minimal
+    # Variant 2 — physician dictation framing
     (
-        
-        "Convert the following medical conversation into a structured clinical note.\n"
-        "Use exactly six sections: CHIEF COMPLAINT, HISTORY OF PRESENT ILLNESS, "
-        "REVIEW OF SYSTEMS, PHYSICAL EXAMINATION, RESULTS, ASSESSMENT AND PLAN.\n"
-        "Use only information present in the conversation. "
-        "Do not add disclaimers or preamble.\n\n"
-        "Conversation:\n{transcript}\n\n"
-        "Note:\n"
-
+        "You are an attending physician dictating a SOAP note immediately after the visit.\n"
+        "Only document what was explicitly stated in the transcript — "
+        "DO NOT ADD inferences or assumptions.\n"
+        "Use [NOT MENTIONED] for any section with no relevant transcript content.\n\n"
+        f"{_STYLE_PREFERENCES}\n\n"
+        f"Follow this structure exactly:\n{_SOAP_TEMPLATE}\n\n"
+        "Visit transcript:\n{transcript}\n\n"
+        "SUBJECTIVE:\n- Chief Complaint:"
+    ),
+    # Variant 3 — EHR documentation specialist framing
+    (
+        "You are an EHR documentation specialist generating a structured SOAP note.\n"
+        "Rule: DO NOT ADD any content not explicitly mentioned in the transcript below.\n"
+        "All absent fields must be marked [NOT MENTIONED]. "
+        "The physician will review this note for clinical decision-making — "
+        "accuracy and completeness are critical.\n\n"
+        f"{_STYLE_PREFERENCES}\n\n"
+        f"Required format:\n{_SOAP_TEMPLATE}\n\n"
+        "Transcript:\n{transcript}\n\n"
+        "SUBJECTIVE:\n- Chief Complaint:"
+    ),
+    # Variant 4 — medicolegal / quality assurance framing
+    (
+        "You are preparing a medicolegal clinical note from a recorded patient encounter.\n"
+        "CRITICAL: include only information explicitly stated in the transcript. "
+        "DO NOT ADD diagnoses, findings, or medications not mentioned by the clinician or patient.\n"
+        "Mark any unanswered template field as [NOT MENTIONED].\n\n"
+        f"{_STYLE_PREFERENCES}\n\n"
+        f"Note template:\n{_SOAP_TEMPLATE}\n\n"
+        "Patient encounter transcript:\n{transcript}\n\n"
+        "SUBJECTIVE:\n- Chief Complaint:"
+    ),
+    # Variant 5 — handover / continuity of care framing
+    (
+        "You are creating a SOAP note to support continuity of care between clinicians.\n"
+        "The receiving provider depends on this note being complete and accurate. "
+        "DO NOT ADD any content beyond what is discussed in the transcript. "
+        "If information for a field is absent, write [NOT MENTIONED].\n\n"
+        f"{_STYLE_PREFERENCES}\n\n"
+        f"Use the following template:\n{_SOAP_TEMPLATE}\n\n"
+        "Transcript:\n{transcript}\n\n"
+        "SUBJECTIVE:\n- Chief Complaint:"
     ),
 ]
 
@@ -258,8 +317,9 @@ _CLAIM_SPLIT = re.compile(
 )
 
 _SECTION_HEADER = re.compile(
-    r"^(CHIEF COMPLAINT|HISTORY OF PRESENT ILLNESS|REVIEW OF SYSTEMS|"
-    r"PHYSICAL EXAMINATION|RESULTS|ASSESSMENT AND PLAN)\s*$",
+    r"^\**\s*(SUBJECTIVE|OBJECTIVE|ASSESSMENT(?:/PROBLEM LIST)?|PLAN|FOLLOW-UP|"
+    r"CHIEF COMPLAINT|HISTORY OF PRESENT ILLNESS|REVIEW OF SYSTEMS|"
+    r"PHYSICAL EXAMINATION|RESULTS|ASSESSMENT AND PLAN)\s*\**\s*:?\s*$",
     re.MULTILINE | re.IGNORECASE,
 )
 
