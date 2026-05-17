@@ -316,31 +316,25 @@ _CLAIM_EXTRACTOR_DEFAULT_REGION = "us-east-1"
 _CLAIM_SYSTEM_PROMPT = (
     "You are a clinical NLP specialist extracting atomic facts from clinical notes.\n"
     "Rules:\n"
-    "1. Copy each fact VERBATIM from the note — do NOT paraphrase or reword.\n"
-    "2. Each numbered item must be a single, independently verifiable fact.\n"
-    "3. If a bullet point contains multiple facts, split them onto separate lines.\n"
-    "4. Skip lines that say [NOT MENTIONED] or are purely sub-headers "
-    "   (e.g. 'Chief Complaint:', '- Drug Allergies:').\n"
-    "5. Output ONLY the numbered list — no preamble, no commentary, no section headers.\n"
-    "Format:\n"
-    "1. <verbatim text from note>\n"
-    "2. <verbatim text from note>\n"
+    "1. Extract each distinct clinical fact as a short, self-contained statement.\n"
+    "2. Stay close to the wording in the note — minimal rephrasing only where needed "
+    "   for grammatical completeness.\n"
+    "3. If a bullet or sentence contains multiple independent facts, split them.\n"
+    "4. Skip lines that say [NOT MENTIONED] or are purely field labels "
+    "   (e.g. 'Chief Complaint:', 'Drug Allergies:').\n"
+    "5. Output ONLY the numbered list — no preamble, no commentary.\n"
+    "Format exactly:\n"
+    "1. claim text\n"
+    "2. claim text\n"
     "..."
 )
 
 _CLAIM_USER_TEMPLATE = (
-    "Extract every atomic fact from the note below as a numbered list. "
-    "Copy each fact VERBATIM from the note — do not rephrase.\n\n"
+    "Extract every atomic clinical fact from the note below as a numbered list.\n\n"
     "NOTE:\n{note}\n\n"
-    "Numbered list of verbatim atomic facts:"
+    "Numbered list:"
 )
 
-_SECTION_HEADER = re.compile(
-    r"^\**\s*(SUBJECTIVE|OBJECTIVE|ASSESSMENT(?:/PROBLEM LIST)?|PLAN|FOLLOW-UP|"
-    r"CHIEF COMPLAINT|HISTORY OF PRESENT ILLNESS|REVIEW OF SYSTEMS|"
-    r"PHYSICAL EXAMINATION|RESULTS|ASSESSMENT AND PLAN)\s*\**\s*:?\s*$",
-    re.MULTILINE | re.IGNORECASE,
-)
 
 # Lazy-initialised Bedrock client (created on first call)
 _bedrock_claim_client = None
@@ -367,16 +361,6 @@ def _get_bedrock_claim_client(
             model,
         )
     return _bedrock_claim_client
-
-
-def _infer_section(note: str, char_pos: int) -> str:
-    """Return the SOAP section label that contains char_pos."""
-    label = "PREAMBLE"
-    for m in _SECTION_HEADER.finditer(note):
-        if m.start() > char_pos:
-            break
-        label = m.group(0).strip().upper()
-    return label
 
 
 def _extract_claims(
@@ -411,7 +395,7 @@ def _extract_claims(
 
     raw = response["output"]["message"]["content"][0]["text"]
 
-    # Parse numbered list: "1. <claim text>"
+    # Parse numbered list: "1. claim text"
     claims: List[Dict] = []
     for line in raw.splitlines():
         line = line.strip()
@@ -421,24 +405,7 @@ def _extract_claims(
         text = m.group(1).strip()
         if len(text) < 6:
             continue
-
-        # Try to locate the claim text in the original note for char offsets
-        idx = note.find(text)
-        if idx == -1:
-            # Try a shorter prefix match (first 40 chars)
-            prefix = text[:40]
-            idx = note.find(prefix)
-
-        char_start = idx          # -1 if not found
-        char_end   = (idx + len(text)) if idx != -1 else -1
-        section    = _infer_section(note, idx) if idx != -1 else "UNKNOWN"
-
-        claims.append({
-            "text":       text,
-            "section":    section,
-            "char_start": char_start,
-            "char_end":   char_end,
-        })
+        claims.append({"text": text})
 
     return claims
 
@@ -575,14 +542,20 @@ def _map_claims_to_tokens(
     except Exception:
         return token_se
 
+    # Build char→SE lookup by searching each claim text in the note
+    char_se = np.zeros(len(note), dtype=np.float64)
+    for ci, claim in enumerate(ref_claims):
+        text = claim["text"]
+        idx  = note.find(text)
+        if idx != -1:
+            char_se[idx : idx + len(text)] = claim_se[ci]
+
     for ti, (cs, ce) in enumerate(offsets):
         if ti >= note_len:
             break
-        mid = (cs + ce) / 2.0
-        for ci, claim in enumerate(ref_claims):
-            if claim["char_start"] <= mid < claim["char_end"]:
-                token_se[ti] = claim_se[ci]
-                break
+        mid = int((cs + ce) / 2.0)
+        if mid < len(char_se):
+            token_se[ti] = char_se[mid]
     return token_se
 
 
@@ -919,7 +892,6 @@ def run_se_batch(
             claim_rows.append({
                 "claim_idx":        ci,
                 "claim_text":       claim["text"],
-                "section":          claim["section"],
                 "k_present":        k_present if k_present is not None else float("nan"),
                 "p_present":        round(k_present / K_actual, 4)
                                     if k_present is not None else float("nan"),
