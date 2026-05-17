@@ -860,6 +860,19 @@ def run_se_batch(
         all_results[si] = {**result, "sample_idx": si,
                            "transcript": transcript, "gold_note": gold_note}
 
+        # ── Save raw generations ──────────────────────────────────────────────
+        gen_dir = se_out / "generations"
+        gen_dir.mkdir(exist_ok=True)
+        gen_path = gen_dir / f"sample_{si:03d}_generations.json"
+        import json
+        with open(gen_path, "w") as f:
+            json.dump({
+                "sample_idx": si,
+                "transcript": transcript,
+                "gold_note":  gold_note,
+                "notes":      result["notes"],
+            }, f, indent=2)
+
         # ── Save per-token scores ─────────────────────────────────────────────
         tok_df = pd.DataFrame({
             "token_idx":          np.arange(result["note_len"]),
