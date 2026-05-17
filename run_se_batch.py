@@ -705,8 +705,10 @@ def run_se_batch(
     """
     se_out      = out / "se_batch_out"
     token_dir   = se_out / "token_scores"
+    claim_dir   = se_out / "claim_scores"
     se_out.mkdir(parents=True, exist_ok=True)
     token_dir.mkdir(parents=True, exist_ok=True)
+    claim_dir.mkdir(parents=True, exist_ok=True)
 
     summary_rows   = []
     all_results    = {}   # sample_idx → result dict
@@ -746,12 +748,40 @@ def run_se_batch(
 
         # ── Save per-token scores ─────────────────────────────────────────────
         tok_df = pd.DataFrame({
-            "token_idx":       np.arange(result["note_len"]),
-            "token_str":       result["note_tokens"],
+            "token_idx":          np.arange(result["note_len"]),
+            "token_str":          result["note_tokens"],
             "semantic_entropy":   result["token_se"].round(4),
             "predictive_entropy": result["token_pred_ent"].round(4),
         })
         tok_df.to_csv(token_dir / f"sample_{si:03d}_tokens.csv", index=False)
+
+        # ── Save per-claim scores ─────────────────────────────────────────────
+        ref_claims = result.get("ref_claims", [])
+        claim_se   = result.get("claim_se",   np.array([]))
+        K_actual   = len(result["notes"])
+        claim_rows = []
+        for ci, claim in enumerate(ref_claims):
+            se_val   = float(claim_se[ci]) if ci < len(claim_se) else float("nan")
+            # Find which cluster this claim belongs to, to get k_present
+            k_present = None
+            for cluster in result.get("clusters", []):
+                if any(m["text"] == claim["text"] and m["_note_idx"] == 0
+                       for m in cluster["members"]):
+                    k_present = cluster["k_present"]
+                    break
+            claim_rows.append({
+                "claim_idx":        ci,
+                "claim_text":       claim["text"],
+                "section":          claim["section"],
+                "k_present":        k_present if k_present is not None else float("nan"),
+                "p_present":        round(k_present / K_actual, 4)
+                                    if k_present is not None else float("nan"),
+                "semantic_entropy": round(se_val, 4),
+            })
+        if claim_rows:
+            pd.DataFrame(claim_rows).to_csv(
+                claim_dir / f"sample_{si:03d}_claims.csv", index=False
+            )
 
         # ── Summary row ───────────────────────────────────────────────────────
         summary_rows.append({
