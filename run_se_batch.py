@@ -73,13 +73,16 @@ _PROMPT_VARIANTS = [
     ),
     # Variant 1 — re-ordered instruction emphasis
     (
-        "You are a medical scribe.\n"
-        "Read the conversation below and produce a structured clinical SOAP note "
-        "covering: CHIEF COMPLAINT, HISTORY OF PRESENT ILLNESS, "
+        
+        "You are a clinical documentation assistant.\n"
+        "Read the conversation below and produce a structured clinical note "
+        "with exactly six sections: CHIEF COMPLAINT, HISTORY OF PRESENT ILLNESS, "
         "REVIEW OF SYSTEMS, PHYSICAL EXAMINATION, RESULTS, ASSESSMENT AND PLAN.\n"
-        "Base the note strictly on what is said in the conversation.\n\n"
+        "Base the note strictly on what is said in the conversation. "
+        "Do not add disclaimers or preamble.\n\n"
         "### Conversation\n{transcript}\n\n"
-        "### Clinical Note:\n"
+        "### Note:\n"
+
     ),
     # Variant 2 — patient-centred framing
     (
@@ -112,11 +115,15 @@ _PROMPT_VARIANTS = [
     ),
     # Variant 5 — imperative minimal
     (
+        
         "Convert the following medical conversation into a structured clinical note.\n"
-        "Required sections: CHIEF COMPLAINT, HISTORY OF PRESENT ILLNESS, "
-        "REVIEW OF SYSTEMS, PHYSICAL EXAMINATION, RESULTS, ASSESSMENT AND PLAN.\n\n"
+        "Use exactly six sections: CHIEF COMPLAINT, HISTORY OF PRESENT ILLNESS, "
+        "REVIEW OF SYSTEMS, PHYSICAL EXAMINATION, RESULTS, ASSESSMENT AND PLAN.\n"
+        "Use only information present in the conversation. "
+        "Do not add disclaimers or preamble.\n\n"
         "Conversation:\n{transcript}\n\n"
         "Note:\n"
+
     ),
 ]
 
