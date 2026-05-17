@@ -256,6 +256,25 @@ _CACHE_FILTER = lambda name: (   # noqa: E731
     "pattern" in name or "resid_mid" in name or "resid_post" in name
 )
 
+# Maximum transcript tokens to feed into the model.
+# Attention cache is O(S²) so long transcripts dominate memory and time.
+# We keep the TAIL of the transcript (most recent dialogue) so the
+# supporting line — which is typically near the relevant claim — is retained.
+_MAX_TRANSCRIPT_TOKENS = 512
+
+
+def _truncate_transcript(model: HookedTransformer, transcript: str) -> str:
+    """
+    Tokenise transcript and, if it exceeds _MAX_TRANSCRIPT_TOKENS, decode only
+    the last _MAX_TRANSCRIPT_TOKENS tokens back to a string.
+    This keeps the most recent (most claim-relevant) dialogue turns.
+    """
+    ids = model.tokenizer.encode(transcript, add_special_tokens=False)
+    if len(ids) <= _MAX_TRANSCRIPT_TOKENS:
+        return transcript
+    ids_trimmed = ids[-_MAX_TRANSCRIPT_TOKENS:]
+    return model.tokenizer.decode(ids_trimmed)
+
 
 def _run_forward(
     model: HookedTransformer,
@@ -266,10 +285,16 @@ def _run_forward(
     """
     Tokenise (transcript, note), run forward pass with selective cache,
     return (cache, transcript_len, note_len).
+
+    The transcript is truncated to _MAX_TRANSCRIPT_TOKENS before tokenisation
+    to keep the attention cache at a manageable size.
     """
+    transcript = _truncate_transcript(model, transcript)
     tokens, transcript_len, note_tokens = tokenize_pair(model, transcript, note)
     tokens = tokens.to(device)
     note_len = len(note_tokens)
+    n_total = tokens.shape[1]
+    print(f"    [fwd] seq_len={n_total}  (transcript={transcript_len}  note={note_len})")
     with torch.no_grad():
         _, cache = model.run_with_cache(tokens, names_filter=_CACHE_FILTER)
     return cache, transcript_len, note_len
