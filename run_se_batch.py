@@ -314,26 +314,25 @@ _CLAIM_EXTRACTOR_DEFAULT_MODEL  = "us.meta.llama3-3-70b-instruct-v1:0"
 _CLAIM_EXTRACTOR_DEFAULT_REGION = "us-east-1"
 
 _CLAIM_SYSTEM_PROMPT = (
-    "You are a clinical NLP specialist. "
-    "Your task is to decompose a clinical SOAP note into its smallest "
-    "atomic, independently verifiable factual claims. "
-    "Each claim must express exactly one fact and be self-contained "
-    "(include the subject where needed). "
-    "Output ONLY a numbered list — one claim per line — with no preamble, "
-    "no section headers, and no commentary. "
-    "Format exactly:\n"
-    "1. <claim>\n"
-    "2. <claim>\n"
-    "...\n"
-    "Skip any line that says [NOT MENTIONED]. "
-    "Skip template sub-headers (e.g. 'Chief Complaint:', 'Drug Allergies:'). "
-    "Do not merge two facts into one line."
+    "You are a clinical NLP specialist extracting atomic facts from clinical notes.\n"
+    "Rules:\n"
+    "1. Copy each fact VERBATIM from the note — do NOT paraphrase or reword.\n"
+    "2. Each numbered item must be a single, independently verifiable fact.\n"
+    "3. If a bullet point contains multiple facts, split them onto separate lines.\n"
+    "4. Skip lines that say [NOT MENTIONED] or are purely sub-headers "
+    "   (e.g. 'Chief Complaint:', '- Drug Allergies:').\n"
+    "5. Output ONLY the numbered list — no preamble, no commentary, no section headers.\n"
+    "Format:\n"
+    "1. <verbatim text from note>\n"
+    "2. <verbatim text from note>\n"
+    "..."
 )
 
 _CLAIM_USER_TEMPLATE = (
-    "Decompose the following clinical note into atomic claims.\n\n"
+    "Extract every atomic fact from the note below as a numbered list. "
+    "Copy each fact VERBATIM from the note — do not rephrase.\n\n"
     "NOTE:\n{note}\n\n"
-    "Output a numbered list of atomic claims (one fact per line):"
+    "Numbered list of verbatim atomic facts:"
 )
 
 _SECTION_HEADER = re.compile(
