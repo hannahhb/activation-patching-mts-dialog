@@ -43,6 +43,7 @@ Usage
 """
 
 import argparse
+import os
 import re
 import warnings
 from dataclasses import replace as _dc_replace
@@ -306,14 +307,33 @@ def _bfs_components(adj: np.ndarray) -> List[List[int]]:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Atomic claim extraction
+# Atomic claim extraction  (Bedrock LLM)
 # ─────────────────────────────────────────────────────────────────────────────
 
-_CLAIM_SPLIT = re.compile(
-    r"(?<=[.!?])\s+|"          # sentence boundary
-    r"(?<=\w)\s*;\s*|"         # semicolons
-    r"\s+and\s+(?=[A-Z])|"     # ' and ' before capitalised word
-    r"\s*,\s*(?=[A-Z])",       # comma before capitalised word
+_CLAIM_EXTRACTOR_DEFAULT_MODEL  = "us.meta.llama3-3-70b-instruct-v1:0"
+_CLAIM_EXTRACTOR_DEFAULT_REGION = "us-east-1"
+
+_CLAIM_SYSTEM_PROMPT = (
+    "You are a clinical NLP specialist. "
+    "Your task is to decompose a clinical SOAP note into its smallest "
+    "atomic, independently verifiable factual claims. "
+    "Each claim must express exactly one fact and be self-contained "
+    "(include the subject where needed). "
+    "Output ONLY a numbered list — one claim per line — with no preamble, "
+    "no section headers, and no commentary. "
+    "Format exactly:\n"
+    "1. <claim>\n"
+    "2. <claim>\n"
+    "...\n"
+    "Skip any line that says [NOT MENTIONED]. "
+    "Skip template sub-headers (e.g. 'Chief Complaint:', 'Drug Allergies:'). "
+    "Do not merge two facts into one line."
+)
+
+_CLAIM_USER_TEMPLATE = (
+    "Decompose the following clinical note into atomic claims.\n\n"
+    "NOTE:\n{note}\n\n"
+    "Output a numbered list of atomic claims (one fact per line):"
 )
 
 _SECTION_HEADER = re.compile(
@@ -323,47 +343,104 @@ _SECTION_HEADER = re.compile(
     re.MULTILINE | re.IGNORECASE,
 )
 
+# Lazy-initialised Bedrock client (created on first call)
+_bedrock_claim_client = None
 
-def _extract_claims(note: str) -> List[Dict]:
+
+def _get_bedrock_claim_client(
+    model: str  = _CLAIM_EXTRACTOR_DEFAULT_MODEL,
+    region: str = _CLAIM_EXTRACTOR_DEFAULT_REGION,
+):
+    """Return (client, model_id), initialising boto3 on first call."""
+    global _bedrock_claim_client
+    if _bedrock_claim_client is None:
+        try:
+            import boto3
+        except ImportError as exc:
+            raise ImportError(
+                "boto3 is required for LLM claim extraction.  "
+                "Install with:  pip install boto3"
+            ) from exc
+        resolved_region = region or os.environ.get("AWS_DEFAULT_REGION",
+                                                    _CLAIM_EXTRACTOR_DEFAULT_REGION)
+        _bedrock_claim_client = (
+            boto3.client("bedrock-runtime", region_name=resolved_region),
+            model,
+        )
+    return _bedrock_claim_client
+
+
+def _infer_section(note: str, char_pos: int) -> str:
+    """Return the SOAP section label that contains char_pos."""
+    label = "PREAMBLE"
+    for m in _SECTION_HEADER.finditer(note):
+        if m.start() > char_pos:
+            break
+        label = m.group(0).strip().upper()
+    return label
+
+
+def _extract_claims(
+    note: str,
+    bedrock_model: str  = _CLAIM_EXTRACTOR_DEFAULT_MODEL,
+    bedrock_region: str = _CLAIM_EXTRACTOR_DEFAULT_REGION,
+    max_tokens: int     = 1024,
+    temperature: float  = 0.0,
+) -> List[Dict]:
     """
-    Split a clinical note into atomic claims.
+    Use a Bedrock LLM to decompose a clinical note into atomic claims.
 
     Returns a list of dicts:
-        text       : str   — the claim text
-        section    : str   — SOAP section header
-        char_start : int   — start in note
-        char_end   : int   — end in note
+        text       : str  — the claim text
+        section    : str  — SOAP section label inferred from position in note
+        char_start : int  — start offset in note  (-1 if not locatable)
+        char_end   : int  — end offset in note
     """
-    # Find section boundaries
-    section_spans: List[Tuple[str, int, int]] = []
-    prev_end   = 0
-    prev_label = "PREAMBLE"
-    for m in _SECTION_HEADER.finditer(note):
-        section_spans.append((prev_label, prev_end, m.start()))
-        prev_label = m.group(0).strip().upper()
-        prev_end   = m.end()
-    section_spans.append((prev_label, prev_end, len(note)))
+    client, model_id = _get_bedrock_claim_client(bedrock_model, bedrock_region)
 
+    user_msg = _CLAIM_USER_TEMPLATE.format(note=note.strip())
+
+    response = client.converse(
+        modelId=model_id,
+        system=[{"text": _CLAIM_SYSTEM_PROMPT}],
+        messages=[{"role": "user", "content": [{"text": user_msg}]}],
+        inferenceConfig={
+            "maxTokens": max_tokens,
+            "temperature": temperature,
+        },
+    )
+
+    raw = response["output"]["message"]["content"][0]["text"]
+
+    # Parse numbered list: "1. <claim text>"
     claims: List[Dict] = []
-    for section_label, sec_start, sec_end in section_spans:
-        block = note[sec_start:sec_end].strip()
-        if not block:
+    for line in raw.splitlines():
+        line = line.strip()
+        m = re.match(r"^\d+\.\s+(.+)$", line)
+        if not m:
             continue
-        # Split on claim boundaries
-        for raw_claim in _CLAIM_SPLIT.split(block):
-            text = raw_claim.strip()
-            if len(text) < 8:          # skip header fragments and punctuation
-                continue
-            # Locate in original note
-            idx = note.find(text, sec_start)
-            if idx == -1:
-                idx = sec_start
-            claims.append({
-                "text":       text,
-                "section":    section_label,
-                "char_start": idx,
-                "char_end":   idx + len(text),
-            })
+        text = m.group(1).strip()
+        if len(text) < 6:
+            continue
+
+        # Try to locate the claim text in the original note for char offsets
+        idx = note.find(text)
+        if idx == -1:
+            # Try a shorter prefix match (first 40 chars)
+            prefix = text[:40]
+            idx = note.find(prefix)
+
+        char_start = idx          # -1 if not found
+        char_end   = (idx + len(text)) if idx != -1 else -1
+        section    = _infer_section(note, idx) if idx != -1 else "UNKNOWN"
+
+        claims.append({
+            "text":       text,
+            "section":    section,
+            "char_start": char_start,
+            "char_end":   char_end,
+        })
+
     return claims
 
 
@@ -522,6 +599,8 @@ def compute_se_for_sample(
     temperature: float = 0.8,
     nli_model_name: str = "cross-encoder/nli-deberta-v3-small",
     nli_threshold: float = 0.5,
+    claim_bedrock_model: str  = _CLAIM_EXTRACTOR_DEFAULT_MODEL,
+    claim_bedrock_region: str = _CLAIM_EXTRACTOR_DEFAULT_REGION,
 ) -> Optional[Dict]:
     """
     Generate K notes → extract atomic claims → cluster with NLI → binary-entropy SE.
@@ -566,8 +645,13 @@ def compute_se_for_sample(
     K_actual = len(notes)
     print(f"    [SE] {K_actual} notes generated")
 
-    # ── Step 2: Extract atomic claims from each note ──────────────────────────
-    all_claims_per_note = [_extract_claims(n) for n in notes]
+    # ── Step 2: Extract atomic claims from each note (via Bedrock LLM) ────────
+    all_claims_per_note = [
+        _extract_claims(n,
+                        bedrock_model=claim_bedrock_model,
+                        bedrock_region=claim_bedrock_region)
+        for n in notes
+    ]
     total_claims        = sum(len(c) for c in all_claims_per_note)
     print(f"    [SE] {total_claims} atomic claims extracted across {K_actual} notes")
 
@@ -759,6 +843,8 @@ def run_se_batch(
     K: int     = 10,
     temperature: float = 0.8,
     nli_model_name: str = "cross-encoder/nli-deberta-v3-small",
+    claim_bedrock_model: str  = _CLAIM_EXTRACTOR_DEFAULT_MODEL,
+    claim_bedrock_region: str = _CLAIM_EXTRACTOR_DEFAULT_REGION,
 ) -> pd.DataFrame:
     """
     Run semantic entropy over ACI-Bench test1 rows [start, end).
@@ -791,6 +877,8 @@ def run_se_batch(
             model, transcript, cfg_i,
             K=K, temperature=temperature,
             nli_model_name=nli_model_name,
+            claim_bedrock_model=claim_bedrock_model,
+            claim_bedrock_region=claim_bedrock_region,
         )
         if result is None:
             summary_rows.append({
@@ -903,6 +991,13 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--nli-model",   default="cross-encoder/nli-deberta-v3-small")
     p.add_argument("--max-new-tokens", type=int, default=512)
     p.add_argument("--out",         default=".", help="Output root directory")
+    # Bedrock claim extractor
+    p.add_argument("--claim-bedrock-model",
+                   default=_CLAIM_EXTRACTOR_DEFAULT_MODEL,
+                   help="Bedrock model ID for atomic claim extraction")
+    p.add_argument("--claim-bedrock-region",
+                   default=_CLAIM_EXTRACTOR_DEFAULT_REGION,
+                   help="AWS region for Bedrock claim extraction calls")
     return p.parse_args()
 
 
@@ -928,6 +1023,7 @@ def main() -> None:
     print(f"  K generations  : {args.K}")
     print(f"  Temperature    : {args.temperature}")
     print(f"  NLI model      : {args.nli_model}")
+    print(f"  Claim extractor: {args.claim_bedrock_model}  ({args.claim_bedrock_region})")
     print(f"  Output dir     : {out.resolve()}")
 
     print(f"\nLoading {cfg.model_name} …")
@@ -947,6 +1043,8 @@ def main() -> None:
         K=args.K,
         temperature=args.temperature,
         nli_model_name=args.nli_model,
+        claim_bedrock_model=args.claim_bedrock_model,
+        claim_bedrock_region=args.claim_bedrock_region,
     )
 
     print("\n" + "═" * 54)
