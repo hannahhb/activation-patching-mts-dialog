@@ -490,16 +490,10 @@ def _compute_claim_se(
         # Binary presence entropy: H(k/K) + H((K-k)/K)
         p = k_present / K
         se = -(p * np.log(p + eps) + (1 - p) * np.log(1 - p + eps)) if 0 < p < 1 else 0.0
-        # Majority section
-        section_counts: Dict[str, int] = {}
-        for m in members:
-            section_counts[m["section"]] = section_counts.get(m["section"], 0) + 1
-        majority_section = max(section_counts, key=section_counts.get)
         clusters.append({
             "members":   members,
             "k_present": k_present,
             "se":        se,
-            "section":   majority_section,
         })
 
     # Assign SE to each reference claim via cluster membership
