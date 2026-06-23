@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LUQ Sentence Uncertainty — Top 3 Samples</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    max-width: 1200px; margin: 0 auto; padding: 24px;
+    color: #222; background: #f7f7f7;
+  }
+  h1 { margin-bottom: 4px; }
+  .sent { cursor: default; }
+</style>
+</head>
+<body>
+<h1>LUQ Sentence-Level Uncertainty — Top 3 Most Uncertain Samples</h1>
+<p style="color:#555;margin-bottom:28px;">
+  Model: <b>Llama 3.1 8B (Bedrock)</b> &nbsp;|&nbsp;
+  Prompt: Asgari et al. 2025, Experiment 8 (PDSQI-9 optimised)<br>
+  NLI: <b>cross-encoder/nli-deberta-v3-large</b> &nbsp;|&nbsp;
+  U = 1 − mean P(entail | s, r') across K−1 other generations.<br>
+  Hover over a sentence to see its exact uncertainty score.
+</p>
+
+<div style="margin-bottom:40px;border:1px solid #ddd;border-radius:8px;
+     padding:20px;background:#fafafa;">
+  <h2 style="margin-top:0;">
+    #1 — Sample 9
+    <span style="font-size:14px;font-weight:normal;color:#555;">
+      Mean U = 0.3359 &nbsp;|&nbsp; K = 10
+    </span>
+  </h2>
+  
+<div style="margin:12px 0;">
+  <div style="height:18px;background:linear-gradient(to right,rgb(20,140,20) 0%, rgb(43,151,43) 5%, rgb(67,163,67) 10%, rgb(90,174,90) 15%, rgb(114,186,114) 20%, rgb(137,197,137) 25%, rgb(161,209,161) 30%, rgb(184,220,184) 35%, rgb(208,232,208) 40%, rgb(231,243,231) 45%, rgb(255,255,255) 50%, rgb(255,229,229) 55%, rgb(255,204,204) 60%, rgb(255,178,178) 65%, rgb(255,153,153) 70%, rgb(255,127,127) 75%, rgb(255,101,101) 80%, rgb(255,76,76) 85%, rgb(255,50,50) 90%, rgb(255,25,25) 95%, rgb(255,0,0) 100%);
+       border-radius:4px;border:1px solid #ccc;"></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;
+       color:#555;margin-top:2px;">
+    <span>U = 0.0 (certain)</span>
+    <span>U = 0.5</span>
+    <span>U = 1.0 (uncertain)</span>
+  </div>
+</div>
+  <h3>Transcript (excerpt)</h3>
+  <div style="font-family:monospace;font-size:12px;background:#f4f4f4;
+       border-left:4px solid #aaa;padding:10px;white-space:pre-wrap;
+       margin-bottom:16px;">[doctor] alright so hey it's nice to see you jack i know you've been experiencing some neck pain could you tell me what happened<br>[patient] yeah so i was in a a car accident<br>[doctor] mm-hmm<br>[patient] and i hit in the back and like my my neck went forward and my head went forward really quick and so i've been having some pain ever since<br>[doctor] okay and so with this pain how long ago was the car accident<br>[patient] that was about a week ago<br>[doctor] okay with this pain like on a scale of one to te</div>
+  <h3>Generated Note — sentence uncertainty</h3>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:2.4;
+       background:#fff;border:1px solid #e0e0e0;border-radius:6px;padding:16px;">
+    <span class="sent" style="background:rgb(255,254,254);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.500">Subjective:</span>
+<span class="sent" style="background:rgb(255,251,251);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.506">HPI: The patient, a 25-year-old male, presented with neck pain following a car accident one week ago.</span>
+<span class="sent" style="background:rgb(255,209,209);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.589">He described the accident as a rear-end collision, where his head and neck moved forward quickly.</span>
+<span class="sent" style="background:rgb(98,178,98);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.167">The pain has been persistent, with a severity of 7 out of 10, exacerbated by movement of the neck.</span>
+<span class="sent" style="background:rgb(130,193,130);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.234">The pain is localized to the back of the neck and has not been constant.</span>
+<span class="sent" style="background:rgb(185,221,185);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.353">The patient has tried ibuprofen with minimal relief.</span>
+<span class="sent" style="background:rgb(20,140,20);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.001">He reports pain with flexion, extension, rotation, and lateral bending of the neck.</span>
+<span class="sent" style="background:rgb(255,248,248);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.512">Past medical history: [NOT MENTIONED]</span>
+<span class="sent" style="background:rgb(255,218,218);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.571">Review of systems: The patient denies any hearing problems, visual disturbances, or symptoms in other organs.</span>
+<span class="sent" style="background:rgb(255,240,240);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.528">Current medications: [NOT MENTIONED]</span>
+<span class="sent" style="background:rgb(255,252,252);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.505">Objective:</span>
+<span class="sent" style="background:rgb(255,234,234);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.541">Vital signs: [NOT MENTIONED]</span>
+<span class="sent" style="background:rgb(161,209,161);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.301">Physical exam: The patient had positive pain to palpation of the soft tissues of the neck, pain with flexion, extension, rotation, and lateral bending of the neck.</span>
+<span class="sent" style="background:rgb(168,212,168);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.317">The patient was able to move his neck from side to side, but with pain.</span>
+<span class="sent" style="background:rgb(88,173,88);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.145">Test Results: The x-ray results showed no signs of fracture or bony abnormalities.</span>
+<span class="sent" style="background:rgb(252,253,252);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.495">Assessment / Problem List:</span>
+<span class="sent" style="background:rgb(163,210,163);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.306">Assessment: I believe the patient has a neck strain, likely caused by whiplash from the car accident.</span>
+<span class="sent" style="background:rgb(189,223,189);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.361">Problem list: Neck strain; Suspected whiplash.</span>
+<span class="sent" style="background:rgb(255,249,249);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.511">Plan:</span>
+<span class="sent" style="background:rgb(84,171,84);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.137">I prescribed Motrin 600mg every 6-8 hours for anti-inflammatory purposes.</span>
+<span class="sent" style="background:rgb(135,196,135);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.246">I also prescribed Flexeril 10mg every 12 hours as needed for muscle relaxation.</span>
+<span class="sent" style="background:rgb(48,154,48);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.061">I advised the patient to be conservative with neck movement and to try to relax the neck.</span>
+<span class="sent" style="background:rgb(38,149,38);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.040">I ordered an MRI to rule out any underlying conditions.</span>
+<span class="sent" style="background:rgb(56,157,56);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.078">I referred the patient to either physical rehab or a chiropractor for further evaluation and treatment.</span>
+<span class="sent" style="background:rgb(204,230,204);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.393">Follow-up: I will review the MRI results and provide further instructions based on the findings.</span>
+  </div>
+</div>
+
+<div style="margin-bottom:40px;border:1px solid #ddd;border-radius:8px;
+     padding:20px;background:#fafafa;">
+  <h2 style="margin-top:0;">
+    #2 — Sample 1
+    <span style="font-size:14px;font-weight:normal;color:#555;">
+      Mean U = 0.3199 &nbsp;|&nbsp; K = 10
+    </span>
+  </h2>
+  
+<div style="margin:12px 0;">
+  <div style="height:18px;background:linear-gradient(to right,rgb(20,140,20) 0%, rgb(43,151,43) 5%, rgb(67,163,67) 10%, rgb(90,174,90) 15%, rgb(114,186,114) 20%, rgb(137,197,137) 25%, rgb(161,209,161) 30%, rgb(184,220,184) 35%, rgb(208,232,208) 40%, rgb(231,243,231) 45%, rgb(255,255,255) 50%, rgb(255,229,229) 55%, rgb(255,204,204) 60%, rgb(255,178,178) 65%, rgb(255,153,153) 70%, rgb(255,127,127) 75%, rgb(255,101,101) 80%, rgb(255,76,76) 85%, rgb(255,50,50) 90%, rgb(255,25,25) 95%, rgb(255,0,0) 100%);
+       border-radius:4px;border:1px solid #ccc;"></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;
+       color:#555;margin-top:2px;">
+    <span>U = 0.0 (certain)</span>
+    <span>U = 0.5</span>
+    <span>U = 1.0 (uncertain)</span>
+  </div>
+</div>
+  <h3>Transcript (excerpt)</h3>
+  <div style="font-family:monospace;font-size:12px;background:#f4f4f4;
+       border-left:4px solid #aaa;padding:10px;white-space:pre-wrap;
+       margin-bottom:16px;">[doctor] so bryan it's nice to see you again in the office today what's going on<br>[patient] i was in my yard yesterday and i was raking leaves and i felt fine and then when i got into my house about two hours later my back started tightening up and i started getting pins and needles in my right foot<br>[doctor] alright have you ever had this type of back pain before<br>[patient] i had it once about three years ago but it went away after a day<br>[doctor] okay and did you try anything for the pain yet did </div>
+  <h3>Generated Note — sentence uncertainty</h3>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:2.4;
+       background:#fff;border:1px solid #e0e0e0;border-radius:6px;padding:16px;">
+    <span class="sent" style="background:rgb(153,205,153);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.285">Subjective:</span>
+<span class="sent" style="background:rgb(234,244,234);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.456">HPI: The patient, a 50-year-old male, presents with a 2-hour history of low back pain and tingling sensation in his right leg.</span>
+<span class="sent" style="background:rgb(249,252,249);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.488">The pain started after raking leaves in his yard yesterday and has not improved with rest, ice, or over-the-counter pain medication.</span>
+<span class="sent" style="background:rgb(149,203,149);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.274">The patient reports that the pain is worse when standing up and better when sitting or lying down.</span>
+<span class="sent" style="background:rgb(217,236,217);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.420">His partner also reports that the patient has pain when standing up.</span>
+<span class="sent" style="background:rgb(173,215,173);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.327">Past medical history: The patient has had a similar episode of back pain 3 years ago that resolved on its own.</span>
+<span class="sent" style="background:rgb(116,187,116);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.206">Review of systems: The patient reports tingling sensation in his right leg.</span>
+<span class="sent" style="background:rgb(255,109,109);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.786">Current medications: None mentioned.</span>
+<span class="sent" style="background:rgb(160,208,160);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.298">Objective:</span>
+<span class="sent" style="background:rgb(191,223,191);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.364">Vital signs: Not mentioned.</span>
+<span class="sent" style="background:rgb(83,170,83);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.134">Physical exam: The patient has some pain on flexion and palpation around the L5 region.</span>
+<span class="sent" style="background:rgb(102,180,102);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.175">Dorsiflexion is normal, and pulses are equal in all extremities.</span>
+<span class="sent" style="background:rgb(85,172,85);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.140">Test Results: X-ray of the low back shows normal results.</span>
+<span class="sent" style="background:rgb(167,212,167);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.313">Assessment / Problem List:</span>
+<span class="sent" style="background:rgb(133,195,133);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.242">Assessment: The patient has a probable strain of the low back.</span>
+<span class="sent" style="background:rgb(255,214,214);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.580">Problem list: Low back strain; suspected nerve compression; [unknown].</span>
+<span class="sent" style="background:rgb(176,216,176);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.333">Plan:</span>
+<span class="sent" style="background:rgb(213,234,213);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.412">I prescribed meloxicam 7.5 mg orally twice a day for pain and inflammation.</span>
+<span class="sent" style="background:rgb(83,170,83);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.134">I also prescribed physical therapy to help with stretches and exercises to improve the patient's mobility and reduce pain.</span>
+<span class="sent" style="background:rgb(191,223,191);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.365">I instructed the patient to rest and avoid strenuous activities for the next two weeks.</span>
+<span class="sent" style="background:rgb(88,173,88);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.145">I will re-evaluate the patient in two weeks and consider ordering an MRI if the symptoms do not improve.</span>
+<span class="sent" style="background:rgb(94,176,94);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.159">Follow-up: I instructed the patient to follow up with me in two weeks to re-evaluate his symptoms and consider further imaging if necessary.</span>
+  </div>
+</div>
+
+<div style="margin-bottom:40px;border:1px solid #ddd;border-radius:8px;
+     padding:20px;background:#fafafa;">
+  <h2 style="margin-top:0;">
+    #3 — Sample 4
+    <span style="font-size:14px;font-weight:normal;color:#555;">
+      Mean U = 0.2832 &nbsp;|&nbsp; K = 10
+    </span>
+  </h2>
+  
+<div style="margin:12px 0;">
+  <div style="height:18px;background:linear-gradient(to right,rgb(20,140,20) 0%, rgb(43,151,43) 5%, rgb(67,163,67) 10%, rgb(90,174,90) 15%, rgb(114,186,114) 20%, rgb(137,197,137) 25%, rgb(161,209,161) 30%, rgb(184,220,184) 35%, rgb(208,232,208) 40%, rgb(231,243,231) 45%, rgb(255,255,255) 50%, rgb(255,229,229) 55%, rgb(255,204,204) 60%, rgb(255,178,178) 65%, rgb(255,153,153) 70%, rgb(255,127,127) 75%, rgb(255,101,101) 80%, rgb(255,76,76) 85%, rgb(255,50,50) 90%, rgb(255,25,25) 95%, rgb(255,0,0) 100%);
+       border-radius:4px;border:1px solid #ccc;"></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;
+       color:#555;margin-top:2px;">
+    <span>U = 0.0 (certain)</span>
+    <span>U = 0.5</span>
+    <span>U = 1.0 (uncertain)</span>
+  </div>
+</div>
+  <h3>Transcript (excerpt)</h3>
+  <div style="font-family:monospace;font-size:12px;background:#f4f4f4;
+       border-left:4px solid #aaa;padding:10px;white-space:pre-wrap;
+       margin-bottom:16px;">[doctor] okay hi wayne well i understand you're here for you've got a sore on your foot that's not healing is that right<br>[patient] yes<br>[doctor] so can you tell me about that how are you doing<br>[patient] well i've been doing okay but i've had this wound on my right foot for a couple of weeks and it's not getting better i saw my pcp and they referred me to you i i used to see a podiatrist and a couple of years ago but they moved and i was n't able to get another one<br>[doctor] okay and how long have </div>
+  <h3>Generated Note — sentence uncertainty</h3>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:2.4;
+       background:#fff;border:1px solid #e0e0e0;border-radius:6px;padding:16px;">
+    <span class="sent" style="background:rgb(152,204,152);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.282">Subjective:</span>
+<span class="sent" style="background:rgb(145,201,145);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.267">HPI: The patient, a 38-year-old male, presents with a non-healing wound on his right foot that has been present for approximately two to three weeks.</span>
+<span class="sent" style="background:rgb(67,163,67);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.102">The wound is described as a one by two inch circular lesion on the dorsal aspect of the lateral right foot, proximal to the right fifth metatarsophalangeal joint.</span>
+<span class="sent" style="background:rgb(255,210,210);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.588">The patient reports that he has been experiencing neuropathy and attributes the wound to a new pair of shoes that caused a blister.</span>
+<span class="sent" style="background:rgb(175,216,175);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.332">He denies any trauma to the foot and has not experienced any symptoms such as fever, chills, or drainage from the wound.</span>
+<span class="sent" style="background:rgb(141,199,141);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.259">He has completed a course of antibiotics prescribed by his primary care physician, but the wound has not shown significant improvement.</span>
+<span class="sent" style="background:rgb(88,173,88);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.146">Past Medical History: The patient has a history of diabetes, with an HbA1c level slightly above 8%.</span>
+<span class="sent" style="background:rgb(214,235,214);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.413">He has a history of neuropathy, but the exact duration is not specified.</span>
+<span class="sent" style="background:rgb(255,91,91);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.821">He has not mentioned any other past medical conditions, social history, or allergies.</span>
+<span class="sent" style="background:rgb(153,205,153);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.284">Review of Systems: The patient denies any other symptoms or concerns.</span>
+<span class="sent" style="background:rgb(144,200,144);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.264">Current Medications: [NOT MENTIONED]</span>
+<span class="sent" style="background:rgb(142,200,142);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.261">Objective:</span>
+<span class="sent" style="background:rgb(128,192,128);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.230">Vital Signs: The patient's temperature is 98.1°F, heart rate is 72, respirations are 16, and blood pressure is 110/65.</span>
+<span class="sent" style="background:rgb(37,148,37);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.038">Physical Exam: The examination of the right foot reveals a one by two inch circular wound on the dorsal aspect of the lateral right foot, with yellow slough and minimal granulation tissue.</span>
+<span class="sent" style="background:rgb(130,194,130);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.236">There is no surrounding erythema or cellulitis, and no evidence of fluid collection or necrosis.</span>
+<span class="sent" style="background:rgb(255,205,205);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.596">The vascular exam is unremarkable, with palpable bilateral femoral and popliteal pulses, but no palpable dorsalis pedis or posterior tibial pulses.</span>
+<span class="sent" style="background:rgb(246,250,246);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.483">Doppler signs are present.</span>
+<span class="sent" style="background:rgb(74,166,74);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.115">Test Results: The patient's right foot X-ray shows no evidence of osteomyelitis.</span>
+<span class="sent" style="background:rgb(129,193,129);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.233">Assessment / Problem List:</span>
+<span class="sent" style="background:rgb(170,213,170);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.319">Assessment: The patient presents with a diabetic foot ulcer that requires further evaluation and treatment to promote wound healing.</span>
+<span class="sent" style="background:rgb(217,236,217);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.420">Problem list: Diabetic foot ulcer; diabetes mellitus; neuropathy; unknown.</span>
+<span class="sent" style="background:rgb(151,204,151);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.281">Plan:</span>
+<span class="sent" style="background:rgb(71,165,71);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.110">I will order an Ankle Brachial Index (ABI) to determine the blood supply to the foot.</span>
+<span class="sent" style="background:rgb(106,182,106);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.183">I will perform a debridement in the office to remove dead tissue from the wound.</span>
+<span class="sent" style="background:rgb(70,164,70);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.107">I will prescribe collagenase ointment to be applied to the wound once daily, covered with a dry sterile dressing.</span>
+<span class="sent" style="background:rgb(135,196,135);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.246">The patient will wear a surgical shoe to alleviate pressure on the area.</span>
+<span class="sent" style="background:rgb(76,167,76);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.120">I will see the patient again in two weeks to assess the wound's progress.</span>
+<span class="sent" style="background:rgb(96,177,96);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.163">If the ABI indicates poor blood supply, I may refer the patient to a vascular specialist.</span>
+<span class="sent" style="background:rgb(217,236,217);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.419">I will also refer the patient to a diabetic specialist to discuss ways to manage his diabetes and lower his HbA1c level.</span>
+<span class="sent" style="background:rgb(103,181,103);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.178">Follow-up: The patient will be seen in two weeks to reassess the wound's progress.</span>
+  </div>
+</div>
+</body>
+</html>

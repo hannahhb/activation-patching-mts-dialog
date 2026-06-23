@@ -1,107 +1,121 @@
 """
-Configuration for ACI-Bench × Gemma 2 9B-IT mechanistic interpretability experiments.
+config.py
+=========
+Central configuration dataclass, shared constants, and ACI-Bench data loading.
+
+This is a leaf module with no internal project dependencies.
 """
 
-# ── Model ──────────────────────────────────────────────────────────────────────
-MODEL_NAME = "google/gemma-2-9b-it"
-DEVICE     = "cuda"
-DTYPE      = "bfloat16"
+import textwrap
+import warnings
+from dataclasses import dataclass, field
+from typing import List, Tuple
 
-# Gemma 2 9B-IT architecture
-N_LAYERS = 42
-N_HEADS  = 16
-D_MODEL  = 3584
-D_HEAD   = 256   # 16 heads × 256 = 4096; output-projected back to 3584
+import torch
+from datasets import load_dataset
 
-# Layer bands (equal thirds of 42 layers)
-EARLY_LAYERS = list(range(0,  14))   # 0–13
-MID_LAYERS   = list(range(14, 28))   # 14–27
-LATE_LAYERS  = list(range(28, 42))   # 28–41
+warnings.filterwarnings("ignore")
 
-# Upper half of the network — used for source attention entropy
-UPPER_LAYERS = list(range(21, 42))
 
-# ── Dataset ────────────────────────────────────────────────────────────────────
-DATASET_HF_ID  = "mkieffer/ACI-Bench-MedARC"
-DATASET_SPLIT  = "aci"
-DIALOGUE_COL   = "dialogue"
-NOTE_COL       = "note"
+# ─────────────────────────────────────────────
+# Configuration
+# ─────────────────────────────────────────────
 
-N_PILOT = 10    # Experiment 1 pilot
-N_FULL  = 50    # Full-scale runs
+@dataclass
+class Config:
+    """Central configuration.  Override via CLI in run_experiments.py."""
 
-RANDOM_SEED = 42
+    # ── Model ──────────────────────────────────────────────────────────────────
+    model_name: str = "google/gemma-2-2b-it"
 
-# ── Note generation ────────────────────────────────────────────────────────────
-MAX_NEW_TOKENS   = 600
-GENERATION_TEMP  = 0.0   # greedy decoding (temperature=0 → argmax)
+    # ── Device ─────────────────────────────────────────────────────────────────
+    device: str = "cuda" if torch.cuda.is_available() else "cpu"
 
-SOAP_PROMPT_TEMPLATE = (
-    "You are an expert clinical documentation specialist.\n"
-    "Generate a structured SOAP clinical note from the following doctor-patient "
-    "dialogue. Include all relevant clinical information.\n\n"
-    "Format the note with exactly these section headers (include only sections "
-    "that have content):\n"
-    "CHIEF COMPLAINT:\n"
-    "HISTORY OF PRESENT ILLNESS:\n"
-    "REVIEW OF SYSTEMS:\n"
-    "PHYSICAL EXAMINATION:\n"
-    "ASSESSMENT:\n"
-    "PLAN:\n\n"
-    "DIALOGUE:\n{dialogue}\n\n"
-    "SOAP NOTE:\n"
-)
+    # dtype: bfloat16 on GPU halves memory; float32 on CPU for stability
+    dtype: torch.dtype = field(
+        default_factory=lambda: torch.bfloat16 if torch.cuda.is_available() else torch.float32
+    )
 
-# ── PDSQI-9 judge ──────────────────────────────────────────────────────────────
-# 9 attributes used for scoring and correlation analysis
-PDSQI9_ATTRIBUTES = [
-    "cited",
-    "accurate",
-    "thorough",
-    "useful",
-    "organized",
-    "comprehensible",
-    "succinct",
-    "synthesized",
-    "stigmatizing",
-]
+    # ── ECS computation ────────────────────────────────────────────────────────
+    ecs_layers: str = "all"   # "all" | "last_half" (kept for compatibility)
 
-# Attributes that correlate with retrieval (attention) vs synthesis (MLP)
-# These drive the primary mechanistic hypothesis
-RETRIEVAL_ATTRS  = ["cited", "accurate", "thorough"]   # expect late-attn correlation
-SYNTHESIS_ATTRS  = ["synthesized", "useful"]            # expect mid-MLP correlation
+    # ── PKS computation ────────────────────────────────────────────────────────
+    pks_method: str = "jsd"   # paper-correct: JSD over LogitLens distributions
 
-JUDGE_MODEL       = "gpt-4o"
-JUDGE_TEMPERATURE = 0
-JUDGE_N_SHOTS     = 5
+    # ── Dataset ────────────────────────────────────────────────────────────────
+    dataset_repo:   str = "mkieffer/ACI-Bench-MedARC"
+    dataset_config: str = "aci"
+    dataset_split:  str = "test2"
+    sample_idx:     int = 1
 
-# ── SOAP sections ──────────────────────────────────────────────────────────────
-# Ordered list of sections — used for SOAP segmentation
-SOAP_SECTIONS = [
-    "chief complaint",
-    "history of present illness",
-    "review of systems",
-    "physical examination",
-    "assessment",
-    "plan",
-    "medications",
-    "allergies",
-    "past medical history",
-    "social history",
-    "family history",
-]
+    # ── Generation (Experiment 2b) ─────────────────────────────────────────────
+    max_new_tokens:  int   = 512
+    gen_temperature: float = 0.5
 
-# Sections expected to be extractive vs abstractive (for Experiment 2C)
-EXTRACTIVE_SECTIONS  = {"chief complaint", "history of present illness",
-                         "review of systems", "medications", "allergies",
-                         "past medical history"}
-ABSTRACTIVE_SECTIONS = {"assessment", "plan"}
+    # ── Output ─────────────────────────────────────────────────────────────────
+    output_dir: str = "."
 
-# ── Mechanistic thresholds (Experiment 3 candidate selection) ──────────────────
-COINCIDENTAL_CORRECTNESS_MLP_FRAC = 0.60   # Category A: MLP fraction > this
-COINCIDENTAL_CORRECTNESS_LOOKBACK  = 0.30   # Category A: lookback ratio < this
-PENALISED_INFERENCE_ACCURATE_MAX   = 3      # Category B: accurate score ≤ this
 
-# ── Output ─────────────────────────────────────────────────────────────────────
-RESULTS_DIR = "results"
-CACHE_DIR   = "cache"
+# ─────────────────────────────────────────────
+# Shared colour palette (used by all plots)
+# ─────────────────────────────────────────────
+
+Q_COLORS = {
+    "extractive":    "#2196F3",   # blue
+    "parametric":    "#FF9800",   # orange
+    "synthesized":   "#4CAF50",   # green
+    "hallucinatory": "#F44336",   # red
+}
+
+
+# ─────────────────────────────────────────────
+# ACI-Bench data loading
+# ─────────────────────────────────────────────
+
+_TRANSCRIPT_CANDIDATES = ["src", "dialogue", "conversation", "transcript", "input"]
+_NOTE_CANDIDATES        = ["tgt", "note", "reference", "summary", "output"]
+
+
+def _pick_column(columns: List[str], candidates: List[str], role: str) -> str:
+    for c in candidates:
+        if c in columns:
+            return c
+    raise KeyError(
+        f"Cannot find {role} column in dataset.  "
+        f"Available columns: {columns}.  Expected one of: {candidates}"
+    )
+
+
+def load_aci_sample(cfg: Config) -> Tuple[str, str]:
+    """
+    Load one (transcript, gold_note) pair from ACI-Bench (HuggingFace).
+
+    Returns
+    -------
+    transcript : patient-clinician dialogue
+    gold_note  : reference SOAP note
+    """
+    print(f"  Loading {cfg.dataset_repo}  "
+          f"config='{cfg.dataset_config}'  split='{cfg.dataset_split}'  "
+          f"idx={cfg.sample_idx} …")
+
+    ds   = load_dataset(cfg.dataset_repo, cfg.dataset_config, split=cfg.dataset_split)
+    cols = ds.column_names
+    print(f"  Dataset columns : {cols}")
+    print(f"  Rows in split   : {len(ds)}")
+
+    t_col = _pick_column(cols, _TRANSCRIPT_CANDIDATES, "transcript")
+    n_col = _pick_column(cols, _NOTE_CANDIDATES,       "note")
+    print(f"  Using columns   : transcript='{t_col}'  note='{n_col}'")
+
+    row        = ds[cfg.sample_idx]
+    transcript = row[t_col]
+    gold_note  = row[n_col]
+
+    print(f"\n  ── Transcript preview (first 300 chars) ──")
+    print(textwrap.indent(transcript[:300].strip(), "    "))
+    print(f"\n  ── Gold note preview (first 300 chars) ──")
+    print(textwrap.indent(gold_note[:300].strip(), "    "))
+    print()
+
+    return transcript, gold_note
