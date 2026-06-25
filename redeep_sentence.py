@@ -142,6 +142,16 @@ positive findings, written as full sentences.
 
 _PERIOD_SPLIT = re.compile(r"(?<=\.)\s+(?=[A-Z])")
 
+# SOAP section headers — standalone lines that carry no clinical content
+_SOAP_HEADER_RE = re.compile(
+    r"^\s*(?:subjective|objective|assessment\s*/\s*problem\s+list|assessment|plan)\s*:\s*$",
+    re.IGNORECASE,
+)
+
+
+def is_soap_header(sentence: str) -> bool:
+    return bool(_SOAP_HEADER_RE.match(sentence.strip()))
+
 
 def split_sentences(text: str) -> List[str]:
     results = []
@@ -471,21 +481,128 @@ def compute_chunk_pks(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Forward pass
+# Forward pass — layer-by-layer to avoid OOM on long sequences
 # ─────────────────────────────────────────────────────────────────────────────
 
-def run_forward_pass(model, tokens: torch.Tensor, device: str):
-    """Single forward pass, caching only what ECS/PKS need."""
-    with torch.no_grad():
-        _, cache = model.run_with_cache(
-            tokens,
-            names_filter=lambda name: (
-                "pattern"    in name or   # attention weights → ECS
-                "resid_mid"  in name or   # residual before FFN → PKS
-                "resid_post" in name      # residual after FFN; last layer → ECS
-            ),
-        )
-    return cache
+def compute_ecs_pks_layerwise(
+    model,
+    tokens: torch.Tensor,
+    transcript_len: int,
+    sent_spans: List[Tuple[int, int]],
+    device: str,
+    top_k_frac: float = 0.10,
+) -> Tuple[np.ndarray, np.ndarray]:
+    """
+    Layer-by-layer ECS and PKS to avoid OOM on long sequences.
+
+    Runs n_layers separate forward passes, caching only the current layer's
+    activations plus the last layer's resid_post (needed for ECS sentence
+    vectors).  Peak GPU overhead per pass is ~830 MB instead of ~25 GB.
+
+    Returns
+    -------
+    ecs_layers : (n_layers, n_sents) float64, clipped to [-1, 1]
+    pks_layers : (n_layers, n_sents) float64
+    """
+    n_layers = model.cfg.n_layers
+    n_heads  = model.cfg.n_heads
+    n_sents  = len(sent_spans)
+    T        = transcript_len
+    k_top    = max(1, int(T * top_k_frac))
+
+    ecs_all = np.zeros((n_layers, n_sents), dtype=np.float64)
+    pks_all = np.zeros((n_layers, n_sents), dtype=np.float64)
+
+    # Shared ECS state derived from last-layer resid_post (computed once)
+    x_transcript: Optional[np.ndarray] = None
+    sent_vecs:    Optional[np.ndarray] = None
+
+    last_resid_name = f"blocks.{n_layers - 1}.hook_resid_post"
+
+    for layer in range(n_layers):
+        target: set = {
+            f"blocks.{layer}.attn.hook_pattern",
+            f"blocks.{layer}.hook_resid_mid",
+            f"blocks.{layer}.hook_resid_post",
+            last_resid_name,   # always included for x_last (no-op when layer == last)
+        }
+        with torch.no_grad():
+            _, cache_l = model.run_with_cache(
+                tokens,
+                names_filter=lambda n, t=target: n in t,
+            )
+
+        # Compute shared ECS context from last-layer residuals (first pass only)
+        if x_transcript is None:
+            x_last = cache_l["resid_post", n_layers - 1][0].float().cpu().numpy()
+            x_transcript = x_last[:T]
+            D = x_last.shape[-1]
+            sent_vecs = np.zeros((n_sents, D), dtype=np.float64)
+            for si, (s_start, s_end) in enumerate(sent_spans):
+                abs_s = T + s_start
+                abs_e = min(T + s_end, x_last.shape[0])
+                if abs_s < abs_e:
+                    sent_vecs[si] = x_last[abs_s:abs_e].mean(axis=0)
+
+        # ── ECS for this layer ────────────────────────────────────────────────
+        attn    = cache_l["pattern", layer][0].float().cpu().numpy()  # (H, S, S)
+        seq_len = attn.shape[-1]
+
+        for si, (s_start, s_end) in enumerate(sent_spans):
+            abs_s = T + s_start
+            abs_e = min(T + s_end, seq_len)
+            if abs_s >= abs_e:
+                continue
+
+            w_chunk = attn[:, abs_s:abs_e, :T].mean(axis=1)  # (H, T)
+            s_vec   = sent_vecs[si]
+            norm_s  = np.linalg.norm(s_vec)
+            cos_acc = 0.0
+
+            for h in range(n_heads):
+                w_h     = w_chunk[h]
+                top_idx = (np.argpartition(w_h, -k_top)[-k_top:]
+                           if k_top < T else np.arange(T))
+                w_top = w_h[top_idx]
+                w_sum = w_top.sum()
+                if w_sum < 1e-10:
+                    continue
+                w_top = w_top / w_sum
+                e     = (x_transcript[top_idx] * w_top[:, None]).sum(axis=0)
+                norm_e = np.linalg.norm(e)
+                denom  = norm_e * norm_s
+                if denom > 1e-8:
+                    cos_acc += float(np.dot(e, s_vec) / denom)
+
+            ecs_all[layer, si] = cos_acc / n_heads
+
+        # ── PKS for this layer ────────────────────────────────────────────────
+        x_mid  = cache_l["resid_mid",  layer][0, T:].to(device=device, dtype=torch.float32)
+        x_post = cache_l["resid_post", layer][0, T:].to(device=device, dtype=torch.float32)
+
+        with torch.no_grad():
+            q_mid  = torch.softmax(_logit_lens(model, x_mid),  dim=-1).cpu().numpy()
+            q_post = torch.softmax(_logit_lens(model, x_post), dim=-1).cpu().numpy()
+
+        m   = 0.5 * (q_mid + q_post)
+        eps = 1e-10
+        kl1 = np.sum(q_mid  * (np.log(q_mid  + eps) - np.log(m + eps)), axis=-1)
+        kl2 = np.sum(q_post * (np.log(q_post + eps) - np.log(m + eps)), axis=-1)
+        token_jsd = np.clip(0.5 * kl1 + 0.5 * kl2, 0.0, 1.0)
+
+        for si, (s_start, s_end) in enumerate(sent_spans):
+            s_end_c = min(s_end, len(token_jsd))
+            if s_start < s_end_c:
+                pks_all[layer, si] = token_jsd[s_start:s_end_c].mean()
+
+        del cache_l
+        if "cuda" in str(device):
+            torch.cuda.empty_cache()
+
+        print(f".", end="", flush=True)
+
+    print()
+    return np.clip(ecs_all, -1.0, 1.0), pks_all
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -539,39 +656,146 @@ def per_layer_metrics(
     return result
 
 
+def bootstrap_layer_metrics(
+    ecs_layers: np.ndarray,
+    pks_layers: np.ndarray,
+    labels: np.ndarray,
+    n_boot: int = 1000,
+    ci: float = 0.95,
+    seed: int = 42,
+) -> Dict:
+    """
+    Bootstrap 95 % confidence intervals for per-layer AUROC and AUPRC.
+
+    Resamples sentences (rows) with replacement n_boot times, recomputes
+    per_layer_metrics on each resample, and returns the (alpha/2, 1-alpha/2)
+    percentile bounds across bootstrap iterations.
+
+    Returns
+    -------
+    Dict with keys  ecs_auroc_lo/hi, pks_auroc_lo/hi, comb_auroc_lo/hi,
+                    ecs_auprc_lo/hi, pks_auprc_lo/hi, comb_auprc_lo/hi
+    each a 1-D array of length n_layers.
+    """
+    from sklearn.metrics import roc_auc_score, average_precision_score
+
+    rng      = np.random.default_rng(seed)
+    n_sents  = labels.shape[0]
+    n_layers = ecs_layers.shape[0]
+    alpha    = (1.0 - ci) / 2.0   # e.g. 0.025 for 95 % CI
+
+    metrics_keys = [
+        "ecs_auroc", "pks_auroc", "comb_auroc",
+        "ecs_auprc", "pks_auprc", "comb_auprc",
+    ]
+    # boot_vals[key] → (n_boot, n_layers)
+    boot_vals: Dict[str, np.ndarray] = {
+        k: np.full((n_boot, n_layers), 0.5 if "auroc" in k else labels.mean())
+        for k in metrics_keys
+    }
+
+    print(f"  Bootstrapping ({n_boot} resamples) …", end="  ", flush=True)
+    for b in range(n_boot):
+        idx = rng.integers(0, n_sents, size=n_sents)
+        y_b = labels[idx].astype(int)
+        if y_b.sum() == 0 or (1 - y_b).sum() == 0:
+            continue   # degenerate resample — keep default (uninformative)
+
+        for l in range(n_layers):
+            ecs_b  = ecs_layers[l][idx]
+            pks_b  = pks_layers[l][idx]
+            comb_b = pks_b - ecs_b
+
+            for score, auc_k, apr_k in [
+                (-ecs_b,  "ecs_auroc",  "ecs_auprc"),
+                ( pks_b,  "pks_auroc",  "pks_auprc"),
+                ( comb_b, "comb_auroc", "comb_auprc"),
+            ]:
+                try:
+                    boot_vals[auc_k][b, l] = roc_auc_score(y_b, score)
+                except ValueError:
+                    pass
+                try:
+                    boot_vals[apr_k][b, l] = average_precision_score(y_b, score)
+                except ValueError:
+                    pass
+
+        if (b + 1) % 200 == 0:
+            print(f"{b + 1}", end=" ", flush=True)
+
+    print("done")
+
+    ci_out: Dict[str, np.ndarray] = {}
+    for k, vals in boot_vals.items():
+        ci_out[f"{k}_lo"] = np.percentile(vals, 100 * alpha,       axis=0)
+        ci_out[f"{k}_hi"] = np.percentile(vals, 100 * (1 - alpha), axis=0)
+
+    return ci_out
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Plotting
 # ─────────────────────────────────────────────────────────────────────────────
 
-def plot_layer_curves(metrics: Dict, out_dir: Path, hallu_thresh: float) -> None:
+def plot_layer_curves(
+    metrics: Dict,
+    out_dir: Path,
+    hallu_thresh: float,
+    ci: Optional[Dict] = None,
+) -> None:
+    """
+    Plot AUROC and AUPRC vs layer with optional shaded bootstrap CI bands.
+
+    Parameters
+    ----------
+    ci : output of bootstrap_layer_metrics, or None to skip CI bands.
+    """
     n_layers = len(metrics["ecs_auroc"])
     layers   = np.arange(n_layers)
 
     fig, axes = plt.subplots(1, 2, figsize=(14, 5))
 
-    ax = axes[0]
-    ax.plot(layers, metrics["ecs_auroc"],  "b-o", ms=4, label="1 − ECS")
-    ax.plot(layers, metrics["pks_auroc"],  "r-s", ms=4, label="PKS")
-    ax.plot(layers, metrics["comb_auroc"], "g-^", ms=4, label="PKS − ECS")
-    ax.axhline(0.5, color="grey", ls="--", lw=0.8, label="chance")
-    ax.set_xlabel("Layer index")
-    ax.set_ylabel("AUROC")
-    ax.set_title(f"AUROC vs Layer  (U > {hallu_thresh} → hallucinated)")
-    ax.legend(fontsize=8)
-    ax.grid(alpha=0.3)
+    specs = [
+        # (metric_key, colour, marker, label)
+        ("ecs_auroc",  "ecs_auprc",  "steelblue", "o", "1 − ECS"),
+        ("pks_auroc",  "pks_auprc",  "tomato",    "s", "PKS"),
+        ("comb_auroc", "comb_auprc", "seagreen",  "^", "PKS − ECS"),
+    ]
 
-    ax = axes[1]
+    for auc_k, apr_k, colour, marker, label in specs:
+        # AUROC panel
+        ax = axes[0]
+        ax.plot(layers, metrics[auc_k], color=colour,
+                marker=marker, ms=4, lw=1.5, label=label)
+        if ci is not None:
+            ax.fill_between(layers, ci[f"{auc_k}_lo"], ci[f"{auc_k}_hi"],
+                            color=colour, alpha=0.15)
+
+        # AUPRC panel
+        ax = axes[1]
+        ax.plot(layers, metrics[apr_k], color=colour,
+                marker=marker, ms=4, lw=1.5, label=label)
+        if ci is not None:
+            ax.fill_between(layers, ci[f"{apr_k}_lo"], ci[f"{apr_k}_hi"],
+                            color=colour, alpha=0.15)
+
+    ci_label = " (shaded = 95 % bootstrap CI)" if ci is not None else ""
+
+    axes[0].axhline(0.5, color="grey", ls="--", lw=0.8, label="chance")
+    axes[0].set_xlabel("Layer index")
+    axes[0].set_ylabel("AUROC")
+    axes[0].set_title(f"AUROC vs Layer  (U > {hallu_thresh} → hallucinated){ci_label}")
+    axes[0].legend(fontsize=8)
+    axes[0].grid(alpha=0.3)
+
     base = metrics["baseline_auprc"]
-    ax.plot(layers, metrics["ecs_auprc"],  "b-o", ms=4, label="1 − ECS")
-    ax.plot(layers, metrics["pks_auprc"],  "r-s", ms=4, label="PKS")
-    ax.plot(layers, metrics["comb_auprc"], "g-^", ms=4, label="PKS − ECS")
-    ax.axhline(base, color="grey", ls="--", lw=0.8,
-               label=f"baseline ({base:.2f})")
-    ax.set_xlabel("Layer index")
-    ax.set_ylabel("AUPRC")
-    ax.set_title(f"AUPRC vs Layer  (U > {hallu_thresh} → hallucinated)")
-    ax.legend(fontsize=8)
-    ax.grid(alpha=0.3)
+    axes[1].axhline(base, color="grey", ls="--", lw=0.8,
+                    label=f"baseline ({base:.2f})")
+    axes[1].set_xlabel("Layer index")
+    axes[1].set_ylabel("AUPRC")
+    axes[1].set_title(f"AUPRC vs Layer  (U > {hallu_thresh} → hallucinated){ci_label}")
+    axes[1].legend(fontsize=8)
+    axes[1].grid(alpha=0.3)
 
     plt.tight_layout()
     p = out_dir / "layer_auroc_auprc.png"
@@ -691,7 +915,7 @@ def main() -> None:
                         help="Dir with sample_NNN_generations.json")
     parser.add_argument("--sentences",
                         default="sae_experiments/luq_out/sentences",
-                        help="Dir with sample_NNN_sentences.csv (LUQ output)")
+                        help="Dir with sample_NNN_note_KK_sentences.csv (LUQ output)")
     parser.add_argument("--out",
                         default="sae_experiments/redeep_out",
                         help="Output directory for plots and CSVs")
@@ -699,10 +923,14 @@ def main() -> None:
                         help="LUQ uncertainty threshold to label a sentence hallucinated")
     parser.add_argument("--top-k-frac", type=float, default=0.10,
                         help="Fraction of transcript tokens to keep for ECS (sparsity)")
-    parser.add_argument("--note-idx", type=int, default=0,
-                        help="Which of the K generations to analyse (default 0 = reference)")
+    parser.add_argument("--note-idx", type=int, default=None,
+                        help="Restrict to one note index (default: all K notes per sample)")
     parser.add_argument("--samples", type=int, default=None,
                         help="Max number of samples to process (None = all)")
+    parser.add_argument("--n-boot", type=int, default=1000,
+                        help="Bootstrap resamples for CI bands (0 = skip)")
+    parser.add_argument("--no-cache", action="store_true",
+                        help="Ignore cached per-sample ECS/PKS arrays and recompute")
     args = parser.parse_args()
 
     gen_dir  = Path(args.generations)
@@ -722,90 +950,119 @@ def main() -> None:
         gen_files = gen_files[:args.samples]
     print(f"  Processing {len(gen_files)} sample(s) …\n")
 
+    cache_dir = out_dir / "sample_cache"
+    cache_dir.mkdir(parents=True, exist_ok=True)
+
     # Accumulators: one list per sample, concatenated later
     all_ecs: List[np.ndarray] = []
     all_pks: List[np.ndarray] = []
     all_luq: List[np.ndarray] = []
 
-    # ── Per-sample loop ───────────────────────────────────────────────────────
+    # ── Per-sample, per-note loop ─────────────────────────────────────────────
     for gen_path in gen_files:
         name = gen_path.stem.replace("_generations", "")  # e.g. sample_000
-        csv_path = sent_dir / f"{name}_sentences.csv"
-
-        if not csv_path.exists():
-            print(f"[{name}] No sentences CSV — skip")
-            continue
 
         with open(gen_path) as f:
             gen_data = json.load(f)
 
-        sent_df = pd.read_csv(csv_path)
-        if sent_df.empty:
-            print(f"[{name}] Empty sentences CSV — skip")
-            continue
+        transcript = gen_data["transcript"]
+        notes      = gen_data["notes"]
+        K          = len(notes)
 
-        transcript  = gen_data["transcript"]
-        note_idx    = min(args.note_idx, len(gen_data["notes"]) - 1)
-        note        = gen_data["notes"][note_idx]
-        sentences   = sent_df["sentence"].tolist()
-        luq_scores  = sent_df["uncertainty"].values.astype(np.float64)
+        note_indices = [args.note_idx] if args.note_idx is not None else range(K)
 
-        n_sents = len(sentences)
-        print(f"[{name}]  {n_sents} sentences …", end="  ", flush=True)
+        for k in note_indices:
+            if k >= K:
+                print(f"[{name}] note_idx {k} >= K={K} — skip")
+                continue
 
-        # Tokenise
-        try:
-            tokens, transcript_len = tokenize_prompt_and_note(
-                model, transcript, note, args.device
-            )
-        except Exception as exc:
-            print(f"tokenise ERROR: {exc}")
-            continue
+            note_name = f"{name}_note_{k:02d}"
+            csv_path  = sent_dir / f"{note_name}_sentences.csv"
 
-        note_len = tokens.shape[1] - transcript_len
-        print(f"T={transcript_len} N={note_len}", end="  ", flush=True)
+            if not csv_path.exists():
+                print(f"[{note_name}] No sentences CSV — skip")
+                continue
 
-        # Sentence → token span mapping
-        try:
-            spans = find_sentence_token_spans(
-                model, tokens, transcript_len, sentences
-            )
-        except Exception as exc:
-            print(f"spans ERROR: {exc}")
-            continue
+            sent_df = pd.read_csv(csv_path)
+            if sent_df.empty:
+                print(f"[{note_name}] Empty sentences CSV — skip")
+                continue
 
-        # Forward pass
-        try:
-            cache = run_forward_pass(model, tokens, args.device)
-        except Exception as exc:
-            print(f"forward ERROR: {exc}")
-            continue
+            note       = notes[k]
+            sentences  = sent_df["sentence"].tolist()
+            luq_scores = sent_df["uncertainty"].values.astype(np.float64)
 
-        # Chunk-level ECS and PKS
-        try:
-            ecs_l = compute_chunk_ecs(
-                model, cache, transcript_len, spans,
-                top_k_frac=args.top_k_frac,
-            )
-            pks_l = compute_chunk_pks(
-                model, cache, transcript_len, spans,
-                device=args.device,
-            )
-        except Exception as exc:
-            print(f"ECS/PKS ERROR: {exc}")
-            continue
+            # Drop standalone SOAP section headers
+            keep       = [not is_soap_header(s) for s in sentences]
+            sentences  = [s for s, m in zip(sentences, keep) if m]
+            luq_scores = luq_scores[keep]
 
-        del cache
-        if args.device == "cuda":
-            torch.cuda.empty_cache()
+            if not sentences:
+                print(f"[{note_name}] No content sentences after header filter — skip")
+                continue
 
-        # Trim to the number of sentences with LUQ scores
-        n_valid = min(ecs_l.shape[1], len(luq_scores))
-        all_ecs.append(ecs_l[:, :n_valid])
-        all_pks.append(pks_l[:, :n_valid])
-        all_luq.append(luq_scores[:n_valid])
+            n_sents = len(sentences)
+            print(f"[{note_name}]  {n_sents} sentences …", end="  ", flush=True)
 
-        print(f"ECS={ecs_l.mean():.3f}  PKS={pks_l.mean():.3f}  OK")
+            # Tokenise
+            try:
+                tokens, transcript_len = tokenize_prompt_and_note(
+                    model, transcript, note, args.device
+                )
+            except Exception as exc:
+                print(f"tokenise ERROR: {exc}")
+                continue
+
+            note_len = tokens.shape[1] - transcript_len
+            print(f"T={transcript_len} N={note_len}", end="  ", flush=True)
+
+            # Sentence → token span mapping
+            try:
+                spans = find_sentence_token_spans(
+                    model, tokens, transcript_len, sentences
+                )
+            except Exception as exc:
+                print(f"spans ERROR: {exc}")
+                continue
+
+            # ── Load from disk cache if available ─────────────────────────────
+            ecs_cache_path = cache_dir / f"{note_name}_ecs.npy"
+            pks_cache_path = cache_dir / f"{note_name}_pks.npy"
+
+            if (not args.no_cache
+                    and ecs_cache_path.exists()
+                    and pks_cache_path.exists()):
+                ecs_l = np.load(str(ecs_cache_path))
+                pks_l = np.load(str(pks_cache_path))
+                n_valid = min(ecs_l.shape[1], len(luq_scores))
+                all_ecs.append(ecs_l[:, :n_valid])
+                all_pks.append(pks_l[:, :n_valid])
+                all_luq.append(luq_scores[:n_valid])
+                print(f"ECS={ecs_l.mean():.3f}  PKS={pks_l.mean():.3f}  (cached)")
+                continue
+
+            # ── Layer-by-layer forward passes (ECS + PKS) ─────────────────────
+            try:
+                ecs_l, pks_l = compute_ecs_pks_layerwise(
+                    model, tokens, transcript_len, spans,
+                    device=args.device, top_k_frac=args.top_k_frac,
+                )
+            except Exception as exc:
+                print(f"forward/ECS/PKS ERROR: {exc}")
+                if args.device == "cuda":
+                    torch.cuda.empty_cache()
+                continue
+
+            # ── Save to disk cache ─────────────────────────────────────────────
+            np.save(str(ecs_cache_path), ecs_l)
+            np.save(str(pks_cache_path), pks_l)
+
+            n_valid = min(ecs_l.shape[1], len(luq_scores))
+            all_ecs.append(ecs_l[:, :n_valid])
+            all_pks.append(pks_l[:, :n_valid])
+            all_luq.append(luq_scores[:n_valid])
+
+            print(f"ECS={ecs_l.mean():.3f}  PKS={pks_l.mean():.3f}  OK")
 
     if not all_ecs:
         print("\nNo samples processed. Check paths and model loading.")
@@ -826,6 +1083,19 @@ def main() -> None:
     # ── AUROC / AUPRC per layer ───────────────────────────────────────────────
     print("\nComputing per-layer metrics …")
     metrics = per_layer_metrics(ecs_all, pks_all, labels)
+
+    ci_bands: Optional[Dict] = None
+    if args.n_boot > 0:
+        ci_bands = bootstrap_layer_metrics(
+            ecs_all, pks_all, labels, n_boot=args.n_boot
+        )
+        # Save CI to CSV alongside point estimates
+        ci_df = pd.DataFrame(
+            {k: v for k, v in ci_bands.items()},
+            index=pd.RangeIndex(n_layers, name="layer"),
+        ).reset_index()
+        ci_df.to_csv(out_dir / "layer_metrics_ci.csv", index=False)
+        print(f"  Saved {out_dir / 'layer_metrics_ci.csv'}")
 
     # Best layers
     best_pks_layer  = int(np.argmax(metrics["pks_auroc"]))
@@ -865,7 +1135,7 @@ def main() -> None:
 
     # ── Plots ─────────────────────────────────────────────────────────────────
     print("\nPlotting …")
-    plot_layer_curves(metrics, out_dir, args.hallu_thresh)
+    plot_layer_curves(metrics, out_dir, args.hallu_thresh, ci=ci_bands)
     plot_roc_pr_at_layer(ecs_all, pks_all, labels, best_comb_layer, out_dir,
                          tag=f"_best_comb")
     plot_roc_pr_at_layer(ecs_all, pks_all, labels, best_pks_layer, out_dir,

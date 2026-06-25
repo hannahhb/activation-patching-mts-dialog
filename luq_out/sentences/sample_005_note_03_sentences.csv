@@ -1,0 +1,36 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.1355
+1,HPI: The patient presented with a history of a right knee injury sustained one week ago while engaging in trampolining at a trampoline park.,0.0141
+2,"He reports hearing a snap and instant pain in the right knee, which he describes as pain on the outside of the knee.",0.0006
+3,He has been managing his pain with Tylenol but reports it has not provided significant relief.,0.0677
+4,He denies any other symptoms.,0.4494
+5,"Past medical history: The patient has a history of hypertension, for which he is currently on lisinopril 20mg.",0.1734
+6,"He also has diabetes, for which he is taking metformin 500mg.",0.1707
+7,He reports inconsistent exercise and a diet that could be improved.,0.3964
+8,Review of systems: [NOT MENTIONED],0.224
+9,Current medications:,0.0567
+10,Lisinopril 20mg [INDICATION: hypertension],0.0109
+11,Metformin 500mg [INDICATION: diabetes],0.0861
+12,Objective:,0.1362
+13,Vital signs:,0.0878
+14,Blood pressure: 180/80,0.015
+15,Pulse rate: NOT MENTIONED,0.2869
+16,Oxygen saturation: NOT MENTIONED,0.3178
+17,Temperature: NOT MENTIONED,0.576
+18,Physical exam: The patient's blood pressure is elevated at 180/80.,0.0054
+19,The heart rate is regular and rhythmic.,0.2404
+20,No murmur is appreciated.,0.5285
+21,Lungs are clear bilaterally.,0.5177
+22,"Examination of the right knee reveals ecchymosis and edema along the lateral aspect, but no effusion.",0.0855
+23,Range of motion is present but limited by pain.,0.004
+24,Test Results:,0.1023
+25,Right knee x-ray: No evidence of fracture or bony abnormality.,0.0038
+26,Assessment / Problem List:,0.0857
+27,"Assessment: The patient presents with a lateral ligament strain of the right knee and hypertension that is not well-controlled, as well as poorly managed diabetes.",0.2151
+28,Problem list: Right knee pain; hypertension; diabetes.,0.016
+29,Plan:,0.11
+30,I prescribed meloxicam 15mg daily for pain and swelling of the right knee.,0.0015
+31,I referred the patient to physical therapy to help strengthen the muscles around the area and prevent further injury.,0.001
+32,I will continue the patient's lisinopril at 20mg and order an echocardiogram to assess cardiac function.,0.0081
+33,I also ordered an A1c and lipid panel to evaluate the patient's diabetes management.,0.0066
+34,Follow-up: The patient will return for a follow-up appointment to discuss the results of the imaging and laboratory tests.,0.1034

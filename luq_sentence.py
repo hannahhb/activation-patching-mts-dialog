@@ -333,19 +333,22 @@ def _entailment_probs(
 def compute_luq_sentence(
     notes: List[str],
     nli_model_name: str = _NLI_MODEL_NAME,
+    ref_idx: int = 0,
 ) -> Dict:
     """
     Compute sentence-level LUQ uncertainty over K generated notes.
 
-    Reference note r_a = notes[0].
-    For each sentence s_j in r_a:
+    Reference note = notes[ref_idx].
+    For each sentence s_j in the reference:
         U(s_j) = 1 − mean_{r'} P(entail | s_j, r')
+    where r' ranges over all notes except the reference.
 
     Returns dict with keys:
         sentences   : List[str]
         uncertainty : np.ndarray  — U(s_j) ∈ [0, 1]
         mean_u      : float
         K_actual    : int
+        ref_idx     : int
     """
     K = len(notes)
     if K < 2:
@@ -354,8 +357,8 @@ def compute_luq_sentence(
 
     nli = _get_nli_pipeline(nli_model_name)
 
-    ref_note    = notes[0]
-    other_notes = notes[1:]
+    ref_note    = notes[ref_idx]
+    other_notes = [n for i, n in enumerate(notes) if i != ref_idx]
     sentences   = split_sentences(ref_note)
 
     if not sentences:
@@ -384,6 +387,7 @@ def compute_luq_sentence(
         "uncertainty": uncertainty,
         "mean_u":      mean_u,
         "K_actual":    K,
+        "ref_idx":     ref_idx,
     }
 
 
@@ -598,24 +602,35 @@ def run_luq_batch(
             })
             continue
 
-        # ── LUQ uncertainty ───────────────────────────────────────────────────
-        result = compute_luq_sentence(notes, nli_model_name=nli_model_name)
-        if not result:
+        # ── LUQ uncertainty for all K notes ──────────────────────────────────
+        all_note_results: List[Dict] = []
+        for k in range(len(notes)):
+            result_k = compute_luq_sentence(
+                notes, nli_model_name=nli_model_name, ref_idx=k
+            )
+            if not result_k:
+                print(f"  [luq] note {k} failed — skipping.")
+                continue
+            sent_df = pd.DataFrame({
+                "sentence_idx": np.arange(len(result_k["sentences"])),
+                "sentence":     result_k["sentences"],
+                "uncertainty":  result_k["uncertainty"].round(4),
+            })
+            sent_df.to_csv(
+                sent_dir / f"sample_{si:03d}_note_{k:02d}_sentences.csv",
+                index=False,
+            )
+            all_note_results.append(result_k)
+
+        if not all_note_results:
             summary_rows.append({
                 "sample_idx": si, "status": "luq_failed",
                 "mean_u": float("nan"), "K_actual": len(notes),
             })
             continue
 
-        # ── Save sentence scores ──────────────────────────────────────────────
-        sent_df = pd.DataFrame({
-            "sentence_idx": np.arange(len(result["sentences"])),
-            "sentence":     result["sentences"],
-            "uncertainty":  result["uncertainty"].round(4),
-        })
-        sent_df.to_csv(sent_dir / f"sample_{si:03d}_sentences.csv", index=False)
-
-        # ── Store for HTML and summary ────────────────────────────────────────
+        # ── Store note[0] result for HTML report ──────────────────────────────
+        result = all_note_results[0]
         all_results[si] = {
             "sample_idx": si,
             "transcript": transcript,
@@ -624,18 +639,26 @@ def run_luq_batch(
             **result,
         }
 
+        # Aggregate across all successfully scored notes
+        mean_u_all    = float(np.mean([r["mean_u"] for r in all_note_results]))
+        max_u_all     = float(np.max([r["uncertainty"].max() for r in all_note_results]))
+        all_u         = np.concatenate([r["uncertainty"] for r in all_note_results])
+        high_u_frac   = float((all_u > 0.5).mean())
+
         summary_rows.append({
-            "sample_idx":  si,
-            "status":      "ok",
-            "mean_u":      round(result["mean_u"], 4),
-            "max_u":       round(float(result["uncertainty"].max()), 4),
-            "n_sentences": len(result["sentences"]),
-            "K_actual":    result["K_actual"],
-            "high_u_frac": round(float((result["uncertainty"] > 0.5).mean()), 4),
+            "sample_idx":   si,
+            "status":       "ok",
+            "mean_u":       round(mean_u_all, 4),
+            "max_u":        round(max_u_all, 4),
+            "n_sentences":  len(result["sentences"]),
+            "K_actual":     result["K_actual"],
+            "notes_scored": len(all_note_results),
+            "high_u_frac":  round(high_u_frac, 4),
         })
 
-        print(f"  mean_U={result['mean_u']:.4f}  "
-              f"n_sentences={len(result['sentences'])}  K={result['K_actual']}")
+        print(f"  mean_U (all notes)={mean_u_all:.4f}  "
+              f"n_sentences={len(result['sentences'])}  K={result['K_actual']}  "
+              f"notes_scored={len(all_note_results)}")
 
     # ── Summary CSV ───────────────────────────────────────────────────────────
     summary_df = pd.DataFrame(summary_rows)

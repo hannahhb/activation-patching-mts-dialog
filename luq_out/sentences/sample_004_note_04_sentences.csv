@@ -1,0 +1,26 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.2828
+1,"HPI: The patient, Wayne, is a 68-year-old male presenting with a non-healing sore on his right foot that has been present for approximately 2-3 weeks.",0.3027
+2,"He reports that he initially had a blister from a new pair of shoes, but the wound has not improved despite treatment with antibiotics.",0.3397
+3,He denies any trauma to the foot and reports no pain or discomfort in the affected area.,0.3092
+4,"Past medical history: The patient has a history of diabetes, with an A1C of over 8% on his last check.",0.2006
+5,"He also mentions having a podiatrist in the past, but they are no longer available.",0.5624
+6,"Review of systems: The patient denies any fever, chills, drainage from the wound, or other symptoms.",0.1736
+7,Current medications: [NOT MENTIONED],0.2511
+8,Objective:,0.2636
+9,"Vital signs: The patient's temperature is 98.1°F, heart rate is 72, respirations are 16, and blood pressure is 110/65.",0.3006
+10,"Physical exam: The patient has a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, proximal to the right fifth MTP joint, with yellow slough and minimal granulation tissue.",0.1403
+11,"There is no surrounding erythema or cellulitis, no fluid collection, no necrosis, and no odor.",0.29
+12,"The vascular exam shows palpable bilateral femoral and popliteal pulses, but no palpable DP or PT pulses, with Doppler signs present.",0.2217
+13,Test Results: The patient's right foot X-ray shows no evidence of osteomyelitis.,0.1169
+14,Assessment / Problem List:,0.2341
+15,Assessment: The patient presents with a diabetic foot ulcer that requires further evaluation and treatment.,0.211
+16,Problem list: Diabetic foot ulcer; suspected vascular insufficiency; suspected diabetic neuropathy; diabetes mellitus; [NOT MENTIONED],0.2864
+17,Plan:,0.2808
+18,I ordered an Ankle Brachial Index (ABI) to determine the blood supply to the patient's foot.,0.1148
+19,I performed a debridement to remove dead tissue from the wound.,0.1154
+20,I prescribed a collagenase ointment to be applied to the wound once daily and covered with a dry sterile dressing.,0.1172
+21,The patient is to wear a surgical shoe to reduce pressure on the affected area.,0.1535
+22,I do not think additional antibiotics are necessary at this time.,0.3123
+23,"The patient is to return in two weeks for follow-up, and we may refer him to a vascular specialist if the ABI indicates inadequate blood supply for wound healing.",0.2185
+24,Follow-up: The patient is to return in two weeks for follow-up.,0.0149
