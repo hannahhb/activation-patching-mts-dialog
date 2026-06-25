@@ -189,8 +189,21 @@ def load_model(model_name: str, device: str):
 # Tokenisation
 # ─────────────────────────────────────────────────────────────────────────────
 
+_USER_TEMPLATE = (
+    "{system}\n\n"
+    "{template}\n\n"
+    "{style}\n\n"
+    "Transcript:\n{transcript}"
+)
+
+
 def _build_user_content(transcript: str) -> str:
-    return f"{transcript}\n\n{_SOAP_TEMPLATE}\n\n{_STYLE_GUIDELINES}"
+    return _USER_TEMPLATE.format(
+        system=_SYSTEM_PROMPT,
+        template=_SOAP_TEMPLATE,
+        style=_STYLE_GUIDELINES,
+        transcript=transcript.strip(),
+    )
 
 
 def tokenize_prompt_and_note(
@@ -200,24 +213,24 @@ def tokenize_prompt_and_note(
     device: str,
 ) -> Tuple[torch.Tensor, int]:
     """
-    Tokenise [system | user: transcript+template | assistant: note] and
-    return (full_token_ids, transcript_len).
+    Tokenise [user: full_prompt | assistant: note] and return
+    (full_token_ids, prompt_len).
 
-    transcript_len is the number of tokens that precede the note text so
-    that full_token_ids[:, transcript_len:] is exactly the note.
+    prompt_len is the number of tokens before the note, so
+    full_token_ids[:, prompt_len:] is exactly the note.
 
-    Uses the HF tokenizer's apply_chat_template when available (Llama 3.1
-    instruct). Falls back to a manual Llama-3-style format.
+    The user message exactly matches what luq_sentence.py sends to Bedrock
+    (single user turn, no system role): system_prompt + template + style +
+    "Transcript:\\n" + transcript.
     """
     tokenizer = model.tokenizer
     user_content = _build_user_content(transcript)
 
     messages = [
-        {"role": "system",    "content": _SYSTEM_PROMPT},
         {"role": "user",      "content": user_content},
         {"role": "assistant", "content": note},
     ]
-    prompt_messages = messages[:2]  # without the note
+    prompt_messages = messages[:1]  # without the note
 
     try:
         full_text = tokenizer.apply_chat_template(
@@ -227,19 +240,15 @@ def tokenize_prompt_and_note(
             prompt_messages, tokenize=False, add_generation_prompt=True
         )
     except Exception:
-        # Manual Llama 3.1 format
+        # Manual Llama 3.1 format — single user turn, no system header
         full_text = (
-            f"<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n"
-            f"{_SYSTEM_PROMPT}<|eot_id|>"
-            f"<|start_header_id|>user<|end_header_id|>\n\n"
+            f"<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n"
             f"{user_content}<|eot_id|>"
             f"<|start_header_id|>assistant<|end_header_id|>\n\n"
             f"{note}<|eot_id|>"
         )
         prompt_text = (
-            f"<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n"
-            f"{_SYSTEM_PROMPT}<|eot_id|>"
-            f"<|start_header_id|>user<|end_header_id|>\n\n"
+            f"<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n"
             f"{user_content}<|eot_id|>"
             f"<|start_header_id|>assistant<|end_header_id|>\n\n"
         )
@@ -481,10 +490,10 @@ def compute_chunk_pks(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Forward pass — layer-by-layer to avoid OOM on long sequences
+# Forward pass — single pass with hooks (memory-efficient)
 # ─────────────────────────────────────────────────────────────────────────────
 
-def compute_ecs_pks_layerwise(
+def compute_ecs_pks_single_pass(
     model,
     tokens: torch.Tensor,
     transcript_len: int,
@@ -493,11 +502,16 @@ def compute_ecs_pks_layerwise(
     top_k_frac: float = 0.10,
 ) -> Tuple[np.ndarray, np.ndarray]:
     """
-    Layer-by-layer ECS and PKS to avoid OOM on long sequences.
+    Single forward pass with hooks to compute ECS and PKS for all layers.
 
-    Runs n_layers separate forward passes, caching only the current layer's
-    activations plus the last layer's resid_post (needed for ECS sentence
-    vectors).  Peak GPU overhead per pass is ~830 MB instead of ~25 GB.
+    Each hook immediately compresses its activation and moves the result to CPU,
+    so the GPU never holds more than one layer's activations at a time on top of
+    the model weights.
+
+    - pattern hook  → per-chunk mean attention weights (H, T), stored on CPU
+    - resid_mid hook → stashed temporarily on CPU for PKS
+    - resid_post hook → PKS computed inline; x_last captured from last layer
+    - After pass   → ECS computed from compressed chunk attention + x_last
 
     Returns
     -------
@@ -510,55 +524,96 @@ def compute_ecs_pks_layerwise(
     T        = transcript_len
     k_top    = max(1, int(T * top_k_frac))
 
-    ecs_all = np.zeros((n_layers, n_sents), dtype=np.float64)
-    pks_all = np.zeros((n_layers, n_sents), dtype=np.float64)
+    # CPU accumulators
+    chunk_attn: List[Optional[List]] = [None] * n_layers   # [l][si] = (H, T) numpy
+    pks_all    = np.zeros((n_layers, n_sents), dtype=np.float64)
+    x_last_ref = [None]    # (S, D) numpy, set by last-layer resid_post hook
+    _mid_tmp   = [None]    # temp: note-token resid_mid for current layer (CPU tensor)
 
-    # Shared ECS state derived from last-layer resid_post (computed once)
-    x_transcript: Optional[np.ndarray] = None
-    sent_vecs:    Optional[np.ndarray] = None
+    # ── Hook factories ────────────────────────────────────────────────────────
 
-    last_resid_name = f"blocks.{n_layers - 1}.hook_resid_post"
-
-    for layer in range(n_layers):
-        target: set = {
-            f"blocks.{layer}.attn.hook_pattern",
-            f"blocks.{layer}.hook_resid_mid",
-            f"blocks.{layer}.hook_resid_post",
-            last_resid_name,   # always included for x_last (no-op when layer == last)
-        }
-        with torch.no_grad():
-            _, cache_l = model.run_with_cache(
-                tokens,
-                names_filter=lambda n, t=target: n in t,
-            )
-
-        # Compute shared ECS context from last-layer residuals (first pass only)
-        if x_transcript is None:
-            x_last = cache_l["resid_post", n_layers - 1][0].float().cpu().numpy()
-            x_transcript = x_last[:T]
-            D = x_last.shape[-1]
-            sent_vecs = np.zeros((n_sents, D), dtype=np.float64)
-            for si, (s_start, s_end) in enumerate(sent_spans):
+    def make_pattern_hook(l: int):
+        def fn(value, hook):
+            # value: (1, H, S, S) — compress to per-chunk means immediately
+            attn    = value[0].to(torch.float32).cpu().numpy()  # (H, S, S)
+            seq_len = attn.shape[-1]
+            chunks  = []
+            for s_start, s_end in sent_spans:
                 abs_s = T + s_start
-                abs_e = min(T + s_end, x_last.shape[0])
+                abs_e = min(T + s_end, seq_len)
                 if abs_s < abs_e:
-                    sent_vecs[si] = x_last[abs_s:abs_e].mean(axis=0)
+                    w = attn[:, abs_s:abs_e, :T].mean(axis=1)  # (H, T)
+                else:
+                    w = np.zeros((n_heads, T), dtype=np.float32)
+                chunks.append(w)
+            chunk_attn[l] = chunks
+            return value
+        return fn
 
-        # ── ECS for this layer ────────────────────────────────────────────────
-        attn    = cache_l["pattern", layer][0].float().cpu().numpy()  # (H, S, S)
-        seq_len = attn.shape[-1]
+    def make_resid_mid_hook(l: int):
+        def fn(value, hook):
+            # Stash note-token slice on CPU; freed after the paired resid_post hook
+            _mid_tmp[0] = value[0, T:].to(torch.float32).cpu()
+            return value
+        return fn
 
-        for si, (s_start, s_end) in enumerate(sent_spans):
-            abs_s = T + s_start
-            abs_e = min(T + s_end, seq_len)
-            if abs_s >= abs_e:
-                continue
+    def make_resid_post_hook(l: int):
+        def fn(value, hook):
+            if l == n_layers - 1:
+                x_last_ref[0] = value[0].to(torch.float32).cpu().numpy()
 
-            w_chunk = attn[:, abs_s:abs_e, :T].mean(axis=1)  # (H, T)
+            if _mid_tmp[0] is not None:
+                x_mid  = _mid_tmp[0].to(device)
+                x_post = value[0, T:].to(device=device, dtype=torch.float32)
+                with torch.no_grad():
+                    q_mid  = torch.softmax(_logit_lens(model, x_mid),  dim=-1).cpu().numpy()
+                    q_post = torch.softmax(_logit_lens(model, x_post), dim=-1).cpu().numpy()
+                m   = 0.5 * (q_mid + q_post)
+                eps = 1e-10
+                kl1 = np.sum(q_mid  * (np.log(q_mid  + eps) - np.log(m + eps)), axis=-1)
+                kl2 = np.sum(q_post * (np.log(q_post + eps) - np.log(m + eps)), axis=-1)
+                tok_jsd = np.clip(0.5 * kl1 + 0.5 * kl2, 0.0, 1.0)
+                for si, (s_start, s_end) in enumerate(sent_spans):
+                    s_e = min(s_end, len(tok_jsd))
+                    if s_start < s_e:
+                        pks_all[l, si] = tok_jsd[s_start:s_e].mean()
+                _mid_tmp[0] = None
+            return value
+        return fn
+
+    # ── Single forward pass ───────────────────────────────────────────────────
+    fwd_hooks = []
+    for l in range(n_layers):
+        fwd_hooks += [
+            (f"blocks.{l}.attn.hook_pattern", make_pattern_hook(l)),
+            (f"blocks.{l}.hook_resid_mid",    make_resid_mid_hook(l)),
+            (f"blocks.{l}.hook_resid_post",   make_resid_post_hook(l)),
+        ]
+
+    with torch.no_grad():
+        model.run_with_hooks(tokens, fwd_hooks=fwd_hooks)
+
+    # ── ECS: now we have x_last and all chunk attention weights ───────────────
+    x_arr   = x_last_ref[0]   # (S, D)
+    x_trans = x_arr[:T]       # (T, D)
+    D       = x_arr.shape[-1]
+
+    sent_vecs = np.zeros((n_sents, D), dtype=np.float64)
+    for si, (s_start, s_end) in enumerate(sent_spans):
+        abs_s = T + s_start
+        abs_e = min(T + s_end, x_arr.shape[0])
+        if abs_s < abs_e:
+            sent_vecs[si] = x_arr[abs_s:abs_e].mean(axis=0)
+
+    ecs_all = np.zeros((n_layers, n_sents), dtype=np.float64)
+    for l in range(n_layers):
+        if chunk_attn[l] is None:
+            continue
+        for si in range(n_sents):
+            w_chunk = chunk_attn[l][si]   # (H, T)
             s_vec   = sent_vecs[si]
             norm_s  = np.linalg.norm(s_vec)
             cos_acc = 0.0
-
             for h in range(n_heads):
                 w_h     = w_chunk[h]
                 top_idx = (np.argpartition(w_h, -k_top)[-k_top:]
@@ -568,40 +623,13 @@ def compute_ecs_pks_layerwise(
                 if w_sum < 1e-10:
                     continue
                 w_top = w_top / w_sum
-                e     = (x_transcript[top_idx] * w_top[:, None]).sum(axis=0)
+                e     = (x_trans[top_idx] * w_top[:, None]).sum(axis=0)
                 norm_e = np.linalg.norm(e)
                 denom  = norm_e * norm_s
                 if denom > 1e-8:
                     cos_acc += float(np.dot(e, s_vec) / denom)
+            ecs_all[l, si] = cos_acc / n_heads
 
-            ecs_all[layer, si] = cos_acc / n_heads
-
-        # ── PKS for this layer ────────────────────────────────────────────────
-        x_mid  = cache_l["resid_mid",  layer][0, T:].to(device=device, dtype=torch.float32)
-        x_post = cache_l["resid_post", layer][0, T:].to(device=device, dtype=torch.float32)
-
-        with torch.no_grad():
-            q_mid  = torch.softmax(_logit_lens(model, x_mid),  dim=-1).cpu().numpy()
-            q_post = torch.softmax(_logit_lens(model, x_post), dim=-1).cpu().numpy()
-
-        m   = 0.5 * (q_mid + q_post)
-        eps = 1e-10
-        kl1 = np.sum(q_mid  * (np.log(q_mid  + eps) - np.log(m + eps)), axis=-1)
-        kl2 = np.sum(q_post * (np.log(q_post + eps) - np.log(m + eps)), axis=-1)
-        token_jsd = np.clip(0.5 * kl1 + 0.5 * kl2, 0.0, 1.0)
-
-        for si, (s_start, s_end) in enumerate(sent_spans):
-            s_end_c = min(s_end, len(token_jsd))
-            if s_start < s_end_c:
-                pks_all[layer, si] = token_jsd[s_start:s_end_c].mean()
-
-        del cache_l
-        if "cuda" in str(device):
-            torch.cuda.empty_cache()
-
-        print(f".", end="", flush=True)
-
-    print()
     return np.clip(ecs_all, -1.0, 1.0), pks_all
 
 
@@ -1043,7 +1071,7 @@ def main() -> None:
 
             # ── Layer-by-layer forward passes (ECS + PKS) ─────────────────────
             try:
-                ecs_l, pks_l = compute_ecs_pks_layerwise(
+                ecs_l, pks_l = compute_ecs_pks_single_pass(
                     model, tokens, transcript_len, spans,
                     device=args.device, top_k_frac=args.top_k_frac,
                 )
