@@ -796,6 +796,112 @@ def _refresh_outputs(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Re-label mode — rebuild metrics/plots from saved activations, no model needed
+# ─────────────────────────────────────────────────────────────────────────────
+
+def run_metrics_only(args, act_dir: Path, out_dir: Path) -> None:
+    """
+    Recompute all AUROC/Cohen's d CSVs and plots from saved activations/*.npz,
+    using a (possibly different) per-sentence hallucination metric. No model load.
+
+    Labels for activation sample_NNN_gen_KK.npz are taken, in this priority:
+      1. --labels-dir/sample_NNN_note_KK_sentences.csv, column --label-col,
+         aligned by the activation's stored sent_idx; else
+      2. the activation's own stored `luq` scores (the metric used at compute time).
+    A sentence is hallucinated iff its score > --hallu-thresh.
+    """
+    labels_dir = Path(args.labels_dir) if args.labels_dir else Path(args.sentences)
+    act_files  = sorted(act_dir.glob("sample_*_gen_*.npz"))
+    if not act_files:
+        print(f"No activations found in {act_dir}. Run the full pass first.")
+        sys.exit(1)
+    print(f"[metrics-only] {len(act_files)} activation files; "
+          f"label_col='{args.label_col}' from {labels_dir}")
+
+    n_layers = None
+    all_ecs, all_ecscopy, all_pks, all_luq = [], [], [], []
+    pg_ecs_auroc, pg_ecscopy_auroc, pg_pks_auroc = [], [], []
+    pg_ecs_d, pg_ecscopy_d, pg_pks_d = [], [], []
+
+    auroc_csv_path  = out_dir / "per_gen_auroc.csv"
+    cohens_csv_path = out_dir / "per_gen_cohens_d.csv"
+    auroc_csv_path.unlink(missing_ok=True)      # full rebuild — don't append to stale rows
+    cohens_csv_path.unlink(missing_ok=True)
+    auroc_hdr = cohens_hdr = False
+
+    for ap in act_files:
+        m = re.search(r"sample_(\d+)_gen_(\d+)", ap.stem)
+        si, k = int(m.group(1)), int(m.group(2))
+        d = np.load(str(ap), allow_pickle=True)
+        ecs_l, ecscopy_l, pks_l = d["ecs"], d["ecs_copy"], d["pks"]
+        if n_layers is None:
+            n_layers = ecs_l.shape[0]
+
+        # Resolve new labels via sent_idx; fall back to stored luq.
+        score = None
+        lab_csv = labels_dir / f"sample_{si:03d}_note_{k:02d}_sentences.csv"
+        if "sent_idx" in d and lab_csv.exists():
+            ldf = pd.read_csv(lab_csv)
+            if args.label_col in ldf.columns and "sentence_idx" in ldf.columns:
+                lut = dict(zip(ldf["sentence_idx"].values,
+                               ldf[args.label_col].values.astype(np.float64)))
+                score = np.array([lut.get(int(i), np.nan) for i in d["sent_idx"]])
+        if score is None:
+            score = d["luq"].astype(np.float64)
+
+        n_valid = min(ecs_l.shape[1], score.shape[0])
+        ecs_l, ecscopy_l, pks_l = ecs_l[:, :n_valid], ecscopy_l[:, :n_valid], pks_l[:, :n_valid]
+        score = score[:n_valid]
+
+        # Drop sentences with no label (NaN) from this gen.
+        ok = np.isfinite(score)
+        if ok.sum() == 0:
+            continue
+        ecs_l, ecscopy_l, pks_l, score = ecs_l[:, ok], ecscopy_l[:, ok], pks_l[:, ok], score[ok]
+        y = (score > args.hallu_thresh).astype(int)
+
+        all_ecs.append(ecs_l); all_ecscopy.append(ecscopy_l)
+        all_pks.append(pks_l); all_luq.append(score)
+
+        a_ecs  = auroc_per_layer_single(ecs_l,     y, hallu_high=False)
+        a_ecsc = auroc_per_layer_single(ecscopy_l, y, hallu_high=False)
+        a_pks  = auroc_per_layer_single(pks_l,     y, hallu_high=True)
+        d_ecs  = cohens_d_per_layer_single(ecs_l,     y)
+        d_ecsc = cohens_d_per_layer_single(ecscopy_l, y)
+        d_pks  = cohens_d_per_layer_single(pks_l,     y)
+        pg_ecs_auroc.append(a_ecs); pg_ecscopy_auroc.append(a_ecsc); pg_pks_auroc.append(a_pks)
+        pg_ecs_d.append(d_ecs); pg_ecscopy_d.append(d_ecsc); pg_pks_d.append(d_pks)
+
+        layers_arr = np.arange(n_layers)
+        pd.DataFrame({"sample": si, "gen": k, "layer": layers_arr,
+                      "ecs_auroc": np.round(a_ecs, 5),
+                      "ecs_copy_auroc": np.round(a_ecsc, 5),
+                      "pks_auroc": np.round(a_pks, 5)}).to_csv(
+            auroc_csv_path, mode="a", header=not auroc_hdr, index=False)
+        auroc_hdr = True
+        pd.DataFrame({"sample": si, "gen": k, "layer": layers_arr,
+                      "ecs_cohens_d": np.round(d_ecs, 5),
+                      "ecs_copy_cohens_d": np.round(d_ecsc, 5),
+                      "pks_cohens_d": np.round(d_pks, 5)}).to_csv(
+            cohens_csv_path, mode="a", header=not cohens_hdr, index=False)
+        cohens_hdr = True
+
+    if not all_ecs:
+        print("No labelled sentences found; nothing to plot.")
+        sys.exit(1)
+
+    _refresh_outputs(
+        all_ecs, all_ecscopy, all_pks, all_luq,
+        pg_ecs_auroc, pg_ecscopy_auroc, pg_pks_auroc,
+        pg_ecs_d, pg_ecscopy_d, pg_pks_d,
+        n_layers, out_dir, args.hallu_thresh,
+    )
+    luq_all = np.concatenate(all_luq)
+    print(f"\n[metrics-only] {luq_all.shape[0]} sentences, "
+          f"{int((luq_all > args.hallu_thresh).sum())} hallucinated. Outputs in {out_dir}")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Main
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -831,6 +937,17 @@ def main() -> None:
     parser.add_argument("--samples",      type=int,   default=None,
                         help="Max number of samples to process")
     parser.add_argument("--no-cache",     action="store_true")
+    parser.add_argument("--label-col",    default="uncertainty",
+                        help="Column in the sentences CSV used as the hallucination score "
+                             "(default 'uncertainty' = LUQ). Swap to relabel with another metric.")
+    parser.add_argument("--labels-dir",   default=None,
+                        help="Directory of per-sentence label CSVs for --metrics-only "
+                             "(default: --sentences dir). Files: {sample}_note_{k}_sentences.csv "
+                             "with columns sentence_idx + --label-col.")
+    parser.add_argument("--metrics-only", action="store_true",
+                        help="Rebuild all metrics/plots from saved activations/*.npz using "
+                             "--label-col (optionally from --labels-dir) WITHOUT loading the "
+                             "model. Use to re-label with a different uncertainty metric.")
     args = parser.parse_args()
 
     gen_dir  = Path(args.generations)
@@ -843,6 +960,10 @@ def main() -> None:
 
     act_dir = out_dir / "activations"
     act_dir.mkdir(parents=True, exist_ok=True)
+
+    if args.metrics_only:
+        run_metrics_only(args, act_dir, out_dir)
+        return
 
     model    = load_model(args.model, args.device)
     n_layers = model.cfg.n_layers
@@ -925,11 +1046,15 @@ def main() -> None:
 
             note       = notes[k]
             sentences  = sent_df["sentence"].tolist()
-            luq_scores = sent_df["uncertainty"].values.astype(np.float64)
+            luq_scores = sent_df[args.label_col].values.astype(np.float64)
+            sent_idx   = (sent_df["sentence_idx"].values
+                          if "sentence_idx" in sent_df.columns
+                          else np.arange(len(sentences)))
 
             keep       = [not is_soap_header(s) for s in sentences]
             sentences  = [s for s, m in zip(sentences, keep) if m]
             luq_scores = luq_scores[keep]
+            sent_idx   = sent_idx[keep]
 
             if not sentences:
                 print(f"[{note_name}] No content sentences after header filter — skip")
@@ -1009,14 +1134,20 @@ def main() -> None:
                 luq_v = luq_scores[:n_valid]
                 print(f"ECS={np.nanmean(ecs_l):.3f}  PKS={pks_l.mean():.3f}  OK")
 
+            sidx_v = sent_idx[:luq_v.shape[0]]
+
             # ── Save per-gen activation file (all layers + heads, backtrackable) ──
+            # sent_idx + label_col let the analysis be RE-LABELLED later (--metrics-only)
+            # with a different hallucination metric, without re-running the model.
             np.savez_compressed(
                 act_dir / f"sample_{si:03d}_gen_{k:02d}.npz",
-                ecs      = ecs_l.astype(np.float32),      # (n_layers, n_sents) all heads
-                ecs_copy = ecscopy_l.astype(np.float32),  # (n_layers, n_sents) copying heads
-                pks      = pks_l.astype(np.float32),
-                luq      = luq_v.astype(np.float32),
-                labels   = (luq_v > args.hallu_thresh).astype(np.int8),
+                ecs       = ecs_l.astype(np.float32),      # (n_layers, n_sents) all heads
+                ecs_copy  = ecscopy_l.astype(np.float32),  # (n_layers, n_sents) copying heads
+                pks       = pks_l.astype(np.float32),
+                luq       = luq_v.astype(np.float32),
+                labels    = (luq_v > args.hallu_thresh).astype(np.int8),
+                sent_idx  = sidx_v.astype(np.int64),
+                label_col = np.array(args.label_col),
             )
 
             # ── Accumulate pooled data ─────────────────────────────────────────

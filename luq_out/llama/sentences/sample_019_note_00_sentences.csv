@@ -1,25 +1,25 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, a 54-year-old male, presents with a complaint of stabbing, shooting pain in the right cheekbone area of his face, which has been ongoing for approximately 2-3 months.",0.5144
-2,He reports that the pain is exacerbated by certain temperatures and can be triggered by cold weather.,0.4345
-3,He denies numbness or tingling in the affected area and reports that his smile and vision are unchanged.,0.9378
-4,He describes the pain as excruciating and rates it as a 10 out of 10 in severity.,0.7751
-5,"He has tried ibuprofen, Motrin, and topical treatments such as tiger balm, which have provided minimal relief.",0.9859
-6,"Past medical history: The patient has a history of occasional headaches, for which he takes Tylenol, but denies a history of migraines or brain tumors.",0.9635
-7,Review of systems: The patient reports no symptoms in other organs or systems.,0.9422
-8,Current medications: He takes Tylenol for occasional headaches.,0.7876
+1,"HPI: The patient, a 54-year-old male, presents with a complaint of stabbing, shooting pain in the right cheekbone area of his face, which has been ongoing for approximately 2-3 months.",0.0866
+2,He reports that the pain is exacerbated by certain temperatures and can be triggered by cold weather.,0.126
+3,He denies numbness or tingling in the affected area and reports that his smile and vision are unchanged.,0.7
+4,He describes the pain as excruciating and rates it as a 10 out of 10 in severity.,0.3336
+5,"He has tried ibuprofen, Motrin, and topical treatments such as tiger balm, which have provided minimal relief.",0.2216
+6,"Past medical history: The patient has a history of occasional headaches, for which he takes Tylenol, but denies a history of migraines or brain tumors.",0.2717
+7,Review of systems: The patient reports no symptoms in other organs or systems.,0.243
+8,Current medications: He takes Tylenol for occasional headaches.,0.314
 9,Objective:,0.5
-10,Vital signs: Not mentioned.,0.9903
-11,"Physical exam: The patient was able to follow my finger in both directions, and his smile appeared symmetric.",0.2914
-12,He reported a little numbness on the right side of his face when I rubbed my fingers next to his ear.,0.5507
-13,"When I used a cotton tape to run along the side of his face, he reported feeling a little numb on the right side.",0.0109
-14,"When I poked him with a needle on the right side of his face, he reported feeling dull, whereas on the left side, he reported feeling sharp.",0.12
+10,Vital signs: Not mentioned.,0.9775
+11,"Physical exam: The patient was able to follow my finger in both directions, and his smile appeared symmetric.",0.1811
+12,He reported a little numbness on the right side of his face when I rubbed my fingers next to his ear.,0.3641
+13,"When I used a cotton tape to run along the side of his face, he reported feeling a little numb on the right side.",0.0068
+14,"When I poked him with a needle on the right side of his face, he reported feeling dull, whereas on the left side, he reported feeling sharp.",0.115
 15,Assessment / Problem List:,0.5
-16,"Assessment: The patient has trigeminal neuralgia, a condition where compression of the trigeminal nerve by a small blood vessel causes shooting, electrical pain in the face.",0.7793
-17,Problem list: Trigeminal neuralgia; confirmed.,0.7014
+16,"Assessment: The patient has trigeminal neuralgia, a condition where compression of the trigeminal nerve by a small blood vessel causes shooting, electrical pain in the face.",0.0666
+17,Problem list: Trigeminal neuralgia; confirmed.,0.042
 18,Plan:,0.5
-19,I prescribed Tegretol 100mg orally 3 times a day for the treatment of trigeminal neuralgia.,0.9945
-20,"I explained the potential side effects of the medication, including memory loss, tingling, imbalance, and dermatologic reactions, particularly in individuals with Eustachian tube dysfunction.",1.0
-21,I recommended genetic testing to ensure the medication is safe for the patient.,0.0046
-22,I instructed the patient to follow up in one month to assess the efficacy of the medication and to discuss further treatment options if necessary.,0.5561
-23,Follow-up: The patient will return in one month to assess the efficacy of the Tegretol and to discuss further treatment options if necessary.,0.779
+19,I prescribed Tegretol 100mg orally 3 times a day for the treatment of trigeminal neuralgia.,0.7585
+20,"I explained the potential side effects of the medication, including memory loss, tingling, imbalance, and dermatologic reactions, particularly in individuals with Eustachian tube dysfunction.",0.8046
+21,I recommended genetic testing to ensure the medication is safe for the patient.,0.0001
+22,I instructed the patient to follow up in one month to assess the efficacy of the medication and to discuss further treatment options if necessary.,0.3275
+23,Follow-up: The patient will return in one month to assess the efficacy of the Tegretol and to discuss further treatment options if necessary.,0.0288

@@ -1,30 +1,30 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, a 36-year-old female, presents with ankle pain after a fall two days ago.",0.6017
-2,"She reports that her left ankle twisted underneath her on the outside, causing pain and swelling.",0.301
-3,"She has tried ibuprofen, ice, and elevation for pain and swelling, with minimal relief.",0.5371
-4,"The pain is localized to the outside of her ankle, with no pain in her calf, lower leg, or knee.",0.8316
-5,Past medical history: The patient has a history of diabetes and high blood pressure.,0.6262
-6,She is currently taking metformin for diabetes and norvasc for high blood pressure.,0.6744
-7,Review of systems: The patient reports no symptoms in other organs relevant to her initial presentation.,0.5269
-8,Current medications: Metformin [dosage not mentioned] for diabetes; Norvasc [dosage not mentioned] for high blood pressure.,0.9409
+1,"HPI: The patient, a 36-year-old female, presents with ankle pain after a fall two days ago.",0.0735
+2,"She reports that her left ankle twisted underneath her on the outside, causing pain and swelling.",0.0071
+3,"She has tried ibuprofen, ice, and elevation for pain and swelling, with minimal relief.",0.1514
+4,"The pain is localized to the outside of her ankle, with no pain in her calf, lower leg, or knee.",0.0588
+5,Past medical history: The patient has a history of diabetes and high blood pressure.,0.0377
+6,She is currently taking metformin for diabetes and norvasc for high blood pressure.,0.1622
+7,Review of systems: The patient reports no symptoms in other organs relevant to her initial presentation.,0.0393
+8,Current medications: Metformin [dosage not mentioned] for diabetes; Norvasc [dosage not mentioned] for high blood pressure.,0.5609
 9,Objective:,0.5
 10,Vital signs: Blood pressure 130/70.,0.9996
-11,"Physical exam: The patient's neck exam is fine, with no bruits.",0.7725
-12,"Her lungs are clear, and her heart exam is normal, with a 2/6 systolic ejection murmur that has not changed from previous exams.",0.5592
-13,Her belly exam is good.,0.5156
-14,"On her ankle exam, she has tenderness over the lateral malleolus and the fifth metatarsal, with some swelling and redness.",0.2164
-15,"There is pain with valgus stressing of the ankle, but normal sensation and pulses.",0.3483
+11,"Physical exam: The patient's neck exam is fine, with no bruits.",0.7638
+12,"Her lungs are clear, and her heart exam is normal, with a 2/6 systolic ejection murmur that has not changed from previous exams.",0.5557
+13,Her belly exam is good.,0.5001
+14,"On her ankle exam, she has tenderness over the lateral malleolus and the fifth metatarsal, with some swelling and redness.",0.2118
+15,"There is pain with valgus stressing of the ankle, but normal sensation and pulses.",0.3328
 16,Test Results: [NOT MENTIONED],0.5
 17,Assessment / Problem List:,0.5
-18,"Assessment: The patient likely has an ankle sprain, but a fracture is a possibility, so an x-ray is ordered.",0.2235
-19,Problem list: Ankle sprain; diabetes; high blood pressure.,0.9984
+18,"Assessment: The patient likely has an ankle sprain, but a fracture is a possibility, so an x-ray is ordered.",0.061
+19,Problem list: Ankle sprain; diabetes; high blood pressure.,0.4458
 20,Plan:,0.5
-21,I prescribed naprosyn 500mg twice a day for pain control.,0.0123
-22,I ordered an x-ray of the ankle to rule out a fracture.,0.1772
-23,I put the patient in an air splint and provided crutches for weightbearing avoidance.,0.5755
-24,I will give a call back if the x-ray shows a fracture and refer to orthopedics if necessary.,0.4576
-25,"The patient should keep the ankle elevated, apply ice, and continue with pain medication as prescribed.",0.4475
-26,"Follow-up: The patient will follow up with the eye appointment already scheduled for her diabetes checkup, and I will order another hemoglobin A1c test.",1.0
-27,I will also check some baseline labs.,1.0
-28,"The patient's high blood pressure will be monitored, and the norvasc will be refilled as needed.",0.9875
+21,I prescribed naprosyn 500mg twice a day for pain control.,0.0006
+22,I ordered an x-ray of the ankle to rule out a fracture.,0.0496
+23,I put the patient in an air splint and provided crutches for weightbearing avoidance.,0.1267
+24,I will give a call back if the x-ray shows a fracture and refer to orthopedics if necessary.,0.1546
+25,"The patient should keep the ankle elevated, apply ice, and continue with pain medication as prescribed.",0.3793
+26,"Follow-up: The patient will follow up with the eye appointment already scheduled for her diabetes checkup, and I will order another hemoglobin A1c test.",0.8957
+27,I will also check some baseline labs.,0.7493
+28,"The patient's high blood pressure will be monitored, and the norvasc will be refilled as needed.",0.7704

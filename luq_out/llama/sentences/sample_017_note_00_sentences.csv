@@ -1,41 +1,41 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: Tyler, a 56-year-old male, presents with a 4-5 week history of difficulty swallowing, describing a sensation of something being stuck in his throat, which can be painful and requires him to wash down solid foods occasionally.",0.78
-2,He has never fully choked but has thought about it.,0.8065
-3,The symptoms are more pronounced with solids than liquids.,0.7919
-4,"He denies coughing, vomiting blood, or any weight loss.",0.3858
-5,Past medical history: Diabetes and high blood pressure.,0.5937
-6,He is currently taking metformin 500mg twice a day for diabetes and norvasc for high blood pressure.,0.4139
-7,Review of systems: No mention of any other symptoms.,0.9937
+1,"HPI: Tyler, a 56-year-old male, presents with a 4-5 week history of difficulty swallowing, describing a sensation of something being stuck in his throat, which can be painful and requires him to wash down solid foods occasionally.",0.0799
+2,He has never fully choked but has thought about it.,0.3094
+3,The symptoms are more pronounced with solids than liquids.,0.2478
+4,"He denies coughing, vomiting blood, or any weight loss.",0.0717
+5,Past medical history: Diabetes and high blood pressure.,0.1749
+6,He is currently taking metformin 500mg twice a day for diabetes and norvasc for high blood pressure.,0.1201
+7,Review of systems: No mention of any other symptoms.,0.3108
 8,Current medications:,0.5
-9,Metformin 500mg twice a day for diabetes,0.3246
-10,Norvasc for high blood pressure (quantity not specified),0.749
+9,Metformin 500mg twice a day for diabetes,0.0808
+10,Norvasc for high blood pressure (quantity not specified),0.3168
 11,Objective:,0.5
 12,Vital signs:,0.5
-13,Blood pressure: 120/50,0.9016
-14,No other vital signs mentioned.,0.8889
+13,Blood pressure: 120/50,0.8156
+14,No other vital signs mentioned.,0.725
 15,Physical exam:,0.5
-16,Neck: no swelling or masses,0.7371
-17,Thyroid: normal,0.7304
-18,"Throat: no masses, swelling, or redness",0.8918
-19,Lung exam: clear,0.7383
-20,Heart exam: normal,0.7304
-21,Belly exam: epigastric tenderness on the right side,0.903
-22,Back exam: normal,0.7304
-23,Extremity exam: normal,0.7304
-24,Neurological exam: fine,0.7731
+16,Neck: no swelling or masses,0.5696
+17,Thyroid: normal,0.5198
+18,"Throat: no masses, swelling, or redness",0.7446
+19,Lung exam: clear,0.5361
+20,Heart exam: normal,0.5198
+21,Belly exam: epigastric tenderness on the right side,0.6088
+22,Back exam: normal,0.5198
+23,Extremity exam: normal,0.5198
+24,Neurological exam: fine,0.5945
 25,Test Results:,0.5
-26,Hemoglobin A1c: 7.4 (from previous visit),0.9974
+26,Hemoglobin A1c: 7.4 (from previous visit),0.6937
 27,Assessment / Problem List:,0.5
-28,"Assessment: I suspect that Tyler may have a narrowing in his throat, potentially due to a stricture of the esophagus, which is causing his difficulty swallowing.",0.7581
-29,Problem list: Difficulty swallowing; Narrowing of the esophagus (suspected); Diabetes (active); High blood pressure (active),0.528
+28,"Assessment: I suspect that Tyler may have a narrowing in his throat, potentially due to a stricture of the esophagus, which is causing his difficulty swallowing.",0.001
+29,Problem list: Difficulty swallowing; Narrowing of the esophagus (suspected); Diabetes (active); High blood pressure (active),0.3074
 30,Plan:,0.5
-31,I recommended a referral to gastroenterology for further evaluation and a scope to investigate the narrowing of the esophagus.,0.7067
-32,I also prescribed Prilosec 20mg once a day for potential gastroesophageal reflux disease.,0.4408
-33,"I advised Tyler to chew his foods frequently and slowly, especially hard or large foods.",0.8855
-34,"I will order a repeat hemoglobin A1c, kidney function tests, and refer him to ophthalmology for diabetic retinopathy evaluation.",0.2244
-35,I will continue him on metformin and norvasc.,0.3434
-36,I will have him return in a month to review the test results and make any necessary adjustments.,0.9996
-37,I will also refill his norvasc prescription.,0.907
+31,I recommended a referral to gastroenterology for further evaluation and a scope to investigate the narrowing of the esophagus.,0.1955
+32,I also prescribed Prilosec 20mg once a day for potential gastroesophageal reflux disease.,0.3252
+33,"I advised Tyler to chew his foods frequently and slowly, especially hard or large foods.",0.4091
+34,"I will order a repeat hemoglobin A1c, kidney function tests, and refer him to ophthalmology for diabetic retinopathy evaluation.",0.1222
+35,I will continue him on metformin and norvasc.,0.3386
+36,I will have him return in a month to review the test results and make any necessary adjustments.,0.6115
+37,I will also refill his norvasc prescription.,0.7925
 38,Follow-up:,0.5
-39,I will see Tyler back in a month to review the test results and make any necessary adjustments.,0.8811
+39,I will see Tyler back in a month to review the test results and make any necessary adjustments.,0.1146
