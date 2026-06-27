@@ -1,0 +1,32 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, a 56-year-old male, presents with a 4-5 week history of difficulty swallowing, describing a sensation of something being stuck in his throat, which is more pronounced with solids than liquids.",0.6492
+2,"He reports a little pain and has considered choking, but has not fully choked.",0.6249
+3,"He has not noticed any blood, coughing, weight loss, or chest pain.",0.492
+4,The patient has a past medical history of diabetes and high blood pressure.,0.4045
+5,"Past medical history: The patient has diabetes and high blood pressure, for which he is taking metformin 500mg twice a day and norvasc, respectively.",0.2519
+6,"Review of systems: The patient reports no nausea, vomiting, diarrhea, or other side effects from his medications.",0.4379
+7,Current medications:,0.5
+8,Metformin 500mg twice a day for diabetes,0.4515
+9,Norvasc (dose not specified) for high blood pressure,0.9376
+10,Objective:,0.5
+11,Vital signs: The patient's blood pressure was 120/50.,0.7815
+12,"Physical exam: The patient's neck was fine, with no swelling or masses.",0.1762
+13,"The thyroid was normal, with no masses or lymph nodes.",0.1511
+14,"The throat examination was normal, with no masses, swelling, or redness.",0.6706
+15,"The lung and heart exams were clear, with no murmurs.",0.5087
+16,"The belly exam revealed epigastric tenderness on the right side, but no masses or significant swelling.",0.6483
+17,The back and extremity exams were normal.,0.3174
+18,The neurological exam was fine.,0.2343
+19,Test Results: [NOT MENTIONED],0.5
+20,Assessment / Problem List:,0.5
+21,"Assessment: The patient is experiencing difficulty swallowing, which may be due to a narrowing of the esophagus, potentially a stricture.",0.0036
+22,Problem list: Difficulty swallowing (active); Diabetes (active); Hypertension (active); Reflux (suspected),0.828
+23,Plan:,0.5
+24,I prescribed Prilosec 20mg once a day for reflux.,0.0037
+25,"I recommended that the patient chew his foods frequently and thoroughly, especially with hard-to-swallow foods.",0.1284
+26,I referred the patient to gastroenterology for a scope to investigate the cause of the difficulty swallowing.,0.0027
+27,I also ordered a repeat hemoglobin A1c and additional blood work to check kidney function.,0.3361
+28,I referred the patient to ophthalmology for an eye examination to check for diabetic retinopathy.,0.115
+29,"I continued the patient's current medications, including metformin and norvasc.",0.2457
+30,Follow-up: The patient will return in about a month for a follow-up appointment to discuss the results of the blood tests and any necessary adjustments to his treatment plan.,0.1329

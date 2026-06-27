@@ -1,0 +1,25 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, Jack, presented with neck pain after being in a car accident one week ago.",0.4587
+2,"He described the pain as a 7 out of 10, which is not constant but worsens with movement.",0.4497
+3,"The pain is located in the back of his neck and is exacerbated by flexion, extension, rotation, and lateral bending.",0.9058
+4,"He has tried ibuprofen, which provided some relief, but not significantly.",0.5364
+5,"He has also experienced headaches, but they are not ongoing.",0.9996
+6,"Past medical history: The patient has a history of playing football years ago, but no previous issues with his neck.",0.6239
+7,"He did not seek medical attention after the car accident, citing the cost.",0.8539
+8,Review of systems: The patient has not experienced any hearing or visual disturbances.,0.3445
+9,Current medications:,0.5
+10,Objective:,0.5
+11,Vital signs: [NOT MENTIONED],0.5
+12,"Physical exam: The patient exhibited positive pain to palpation of the soft tissues of the neck, positive pain with flexion, extension, rotation, and lateral bending of the neck.",0.0119
+13,Test Results: The results of the x-ray showed no signs of fracture or bony abnormalities.,0.0036
+14,Assessment / Problem List:,0.5
+15,"Assessment: I believe the patient has neck strain, likely due to whiplash from the car accident.",0.2239
+16,Problem list: Neck strain; Whiplash; [NOT MENTIONED],0.6166
+17,Plan:,0.5
+18,I prescribed Motrin 600mg every 6-8 hours for inflammation.,0.1203
+19,I also prescribed Flexeril 10mg every 12 hours as needed for muscle relaxation.,0.1261
+20,I advised the patient to avoid straining his neck and to be conservative with his movements.,0.2217
+21,I ordered an MRI to rule out any potential nerve impingement or other issues.,0.1143
+22,I referred the patient to either physical rehab or a chiropractor for further evaluation and treatment once the MRI results are available.,0.0243
+23,Follow-up: The patient will follow up with the results of the MRI and to discuss further treatment options.,0.7133

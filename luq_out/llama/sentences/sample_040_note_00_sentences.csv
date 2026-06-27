@@ -1,0 +1,24 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, a 35-year-old male, presented with a 2-hour history of low back pain and tingling sensation in the right foot, which started after raking leaves in the yard.",0.9992
+2,He reports that the pain worsened when standing up and improved with a hot shower and sitting.,0.4485
+3,He denies any previous similar episodes lasting more than a day.,0.9919
+4,He reports trying ice and 2 Advil without relief.,0.776
+5,His partner is present and reports similar pain when the patient stands up.,0.212
+6,Past medical history: The patient has a history of similar low back pain 3 years ago that resolved on its own.,0.7419
+7,"He normally does not engage in physical activity, and his partner also reports not being physically active.",0.8976
+8,Review of systems: The patient reports tingling sensation in the right leg.,0.449
+9,Current medications: None mentioned.,0.9906
+10,Objective:,0.5
+11,Vital signs: [NOT MENTIONED],0.5
+12,"Physical exam: The patient has some pain with flexion, palpation at L5, and dorsiflexion is normal.",0.0035
+13,Pulses are equal in all extremities.,0.7057
+14,Test Results: X-ray of the low back is normal.,0.1328
+15,Assessment / Problem List:,0.5
+16,"Assessment: The patient has a probable lumbar strain with possible sprain, likely secondary to heavy lifting and bending while raking leaves.",0.9993
+17,Problem list: Lumbar strain; suspected sprain; [NOT MENTIONED],0.832
+18,Plan:,0.5
+19,I prescribed meloxicam 7.5 mg orally once daily for pain management.,0.412
+20,I also prescribed physical therapy to help with stretching and exercises to improve flexibility and strength.,0.4264
+21,"The patient and his partner will follow up in 2 weeks to re-evaluate the condition, and if not improving, we will consider further imaging, such as an MRI.",0.9982
+22,Follow-up: The patient will follow up in 2 weeks to re-evaluate the condition and consider further imaging if necessary.,0.7751

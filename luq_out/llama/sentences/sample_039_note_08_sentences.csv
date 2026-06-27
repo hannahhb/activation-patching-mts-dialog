@@ -1,0 +1,47 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, a 56-year-old male, presents with difficulty swallowing that has been ongoing for approximately four to five weeks.",0.2409
+2,"He describes a sensation of something being stuck in his throat, which is sometimes painful and occurs when he tries to eat solid foods.",0.0289
+3,He has never fully choked but has experienced temporary difficulty swallowing solids.,0.5786
+4,"He denies coughing, vomiting blood, or weight loss.",0.4282
+5,His past medical history includes diabetes and high blood pressure.,0.3975
+6,"He has been compliant with his medications, including metformin 500mg twice daily, and has seen improvement in his blood sugar levels, with an HbA1c of 7.4.",0.7722
+7,He has not experienced any side effects from metformin.,0.9618
+8,Review of systems: The patient denies any symptoms in other organs that are relevant to his initial presentation.,0.6742
+9,Past medical history: The patient has a history of diabetes and high blood pressure.,0.2792
+10,He has been taking metformin 500mg twice daily for his diabetes.,0.3268
+11,Current medications:,0.5
+12,Metformin 500mg twice daily for diabetes,0.4236
+13,Norvasc (INDICATION NOT MENTIONED),0.5796
+14,Objective:,0.5
+15,Vital signs:,0.5
+16,Blood pressure: 120/50 mmHg,0.9993
+17,Pulse rate: NOT MENTIONED,0.592
+18,Oxygen saturation: NOT MENTIONED,0.592
+19,Temperature: NOT MENTIONED,0.592
+20,Physical exam:,0.5
+21,"Neck: Normal, no swelling",0.2957
+22,"Thyroid: Normal, no masses",0.3264
+23,Lymph nodes: None palpable,0.9932
+24,"Throat: No masses or swelling, no redness",0.6545
+25,Lung exam: Clear,0.7303
+26,"Heart exam: Normal, no murmurs",0.6894
+27,"Abdominal exam: Epigastric tenderness on the right side, no masses or significant swelling",0.7969
+28,Back exam: Normal,0.7695
+29,Extremity exam: Normal,0.7695
+30,Neurological exam: Normal,0.7695
+31,Test Results:,0.5
+32,HbA1c: 7.4 (previously mentioned),0.9982
+33,Blood pressure: 120/50 mmHg (measured in the office),0.9981
+34,Assessment / Problem List:,0.5
+35,"Assessment: The patient presents with difficulty swallowing due to a possible narrowing of the esophagus, which may be caused by a stricture.",0.104
+36,Problem list: Difficulty swallowing; narrowing of the esophagus; diabetes; high blood pressure; unknown status for all other conditions,0.7894
+37,Plan:,0.5
+38,I prescribed Prilosec 20mg once daily for gastroesophageal reflux disease (GERD) as it can exacerbate the patient's difficulty swallowing.,0.9189
+39,"I recommended that the patient chew their food frequently, especially hard foods like steak or meat, to avoid getting stuck.",0.5569
+40,I also ordered a referral for gastroenterology to perform an endoscopy to investigate the cause of the narrowing of the esophagus.,0.4609
+41,"I ordered a hemoglobin A1c, kidney function tests, and an eye referral to ophthalmology to check for diabetic retinopathy.",0.1141
+42,I continued the patient on metformin and norvasc as previously prescribed.,0.3321
+43,I will see the patient back in a month to review the results of the blood tests and adjust the treatment plan if necessary.,0.6671
+44,Follow-up:,0.5
+45,I will see the patient back in a month to review the results of the blood tests and adjust the treatment plan if necessary.,0.1124

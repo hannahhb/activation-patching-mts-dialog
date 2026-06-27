@@ -1,0 +1,35 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, a 56-year-old male, presents with difficulty swallowing that began approximately 4-5 weeks ago.",0.2683
+2,"He reports feeling like something is stuck in his throat, which is painful and occasionally causes him to have to wash it down with liquids.",0.7279
+3,He has never fully choked but has thought about it.,0.7804
+4,"The symptoms are more pronounced with solid foods, and he has not noticed any changes with temperature of the food or liquids.",0.9974
+5,"He denies coughing, vomiting blood, or weight loss.",0.4273
+6,"He also denies any chest pain, shortness of breath, or nausea.",0.9992
+7,Past medical history: The patient has a history of diabetes and high blood pressure.,0.1859
+8,He is currently on metformin 500mg twice a day for diabetes and norvasc for high blood pressure.,0.2654
+9,Review of systems: The patient denies any other symptoms in other organs that are relevant to his initial presentation.,0.8757
+10,Current medications:,0.5
+11,Metformin 500mg twice a day for diabetes,0.3441
+12,Norvasc for high blood pressure,0.5745
+13,Objective:,0.5
+14,Vital signs: The patient's blood pressure is 120/50 mmHg.,0.8863
+15,Physical exam: The patient's neck is fine with no swelling.,0.4342
+16,"The thyroid feels normal, and there are no masses or lymph nodes.",0.2389
+17,The throat exam is normal with no masses or swelling.,0.7455
+18,"The lung exam is clear, and the heart exam is normal.",0.6035
+19,There is epigastric tenderness in the right upper quadrant but no masses or significant swelling.,0.568
+20,"The back exam is normal, and the extremity and neurological exams are fine.",0.5807
+21,Test Results: [NOT MENTIONED],0.5
+22,Assessment / Problem List:,0.5
+23,"Assessment: The patient presents with difficulty swallowing that may be due to a narrowing of the esophagus, possibly causing a stricture.",0.0036
+24,Problem list: Dysphagia; Hypertension; Diabetes mellitus; Stricture of the esophagus; Gastroesophageal reflux disease (suspected),0.7682
+25,Plan:,0.5
+26,I will refer the patient to gastroenterology for further evaluation with an esophagogastroduodenoscopy (EGD) to investigate the stricture.,0.2707
+27,I will prescribe prilosec 20mg once a day for gastroesophageal reflux disease.,0.1129
+28,"I will also recommend that the patient chew their foods frequently, especially hard foods like steak or meat, to prevent them from getting stuck.",0.669
+29,I will order another hemoglobin A1c and kidney function tests.,0.2254
+30,I will also refer the patient to ophthalmology to check for diabetic retinopathy.,0.2011
+31,I will continue the patient on metformin and norvasc as previously prescribed.,0.3384
+32,I will send a refill for norvasc to the patient's pharmacy.,0.9963
+33,Follow-up: I will see the patient back in about a month to review the results of the blood tests and make any necessary adjustments to their treatment plan.,0.1852

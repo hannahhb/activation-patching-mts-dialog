@@ -1,0 +1,25 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"The patient, Larry, is a 50-year-old male who has been experiencing chronic back pain for the past couple of years.",0.9994
+2,"He reports a sharp stabbing pain in his back that radiates down to his right leg, specifically to his big toe.",0.363
+3,"He also experiences numbness and tingling in his right leg, especially to the foot.",0.6653
+4,He denies any loss of sensation in the genital or rectal area and any weakness.,0.4128
+5,"He has tried physical therapy, strong pain medications, and was even considered for surgery in the past but would like to avoid it.",0.828
+6,He has gained weight due to his limited mobility and has had to give up his recent hobby of playing golf.,0.6138
+7,"He has no family history of spine conditions and is a non-smoker, having quit 20 years ago.",0.6193
+8,Objective:,0.5
+9,Vital signs: [NOT MENTIONED],0.5
+10,Physical exam: The patient has no overlying erythema or ecchymosis on the musculoskeletal back exam.,0.7204
+11,There is midline tenderness at L4-L5 disk space with right-sided lumbar paravertebral tenderness.,0.4368
+12,The patient experiences pain with lumbar flexion and supine straight leg test is positive.,0.6612
+13,"On neurological examination, there is decreased sensation to light touch at the right lateral thigh at L4 dermatome.",0.8494
+14,Patellar and achilles reflexes are symmetrical.,0.9818
+15,Test Results: The patient's MRI shows disk herniation with nerve impingement.,0.014
+16,Assessment / Problem List:,0.5
+17,Assessment: The patient's symptoms are consistent with an L4-L5 herniated disk with radiculopathy.,0.0058
+18,Problem list: Lumbar back pain; L4-L5 herniated disk with radiculopathy; Radiculopathy; Chronic back pain.,0.8345
+19,Plan:,0.5
+20,"I prescribed a spinal injection with a corticosteroid, which will be administered under fluoroscopy to help reduce inflammation and alleviate pain.",0.1127
+21,I will monitor the patient's response to the injection and schedule follow-up appointments as needed.,0.3381
+22,The patient will have the option to have up to four injections per year if needed.,0.5219
+23,Follow-up: The patient will return for a follow-up appointment to assess the effectiveness of the injection and to discuss further treatment options if necessary.,0.4577

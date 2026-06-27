@@ -1,0 +1,25 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, Jacqueline, is a 38-year-old female who presents with anxiety about her recent blood work showing a positive HCV antibody test and elevated AST, but normal ALT and total bilirubin levels.",0.9992
+2,"She reports feeling fine, but mentions being tired at the end of the day after working, which is not unusual for her.",0.7449
+3,"She has a history of IV drug use in the past, but has been clean for over 15 years.",0.0762
+4,"She also has a history of smoking, currently smoking 1-2 cigarettes per day, and a history of alcohol use, currently drinking about 1 beer per day.",0.8576
+5,"Her family history includes hypertension, diabetes, and depression.",0.0203
+6,"Past medical history: The patient has a history of IV drug use, but has been clean for over 15 years.",0.1243
+7,She also has a history of smoking and alcohol use.,0.8741
+8,"Review of systems: The patient reports being tired at the end of the day, but this is not a new symptom for her.",0.9376
+9,Current medications: [NOT MENTIONED],0.5
+10,Objective:,0.5
+11,Vital signs: [NOT MENTIONED],0.5
+12,Physical exam: The patient appears in no distress and no jaundice on skin exam.,0.0369
+13,"The heart exam shows a regular rate and rhythm with a 2/6 systolic murmur, which has not changed from last year.",0.0177
+14,"The lung exam is clear with no wheezes, rales, or rhonchi.",0.0487
+15,"The abdominal exam shows normal bowel sounds, a soft abdomen, and no hepatosplenomegaly.",0.4468
+16,The musculoskeletal exam is normal with no gait disturbance or edema.,0.3746
+17,"Test Results: The patient's HCV antibody test was positive, and her liver panel showed an elevated AST at 39, but normal ALT and total bilirubin levels.",0.0204
+18,Assessment / Problem List:,0.5
+19,"Assessment: The patient has a confirmed diagnosis of hepatitis C, which is a viral infection that affects the liver.",0.006
+20,Problem list: Hepatitis C; suspected liver disease; suspected liver fibrosis.,0.7152
+21,"Plan: I plan to confirm the diagnosis with additional blood work, including checking the HCV RNA and HCV genotype, and to determine the severity of her liver disease by checking for liver fibrosis with an ultrasound.",0.447
+22,I will also recommend that her wife and children undergo the same screening for HCV.,0.7014
+23,"Follow-up: I will see the patient in about three weeks to discuss the results of the additional blood work and ultrasound, and to determine the next steps in her treatment plan.",0.6173

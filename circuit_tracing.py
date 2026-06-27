@@ -60,14 +60,17 @@ def _format_prompt(transcript: str) -> str:
 _model: Optional[ReplacementModel] = None
 
 
-def _get_model(dtype: torch.dtype) -> ReplacementModel:
+def _get_model(dtype: torch.dtype, n_devices: int = 1, backend: str = "transformerlens") -> ReplacementModel:
     global _model
     if _model is None:
-        print(f"[model] Loading {_LLAMA_MODEL} + {_TRANSCODER_REPO} …")
+        print(f"[model] Loading {_LLAMA_MODEL} + {_TRANSCODER_REPO} "
+              f"(backend={backend}, n_devices={n_devices}) …")
         _model = ReplacementModel.from_pretrained(
             _LLAMA_MODEL,
             _TRANSCODER_REPO,
             dtype=dtype,
+            backend=backend,
+            n_devices=n_devices,
         )
         print("[model] Ready.")
     return _model
@@ -88,8 +91,9 @@ def run(
     edge_threshold: float,
     serve: bool,
     dtype: torch.dtype,
+    max_transcript_tokens: int | None = None,
 ) -> None:
-    model     = _get_model(dtype)
+    model     = _get_model(dtype, n_devices=torch.cuda.device_count(), backend=args.backend)
     out_dir.mkdir(parents=True, exist_ok=True)
 
     for si in tqdm(sample_indices, desc="circuit trace", unit="sample"):
@@ -165,8 +169,11 @@ def _parse_args() -> argparse.Namespace:
     p.add_argument("--edge-threshold",  type=float, default=0.98)
     p.add_argument("--server",          action="store_true",
                    help="Launch local viewer after attribution")
-    p.add_argument("--dtype",           default="bfloat16",
+    p.add_argument("--dtype",    default="bfloat16",
                    choices=["bfloat16", "float16", "float32"])
+    p.add_argument("--backend", default="transformerlens",
+                   choices=["transformerlens", "nnsight"],
+                   help="Backend for ReplacementModel (default transformerlens)")
     return p.parse_args()
 
 
