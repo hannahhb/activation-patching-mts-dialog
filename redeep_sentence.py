@@ -851,7 +851,7 @@ def main() -> None:
         description="Sentence-level ReDeEP ECS/PKS analysis on pre-generated SOAP notes"
     )
     parser.add_argument("--model",
-                        default="meta-llama/Meta-Llama-3.1-8B-Instruct",
+                        default="meta-llama/Llama-3.1-8B-Instruct",
                         help="HuggingFace/TransformerLens model name")
     parser.add_argument("--device",
                         default=(

@@ -163,7 +163,9 @@ def _parse_args() -> argparse.Namespace:
                    help="Which generation to use (default 0)")
     p.add_argument("--generations-dir", default="luq_out/llama/generations")
     p.add_argument("--out",             default="circuit_graphs")
-    p.add_argument("--batch-size",      type=int,   default=256)
+    p.add_argument("--batch-size",      type=int,   default=32,
+                   help="Attribution source nodes per backward pass (default 32; "
+                        "lower for long prompts to avoid OOM during Phase 1 forward)")
     p.add_argument("--offload",         default="cpu", choices=["cpu", "disk", "none"])
     p.add_argument("--node-threshold",  type=float, default=0.8)
     p.add_argument("--edge-threshold",  type=float, default=0.98)
