@@ -1,0 +1,30 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: Stephanie Morales, a 36-year-old female, presents with a 2-day history of ankle pain, which started after slipping on ice and twisting her left ankle.",0.7799
+2,"She reports falling and experiencing severe pain, swelling, and difficulty walking.",0.2866
+3,"She has tried ibuprofen, ice, and elevation, which has provided some relief.",0.6008
+4,"The pain is localized to the outside of her ankle, with no pain radiating to her calf, lower leg, or knee.",0.6673
+5,She denies bleeding or significant swelling.,0.6955
+6,Past medical history: Stephanie has a history of diabetes and high blood pressure.,0.9045
+7,"She is taking metformin and norvasc, with a hemoglobin A1c of 6.8.",0.5393
+8,Review of systems: [NOT MENTIONED],0.5
+9,Current medications:,0.5
+10,Metformin [dose and frequency NOT MENTIONED],0.9809
+11,Norvasc [dose and frequency NOT MENTIONED],0.9873
+12,Objective:,0.5
+13,"Vital signs: Blood pressure 120/70, pulse rate NOT MENTIONED, oxygen saturation NOT MENTIONED, temperature NOT MENTIONED.",0.7702
+14,"Physical exam: The patient has tenderness over the lateral malleolus and the fifth metatarsal, with some swelling and redness.",0.1473
+15,The ankle exam shows pain with valgus stressing.,0.2336
+16,The patient has normal sensation and pulses in the affected area.,0.2737
+17,Test Results: [NOT MENTIONED],0.5
+18,Assessment / Problem List:,0.5
+19,"Assessment: I suspect the patient has an ankle sprain, but I would like to order an x-ray to rule out a fracture.",0.1162
+20,Problem list: Ankle sprain; Diabetes; High blood pressure.,0.9994
+21,Plan:,0.5
+22,I prescribed naprosyn 500mg twice a day for pain control.,0.1178
+23,I will give the patient a splint and crutches to avoid weightbearing until the x-ray results are available.,0.2252
+24,I will order an x-ray of the ankle.,0.0051
+25,"I will also order baseline labs, including a hemoglobin A1c, to monitor the patient's diabetes.",0.5243
+26,I will refill the patient's norvasc prescription.,0.4471
+27,Follow-up: I will contact the patient once the x-ray results are available to determine the next course of action.,0.2136
+28,"If the x-ray shows a fracture, I will refer the patient to orthopedics.",0.9999

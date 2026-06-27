@@ -1,0 +1,27 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient presents with anxiety regarding her recent blood work, which revealed a positive HCV antibody test and an elevated AST.",0.9324
+2,"She reports being surprised by the diagnosis, as she has been feeling fine.",0.0595
+3,She mentions a history of IV drug use 15 years ago and reports a decreased use of alcohol and cigarettes.,0.4136
+4,"She also mentions feeling tired at the end of the day, but attributes it to work and not getting enough sleep.",0.8872
+5,"She has a family history of hypertension, diabetes, and depression.",0.0585
+6,"Past medical history: The patient reports a history of IV drug use 15 years ago and a history of smoking, currently down to one to two cigarettes a day.",0.3792
+7,"She reports a history of alcohol use, currently drinking about a beer a day, with occasional increase on weekends.",0.8892
+8,Review of systems: The patient denies any other symptoms besides fatigue at the end of the day.,0.4707
+9,Current medications: [NOT MENTIONED],0.5
+10,Objective:,0.5
+11,Vital signs: [NOT MENTIONED],0.5
+12,Physical exam: The patient appears in no distress and no jaundice on skin exam.,0.0537
+13,"The heart exam reveals a regular rate and rhythm with a 2/6 systolic murmur, which has not changed from last year.",0.0207
+14,"The lung exam is clear with no wheezes, rales, or rhonchi.",0.1375
+15,"The abdominal exam is normal, with present bowel sounds, a soft abdomen, and no hepatosplenomegaly.",0.2136
+16,"The musculoskeletal exam is normal, with no gait disturbance and no edema.",0.6692
+17,"Test Results: The patient's recent blood work shows a positive HCV antibody test and an elevated AST of 39, but normal liver panel results for albumin and total bilirubin.",0.0506
+18,Assessment / Problem List:,0.5
+19,"Assessment: The patient is diagnosed with hepatitis C, a viral infection that affects the liver, which she likely has had for years.",0.3374
+20,Problem list: Hepatitis C; active; confirmed.,0.7511
+21,Plan:,0.5
+22,"I will order additional blood work, including checking the HCV RNA and HCV genotype, to confirm the diagnosis and determine the severity of liver disease.",0.2232
+23,I will also order an ultrasound to assess liver fibrosis.,0.528
+24,I will schedule follow-up appointments for the patient's family members to screen for HCV.,0.9999
+25,Follow-up: I will see the patient in about three weeks to review the results of the additional testing and determine the next steps in treatment.,0.5563

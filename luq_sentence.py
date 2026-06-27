@@ -38,11 +38,13 @@ import json
 import os
 import re
 import warnings
+from collections import defaultdict
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 import numpy as np
 import pandas as pd
+from tqdm import tqdm
 
 warnings.filterwarnings("ignore")
 
@@ -64,85 +66,7 @@ _DATASET_SPLIT  = "test1"
 #     Source: Table 1, npj Digital Medicine (2025) 8:274.
 # ─────────────────────────────────────────────────────────────────────────────
 
-_SYSTEM_PROMPT = (
-    "You are a medical office assistant drafting documentation for a physician. "
-    "DO NOT ADD any content that isn't specifically mentioned IN THE TRANSCRIPT. "
-    "From the attached transcript generate a SOAP note based on the below template "
-    "format for the physician to review, include all the relevant information and "
-    "do not include any information that isn't explicitly mentioned in the transcript. "
-    "If nothing is mentioned just return [NOT MENTIONED].\n\n"
-    "It is VITAL that all the information in the note is as accurate as possible. "
-    "Avoid repeating the same information in different sections where possible. "
-    "Write the note from the perspective of the physician. "
-    "Only include any section of the template if there is information from the "
-    "transcript, otherwise omit it. "
-    "Begin your response directly with 'Subjective:' — do not add any preamble, "
-    "introduction, or heading before the note."
-)
-
-_SOAP_TEMPLATE = """Template for Clinical SOAP Note Format:
-
-Subjective:
-- HPI: [include here any mentioned symptoms, chronological narrative of patients \
-complaints, information obtained from other sources (always identify source if not \
-the patient).]
-- Past medical history: [include here all of the patients past conditions, treatments \
-and encounters, also include relevant social history here including smoking, alcohol, \
-drug use and occupation/travel history]
-- Review of systems: [include here any additional symptoms in other organs that is \
-relevant to the initial presentation]
-- Current medications: [list medicines each on a separate line in the format: \
-[DRUG NAME] [DRUG DOSE] [DRUG FREQUENCY] [INDICATION]]
-
-Objective:
-- Vital signs: [including any mentioned blood pressure, pulse rate, oxygen saturation, \
-temperature]
-- Physical exam: [the examination findings from the physical exam, if mentioned]
-- Test Results: [include in this section any lab test results or imaging reports]
-
-Assessment / Problem List:
-- Assessment: [A one-sentence description of the patient and major problem as described \
-by the physician, including the diagnosis the physician has identified]
-- Problem list: [List clinical problems inline, separated by semicolons, on a single line. \
-Format each as [Condition] [Status: active/suspected/confirmed/past/unknown]. \
-Leave status as unknown if not mentioned in the transcript. \
-Do not use numbered lists or line breaks between problems.]
-
-Plan:
-[include here any management plan mentioned in the transcript, including patient \
-education, prescriptions, tests, referrals or other plans.]
-
-Follow-up: [include here any plan mentioned to see the patient again, or to be \
-discharged.]"""
-
-_STYLE_GUIDELINES = """Please adhere to the following style guidelines:
-- Write from the perspective of the physician (first person)
-- Write ONLY in complete, grammatical sentences. Do NOT use bullet points, hyphens, \
-numbered lists, or any other list formatting anywhere in the note.
-- Be ultra-precise, do not use generalising terms
-- Be highly detailed
-- Include ALL important negations (e.g. "The patient denies fever.") as well as all \
-positive findings, written as full sentences.
-- List medications as a sentence: "I prescribed [drug] [dose] [frequency] for [indication]."
-- Always document if drug allergies are present or not
-- Examination findings always refer to physical exam signs only, not symptoms
-- Preserve quantities if mentioned in the text"""
-
-_USER_TEMPLATE = (
-    "{system}\n\n"
-    "{template}\n\n"
-    "{style}\n\n"
-    "Transcript:\n{transcript}"
-)
-
-
-def _build_user_message(transcript: str) -> str:
-    return _USER_TEMPLATE.format(
-        system=_SYSTEM_PROMPT,
-        template=_SOAP_TEMPLATE,
-        style=_STYLE_GUIDELINES,
-        transcript=transcript.strip(),
-    )
+from prompts import build_prompt as _build_user_message
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -229,7 +153,7 @@ def generate_K_notes(
 ) -> List[str]:
     """Generate K independent notes. Returns however many succeed (≥ 1)."""
     notes = []
-    for k in range(K):
+    for k in tqdm(range(K), desc="  notes", unit="note", leave=False):
         try:
             note = generate_note(
                 transcript,
@@ -239,9 +163,8 @@ def generate_K_notes(
                 max_tokens=max_tokens,
             )
             notes.append(note)
-            print(f"  [gen] {k+1}/{K} done ({len(note)} chars)")
         except Exception as exc:
-            print(f"  [gen] {k+1}/{K} failed: {exc}")
+            tqdm.write(f"  [gen] {k+1}/{K} failed: {exc}")
     return notes
 
 
@@ -249,25 +172,141 @@ def generate_K_notes(
 # 5.  Sentence splitting
 # ─────────────────────────────────────────────────────────────────────────────
 
-_PERIOD_SPLIT = re.compile(r"(?<=\.)\s+(?=[A-Z])")
+_PERIOD_SPLIT  = re.compile(r"(?<=\.)\s+(?=[A-Z])")
+
+# Titles / abbreviations whose trailing period must not trigger a sentence split
+_ABBREV_RE = re.compile(
+    r'\b(Mr|Mrs|Ms|Dr|Prof|Sr|Jr|St|vs|etc|Jan|Feb|Mar|Apr|Jun|Jul|Aug'
+    r'|Sep|Oct|Nov|Dec|approx|appt|Dept|No|Vol|Fig)\.',
+    re.IGNORECASE,
+)
+_DOT_PLACEHOLDER = "\x00DOT\x00"
+
+
+def _protect_abbreviations(text: str) -> str:
+    return _ABBREV_RE.sub(lambda m: m.group(0).replace(".", _DOT_PLACEHOLDER), text)
+
+
+def _restore_abbreviations(text: str) -> str:
+    return text.replace(_DOT_PLACEHOLDER, ".")
+_FIELD_PREFIX  = re.compile(r"^[A-Za-z /\-]+:\s*")   # strips "Problem list: ", "Assessment: " etc.
+_TEMPLATE_JUNK = re.compile(r"\[unknown\]|\[NOT MENTIONED\]|\[not mentioned\]",
+                             re.IGNORECASE)
+_SEMICOLON_SPLIT = re.compile(r";\s*")
+
+
+def _clean_for_nli(sent: str) -> str:
+    """Strip structured field prefixes and template placeholders before NLI scoring."""
+    s = _FIELD_PREFIX.sub("", sent).strip()
+    s = _TEMPLATE_JUNK.sub("", s).strip(" ;,.")
+    return s
+
+
+def _expand_semicolons(sent: str) -> List[str]:
+    """
+    If a sentence contains semicolons (list of claims), split into sub-claims
+    and return each; otherwise return the sentence unchanged.
+    Only splits when there are at least 2 non-empty parts.
+    """
+    parts = [p.strip() for p in _SEMICOLON_SPLIT.split(sent) if p.strip()]
+    return parts if len(parts) > 1 else [sent]
 
 
 def split_sentences(text: str) -> List[str]:
-    """Split on newlines and '. [Capital]', stripping bullet markers."""
+    """Split on newlines and '. [Capital]', preserving known abbreviations (Mr., Dr., etc.)."""
     results = []
     for raw_line in text.splitlines():
         line = raw_line.strip().lstrip("-•*#+").strip()
         if not line:
             continue
-        for part in _PERIOD_SPLIT.split(line):
-            part = part.strip()
+        protected = _protect_abbreviations(line)
+        for part in _PERIOD_SPLIT.split(protected):
+            part = _restore_abbreviations(part).strip()
             if part:
                 results.append(part)
     return results
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 6.  NLI model
+# 6.  SOAP section parsing
+# ─────────────────────────────────────────────────────────────────────────────
+
+_SOAP_HEADER_RE = re.compile(
+    r"^(Subjective|Objective|Assessment\s*(?:/\s*Problem\s*List)?|Plan|Follow[- ]?up)\s*:",
+    re.IGNORECASE | re.MULTILINE,
+)
+
+_SECTION_NORM: Dict[str, str] = {
+    "subjective": "subjective",
+    "objective":  "objective",
+    "assessment": "assessment",
+    "plan":       "plan",
+    "follow-up":  "followup",
+    "follow up":  "followup",
+}
+
+
+def _normalize_section(header: str) -> str:
+    h = header.strip().lower()
+    # Assessment / Problem List → assessment
+    if h.startswith("assessment"):
+        return "assessment"
+    if h.startswith("follow"):
+        return "followup"
+    return _SECTION_NORM.get(h, h)
+
+
+def _parse_soap_sections(note: str) -> Dict[str, str]:
+    """
+    Split a SOAP note into its top-level sections.
+    Returns {section_name: section_text}.
+    Falls back to {"all": note} if no headers are found.
+    """
+    matches = list(_SOAP_HEADER_RE.finditer(note))
+    if not matches:
+        return {"all": note}
+    sections: Dict[str, str] = {}
+    for i, m in enumerate(matches):
+        name  = _normalize_section(m.group(1))
+        start = m.start()
+        end   = matches[i + 1].start() if i + 1 < len(matches) else len(note)
+        sections[name] = note[start:end].strip()
+    return sections
+
+
+def _assign_sentence_sections(note: str, sentences: List[str]) -> List[str]:
+    """
+    For each sentence, return which SOAP section it belongs to based on its
+    character position in the note. Falls back to "all" if no headers found.
+    """
+    matches = list(_SOAP_HEADER_RE.finditer(note))
+    if not matches:
+        return ["all"] * len(sentences)
+
+    spans = [
+        (m.start(),
+         matches[i + 1].start() if i + 1 < len(matches) else len(note),
+         _normalize_section(m.group(1)))
+        for i, m in enumerate(matches)
+    ]
+
+    result = []
+    search_pos = 0
+    for sent in sentences:
+        pos = note.find(sent, search_pos)
+        section = "all"
+        if pos != -1:
+            for start, end, name in spans:
+                if start <= pos < end:
+                    section = name
+                    break
+            search_pos = pos + len(sent)
+        result.append(section)
+    return result
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 7.  NLI model
 # ─────────────────────────────────────────────────────────────────────────────
 
 _nli_pipeline = None
@@ -283,47 +322,104 @@ def _get_nli_pipeline(model_name: str = _NLI_MODEL_NAME):
     return _nli_pipeline
 
 
+_NLI_WINDOW_TOKENS = 380   # premise tokens per window (leaves ~128 for hypothesis + special tokens)
+_NLI_STRIDE_TOKENS = 190   # 50% overlap between windows
+
+
+def _chunk_premise(tokenizer, premise: str) -> List[str]:
+    """
+    Split premise into overlapping token windows so no content is lost.
+    Each chunk is at most _NLI_WINDOW_TOKENS tokens; windows overlap by _NLI_STRIDE_TOKENS.
+    Returns a list of decoded text strings (one per window).
+    """
+    token_ids = tokenizer.encode(premise, add_special_tokens=False)
+    if len(token_ids) <= _NLI_WINDOW_TOKENS:
+        return [premise]
+    chunks = []
+    start = 0
+    while start < len(token_ids):
+        end = min(start + _NLI_WINDOW_TOKENS, len(token_ids))
+        chunks.append(tokenizer.decode(token_ids[start:end], skip_special_tokens=True))
+        if end == len(token_ids):
+            break
+        start += _NLI_STRIDE_TOKENS
+    return chunks
+
+
 def _entailment_probs(
     nli: object,
     hypotheses: List[str],
     premise: str,
 ) -> np.ndarray:
     """
-    For each hypothesis h in `hypotheses`, compute
-        P(entail | h, premise)  =  exp(l_e) / (exp(l_e) + exp(l_c))
-    using raw logits and binary renormalisation over {entail, contra},
-    as in the LUQ paper (Zhang et al., 2024).
+    For each hypothesis h, compute P(entail | h, premise) as the 3-way softmax
+    entailment probability (entail / (entail + neutral + contradict)).
 
-    DeBERTa NLI cross-encoders expect (premise, hypothesis) order.
-    Returns array of shape (len(hypotheses),).
+    Using 3-way softmax rather than binary {entail, contradict} renormalisation
+    avoids inflating uncertainty when the premise is simply silent on the claim
+    (neutral) — a common case for structured list sentences.
+
+    Each hypothesis is cleaned (field prefix and template artifacts stripped)
+    and multi-claim semicolon lists are expanded into sub-claims.
+
+    The premise is split into overlapping token windows (_NLI_WINDOW_TOKENS with
+    _NLI_STRIDE_TOKENS overlap) so no part of a long note is dropped.
+    For each sub-claim the max entailment score across all windows is taken —
+    the claim is considered entailed if any part of the note supports it.
+    Sub-claim scores are then averaged for the final hypothesis score.
     """
     if not hypotheses:
         return np.array([])
 
-    # NLI convention: first element is premise, second is hypothesis
-    pairs = [(premise, h) for h in hypotheses]
+    tokenizer  = nli.tokenizer
+    id2label   = nli.model.config.id2label
+    entail_idx = next((int(i) for i, l in id2label.items() if "entail" in l.lower()), 2)
 
-    raw = nli.predict(pairs, apply_softmax=False)   # raw logits (N, 3)
-    raw = np.array(raw)
+    premise_chunks = _chunk_premise(tokenizer, premise)
 
-    if raw.ndim == 2:
-        # Resolve label order from model config
-        id2label = nli.model.config.id2label
-        entail_idx = next(
-            (int(i) for i, l in id2label.items() if "entail" in l.lower()), 2
-        )
-        contra_idx = next(
-            (int(i) for i, l in id2label.items() if "contra" in l.lower()), 0
-        )
-        l_e = raw[:, entail_idx]
-        l_c = raw[:, contra_idx]
-        # Binary softmax over {entail, contra} — equivalent to LUQ formula
-        exp_e = np.exp(l_e - np.maximum(l_e, l_c))   # numerically stable
-        exp_c = np.exp(l_c - np.maximum(l_e, l_c))
-        return exp_e / (exp_e + exp_c)
-    else:
-        # Single-score model — treat as entailment probability directly
-        return raw
+    # Build all (chunk, sub-claim) pairs in one pass, tracking indices for aggregation
+    all_pairs: List[tuple]  = []
+    pair_index: List[tuple] = []   # (hyp_idx, sc_idx, chunk_idx)
+    empty_hyps: set         = set()
+
+    for h_idx, h in enumerate(hypotheses):
+        sub_claims = [sc for sc in _expand_semicolons(_clean_for_nli(h)) if sc]
+        if not sub_claims:
+            empty_hyps.add(h_idx)
+            continue
+        for sc_idx, sc in enumerate(sub_claims):
+            for c_idx, chunk in enumerate(premise_chunks):
+                all_pairs.append((chunk, sc))
+                pair_index.append((h_idx, sc_idx, c_idx))
+
+    if not all_pairs:
+        return np.full(len(hypotheses), 0.5)
+
+    # Single batched NLI call for all pairs
+    raw = np.array(nli.predict(all_pairs, apply_softmax=False, show_progress_bar=False))
+    if raw.ndim == 1:
+        raw = raw.reshape(1, -1)
+    exp_raw      = np.exp(raw - raw.max(axis=1, keepdims=True))
+    probs        = exp_raw / exp_raw.sum(axis=1, keepdims=True)
+    entail_flat  = probs[:, entail_idx]   # shape: (n_pairs,)
+
+    # Aggregate: max over chunks per (hyp, sub-claim), then mean over sub-claims per hyp
+    hyp_sc_windows: dict = defaultdict(list)
+    for flat_idx, (h_idx, sc_idx, _) in enumerate(pair_index):
+        hyp_sc_windows[(h_idx, sc_idx)].append(float(entail_flat[flat_idx]))
+
+    hyp_sc_max: dict = defaultdict(list)
+    for (h_idx, sc_idx), window_scores in hyp_sc_windows.items():
+        hyp_sc_max[h_idx].append(max(window_scores))
+
+    scores = []
+    for h_idx in range(len(hypotheses)):
+        if h_idx in empty_hyps:
+            scores.append(0.5)
+        else:
+            scores.append(float(np.mean(hyp_sc_max[h_idx])))
+
+    return np.array(scores)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -343,6 +439,12 @@ def compute_luq_sentence(
         U(s_j) = 1 − mean_{r'} P(entail | s_j, r')
     where r' ranges over all notes except the reference.
 
+    Sentences are assigned to their SOAP section; each is scored only against
+    the matching section of every other note rather than the full note.
+    If a section is absent from another note, the full note is used as fallback.
+    All sentences in the same (section × other-note) pair are batched into one
+    NLI call, so total calls = n_sections × (K-1) instead of n_sentences × (K-1).
+
     Returns dict with keys:
         sentences   : List[str]
         uncertainty : np.ndarray  — U(s_j) ∈ [0, 1]
@@ -357,29 +459,46 @@ def compute_luq_sentence(
 
     nli = _get_nli_pipeline(nli_model_name)
 
-    ref_note    = notes[ref_idx]
-    other_notes = [n for i, n in enumerate(notes) if i != ref_idx]
-    sentences   = split_sentences(ref_note)
+    ref_note      = notes[ref_idx]
+    other_notes   = [n for i, n in enumerate(notes) if i != ref_idx]
+    sentences     = split_sentences(ref_note)
 
     if not sentences:
         print("  [luq] No sentences found in reference note.")
         return {}
 
-    print(f"  [luq] {len(sentences)} sentences, scoring against "
-          f"{len(other_notes)} other generations …")
+    sent_sections  = _assign_sentence_sections(ref_note, sentences)
+    other_sections = [_parse_soap_sections(n) for n in other_notes]
 
-    uncertainty = np.zeros(len(sentences), dtype=np.float64)
+    # Group sentence indices by section
+    sec_to_indices: Dict[str, List[int]] = defaultdict(list)
+    for i, sec in enumerate(sent_sections):
+        sec_to_indices[sec].append(i)
 
-    for i, sent in enumerate(sentences):
-        pair_probs = []
-        for r_prime in other_notes:
-            p = _entailment_probs(nli, [sent], r_prime)
-            pair_probs.append(float(p[0]))
+    n_sections = len(sec_to_indices)
+    print(f"  [luq] {len(sentences)} sentences across {n_sections} section(s), "
+          f"scoring against {len(other_notes)} other generations …")
 
-        mean_entail    = float(np.mean(pair_probs)) if pair_probs else 0.0
-        uncertainty[i] = 1.0 - mean_entail
+    entail_sum = np.zeros(len(sentences), dtype=np.float64)
 
-    mean_u = float(uncertainty.mean())
+    for other_sec in other_sections:
+        entail_scores = np.zeros(len(sentences), dtype=np.float64)
+
+        for sec, indices in sec_to_indices.items():
+            # Use matching section; fall back to full note if section absent
+            premise = (
+                other_sec.get(sec)
+                or "\n".join(other_sec.values())
+            )
+            hyps  = [sentences[i] for i in indices]
+            probs = _entailment_probs(nli, hyps, premise)
+            for i, p in zip(indices, probs):
+                entail_scores[i] = p
+
+        entail_sum += entail_scores
+
+    uncertainty = 1.0 - entail_sum / len(other_notes)
+    mean_u      = float(uncertainty.mean())
     print(f"  [luq] mean sentence uncertainty = {mean_u:.4f}")
 
     return {
@@ -517,120 +636,176 @@ def build_html_report(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 10.  Main batch loop
+# 10.  Stage 1 — Generation
 # ─────────────────────────────────────────────────────────────────────────────
 
-def run_luq_batch(
-    start: int = 0,
-    end: int = 10,
-    K: int = 10,
-    temperature: float = 0.7,
-    max_tokens: int = 1024,
-    bedrock_region: str = _BEDROCK_DEFAULT_REGION,
-    bedrock_model: str = _BEDROCK_GEN_MODEL,
-    nli_model_name: str = _NLI_MODEL_NAME,
-    out: Path = Path("."),
-    top_n: int = 3,
-    cache_generations: bool = True,
-) -> pd.DataFrame:
-
-    out_dir  = out / "luq_out"
-    gen_dir  = out_dir / "generations"
-    sent_dir = out_dir / "sentences"
-    for d in [out_dir, gen_dir, sent_dir]:
-        d.mkdir(parents=True, exist_ok=True)
+def stage_generate(
+    start: int,
+    end: int,
+    K: int,
+    temperature: float,
+    max_tokens: int,
+    bedrock_region: str,
+    bedrock_model: str,
+    out_dir: Path,
+    use_cache: bool = True,
+) -> None:
+    """Generate K notes per sample and save to generations/sample_NNN_generations.json."""
+    gen_dir = out_dir / "generations"
+    gen_dir.mkdir(parents=True, exist_ok=True)
 
     ds  = load_aci_bench()
     end = min(end, len(ds))
 
-    summary_rows: List[Dict]     = []
-    all_results:  Dict[int, Dict] = {}
+    skipped = generated = failed = 0
 
-    for si in range(start, end):
+    for si in tqdm(range(start, end), desc="generate", unit="sample"):
         print(f"\n{'='*56}")
-        print(f"  Sample {si}  ({si - start + 1}/{end - start})")
+        print(f"  [generate] Sample {si}")
         print(f"{'='*56}")
+
+        gen_path = gen_dir / f"sample_{si:03d}_generations.json"
+
+        if use_cache and gen_path.exists():
+            saved = json.loads(gen_path.read_text())
+            print(f"  [cache] {len(saved['notes'])} generations already exist — skipping.")
+            skipped += 1
+            continue
 
         row = ds[si]
         try:
             transcript, gold_note = _get_transcript_and_note(row)
         except Exception as exc:
             print(f"  [data] Failed: {exc}")
+            failed += 1
             continue
 
         print(f"  Transcript: {len(transcript)} chars")
+        notes = generate_K_notes(
+            transcript,
+            K=K,
+            bedrock_region=bedrock_region,
+            model_id=bedrock_model,
+            temperature=temperature,
+            max_tokens=max_tokens,
+        )
+        if not notes:
+            print("  [gen] No notes generated — skipping.")
+            failed += 1
+            continue
 
-        # ── Generation (with optional cache) ─────────────────────────────────
-        gen_path = gen_dir / f"sample_{si:03d}_generations.json"
-        if cache_generations and gen_path.exists():
-            with open(gen_path) as f:
-                saved = json.load(f)
-            notes = saved["notes"]
-            print(f"  [cache] Loaded {len(notes)} cached generations.")
+        gen_path.write_text(json.dumps({
+            "sample_idx":  si,
+            "transcript":  transcript,
+            "gold_note":   gold_note,
+            "notes":       notes,
+            "model":       bedrock_model,
+            "K":           K,
+            "temperature": temperature,
+        }, indent=2))
+        print(f"  [gen] Saved {len(notes)} notes → {gen_path.name}")
+        generated += 1
+
+    print(f"\n[generate] Done — generated={generated}  skipped={skipped}  failed={failed}")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 11.  Stage 2 — NLI Scoring
+# ─────────────────────────────────────────────────────────────────────────────
+
+def stage_score(
+    start: int,
+    end: int,
+    nli_model_name: str,
+    out_dir: Path,
+    sent_dir: Path,
+    use_cache: bool = True,
+    top_n: int = 3,
+) -> pd.DataFrame:
+    """Load generation JSONs, run NLI scoring, save sentence CSVs and summary."""
+    gen_dir = out_dir / "generations"
+    sent_dir.mkdir(parents=True, exist_ok=True)
+
+    ds  = load_aci_bench()
+    end = min(end, len(ds))
+
+    summary_rows: List[Dict]      = []
+    all_results:  Dict[int, Dict] = {}
+
+    for si in tqdm(range(start, end), desc="score", unit="sample"):
+        print(f"\n{'='*56}")
+        print(f"  [score] Sample {si}")
+        print(f"{'='*56}")
+
+        # ── Cache check: all sentence CSVs already exist ──────────────────────
+        existing_sent = sorted(sent_dir.glob(f"sample_{si:03d}_note_*_sentences.csv"))
+        if use_cache and existing_sent:
+            print(f"  [cache] {len(existing_sent)} sentence CSVs found — skipping NLI.")
+            all_note_results = []
+            for sp in existing_sent:
+                df = pd.read_csv(sp)
+                k  = int(sp.stem.split("_note_")[1].split("_")[0])
+                all_note_results.append({
+                    "sentences":   df["sentence"].tolist(),
+                    "uncertainty": df["uncertainty"].values.astype(float),
+                    "mean_u":      float(df["uncertainty"].mean()),
+                    "K_actual":    len(existing_sent),
+                    "ref_idx":     k,
+                })
+            transcript = gold_note = ""
+            notes = []
         else:
-            notes = generate_K_notes(
-                transcript,
-                K=K,
-                bedrock_region=bedrock_region,
-                model_id=bedrock_model,
-                temperature=temperature,
-                max_tokens=max_tokens,
-            )
-            if not notes:
-                print("  [gen] No notes generated — skipping.")
+            # ── Load generation JSON ──────────────────────────────────────────
+            gen_path = gen_dir / f"sample_{si:03d}_generations.json"
+            if not gen_path.exists():
+                print(f"  [score] No generation file — run --stage generate first.")
                 summary_rows.append({
                     "sample_idx": si, "status": "no_generations",
                     "mean_u": float("nan"), "K_actual": 0,
                 })
                 continue
-            with open(gen_path, "w") as f:
-                json.dump({
-                    "sample_idx":  si,
-                    "transcript":  transcript,
-                    "gold_note":   gold_note,
-                    "notes":       notes,
-                    "model":       bedrock_model,
-                    "K":           K,
-                    "temperature": temperature,
-                }, f, indent=2)
 
-        if len(notes) < 2:
-            print("  [luq] Fewer than 2 notes — skipping uncertainty.")
-            summary_rows.append({
-                "sample_idx": si, "status": "insufficient_generations",
-                "mean_u": float("nan"), "K_actual": len(notes),
-            })
-            continue
+            saved      = json.loads(gen_path.read_text())
+            notes      = saved["notes"]
+            transcript = saved.get("transcript", "")
+            gold_note  = saved.get("gold_note", "")
+            print(f"  Loaded {len(notes)} generations.")
 
-        # ── LUQ uncertainty for all K notes ──────────────────────────────────
-        all_note_results: List[Dict] = []
-        for k in range(len(notes)):
-            result_k = compute_luq_sentence(
-                notes, nli_model_name=nli_model_name, ref_idx=k
-            )
-            if not result_k:
-                print(f"  [luq] note {k} failed — skipping.")
+            if len(notes) < 2:
+                print("  [score] Fewer than 2 notes — skipping.")
+                summary_rows.append({
+                    "sample_idx": si, "status": "insufficient_generations",
+                    "mean_u": float("nan"), "K_actual": len(notes),
+                })
                 continue
-            sent_df = pd.DataFrame({
-                "sentence_idx": np.arange(len(result_k["sentences"])),
-                "sentence":     result_k["sentences"],
-                "uncertainty":  result_k["uncertainty"].round(4),
-            })
-            sent_df.to_csv(
-                sent_dir / f"sample_{si:03d}_note_{k:02d}_sentences.csv",
-                index=False,
-            )
-            all_note_results.append(result_k)
+
+            # ── NLI scoring ───────────────────────────────────────────────────
+            all_note_results = []
+            for k in range(len(notes)):
+                result_k = compute_luq_sentence(notes, nli_model_name=nli_model_name, ref_idx=k)
+                if not result_k:
+                    print(f"  [score] note {k} failed — skipping.")
+                    continue
+                sent_df = pd.DataFrame({
+                    "sentence_idx": np.arange(len(result_k["sentences"])),
+                    "sentence":     result_k["sentences"],
+                    "uncertainty":  result_k["uncertainty"].round(4),
+                })
+                sent_df.to_csv(sent_dir / f"sample_{si:03d}_note_{k:02d}_sentences.csv", index=False)
+                all_note_results.append(result_k)
 
         if not all_note_results:
             summary_rows.append({
                 "sample_idx": si, "status": "luq_failed",
-                "mean_u": float("nan"), "K_actual": len(notes),
+                "mean_u": float("nan"), "K_actual": 0,
             })
             continue
 
-        # ── Store note[0] result for HTML report ──────────────────────────────
-        result = all_note_results[0]
+        result     = all_note_results[0]
+        mean_u_all = float(np.mean([r["mean_u"] for r in all_note_results]))
+        max_u_all  = float(np.max([r["uncertainty"].max() for r in all_note_results]))
+        all_u      = np.concatenate([r["uncertainty"] for r in all_note_results])
+
         all_results[si] = {
             "sample_idx": si,
             "transcript": transcript,
@@ -638,13 +813,6 @@ def run_luq_batch(
             "notes":      notes,
             **result,
         }
-
-        # Aggregate across all successfully scored notes
-        mean_u_all    = float(np.mean([r["mean_u"] for r in all_note_results]))
-        max_u_all     = float(np.max([r["uncertainty"].max() for r in all_note_results]))
-        all_u         = np.concatenate([r["uncertainty"] for r in all_note_results])
-        high_u_frac   = float((all_u > 0.5).mean())
-
         summary_rows.append({
             "sample_idx":   si,
             "status":       "ok",
@@ -653,101 +821,113 @@ def run_luq_batch(
             "n_sentences":  len(result["sentences"]),
             "K_actual":     result["K_actual"],
             "notes_scored": len(all_note_results),
-            "high_u_frac":  round(high_u_frac, 4),
+            "high_u_frac":  round(float((all_u > 0.5).mean()), 4),
         })
-
-        print(f"  mean_U (all notes)={mean_u_all:.4f}  "
-              f"n_sentences={len(result['sentences'])}  K={result['K_actual']}  "
-              f"notes_scored={len(all_note_results)}")
+        print(f"  mean_U={mean_u_all:.4f}  n_sentences={len(result['sentences'])}  "
+              f"K={result['K_actual']}  notes_scored={len(all_note_results)}")
 
     # ── Summary CSV ───────────────────────────────────────────────────────────
     summary_df = pd.DataFrame(summary_rows)
     summary_df.to_csv(out_dir / "luq_results.csv", index=False)
-    print(f"\n[done] {len(summary_rows)} samples → luq_results.csv")
+    print(f"\n[score] {len(summary_rows)} samples → {out_dir / 'luq_results.csv'}")
 
     # ── Top-N HTML report ─────────────────────────────────────────────────────
-    ok_df = summary_df[summary_df["status"] == "ok"].sort_values(
-        "mean_u", ascending=False
-    )
+    ok_df       = summary_df[summary_df["status"] == "ok"].sort_values("mean_u", ascending=False)
     top_indices = ok_df["sample_idx"].head(top_n).tolist()
     top_data    = [all_results[i] for i in top_indices if i in all_results]
-
     if top_data:
         build_html_report(top_data, out_dir / "top3_report.html")
-        print(f"\n[top-{top_n}] Most uncertain samples: {top_indices}")
-        for si in top_indices:
-            r = all_results.get(si)
-            if r:
-                print(f"  Sample {si}: mean_U={r['mean_u']:.4f}  "
-                      f"n_sentences={len(r['sentences'])}")
 
     return summary_df
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 11.  CLI
+# 12.  CLI
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
-        description="Sentence-level LUQ uncertainty on ACI-Bench via Bedrock Llama 3.1 8B"
+        description="Sentence-level LUQ uncertainty on ACI-Bench — Llama 3.1 8B",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Stages:
+  generate  Call Bedrock to produce K notes per sample; saves to <out>/generations/.
+  score     Run NLI scoring on cached generations; saves sentence CSVs + summary.
+  all       Run both stages in sequence (default).
+
+Examples:
+  python luq_sentence.py --stage generate --start 0 --end 132
+  python luq_sentence.py --stage generate --start 0 --end 132 --no-cache
+  python luq_sentence.py --stage score    --start 0 --end 132
+  python luq_sentence.py --stage score    --start 0 --end 132 --no-cache
+  python luq_sentence.py --stage all      --start 0 --end 132
+""",
     )
-    p.add_argument("--start",          type=int,   default=0,
-                   help="First sample index (inclusive, default 0)")
-    p.add_argument("--end",            type=int,   default=10,
-                   help="Last sample index (exclusive, default 10)")
-    p.add_argument("--K",              type=int,   default=10,
-                   help="Generations per sample (default 10)")
-    p.add_argument("--temperature",    type=float, default=0.7,
-                   help="Sampling temperature (default 0.7, as in LUQ paper)")
-    p.add_argument("--max-tokens",     type=int,   default=1024,
-                   help="Max tokens per generation (default 1024)")
-    p.add_argument("--bedrock-region", default=os.environ.get(
-                       "AWS_DEFAULT_REGION", _BEDROCK_DEFAULT_REGION),
-                   help="AWS region for Bedrock (default us-east-1)")
-    p.add_argument("--bedrock-model",  default=_BEDROCK_GEN_MODEL,
-                   help=f"Bedrock model ID (default {_BEDROCK_GEN_MODEL})")
-    p.add_argument("--nli-model",      default=_NLI_MODEL_NAME,
-                   help=f"NLI cross-encoder (default {_NLI_MODEL_NAME})")
-    p.add_argument("--out",            default=".",
-                   help="Output root directory (default .)")
-    p.add_argument("--top-n",          type=int,   default=3,
-                   help="Number of samples to include in HTML report (default 3)")
+    p.add_argument("--stage",          choices=["generate", "score", "all"], default="all",
+                   help="Which stage to run (default: all)")
     p.add_argument("--no-cache",       action="store_true",
-                   help="Regenerate notes even if cached JSON exists")
+                   help="Ignore existing cached files for the selected stage and reprocess")
+    p.add_argument("--start",          type=int,   default=0,
+                   help="First sample index inclusive (default 0)")
+    p.add_argument("--end",            type=int,   default=132,
+                   help="Last sample index exclusive (default 132)")
+    p.add_argument("--out",            default="luq_out/llama",
+                   help="Output root directory (default luq_out/llama)")
+
+    # Generation options
+    g = p.add_argument_group("generation")
+    g.add_argument("--K",              type=int,   default=10,
+                   help="Generations per sample (default 10)")
+    g.add_argument("--temperature",    type=float, default=0.7)
+    g.add_argument("--max-tokens",     type=int,   default=1024)
+    g.add_argument("--bedrock-region", default=os.environ.get(
+                       "AWS_DEFAULT_REGION", _BEDROCK_DEFAULT_REGION))
+    g.add_argument("--bedrock-model",  default=_BEDROCK_GEN_MODEL)
+
+    # Scoring options
+    s = p.add_argument_group("scoring")
+    s.add_argument("--nli-model",      default=_NLI_MODEL_NAME)
+    s.add_argument("--top-n",          type=int,   default=3,
+                   help="Samples in HTML report (default 3)")
+
     return p.parse_args()
 
 
 def main() -> None:
-    args = _parse_args()
+    args    = _parse_args()
+    out_dir = Path(args.out).resolve()
+    sent_dir = out_dir / "sentences"
 
-    print(f"\n  Model          : {args.bedrock_model}")
-    print(f"  Region         : {args.bedrock_region}")
-    print(f"  Dataset        : {_DATASET_REPO} / {_DATASET_CONFIG} / {_DATASET_SPLIT}")
+    print(f"\n  Stage          : {args.stage}")
+    print(f"  Cache          : {'disabled (--no-cache)' if args.no_cache else 'enabled'}")
     print(f"  Samples        : {args.start} – {args.end - 1}")
-    print(f"  K generations  : {args.K}")
-    print(f"  Temperature    : {args.temperature}")
-    print(f"  NLI model      : {args.nli_model}")
-    print(f"  Output dir     : {Path(args.out).resolve()}")
-    print(f"  Cache          : {'disabled' if args.no_cache else 'enabled'}")
+    print(f"  Output dir     : {out_dir}")
+    if args.stage in ("generate", "all"):
+        print(f"  Bedrock model  : {args.bedrock_model}")
+        print(f"  K generations  : {args.K}  temp={args.temperature}")
+    if args.stage in ("score", "all"):
+        print(f"  NLI model      : {args.nli_model}")
+        print(f"  Sentences dir  : {sent_dir}")
     print()
 
-    run_luq_batch(
-        start=args.start,
-        end=args.end,
-        K=args.K,
-        temperature=args.temperature,
-        max_tokens=args.max_tokens,
-        bedrock_region=args.bedrock_region,
-        bedrock_model=args.bedrock_model,
-        nli_model_name=args.nli_model,
-        out=Path(args.out),
-        top_n=args.top_n,
-        cache_generations=not args.no_cache,
-    )
+    if args.stage in ("generate", "all"):
+        stage_generate(
+            start=args.start, end=args.end,
+            K=args.K, temperature=args.temperature, max_tokens=args.max_tokens,
+            bedrock_region=args.bedrock_region, bedrock_model=args.bedrock_model,
+            out_dir=out_dir, use_cache=not args.no_cache,
+        )
+
+    if args.stage in ("score", "all"):
+        stage_score(
+            start=args.start, end=args.end,
+            nli_model_name=args.nli_model,
+            out_dir=out_dir, sent_dir=sent_dir,
+            use_cache=not args.no_cache, top_n=args.top_n,
+        )
 
     print("\n" + "═" * 56)
-    print(f"  Done. Results in: {(Path(args.out) / 'luq_out').resolve()}")
+    print(f"  Done. Results in: {out_dir}")
     print("═" * 56 + "\n")
 
 

@@ -1,0 +1,33 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, William, presented with a complaint of right knee pain after injuring it at a trampoline park one week ago.",0.7081
+2,"He described hearing a ""snap"" and feeling instant pain.",0.0122
+3,He reports that he does not go to the trampoline park often and this was his first time.,0.9952
+4,He has not been consistent with exercise and tries to do so for fun.,0.9988
+5,"The pain is located on the outside of the knee and he has tried taking Tylenol, which did not provide relief.",0.2737
+6,"He has elevated the knee and applied ice, but that's about it.",0.9964
+7,Past medical history: The patient has hypertension and is currently on 20mg of lisinopril.,0.011
+8,"He has not been taking his medication regularly, but remembers to take it most days.",0.9998
+9,He has diabetes and is on metformin 500mg.,0.1334
+10,"He has not been checking his blood sugar levels regularly, aiming to do so 4-5 times a week.",0.7788
+11,He has not been focused on a specific diet and is trying to watch his carb intake.,0.9133
+12,Review of systems: [NOT MENTIONED],0.5
+13,"Current medications: Lisinopril 20mg, metformin 500mg.",0.2582
+14,Objective:,0.5
+15,Vital signs: Blood pressure 180/80.,0.5044
+16,Physical exam: The patient's heart rate and rhythm are regular.,0.5048
+17,The lungs are clear bilaterally.,0.7838
+18,"The knee has ecchymosis and edema on the lateral aspect, but no effusion.",0.8828
+19,"The patient has a slight limp and can bear weight, but has a noticeable gait.",0.8939
+20,"Range of motion is decent, but movement is painful.",0.8766
+21,Test Results: [NOT MENTIONED],0.5
+22,Assessment / Problem List:,0.5
+23,Assessment: The patient has a lateral ligament strain of the right knee.,0.1333
+24,Problem list: Right knee pain (active); hypertension (suspected); diabetes (active).,0.7962
+25,Plan:,0.5
+26,I prescribed meloxicam 15mg daily for the patient's right knee pain and swelling.,0.3348
+27,I referred him to physical therapy to help strengthen the muscles around the area and prevent further injury.,0.0113
+28,"For his hypertension, I will continue lisinopril 20mg and order an echo to assess for any underlying issues.",0.0357
+29,"For his diabetes, I will order an A1C and lipid panel to get a better understanding of his long-term condition.",0.0301
+30,"Follow-up: I will review the results of the right knee x-ray, which showed no evidence of fracture or bony abnormality, and discuss further management with the patient.",0.9999
+31,"I will also discuss the results of the echo, A1C, and lipid panel with the patient.",0.9999

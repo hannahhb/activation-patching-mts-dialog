@@ -1,0 +1,23 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, Gregory, is a 2-month history of a non-healing foot ulcer on the dorsal aspect of the lateral right foot, which has recently become red and is draining.",0.7073
+2,The patient reports throbbing pain and increased pressure on the foot.,0.8278
+3,The patient attributes the onset of the ulcer to walking barefoot on the beach at Dewey Beach.,0.4829
+4,"Past Medical History: The patient has a history of diabetes, with an A1C level of 10, and has not been regularly checking his blood sugar levels.",0.336
+5,"The patient's primary care physician (PCP) has prescribed medication for the diabetes, but the patient has not yet filled the prescription.",0.7899
+6,"Review of Systems: The patient reports occasional throbbing pain and increased pressure in the affected foot, but does not experience distinct pain.",0.7852
+7,Current Medications: [NOT MENTIONED],0.5
+8,Objective:,0.5
+9,"Vital Signs: The patient's vital signs are normal, with no fever.",0.7135
+10,"Physical Exam: The physical exam reveals a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, proximal to the fifth MTP joint, with redness, drainage, and edema.",0.2639
+11,"The wound does not have any necrosis, odor, or bony exposure.",0.9045
+12,"Test Results: The patient had an X-ray of the right foot, which showed no evidence of osteomyelitis.",0.0059
+13,Assessment / Problem List:,0.5
+14,Assessment: The patient has a diabetic foot ulcer with evidence of infection.,0.0045
+15,Problem List: Diabetic foot ulcer; Infection; High A1C level; Poor blood sugar control.,0.7404
+16,Plan:,0.5
+17,I prescribed clindamycin 400mg twice daily for 7 days to treat the infection.,0.0072
+18,I will perform a debridement to remove dead tissue from the wound.,0.0077
+19,I will also order an ABI (Ankle Brachial Index) to assess blood supply to the foot.,0.8886
+20,I will provide the patient with a surgical shoe to wear to reduce pressure on the affected foot.,0.118
+21,Follow-up: The patient will be seen again in 2 weeks for a follow-up appointment to assess the healing of the wound and possibly perform another debridement.,0.8869

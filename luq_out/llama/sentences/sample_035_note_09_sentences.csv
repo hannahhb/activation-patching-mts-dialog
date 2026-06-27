@@ -1,0 +1,28 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient presents with a 2-3 week history of a non-healing wound on the right foot, which initially started as a blister due to neuropathy caused by wearing a new pair of shoes.",0.169
+2,The patient had previously seen a podiatrist but was unable to continue due to their relocation.,0.5183
+3,The patient denies any trauma to the foot and reports no pain or discomfort in the wound area.,0.4378
+4,"The patient also mentions that the wound sticks to the sock when removed, but there is no drainage, fever, or chills.",0.8073
+5,"The patient has a history of diabetes, with an A1c of slightly over 8.",0.1296
+6,Past medical history: The patient has a history of diabetes and has previously seen a podiatrist for foot issues.,0.3456
+7,"Review of systems: The patient denies any other symptoms such as fever, chills, or drainage from the wound.",0.3474
+8,Current medications: [NOT MENTIONED],0.5
+9,Objective:,0.5
+10,"Vital signs: The patient's vital signs are as follows: temperature 98.1°F, heart rate 72, respirations 16, blood pressure 110/65.",0.017
+11,"Physical exam: The physical exam reveals a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, proximal to the right fifth MTP joint, with yellow slough and minimal granulation tissue.",0.1578
+12,"There is no surrounding erythema or cellulitis, no fluid collection, no necrosis, and no odor.",0.2171
+13,"The patient has palpable bilateral femoral and popliteal pulses, but no palpable DP or PT pulses with Doppler signs present.",0.1461
+14,Test Results: The patient's right foot X-ray shows no evidence of osteomyelitis.,0.1403
+15,Assessment / Problem List:,0.5
+16,Assessment: The patient has a diabetic foot ulcer with compromised wound healing due to neuropathy caused by poorly fitting shoes.,0.9999
+17,Problem list: Diabetic foot ulcer; Compromised wound healing; Diabetes mellitus; Neuropathy.,0.7021
+18,Plan:,0.5
+19,"I prescribed collagenase ointment to be applied to the wound once daily, covered with a dry sterile dressing.",0.0075
+20,I will perform a debridement in the office to remove dead tissue.,0.0066
+21,I will order an Ankle Brachial Index (ABI) to determine the blood supply to the foot.,0.0057
+22,I want the patient to wear a surgical shoe to take pressure off the area.,0.3355
+23,I will see the patient again in two weeks to reassess the wound.,0.4498
+24,I may refer the patient to a vascular specialist if the ABI indicates poor blood supply for wound healing.,0.4432
+25,I will also refer the patient to a diabetic specialist to discuss ways to manage their diabetes and reduce their A1c.,0.3364
+26,Follow-up: The patient will be seen again in two weeks.,0.0035

@@ -1,0 +1,27 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, Jacqueline, presents with anxiety about her recent blood work results, specifically the diagnosis of hepatitis C, which she was told by her primary care physician (PCP) about her hepatitis C status.",0.983
+2,"She reports feeling fine despite the diagnosis and mentions a history of intravenous (IV) drug use 15 years ago, but denies any recent IV drug use.",0.7213
+3,"She also reports a history of excessive alcohol use, currently consuming about 1 beer per day, and smoking 1-2 cigarettes per day.",0.3576
+4,"She mentions feeling tired at the end of the day, but attributes it to work-related stress.",0.7729
+5,"She has a family history of hypertension, diabetes, and depression.",0.0531
+6,"Past Medical History: The patient has a history of IV drug use 15 years ago, but denies any recent IV drug use.",0.9887
+7,"She has a history of excessive alcohol use, currently consuming about 1 beer per day, and smoking 1-2 cigarettes per day.",0.0252
+8,"Her family history includes hypertension, diabetes, and depression.",0.0135
+9,"Review of Systems: The patient reports feeling tired at the end of the day, but attributes it to work-related stress.",0.7992
+10,Current Medications: [NOT MENTIONED],0.5
+11,Objective:,0.5
+12,Vital Signs: [NOT MENTIONED],0.5
+13,Physical Exam: The patient appears in no distress and no jaundice on skin exam.,0.069
+14,"Her heart exam reveals a regular rate and rhythm with a 2/6 systolic murmur, which has not changed from last year.",0.0346
+15,"Her lung exam is clear with no wheezes, rales, or rhonchi.",0.1904
+16,"Her abdominal exam reveals present bowel sounds, a soft abdomen, and no hepatosplenomegaly.",0.1548
+17,"Test Results: The patient's recent blood work results show a positive HCV antibody test, elevated AST at 39, but normal ALT and total bilirubin levels.",0.0354
+18,Assessment / Problem List:,0.5
+19,"Assessment: The patient has a confirmed diagnosis of hepatitis C, a viral infection that affects the liver, which she most likely contracted years ago.",0.3355
+20,Problem List: Hepatitis C; active,0.9556
+21,Plan: I prescribed no medications at this time.,0.8891
+22,"I will order additional blood work, including checking the HCV RNA and HCV genotype, to confirm the diagnosis and determine the severity of her liver disease.",0.3365
+23,I will also order an ultrasound to assess liver fibrosis.,0.5283
+24,I will follow up with the patient in three weeks to discuss the results and proceed with treatment.,0.889
+25,"Follow-up: I will see the patient in three weeks to discuss the results of the additional blood work and ultrasound, and to determine the next steps in her treatment plan.",0.9997

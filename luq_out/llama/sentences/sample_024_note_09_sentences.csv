@@ -1,0 +1,29 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, Gregory, is a 2-month-old nonhealing foot ulcer on the dorsal aspect of the lateral right foot, which has recently become red and is draining.",0.4735
+2,The patient reports that he got the ulcer from walking barefoot on the beach at Dewey Beach.,0.5499
+3,He denies any specific pain but reports throbbing and increased pressure when he touches the area.,0.8916
+4,The patient's biggest concern is the ulcer's redness and drainage.,0.8705
+5,"He has a history of diabetes, which he believes is the cause of the ulcer's poor healing.",0.6388
+6,"Past medical history: The patient has diabetes and takes medication for it, but he does not check his blood sugar levels regularly.",0.3914
+7,His last A1c was around 10%.,0.5142
+8,The patient has not had any recent antibiotic prescriptions filled.,0.4984
+9,"Review of systems: The patient reports no fever, but has a history of diabetes.",0.8998
+10,Current medications: [NOT MENTIONED],0.5
+11,Objective:,0.5
+12,"Vital signs: The patient's vital signs are normal, and he does not have a fever.",0.6558
+13,"Physical exam: The patient has a one by two inch circular wound on the dorsal aspect of the lateral right foot, proximal to the fifth MTP joint.",0.7951
+14,"The wound is red, swollen, and has drainage.",0.4758
+15,"There is edema around the wound, but no necrosis, odor, or bony exposure.",0.7431
+16,The patient reports increased pressure when the wound is touched.,0.6833
+17,Test Results: An X-ray of the right foot shows no evidence of osteomyelitis.,0.0047
+18,Assessment / Problem List:,0.5
+19,Assessment: The patient has a diabetic foot ulcer with signs of infection.,0.0109
+20,Problem list: Diabetic foot ulcer; Infection (suspected); Poorly controlled diabetes (status: unknown); No antibiotic prescription filled (status: unknown).,0.4997
+21,Plan:,0.5
+22,I prescribed clindamycin 400 milligrams twice a day for seven days to treat the infection.,0.0044
+23,I will perform a debridement to remove dead tissue from the wound.,0.0063
+24,I will order an ABI to determine the blood supply to the foot.,0.1192
+25,I will provide the patient with a surgical shoe to wear while the ulcer heals.,0.6545
+26,The patient will return in two weeks for follow-up and possible additional debridement.,0.2426
+27,Follow-up: The patient will return in two weeks for follow-up.,0.0046

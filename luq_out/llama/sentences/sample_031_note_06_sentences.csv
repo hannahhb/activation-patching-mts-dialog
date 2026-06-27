@@ -1,0 +1,25 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, a 20-year-old female, has been experiencing headaches for years, initially associated with menses, but now occurring more frequently and severely, with a pulsing sensation behind her right eye.",0.9851
+2,"She reports worsening headaches with exercise, specifically jogging, and has noticed ringing in her ears and blurred vision, particularly on the side of her vision.",0.4187
+3,She denies numbness or tingling in her hands or feet or face.,0.3767
+4,Past medical history: The patient's past medical history is not mentioned.,0.7958
+5,"Review of systems: The patient reports worsening headaches with exercise, ringing in her ears, and blurred vision.",0.0236
+6,Current medications: [NOT MENTIONED],0.5
+7,Objective:,0.5
+8,Vital signs: The patient's blood pressure is not mentioned.,0.9945
+9,"Physical exam: The patient's heart exam is normal, with a normal sinus rhythm and no murmurs, rubs, or gallops.",0.6351
+10,"The funduscopic exam shows papilledema, with swelling behind the eye.",0.2925
+11,"The neurological exam is intact, with normal cranial nerves and reflexes.",0.0144
+12,"The musculoskeletal exam is normal, with a normal gait.",0.4479
+13,Test Results: [NOT MENTIONED],0.5
+14,Assessment / Problem List:,0.5
+15,"Assessment: The patient presents with symptoms concerning for idiopathic intracranial hypertension, a condition characterized by increased pressure in the brain without a known cause.",0.0021
+16,Problem list: Idiopathic intracranial hypertension; confirmed.,0.6314
+17,Plan:,0.5
+18,I ordered an MRI to check for any other conditions that could be contributing to the patient's symptoms.,0.1122
+19,I also ordered a spinal tap to evaluate the pressure in the brain and to potentially relieve it.,0.0027
+20,The patient will be seen by a neuro-ophthalmologist for a complete eye exam.,0.0033
+21,"I will have the patient's insurance company preapprove the MRI, and once approved, the patient will be scheduled for the procedure.",0.7754
+22,I prescribed [NOT MENTIONED].,0.2405
+23,"Follow-up: The patient will be followed up with the results of the MRI and the spinal tap, and will be scheduled for the neuro-ophthalmologist appointment.",0.8737

@@ -1,0 +1,25 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient is a 31-year-old male who presented with a 3-month history of cough, initially diagnosed as bronchitis by his primary care physician, but a chest X-ray and subsequent CT scan revealed a 2-centimeter nodule in the lateral aspect of the right upper lobe.",0.996
+2,He reports that the cough started after a physically demanding activity of loading horses and has since resolved with periods of exacerbation.,0.5717
+3,"He denies any pain, shortness of breath, or fever.",0.9969
+4,"The patient has a history of rheumatoid arthritis, which is currently under control with methotrexate 7.5 mg weekly, and a history of smoking that ended 7 years ago.",0.1345
+5,"His family history includes breast cancer in his mother, but no lung cancer.",0.5706
+6,"Past medical history: The patient has a history of rheumatoid arthritis, which is currently under control with methotrexate 7.5 mg weekly, and a history of smoking that ended 7 years ago.",0.1345
+7,"Review of systems: The patient denies any pain, shortness of breath, or fever.",0.9974
+8,Current medications: Methotrexate 7.5 mg weekly.,0.4582
+9,Objective:,0.5
+10,"Vital signs: The patient's vital signs are within normal limits, with a blood pressure of 124/76, heart rate of 70, respiration rate of 16, oxygen saturation of 98% on room air, and afebrile.",0.2742
+11,"Physical exam: The patient's lungs are clear and equal bilateral, with no evidence of wheezing or crackles.",0.0138
+12,"The heart is regular rate and rhythm, with no clicks, rubs, or murmurs.",0.4903
+13,"The extremities are pink, warm, and dry, with no edema.",0.62
+14,"The patient has some swelling in the knuckles, which is consistent with his rheumatoid arthritis.",0.1246
+15,"Test Results: The patient had a chest CT scan that revealed a 2-centimeter nodule in the lateral aspect of the right upper lobe, which appears smooth in appearance and no evidence of emphysematous disease.",0.0239
+16,"Assessment / Problem List: The patient has an incidentally found right upper lobe lung nodule, which requires further evaluation and management.",0.6651
+17,Problem list: Lung nodule; Rheumatoid arthritis; History of smoking.,0.9784
+18,Plan:,0.5
+19,I will order a pulmonary function test (PFT) to establish a baseline for the patient's lung function.,0.2164
+20,I will also schedule a PET CT to determine if the nodule is metabolically active.,0.1268
+21,"The patient will undergo video-assisted thoracoscopy to remove the nodule, which will be performed under general anesthesia and will take approximately 1.5 hours.",0.5563
+22,The patient will be admitted to the hospital for one night and will have a chest tube inserted until the following day.,0.3454
+23,Follow-up: The patient will be seen again in a few minutes to sign the paperwork and begin the treatment process.,0.5549

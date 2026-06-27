@@ -1,0 +1,28 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, Angela, is a 7th or 8th time sufferer of kidney stones, with the current stone passing approximately 3 days ago, and she reports no current pain or blood in her urine.",0.4367
+2,"She has a past medical history of hypertension and diabetes, for which she is taking 2.5mg of Norvasc and 500mg of metformin daily, respectively.",0.354
+3,"She reports that her blood pressure has been controlled at home with readings of 130-140/60-70, but was elevated at 150/90 upon arrival.",0.8904
+4,"She also reports a history of fast food and high-sugar consumption, but has not been able to control her diet.",0.893
+5,"Her blood sugars have been ""pretty good"" but she does not check them regularly, with a last recorded A1C of 6.7.",0.8932
+6,"Review of systems: The patient reports no chest pain, belly pain, or other symptoms.",0.4444
+7,Current medications: Norvasc 2.5mg daily for hypertension; Metformin 500mg daily for diabetes.,0.7319
+8,Objective:,0.5
+9,"Vital signs: Blood pressure was 150/90 upon arrival, but the patient reports home readings of 130-140/60-70.",0.7745
+10,"Physical exam: The lungs are clear bilaterally, and the heart exam reveals a grade 2/6 systolic ejection murmur.",0.1191
+11,The abdomen exam shows no tenderness to palpation.,0.1203
+12,Test Results: [NOT MENTIONED],0.5
+13,Assessment / Problem List:,0.5
+14,"Assessment: The patient has a history of recurrent kidney stones, which have likely passed, but requires further evaluation by urology for possible underlying causes.",0.9994
+15,"The patient's hypertension is controlled on Norvasc, but she requires dietary changes to prevent further exacerbation.",0.9999
+16,"The patient's diabetes is also being managed with metformin, but she requires more frequent blood sugar monitoring.",1.0
+17,Problem list: Recurrent kidney stones; Hypertension; Diabetes; Insomnia.,0.7015
+18,Plan:,0.5
+19,I prescribed Percocet for pain management during the hospital visit.,0.9111
+20,I will give Angela a referral to urology to evaluate her recurrent kidney stones.,0.6414
+21,I will also order a urinalysis and urine culture to confirm the clearance of the current stone.,0.7995
+22,"I prescribed 10mg of melatonin as needed for insomnia, and encouraged Angela to practice proper sleep hygiene.",0.9991
+23,I also referred Angela to a nutritionist to help her control her diet.,0.9983
+24,I will give Angela a consult to nutrition to help her control her diet.,0.2403
+25,"I will continue her on 2.5mg of Norvasc daily for hypertension, and 500mg of metformin daily for diabetes.",0.7034
+26,Follow-up: Angela will return in 3 months for a follow-up appointment.,0.8875

@@ -1,0 +1,34 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, Stephanie Morales, is a 36-year-old female presenting with complaints of ankle pain and a history of diabetes and high blood pressure.",0.6431
+2,She reports that her ankle pain started 2 days ago after slipping on ice and twisting her left ankle.,0.6883
+3,"She describes the pain as being on the outside of her ankle, with some swelling and tenderness to palpation.",0.889
+4,"She has tried ibuprofen, ice, and elevation for pain and swelling, with some minor relief.",0.4617
+5,She denies any bleeding or numbness in her ankle.,0.9998
+6,"Past medical history: The patient has a history of diabetes, for which she is taking metformin.",0.4989
+7,"Her blood sugars have been stable, with an HbA1c of 6.8.",0.9991
+8,"She also has a history of high blood pressure, for which she is taking norvasc.",0.8884
+9,"She has not seen the ophthalmologist recently for her diabetes checkup, but has an upcoming appointment in the next couple of weeks.",0.9997
+10,"Review of systems: The patient denies any pain or symptoms in other organs, such as the calf, lower leg, or knee.",0.5747
+11,Current medications:,0.5
+12,Metformin [dosage not mentioned] [frequency not mentioned] for diabetes,0.9375
+13,Norvasc [dosage not mentioned] [frequency not mentioned] for high blood pressure,0.9958
+14,Objective:,0.5
+15,Vital signs: The patient's blood pressure is 120/70.,0.778
+16,"Physical exam: The patient's neck exam is normal, with no bruits.",0.6458
+17,"Her lungs are clear, and her heart exam is normal, except for a 2/6 systolic ejection murmur that has not changed from previous exams.",0.4435
+18,Her belly exam is normal.,0.4676
+19,"On her ankle exam, she has tenderness over the lateral malleolus and the 5th metatarsal, with some swelling and redness.",0.1129
+20,She has normal sensation and pulses in her ankle.,0.2522
+21,Test Results: [NOT MENTIONED],0.5
+22,Assessment / Problem List:,0.5
+23,"Assessment: The patient likely has an ankle sprain, but further evaluation with an X-ray is needed to rule out a fracture.",0.2257
+24,Problem list: Ankle sprain; diabetes; high blood pressure; possible fracture (suspected).,0.7924
+25,Plan:,0.5
+26,I prescribed naprosyn 500mg twice a day for pain control.,0.0124
+27,I ordered an X-ray of the ankle to rule out a fracture.,0.1627
+28,I put the patient in a splint and gave her crutches to avoid weightbearing.,0.5539
+29,I will give her a follow-up call if the X-ray shows a fracture and send her to orthopedics if necessary.,0.5441
+30,I will also order baseline labs to check her blood sugars and kidney function.,1.0
+31,Follow-up: The patient will follow up with me in a couple of weeks to check on the results of the X-ray and adjust her treatment plan as needed.,0.9842
+32,She will also continue to follow up with her eye appointment for her diabetes checkup and continue with her metformin and norvasc as prescribed.,0.8931

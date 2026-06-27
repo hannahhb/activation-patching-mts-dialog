@@ -1,0 +1,23 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"The patient, William, presented with a history of a recent knee injury that occurred a week ago while participating in trampolining.",0.7764
+2,He reported hearing a snap and experiencing instant pain in his right knee.,0.1794
+3,"The patient stated that this is the first time he has participated in trampolining and it was done for fun, not as part of a regular exercise routine.",0.8879
+4,"He has tried taking Tylenol for the pain, but it has not provided significant relief.",0.1844
+5,The patient has been elevating the knee and has not used heat or ice.,0.7202
+6,"He has a history of hypertension and diabetes, and has been taking lisinopril 20mg daily and metformin 500mg daily, but has not been consistently taking his medication.",0.8469
+7,"The patient reports that his blood sugars have been slightly better, but he has not been measuring them regularly, and he is not on a specific diet.",0.9844
+8,Objective:,0.5
+9,Vital signs: The patient's blood pressure was 180/80.,0.2417
+10,"Physical exam: The patient had a slight limp when walking, and there was ecchymosis and edema along the lateral aspect of the knee.",0.2716
+11,"The knee had a decent range of motion, but the patient experienced pain with movement.",0.4797
+12,Test Results: The right knee x-ray showed no evidence of fracture or bony abnormality.,0.2314
+13,Assessment / Problem List:,0.5
+14,"Assessment: The patient has a lateral ligament strain in the right knee, hypertension, and diabetes.",0.005
+15,Problem list: Right knee pain; hypertension; diabetes; suspected bony abnormality; unknown.,0.8248
+16,Plan:,0.5
+17,I prescribed meloxicam 15mg daily for pain and swelling in the right knee.,0.3359
+18,I referred the patient to physical therapy to help strengthen the muscles around the knee and prevent further injury.,0.1138
+19,"I will continue the lisinopril at 20mg daily for hypertension, and I will order an echo to assess the patient's cardiac function.",0.2533
+20,I will also order an A1c to evaluate the patient's long-term blood sugar control and a lipid panel to assess the patient's lipid profile.,0.0063
+21,"Follow-up: I will see the patient again to discuss the results of the echo, A1c, and lipid panel, and to adjust the patient's medication as needed.",0.9963

@@ -1,0 +1,31 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, a 38-year-old male, presents with a non-healing wound on his right foot that has been present for approximately two to three weeks.",0.9997
+2,"The wound is described as a one by two inch circular lesion on the dorsal aspect of the lateral right foot, proximal to the right fifth metatarsophalangeal joint.",0.7835
+3,The patient reports that he has been experiencing neuropathy and attributes the wound to a new pair of shoes that caused a blister.,0.7973
+4,"He denies any trauma to the foot and has not experienced any symptoms such as fever, chills, or drainage from the wound.",0.2856
+5,"He has completed a course of antibiotics prescribed by his primary care physician, but the wound has not shown significant improvement.",0.7037
+6,"Past Medical History: The patient has a history of diabetes, with an HbA1c level slightly above 8%.",0.2321
+7,"He has a history of neuropathy, but the exact duration is not specified.",0.9994
+8,"He has not mentioned any other past medical conditions, social history, or allergies.",0.9997
+9,Review of Systems: The patient denies any other symptoms or concerns.,0.3678
+10,Current Medications: [NOT MENTIONED],0.5
+11,Objective:,0.5
+12,"Vital Signs: The patient's temperature is 98.1°F, heart rate is 72, respirations are 16, and blood pressure is 110/65.",0.3817
+13,"Physical Exam: The examination of the right foot reveals a one by two inch circular wound on the dorsal aspect of the lateral right foot, with yellow slough and minimal granulation tissue.",0.1385
+14,"There is no surrounding erythema or cellulitis, and no evidence of fluid collection or necrosis.",0.2039
+15,"The vascular exam is unremarkable, with palpable bilateral femoral and popliteal pulses, but no palpable dorsalis pedis or posterior tibial pulses.",0.8904
+16,Doppler signs are present.,0.8765
+17,Test Results: The patient's right foot X-ray shows no evidence of osteomyelitis.,0.0207
+18,Assessment / Problem List:,0.5
+19,Assessment: The patient presents with a diabetic foot ulcer that requires further evaluation and treatment to promote wound healing.,0.8376
+20,Problem list: Diabetic foot ulcer; diabetes mellitus; neuropathy; unknown.,0.9379
+21,Plan:,0.5
+22,I will order an Ankle Brachial Index (ABI) to determine the blood supply to the foot.,0.0057
+23,I will perform a debridement in the office to remove dead tissue from the wound.,0.2261
+24,"I will prescribe collagenase ointment to be applied to the wound once daily, covered with a dry sterile dressing.",0.0054
+25,The patient will wear a surgical shoe to alleviate pressure on the area.,0.2257
+26,I will see the patient again in two weeks to assess the wound's progress.,0.1947
+27,"If the ABI indicates poor blood supply, I may refer the patient to a vascular specialist.",0.1179
+28,I will also refer the patient to a diabetic specialist to discuss ways to manage his diabetes and lower his HbA1c level.,0.7794
+29,Follow-up: The patient will be seen in two weeks to reassess the wound's progress.,0.7819

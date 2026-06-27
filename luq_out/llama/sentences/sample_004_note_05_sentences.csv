@@ -1,0 +1,28 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient presents with a sore on his right foot that has not healed in two to three weeks, initially presenting as a blister due to tight shoes, which he has since replaced.",0.8644
+2,"He has been treating it with band-aids and antibiotics, which were completed yesterday.",0.8662
+3,"He denies pain, fever, chills, or drainage from the wound.",0.1115
+4,"The patient has a history of neuropathy, which he attributes to the tight shoes.",0.9986
+5,He also mentions that the wound sticks to his sock when he removes it.,0.9885
+6,"Past medical history: The patient has diabetes, with an A1c level of over 8% and has seen a podiatrist in the past but is currently without a primary care physician.",0.9947
+7,He does not mention any other medical conditions or allergies.,0.8893
+8,"Review of systems: The patient denies any other symptoms, but mentions that he has had issues with stability with his shoes in the past.",0.9994
+9,Current medications: [NOT MENTIONED],0.5
+10,Objective:,0.5
+11,"Vital signs: Temperature is 98.1°F, heart rate is 72, respirations are 16, blood pressure is 110/65.",0.4588
+12,"Physical exam: A 1x2 inch circular wound is present on the dorsal aspect of the lateral right foot, proximal to the right fifth MTP joint, with yellow slough and minimal granulation tissue.",0.4166
+13,"There is no surrounding erythema or cellulitis, no fluid collection, no necrosis, and no odor.",0.3411
+14,"The vascular exam is notable for palpable bilateral femoral and popliteal pulses, with no palpable DP or PT pulses but with Doppler signs present.",0.1393
+15,Test Results: An x-ray of the right foot showed no evidence of osteomyelitis.,0.005
+16,Assessment / Problem List:,0.5
+17,Assessment: The patient has a diabetic foot ulcer with compromised wound healing due to neuropathy and poor blood supply.,0.9996
+18,Problem list: Diabetic foot ulcer; compromised wound healing; neuropathy; diabetes mellitus (status: active).,0.8838
+19,Plan:,0.5
+20,"I prescribed collagenase ointment to be applied to the wound once daily, covered with a dry sterile dressing.",0.0079
+21,I will perform a debridement in the office to remove dead tissue.,0.2274
+22,I ordered an ankle-brachial index (ABI) to assess the blood supply to the foot.,0.0021
+23,I will also refer the patient to a vascular specialist if the ABI indicates poor blood supply for wound healing.,0.8897
+24,I will see the patient again in two weeks.,0.0136
+25,I plan to refer the patient to a diabetic specialist to discuss ways to manage his diabetes and bring down his A1c level.,0.7778
+26,Follow-up: I plan to see the patient again in two weeks.,0.0013

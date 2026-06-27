@@ -1,0 +1,29 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, Wayne, presents with a non-healing wound on his right foot, which he has had for approximately two to three weeks.",0.7273
+2,"He reports that the wound did not improve after a course of antibiotics prescribed by his primary care physician, and he is now experiencing a blister-like wound that is stuck to his sock.",0.6812
+3,He denies any trauma to the foot and is unable to feel the wound due to neuropathy.,0.8223
+4,"He also reports that the wound does not hurt, but he has noticed that it is not healing.",0.8906
+5,"Past medical history: The patient has diabetes, with an HbA1c level of a little over 8, and has a history of neuropathy.",0.6521
+6,He used to see a podiatrist but was unable to find a new one after they moved.,0.7681
+7,"Review of systems: The patient denies any other symptoms such as fever, chills, or drainage from the wound.",0.1624
+8,Current medications: [NOT MENTIONED],0.5
+9,Objective:,0.5
+10,"Vital signs: Temperature 98.1, heart rate 72, respirations 16, blood pressure 110/65.",0.3847
+11,"Physical exam: A 1x2 inch circular wound is present on the dorsal aspect of the lateral right foot, just proximal to the right fifth to the fifth MTP joint.",0.4329
+12,"The wound has yellow slough present with minimal granulation tissue, no surrounding erythema or cellulitis, and no fluid collection.",0.1752
+13,"There is no necrosis, no odor, and no bony exposure.",0.8137
+14,"The vascular exam shows palpable bilateral femoral and popliteal pulses, with no palpable DP or PT pulses, but Doppler signs are present.",0.5535
+15,Test Results: The right foot X-ray shows no evidence of osteomyelitis.,0.0115
+16,Assessment / Problem List:,0.5
+17,"Assessment: The patient has a diabetic foot ulcer on the right foot, which is not healing despite previous antibiotic treatment.",0.8891
+18,Problem list: Diabetic foot ulcer; poor diabetic control; neuropathy; potential vascular insufficiency.,0.9046
+19,Plan:,0.5
+20,"I prescribed collagenase ointment to be applied to the wound once daily, covered with a dry sterile dressing.",0.0077
+21,I will perform a debridement in the office to remove dead tissue.,0.2272
+22,I will order an ankle-brachial index (ABI) to determine the blood supply to the foot.,0.0045
+23,I will have the patient wear a surgical shoe to take pressure off the area.,0.2266
+24,I do not think any more antibiotics are needed at this time.,0.4487
+25,I will refer the patient to a vascular specialist if the ABI indicates poor blood supply for wound healing.,0.4512
+26,I will see the patient again in two weeks.,0.0137
+27,Follow-up: I will see the patient in two weeks to assess the wound and determine if further treatment is needed.,0.9996

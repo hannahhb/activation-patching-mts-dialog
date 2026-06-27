@@ -1,0 +1,30 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, William, presented to the office with a complaint of right knee pain that began a week ago after an injury at a trampoline park.",0.8844
+2,He reports hearing a snap and experiencing instant pain.,0.1894
+3,"He denies taking any medication other than Tylenol, which provided minimal relief.",0.5238
+4,He has been elevating the knee and has not used ice or heat.,0.8205
+5,He is a recreational trampoline park visitor and does not have a regular exercise regimen.,0.3217
+6,"Past medical history: The patient has hypertension, for which he is currently taking 20 milligrams of lisinopril most days.",0.7419
+7,"He has diabetes and is taking metformin, 500 milligrams daily.",0.5314
+8,"He has not checked his blood pressure recently and has not measured his blood sugar regularly, but has been doing so about 4-5 times a week.",0.871
+9,Review of systems: The patient denies any other symptoms.,0.463
+10,Current medications:,0.5
+11,Lisinopril 20 milligrams daily for hypertension,0.4832
+12,Metformin 500 milligrams daily for diabetes,0.8235
+13,Objective:,0.5
+14,"Vital signs: Blood pressure 180/80 mmHg, not within normal limits.",0.8564
+15,Physical exam: The patient has ecchymosis and edema along the lateral aspect of the knee.,0.2521
+16,He has a slight limp and limited range of motion due to pain.,0.3493
+17,The heart rate is regular and rhythm is normal.,0.5935
+18,Lungs are clear bilaterally.,0.7025
+19,Test Results: [NOT MENTIONED],0.5
+20,Assessment / Problem List:,0.5
+21,"Assessment: The patient has a lateral ligament strain in the right knee, likely sustained from a trampoline park injury.",1.0
+22,Problem list: Right knee pain; Hypertension; Diabetes; Lateral ligament strain of the right knee; Suspected high blood pressure; Unknown status for past hypertension.,0.6364
+23,Plan:,0.5
+24,I prescribed meloxicam 15 milligrams daily for pain and swelling in the right knee.,0.3355
+25,I referred the patient to physical therapy to strengthen the muscles around the area and prevent further injury.,0.0104
+26,I will continue the lisinopril at 20 milligrams daily for hypertension and order an echocardiogram to assess cardiac function.,0.3264
+27,I also ordered an A1C and lipid panel to monitor diabetes management.,0.0026
+28,Follow-up: The patient will return to the office for follow-up after the physical therapy appointment and to discuss the results of the ordered tests.,0.7854

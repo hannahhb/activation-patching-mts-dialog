@@ -1,0 +1,24 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient presented with a 3-month history of intermittent cough, which initially started while loading horses and resolved after a cold, but recurred and prompted a visit to their primary care physician, who diagnosed bronchitis and referred them to me for further evaluation of a lung nodule found on a chest X-ray.",0.4599
+2,"The patient has a history of biking and exercising regularly, which has not resulted in typical illness.",0.4856
+3,"The patient has a history of rheumatoid arthritis, which is currently controlled with methotrexate 7.5 mg weekly, and has been a non-smoker for 7 years.",0.3245
+4,"The patient's family history is notable for their mother having breast cancer, but no history of lung cancer.",0.6097
+5,"Past medical history: The patient has a history of rheumatoid arthritis, which is currently controlled with methotrexate 7.5 mg weekly, and a history of smoking, which they quit 7 years ago.",0.3119
+6,"Review of systems: The patient denies any pain, shortness of breath, or other symptoms.",0.5432
+7,Current medications: Methotrexate 7.5 mg weekly for rheumatoid arthritis.,0.3705
+8,Objective:,0.5
+9,"Vital signs: The patient's blood pressure is 124/76, heart rate is 70, respiratory rate is 16, and oxygen saturation on room air is 98%.",0.0733
+10,"Physical exam: The patient's lungs are clear and equal bilaterally, and the heart has a regular rate and rhythm with no clicks, rubs, or murmurs.",0.1079
+11,"The patient has a little bit of swelling in the knuckles on both hands, which is consistent with rheumatoid arthritis.",0.3311
+12,"Test Results: The patient had a chest CT scan that showed a solitary 2-centimeter nodule in the lateral aspect of the right upper lobe, which appears smooth in appearance and has no evidence of emphysematous disease.",0.0404
+13,Assessment / Problem List:,0.5
+14,Assessment: The patient has an incidentally found right upper lobe lung nodule that requires further evaluation.,0.5566
+15,Problem list: Lung nodule; Rheumatoid arthritis; History of smoking; Family history of breast cancer.,0.9912
+16,Plan:,0.5
+17,I will order a pulmonary function test (PFT) to establish a baseline for the patient's lung function.,0.3272
+18,I will also schedule a PET CT to determine if the nodule is metabolically active.,0.22
+19,"I will recommend video-assisted thoracoscopy to remove the nodule, which will involve three small incisions on the side of the patient's right chest and general anesthesia.",0.3347
+20,The patient will be admitted to the hospital for one night and discharged the following day.,0.2237
+21,The patient should continue to follow up with their rheumatologist and continue their medication therapy as previously outlined.,0.003
+22,Follow-up: The patient will be seen again in a few minutes to sign paperwork and begin the treatment process.,0.2272

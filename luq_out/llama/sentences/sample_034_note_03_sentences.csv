@@ -1,0 +1,24 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient presented with a 3-month history of a cough, which was initially diagnosed as bronchitis but further evaluation with a chest X-ray and CT scan revealed a solitary 2-centimeter nodule in the lateral aspect of the right upper lobe.",0.5349
+2,"The patient has a history of rheumatoid arthritis, which is currently under control with methotrexate 7.5 mg weekly.",0.0879
+3,"The patient has a history of smoking, quitting 7 years ago, and no family history of lung cancer.",0.3937
+4,"Review of systems: The patient denies pain, shortness of breath, or any other symptoms.",0.3674
+5,"Past medical history: The patient has a history of rheumatoid arthritis, which is currently under control with methotrexate 7.5 mg weekly.",0.0879
+6,"The patient has a history of smoking, quitting 7 years ago.",0.2772
+7,Current medications: Methotrexate 7.5 mg weekly for rheumatoid arthritis.,0.2619
+8,Objective:,0.5
+9,"Vital signs: The patient's vital signs are within normal limits: blood pressure 124/76, heart rate 70, respiration rate 16, oxygen saturation 98% on room air, and the patient is afebrile.",0.386
+10,Physical exam: The lungs are clear and equal bilaterally.,0.034
+11,"The heart has a regular rate and rhythm with no clicks, rubs, or murmurs.",0.5871
+12,"The extremities have pink, warm, and dry skin with no edema, and pulses are intact in all extremities with brisk capillary refill.",0.9889
+13,"Test Results: The chest CT scan shows a solitary 2-centimeter nodule in the lateral aspect of the right upper lobe, smooth in appearance, and no evidence of emphysematous disease.",0.2371
+14,Assessment / Problem List:,0.5
+15,Assessment: The patient has an incidentally found right upper lobe lung nodule.,0.0057
+16,Problem list: Lung nodule; Rheumatoid arthritis; Past history of smoking.,0.9783
+17,Plan:,0.5
+18,I prescribed no medications at this time.,1.0
+19,I ordered a pulmonary function test (PFT) to obtain a baseline for lung function.,0.0034
+20,I scheduled a PET CT to determine if the nodule is metabolically active.,0.002
+21,"I plan to remove the nodule via video-assisted thoracoscopy, which involves three small incisions on the side of the right chest, under general anesthesia, and the patient will be admitted for one night and discharged the following day.",0.6692
+22,Follow-up: I will see the patient again in a few minutes to start the treatment process.,0.224

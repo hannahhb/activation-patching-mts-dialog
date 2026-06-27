@@ -1,0 +1,32 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: Stephanie Morales, a 36-year-old female, presents with a complaint of ankle pain.",0.7783
+2,She reports that she slipped and twisted her left ankle two days ago while walking on ice.,0.5667
+3,"She fell and was able to get up with assistance, but experienced significant soreness, swelling, and pain, making it hard to walk.",0.7818
+4,"She has tried ibuprofen, ice, and elevation, but has only experienced a little relief.",0.6773
+5,"The pain is localized to the outside of her ankle, with no pain or tenderness in her calf, lower leg, or knee.",0.7755
+6,Past medical history: She has a history of diabetes and high blood pressure.,0.1002
+7,Review of systems: No other symptoms are mentioned.,0.9994
+8,Current medications: She is taking metformin and norvasc.,0.3278
+9,Objective:,0.5
+10,Vital signs: Blood pressure 120/70.,0.7465
+11,"Physical exam: The patient's neck, lungs, and heart exams are normal.",0.2292
+12,"She has a 2/6 systolic ejection murmur, which has been unchanged from previous exams.",0.4526
+13,Her belly exam is normal.,0.2455
+14,"On her ankle exam, she has tenderness over the lateral malleolus and the fifth metatarsal.",0.1757
+15,"There is some swelling, redness, and pain with valgus stressing of her ankle.",0.0953
+16,She has normal sensation and pulses in her ankle.,0.1432
+17,Test Results: [NOT MENTIONED],0.5
+18,Assessment / Problem List:,0.5
+19,"Assessment: I diagnose the patient with an ankle sprain, but I am concerned about a possible fracture due to tenderness over the fifth metatarsal.",0.9999
+20,I will order an x-ray to confirm the diagnosis.,0.7225
+21,Problem list: Ankle sprain; possible fracture of the fifth metatarsal; diabetes; high blood pressure.,0.9996
+22,Plan:,0.5
+23,I will order an x-ray of the ankle to confirm the diagnosis.,0.7093
+24,I will put the patient in an air splint and provide her with crutches until the x-ray results are available.,0.4181
+25,I will prescribe naprosyn 500mg twice a day for pain control.,0.0125
+26,"I will instruct her to keep her ankle elevated, apply ice, and avoid weightbearing.",0.1137
+27,"If the x-ray shows a fracture, I will refer her to orthopedics.",0.4398
+28,Follow-up: I will contact the patient once the x-ray results are available to discuss the next steps.,0.1158
+29,I will also instruct her to follow up with her existing appointment with the ophthalmologist for her diabetes checkup.,0.8891
+30,I will refill her norvasc and order another hemoglobin A1c to check her blood sugar levels.,0.9999

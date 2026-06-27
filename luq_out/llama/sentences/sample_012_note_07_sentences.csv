@@ -1,0 +1,31 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, Angela, presented with a history of recurrent kidney stones, having had approximately seven or eight episodes, with the most recent one passing about three days ago.",0.8611
+2,She denies current pain and blood in her urine.,0.403
+3,"Past medical history includes hypertension and diabetes, with a current medication regimen of 2.5mg of Norvasc daily for hypertension and 500mg of metformin daily for diabetes.",0.3512
+4,She reports having been compliant with her medications but notes that her blood pressure has been higher when measured in the office compared to at home.,0.8734
+5,"She also reports difficulty adhering to a healthy diet, often consuming fast food and sugary snacks.",0.6626
+6,She has not checked her blood sugar levels frequently and has an A1c of 6.7.,0.9862
+7,"She has a history of insomnia, which she has been managing with meditation apps and has tried melatonin with limited success.",0.9413
+8,"Past medical history: The patient has a history of hypertension, diabetes, and recurrent kidney stones.",0.2574
+9,She has been compliant with her medication regimen of 2.5mg of Norvasc daily and 500mg of metformin daily.,0.9989
+10,"Review of systems: The patient denies chest pain, abdominal pain, or other symptoms.",0.4518
+11,Current medications:,0.5
+12,Norvasc 2.5mg daily for hypertension,0.7384
+13,Metformin 500mg daily for diabetes,0.9269
+14,Objective:,0.5
+15,Vital signs: The patient's blood pressure was 150/90mmHg in the office.,0.8868
+16,"Physical exam: The patient's lungs were clear bilaterally, with no crackles heard on auscultation.",0.5941
+17,"A grade 2/6 systolic ejection murmur was heard on cardiac exam, which has not worsened since the patient's previous visit.",0.6674
+18,"The abdomen was tender to palpation on the left lower quadrant, but not on the right side.",0.999
+19,Test Results: [NOT MENTIONED],0.5
+20,Assessment / Problem List:,0.5
+21,"Assessment: The patient has recurrent kidney stones, which have passed, but she continues to experience hypertension and diabetes, and is at risk for further kidney stones due to her diet and other factors.",0.9999
+22,Problem list: Hypertension; Diabetes; Recurrent kidney stones; Insomnia; [Unknown: Other],0.8493
+23,Plan:,0.5
+24,I prescribed 10mg of melatonin as needed for insomnia.,0.0843
+25,I will provide a referral to a urologist for further evaluation of the patient's recurrent kidney stones.,0.0037
+26,I will also provide a consult to a nutritionist to help the patient improve her diet and reduce her risk of further kidney stones.,0.1152
+27,The patient will continue on 2.5mg of Norvasc daily for hypertension and 500mg of metformin daily for diabetes.,0.775
+28,I will see the patient in three months to follow up on her progress.,0.9831
+29,"Follow-up: The patient will be seen in three months to follow up on her hypertension, diabetes, and kidney stone status.",0.8889

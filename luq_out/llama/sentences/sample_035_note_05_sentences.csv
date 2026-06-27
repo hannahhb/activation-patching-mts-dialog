@@ -1,0 +1,28 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, Wayne, presents with a sore on his right foot that has not been healing for 2-3 weeks.",0.5146
+2,"He initially thought it was a blister from a new pair of shoes, but it has developed into a wound.",0.3486
+3,"He has been using a band-aid to cover it and has been putting it off, but it has not improved despite finishing a course of antibiotics prescribed by his primary care physician.",0.8379
+4,"He reports no pain or sensation in the wound and no other symptoms such as fever, chills, or drainage.",0.0542
+5,"Past medical history: The patient has diabetes, with a last HbA1c of over 8%.",0.1905
+6,He has a history of neuropathy.,0.8013
+7,Review of systems: None mentioned.,0.7834
+8,Current medications: [NOT MENTIONED],0.5
+9,Objective:,0.5
+10,"Vital signs: The patient's temperature is 98.1°F, heart rate is 72, respirations are 16, and blood pressure is 110/65.",0.5205
+11,"Physical exam: There is a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, proximal to the right fifth MTP joint, with yellow slough and minimal granulation tissue.",0.1954
+12,"There is no surrounding erythema or cellulitis, no fluid collection, no necrosis, and no odor.",0.2113
+13,Bony exposure is not present.,0.7071
+14,"Palpable bilateral femoral and popliteal pulses are present, but no palpable DP or PT pulses are present.",0.256
+15,Doppler signs are present.,0.861
+16,Test Results: The patient's right foot X-ray shows no evidence of osteomyelitis.,0.1408
+17,Assessment / Problem List:,0.5
+18,"Assessment: The patient has a diabetic foot ulcer with a possible compromised blood supply, which is a risk factor for delayed healing.",0.7383
+19,Problem list: Diabetic foot ulcer; Compromised blood supply; Diabetes mellitus (status: active).,0.5997
+20,Plan:,0.5
+21,I prescribed collagenase ointment to be applied to the wound once daily and covered with a dry sterile dressing.,0.0069
+22,I will perform a debridement in the office to remove dead tissue.,0.0067
+23,I will order an ankle-brachial index (ABI) to assess blood supply to the foot.,0.0034
+24,I will also refer the patient to a vascular specialist if the ABI indicates suboptimal blood supply for wound healing.,0.7722
+25,The patient will wear a surgical shoe to take pressure off the area.,0.3593
+26,Follow-up: The patient will be seen again in 2 weeks to reassess the wound and adjust the treatment plan as needed.,0.7749

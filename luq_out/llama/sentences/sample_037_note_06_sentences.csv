@@ -1,0 +1,42 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, a 36-year-old female, presents with a 2-day history of left ankle pain and swelling after slipping on ice and twisting her ankle on the outside of her hip.",0.7549
+2,She reports falling and being unable to walk due to pain and swelling.,0.2186
+3,"She has tried ibuprofen, ice, and elevation, with minimal relief.",0.4807
+4,"She denies bleeding or pain in her calf, lower leg, or knee.",0.5985
+5,Past medical history: The patient has a history of diabetes and high blood pressure.,0.4983
+6,She takes metformin and norvasc.,0.1408
+7,"Her last hemoglobin A1c was 6.8, which is considered good.",0.8023
+8,She is due for an eye exam in the next couple of weeks.,0.8049
+9,Review of systems: [NOT MENTIONED],0.5
+10,Current medications:,0.5
+11,Metformin [DOSE NOT MENTIONED] [FREQUENCY NOT MENTIONED] [INDICATION: diabetes],0.9719
+12,Norvasc [DOSE NOT MENTIONED] [FREQUENCY NOT MENTIONED] [INDICATION: high blood pressure],0.9826
+13,Objective:,0.5
+14,Vital signs:,0.5
+15,Blood pressure: 120/70,0.976
+16,Pulse rate: [NOT MENTIONED],0.5
+17,Oxygen saturation: [NOT MENTIONED],0.5
+18,Temperature: [NOT MENTIONED],0.5
+19,Physical exam:,0.5
+20,"Neck exam is fine, no bruits.",0.4452
+21,Lungs are clear.,0.4685
+22,"Heart exam is normal, with a 2/6 systolic ejection murmur.",0.3646
+23,Belly exam is good.,0.3346
+24,"Ankle exam reveals tenderness over the lateral malleolus and the fifth metatarsal, with swelling and redness.",0.0065
+25,"There is pain with valgus stressing of the ankle, but normal sensation and pulses.",0.1851
+26,Test Results: [NOT MENTIONED],0.5
+27,Assessment / Problem List:,0.5
+28,"Assessment: The patient has an ankle sprain, and an x-ray is ordered to rule out a fracture.",0.1418
+29,Problem list: Ankle sprain; diabetes; high blood pressure; suspected fracture (unknown).,0.9391
+30,Plan:,0.5
+31,I ordered an x-ray of the ankle to rule out a fracture.,0.2279
+32,I will give the patient a splint and crutches to avoid weightbearing until the x-ray results are available.,0.2259
+33,I prescribed naprosyn 500mg twice a day for pain control.,0.1171
+34,I want the patient to keep the ankle elevated and apply ice.,0.1142
+35,"If the x-ray shows a fracture, I will refer the patient to orthopedics.",0.4265
+36,I will also check the patient's hemoglobin A1c and order baseline labs.,0.3347
+37,I will refill the patient's norvasc prescription today.,0.9996
+38,Follow-up:,0.5
+39,I will call the patient back if the x-ray shows a fracture.,0.8891
+40,The patient will follow up with the ophthalmologist for their eye exam in the next couple of weeks.,0.9999

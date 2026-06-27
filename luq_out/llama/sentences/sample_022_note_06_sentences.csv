@@ -1,0 +1,24 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, a 45-year-old male, presented to the office with an ankle injury sustained while playing basketball with his 10-year-old son.",0.8686
+2,"He reported landing awkwardly after being jumped on and twisting his ankle, resulting in bruising and swelling on the outside of the ankle.",0.8879
+3,"He described difficulty walking and instability in the ankle, which he attributed to the recent resumption of his workout routine.",0.2023
+4,He is concerned about disrupting his progress and plans to continue coaching his son's basketball team starting in April.,0.4504
+5,Past medical history: NOT MENTIONED,0.9983
+6,Review of systems: NOT MENTIONED,0.9983
+7,Current medications: NOT MENTIONED,0.9983
+8,Objective:,0.5
+9,Vital signs: [NOT MENTIONED],0.5
+10,"Physical exam: The patient's ankle was swollen on the lateral side, with exquisite tenderness to palpation laterally and some tenderness over the medial deltoid region.",0.234
+11,"The skin was intact, and capillary refill was brisk.",0.2204
+12,The ankle did not exhibit malalignment.,0.0106
+13,"Test Results: The patient had an X-ray taken, which revealed a displaced lateral malleolus fracture at the Weber C level, with no evidence of medial or posterior malleolar fractures.",0.0022
+14,Assessment / Problem List:,0.5
+15,"Assessment: The patient has a displaced lateral malleolar fracture of the right ankle, which is unstable and requires surgical intervention.",0.9998
+16,Problem list: Lateral malleolar fracture; unstable ankle; probable need for surgery.,0.4912
+17,Plan:,0.5
+18,"I prescribed meloxicam for pain and inflammation, and instructed the patient to ice and elevate the ankle.",0.0022
+19,I recommended that the patient use crutches to avoid putting weight on the ankle.,0.1902
+20,"I advised the patient to continue coaching his son's basketball team, as the surgery will not prevent him from doing so.",0.9997
+21,"I estimated that the patient will be out for approximately three months, and will need to follow up with further treatment and rehabilitation after surgery.",0.6818
+22,Follow-up: I instructed the patient to return to the office after surgery for follow-up care and rehabilitation.,0.9969

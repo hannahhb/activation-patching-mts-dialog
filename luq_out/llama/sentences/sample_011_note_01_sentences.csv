@@ -1,0 +1,37 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient is a 45-year-old male with a history of diabetes type two and mild intermittent asthma, presenting with right elbow pain that started three weeks ago after increasing tennis activity.",0.7986
+2,"He describes the pain as sharp, stabbing, aching, and throbbing, with a severity of 8/10 when using the arm and 3/10 when resting.",0.5266
+3,The pain is localized to the outside part of the elbow and does not radiate to the arm or shoulder.,0.8884
+4,"He has tried taking Tylenol and ibuprofen, but they do not provide relief.",0.7191
+5,"He also mentions that he has been playing tennis more frequently, which his doctor encouraged him to do to stay active and manage his diabetes.",0.9999
+6,Past medical history: The patient has a history of diabetes type two and mild intermittent asthma.,0.5809
+7,"He is on metformin 500mg twice a day and flovent twice a day, and albuterol as needed.",0.7008
+8,He has a history of penicillin allergy and had his gallbladder removed 10 years ago.,0.6668
+9,Review of systems: The patient does not mention any other symptoms related to his elbow pain.,0.9957
+10,Current medications:,0.5
+11,Metformin 500mg twice a day for diabetes,0.882
+12,Flovent twice a day for asthma,0.9951
+13,Albuterol as needed for asthma,0.9957
+14,Penicillin allergy,0.9039
+15,Objective:,0.5
+16,Vital signs: [NOT MENTIONED],0.5
+17,"Physical exam: The patient has moderate lateral epicondylar tenderness of the right elbow, and pain with passive range of motion of the right elbow.",0.0147
+18,He also has mild pain with resisted extension of the right wrist.,0.9655
+19,The physical exam is otherwise normal.,0.6735
+20,Test Results:,0.5
+21,Right elbow x-ray shows no acute fracture or other bony abnormality.,0.0209
+22,Assessment / Problem List:,0.5
+23,"Assessment: The patient has acute lateral epicondylitis of the right elbow, also known as tennis elbow, likely due to overuse of the elbow joint.",0.1206
+24,Problem list:,0.5
+25,Acute lateral epicondylitis of the right elbow (active),0.878
+26,Diabetes type two (active),0.9925
+27,Mild intermittent asthma (active),0.9925
+28,Plan:,0.5
+29,I prescribed Ultram 50mg once per day for pain management of the right elbow.,0.3409
+30,"I recommend that the patient rest his right arm as much as possible, avoid repetitive stress on the right arm, and ice the right elbow for 20 minutes at least 3 times a day.",0.1163
+31,I also prescribed a brace for the right forearm to help with discomfort.,0.3399
+32,I increased the patient's metformin to 1000mg twice a day to better control his diabetes.,0.781
+33,"I ordered a hemoglobin A1c level, CBC, and chem-12 blood test to monitor his diabetes.",0.4483
+34,I also wrote a prescription for a refill of albuterol.,0.5582
+35,Follow-up: I would like to see the patient in 4 weeks to reevaluate his elbow and adjust treatment as needed.,0.2671

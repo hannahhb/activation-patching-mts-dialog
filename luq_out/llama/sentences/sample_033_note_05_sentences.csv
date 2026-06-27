@@ -1,0 +1,31 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"The patient, Angela, presents with a history of recurrent kidney stones, with this being her seventh or eighth episode.",0.2452
+2,"She reports that the current stone has passed, with no blood in her urine or pain for the past three days.",0.5949
+3,"She has a past medical history of hypertension and diabetes, for which she is on 2.5mg of norvasc and 500mg of metformin daily.",0.4433
+4,She denies any chest pain or belly pain.,0.3355
+5,"She has a history of fast food and high-sugar intake, which she struggles to control.",0.5564
+6,"Her blood sugar levels have been inconsistent, with her last A1c being 6.7.",0.8893
+7,"She has a systolic ejection murmur, which has not worsened since her previous visit.",0.8907
+8,"She reports insomnia, which she has tried to manage with meditation apps and has considered using melatonin.",0.7751
+9,Objective:,0.5
+10,Vital signs: Blood pressure was 150/90 mmHg upon arrival.,0.7675
+11,"Physical exam: Lungs were clear bilaterally, with no crackles heard.",0.56
+12,Heart exam revealed a grade 2/6 systolic ejection murmur.,0.1288
+13,Abdominal exam showed no tenderness to palpation or the CVA on the right side.,0.8896
+14,Assessment / Problem List:,0.5
+15,"The patient has a history of recurrent kidney stones, which appear to have passed this time.",0.5541
+16,"She has hypertension, which is currently well-controlled on 2.5mg of norvasc.",0.9999
+17,"She has diabetes, with a recent A1c of 6.7.",0.9997
+18,She has a systolic ejection murmur.,0.904
+19,The patient also has insomnia.,0.9375
+20,Problem list: Recurrent kidney stones; Hypertension; Diabetes; Systolic ejection murmur; Insomnia.,0.8497
+21,Plan:,0.5
+22,I prescribed 10mg of melatonin as needed for insomnia.,0.0169
+23,I referred her to a urologist to assess the cause of recurrent kidney stones.,0.0024
+24,I ordered a urinalysis and urine culture to ensure the kidney stone has cleared.,0.6682
+25,I recommended a consult with a nutritionist to help her control her diet and reduce her medication usage.,0.7251
+26,I instructed her to take her blood sugar levels before each meal to monitor her diabetes management.,0.3343
+27,I will see her in three months to follow up on her progress.,0.8877
+28,Follow-up:,0.5
+29,The patient will return in three months to follow up on her progress.,0.7779

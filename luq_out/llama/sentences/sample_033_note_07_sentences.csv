@@ -1,0 +1,32 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, Angela, presented with a history of recurrent kidney stones, with this being her seventh or eighth episode.",0.1372
+2,She reported that the current stone had passed approximately three days ago and she is no longer experiencing pain or blood in her urine.,0.3419
+3,She also has a past medical history of hypertension and diabetes.,0.7867
+4,"Angela's blood pressure was 150/90 at the visit, but she reported that her home blood pressure readings are typically 130-140/60-70.",0.7812
+5,She is taking 2.5 mg of norvasc daily for her hypertension and 500 mg of metformin daily for her diabetes.,0.6151
+6,"She has a history of eating a diet high in fast food and sugary snacks, which she is trying to change.",0.8541
+7,"She has not been checking her blood sugars frequently, but reports they have been ""pretty good"".",0.7736
+8,She has a history of insomnia and has tried meditation apps to help with sleep.,0.5789
+9,"Past medical history: The patient has a history of hypertension, diabetes, and recurrent kidney stones.",0.1998
+10,She is taking 2.5 mg of norvasc daily for her hypertension and 500 mg of metformin daily for her diabetes.,0.6151
+11,She has a history of eating a diet high in fast food and sugary snacks.,0.6067
+12,"Review of systems: No chest pain, belly pain, or other symptoms were reported.",0.3731
+13,Current medications:,0.5
+14,Norvasc 2.5 mg daily for hypertension,0.6291
+15,Metformin 500 mg daily for diabetes,0.6771
+16,Objective:,0.5
+17,"Vital signs: Blood pressure 150/90, but patient reports home readings of 130-140/60-70.",0.7784
+18,"Physical exam: Lungs were clear bilaterally, heart exam revealed a grade 2/6 systolic ejection murmur, and abdominal exam showed no tenderness to palpation.",0.1128
+19,Test Results: [NOT MENTIONED],0.5
+20,Assessment / Problem List:,0.5
+21,"Assessment: The patient has a history of recurrent kidney stones, hypertension, and diabetes, but currently appears to be doing well with her current treatment plan.",0.8889
+22,"Problem list: Kidney stones, hypertension, diabetes; status: active; suspected recurrent kidney stones; status: active; past medical history of hypertension and diabetes; status: past; suspected need for nutrition consult; status: suspected.",0.6675
+23,Plan:,0.5
+24,"I prescribed Percocet as needed for pain, but it is unclear if this was a prescription from the emergency room visit or a new prescription.",1.0
+25,I also prescribed 10 mg of melatonin as needed for insomnia.,0.6193
+26,I will refer the patient to urology to investigate the cause of her recurrent kidney stones.,0.0029
+27,I will also refer the patient to nutrition to help her change her diet and manage her hypertension and diabetes.,0.4459
+28,I will schedule a follow-up appointment in three months to check on her progress.,0.7823
+29,Follow-up:,0.5
+30,The patient will return in three months for a follow-up appointment.,0.0079

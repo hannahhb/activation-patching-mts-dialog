@@ -1,0 +1,33 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, a 36-year-old female, presents with a complaint of ankle pain that occurred two days ago when she slipped and twisted her left ankle on the outside, causing her to fall.",0.4864
+2,"She reports swelling, pain, and difficulty walking.",0.2227
+3,"She has tried ibuprofen, ice, and elevation, which has provided some relief.",0.5956
+4,"The pain is localized to the outside of her ankle, with no radiation to her calf, lower leg, or knee.",0.5858
+5,She denies bleeding.,0.6478
+6,She has a history of diabetes and high blood pressure.,0.203
+7,"Past medical history: The patient has a history of diabetes, for which she takes metformin, and high blood pressure, for which she takes Norvasc.",0.6485
+8,"Her hemoglobin A1c is 6.8, which is well-controlled.",0.881
+9,"She is due for an eye exam for her diabetes checkup, which she has an appointment scheduled for in the next couple of weeks.",0.8704
+10,Review of systems: No other symptoms mentioned.,0.9995
+11,Current medications:,0.5
+12,Metformin [dosage not specified] [frequency not specified] for diabetes,0.881
+13,Norvasc [dosage not specified] [frequency not specified] for high blood pressure,0.9478
+14,Objective:,0.5
+15,Vital signs: Blood pressure 120/70.,0.7469
+16,"Physical exam: The patient's neck exam is normal, with no bruits.",0.5512
+17,"Her lungs are clear, and her heart exam is normal, except for a 2/6 systolic ejection murmur that has been unchanged from previous exams.",0.4489
+18,Her belly exam is normal.,0.3208
+19,"On her ankle exam, she has tenderness over the lateral malleolus and the fifth metatarsal, with swelling and redness, and pain with valgus stressing of the ankle.",0.2555
+20,She has normal sensation and pulses in her lower extremities.,0.2474
+21,Test Results: [NOT MENTIONED],0.5
+22,Assessment / Problem List:,0.5
+23,"Assessment: The patient has an ankle sprain, with possible fracture, and is being treated with an air splint and crutches to avoid weightbearing until an x-ray can be obtained.",0.9999
+24,Problem list: Ankle sprain; suspected fracture; diabetes; high blood pressure.,0.995
+25,Plan:,0.5
+26,I ordered an x-ray of the patient's ankle to rule out a fracture.,0.2148
+27,I put her in an air splint and gave her crutches to avoid weightbearing until the x-ray results are available.,0.4453
+28,I prescribed Naprosyn 500mg twice a day for pain control and instructed her to keep the ankle elevated and apply ice.,0.1146
+29,"I also instructed her to continue with her current medications, including metformin and Norvasc.",0.6672
+30,"I ordered baseline labs, including a hemoglobin A1c, to monitor her diabetes control.",0.4455
+31,Follow-up: The patient will follow up with me after the x-ray results are available to determine the next course of treatment.,0.3413

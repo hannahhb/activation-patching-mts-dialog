@@ -1,0 +1,29 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, a 52-year-old male, presents with a history of injuring his right knee while trampolining a week ago, reporting a ""snap"" and immediate pain.",0.9905
+2,"He has been experiencing pain on the lateral aspect of the knee, with some bruising and swelling.",0.9997
+3,"He has been trying to manage the pain with Tylenol, but it has not provided significant relief.",0.2279
+4,"He has a history of hypertension and diabetes, and is currently taking 20mg of lisinopril and metformin.",0.0095
+5,"Past medical history: The patient has a history of hypertension and diabetes, for which he is taking 20mg of lisinopril and metformin.",0.1244
+6,"He has not been adherent to his medication regimen, and his blood pressure has been elevated at 180/80.",0.9656
+7,"He has also not been consistent with his exercise regimen, but has been trying to improve his diet.",0.7243
+8,"Review of systems: The patient reports that his blood sugars have been a bit better, but he has not been checking them regularly, and has been trying to watch his carb intake.",0.9978
+9,"He does not have a specific diet, but is trying to eat what he feels like.",0.9953
+10,Current medications:,0.5
+11,Lisinopril 20mg daily for hypertension,0.4458
+12,Metformin 500mg daily for diabetes,0.6313
+13,Objective:,0.5
+14,"Vital signs: The patient's blood pressure is 180/80, which is elevated.",0.546
+15,"Physical exam: The patient has a slight limp and ecchymosis and edema on the lateral aspect of the knee, but no effusion.",0.8654
+16,"He has a decent range of motion, but experiences pain with movement.",0.5709
+17,"The heart has a regular rate and rhythm, and lungs are clear bilaterally.",0.6003
+18,Test Results: The patient's right knee x-ray shows no evidence of fracture or bony abnormality.,0.126
+19,Assessment / Problem List:,0.5
+20,"Assessment: The patient has a lateral ligament strain of the right knee, hypertension, and diabetes.",0.1181
+21,Problem list: Right knee pain; hypertension; diabetes; suspected kidney disease (status: confirmed); suspected cardiovascular disease (status: unknown); suspected renal disease (status: unknown),0.7031
+22,Plan:,0.5
+23,I prescribed meloxicam 15mg daily for pain and swelling in the right knee.,0.3355
+24,I referred the patient to physical therapy to help strengthen the muscles around the knee and prevent further injury.,0.2257
+25,"I will continue the lisinopril at 20mg daily for hypertension, and order an echo to assess cardiac function.",0.2321
+26,"I will also order an A1c to assess long-term blood sugar control, and a lipid panel to assess lipid levels.",0.0045
+27,Follow-up: The patient will return for a follow-up appointment to discuss the results of the tests and to reassess the knee injury.,0.9978

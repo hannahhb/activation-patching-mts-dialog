@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LUQ Sentence Uncertainty — Top 3 Samples</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    max-width: 1200px; margin: 0 auto; padding: 24px;
+    color: #222; background: #f7f7f7;
+  }
+  h1 { margin-bottom: 4px; }
+  .sent { cursor: default; }
+</style>
+</head>
+<body>
+<h1>LUQ Sentence-Level Uncertainty — Top 3 Most Uncertain Samples</h1>
+<p style="color:#555;margin-bottom:28px;">
+  Model: <b>Llama 3.1 8B (Bedrock)</b> &nbsp;|&nbsp;
+  Prompt: Asgari et al. 2025, Experiment 8 (PDSQI-9 optimised)<br>
+  NLI: <b>cross-encoder/nli-deberta-v3-large</b> &nbsp;|&nbsp;
+  U = 1 − mean P(entail | s, r') across K−1 other generations.<br>
+  Hover over a sentence to see its exact uncertainty score.
+</p>
+
+<div style="margin-bottom:40px;border:1px solid #ddd;border-radius:8px;
+     padding:20px;background:#fafafa;">
+  <h2 style="margin-top:0;">
+    #1 — Sample 29
+    <span style="font-size:14px;font-weight:normal;color:#555;">
+      Mean U = 0.6529 &nbsp;|&nbsp; K = 10
+    </span>
+  </h2>
+  
+<div style="margin:12px 0;">
+  <div style="height:18px;background:linear-gradient(to right,rgb(20,140,20) 0%, rgb(43,151,43) 5%, rgb(67,163,67) 10%, rgb(90,174,90) 15%, rgb(114,186,114) 20%, rgb(137,197,137) 25%, rgb(161,209,161) 30%, rgb(184,220,184) 35%, rgb(208,232,208) 40%, rgb(231,243,231) 45%, rgb(255,255,255) 50%, rgb(255,229,229) 55%, rgb(255,204,204) 60%, rgb(255,178,178) 65%, rgb(255,153,153) 70%, rgb(255,127,127) 75%, rgb(255,101,101) 80%, rgb(255,76,76) 85%, rgb(255,50,50) 90%, rgb(255,25,25) 95%, rgb(255,0,0) 100%);
+       border-radius:4px;border:1px solid #ccc;"></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;
+       color:#555;margin-top:2px;">
+    <span>U = 0.0 (certain)</span>
+    <span>U = 0.5</span>
+    <span>U = 1.0 (uncertain)</span>
+  </div>
+</div>
+  <h3>Transcript (excerpt)</h3>
+  <div style="font-family:monospace;font-size:12px;background:#f4f4f4;
+       border-left:4px solid #aaa;padding:10px;white-space:pre-wrap;
+       margin-bottom:16px;">[patient] miss edwards is here for evaluation of facial pain this is a 54 -year-old male<br>[doctor] how're you doing doctor cruz nice to see you today<br>[patient] good to see you mister edwards i'm doctor<br>[doctor] tell me what's been going on yeah so i've got this stabbing shooting pain i've had for a while you know and it it especially right here in my right face right in that cheek bone area it's sometimes it gets super hot i've had it for i think a couple of months now and i went to my family doc</div>
+  <h3>Generated Note — sentence uncertainty</h3>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:2.4;
+       background:#fff;border:1px solid #e0e0e0;border-radius:6px;padding:16px;">
+    <span class="sent" style="background:rgb(255,204,204);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.599">Subjective:</span>
+<span class="sent" style="background:rgb(255,167,167);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.672">HPI: The patient, a 54-year-old male, presents with a 2-3 month history of stabbing, shooting pain in the right cheek bone area of his face, which he describes as excruciating and similar to being stabbed with an ice pick.</span>
+<span class="sent" style="background:rgb(255,225,225);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.558">The pain is triggered by certain temperatures, wind, and cold, and is not alleviated by ibuprofen, Motrin, or topical treatments such as tiger balm.</span>
+<span class="sent" style="background:rgb(255,112,112);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.780">He has not noticed any sensory loss or weakness in the affected area, but does experience numbness on the right side of his face.</span>
+<span class="sent" style="background:rgb(255,135,135);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.735">He has a history of occasional headaches, but no history of migraines or brain tumors.</span>
+<span class="sent" style="background:rgb(255,108,108);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.788">He rates the pain as a 10 out of 10 in severity.</span>
+<span class="sent" style="background:rgb(255,81,81);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.839">Past medical history: The patient has not mentioned any past medical conditions, treatments, or encounters.</span>
+<span class="sent" style="background:rgb(255,78,78);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.846">Review of systems: The patient denies any symptoms in other organs that are relevant to his initial presentation.</span>
+<span class="sent" style="background:rgb(255,199,199);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.609">Current medications: The patient takes Tylenol for occasional headaches.</span>
+<span class="sent" style="background:rgb(255,164,164);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.677">Objective:</span>
+<span class="sent" style="background:rgb(255,167,167);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.671">Vital signs: Not mentioned.</span>
+<span class="sent" style="background:rgb(255,199,199);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.609">Physical exam: The patient was able to follow the doctor's finger in both directions, showed symmetrical teeth, and could hear on both sides of his face.</span>
+<span class="sent" style="background:rgb(255,227,227);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.554">The patient reported a little numbness on the right side of his face, and a dull sensation on the right side when the doctor poked him with a needle, but a sharp sensation on the left side.</span>
+<span class="sent" style="background:rgb(254,254,254);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.498">Test Results: The patient's MRI appears to show a small blood vessel abutting and pinching the trigeminal nerve.</span>
+<span class="sent" style="background:rgb(255,172,172);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.661">Assessment / Problem List:</span>
+<span class="sent" style="background:rgb(255,178,178);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.650">Assessment: The patient has symptoms consistent with trigeminal neuralgia, a condition where nerve compression causes shooting electrical pain in the face.</span>
+<span class="sent" style="background:rgb(255,135,135);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.735">Problem list: Trigeminal neuralgia; active.</span>
+<span class="sent" style="background:rgb(255,167,167);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.671">Plan:</span>
+<span class="sent" style="background:rgb(255,159,159);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.687">I prescribed Tegretol 100mg twice daily for pain management.</span>
+<span class="sent" style="background:rgb(189,223,189);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.361">The patient will undergo genetic testing to ensure the medication is safe for him.</span>
+<span class="sent" style="background:rgb(211,233,211);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.406">He will return in one month to assess the effectiveness of the medication and discuss further treatment options if necessary.</span>
+<span class="sent" style="background:rgb(255,122,122);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.759">Follow-up: The patient will return in one month for a follow-up appointment.</span>
+  </div>
+</div>
+
+<div style="margin-bottom:40px;border:1px solid #ddd;border-radius:8px;
+     padding:20px;background:#fafafa;">
+  <h2 style="margin-top:0;">
+    #2 — Sample 19
+    <span style="font-size:14px;font-weight:normal;color:#555;">
+      Mean U = 0.4786 &nbsp;|&nbsp; K = 10
+    </span>
+  </h2>
+  
+<div style="margin:12px 0;">
+  <div style="height:18px;background:linear-gradient(to right,rgb(20,140,20) 0%, rgb(43,151,43) 5%, rgb(67,163,67) 10%, rgb(90,174,90) 15%, rgb(114,186,114) 20%, rgb(137,197,137) 25%, rgb(161,209,161) 30%, rgb(184,220,184) 35%, rgb(208,232,208) 40%, rgb(231,243,231) 45%, rgb(255,255,255) 50%, rgb(255,229,229) 55%, rgb(255,204,204) 60%, rgb(255,178,178) 65%, rgb(255,153,153) 70%, rgb(255,127,127) 75%, rgb(255,101,101) 80%, rgb(255,76,76) 85%, rgb(255,50,50) 90%, rgb(255,25,25) 95%, rgb(255,0,0) 100%);
+       border-radius:4px;border:1px solid #ccc;"></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;
+       color:#555;margin-top:2px;">
+    <span>U = 0.0 (certain)</span>
+    <span>U = 0.5</span>
+    <span>U = 1.0 (uncertain)</span>
+  </div>
+</div>
+  <h3>Transcript (excerpt)</h3>
+  <div style="font-family:monospace;font-size:12px;background:#f4f4f4;
+       border-left:4px solid #aaa;padding:10px;white-space:pre-wrap;
+       margin-bottom:16px;">[patient] miss edwards is here for evaluation of facial pain this is a 54 -year-old male<br>[doctor] how're you doing doctor cruz nice to see you today<br>[patient] good to see you mister edwards i'm doctor<br>[doctor] tell me what's been going on yeah so i've got this stabbing shooting pain i've had for a while you know and it it especially right here in my right face right in that cheek bone area it's sometimes it gets super hot i've had it for i think a couple of months now and i went to my family doc</div>
+  <h3>Generated Note — sentence uncertainty</h3>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:2.4;
+       background:#fff;border:1px solid #e0e0e0;border-radius:6px;padding:16px;">
+    <span class="sent" style="background:rgb(228,242,228);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.444">Subjective:</span>
+<span class="sent" style="background:rgb(220,237,220);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.426">HPI: The patient, a 54-year-old male, presents with a complaint of stabbing, shooting pain in the right cheekbone area of his face, which has been ongoing for approximately 2-3 months.</span>
+<span class="sent" style="background:rgb(145,201,145);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.268">He reports that the pain is exacerbated by certain temperatures and can be triggered by cold weather.</span>
+<span class="sent" style="background:rgb(255,164,164);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.677">He denies numbness or tingling in the affected area and reports that his smile and vision are unchanged.</span>
+<span class="sent" style="background:rgb(255,254,254);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.502">He describes the pain as excruciating and rates it as a 10 out of 10 in severity.</span>
+<span class="sent" style="background:rgb(255,237,237);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.534">He has tried ibuprofen, Motrin, and topical treatments such as tiger balm, which have provided minimal relief.</span>
+<span class="sent" style="background:rgb(255,193,193);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.620">Past medical history: The patient has a history of occasional headaches, for which he takes Tylenol, but denies a history of migraines or brain tumors.</span>
+<span class="sent" style="background:rgb(255,173,173);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.659">Review of systems: The patient reports no symptoms in other organs or systems.</span>
+<span class="sent" style="background:rgb(255,223,223);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.561">Current medications: He takes Tylenol for occasional headaches.</span>
+<span class="sent" style="background:rgb(255,239,239);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.531">Objective:</span>
+<span class="sent" style="background:rgb(216,236,216);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.418">Vital signs: Not mentioned.</span>
+<span class="sent" style="background:rgb(214,235,214);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.414">Physical exam: The patient was able to follow my finger in both directions, and his smile appeared symmetric.</span>
+<span class="sent" style="background:rgb(192,224,192);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.367">He reported a little numbness on the right side of his face when I rubbed my fingers next to his ear.</span>
+<span class="sent" style="background:rgb(128,193,128);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.231">When I used a cotton tape to run along the side of his face, he reported feeling a little numb on the right side.</span>
+<span class="sent" style="background:rgb(204,230,204);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.393">When I poked him with a needle on the right side of his face, he reported feeling dull, whereas on the left side, he reported feeling sharp.</span>
+<span class="sent" style="background:rgb(255,233,233);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.543">Assessment / Problem List:</span>
+<span class="sent" style="background:rgb(248,251,248);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.487">Assessment: The patient has trigeminal neuralgia, a condition where compression of the trigeminal nerve by a small blood vessel causes shooting, electrical pain in the face.</span>
+<span class="sent" style="background:rgb(255,116,116);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.771">Problem list: Trigeminal neuralgia; confirmed.</span>
+<span class="sent" style="background:rgb(249,252,249);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.488">Plan:</span>
+<span class="sent" style="background:rgb(255,122,122);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.760">I prescribed Tegretol 100mg orally 3 times a day for the treatment of trigeminal neuralgia.</span>
+<span class="sent" style="background:rgb(255,103,103);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.798">I explained the potential side effects of the medication, including memory loss, tingling, imbalance, and dermatologic reactions, particularly in individuals with Eustachian tube dysfunction.</span>
+<span class="sent" style="background:rgb(40,150,40);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.044">I recommended genetic testing to ensure the medication is safe for the patient.</span>
+<span class="sent" style="background:rgb(52,155,52);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.069">I instructed the patient to follow up in one month to assess the efficacy of the medication and to discuss further treatment options if necessary.</span>
+<span class="sent" style="background:rgb(245,250,245);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.480">Follow-up: The patient will return in one month to assess the efficacy of the Tegretol and to discuss further treatment options if necessary.</span>
+  </div>
+</div>
+
+<div style="margin-bottom:40px;border:1px solid #ddd;border-radius:8px;
+     padding:20px;background:#fafafa;">
+  <h2 style="margin-top:0;">
+    #3 — Sample 10
+    <span style="font-size:14px;font-weight:normal;color:#555;">
+      Mean U = 0.4562 &nbsp;|&nbsp; K = 10
+    </span>
+  </h2>
+  
+<div style="margin:12px 0;">
+  <div style="height:18px;background:linear-gradient(to right,rgb(20,140,20) 0%, rgb(43,151,43) 5%, rgb(67,163,67) 10%, rgb(90,174,90) 15%, rgb(114,186,114) 20%, rgb(137,197,137) 25%, rgb(161,209,161) 30%, rgb(184,220,184) 35%, rgb(208,232,208) 40%, rgb(231,243,231) 45%, rgb(255,255,255) 50%, rgb(255,229,229) 55%, rgb(255,204,204) 60%, rgb(255,178,178) 65%, rgb(255,153,153) 70%, rgb(255,127,127) 75%, rgb(255,101,101) 80%, rgb(255,76,76) 85%, rgb(255,50,50) 90%, rgb(255,25,25) 95%, rgb(255,0,0) 100%);
+       border-radius:4px;border:1px solid #ccc;"></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;
+       color:#555;margin-top:2px;">
+    <span>U = 0.0 (certain)</span>
+    <span>U = 0.5</span>
+    <span>U = 1.0 (uncertain)</span>
+  </div>
+</div>
+  <h3>Transcript (excerpt)</h3>
+  <div style="font-family:monospace;font-size:12px;background:#f4f4f4;
+       border-left:4px solid #aaa;padding:10px;white-space:pre-wrap;
+       margin-bottom:16px;">[doctor] hey hi bobby how are you doing<br>[patient] i'm doing good how are you<br>[doctor] i'm doing fine so i understand you're here having some left or some right shoulder pain that you've had for a few weeks now<br>[patient] yeah it was i was doing some work in my backyard and a lot of different projects going on and you know i was obviously sore all over the next couple of days but my my right shoulder just keeps on bothering me and it keeps it's just really sore and it just has n't been going away<br></div>
+  <h3>Generated Note — sentence uncertainty</h3>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:2.4;
+       background:#fff;border:1px solid #e0e0e0;border-radius:6px;padding:16px;">
+    <span class="sent" style="background:rgb(255,221,221);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.567">Subjective:</span>
+<span class="sent" style="background:rgb(201,229,201);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.387">HPI: The patient presents with right shoulder pain that has been ongoing for a few weeks, initially appearing after working on various projects in his backyard.</span>
+<span class="sent" style="background:rgb(152,205,152);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.283">The pain is located on the outside of the shoulder and is tender to the touch when raising the arm.</span>
+<span class="sent" style="background:rgb(136,196,136);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.248">He denies any numbness in the arm or hands.</span>
+<span class="sent" style="background:rgb(255,233,233);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.542">The pain is worse with movement and is alleviated by rest and over-the-counter medication.</span>
+<span class="sent" style="background:rgb(217,236,217);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.420">He has a history of similar pain in the same shoulder from a past injury playing baseball.</span>
+<span class="sent" style="background:rgb(254,254,254);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.499">Past medical history: The patient has a history of right shoulder pain from a past injury, which has always been a bit of an issue.</span>
+<span class="sent" style="background:rgb(255,132,132);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.741">Review of systems: The patient denies any additional symptoms in other organs.</span>
+<span class="sent" style="background:rgb(209,232,209);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.404">Current medications: The patient has been taking Advil for pain relief and icing the affected area.</span>
+<span class="sent" style="background:rgb(255,215,215);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.577">Objective:</span>
+<span class="sent" style="background:rgb(233,244,233);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.455">Vital signs: The patient's temperature is 97.8°F, heart rate is 62, respirations are 16, blood pressure is 116/84, and oxygen saturation is 99%.</span>
+<span class="sent" style="background:rgb(188,222,188);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.359">Physical exam: The patient has limited active and passive range of motion in the right shoulder, with tenderness at the greater tuberosity of the humerus.</span>
+<span class="sent" style="background:rgb(226,241,226);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.440">The patient has a good hand grip and intact sensation to touch in the right arm.</span>
+<span class="sent" style="background:rgb(152,204,152);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.282">Test Results: The patient's shoulder X-ray shows no fracture.</span>
+<span class="sent" style="background:rgb(255,220,220);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.568">Assessment / Problem List:</span>
+<span class="sent" style="background:rgb(154,205,154);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.286">Assessment: The patient's symptoms are most likely due to rotator cuff tendinopathy, a condition in which the tendons of the muscles that help make the shoulder muscles are injured.</span>
+<span class="sent" style="background:rgb(255,193,193);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.620">Problem list: Rotator cuff tendinopathy; Sore feet.</span>
+<span class="sent" style="background:rgb(255,229,229);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.551">Plan:</span>
+<span class="sent" style="background:rgb(94,176,94);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.158">I plan to refer the patient to physical therapy for approximately six to eight weeks to address the rotator cuff tendinopathy.</span>
+<span class="sent" style="background:rgb(255,104,104);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.795">I will also order an MRI to rule out any other conditions.</span>
+<span class="sent" style="background:rgb(255,237,237);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.534">During this time, the patient should continue taking Tylenol and icing the affected area.</span>
+<span class="sent" style="background:rgb(177,216,177);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.335">If symptoms do not improve, we will consider a steroid injection into the shoulder for relief.</span>
+<span class="sent" style="background:rgb(214,235,214);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.414">I also recommend that the patient tries soaking his feet in Epsom salts to alleviate soreness.</span>
+<span class="sent" style="background:rgb(246,251,246);padding:2px 4px;border-radius:3px;margin:2px 1px;display:inline-block;" title="U=0.483">Follow-up: The patient will follow up with physical therapy and return for a follow-up appointment to reassess symptoms.</span>
+  </div>
+</div>
+</body>
+</html>

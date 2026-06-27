@@ -1,0 +1,24 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, a 38-year-old male, presents with a complaint of shortness of breath, which he describes as catching his breath more often than usual, and feeling like he's not breathing as well as he used to.",0.9985
+2,"He denies any fever, nausea, vomiting, rash, or lip/throat swelling.",0.9082
+3,"He reports having a history of heavy drinking, which leads to diarrhea, but denies any current symptoms.",0.963
+4,"He mentions having a dog and a cat, and notes that his symptoms occur in all three situations.",0.8441
+5,"Past medical history: The patient has no history of allergies, and no past medical conditions mentioned.",0.8764
+6,"Review of systems: The patient reports feeling short of breath and experiencing occasional eye watering, which he attributes to allergies.",0.7179
+7,Current medications: The patient is currently using an albuterol inhaler as prescribed by the urgent care for his asthma symptoms.,0.804
+8,Objective:,0.5
+9,"Vital signs: The patient's pulse is normal, and his pulse ox is within normal limits.",0.1253
+10,"Physical exam: The patient appears healthy, with no rash or angioedema.",0.232
+11,"There is no audible stridor, and the lungs exam reveals faint expiratory wheezing bilaterally in all lung fields.",0.3236
+12,Test Results: The patient's chest x-ray and pulmonary function test results are normal.,0.0146
+13,Assessment / Problem List:,0.5
+14,Assessment: The patient has newly diagnosed allergic asthma.,0.006
+15,Problem list: Asthma; Allergies; unknown.,0.8021
+16,Plan:,0.5
+17,I prescribed albuterol inhaler as needed for asthma symptoms.,0.2311
+18,I also prescribed Singulair 10mg daily to help decrease the occurrences of asthma symptoms.,0.3312
+19,"I will proceed with allergy testing, starting with skin testing to identify potential triggers.",0.0089
+20,The patient will return in one week to schedule the skin testing.,0.2195
+21,I advised the patient to continue using his albuterol inhaler as needed and to take his Singulair daily.,0.3342
+22,Follow-up: The patient will return in one week to schedule skin testing.,0.2097

@@ -1,0 +1,32 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, a 36-year-old female, presents with ankle pain and a history of diabetes and high blood pressure.",0.2183
+2,"She reports that she slipped on ice two days ago and twisted her left ankle, which is more on the outside of her hip, causing pain, swelling, and difficulty walking.",0.4441
+3,"She has tried ibuprofen, ice, and elevation for pain and swelling, but it has provided only a little relief.",0.7812
+4,"The pain is localized to the outside of her ankle, and she denies pain in her calf, lower leg, or knee.",0.3016
+5,She has not experienced any bleeding and has a swollen ankle but no redness.,0.9978
+6,"The patient has a history of diabetes and high blood pressure and is currently taking metformin, with stable blood sugars and regular self-monitoring.",0.9872
+7,She is due for an eye exam and has an appointment scheduled.,0.788
+8,"Her blood pressure is 120/70, and she is taking norvasc.",0.9986
+9,Past medical history: The patient has a history of diabetes and high blood pressure.,0.3938
+10,She is taking metformin and norvasc.,0.3827
+11,Review of systems: The patient denies any pain or symptoms in other organs.,0.9986
+12,Current medications:,0.5
+13,"Metformin, norvasc",0.743
+14,Objective:,0.5
+15,Vital signs: The patient's blood pressure is 120/70.,0.6686
+16,"Physical exam: The patient has a normal neck exam, lungs, and heart exam, with a 2/6 systolic ejection murmur that is unchanged from before.",0.384
+17,The belly exam is normal.,0.2516
+18,"On the ankle exam, there is tenderness over the lateral malleolus and the fifth metatarsal, with swelling, redness, and pain with valgus stressing of the ankle.",0.2915
+19,The patient has normal sensation and pulses.,0.2479
+20,Test Results: [NOT MENTIONED],0.5
+21,Assessment / Problem List:,0.5
+22,"Assessment: The patient is likely suffering from an ankle sprain, and I will order an X-ray to rule out a fracture.",0.0769
+23,Problem list: Ankle sprain; Diabetes; High blood pressure,0.9994
+24,Plan:,0.5
+25,I will order an X-ray of the ankle and put the patient in a splint.,0.1095
+26,"I will prescribe naprosyn 500mg twice a day for pain control and instruct the patient to elevate the ankle, apply ice, and avoid weight-bearing until the X-ray results are available.",0.1129
+27,"If the X-ray shows a fracture, I will refer the patient to orthopedics.",0.404
+28,"I will also refill the norvasc prescription and order baseline labs, including a hemoglobin A1c, to monitor the patient's diabetes.",0.5077
+29,The patient is to continue taking metformin and attend her scheduled eye exam.,0.8652
+30,"Follow-up: The patient is to follow up with me after the X-ray results are available, and if there is no fracture, she will be instructed to remove the splint and start partial weight-bearing.",0.9982

@@ -1,0 +1,22 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, Jack, is a 30-year-old male who was in a car accident a week ago and experienced neck pain, which he describes as a 7 out of 10 in severity.",0.6742
+2,The pain is located in the back of his neck and worsens with movement.,0.2705
+3,"He has tried ibuprofen, which provided some relief, but not significantly.",0.4054
+4,"He has also experienced headaches, but they are not ongoing.",0.9963
+5,"Past medical history: The patient has a history of playing football years ago, but no prior issues with his neck.",0.886
+6,"Review of systems: The patient denies any visual disturbances, hearing problems, or swelling/bruising on his neck.",0.9995
+7,Current medications: I prescribed Motrin 600mg every 6-8 hours for pain management.,0.9995
+8,Objective:,0.5
+9,Vital signs: Not mentioned.,0.9858
+10,"Physical exam: The patient exhibited positive pain to palpation of the soft tissues of the neck, positive pain with flexion, extension, and lateral bending, but no pain with palpation of the back or shoulders.",0.5585
+11,Test Results: The results of the x-ray show no signs of fracture or bony abnormalities.,0.0051
+12,Assessment / Problem List:,0.5
+13,"Assessment: I believe the patient has neck strain, likely due to whiplash from the car accident.",0.3373
+14,Problem list: Neck strain; suspected whiplash; [NOT MENTIONED],0.6145
+15,Plan:,0.5
+16,I prescribed Motrin 600mg every 6-8 hours for pain management and Flexeril 10mg every 12 hours as needed for muscle relaxation.,0.0028
+17,I advised the patient to be conservative with his neck movement and avoid straining it.,0.224
+18,I also ordered an MRI to rule out any underlying conditions.,0.8855
+19,I will refer the patient to either physical rehab or a chiropractor once the MRI results are available.,0.0086
+20,Follow-up: I will schedule a follow-up appointment to review the MRI results and discuss further management.,0.448

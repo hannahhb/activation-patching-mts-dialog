@@ -1,0 +1,25 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, Charles, a 38-year-old male, presents with a 2-year history of shortness of breath, which he describes as catching his breath more frequently than he used to, despite considering himself to be healthy.",0.9988
+2,"He reports that the symptoms are not constant, but occur suddenly, and are not accompanied by other symptoms such as fever, nausea, vomiting, or rash.",0.4972
+3,He has a history of heavy drinking and occasional diarrhea.,0.6957
+4,"He also mentions having a dog and a cat at home, and has noticed symptoms in all three situations.",0.9859
+5,"The patient has been prescribed an albuterol inhaler for his symptoms, which he uses when he feels them coming on.",0.8226
+6,"Past medical history: The patient has no history of allergies, asthma, or any other significant medical conditions.",0.9887
+7,He has a history of heavy drinking.,0.6494
+8,"Review of systems: The patient denies any other symptoms besides shortness of breath, including fever, nausea, vomiting, or rash.",0.8361
+9,Current medications: I prescribed albuterol inhaler for asthma symptoms.,0.5971
+10,I will also prescribe Singulair 10mg once daily to help decrease the occurrences of asthma.,0.9997
+11,Objective:,0.5
+12,"Vital signs: The patient's vital signs are within normal limits, with a normal pulse and oxygen saturation.",0.1156
+13,Physical exam: The patient's physical exam is notable for faint expiratory wheezing bilaterally in all lung fields.,0.0452
+14,Test Results: The patient's chest X-ray and pulmonary function test were both normal.,0.0101
+15,Assessment / Problem List:,0.5
+16,Assessment: The patient has newly diagnosed allergic asthma.,0.0061
+17,Problem list: Asthma; Allergies; Past: Heavy drinking.,0.8072
+18,Plan:,0.5
+19,I will prescribe Singulair 10mg once daily to help decrease the occurrences of asthma.,0.0037
+20,I will also continue the patient's current albuterol inhaler.,0.9175
+21,"I will proceed with allergy testing, starting with skin testing, to identify potential triggers and targets for management.",0.7786
+22,"If the skin testing is inconclusive, we will discuss further testing in the blood and immunotherapy.",0.8895
+23,Follow-up: I will see the patient again next week to schedule the skin testing.,0.1736
