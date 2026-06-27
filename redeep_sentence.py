@@ -621,6 +621,73 @@ def plot_top5_layers(
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Incremental refresh helper — called after every gen and once at the end
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _refresh_outputs(
+    all_ecs: List[np.ndarray],
+    all_pks: List[np.ndarray],
+    all_luq: List[np.ndarray],
+    per_gen_ecs_auroc: List[np.ndarray],
+    per_gen_pks_auroc: List[np.ndarray],
+    per_gen_ecs_d: List[np.ndarray],
+    per_gen_pks_d: List[np.ndarray],
+    n_layers: int,
+    out_dir: Path,
+    hallu_thresh: float,
+) -> None:
+    """Recompute averaged metrics and overwrite plots + layer_metrics.csv."""
+    ecs_all = np.concatenate(all_ecs, axis=1)
+    pks_all = np.concatenate(all_pks, axis=1)
+    luq_all = np.concatenate(all_luq)
+    labels  = (luq_all > hallu_thresh).astype(int)
+
+    avg_ecs_d = np.mean(per_gen_ecs_d, axis=0)
+    std_ecs_d = np.std(per_gen_ecs_d,  axis=0)
+    avg_pks_d = np.mean(per_gen_pks_d, axis=0)
+    std_pks_d = np.std(per_gen_pks_d,  axis=0)
+
+    if per_gen_ecs_auroc:
+        avg_ecs_auroc = np.mean(per_gen_ecs_auroc, axis=0)
+        std_ecs_auroc = np.std(per_gen_ecs_auroc,  axis=0)
+        avg_pks_auroc = np.mean(per_gen_pks_auroc, axis=0)
+        std_pks_auroc = np.std(per_gen_pks_auroc,  axis=0)
+    else:
+        avg_ecs_auroc = std_ecs_auroc = avg_pks_auroc = std_pks_auroc = np.full(n_layers, 0.5)
+
+    pooled = per_layer_metrics(ecs_all, pks_all, labels)
+
+    pd.DataFrame({
+        "layer":             np.arange(n_layers),
+        "avg_ecs_auroc":     avg_ecs_auroc,
+        "avg_pks_auroc":     avg_pks_auroc,
+        "std_ecs_auroc":     std_ecs_auroc,
+        "std_pks_auroc":     std_pks_auroc,
+        "avg_ecs_d":         avg_ecs_d,
+        "avg_pks_d":         avg_pks_d,
+        "std_ecs_d":         std_ecs_d,
+        "std_pks_d":         std_pks_d,
+        "pooled_ecs_auroc":  pooled["ecs_auroc"],
+        "pooled_pks_auroc":  pooled["pks_auroc"],
+        "pooled_comb_auroc": pooled["comb_auroc"],
+        "pooled_ecs_auprc":  pooled["ecs_auprc"],
+        "pooled_pks_auprc":  pooled["pks_auprc"],
+    }).to_csv(out_dir / "layer_metrics.csv", index=False)
+
+    pd.DataFrame({
+        **{f"ecs_l{l}": ecs_all[l] for l in range(n_layers)},
+        **{f"pks_l{l}": pks_all[l] for l in range(n_layers)},
+        "luq_score": luq_all,
+        "label":     labels,
+    }).to_csv(out_dir / "sentence_scores.csv", index=False)
+
+    plot_ecs_pks_mean_std(ecs_all, pks_all, out_dir)
+    plot_cohens_d_layers(avg_ecs_d, avg_pks_d, std_ecs_d, std_pks_d, out_dir)
+    plot_auroc_layers(avg_ecs_auroc, avg_pks_auroc, std_ecs_auroc, std_pks_auroc, out_dir)
+    plot_top5_layers(avg_ecs_auroc, avg_pks_auroc, out_dir)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Main
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -835,12 +902,20 @@ def main() -> None:
                       header=not _cohens_header_written, index=False)
             _cohens_header_written = True
 
+            # Refresh plots and summary CSVs after every gen
+            _refresh_outputs(
+                all_ecs, all_pks, all_luq,
+                per_gen_ecs_auroc, per_gen_pks_auroc,
+                per_gen_ecs_d, per_gen_pks_d,
+                n_layers, out_dir, args.hallu_thresh,
+            )
+
     if not all_ecs:
         print("\nNo samples processed. Check paths and model loading.")
         sys.exit(1)
 
-    # ── Stack pooled arrays ───────────────────────────────────────────────────
-    ecs_all = np.concatenate(all_ecs, axis=1)   # (n_layers, total_sents)
+    # ── Final summary ─────────────────────────────────────────────────────────
+    ecs_all = np.concatenate(all_ecs, axis=1)
     pks_all = np.concatenate(all_pks, axis=1)
     luq_all = np.concatenate(all_luq)
     labels  = (luq_all > args.hallu_thresh).astype(int)
@@ -850,68 +925,15 @@ def main() -> None:
     print(f"ECS overall mean: {ecs_all.mean():.4f}")
     print(f"PKS overall mean: {pks_all.mean():.4f}")
 
-    # ── Averaged per-gen metrics ──────────────────────────────────────────────
-    # Cohen's d: average over ALL gens (including ones with only one class present)
-    avg_ecs_d   = np.mean(per_gen_ecs_d, axis=0)
-    std_ecs_d   = np.std(per_gen_ecs_d,  axis=0)
-    avg_pks_d   = np.mean(per_gen_pks_d, axis=0)
-    std_pks_d   = np.std(per_gen_pks_d,  axis=0)
-
-    # AUROC: average over gens where both classes are present
     if per_gen_ecs_auroc:
         avg_ecs_auroc = np.mean(per_gen_ecs_auroc, axis=0)
-        std_ecs_auroc = np.std(per_gen_ecs_auroc,  axis=0)
         avg_pks_auroc = np.mean(per_gen_pks_auroc, axis=0)
-        std_pks_auroc = np.std(per_gen_pks_auroc,  axis=0)
-    else:
-        print("  Warning: no per-gen pair had both classes — AUROC plots will be uninformative.")
-        avg_ecs_auroc = std_ecs_auroc = avg_pks_auroc = std_pks_auroc = np.full(n_layers, 0.5)
+        top5_ecs = np.argsort(avg_ecs_auroc)[-5:][::-1]
+        top5_pks = np.argsort(avg_pks_auroc)[-5:][::-1]
+        print(f"  Top-5 ECS layers (AUROC): {list(top5_ecs)}")
+        print(f"  Top-5 PKS layers (AUROC): {list(top5_pks)}")
 
-    top5_ecs = np.argsort(avg_ecs_auroc)[-5:][::-1]
-    top5_pks = np.argsort(avg_pks_auroc)[-5:][::-1]
-    print(f"\n  Top-5 ECS layers (AUROC): {list(top5_ecs)}")
-    print(f"  Top-5 PKS layers (AUROC): {list(top5_pks)}")
-
-    # ── Pooled metrics (for CSV) ──────────────────────────────────────────────
-    pooled = per_layer_metrics(ecs_all, pks_all, labels)
-
-    # ── Save CSVs ─────────────────────────────────────────────────────────────
-    print(f"\n  per_gen_auroc.csv and per_gen_cohens_d.csv written incrementally during loop")
-
-    pd.DataFrame({
-        "layer":       np.arange(n_layers),
-        "avg_ecs_auroc": avg_ecs_auroc,
-        "avg_pks_auroc": avg_pks_auroc,
-        "std_ecs_auroc": std_ecs_auroc,
-        "std_pks_auroc": std_pks_auroc,
-        "avg_ecs_d":     avg_ecs_d,
-        "avg_pks_d":     avg_pks_d,
-        "std_ecs_d":     std_ecs_d,
-        "std_pks_d":     std_pks_d,
-        "pooled_ecs_auroc":  pooled["ecs_auroc"],
-        "pooled_pks_auroc":  pooled["pks_auroc"],
-        "pooled_comb_auroc": pooled["comb_auroc"],
-        "pooled_ecs_auprc":  pooled["ecs_auprc"],
-        "pooled_pks_auprc":  pooled["pks_auprc"],
-    }).to_csv(out_dir / "layer_metrics.csv", index=False)
-    print(f"  Saved {out_dir / 'layer_metrics.csv'}")
-
-    pd.DataFrame({
-        **{f"ecs_l{l}": ecs_all[l] for l in range(n_layers)},
-        **{f"pks_l{l}": pks_all[l] for l in range(n_layers)},
-        "luq_score": luq_all,
-        "label":     labels,
-    }).to_csv(out_dir / "sentence_scores.csv", index=False)
-    print(f"  Saved {out_dir / 'sentence_scores.csv'}")
-
-    # ── Plots ─────────────────────────────────────────────────────────────────
-    print("\nPlotting …")
-    plot_ecs_pks_mean_std(ecs_all, pks_all, out_dir)
-    plot_cohens_d_layers(avg_ecs_d, avg_pks_d, std_ecs_d, std_pks_d, out_dir)
-    plot_auroc_layers(avg_ecs_auroc, avg_pks_auroc, std_ecs_auroc, std_pks_auroc, out_dir)
-    plot_top5_layers(avg_ecs_auroc, avg_pks_auroc, out_dir)
-
-    print("\nDone.")
+    print("\nDone. Outputs in", out_dir)
 
 
 if __name__ == "__main__":
