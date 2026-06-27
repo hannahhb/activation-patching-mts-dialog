@@ -637,9 +637,9 @@ def main() -> None:
                             "cpu"
                         ))
     parser.add_argument("--generations",
-                        default="sae_experiments/luq_out/generations")
+                        default="luq_out/llama/generations")
     parser.add_argument("--sentences",
-                        default="sae_experiments/luq_out/sentences")
+                        default="luq_out/llama/sentences")
     parser.add_argument("--out",
                         default="sae_experiments/redeep_out")
     parser.add_argument("--hallu-thresh", type=float, default=0.5)
