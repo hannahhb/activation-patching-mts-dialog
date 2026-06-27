@@ -319,9 +319,27 @@ def compute_copying_head_scores(model) -> np.ndarray:
     return scores
 
 
-def select_copying_heads(scores: np.ndarray, thresh: float) -> np.ndarray:
-    """Boolean (n_layers, n_heads) mask: heads with copying score > thresh."""
-    return scores > thresh
+def select_copying_heads(
+    scores: np.ndarray,
+    top_frac: Optional[float] = None,
+    thresh: Optional[float] = None,
+) -> Tuple[np.ndarray, str]:
+    """
+    Boolean (n_layers, n_heads) mask of Copying Heads, plus a signature string.
+
+    Two selection modes (top_frac takes precedence if given):
+      * top_frac: keep the globally top `top_frac` fraction of heads by copying
+        score. Robust — copying heads are a minority, so a fixed score threshold
+        (e.g. >0.5) over-selects because real OV matrices skew positive-real.
+      * thresh: keep heads with copying score > thresh.
+    """
+    if top_frac is not None:
+        n_total = scores.size
+        n_keep  = max(1, int(round(top_frac * n_total)))
+        cutoff  = np.sort(scores, axis=None)[::-1][n_keep - 1]
+        mask = scores >= cutoff
+        return mask, f"topfrac={top_frac}"
+    return scores > thresh, f"thresh={thresh}"
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -801,9 +819,13 @@ def main() -> None:
                         default="sae_experiments/redeep_out")
     parser.add_argument("--hallu-thresh", type=float, default=0.5)
     parser.add_argument("--top-k-frac",   type=float, default=0.10)
-    parser.add_argument("--copying-thresh", type=float, default=0.5,
-                        help="A head is a Copying Head if its OV positive-real-eigenvalue "
-                             "fraction exceeds this (default 0.5 = majority positive).")
+    parser.add_argument("--copying-top-frac", type=float, default=0.15,
+                        help="Fraction of heads (globally, by OV copying score) to treat as "
+                             "Copying Heads (default 0.15 = top 15%%). Copying heads are a "
+                             "minority; a fixed score cut over-selects.")
+    parser.add_argument("--copying-thresh", type=float, default=None,
+                        help="Alternative to --copying-top-frac: absolute OV positive-real-"
+                             "eigenvalue-fraction cut. If set, overrides --copying-top-frac.")
     parser.add_argument("--note-idx",     type=int,   default=None,
                         help="Restrict to one note index (default: all K)")
     parser.add_argument("--samples",      type=int,   default=None,
@@ -835,10 +857,13 @@ def main() -> None:
         print("  Computing copying-head scores (OV eigenvalues) …", flush=True)
         copying_scores = compute_copying_head_scores(model)
         np.save(str(copy_score_path), copying_scores)
-    copying_mask = select_copying_heads(copying_scores, args.copying_thresh)
+    if args.copying_thresh is not None:
+        copying_mask, copying_sig = select_copying_heads(copying_scores, thresh=args.copying_thresh)
+    else:
+        copying_mask, copying_sig = select_copying_heads(copying_scores, top_frac=args.copying_top_frac)
     n_copy = int(copying_mask.sum())
     layers_with_copy = int((copying_mask.any(axis=1)).sum())
-    print(f"  Copying heads (score>{args.copying_thresh}): {n_copy}/{copying_scores.size} "
+    print(f"  Copying heads ({copying_sig}): {n_copy}/{copying_scores.size} "
           f"across {layers_with_copy}/{n_layers} layers")
     np.save(str(out_dir / "copying_head_mask.npy"), copying_mask)
 
@@ -949,9 +974,9 @@ def main() -> None:
             cached_ok = False
             if not args.no_cache and cache_npz.exists():
                 d = np.load(str(cache_npz))
-                # ecs_copy depends on --copying-thresh; invalidate if it changed.
-                cached_thresh = float(d["copying_thresh"]) if "copying_thresh" in d else None
-                if cached_thresh == args.copying_thresh:
+                # ecs_copy depends on the copying-head selection; invalidate if it changed.
+                cached_sig = str(d["copying_sig"]) if "copying_sig" in d else None
+                if cached_sig == copying_sig:
                     cached_ok = True
                     ecs_l, ecscopy_l, pks_l = d["ecs"], d["ecs_copy"], d["pks"]
                     n_valid = min(ecs_l.shape[1], len(luq_scores))
@@ -975,7 +1000,7 @@ def main() -> None:
 
                 np.savez_compressed(str(cache_npz),
                                     ecs=ecs_l, ecs_copy=ecscopy_l, pks=pks_l,
-                                    copying_thresh=np.float64(args.copying_thresh))
+                                    copying_sig=np.array(copying_sig))
 
                 n_valid = min(ecs_l.shape[1], len(luq_scores))
                 ecs_l, ecscopy_l, pks_l = (ecs_l[:, :n_valid],
