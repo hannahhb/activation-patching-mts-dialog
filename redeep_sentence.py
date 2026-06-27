@@ -681,8 +681,12 @@ def main() -> None:
     per_gen_pks_auroc: List[np.ndarray] = []
     per_gen_ecs_d:     List[np.ndarray] = []
     per_gen_pks_d:     List[np.ndarray] = []
-    per_gen_auroc_rows:  List[Dict] = []
-    per_gen_cohens_rows: List[Dict] = []
+
+    # Incremental CSV paths — written after every gen so a crash doesn't lose progress
+    auroc_csv_path   = out_dir / "per_gen_auroc.csv"
+    cohens_csv_path  = out_dir / "per_gen_cohens_d.csv"
+    _auroc_header_written  = auroc_csv_path.exists()
+    _cohens_header_written = cohens_csv_path.exists()
 
     # ── Per-sample, per-note loop ─────────────────────────────────────────────
     for gen_path in gen_files:
@@ -809,17 +813,27 @@ def main() -> None:
             per_gen_ecs_d.append(cd_e)
             per_gen_pks_d.append(cd_p)
 
-            for l in range(n_layers):
-                per_gen_auroc_rows.append({
-                    "sample": si, "gen": k, "layer": l,
-                    "ecs_auroc": round(float(auroc_e[l]), 5),
-                    "pks_auroc": round(float(auroc_p[l]), 5),
-                })
-                per_gen_cohens_rows.append({
-                    "sample": si, "gen": k, "layer": l,
-                    "ecs_cohens_d": round(float(cd_e[l]), 5),
-                    "pks_cohens_d": round(float(cd_p[l]), 5),
-                })
+            # Flush this gen's rows to CSV immediately
+            layers_arr = np.arange(n_layers)
+            pd.DataFrame({
+                "sample":    si,
+                "gen":       k,
+                "layer":     layers_arr,
+                "ecs_auroc": np.round(auroc_e, 5),
+                "pks_auroc": np.round(auroc_p, 5),
+            }).to_csv(auroc_csv_path, mode="a",
+                      header=not _auroc_header_written, index=False)
+            _auroc_header_written = True
+
+            pd.DataFrame({
+                "sample":       si,
+                "gen":          k,
+                "layer":        layers_arr,
+                "ecs_cohens_d": np.round(cd_e, 5),
+                "pks_cohens_d": np.round(cd_p, 5),
+            }).to_csv(cohens_csv_path, mode="a",
+                      header=not _cohens_header_written, index=False)
+            _cohens_header_written = True
 
     if not all_ecs:
         print("\nNo samples processed. Check paths and model loading.")
@@ -862,15 +876,7 @@ def main() -> None:
     pooled = per_layer_metrics(ecs_all, pks_all, labels)
 
     # ── Save CSVs ─────────────────────────────────────────────────────────────
-    pd.DataFrame(per_gen_auroc_rows).to_csv(
-        out_dir / "per_gen_auroc.csv", index=False
-    )
-    print(f"\n  Saved {out_dir / 'per_gen_auroc.csv'}")
-
-    pd.DataFrame(per_gen_cohens_rows).to_csv(
-        out_dir / "per_gen_cohens_d.csv", index=False
-    )
-    print(f"  Saved {out_dir / 'per_gen_cohens_d.csv'}")
+    print(f"\n  per_gen_auroc.csv and per_gen_cohens_d.csv written incrementally during loop")
 
     pd.DataFrame({
         "layer":       np.arange(n_layers),
