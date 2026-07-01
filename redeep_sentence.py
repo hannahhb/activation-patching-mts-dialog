@@ -421,9 +421,9 @@ def compute_ecs_pks_single_pass(
                 nn = note_attn.shape[1]
                 P  = _pool_P[0][:, :nn]                             # (n_words, n_note')
                 word_tensor = torch.einsum("wn,hnt->hwt", P, note_attn)  # (n_heads, n_words, T)
-                top_idx = torch.topk(word_tensor,
-                                     min(k_top, ctx_end), dim=-1).indices  # on GPU
-                word_attn_all[l] = top_idx.cpu().numpy().astype(np.int32)
+                # Keep top-k indices on GPU; word ECS post-pass gathers on-device.
+                word_attn_all[l] = torch.topk(word_tensor,
+                                              min(k_top, ctx_end), dim=-1).indices
 
             # ── Sentence-level: existing logic (move full attn to CPU once) ──
             attn = attn_gpu.cpu().numpy()
@@ -449,17 +449,20 @@ def compute_ecs_pks_single_pass(
     def make_resid_post_hook(l: int):
         def fn(value, hook):
             # ── PKS: JSD between resid_mid and resid_post logit-lens (note tokens) ──
+            # Computed entirely on GPU (log/softmax over the 128k-vocab distribution
+            # is ~70s on CPU); only the (n_note,) JSD vector is moved to the host.
             if _mid_tmp[0] is not None:
                 x_mid  = _mid_tmp[0].to(device)
                 x_post = value[0, T:].to(device=device, dtype=torch.float32)
                 with torch.no_grad():
-                    q_mid  = torch.softmax(_logit_lens(model, x_mid),  dim=-1).cpu().numpy()
-                    q_post = torch.softmax(_logit_lens(model, x_post), dim=-1).cpu().numpy()
-                m   = 0.5 * (q_mid + q_post)
-                eps = 1e-10
-                kl1 = np.sum(q_mid  * (np.log(q_mid  + eps) - np.log(m + eps)), axis=-1)
-                kl2 = np.sum(q_post * (np.log(q_post + eps) - np.log(m + eps)), axis=-1)
-                tok_jsd = np.clip(0.5 * kl1 + 0.5 * kl2, 0.0, 1.0)
+                    q_mid  = torch.softmax(_logit_lens(model, x_mid),  dim=-1)
+                    q_post = torch.softmax(_logit_lens(model, x_post), dim=-1)
+                    m   = 0.5 * (q_mid + q_post)
+                    eps = 1e-10
+                    kl1 = (q_mid  * (torch.log(q_mid  + eps) - torch.log(m + eps))).sum(-1)
+                    kl2 = (q_post * (torch.log(q_post + eps) - torch.log(m + eps))).sum(-1)
+                    tok_jsd_t = (0.5 * kl1 + 0.5 * kl2).clamp(0.0, 1.0)
+                tok_jsd = tok_jsd_t.cpu().numpy()
                 # sentence-level aggregation (existing)
                 for si, (s_start, s_end) in enumerate(sent_spans):
                     s_e = min(s_end, len(tok_jsd))
@@ -471,8 +474,9 @@ def compute_ecs_pks_single_pass(
                 _mid_tmp[0] = None
 
             # ── Capture FINAL-LAYER hidden states (x^L) for ECS (Eq 3) ──
+            # Keep on GPU: the word-level ECS post-pass gathers from it on-device.
             if l == n_layers - 1:
-                x_last[0] = value[0].to(torch.float32).cpu().numpy()
+                x_last[0] = value[0].to(torch.float32)
             return value
         return fn
 
@@ -488,9 +492,10 @@ def compute_ecs_pks_single_pass(
         model.run_with_hooks(tokens, fwd_hooks=fwd_hooks)
 
     # ── ECS post-pass: final-layer (x^L) vectors, per-layer attention ──
-    x_arr   = x_last[0]
-    x_trans = x_arr[:T]                                   # final-layer context vectors
-    seq_len = x_arr.shape[0]
+    x_last_g = x_last[0]                                  # (seq_len, d_model) GPU tensor
+    x_arr    = x_last_g.cpu().numpy()                     # host copy for sentence path
+    x_trans  = x_arr[:T]                                  # final-layer context vectors
+    seq_len  = x_arr.shape[0]
 
     sent_vecs = np.full((n_sents, x_arr.shape[1]), np.nan, dtype=np.float64)
     sent_norm = np.zeros(n_sents, dtype=np.float64)
@@ -537,39 +542,48 @@ def compute_ecs_pks_single_pass(
     # For each word: word_vec = mean x^L over the word's note tokens;
     # e^{l,h} = mean x^L over the top-k context tokens attended by the word
     # (indices already computed on GPU in the hook). ECS = cos(e, word_vec).
-    # Uses LLM final-layer hidden states — no embedding model.
+    # Runs on GPU: the per-(layer,head) gather is (n_words, k_top, d_model) — huge
+    # on CPU (~2GB float64 each × 1024), fast on-device.  Uses LLM x^L, no emb model.
     if n_words > 0:
-        word_vecs = np.full((n_words, x_arr.shape[1]), np.nan, dtype=np.float64)
-        word_norm = np.zeros(n_words, dtype=np.float64)
+        x_trans_g = x_last_g[:T]                               # (T, d_model) GPU
+        seq_g     = x_last_g.shape[0]
+        d_model   = x_last_g.shape[1]
+        word_vecs_g = torch.full((n_words, d_model), float("nan"),
+                                 device=x_last_g.device, dtype=torch.float32)
         for wi, (w_start, w_end) in enumerate(word_spans):
-            abs_s = T + int(w_start)
-            abs_e = min(T + int(w_end), seq_len)
-            if abs_s < abs_e:
-                v = x_arr[abs_s:abs_e].mean(axis=0)
-                word_vecs[wi] = v
-                word_norm[wi] = np.linalg.norm(v)
+            a_s = T + int(w_start)
+            a_e = min(T + int(w_end), seq_g)
+            if a_s < a_e:
+                word_vecs_g[wi] = x_last_g[a_s:a_e].mean(dim=0)
+        word_norm_g = word_vecs_g.norm(dim=-1)                 # (n_words,)
 
-        ecs_word_lh = np.full((n_layers, n_heads, n_words), np.nan, dtype=np.float64)
-        for l in range(n_layers):
-            if word_attn_all[l] is None:
-                continue
-            idx_lh = word_attn_all[l]                          # (n_heads, n_words, k_top) int32
-            for h in range(n_heads):
-                e_h    = x_trans[idx_lh[h]].mean(axis=1)       # (n_words, d_model)
-                num    = (e_h * word_vecs).sum(axis=-1)        # (n_words,)
-                ne     = np.linalg.norm(e_h, axis=-1)
-                denom  = ne * word_norm
-                ecs_word_lh[l, h] = np.where(denom > 1e-8, num / denom, np.nan)
-
-        ecs_word = np.nanmean(ecs_word_lh, axis=1)             # (n_layers, n_words)
-        if copying_mask is not None and copying_mask.any():
-            ecs_word_copy = np.full((n_layers, n_words), np.nan, dtype=np.float64)
+        ecs_word_lh = torch.full((n_layers, n_heads, n_words), float("nan"),
+                                 device=x_last_g.device, dtype=torch.float32)
+        with torch.no_grad():
             for l in range(n_layers):
-                heads = np.where(copying_mask[l])[0]
-                if heads.size:
-                    ecs_word_copy[l] = np.nanmean(ecs_word_lh[l, heads], axis=0)
-        else:
-            ecs_word_copy = np.full((n_layers, n_words), np.nan, dtype=np.float64)
+                idx_lh = word_attn_all[l]                      # (n_heads, n_words, k_top) GPU
+                if idx_lh is None:
+                    continue
+                for h in range(n_heads):
+                    e_h   = x_trans_g[idx_lh[h]].mean(dim=1)   # (n_words, d_model)
+                    num   = (e_h * word_vecs_g).sum(dim=-1)    # (n_words,)
+                    denom = e_h.norm(dim=-1) * word_norm_g
+                    ecs_word_lh[l, h] = torch.where(
+                        denom > 1e-8, num / denom,
+                        torch.full_like(num, float("nan")))
+
+            ecs_word_t = torch.nanmean(ecs_word_lh, dim=1)     # (n_layers, n_words)
+            ecs_word_copy_t = torch.full((n_layers, n_words), float("nan"),
+                                         device=x_last_g.device, dtype=torch.float32)
+            if copying_mask is not None and copying_mask.any():
+                for l in range(n_layers):
+                    heads = np.where(copying_mask[l])[0]
+                    if heads.size:
+                        h_idx = torch.as_tensor(heads, device=x_last_g.device)
+                        ecs_word_copy_t[l] = torch.nanmean(
+                            ecs_word_lh[l, h_idx], dim=0)
+        ecs_word      = ecs_word_t.cpu().numpy()
+        ecs_word_copy = ecs_word_copy_t.cpu().numpy()
     else:
         ecs_word      = np.zeros((n_layers, 0), dtype=np.float64)
         ecs_word_copy = np.zeros((n_layers, 0), dtype=np.float64)
