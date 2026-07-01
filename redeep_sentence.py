@@ -895,15 +895,46 @@ def run_metrics_only(args, act_dir: Path, out_dir: Path) -> None:
         if n_layers is None:
             n_layers = ecs_l.shape[0]
 
-        # Resolve new labels via sent_idx; fall back to stored luq.
+        # Resolve new labels — text-based matching so judge sentence_idx
+        # (LLM-assigned, 0-based) doesn't have to agree with LUQ sentence_idx.
+        # Pipeline:
+        #   sent_idx (stored in NPZ) → sentence text (via LUQ sentences CSV)
+        #   sentence text → label score (via --labels-dir CSV)
+        # Categorical label columns (e.g. "Faithful"/"Fabrication") are
+        # converted: faithful_label → 0.0, anything else → 1.0.
         score = None
-        lab_csv = labels_dir / f"sample_{si:03d}_note_{k:02d}_sentences.csv"
-        if "sent_idx" in d and lab_csv.exists():
+        luq_csv = Path(args.sentences) / f"sample_{si:03d}_note_{k:02d}_sentences.csv"
+        lab_csv = labels_dir / f"sample_{si:03d}_note_{k:02d}{args.labels_suffix}"
+        if "sent_idx" in d and lab_csv.exists() and luq_csv.exists():
             ldf = pd.read_csv(lab_csv)
-            if args.label_col in ldf.columns and "sentence_idx" in ldf.columns:
-                lut = dict(zip(ldf["sentence_idx"].values,
-                               ldf[args.label_col].values.astype(np.float64)))
-                score = np.array([lut.get(int(i), np.nan) for i in d["sent_idx"]])
+            luq_df = pd.read_csv(luq_csv)
+            if (args.label_col in ldf.columns
+                    and "sentence" in ldf.columns
+                    and "sentence" in luq_df.columns
+                    and "sentence_idx" in luq_df.columns):
+                # Build text → score from label CSV
+                raw = ldf[args.label_col].values
+                if raw.dtype == object or raw.dtype.kind in ("U", "S"):
+                    # categorical: faithful_label=0, else=1
+                    scores_arr = np.where(
+                        raw == args.faithful_label, 0.0, 1.0
+                    ).astype(np.float64)
+                else:
+                    scores_arr = raw.astype(np.float64)
+                text_lut = {
+                    str(t).strip(): s
+                    for t, s in zip(ldf["sentence"].values, scores_arr)
+                }
+                # Build sent_idx → text from LUQ sentences CSV
+                idx_to_text = {
+                    int(i): str(t).strip()
+                    for i, t in zip(luq_df["sentence_idx"].values,
+                                    luq_df["sentence"].values)
+                }
+                score = np.array([
+                    text_lut.get(idx_to_text.get(int(i), ""), np.nan)
+                    for i in d["sent_idx"]
+                ])
         if score is None:
             score = d["luq"].astype(np.float64)
 
@@ -998,9 +1029,17 @@ def main() -> None:
     parser.add_argument("--samples",      type=int,   default=None,
                         help="Max number of samples to process")
     parser.add_argument("--no-cache",     action="store_true")
-    parser.add_argument("--label-col",    default="uncertainty",
+    parser.add_argument("--label-col",      default="uncertainty",
                         help="Column in the sentences CSV used as the hallucination score "
                              "(default 'uncertainty' = LUQ). Swap to relabel with another metric.")
+    parser.add_argument("--faithful-label", default="Faithful",
+                        help="String value in --label-col that means faithful (converted to 0.0); "
+                             "all other values become 1.0. Only used for categorical label columns "
+                             "(default: 'Faithful').")
+    parser.add_argument("--labels-suffix",  default="_sentences.csv",
+                        help="Filename suffix for label CSVs in --labels-dir. "
+                             "Default '_sentences.csv' matches LUQ output. "
+                             "Use '_sentence_judge.csv' for llm_judge sentence/span output.")
     parser.add_argument("--labels-dir",   default=None,
                         help="Directory of per-sentence label CSVs for --metrics-only "
                              "(default: --sentences dir). Files: {sample}_note_{k}_sentences.csv "
