@@ -397,6 +397,7 @@ def compute_ecs_pks_single_pass(
     pks_tok  = np.full((n_layers, n_note),   np.nan, dtype=np.float64)
     x_last   = [None]
     _mid_tmp = [None]
+    _pool_P  = [None]   # (n_words, n_note) word-mean pooling matrix, built lazily on device
 
     def make_pattern_hook(l: int):
         def fn(value, hook):
@@ -404,20 +405,22 @@ def compute_ecs_pks_single_pass(
             seq_len  = attn_gpu.shape[-1]
             ctx_end  = min(T, seq_len)
 
-            # ── Word-level: compute mean-pooled attention per word on GPU, ──
-            # then topk on GPU — move only (n_heads, n_words, k_top) indices to CPU.
+            # ── Word-level: mean-pool attention per word via a single matmul ──
+            # (precomputed pooling matrix P) then topk — all on GPU, 2 kernels
+            # instead of one per word. Move only (n_heads, n_words, k_top) to CPU.
             if word_spans is not None and n_words > 0:
-                word_vecs = []
-                for w_start, w_end in word_spans:
-                    abs_s = T + int(w_start)
-                    abs_e = min(T + int(w_end), seq_len)
-                    if abs_s < abs_e:
-                        wv = attn_gpu[:, abs_s:abs_e, :ctx_end].mean(dim=1)  # (n_heads, T)
-                    else:
-                        wv = torch.zeros(n_heads, ctx_end,
-                                         device=attn_gpu.device, dtype=torch.float32)
-                    word_vecs.append(wv)
-                word_tensor = torch.stack(word_vecs, dim=1)   # (n_heads, n_words, T)
+                if _pool_P[0] is None:
+                    P = torch.zeros(n_words, n_note,
+                                    device=attn_gpu.device, dtype=torch.float32)
+                    for wi, (ws, we) in enumerate(word_spans):
+                        ws_i, we_c = int(ws), min(int(we), n_note)
+                        if ws_i < we_c:
+                            P[wi, ws_i:we_c] = 1.0 / (we_c - ws_i)
+                    _pool_P[0] = P
+                note_attn = attn_gpu[:, T:T + n_note, :ctx_end]      # (n_heads, n_note', T)
+                nn = note_attn.shape[1]
+                P  = _pool_P[0][:, :nn]                             # (n_words, n_note')
+                word_tensor = torch.einsum("wn,hnt->hwt", P, note_attn)  # (n_heads, n_words, T)
                 top_idx = torch.topk(word_tensor,
                                      min(k_top, ctx_end), dim=-1).indices  # on GPU
                 word_attn_all[l] = top_idx.cpu().numpy().astype(np.int32)
