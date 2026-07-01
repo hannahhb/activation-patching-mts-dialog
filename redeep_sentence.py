@@ -1151,7 +1151,11 @@ def main() -> None:
 
             note       = notes[k]
             sentences  = sent_df["sentence"].tolist()
-            luq_scores = sent_df[args.label_col].values.astype(np.float64)
+            col = args.label_col if args.label_col in sent_df.columns else "uncertainty"
+            if col not in sent_df.columns:
+                print(f"[{note_name}] column '{col}' not in sentences CSV — skip")
+                continue
+            luq_scores = sent_df[col].values.astype(np.float64)
             sent_idx   = (sent_df["sentence_idx"].values
                           if "sentence_idx" in sent_df.columns
                           else np.arange(len(sentences)))
