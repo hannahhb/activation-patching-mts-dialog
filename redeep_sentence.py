@@ -388,7 +388,7 @@ def compute_ecs_pks_single_pass(
     n_note   = tokens.shape[1] - T          # note token count (incl. EOS)
 
     chunk_attn: List[Optional[List]] = [None] * n_layers
-    tok_attn_all: List[Optional[np.ndarray]] = [None] * n_layers  # (n_heads, n_note, T)
+    tok_attn_all: List[Optional[np.ndarray]] = [None] * n_layers  # (n_heads, n_note, k_top) int32 indices
     pks_all  = np.zeros((n_layers, n_sents), dtype=np.float64)
     pks_tok  = np.full((n_layers, n_note),   np.nan, dtype=np.float64)
     x_last   = [None]
@@ -409,9 +409,16 @@ def compute_ecs_pks_single_pass(
                     w = np.zeros((n_heads, T), dtype=np.float32)
                 chunks.append(w)
             chunk_attn[l] = chunks
-            # token-level: attention from every note token to context
+            # token-level: compute top-k indices immediately and store only those.
+            # Avoids holding (n_heads, n_note, T) float32 per layer in RAM —
+            # instead stores (n_heads, n_note', k_top) int32, ~10x smaller.
             t_end = min(T + n_note, seq_len)
-            tok_attn_all[l] = attn[:, T:t_end, :T].copy()      # (n_heads, n_note', T)
+            n_tok = t_end - T
+            if n_tok > 0:
+                tok_slice = attn[:, T:t_end, :T]               # (n_heads, n_tok, T)
+                tok_attn_all[l] = np.argpartition(
+                    tok_slice, -k_top, axis=-1
+                )[:, :, -k_top:].astype(np.int32)              # (n_heads, n_tok, k_top)
             return value
         return fn
 
@@ -519,11 +526,10 @@ def compute_ecs_pks_single_pass(
     for l in range(n_layers):
         if tok_attn_all[l] is None:
             continue
-        attn_l = tok_attn_all[l]                              # (n_heads, n_note', T)
-        n_tok  = attn_l.shape[1]                              # may be < n_note near EOS
+        top_indices = tok_attn_all[l]                         # (n_heads, n_tok, k_top) int32
+        n_tok = top_indices.shape[1]
         for h in range(n_heads):
-            top_h  = np.argpartition(attn_l[h], -k_top, axis=-1)[:, -k_top:]
-            # top_h: (n_tok, k_top) — indices into context (T positions)
+            top_h  = top_indices[h]                           # (n_tok, k_top) — already computed
             e_h    = x_trans[top_h].mean(axis=1)             # (n_tok, d_model)
             num    = (e_h * x_note[:n_tok]).sum(axis=-1)     # (n_tok,)
             ne     = np.linalg.norm(e_h, axis=-1)            # (n_tok,)
