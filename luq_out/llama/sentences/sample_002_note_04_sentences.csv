@@ -1,27 +1,27 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, Gregory, presents with a non-healing foot ulcer on the dorsal aspect of the lateral right foot, which has been present for approximately two months.",0.6081
-2,The ulcer has recently become red and is draining.,0.4799
-3,"The patient reports occasional throbbing pain, but no specific pain.",0.5378
-4,"He has not had any trauma to the foot prior to the development of the ulcer, but thinks he may have gotten it from walking barefoot on the beach at Dewey Beach.",0.8913
-5,"Past Medical History: The patient has diabetes, for which he takes medication, but does not regularly check his sugar levels.",0.3658
-6,His last A1c was around 10.,0.7699
-7,"Review of Systems: The patient reports occasional throbbing pain in the foot, but no other symptoms.",0.8482
+1,"HPI: The patient, Gregory, presents with a non-healing foot ulcer on the dorsal aspect of the lateral right foot, which has been present for approximately two months.",0.0988
+2,The ulcer has recently become red and is draining.,0.1196
+3,"The patient reports occasional throbbing pain, but no specific pain.",0.0888
+4,"He has not had any trauma to the foot prior to the development of the ulcer, but thinks he may have gotten it from walking barefoot on the beach at Dewey Beach.",0.1392
+5,"Past Medical History: The patient has diabetes, for which he takes medication, but does not regularly check his sugar levels.",0.0816
+6,His last A1c was around 10.,0.1521
+7,"Review of Systems: The patient reports occasional throbbing pain in the foot, but no other symptoms.",0.3293
 8,Current Medications: [NOT MENTIONED],0.5
 9,Objective:,0.5
-10,"Vital Signs: Normal vital signs, including no fever.",0.6546
-11,"Physical Exam: The patient has a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, proximal to the fifth MTP joint.",0.6403
-12,"The wound is red, draining, and has some edema around it.",0.6465
-13,"There is fluid present, but no necrosis, odor, or bony exposure.",0.78
-14,"The wound is tender to pressure, but not distinct pain.",0.78
-15,Test Results: An x-ray of the right foot shows no evidence of osteomyelitis.,0.0103
+10,"Vital Signs: Normal vital signs, including no fever.",0.0404
+11,"Physical Exam: The patient has a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, proximal to the fifth MTP joint.",0.1389
+12,"The wound is red, draining, and has some edema around it.",0.0271
+13,"There is fluid present, but no necrosis, odor, or bony exposure.",0.1986
+14,"The wound is tender to pressure, but not distinct pain.",0.0881
+15,Test Results: An x-ray of the right foot shows no evidence of osteomyelitis.,0.0013
 16,Assessment / Problem List:,0.5
-17,Assessment: The patient has a diabetic foot ulcer with signs of infection.,0.0109
-18,Problem list: Diabetic foot ulcer; Infection; Uncontrolled diabetes; Unknown: Peripheral artery disease; Unknown: Foot trauma.,0.9124
+17,Assessment: The patient has a diabetic foot ulcer with signs of infection.,0.0002
+18,Problem list: Diabetic foot ulcer; Infection; Uncontrolled diabetes; Unknown: Peripheral artery disease; Unknown: Foot trauma.,0.5179
 19,Plan:,0.5
-20,I prescribed clindamycin 400mg twice daily for 7 days to treat the infection.,0.0072
-21,I will perform a debridement to remove dead tissue.,0.0138
-22,I will order an ABI to assess blood supply to the foot.,0.0072
-23,I will get the patient a surgical shoe to wear while the ulcer heals.,0.4113
-24,The patient will return in 2 weeks for follow-up.,0.2237
-25,Follow-up: The patient will return in 2 weeks for follow-up to assess the progress of the ulcer and possibly perform another debridement.,0.9986
+20,I prescribed clindamycin 400mg twice daily for 7 days to treat the infection.,0.0002
+21,I will perform a debridement to remove dead tissue.,0.0005
+22,I will order an ABI to assess blood supply to the foot.,0.0002
+23,I will get the patient a surgical shoe to wear while the ulcer heals.,0.0085
+24,The patient will return in 2 weeks for follow-up.,0.0917
+25,Follow-up: The patient will return in 2 weeks for follow-up to assess the progress of the ulcer and possibly perform another debridement.,0.0798

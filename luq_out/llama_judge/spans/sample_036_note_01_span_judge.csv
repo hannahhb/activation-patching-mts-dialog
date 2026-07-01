@@ -1,0 +1,24 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Charles, a 38-year-old male, presents with a 2-year history of shortness of breath, which he describes as catching his breath more frequently than he used to, despite considering himself to be healthy.",Faithful,
+1,"He reports that the symptoms are not constant, but occur suddenly, and are not accompanied by other symptoms such as fever, nausea, vomiting, or rash.",Faithful,
+2,He has a history of heavy drinking and occasional diarrhea.,Faithful,
+3,"He also mentions having a dog and a cat at home, and has noticed symptoms in all three situations.",Faithful,
+4,"The patient has been prescribed an albuterol inhaler for his symptoms, which he uses when he feels them coming on.",Faithful,
+5,"Past medical history: The patient has no history of allergies, asthma, or any other significant medical conditions.",Faithful,
+6,He has a history of heavy drinking.,Faithful,
+7,"Review of systems: The patient denies any other symptoms besides shortness of breath, including fever, nausea, vomiting, or rash.",Faithful,
+8,Current medications: I prescribed albuterol inhaler for asthma symptoms.,Causality,I prescribed
+9,I will also prescribe Singulair 10mg once daily to help decrease the occurrences of asthma.,Faithful,
+10,"Objective: Vital signs: The patient's vital signs are within normal limits, with a normal pulse and oxygen saturation.",Faithful,
+11,Physical exam: The patient's physical exam is notable for faint expiratory wheezing bilaterally in all lung fields.,Faithful,
+12,Test Results: The patient's chest X-ray and pulmonary function test were both normal.,Faithful,
+13,Assessment / Problem List: Assessment: The patient has newly diagnosed allergic asthma.,Faithful,
+14,Problem list: Asthma; Allergies; Past: Heavy drinking.,Faithful,
+15,Plan: I will prescribe Singulair 10mg once daily to help decrease the occurrences of asthma.,Faithful,
+16,I will also continue the patient's current albuterol inhaler.,Faithful,
+17,"I will proceed with allergy testing, starting with skin testing, to identify potential triggers and targets for management.",Faithful,
+18,"If the skin testing is inconclusive, we will discuss further testing in the blood and immunotherapy.",Faithful,
+19,Follow-up: I will see the patient again next week to schedule the skin testing.,Faithful,
+20,Instructions: Split the note into individual sentences.,Fabrication,Instructions: Split the note into individual sentences.
+21,For each sentence assign exactly one label from the taxonomy below.,Fabrication,For each sentence assign exactly one label from the taxonomy below.
+22,"For any sentence that is NOT Faithful, also provide the exact verbatim span from that sentence that is erroneous (the minimal phrase that causes the error — not the whole sentence).",Fabrication,"For any sentence that is NOT Faithful, also provide the exact verbatim span from that sentence that is erroneous"

@@ -1,0 +1,47 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient reports feeling short of breath.,0.0075
+1,subjective,The patient experiences sudden episodes of shortness of breath.,0.227
+2,subjective,The patient is unsure of the reason for shortness of breath.,0.9981
+3,subjective,The patient has a history of heavy drinking.,0.4173
+4,subjective,The patient experiences diarrhea after heavy drinking.,0.2279
+5,subjective,The patient's symptoms occur at home.,0.9418
+6,subjective,The patient's symptoms occur outside.,0.997
+7,subjective,The patient's symptoms occur when he is near his cat.,0.9979
+8,subjective,The patient denies nausea.,0.6257
+9,subjective,The patient denies vomiting.,0.6928
+10,subjective,The patient denies rash.,0.6297
+11,subjective,The patient denies lip swelling.,0.4114
+12,subjective,The patient denies throat swelling.,0.4199
+13,subjective,The patient denies allergies.,0.2313
+14,subjective,The patient has a history of using an inhaler.,0.6484
+15,subjective,The patient was prescribed an inhaler by urgent care.,0.2472
+16,subjective,The patient is a hunter.,0.9905
+17,subjective,The doctor prescribed albuterol inhaler.,0.1326
+18,subjective,The albuterol inhaler dose is not specified.,0.9995
+19,subjective,The albuterol inhaler is taken as needed.,0.7114
+20,subjective,The albuterol inhaler is prescribed for asthma symptoms.,0.4383
+21,subjective,The patient denies symptoms in other organs relevant to his initial presentation.,0.6179
+22,objective,The patient's vital signs were not documented.,0.9998
+23,objective,The patient had faint expiratory wheezing bilaterally in all lung fields.,0.0076
+24,objective,The patient did not have a rash.,0.2265
+25,objective,The patient did not have angioedema.,0.2301
+26,objective,The patient did not have audible stridor.,0.2291
+27,objective,The patient had a chest x-ray.,0.0042
+28,objective,The chest x-ray was normal.,0.0092
+29,objective,The patient had a pulmonary function test.,0.0026
+30,objective,The pulmonary function test was normal.,0.01
+31,assessment,The patient has allergic asthma.,0.0029
+32,assessment,The patient's asthma is newly diagnosed.,0.0035
+33,plan,The doctor prescribed Singulair.,0.0034
+34,plan,The Singulair dose is 10mg.,0.0026
+35,plan,Singulair is taken daily.,0.0061
+36,plan,Singulair is prescribed for asthma.,0.0035
+37,plan,The doctor plans to proceed with allergy testing.,0.0028
+38,plan,Allergy testing will start with skin testing.,0.0044
+39,plan,Skin testing will target the triggers of the patient's asthma.,0.0084
+40,plan,The patient is taking an albuterol inhaler.,0.114
+41,plan,The albuterol inhaler is taken as needed.,0.3588
+42,plan,The patient has asthma.,0.1228
+43,plan,The doctor will see the patient next week.,0.1311
+44,plan,The skin testing will be scheduled next week.,0.1359
+45,plan,The skin testing is scheduled for follow-up.,0.0807

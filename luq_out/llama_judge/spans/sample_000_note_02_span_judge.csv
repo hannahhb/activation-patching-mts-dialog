@@ -1,0 +1,18 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 35-year-old male, presented with symptoms of shortness of breath, which he describes as catching his breath more frequently than usual, especially when he's not sure why.",Fabrication,a 35-year-old male
+1,"He mentions that he has a refrigerator full of venison at home, suggesting a history of hunting.",Faithful,
+2,"He also mentions that his symptoms are not limited to any specific location, including when he's at home, outside, or near his cat.",Faithful,
+3,"Past medical history: The patient has a history of using an inhaler prescribed by the urgent care for his symptoms, and he has never had any issues with allergies in the past.",Faithful,
+4,"Review of systems: The patient denies any other symptoms such as rash, nausea, vomiting, lip or throat swelling, or diarrhea.",Contextual,or diarrhea
+5,Current medications: I prescribed albuterol inhaler for asthma.,Causality,I prescribed
+6,"Vital signs: The patient's pulse, pulse ox, and blood pressure are within normal limits.",Fabrication,and blood pressure
+7,Physical exam: The patient does not have a rash or angioedema.,Faithful,
+8,There is no audible stridor.,Faithful,
+9,"However, I appreciate faint expiratory wheezing bilaterally in all lung fields.",Faithful,
+10,Test Results: The patient's chest X-ray and pulmonary function test were both normal.,Faithful,
+11,Assessment: The patient has newly diagnosed allergic asthma.,Faithful,
+12,Problem list: Allergic asthma; Asthma suspected; Allergies unknown.,Fabrication,Asthma suspected; Allergies unknown
+13,I prescribed Singulair 10mg once daily to help decrease the occurrences of asthma symptoms.,Faithful,
+14,"I also plan to proceed with allergy testing, starting with skin testing, to identify the triggers of his asthma.",Faithful,
+15,The patient will schedule the skin testing next week.,Faithful,
+16,Follow-up: The patient will return next week to schedule the skin testing.,Causality,to schedule the skin testing

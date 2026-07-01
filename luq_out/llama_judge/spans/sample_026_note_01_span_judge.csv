@@ -1,0 +1,28 @@
+sentence_idx,sentence,label,note_span
+0,"The patient, a 38-year-old male, presented to the office with a complaint of right knee pain after a recent incident at a trampoline park, where he heard a ""snap"" and experienced instant pain.",Faithful,
+1,He reports that this is the first time he has engaged in this type of activity and that he does not regularly exercise.,Faithful,
+2,"He has been trying to elevate the knee and has taken Tylenol for the pain, but it has not provided significant relief.",Faithful,
+3,"He has a history of hypertension, for which he is currently taking 20 milligrams of lisinopril, and diabetes, for which he is taking metformin 500 milligrams.",Faithful,
+4,"He reports that his blood sugars have been a bit better lately, but he has not been checking them as frequently as recommended.",Faithful,
+5,He has not been monitoring his blood pressure or taking his medication as directed.,Faithful,
+6,The patient reports no other symptoms or complaints.,Fabrication,The patient reports no other symptoms or complaints
+7,I prescribed lisinopril 20 milligrams daily for hypertension and metformin 500 milligrams daily for diabetes.,Contextual,I prescribed
+8,Vital signs:,Faithful,
+9,- Blood pressure: 180/80 mmHg,Faithful,
+10,- Pulse rate: not mentioned,Faithful,
+11,- Oxygen saturation: not mentioned,Faithful,
+12,- Temperature: not mentioned,Faithful,
+13,The patient has a slight limp when walking.,Faithful,
+14,There is ecchymosis and edema along the lateral aspect of the knee.,Faithful,
+15,"The patient has a decent range of motion, but experiences pain with some movement.",Faithful,
+16,The knee x-ray showed no evidence of fracture or bony abnormality.,Faithful,
+17,The results of the right knee x-ray are as follows: no evidence of fracture or bony abnormality.,Faithful,
+18,Assessment: The patient has a lateral ligament strain in the right knee.,Faithful,
+19,Problem list: Right knee pain; hypertension; diabetes; suspected blood pressure issue; unknown.,Fabrication,unknown
+20,I prescribed meloxicam 15 milligrams daily for pain and swelling related to the lateral ligament strain in the right knee.,Faithful,
+21,I referred the patient to physical therapy to help strengthen the muscles around the area and prevent further injury.,Faithful,
+22,I will continue the lisinopril at 20 milligrams daily for hypertension.,Faithful,
+23,I ordered an echo to assess the patient's cardiac function and to determine if medication modification is necessary.,Faithful,
+24,I also ordered an A1c and a lipid panel to further evaluate the patient's diabetes management.,Faithful,
+25,"The patient will return for a follow-up appointment to discuss the results of the echo, A1c, and lipid panel, and to assess the progress of the lateral ligament strain in the right knee.",Fabrication,The patient will return for a follow-up appointment
+26,Split the note into individual sentences.,Fabrication,Split the note into individual sentences

@@ -1,0 +1,29 @@
+sentence_idx,sentence,label,note_span
+0,HPI: The patient presents with a 2-week history of right shoulder pain that has been persistent and has not resolved with rest.,Faithful,
+1,He reports that the pain is worse with movement and is located on the outside of the shoulder.,Faithful,
+2,He denies any numbness in the arm or hands.,Faithful,
+3,"He has had some similar pain in the past, but this episode is more severe.",Faithful,
+4,"He has been taking Advil and icing the area, which provides some relief.",Faithful,
+5,"He has a history of playing baseball and injuring the same shoulder, but this pain is not in the same location.",Faithful,
+6,"Past medical history: The patient has a history of playing baseball and injuring the right shoulder, but this is not mentioned as a current problem.",Contextual,but this is not mentioned as a current problem
+7,He is not taking any medications other than Advil for the shoulder pain.,Faithful,
+8,"He is not a smoker, and his occupation is not mentioned.",Fabrication,He is not a smoker
+9,Review of systems: No other symptoms are mentioned.,Faithful,
+10,Current medications:,Faithful,
+11,* Advil (dosage and frequency not specified) for shoulder pain,Faithful,
+12,Objective:,Faithful,
+13,"Vital signs: The patient's vital signs are as follows: temperature 97.8°F, heart rate 62, respirations 16, blood pressure 116/84, and oxygen saturation 99%.",Faithful,
+14,"Physical exam: The patient has limited active and passive range of motion of the right shoulder, with tenderness at the greater tuberosity of the humerus.",Faithful,
+15,There is no tenderness at the sternoclavicular or acromioclavicular joints.,Faithful,
+16,"The patient has a good hand grip, and the neurovascular exam of the right arm is intact.",Faithful,
+17,Test Results: The patient's shoulder X-ray shows no fracture.,Faithful,
+18,Assessment / Problem List:,Faithful,
+19,Assessment: The patient's symptoms are most likely due to rotator cuff tendinopathy.,Faithful,
+20,Problem list: Rotator cuff tendinopathy; Acute shoulder pain; [NOT MENTIONED]; [NOT MENTIONED]; [NOT MENTIONED]; Foot pain; Ankle pain; [NOT MENTIONED]; [NOT MENTIONED]; [NOT MENTIONED],Fabrication,[NOT MENTIONED]; [NOT MENTIONED]; [NOT MENTIONED]; [NOT MENTIONED]; [NOT MENTIONED]; [NOT MENTIONED]
+21,Plan:,Faithful,
+22,I prescribed Tylenol for the shoulder pain.,Causality,I prescribed Tylenol
+23,I ordered an MRI to further evaluate the shoulder.,Faithful,
+24,I referred the patient to physical therapy for 6-8 weeks.,Faithful,
+25,I recommended that the patient continue to take Tylenol and consider a steroid injection if the symptoms do not improve.,Faithful,
+26,I also suggested that the patient try soaking their feet in Epsom salts to alleviate foot pain.,Faithful,
+27,Follow-up: The patient will follow up in 2 weeks to review the MRI results and progress with physical therapy.,Fabrication,in 2 weeks

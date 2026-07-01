@@ -1,0 +1,20 @@
+sentence_idx,sentence,label,note_span
+0,HPI: The patient is a 45-year-old male who presents with an ankle injury sustained while playing basketball with his son.,Faithful,
+1,"He reports landing awkwardly and twisting his ankle, resulting in swelling and tenderness on the outside of the ankle.",Faithful,
+2,He mentions that he has been having trouble walking and that the ankle feels unstable.,Faithful,
+3,He has been working out regularly and does not want to disrupt his routine.,Faithful,
+4,"His son, who is 10 years old, is a big fan of Stephen Curry and enjoys playing basketball.",Faithful,
+5,Past medical history: [NOT MENTIONED],Fabrication,Past medical history
+6,Review of systems: [NOT MENTIONED],Fabrication,Review of systems
+7,Current medications: [NOT MENTIONED],Fabrication,Current medications
+8,Vital signs: [NOT MENTIONED],Fabrication,Vital signs
+9,"The patient's ankle is swollen, with exquisite tenderness on the lateral and medial deltoid regions.",Faithful,
+10,"The skin is intact, and capillary refill is brisk.",Faithful,
+11,There is no malalignment.,Faithful,
+12,"X-ray results: A displaced lateral malleolus fracture at the Weber C level, with no evidence of medial or posterior malleolar fractures.",Faithful,
+13,The patient has a displaced lateral malleolar fracture that requires surgical intervention.,Faithful,
+14,"I prescribed meloxicam to reduce swelling, and instructed the patient to ice the ankle and elevate it regularly.",Faithful,
+15,I recommended that he use crutches to avoid putting weight on the ankle.,Faithful,
+16,"I advised him to continue coaching his son's basketball team, as he is able to do so without putting excessive stress on the ankle.",Faithful,
+17,I estimated that he will be out for approximately three months.,Faithful,
+18,I will follow up with the patient to assess his progress and adjust his treatment plan as necessary.,Fabrication,I will follow up with the patient to assess his progress and adjust his treatment plan as necessary

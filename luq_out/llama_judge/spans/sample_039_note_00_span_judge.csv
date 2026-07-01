@@ -1,0 +1,35 @@
+sentence_idx,sentence,label,note_span
+0,"The patient is a 56-year-old male presenting with difficulty swallowing, which he describes as a sensation of something being stuck in his throat, occurring over the last four to five weeks.",Faithful,
+1,He reports that this sensation is more pronounced with solids and can be painful.,Faithful,
+2,"He has had no coughing, vomiting, or blood in his stool.",Faithful,
+3,He denies any weight loss or changes in his weight.,Faithful,
+4,His past medical history includes diabetes and high blood pressure.,Faithful,
+5,Review of systems: The patient denies any symptoms in other organs that are relevant to his initial presentation.,Faithful,
+6,Past medical history: The patient has a history of diabetes and high blood pressure.,Faithful,
+7,He is currently taking metformin 500mg twice a day for diabetes and norvasc for high blood pressure.,Faithful,
+8,"Current medications: Metformin 500mg twice a day for diabetes, Norvasc for high blood pressure.",Faithful,
+9,Vital signs: Blood pressure 120/50 mmHg.,Faithful,
+10,"Physical exam: The patient's neck is fine, with no swelling, and his thyroid feels normal.",Faithful,
+11,There is no lymphadenopathy.,Faithful,
+12,"The throat examination is normal, with no masses or swelling.",Faithful,
+13,"The lung exam is clear, and the heart exam is normal.",Faithful,
+14,"There is epigastric tenderness on the right side, but no masses or significant swelling.",Faithful,
+15,"The back exam is normal, and the extremity exam is fine.",Faithful,
+16,The neurological exam is normal.,Faithful,
+17,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+18,"The patient is a 56-year-old male with difficulty swallowing due to a possible narrowing of the esophagus, which may require dilation.",Faithful,
+19,The patient also has diabetes and high blood pressure.,Faithful,
+20,Problem list: Difficulty swallowing; diabetes; high blood pressure.,Faithful,
+21,I recommended that the patient undergo a gastroenterology consultation for further evaluation and possible dilation of the esophagus.,Faithful,
+22,I also prescribed Prilosec 20mg once a day for possible gastroesophageal reflux disease.,Faithful,
+23,"I advised the patient to chew their foods frequently and carefully, especially with hard or sticky foods.",Faithful,
+24,"I ordered a repeat hemoglobin A1c, kidney function tests, and a referral to ophthalmology for diabetic retinopathy screening.",Faithful,
+25,I also refilled the patient's norvasc prescription.,Faithful,
+26,I will see the patient back in about a month to review the results of the blood tests and make any necessary adjustments to his treatment plan.,Faithful,
+27,Split the note into individual sentences.,Fabrication,Split the note into individual sentences.
+28,For each sentence assign exactly one label from the taxonomy below.,Fabrication,For each sentence assign exactly one label from the taxonomy below.
+29,"For any sentence that is NOT Faithful, also provide the exact verbatim span from that sentence that is erroneous (the minimal phrase that causes the error — not the whole sentence).",Fabrication,"For any sentence that is NOT Faithful, also provide the exact verbatim span from that sentence that is erroneous (the minimal phrase that causes the error — not the whole sentence)."
+30,"Return a JSON array — one object per sentence, in note order.",Fabrication,"Return a JSON array — one object per sentence, in note order."
+31,"For Faithful sentences: {""sentence_idx"": 0, ""sentence"": ""..."", ""label"": ""Faithful""}",Fabrication,"For Faithful sentences: {""sentence_idx"": 0, ""sentence"": ""..."", ""label"": ""Faithful""}"
+32,"For non-Faithful sentences: {""sentence_idx"": 1, ""sentence"": ""..."", ""label"": ""Fabrication"", ""note_span"": ""<exact words from the sentence>""}",Fabrication,"For non-Faithful sentences: {""sentence_idx"": 1, ""sentence"": ""..."", ""label"": ""Fabrication"", ""note_span"": ""<exact words from the sentence>""}"
+33,"Return only the JSON array, no other text.",Fabrication,"Return only the JSON array, no other text."

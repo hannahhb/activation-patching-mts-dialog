@@ -1,0 +1,24 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Brandon, a 38-year-old male, presents with neck pain after a recent car crash in February of this year.",Faithful,
+1,"He reports a history of multiple car crashes, including the current one, and has been experiencing sharp, incapacitating pain, rated as a 12 out of 10.",Faithful,
+2,"He reports stiffness, headaches, dizziness, visual disturbances, numbness in his left arm and right leg, and muscle spasms.",Faithful,
+3,He also reports bruising and swelling.,Faithful,
+4,He has been experiencing fatigue since the accident.,Faithful,
+5,Past medical history: The patient has a history of previous car crashes and has undergone surgery after the third crash.,Faithful,
+6,"He has also been to a pain clinic and has been prescribed fentanyl, which he has not taken in several weeks.",Faithful,
+7,"Review of systems: The patient reports headaches, dizziness, visual disturbances, numbness, and muscle spasms.",Faithful,
+8,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+9,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+10,Physical exam: The patient's neck pain is exacerbated by palpation of the bony process and muscle.,Faithful,
+11,"He has a moderate range of motion in his neck, but bending forward and backwards causes significant pain.",Faithful,
+12,"No bruising, swelling, or laceration is noted.",Faithful,
+13,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+14,"Assessment: The patient has a neck sprain, which is a condition that can be caused by multiple factors, including car crashes.",Faithful,
+15,Problem list: Neck sprain; Active.,Fabrication,Problem list: Neck sprain; Active
+16,"I prescribed Robaxin 1500mg, taken 6-8 hours, 6-8 hours, to help relax the muscles and reduce pain.",Faithful,
+17,"I also recommended the patient apply ice to the area when experiencing bruising and swelling, and to perform exercises to improve range of motion.",Faithful,
+18,The patient will undergo an MRI to further evaluate the extent of the injury.,Faithful,
+19,I will refer the patient to physical therapy and pain management to explore local injections and alternative pain relief options.,Faithful,
+20,The patient will be given time off work to recover.,Faithful,
+21,"Follow-up: The patient will be seen after the MRI results are available, and further treatment will be planned accordingly.",Faithful,
+22,Instructions:,Fabrication,Instructions:

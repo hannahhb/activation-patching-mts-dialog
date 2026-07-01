@@ -1,0 +1,26 @@
+sentence_idx,sentence,supported,uncertainty,atom_faithfulness
+0,Here is the SOAP note based on the transcript:,1,0,1.0
+1,Subjective:,1,0,1.0
+2,"HPI: The patient, Charles, presented with a complaint of shortness of breath, stating that he feels like he catches his breath a lot more than he used to, even considering himself to be pretty healthy.",1,0,1.0
+3,"He reported that the symptoms started suddenly, and he is not sure why.",1,0,0.5
+4,"He denied any other symptoms such as a rash, nausea, vomiting, lip or throat swelling, or fever.",1,0,0.8333
+5,"He mentioned that he has a dog that gets eye discharge, but he himself does not experience eye discharge.",1,0,0.75
+6,"He reported that the symptoms occur in all situations, including when he is in the house, outside, and near his cat.",1,0,0.75
+7,"Past medical history: The patient reported that he has a history of heavy drinking, which leads to diarrhea.",1,0,0.75
+8,"Review of systems: The patient denied any symptoms in other organs, but reported that he has noticed the shortness of breath in all situations.",1,0,1.0
+9,Current medications: The patient is currently using an albuterol inhaler as prescribed by the urgent care for asthma symptoms.,1,0,1.0
+10,Objective:,1,0,1.0
+11,"Vital signs: The patient's vital signs are normal, with a normal pulse and pulse ox.",1,0,1.0
+12,Physical exam: The patient's physical exam was notable for faint expiratory wheezing bilaterally in all lung fields.,1,0,1.0
+13,"There was no rash, angioedema, or audible stridor.",1,0,1.0
+14,Test Results: The patient's chest X-ray and pulmonary function test were normal.,1,0,1.0
+15,Assessment / Problem List:,1,0,1.0
+16,Assessment: The patient has newly diagnosed allergic asthma.,1,0,1.0
+17,Problem list: Allergic asthma; suspected allergy; unknown past medical history; unknown social history.,1,0,0.75
+18,Plan:,1,0,1.0
+19,I prescribed albuterol inhaler as directed for asthma symptoms.,1,0,1.0
+20,I prescribed Singulair 10mg once daily to help decrease the occurrences of asthma.,1,0,1.0
+21,"I also plan to proceed with allergy testing, starting with skin testing to target the triggers of the patient's symptoms.",1,0,1.0
+22,We will schedule the skin testing for next week.,1,0,1.0
+23,I want the patient to continue using the albuterol inhaler as soon as symptoms start and to come to the office next week for the scheduled appointment.,1,0,1.0
+24,Follow-up: I will see the patient next week to schedule the skin testing.,1,0,1.0

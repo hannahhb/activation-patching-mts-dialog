@@ -1,0 +1,25 @@
+sentence_idx,sentence,label
+0,"HPI: The patient is anxious about her recent blood work showing hepatitis C, which she was not aware she had despite not having any symptoms.",Faithful
+1,"She reports a history of IV drug use in the past, but has been clean for over 15 years.",Faithful
+2,"She also reports a history of alcohol use, currently consuming about a beer a day, and smoking one to two cigarettes a day.",Faithful
+3,"She denies any other medical conditions, except for a tendency to feel tired at the end of the day after working.",Faithful
+4,"Her family history is significant for hypertension, diabetes, and depression.",Faithful
+5,"She reports being a workaholic, but is working on addressing this.",Faithful
+6,"Past medical history: The patient has a history of IV drug use, which she has been clean from for over 15 years.",Faithful
+7,"She also has a history of alcohol use, currently consuming about a beer a day, and smoking one to two cigarettes a day.",Faithful
+8,She denies any other medical conditions.,Faithful
+9,"Review of systems: The patient reports feeling tired at the end of the day after working, but otherwise denies any other symptoms.",Faithful
+10,Current medications: [NOT MENTIONED],Fabrication
+11,Vital signs: [NOT MENTIONED],Fabrication
+12,The patient appears in no distress and no jaundice on skin exam.,Faithful
+13,"The heart exam reveals a regular rate and rhythm with a 2/6 systolic murmur, which has not changed from last year.",Faithful
+14,"The lungs are clear with no wheezes, rales, or rhonchi.",Faithful
+15,The abdomen is soft with no hepatosplenomegaly.,Faithful
+16,The musculoskeletal exam is unremarkable.,Faithful
+17,"The patient's HCV antibody test was positive, and her liver panel showed an elevated AST at 39, but her ALT, albumin, and total bilirubin were within normal limits.",Faithful
+18,"Assessment: The patient is diagnosed with hepatitis C, a viral infection that affects the liver, which she most likely has had for years.",Faithful
+19,Problem list: Hepatitis C; Suspected liver disease; Suspected fibrosis of the liver; Suspected hypertension; Suspected diabetes; Suspected depression.,Causality
+20,"I will order additional blood work to confirm the diagnosis of hepatitis C, including checking the HCV RNA and HCV genotype.",Faithful
+21,I will also order a special ultrasound to determine the severity of her liver disease.,Faithful
+22,I will have the nurse schedule follow-up appointments for the patient's wife and children to undergo screening for hepatitis C.,Faithful
+23,"I will see the patient in about three weeks to review the results of the additional blood work and ultrasound, and to determine the next steps in treatment.",Faithful

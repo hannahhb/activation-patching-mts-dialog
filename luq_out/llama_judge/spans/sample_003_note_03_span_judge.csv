@@ -1,0 +1,32 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Stephanie Morales, is a 36-year-old female presenting with complaints of ankle pain.",Faithful,
+1,"She reports that the pain started two days ago after slipping on ice and twisting her left ankle, which landed on the outside of her hip.",Causality,which landed on the outside of her hip
+2,"She denies falling down but states she caught herself, but was able to get up with assistance.",Negation,denies falling down
+3,The pain and swelling were severe enough to make it difficult to walk.,Faithful,
+4,"She has tried ibuprofen, ice, and elevation for pain and swelling, which has provided some relief.",Faithful,
+5,Past medical history: The patient has a history of diabetes and high blood pressure.,Faithful,
+6,She is currently taking metformin and norvasc.,Faithful,
+7,"Her hemoglobin A1c was 6.8 at her last check, which is considered good control.",Faithful,
+8,She is due for an eye exam in the next couple of weeks.,Faithful,
+9,Review of systems: No additional symptoms were mentioned in other organs.,Faithful,
+10,Current medications:,Faithful,
+11,- Metformin [dosage not mentioned] [frequency not mentioned] for diabetes,Faithful,
+12,- Norvasc [dosage not mentioned] [frequency not mentioned] for high blood pressure,Faithful,
+13,"Vital signs: Blood pressure 120/70, no other vital signs were mentioned.",Faithful,
+14,Physical exam: The patient's neck exam was normal with no bruits.,Faithful,
+15,Her lungs were clear.,Faithful,
+16,"Her heart exam was normal, with a 2/6 systolic ejection murmur that was unchanged from previous exams.",Faithful,
+17,Her belly exam was normal.,Faithful,
+18,"On her ankle exam, she had tenderness over the lateral malleolus and the fifth metatarsal, with some swelling and redness.",Faithful,
+19,"She had pain with valgus stressing of the ankle, but normal sensation and pulses.",Faithful,
+20,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+21,"Assessment: The patient likely has an ankle sprain, but a fracture is a possibility, and an X-ray is needed to confirm.",Faithful,
+22,Problem list: Ankle sprain; High blood pressure; Diabetes; Suspected fracture (unknown); Unknown.,Fabrication,Unknown
+23,I ordered an X-ray of the ankle to confirm the diagnosis.,Faithful,
+24,I put the patient in an air splint and prescribed naprosyn 500mg twice a day for pain control.,Faithful,
+25,"I advised the patient to elevate the ankle, apply ice, and avoid weightbearing until the X-ray results are available.",Faithful,
+26,"If the X-ray shows a fracture, I will refer the patient to orthopedics.",Faithful,
+27,I will also order baseline labs to check her hemoglobin A1c and other parameters.,Faithful,
+28,I refilled the patient's norvasc prescription and advised her to continue taking it as directed.,Faithful,
+29,I also advised her to keep her scheduled eye exam appointment.,Faithful,
+30,"The patient will follow up with the results of the X-ray, and I will re-evaluate her ankle and provide further instructions.",Faithful,

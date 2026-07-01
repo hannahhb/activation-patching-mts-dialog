@@ -1,0 +1,61 @@
+sentence_idx,atom_idx,atom,supported,uncertainty
+1,0,The patient presented with a complaint of back pain.,1,0
+1,1,The back pain started 2 hours after raking leaves in his yard.,1,0
+1,2,The patient has a history of similar symptoms.,1,0
+1,3,The similar symptoms occurred 3 years ago.,1,0
+1,4,The previous symptoms resolved on their own.,1,0
+2,0,He reports a tingling sensation in his right leg.,1,0
+2,1,He reports pain with flexion.,1,0
+2,2,He reports pain with palpation.,1,0
+2,3,The pain and tingling sensation are located around the L5 area.,1,0
+3,0,The patient has a partner.,1,0
+3,1,The partner reports symptoms.,0,1
+3,2,The symptoms reported by the partner are similar to those of the patient.,0,1
+3,3,The symptoms occur when the patient stands up.,1,0
+4,0,The patient has a history of back pain.,1,0
+4,1,The back pain occurred 3 years ago.,1,0
+4,2,The back pain was similar to the current back pain.,1,0
+4,3,No other relevant medical history was mentioned.,0,1
+5,0,The patient reports tingling in his right leg.,1,0
+5,1,The patient reports pain with certain movements.,1,0
+6,0,The sentence is about current medications.,0,1
+6,1,There are no current medications mentioned.,0,1
+8,0,The sentence is about vital signs.,0,1
+8,1,The vital signs are not mentioned.,1,0
+9,0,The patient had some pain with flexion.,1,0
+9,1,The patient had pain with palpation around the L5 area.,1,0
+9,2,Dorsiflexion was normal.,1,0
+10,0,Pulses were present in all extremities.,1,0
+10,1,Pulses were equal in comparison to each other across all extremities.,1,0
+11,0,A test was performed to obtain results.,1,0
+11,1,The test results are described as normal.,1,0
+11,2,The test involved an x-ray.,1,0
+11,3,The x-ray was of the low back.,1,0
+13,0,An assessment has been made of the patient.,1,0
+13,1,The patient is likely to have a specific medical condition.,0,1
+13,2,The medical condition is a low back sprain.,1,0
+14,0,There is a problem list.,0,1
+14,1,The problem list includes Low back sprain.,1,0
+14,2,The problem list includes an unknown condition.,1,0
+16,0,I prescribed meloxicam.,1,0
+16,1,The dosage of meloxicam prescribed was 7.5 mg.,0,1
+16,2,Meloxicam was prescribed to be taken orally.,1,0
+16,3,Meloxicam was prescribed to be taken twice a day.,0,1
+16,4,The purpose of prescribing meloxicam was for pain management.,1,0
+17,0,I prescribed physical therapy to the patient.,1,0
+17,1,The goal of the physical therapy was to get the patient back in shape.,1,0
+17,2,The physical therapy included stretches.,0,1
+17,3,The physical therapy included exercises.,0,1
+17,4,The stretches were intended to help alleviate symptoms.,0,1
+17,5,The exercises were intended to help alleviate symptoms.,1,0
+18,0,The patient has symptoms.,1,0
+18,1,The symptoms are expected to improve.,1,0
+18,2,There is a 2-week time frame for the symptoms to improve.,1,0
+18,3,"If the symptoms do not improve after 2 weeks, an action will be taken.",1,0
+18,4,The action considered is ordering an MRI.,1,0
+19,0,The patient will follow up with the speaker.,1,0
+19,1,The follow-up will occur in 2 weeks.,1,0
+19,2,The purpose of the follow-up is to reassess symptoms.,0,1
+19,3,The follow-up may involve considering further testing.,1,0
+19,4,Further testing may include an MRI.,1,0
+19,5,An MRI will only be considered if necessary.,1,0

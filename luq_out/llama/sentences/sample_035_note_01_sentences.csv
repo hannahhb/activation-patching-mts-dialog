@@ -1,32 +1,32 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, Wayne, presented with a non-healing wound on his right foot, approximately 2-3 weeks in duration.",0.2885
-2,He reports no trauma to the foot and initially used a band-aid to manage the wound.,0.6684
-3,He had previously seen a podiatrist but was unable to continue care due to the podiatrist's relocation.,0.5835
-4,"He had been treated with antibiotics by his primary care physician, which he completed the day before the visit.",0.8521
-5,"He denies pain or discomfort in the wound, but notes that it sticks to his sock when he removes it.",0.4773
-6,"He also reports neuropathy and has been wearing new shoes that caused a blister, which eventually became the current wound.",0.8533
-7,"Past medical history: The patient has diabetes, with a last HbA1c of slightly over 8.",0.1613
-8,He does not mention any other past medical conditions or treatments.,0.6517
-9,"Review of systems: The patient denies fever, chills, drainage from the wound, or any other symptoms.",0.372
+1,"HPI: The patient, Wayne, presented with a non-healing wound on his right foot, approximately 2-3 weeks in duration.",0.1205
+2,He reports no trauma to the foot and initially used a band-aid to manage the wound.,0.424
+3,He had previously seen a podiatrist but was unable to continue care due to the podiatrist's relocation.,0.3209
+4,"He had been treated with antibiotics by his primary care physician, which he completed the day before the visit.",0.7171
+5,"He denies pain or discomfort in the wound, but notes that it sticks to his sock when he removes it.",0.1963
+6,"He also reports neuropathy and has been wearing new shoes that caused a blister, which eventually became the current wound.",0.4939
+7,"Past medical history: The patient has diabetes, with a last HbA1c of slightly over 8.",0.0417
+8,He does not mention any other past medical conditions or treatments.,0.5272
+9,"Review of systems: The patient denies fever, chills, drainage from the wound, or any other symptoms.",0.2059
 10,Current medications: [NOT MENTIONED],0.5
 11,Objective:,0.5
-12,"Vital signs: The patient's temperature is 98.1°F, heart rate is 72, respirations are 16, and blood pressure is 110/65.",0.5583
-13,"Physical exam: The patient has a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, proximal to the right fifth MTP joint, with yellow slough and minimal granulation tissue.",0.5271
-14,"There is no surrounding erythema or cellulitis, no fluid collection, and no necrosis.",0.1758
-15,"There is no odor, and no bony exposure.",0.7472
-16,"The vascular exam reveals palpable bilateral femoral and popliteal pulses, with no palpable DP or PT pulses, but with Doppler signs present.",0.2619
-17,Test Results: The patient's right foot X-ray shows no evidence of osteomyelitis.,0.1401
+12,"Vital signs: The patient's temperature is 98.1°F, heart rate is 72, respirations are 16, and blood pressure is 110/65.",0.2125
+13,"Physical exam: The patient has a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, proximal to the right fifth MTP joint, with yellow slough and minimal granulation tissue.",0.0939
+14,"There is no surrounding erythema or cellulitis, no fluid collection, and no necrosis.",0.0105
+15,"There is no odor, and no bony exposure.",0.2087
+16,"The vascular exam reveals palpable bilateral femoral and popliteal pulses, with no palpable DP or PT pulses, but with Doppler signs present.",0.0163
+17,Test Results: The patient's right foot X-ray shows no evidence of osteomyelitis.,0.0363
 18,Assessment / Problem List:,0.5
-19,"Assessment: The patient has a diabetic foot ulcer on the right foot, with a need for further evaluation and management to promote wound healing.",0.9997
-20,Problem list: Diabetic foot ulcer; Suspected poor blood supply to the foot; Uncontrolled diabetes.,0.5801
+19,"Assessment: The patient has a diabetic foot ulcer on the right foot, with a need for further evaluation and management to promote wound healing.",0.1581
+20,Problem list: Diabetic foot ulcer; Suspected poor blood supply to the foot; Uncontrolled diabetes.,0.2811
 21,Plan:,0.5
-22,"I prescribed collagenase ointment to be applied to the wound once daily, covered with a dry sterile dressing.",0.0075
-23,I will perform a debridement in the office to remove dead tissue.,0.0071
-24,I will order an ankle brachial index (ABI) to assess the blood supply to the foot.,0.0037
-25,I will also have the patient wear a surgical shoe to offload pressure from the area.,0.5487
-26,I do not think further antibiotics are needed at this time.,0.6684
-27,I will refer the patient to a vascular specialist if the ABI indicates poor blood supply to the foot.,0.1262
-28,I will see the patient again in two weeks.,0.4594
-29,I will also refer the patient to a diabetic specialist to discuss ways to control their diabetes and reduce their HbA1c.,0.3366
-30,Follow-up: The patient will be seen in two weeks to reassess the wound and discuss further management.,0.6679
+22,"I prescribed collagenase ointment to be applied to the wound once daily, covered with a dry sterile dressing.",0.0002
+23,I will perform a debridement in the office to remove dead tissue.,0.0002
+24,I will order an ankle brachial index (ABI) to assess the blood supply to the foot.,0.0001
+25,I will also have the patient wear a surgical shoe to offload pressure from the area.,0.2787
+26,I do not think further antibiotics are needed at this time.,0.6088
+27,I will refer the patient to a vascular specialist if the ABI indicates poor blood supply to the foot.,0.0407
+28,I will see the patient again in two weeks.,0.2645
+29,I will also refer the patient to a diabetic specialist to discuss ways to control their diabetes and reduce their HbA1c.,0.1949
+30,Follow-up: The patient will be seen in two weeks to reassess the wound and discuss further management.,0.0121

@@ -1,0 +1,26 @@
+sentence_idx,sentence,label
+0,"HPI: Stephanie Morales, a 36-year-old female, presents with a 2-day history of ankle pain, which started after slipping on ice and twisting her left ankle.",Faithful
+1,"She reports falling and experiencing severe pain, swelling, and difficulty walking.",Faithful
+2,"She has tried ibuprofen, ice, and elevation, which has provided some relief.",Faithful
+3,"The pain is localized to the outside of her ankle, with no pain radiating to her calf, lower leg, or knee.",Faithful
+4,She denies bleeding or significant swelling.,Faithful
+5,Past medical history: Stephanie has a history of diabetes and high blood pressure.,Faithful
+6,"She is taking metformin and norvasc, with a hemoglobin A1c of 6.8.",Faithful
+7,Review of systems: [NOT MENTIONED],Fabrication
+8,Current medications:,Faithful
+9,Metformin [dose and frequency NOT MENTIONED],Faithful
+10,Norvasc [dose and frequency NOT MENTIONED],Faithful
+11,"Vital signs: Blood pressure 120/70, pulse rate NOT MENTIONED, oxygen saturation NOT MENTIONED, temperature NOT MENTIONED.",Faithful
+12,"Physical exam: The patient has tenderness over the lateral malleolus and the fifth metatarsal, with some swelling and redness.",Faithful
+13,The ankle exam shows pain with valgus stressing.,Faithful
+14,The patient has normal sensation and pulses in the affected area.,Faithful
+15,Test Results: [NOT MENTIONED],Fabrication
+16,"Assessment: I suspect the patient has an ankle sprain, but I would like to order an x-ray to rule out a fracture.",Faithful
+17,Problem list: Ankle sprain; Diabetes; High blood pressure.,Faithful
+18,I prescribed naprosyn 500mg twice a day for pain control.,Faithful
+19,I will give the patient a splint and crutches to avoid weightbearing until the x-ray results are available.,Faithful
+20,I will order an x-ray of the ankle.,Faithful
+21,"I will also order baseline labs, including a hemoglobin A1c, to monitor the patient's diabetes.",Faithful
+22,I will refill the patient's norvasc prescription.,Faithful
+23,I will contact the patient once the x-ray results are available to determine the next course of action.,Faithful
+24,"If the x-ray shows a fracture, I will refer the patient to orthopedics.",Faithful

@@ -1,0 +1,50 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient presents with right shoulder pain.,0.9801,The shoulder pain is in the right shoulder.,1,,entailment
+1,The patient's right shoulder pain has been ongoing for a few weeks.,0.975,The patient has had the shoulder pain for a few weeks.,1,,entailment
+2,The patient's right shoulder pain started after working on various projects in his backyard.,0.9657,The patient was doing work in his backyard when the pain started.,1,,entailment
+3,The pain is located on the outside of the shoulder.,0.9751,The patient's current pain is on the outside of his right shoulder.,1,,entailment
+4,The pain is tender to the touch when raising the arm.,0.9834,The pain is tender when he raises his arm.,1,,entailment
+5,The patient denies any numbness in the arm.,0.9679,The patient has not experienced numbness in his arm or hands.,1,,entailment
+6,The patient denies any numbness in the hands.,0.9717,The patient has not experienced numbness in his arm or hands.,1,,entailment
+7,The pain is worse with movement.,0.9471,The patient only feels pain when he moves his arm.,0,fabrication,neutral
+8,The pain is alleviated by rest.,0.9227,The patient only feels pain when he moves his arm.,0,fabrication,contradiction
+9,The pain is alleviated by over-the-counter medication.,0.9203,Tylenol is for pain.,1,,entailment
+10,The patient has a history of similar pain in the same shoulder.,0.9462,The patient has had issues with his right shoulder before.,1,,entailment
+11,The patient's history of similar pain is from a past injury playing baseball.,0.9455,The patient has a history of hurting his right shoulder playing baseball.,1,,entailment
+12,The patient has a past medical history of right shoulder pain.,0.9607,The patient has had issues with his right shoulder before.,1,,entailment
+13,The patient's past medical history of right shoulder pain is from a past injury.,0.9573,The patient has had issues with his right shoulder before.,1,,entailment
+14,The patient denies any additional symptoms in other organs.,0.9104,The doctor may consider a steroid injection if symptoms do not improve.,0,fabrication,neutral
+15,The patient is taking Advil.,0.9557,The patient has been taking Advil for pain.,1,,entailment
+16,The Advil dose is not specified.,0.8989,The patient has been taking Advil for pain.,0,fabrication,neutral
+17,Advil is taken for pain relief.,0.9753,The patient has been taking Advil for pain.,1,,entailment
+18,The patient is icing the affected area.,0.9324,The patient has been icing his shoulder for pain.,1,,entailment
+19,The patient's temperature is 97.8°F.,0.9319,The patient's heart rate is 62.,0,fabrication,neutral
+20,The patient's heart rate is 62.,1.0,The patient's heart rate is 62.,1,,entailment
+21,The patient's respirations are 16.,1.0,The patient's respirations are 16.,1,,entailment
+22,The patient's blood pressure is 116/84.,0.9911,The patient's blood pressure is 116 over 84.,1,,entailment
+23,The patient's oxygen saturation is 99%.,0.9964,The patient's oxygen saturation is 99 percent.,1,,entailment
+24,The patient has limited active range of motion in the right shoulder.,0.9956,The patient has limited active and passive range of motion in his right shoulder.,1,,entailment
+25,The patient has limited passive range of motion in the right shoulder.,0.9954,The patient has limited active and passive range of motion in his right shoulder.,1,,entailment
+26,The patient has tenderness at the greater tuberosity of the humerus.,0.98,There is tenderness at the great tuberosity of the humerus.,1,,entailment
+27,The patient has a good hand grip.,1.0,The patient has a good hand grip.,1,,entailment
+28,The patient has intact sensation to touch in the right arm.,0.9622,The patient's sensation to touch is intact.,1,,entailment
+29,The patient's shoulder X-ray shows no fracture.,0.9642,The x-ray showed no fracture.,1,,entailment
+30,The patient's symptoms are most likely due to rotator cuff tendinopathy.,0.9435,The doctor diagnosed rotator cuff tendinopathy.,1,,entailment
+31,The patient has rotator cuff tendinopathy.,0.9663,The doctor diagnosed rotator cuff tendinopathy.,1,,entailment
+32,The patient has sore feet.,0.9893,The patient's feet are sore.,1,,entailment
+33,The doctor plans to refer the patient to physical therapy.,0.9815,The doctor referred the patient to physical therapy.,1,,entailment
+34,The patient will attend physical therapy for approximately six to eight weeks.,0.9857,The physical therapy will last approximately six to eight weeks.,1,,entailment
+35,The physical therapy is to address the rotator cuff tendinopathy.,0.9313,The doctor diagnosed rotator cuff tendinopathy.,0,fabrication,neutral
+36,The doctor will order an MRI.,0.9811,The doctor ordered an MRI.,1,,entailment
+37,The MRI is to rule out any other conditions.,0.9319,The doctor ordered an MRI.,0,fabrication,neutral
+38,The patient should continue taking Tylenol.,0.9916,The patient will continue taking Tylenol.,1,,entailment
+39,The Tylenol dose is not specified.,0.9196,The doctor prescribed Tylenol.,0,fabrication,neutral
+40,Tylenol is taken for pain relief.,0.9855,Tylenol is for pain.,1,,entailment
+41,The patient should continue icing the affected area.,0.9185,The patient has been icing his shoulder for pain.,0,fabrication,neutral
+42,The doctor will consider a steroid injection into the shoulder.,0.9719,A steroid injection is for shoulder pain.,1,,entailment
+43,The steroid injection is for relief.,0.9639,A steroid injection is for shoulder pain.,1,,entailment
+44,The patient should try soaking his feet in Epsom salts.,0.9825,The doctor suggested soaking his feet in Epsom salts.,1,,entailment
+45,Soaking feet in Epsom salts is to alleviate soreness.,0.9694,The doctor suggested soaking his feet in Epsom salts.,1,,entailment
+46,The patient will follow up with physical therapy.,0.9744,The patient will have a follow-up appointment after physical therapy.,1,,entailment
+47,The patient will return for a follow-up appointment.,0.9622,The patient will have a follow-up appointment after physical therapy.,1,,entailment
+48,The follow-up appointment is to reassess symptoms.,0.9452,The patient will have a follow-up appointment after physical therapy.,0,fabrication,neutral

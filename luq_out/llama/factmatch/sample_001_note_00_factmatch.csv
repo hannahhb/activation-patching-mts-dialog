@@ -1,0 +1,41 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 50-year-old male.,0.9535,The patient is a male.,1,,entailment
+1,The patient presents with a 2-hour history of low back pain.,0.9459,"The patient had back pain like this once before, about three years ago.",0,negation,contradiction
+2,The patient presents with a tingling sensation in his right leg.,0.9949,The patient has a tingling sensation in his right leg.,1,,entailment
+3,The pain started after raking leaves in his yard yesterday.,0.9439,The patient was raking leaves in his yard yesterday.,0,fabrication,neutral
+4,The patient's pain has not improved with rest.,0.9258,"This time, the patient's back pain is worse.",0,fabrication,neutral
+5,The patient's pain has not improved with ice.,0.9179,The patient put ice on his back.,0,fabrication,neutral
+6,The patient's pain has not improved with over-the-counter pain medication.,0.909,The patient has no pain when standing up from bending over.,0,fabrication,neutral
+7,The patient's pain is worse when standing up.,0.9714,The patient's partner reports that the patient's pain is worse when standing up.,1,,entailment
+8,The patient's pain is better when sitting.,0.9457,The patient's back feels a little better when he sits.,1,,entailment
+9,The patient's pain is better when lying down.,0.9305,The patient's back feels a little better when he sits.,0,negation,contradiction
+10,The patient's partner reports that the patient has pain when standing up.,0.9912,The patient's partner reports that the patient's pain is worse when standing up.,1,,entailment
+11,The patient has had a similar episode of back pain 3 years ago.,0.9823,"The patient had back pain like this once before, about three years ago.",1,,entailment
+12,The patient's previous episode of back pain resolved on its own.,0.957,The previous back pain went away after a day.,1,,entailment
+13,The patient reports a tingling sensation in his right leg.,0.9967,The patient has a tingling sensation in his right leg.,1,,entailment
+14,The patient has some pain on flexion around the L5 region.,0.9594,The pain is around the L5 area.,1,,entailment
+15,The patient has some pain on palpation around the L5 region.,0.9655,The pain is around the L5 area.,1,,entailment
+16,Dorsiflexion is normal.,0.9815,The patient's dorsiflexion is normal.,1,,entailment
+17,Pulses are equal in all extremities.,0.9838,The patient's pulses are equal in all extremities.,1,,entailment
+18,The patient had an X-ray of the low back.,0.9881,The patient had an X-ray of his lower back.,1,,entailment
+19,The X-ray of the low back shows normal results.,0.9558,The X-ray results are normal.,1,,entailment
+20,The patient has a probable strain of the low back.,0.941,The doctor thinks the patient probably sprained his lower back.,1,,entailment
+21,The patient has low back strain.,0.9329,The patient had an X-ray of his lower back.,0,fabrication,neutral
+22,The patient has suspected nerve compression.,0.8979,The patient has a tingling sensation in his right leg.,0,fabrication,neutral
+23,The doctor prescribed meloxicam.,1.0,The doctor prescribed meloxicam.,1,,entailment
+24,The meloxicam dose is 7.5 mg.,0.9561,Meloxicam dose is not specified.,1,,entailment
+25,Meloxicam is taken orally.,0.9501,The doctor prescribed meloxicam.,1,,entailment
+26,Meloxicam is taken twice a day.,0.9438,The doctor prescribed meloxicam.,0,fabrication,neutral
+27,Meloxicam is prescribed for pain.,0.9751,Meloxicam is for the patient's back pain.,1,,entailment
+28,Meloxicam is prescribed for inflammation.,0.9593,The doctor prescribed meloxicam.,1,,entailment
+29,The doctor prescribed physical therapy.,1.0,The doctor prescribed physical therapy.,1,,entailment
+30,Physical therapy is to help with stretches.,0.9516,Physical therapy is to help the patient's back pain.,1,,entailment
+31,Physical therapy is to help with exercises.,0.9694,Physical therapy is to help the patient's back pain.,1,,entailment
+32,Physical therapy is to improve the patient's mobility.,0.9605,Physical therapy is to help the patient's back pain.,1,,entailment
+33,Physical therapy is to reduce pain.,0.9771,Physical therapy is to help the patient's back pain.,1,,entailment
+34,The patient was instructed to rest.,0.8986,The doctor may order an MRI if the patient's back pain does not improve.,0,fabrication,neutral
+35,The patient was instructed to avoid strenuous activities.,0.9195,The patient normally does not do physical activity.,0,fabrication,neutral
+36,The patient was instructed to follow up in two weeks.,0.9453,The doctor wants to reassess the patient in two weeks.,1,,entailment
+37,The doctor will re-evaluate the patient in two weeks.,0.9762,The doctor wants to reassess the patient in two weeks.,1,,entailment
+38,The doctor will consider ordering an MRI if the symptoms do not improve.,0.9788,The doctor may order an MRI if the patient's back pain does not improve.,1,,entailment
+39,The doctor will consider further imaging if necessary.,0.9351,The doctor may order an MRI if the patient's back pain does not improve.,1,,entailment

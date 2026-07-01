@@ -1,28 +1,28 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, a 45-year-old male, presents with a 3-week history of right elbow pain, which worsened with movement and improved with rest.",0.8683
-2,"He describes the pain as sharp, stabbing, and throbbing, rating it an 8/10 when using the arm and 3/10 when resting.",0.4871
-3,The pain is localized to the outside part of the elbow and does not radiate to other areas.,0.6462
-4,He denies any recent trauma or feeling a pop in the elbow.,0.9984
-5,"He has tried taking Tylenol and ibuprofen, but they do not provide significant relief.",0.5777
-6,"Past medical history: The patient has a history of type 2 diabetes, managed with metformin 500mg twice daily, and mild intermittent asthma, managed with flovent and albuterol as needed.",0.5719
-7,He has a known allergy to penicillin.,0.4701
-8,He underwent a cholecystectomy 10 years ago.,0.5056
-9,"Review of systems: The patient's asthma is reported to be under good control, with no recent exacerbations.",0.9994
-10,Current medications: Metformin 500mg twice daily; Flovent; Albuterol as needed.,0.9364
+1,"HPI: The patient, a 45-year-old male, presents with a 3-week history of right elbow pain, which worsened with movement and improved with rest.",0.247
+2,"He describes the pain as sharp, stabbing, and throbbing, rating it an 8/10 when using the arm and 3/10 when resting.",0.1042
+3,The pain is localized to the outside part of the elbow and does not radiate to other areas.,0.1912
+4,He denies any recent trauma or feeling a pop in the elbow.,0.509
+5,"He has tried taking Tylenol and ibuprofen, but they do not provide significant relief.",0.1816
+6,"Past medical history: The patient has a history of type 2 diabetes, managed with metformin 500mg twice daily, and mild intermittent asthma, managed with flovent and albuterol as needed.",0.2095
+7,He has a known allergy to penicillin.,0.0429
+8,He underwent a cholecystectomy 10 years ago.,0.0718
+9,"Review of systems: The patient's asthma is reported to be under good control, with no recent exacerbations.",0.6666
+10,Current medications: Metformin 500mg twice daily; Flovent; Albuterol as needed.,0.467
 11,Objective:,0.5
 12,Vital signs: [NOT MENTIONED],0.5
-13,"Physical exam: The patient's cardiovascular exam is normal, with a grade 3/6 systolic ejection murmur.",0.1257
-14,"The musculoskeletal exam reveals moderate lateral epicondylar tenderness of the right elbow, with pain on passive range of motion and mild pain with resisted extension of the wrist.",0.2453
-15,There is no palpable joint effusion.,0.3659
-16,"Test Results: The patient's right elbow X-ray shows no acute fracture or other bony abnormality, with no malalignment or joint effusion.",0.2571
+13,"Physical exam: The patient's cardiovascular exam is normal, with a grade 3/6 systolic ejection murmur.",0.0433
+14,"The musculoskeletal exam reveals moderate lateral epicondylar tenderness of the right elbow, with pain on passive range of motion and mild pain with resisted extension of the wrist.",0.0139
+15,There is no palpable joint effusion.,0.3001
+16,"Test Results: The patient's right elbow X-ray shows no acute fracture or other bony abnormality, with no malalignment or joint effusion.",0.0665
 17,Assessment / Problem List:,0.5
-18,"Assessment: The patient has acute lateral epicondylitis of the right elbow, also known as tennis elbow, likely due to overuse from increased tennis activity.",0.2286
-19,Problem list: Tennis elbow; Diabetes type 2; Asthma.,0.9922
+18,"Assessment: The patient has acute lateral epicondylitis of the right elbow, also known as tennis elbow, likely due to overuse from increased tennis activity.",0.0143
+19,Problem list: Tennis elbow; Diabetes type 2; Asthma.,0.3201
 20,Plan:,0.5
-21,I prescribed Ultram 50mg once daily for the management of right elbow pain.,0.1135
-22,"I recommended the patient to rest the right arm as much as possible, avoid repetitive stress in the right arm, and ice the right elbow for 20 minutes at least 3 times a day.",0.3378
-23,"I also ordered a hemoglobin A1c level, a CBC blood test, and a chem-12 blood test to assess the patient's diabetes control.",0.423
-24,I increased the patient's metformin to 1000mg twice daily to better manage his diabetes.,0.4496
-25,I also wrote a prescription for a refill of albuterol for the patient's asthma.,0.6244
-26,Follow-up: I will see the patient in 4 weeks to reevaluate the elbow and consider additional imaging or a physical therapy referral if necessary.,0.6684
+21,I prescribed Ultram 50mg once daily for the management of right elbow pain.,0.0141
+22,"I recommended the patient to rest the right arm as much as possible, avoid repetitive stress in the right arm, and ice the right elbow for 20 minutes at least 3 times a day.",0.1305
+23,"I also ordered a hemoglobin A1c level, a CBC blood test, and a chem-12 blood test to assess the patient's diabetes control.",0.1739
+24,I increased the patient's metformin to 1000mg twice daily to better manage his diabetes.,0.2233
+25,I also wrote a prescription for a refill of albuterol for the patient's asthma.,0.4655
+26,Follow-up: I will see the patient in 4 weeks to reevaluate the elbow and consider additional imaging or a physical therapy referral if necessary.,0.0455

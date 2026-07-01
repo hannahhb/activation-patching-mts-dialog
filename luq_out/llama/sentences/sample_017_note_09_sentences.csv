@@ -1,47 +1,47 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"The patient, a 56-year-old male, presents with a 4-5 week history of difficulty swallowing.",0.1914
-2,"He reports feeling like something is stuck in his throat, which is occasionally painful, and he has to wash down solid food to prevent choking.",0.5696
-3,"He denies coughing, blood in stool or vomit, weight loss, chest pain, or shortness of breath.",0.5722
-4,"He reports that the difficulty swallowing is more pronounced with solid food, and not with liquids.",0.4512
-5,"He has a past medical history of diabetes and high blood pressure, for which he is on metformin 500mg twice daily and norvasc.",0.2742
-6,"Past medical history: The patient has a history of diabetes and high blood pressure, for which he is on metformin 500mg twice daily and norvasc.",0.136
-7,"Review of systems: The patient denies any other symptoms, including nausea, vomiting, diarrhea, or other side effects from his medications.",0.672
+1,"The patient, a 56-year-old male, presents with a 4-5 week history of difficulty swallowing.",0.0787
+2,"He reports feeling like something is stuck in his throat, which is occasionally painful, and he has to wash down solid food to prevent choking.",0.1199
+3,"He denies coughing, blood in stool or vomit, weight loss, chest pain, or shortness of breath.",0.1099
+4,"He reports that the difficulty swallowing is more pronounced with solid food, and not with liquids.",0.1162
+5,"He has a past medical history of diabetes and high blood pressure, for which he is on metformin 500mg twice daily and norvasc.",0.0972
+6,"Past medical history: The patient has a history of diabetes and high blood pressure, for which he is on metformin 500mg twice daily and norvasc.",0.013
+7,"Review of systems: The patient denies any other symptoms, including nausea, vomiting, diarrhea, or other side effects from his medications.",0.0551
 8,Current medications:,0.5
-9,Metformin 500mg twice daily for diabetes,0.3997
-10,Norvasc [dosage not specified] [frequency not specified] for high blood pressure,0.8008
+9,Metformin 500mg twice daily for diabetes,0.0805
+10,Norvasc [dosage not specified] [frequency not specified] for high blood pressure,0.3455
 11,Objective:,0.5
 12,Vital signs:,0.5
-13,Blood pressure: 120/50,0.9988
+13,Blood pressure: 120/50,0.9258
 14,Oxygen saturation: [NOT MENTIONED],0.5
 15,Temperature: [NOT MENTIONED],0.5
 16,Pulse rate: [NOT MENTIONED],0.5
 17,Physical exam:,0.5
-18,The patient's neck is fine with no swelling.,0.4091
-19,The thyroid feels normal.,0.1693
-20,There are no masses in the neck.,0.0487
-21,There are no lymph nodes.,0.5574
-22,The throat looks okay with no masses or swelling.,0.0141
-23,There is no redness.,0.9917
-24,There is no carotid bruit.,0.8951
-25,The lung exam is clear.,0.4059
-26,The heart exam is normal with no murmurs.,0.6794
-27,The belly exam shows epigastric tenderness on the right side.,0.8648
-28,The back exam is normal.,0.5941
-29,The extremity exam is normal.,0.7563
-30,The neurological exam is fine.,0.1759
+18,The patient's neck is fine with no swelling.,0.3132
+19,The thyroid feels normal.,0.053
+20,There are no masses in the neck.,0.0022
+21,There are no lymph nodes.,0.2562
+22,The throat looks okay with no masses or swelling.,0.0005
+23,There is no redness.,0.6524
+24,There is no carotid bruit.,0.4132
+25,The lung exam is clear.,0.2373
+26,The heart exam is normal with no murmurs.,0.3344
+27,The belly exam shows epigastric tenderness on the right side.,0.5209
+28,The back exam is normal.,0.3463
+29,The extremity exam is normal.,0.2773
+30,The neurological exam is fine.,0.0912
 31,Test Results:,0.5
-32,Hemoglobin A1c: 7.4 (previous result),0.7919
-33,Blood pressure: 120/50,0.9988
+32,Hemoglobin A1c: 7.4 (previous result),0.6475
+33,Blood pressure: 120/50,0.9258
 34,Assessment / Problem List:,0.5
-35,"Assessment: The patient presents with difficulty swallowing, which may be due to a narrowing in the throat, possibly a stricture of the esophagus.",0.0013
-36,Problem list: Dysphagia (active); Diabetes mellitus (active); Hypertension (active),0.9976
+35,"Assessment: The patient presents with difficulty swallowing, which may be due to a narrowing in the throat, possibly a stricture of the esophagus.",0.0
+36,Problem list: Dysphagia (active); Diabetes mellitus (active); Hypertension (active),0.6248
 37,Plan:,0.5
-38,I will send the patient to a gastroenterology specialist for a scope to investigate the narrowing in the throat.,0.6592
-39,I will also prescribe prilosec 20mg once daily for gastroesophageal reflux disease.,0.3394
-40,"I will recommend that the patient chew their food frequently, especially hard foods like steak or meat, to prevent getting stuck.",0.7782
-41,I will order another hemoglobin A1c and blood work to check kidney function.,0.2244
-42,I will also refer the patient to ophthalmology for an eye examination to check for diabetic retinopathy.,0.2945
-43,I will continue the patient on metformin and norvasc.,0.3614
+38,I will send the patient to a gastroenterology specialist for a scope to investigate the narrowing in the throat.,0.1637
+39,I will also prescribe prilosec 20mg once daily for gastroesophageal reflux disease.,0.1604
+40,"I will recommend that the patient chew their food frequently, especially hard foods like steak or meat, to prevent getting stuck.",0.4831
+41,I will order another hemoglobin A1c and blood work to check kidney function.,0.0752
+42,I will also refer the patient to ophthalmology for an eye examination to check for diabetic retinopathy.,0.0741
+43,I will continue the patient on metformin and norvasc.,0.3535
 44,Follow-up:,0.5
-45,I will see the patient back in about a month to review the results of the blood tests and make any necessary adjustments to their medication.,0.3382
+45,I will see the patient back in about a month to review the results of the blood tests and make any necessary adjustments to their medication.,0.0038

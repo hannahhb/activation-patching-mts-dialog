@@ -1,0 +1,24 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Brandon, presented with neck pain after a car crash in February of this year.",Faithful,
+1,"He reports experiencing severe pain, rating it a 12 out of 10, which is sharp and incapacitating.",Faithful,
+2,"He has had multiple car crashes, with the most recent one occurring in February, and has been experiencing neck pain since then.",Faithful,
+3,"He has been to therapy and the pain clinic, where he was prescribed fentanyl, but has not taken it in several weeks.",Faithful,
+4,"He reports stiffness, headaches, dizziness, visual disturbances, numbness in his left arm and right leg, and spasms throughout his body.",Faithful,
+5,He has been experiencing fatigue since the accident.,Faithful,
+6,"Past medical history: The patient has had multiple car crashes, with the most recent one in February of this year, and has undergone surgery after one of the crashes.",Faithful,
+7,"He has been to therapy and the pain clinic, where he was prescribed fentanyl.",Faithful,
+8,"Review of systems: The patient reports headaches, dizziness, visual disturbances, numbness in his left arm and right leg, and spasms throughout his body.",Faithful,
+9,"Current medications: Fentanyl (dose and frequency not specified), Robaxin 1500mg every 6-8 hours for muscle relaxation.",Contextual,Fentanyl (dose and frequency not specified)
+10,Objective: Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+11,"Physical exam: The patient has pain on palpation of the neck, both on the bony process and muscle.",Faithful,
+12,"He has moderate range of movement in his neck, but experiences pain when bending forward and backwards.",Faithful,
+13,"He does not have any bruising, swelling, or laceration on his neck.",Causality,"He does not have any bruising, swelling, or laceration on his neck"
+14,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+15,"Assessment / Problem List: Assessment: The patient has a neck sprain, with pain that can be explained by multiple factors, but not a broken neck.",Faithful,
+16,Problem list: Neck sprain; Active,Fabrication,Problem list: Neck sprain; Active
+17,Plan: I prescribed Robaxin 1500mg every 6-8 hours for muscle relaxation.,Faithful,
+18,"I want the patient to apply ice to his neck when experiencing bruising and swelling, and to perform exercises to improve range of movement.",Faithful,
+19,I referred him to physical therapy and ordered an MRI to evaluate the extent of the injury.,Faithful,
+20,"If the MRI shows that local injections are necessary, we will explore this option.",Faithful,
+21,"Follow-up: The patient will be given a work excuse until the MRI results are available, at which point we will reassess and determine the next course of action.",Faithful,
+22,Instructions:,Fabrication,Instructions: 

@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"The patient, Michelle, a 4-year-old mother of twins, presented with a complaint of knee pain after a skiing accident in Vermont.",Fabrication,a 4-year-old mother of twins
+1,She reports that her knee popped and she was unable to bear weight after falling while coming off the lift.,Faithful,
+2,The pain is located on the outside of the knee and feels like it will buckle.,Faithful,
+3,She is unable to bend the knee fully and experiences pain with straightening.,Faithful,
+4,There is no numbness or tingling in her toes.,Faithful,
+5,"She denies any history of high blood pressure, diabetes, or other significant medical conditions.",Faithful,
+6,"She is currently taking ibuprofen for pain, which provides some relief.",Faithful,
+7,Past medical history: [NOT MENTIONED],Faithful,
+8,Review of systems: [NOT MENTIONED],Faithful,
+9,Current medications: Ibuprofen 600-800mg every 8 hours as needed for pain.,Faithful,
+10,Vital signs: [NOT MENTIONED],Faithful,
+11,"The heart sounds are in a nice regular rate and rhythm, and there is no murmur on lung exam.",Faithful,
+12,The lungs are clear to auscultation.,Faithful,
+13,"On the right knee examination, there is edema and an effusion, pain to palpation of the lateral knee, decreased flexion and extension, a positive Lachman sign, palpable dorsalis pedis and posterior tibial pulse, and no leg edema in the ankle.",Faithful,
+14,Test Results: [NOT MENTIONED],Faithful,
+15,Assessment: The patient likely has a ruptured anterior cruciate ligament (ACL) in her right knee.,Faithful,
+16,Problem list: Right knee pain; Right ACL tear; Knee effusion.,Faithful,
+17,I ordered a knee MRI to confirm the diagnosis.,Faithful,
+18,I prescribed ibuprofen 600-800mg every 8 hours as needed for pain.,Faithful,
+19,I recommended a knee brace to provide support.,Faithful,
+20,I will follow up with the patient in a few days to discuss the MRI results and further management.,Faithful,
+21,The patient will return in a few days to discuss the MRI results and further management.,Causality,The patient will return in a few days

@@ -1,0 +1,43 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient reports feeling short of breath.,0.9837,The patient experiences shortness of breath.,1,,entailment
+1,The patient experiences sudden episodes of shortness of breath.,0.9949,The patient experiences sudden shortness of breath.,1,,entailment
+2,The patient is unsure of the reason for shortness of breath.,0.9557,The patient experiences shortness of breath.,1,,entailment
+3,The patient has a history of heavy drinking.,0.9462,The patient experiences diarrhea after heavy drinking.,0,fabrication,neutral
+4,The patient experiences diarrhea after heavy drinking.,1.0,The patient experiences diarrhea after heavy drinking.,1,,entailment
+5,The patient's symptoms occur at home.,0.942,The patient notices symptoms in the house.,1,,entailment
+6,The patient's symptoms occur outside.,0.9428,The patient notices symptoms outside the house.,1,,entailment
+7,The patient's symptoms occur when he is near his cat.,0.9144,The patient notices symptoms outside the house.,0,fabrication,neutral
+8,The patient denies nausea.,0.972,The patient denied nausea.,1,,entailment
+9,The patient denies vomiting.,0.9726,The patient denied vomiting.,1,,entailment
+10,The patient denies rash.,0.9713,The patient denied rash.,1,,entailment
+11,The patient denies lip swelling.,0.9673,The patient denied lip or throat swelling.,1,,entailment
+12,The patient denies throat swelling.,0.9671,The patient denied lip or throat swelling.,1,,entailment
+13,The patient denies allergies.,0.9525,The patient denied past issues with allergies.,1,,entailment
+14,The patient has a history of using an inhaler.,0.944,The patient uses the inhaler when symptoms occur.,1,,entailment
+15,The patient was prescribed an inhaler by urgent care.,0.964,The patient was prescribed an inhaler.,1,,entailment
+16,The patient uses an inhaler for his symptoms.,0.9898,The patient uses the inhaler when symptoms occur.,1,,entailment
+17,The patient is a hunter.,0.9494,The doctor is a hunter.,0,negation,contradiction
+18,The doctor prescribed albuterol inhaler.,1.0,The doctor prescribed albuterol inhaler.,1,,entailment
+19,The albuterol inhaler dose is not specified.,0.9288,The doctor prescribed albuterol inhaler.,0,fabrication,neutral
+20,The albuterol inhaler is taken as needed.,0.956,The patient should take the albuterol inhaler as soon as symptoms start.,1,,entailment
+21,The albuterol inhaler is prescribed for asthma symptoms.,0.984,Albuterol inhaler is for asthma.,1,,entailment
+22,The patient's vital signs were not documented.,0.9373,The patient's vital signs are good.,0,negation,contradiction
+23,The patient has faint expiratory wheezing bilaterally in all lung fields.,0.9865,The doctor appreciated faint expiratory wheezing bilaterally in all lung fields.,1,,entailment
+24,The patient does not have a rash.,0.9619,The patient denied rash.,1,,entailment
+25,The patient does not have angioedema.,0.9471,The doctor did not appreciate any angioedema.,0,fabrication,neutral
+26,The patient does not have audible stridor.,0.9661,The doctor did not appreciate any audible stridor.,1,,entailment
+27,The patient had a chest x-ray.,1.0,The patient had a chest x-ray.,1,,entailment
+28,The patient's chest x-ray was normal.,1.0,The patient's chest x-ray was normal.,1,,entailment
+29,The patient had a pulmonary function test.,1.0,The patient had a pulmonary function test.,1,,entailment
+30,The patient's pulmonary function test was normal.,1.0,The patient's pulmonary function test was normal.,1,,entailment
+31,The patient has allergic asthma.,0.9685,The doctor diagnosed the patient with allergic asthma.,1,,entailment
+32,The patient's asthma triggers are unknown.,0.9188,The doctor diagnosed the patient with allergic asthma.,0,fabrication,contradiction
+33,The doctor prescribed Singulair.,1.0,The doctor prescribed Singulair.,1,,entailment
+34,The Singulair dose is 10mg.,0.9755,Singulair is 10 milligrams.,1,,entailment
+35,Singulair is taken daily.,0.9931,Singulair is taken once daily.,1,,entailment
+36,Singulair is prescribed for asthma symptoms.,0.9855,Singulair is for asthma.,1,,entailment
+37,The doctor plans to proceed with allergy testing.,0.9603,The doctor planned allergy testing.,1,,entailment
+38,The allergy testing will start with skin testing.,0.9572,The doctor will start with skin testing.,1,,entailment
+39,The skin testing will be scheduled for next week.,0.9356,The patient should come back for skin testing.,0,fabrication,neutral
+40,The patient will continue taking his albuterol inhaler as needed.,0.9567,The patient should take the albuterol inhaler as soon as symptoms start.,1,,entailment
+41,The doctor will see the patient next week.,0.8987,The doctor will start with skin testing.,0,fabrication,neutral

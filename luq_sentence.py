@@ -1,22 +1,23 @@
 """
-luq_sentence_streamed_simplified.py
-==================================
-Memory-safe sentence-level LUQ for clinical note generations.
+luq_sentence_sectionwise_fast.py
+================================
+Fast sentence-level LUQ for clinical note generations.
 
 Core behaviour:
   - Generate K notes per transcript, or score cached generations.
   - Score every generated note as the reference once.
   - Compare each reference note against every other sampled note.
   - With K=10, this gives 10 x 9 = 90 note-to-note comparisons.
-  - Stream NLI in small micro-batches to avoid memory spikes while keeping GPU batching.
+  - Use section-wise premises: a Subjective sentence is checked against the
+    other note's Subjective section, Plan against Plan, etc.
   - Use LUQ-style binary entailment-vs-contradiction normalisation.
-  - Cover long premises with overlapping token windows rather than silent truncation.
-  - Cache premise tokenisation/chunks per sampled note for speed.
+  - Chunk long sections with overlapping token windows rather than silent truncation.
+  - Use premise-first micro-batching and cached section chunks for speed.
 
 Typical use:
-  python luq_sentence_streamed_simplified.py --stage generate --start 0 --end 10
-  python luq_sentence_streamed_simplified.py --stage score --start 0 --end 10
-  python luq_sentence_streamed_simplified.py --stage all --start 0 --end 10
+  python luq_sentence_sectionwise_fast.py --stage generate --start 0 --end 10
+  python luq_sentence_sectionwise_fast.py --stage score --start 0 --end 10
+  python luq_sentence_sectionwise_fast.py --stage all --start 0 --end 10
 """
 
 from __future__ import annotations
@@ -55,18 +56,14 @@ DEFAULT_TEMPERATURE = 0.7
 DEFAULT_MAX_TOKENS = 1024
 DEFAULT_OUT_DIR = "luq_out/llama"
 
-# Cross-encoder NLI models are usually 512-token models. We dynamically reserve
-# space for the hypothesis and special tokens so premise windows are not silently
-# truncated by the tokenizer.
 PAIR_MAX_TOKENS = 512
 SPECIAL_TOKEN_RESERVE = 8
 MIN_PREMISE_WINDOW = 64
 DEFAULT_STRIDE_RATIO = 0.5
+DEFAULT_PREMISE_WINDOW = 448
+WINDOW_BUCKET = 32
 
-# Small batches preserve the all-90 comparison logic while avoiding the huge
-# all_pairs tensor/list that caused memory crashes. Defaults are selected from
-# the actual runtime device: CUDA can safely use larger batches; CPU uses smaller
-# micro-batches to avoid RAM spikes and excessive tokenisation backlog.
+
 def _cuda_available() -> bool:
     try:
         import torch
@@ -79,7 +76,6 @@ CUDA_AVAILABLE = _cuda_available()
 NLI_BATCH_SIZE = 16 if CUDA_AVAILABLE else 4
 MICRO_BATCH_PAIRS = 128 if CUDA_AVAILABLE else 16
 DEVICE_NAME = "cuda" if CUDA_AVAILABLE else "cpu"
-
 
 
 # -----------------------------------------------------------------------------
@@ -150,7 +146,7 @@ def generate_notes(transcript: str, k: int) -> List[str]:
 
 
 # -----------------------------------------------------------------------------
-# Sentence and claim processing
+# Sentence, section, and claim processing
 # -----------------------------------------------------------------------------
 
 PERIOD_SPLIT = re.compile(r"(?<=\.)\s+(?=[A-Z])")
@@ -163,6 +159,45 @@ FIELD_PREFIX_RE = re.compile(r"^[A-Za-z /\-]+:\s*")
 TEMPLATE_JUNK_RE = re.compile(r"\[unknown\]|\[NOT MENTIONED\]|\[not mentioned\]", re.IGNORECASE)
 SEMICOLON_SPLIT_RE = re.compile(r";\s*")
 DOT_PLACEHOLDER = "\x00DOT\x00"
+
+SOAP_HEADER_RE = re.compile(
+    r"^(Subjective|Objective|Assessment\s*(?:/\s*Problem\s*List)?|Assessment|Problem\s*List|Plan|Follow[- ]?up)\s*:",
+    re.IGNORECASE | re.MULTILINE,
+)
+
+
+def normalize_section(header: str) -> str:
+    h = header.strip().lower()
+    if h.startswith("subjective"):
+        return "subjective"
+    if h.startswith("objective"):
+        return "objective"
+    if h.startswith("assessment") or h.startswith("problem"):
+        return "assessment"
+    if h.startswith("plan"):
+        return "plan"
+    if h.startswith("follow"):
+        return "followup"
+    return "all"
+
+
+def parse_sections(note: str) -> Dict[str, str]:
+    """Return top-level SOAP sections. Falls back to {'all': note}."""
+    matches = list(SOAP_HEADER_RE.finditer(note))
+    if not matches:
+        return {"all": note}
+
+    sections: Dict[str, str] = {}
+    for i, match in enumerate(matches):
+        name = normalize_section(match.group(1))
+        start = match.start()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(note)
+        text = note[start:end].strip()
+        # If duplicate headers occur, append instead of overwriting.
+        sections[name] = (sections.get(name, "") + "\n" + text).strip()
+
+    sections["all"] = note
+    return sections
 
 
 def split_sentences(text: str) -> List[str]:
@@ -177,6 +212,33 @@ def split_sentences(text: str) -> List[str]:
             if sent:
                 sentences.append(sent)
     return sentences
+
+
+def assign_sentence_sections(note: str, sentences: List[str]) -> List[str]:
+    """Assign each reference sentence to a SOAP section by character location."""
+    matches = list(SOAP_HEADER_RE.finditer(note))
+    if not matches:
+        return ["all"] * len(sentences)
+
+    spans = []
+    for i, match in enumerate(matches):
+        start = match.start()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(note)
+        spans.append((start, end, normalize_section(match.group(1))))
+
+    out: List[str] = []
+    search_pos = 0
+    for sentence in sentences:
+        pos = note.find(sentence, search_pos)
+        section = "all"
+        if pos != -1:
+            for start, end, name in spans:
+                if start <= pos < end:
+                    section = name
+                    break
+            search_pos = pos + len(sentence)
+        out.append(section)
+    return out
 
 
 def clean_sentence(sentence: str) -> str:
@@ -221,11 +283,9 @@ def infer_label_indices(nli) -> Tuple[int, int]:
 
 
 def chunk_premise_ids(tokenizer, premise_ids: List[int], window_size: int) -> List[str]:
-    """
-    Decode overlapping premise windows of a fixed token width.
-    The caller chooses window_size so each (window, hypothesis) pair fits within
-    the NLI token budget. No premise tokens are silently discarded.
-    """
+    """Decode overlapping premise windows. No premise tokens are silently discarded."""
+    if not premise_ids:
+        return [""]
     if len(premise_ids) <= window_size:
         return [tokenizer.decode(premise_ids, skip_special_tokens=True)]
 
@@ -241,15 +301,13 @@ def chunk_premise_ids(tokenizer, premise_ids: List[int], window_size: int) -> Li
     return chunks
 
 
-def window_size_for_claim(tokenizer, claim: str) -> int:
-    """
-    Reserve enough token budget for the hypothesis so CrossEncoder does not
-    silently truncate the premise. Clinical-note sentences should usually leave
-    a large premise window; very long hypotheses still get a minimum window.
-    """
-    hyp_ids = tokenizer.encode(claim, add_special_tokens=False)
-    available = PAIR_MAX_TOKENS - len(hyp_ids) - SPECIAL_TOKEN_RESERVE
-    return max(MIN_PREMISE_WINDOW, available)
+def bucketed_window_size(tokenizer, claim: str) -> int:
+    hyp_len = len(tokenizer.encode(claim, add_special_tokens=False))
+    available = PAIR_MAX_TOKENS - hyp_len - SPECIAL_TOKEN_RESERVE
+    available = max(MIN_PREMISE_WINDOW, available)
+    if available >= DEFAULT_PREMISE_WINDOW:
+        return DEFAULT_PREMISE_WINDOW
+    return max(MIN_PREMISE_WINDOW, (available // WINDOW_BUCKET) * WINDOW_BUCKET)
 
 
 def binary_luq_support(logits: np.ndarray, entail_idx: int, contradict_idx: int) -> float:
@@ -259,10 +317,6 @@ def binary_luq_support(logits: np.ndarray, entail_idx: int, contradict_idx: int)
 
 
 def predict_pair_supports(nli, pairs: List[Tuple[str, str]]) -> np.ndarray:
-    """
-    Run the NLI cross-encoder on a small list of pairs and return LUQ binary
-    entailment-vs-contradiction support scores.
-    """
     if not pairs:
         return np.array([], dtype=np.float64)
 
@@ -278,87 +332,10 @@ def predict_pair_supports(nli, pairs: List[Tuple[str, str]]) -> np.ndarray:
     if raw.ndim == 1:
         raw = raw.reshape(1, -1)
 
-    scores = [binary_luq_support(row, entail_idx, contradict_idx) for row in raw]
-    return np.asarray(scores, dtype=np.float64)
-
-
-def support_for_sentences_against_note(nli, sentences: List[str], sampled_note: str) -> np.ndarray:
-    """
-    Score all reference sentences against one sampled note.
-
-    This keeps the important implementation details:
-      - full sampled note is the premise;
-      - long premises are covered by overlapping token windows;
-      - each subclaim takes max support across all premise windows;
-      - sentence support is the mean over its subclaims;
-      - LUQ support uses binary entailment-vs-contradiction normalisation.
-
-    Speed fix:
-      - tokenise the sampled note once;
-      - cache decoded premise chunks by window size;
-      - run NLI in small micro-batches instead of one pair at a time.
-    """
-    tokenizer = nli.tokenizer
-    premise_ids = tokenizer.encode(sampled_note, add_special_tokens=False)
-    chunk_cache: Dict[int, List[str]] = {}
-
-    # Flatten sentence -> subclaim structure while keeping mapping back to sentences.
-    claims: List[str] = []
-    claim_to_sentence: List[int] = []
-    empty_sentence_indices = set()
-
-    for sent_idx, sentence in enumerate(sentences):
-        subclaims = split_subclaims(sentence)
-        if not subclaims:
-            empty_sentence_indices.add(sent_idx)
-            continue
-        for claim in subclaims:
-            claims.append(claim)
-            claim_to_sentence.append(sent_idx)
-
-    if not claims:
-        return np.full(len(sentences), 0.5, dtype=np.float64)
-
-    # Build and score pairs in micro-batches. We do not keep the full cross-product
-    # in memory. We only keep max support per claim.
-    claim_max = np.full(len(claims), -np.inf, dtype=np.float64)
-    pair_buffer: List[Tuple[str, str]] = []
-    pair_claim_indices: List[int] = []
-
-    def flush_buffer() -> None:
-        nonlocal pair_buffer, pair_claim_indices, claim_max
-        if not pair_buffer:
-            return
-        scores = predict_pair_supports(nli, pair_buffer)
-        for score, claim_idx in zip(scores, pair_claim_indices):
-            if score > claim_max[claim_idx]:
-                claim_max[claim_idx] = float(score)
-        pair_buffer = []
-        pair_claim_indices = []
-
-    for claim_idx, claim in enumerate(claims):
-        window_size = window_size_for_claim(tokenizer, claim)
-        if window_size not in chunk_cache:
-            chunk_cache[window_size] = chunk_premise_ids(tokenizer, premise_ids, window_size)
-
-        for chunk in chunk_cache[window_size]:
-            pair_buffer.append((chunk, claim))
-            pair_claim_indices.append(claim_idx)
-            if len(pair_buffer) >= MICRO_BATCH_PAIRS:
-                flush_buffer()
-
-    flush_buffer()
-    claim_max[~np.isfinite(claim_max)] = 0.5
-
-    sentence_claim_scores: List[List[float]] = [[] for _ in sentences]
-    for claim_idx, sent_idx in enumerate(claim_to_sentence):
-        sentence_claim_scores[sent_idx].append(float(claim_max[claim_idx]))
-
-    sentence_support = np.zeros(len(sentences), dtype=np.float64)
-    for sent_idx, scores in enumerate(sentence_claim_scores):
-        sentence_support[sent_idx] = float(np.mean(scores)) if scores else 0.5
-
-    return sentence_support
+    return np.asarray(
+        [binary_luq_support(row, entail_idx, contradict_idx) for row in raw],
+        dtype=np.float64,
+    )
 
 
 # -----------------------------------------------------------------------------
@@ -375,40 +352,189 @@ def clear_memory() -> None:
         pass
 
 
-def compute_luq_for_reference(notes: List[str], ref_idx: int) -> Dict:
+def build_reference_claims(notes: List[str], tokenizer):
     """
-    Compute sentence uncertainty for notes[ref_idx] against all other notes.
+    Pre-split every generated note once.
+
+    Returns:
+      sentences_by_ref[ref_idx]
+      claims_by_ref[ref_idx]
+      claim_to_sentence_by_ref[ref_idx]
+      claim_sections_by_ref[ref_idx]
+      window_sizes_by_ref[ref_idx]
     """
-    if len(notes) < 2:
-        return {}
+    sentences_by_ref: List[List[str]] = []
+    claims_by_ref: List[List[str]] = []
+    claim_to_sentence_by_ref: List[List[int]] = []
+    claim_sections_by_ref: List[List[str]] = []
+    window_sizes_by_ref: List[List[int]] = []
+
+    for note in notes:
+        sentences = split_sentences(note)
+        sent_sections = assign_sentence_sections(note, sentences)
+        claims: List[str] = []
+        claim_to_sentence: List[int] = []
+        claim_sections: List[str] = []
+        window_sizes: List[int] = []
+
+        for sent_idx, sentence in enumerate(sentences):
+            section = sent_sections[sent_idx] if sent_idx < len(sent_sections) else "all"
+            for claim in split_subclaims(sentence):
+                claims.append(claim)
+                claim_to_sentence.append(sent_idx)
+                claim_sections.append(section)
+                window_sizes.append(bucketed_window_size(tokenizer, claim))
+
+        sentences_by_ref.append(sentences)
+        claims_by_ref.append(claims)
+        claim_to_sentence_by_ref.append(claim_to_sentence)
+        claim_sections_by_ref.append(claim_sections)
+        window_sizes_by_ref.append(window_sizes)
+
+    return (
+        sentences_by_ref,
+        claims_by_ref,
+        claim_to_sentence_by_ref,
+        claim_sections_by_ref,
+        window_sizes_by_ref,
+    )
+
+
+def compute_luq_all_references(notes: List[str]) -> List[Dict]:
+    """
+    Compute LUQ for every generated note as reference, preserving all K x (K-1)
+    comparisons while using section-wise premise matching for speed.
+
+    For each reference claim, use the matching section of the comparison note as
+    the NLI premise. If the comparison note lacks that section, fall back to the
+    full note. Each section is chunked with overlap if it exceeds the pair token
+    budget, so section-wise scoring is not silent truncation.
+    """
+    K = len(notes)
+    if K < 2:
+        return []
 
     nli = get_nli()
-    ref_note = notes[ref_idx]
-    sentences = split_sentences(ref_note)
-    other_indices = [i for i in range(len(notes)) if i != ref_idx]
+    tokenizer = nli.tokenizer
 
-    if not sentences:
-        return {}
+    (
+        sentences_by_ref,
+        claims_by_ref,
+        claim_to_sentence_by_ref,
+        claim_sections_by_ref,
+        window_sizes_by_ref,
+    ) = build_reference_claims(notes, tokenizer)
 
-    print(f"  [luq] ref={ref_idx:02d}: {len(sentences)} sentences x {len(other_indices)} notes")
-    support_sum = np.zeros(len(sentences), dtype=np.float64)
+    support_sum_by_ref: List[np.ndarray] = [
+        np.zeros(len(sentences), dtype=np.float64)
+        for sentences in sentences_by_ref
+    ]
 
-    for other_idx in other_indices:
-        sampled_note = notes[other_idx]
-        support_sum += support_for_sentences_against_note(nli, sentences, sampled_note)
+    # Premise-first: parse/tokenise each sampled note's sections once, then score
+    # every other reference against those section premises.
+    for premise_idx, sampled_note in enumerate(notes):
+        section_text = parse_sections(sampled_note)
+        section_ids = {
+            sec: tokenizer.encode(text, add_special_tokens=False)
+            for sec, text in section_text.items()
+        }
+        if "all" not in section_ids:
+            section_ids["all"] = tokenizer.encode(sampled_note, add_special_tokens=False)
 
-    # Clear once per reference, not after every note comparison. Calling
-    # torch.cuda.empty_cache() inside the inner loop slows scoring a lot.
-    clear_memory()
+        # Cache chunk lists for this premise by (section, window_size).
+        chunk_cache: Dict[Tuple[str, int], List[str]] = {}
 
-    uncertainty = 1.0 - support_sum / len(other_indices)
-    return {
-        "sentences": sentences,
-        "uncertainty": uncertainty,
-        "mean_u": float(uncertainty.mean()),
-        "K_actual": len(notes),
-        "ref_idx": ref_idx,
-    }
+        claim_max_by_ref: Dict[int, np.ndarray] = {
+            ref_idx: np.full(len(claims_by_ref[ref_idx]), -np.inf, dtype=np.float64)
+            for ref_idx in range(K)
+            if ref_idx != premise_idx and claims_by_ref[ref_idx]
+        }
+
+        pair_buffer: List[Tuple[str, str]] = []
+        pair_refs: List[int] = []
+        pair_claim_indices: List[int] = []
+
+        def flush_buffer() -> None:
+            nonlocal pair_buffer, pair_refs, pair_claim_indices
+            if not pair_buffer:
+                return
+            scores = predict_pair_supports(nli, pair_buffer)
+            for score, ref_idx, claim_idx in zip(scores, pair_refs, pair_claim_indices):
+                if score > claim_max_by_ref[ref_idx][claim_idx]:
+                    claim_max_by_ref[ref_idx][claim_idx] = float(score)
+            pair_buffer = []
+            pair_refs = []
+            pair_claim_indices = []
+
+        for ref_idx in range(K):
+            if ref_idx == premise_idx:
+                continue
+
+            claims = claims_by_ref[ref_idx]
+            sections = claim_sections_by_ref[ref_idx]
+            windows = window_sizes_by_ref[ref_idx]
+            if not claims:
+                continue
+
+            for claim_idx, claim in enumerate(claims):
+                requested_sec = sections[claim_idx]
+                premise_sec = requested_sec if requested_sec in section_ids else "all"
+                window_size = windows[claim_idx]
+                cache_key = (premise_sec, window_size)
+
+                if cache_key not in chunk_cache:
+                    chunk_cache[cache_key] = chunk_premise_ids(
+                        tokenizer,
+                        section_ids[premise_sec],
+                        window_size,
+                    )
+
+                for chunk in chunk_cache[cache_key]:
+                    pair_buffer.append((chunk, claim))
+                    pair_refs.append(ref_idx)
+                    pair_claim_indices.append(claim_idx)
+                    if len(pair_buffer) >= MICRO_BATCH_PAIRS:
+                        flush_buffer()
+
+        flush_buffer()
+
+        # Convert claim support for this premise into sentence support for each reference.
+        for ref_idx, claim_max in claim_max_by_ref.items():
+            claim_max[~np.isfinite(claim_max)] = 0.5
+            sentence_claim_scores: List[List[float]] = [
+                [] for _ in sentences_by_ref[ref_idx]
+            ]
+            for claim_idx, sent_idx in enumerate(claim_to_sentence_by_ref[ref_idx]):
+                sentence_claim_scores[sent_idx].append(float(claim_max[claim_idx]))
+
+            sentence_support = np.zeros(len(sentences_by_ref[ref_idx]), dtype=np.float64)
+            for sent_idx, scores in enumerate(sentence_claim_scores):
+                sentence_support[sent_idx] = float(np.mean(scores)) if scores else 0.5
+
+            support_sum_by_ref[ref_idx] += sentence_support
+
+        section_names = ",".join(k for k in section_ids.keys() if k != "all") or "all"
+        print(
+            f"  [luq] premise={premise_idx:02d}: scored against {K - 1} references; "
+            f"sections={section_names}; chunk_sets={len(chunk_cache)}"
+        )
+        clear_memory()
+
+    results: List[Dict] = []
+    denom = K - 1
+    for ref_idx, sentences in enumerate(sentences_by_ref):
+        if not sentences:
+            continue
+        uncertainty = 1.0 - support_sum_by_ref[ref_idx] / denom
+        results.append({
+            "sentences": sentences,
+            "uncertainty": uncertainty,
+            "mean_u": float(uncertainty.mean()),
+            "K_actual": K,
+            "ref_idx": ref_idx,
+        })
+
+    return results
 
 
 def score_generation_file(gen_path: Path, sent_dir: Path, use_cache: bool) -> Dict:
@@ -432,20 +558,16 @@ def score_generation_file(gen_path: Path, sent_dir: Path, use_cache: bool) -> Di
                 "sentences": df["sentence"].tolist(),
             })
     else:
-        results = []
-        for ref_idx in range(len(notes)):
-            result = compute_luq_for_reference(notes, ref_idx)
-            if not result:
-                continue
-
+        print(f"  [luq] scoring all {len(notes) * (len(notes) - 1)} comparisons with section-wise batching")
+        results = compute_luq_all_references(notes)
+        for result in results:
+            ref_idx = int(result["ref_idx"])
             pd.DataFrame({
                 "sentence_idx": np.arange(len(result["sentences"])),
                 "sentence": result["sentences"],
                 "uncertainty": np.round(result["uncertainty"], 4),
             }).to_csv(sent_dir / f"sample_{sample_idx:03d}_note_{ref_idx:02d}_sentences.csv", index=False)
-
-            results.append(result)
-            clear_memory()
+        clear_memory()
 
     if not results:
         return {"sample_idx": sample_idx, "status": "luq_failed", "K_actual": len(notes)}
@@ -499,8 +621,9 @@ def stage_generate(start: int, end: int, k: int, out_dir: Path, use_cache: bool)
         print(f"  [generate] sample {sample_idx}: saved {len(notes)} notes")
 
 
-def stage_score(start: int, end: int, out_dir: Path, use_cache: bool) -> pd.DataFrame:
-    gen_dir = out_dir / "generations"
+def stage_score(start: int, end: int, out_dir: Path, use_cache: bool,
+                gen_dir_override: Path = None) -> pd.DataFrame:
+    gen_dir = gen_dir_override if gen_dir_override else out_dir / "generations"
     sent_dir = out_dir / "sentences"
     sent_dir.mkdir(parents=True, exist_ok=True)
 
@@ -525,36 +648,50 @@ def stage_score(start: int, end: int, out_dir: Path, use_cache: bool) -> pd.Data
 # -----------------------------------------------------------------------------
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Streamed all-against-all LUQ scoring for ACI-Bench notes")
+    parser = argparse.ArgumentParser(description="Section-wise all-against-all LUQ scoring for ACI-Bench notes")
     parser.add_argument("--stage", choices=["generate", "score", "all"], default="all")
     parser.add_argument("--start", type=int, default=0)
     parser.add_argument("--end", type=int, default=132)
     parser.add_argument("--K", type=int, default=DEFAULT_K)
     parser.add_argument("--out", default=DEFAULT_OUT_DIR)
     parser.add_argument("--no-cache", action="store_true")
+    parser.add_argument("--nli-model", default=None,
+                        help="Override NLI model (e.g. mrm8488/deberta-v3-large-finetuned-mnli)")
+    parser.add_argument("--gen-dir", default=None,
+                        help="Path to existing generations directory (skips generation stage)")
     return parser.parse_args()
 
 
 def main() -> None:
+    global NLI_MODEL_NAME
     args = parse_args()
     out_dir = Path(args.out).resolve()
     out_dir.mkdir(parents=True, exist_ok=True)
     use_cache = not args.no_cache
+
+    if args.nli_model:
+        NLI_MODEL_NAME = args.nli_model
+
+    gen_dir_override = Path(args.gen_dir).resolve() if args.gen_dir else None
 
     print(f"Stage: {args.stage}")
     print(f"Samples: {args.start} to {args.end - 1}")
     print(f"Output: {out_dir}")
     print(f"K: {args.K}")
     print(f"Cache: {'on' if use_cache else 'off'}")
+    print(f"NLI model: {NLI_MODEL_NAME}")
     print(f"NLI device: {DEVICE_NAME}")
     print(f"NLI batch size: {NLI_BATCH_SIZE}")
     print(f"Micro-batch pairs: {MICRO_BATCH_PAIRS}")
+    if gen_dir_override:
+        print(f"Generations from: {gen_dir_override}")
 
-    if args.stage in {"generate", "all"}:
+    if args.stage in {"generate", "all"} and gen_dir_override is None:
         stage_generate(args.start, args.end, args.K, out_dir, use_cache)
 
     if args.stage in {"score", "all"}:
-        stage_score(args.start, args.end, out_dir, use_cache)
+        stage_score(args.start, args.end, out_dir, use_cache,
+                    gen_dir_override=gen_dir_override)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,56 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient presents with a 5-day history of right knee pain.,0.9421,The patient experiences swelling and pain in their knee.,0,fabrication,neutral
+1,The patient's right knee pain started after a skiing accident.,0.9386,The patient's right knee is injured.,0,fabrication,neutral
+2,The patient twisted his knee while landing from a jump.,0.9819,The patient landed from the jump and twisted their knee.,1,,entailment
+3,The patient reports swelling in his right knee.,0.9737,The patient experiences swelling and pain in their knee.,1,,entailment
+4,The patient reports pain in his right knee.,0.9575,The patient's right knee is injured.,1,,entailment
+5,The patient reports difficulty climbing stairs.,0.9241,The patient had difficulty climbing out of the water due to soreness.,0,fabrication,contradiction
+6,The patient reports difficulty bending due to soreness.,0.9652,The patient experiences soreness when squatting or bending.,1,,entailment
+7,The patient denied hearing a pop during the incident.,0.9678,The patient did not hear anything pop during the incident.,1,,entailment
+8,The patient denied feeling anything pop during the incident.,0.9616,The patient did not hear anything pop during the incident.,1,,entailment
+9,The patient has not had any similar injuries to this knee before.,0.9672,The patient has not injured their right knee before.,1,,entailment
+10,The patient had his tonsils out.,0.9403,The patient has had their tonsils removed.,1,,entailment
+11,The patient has a history of hypertension.,0.9434,The patient has high blood pressure.,0,fabrication,neutral
+12,The patient manages hypertension with lisinopril.,0.9759,The lisinopril is prescribed for the patient's hypertension.,1,,entailment
+13,The lisinopril dose is 20 mg.,0.9931,The lisinopril dose is 20 milligrams.,1,,entailment
+14,Lisinopril is taken daily.,0.9944,Lisinopril is taken once daily.,1,,entailment
+15,Lisinopril is prescribed for hypertension.,0.994,The lisinopril is prescribed for the patient's hypertension.,1,,entailment
+16,The patient checks his blood pressure at home.,0.9983,The patient checks their blood pressure at home.,1,,entailment
+17,The patient's blood pressure at home has been around 125/80.,0.9836,The patient's blood pressure is usually around 125/80.,1,,entailment
+18,The patient does not report any side effects from lisinopril.,0.9969,The patient does not experience side effects from lisinopril.,1,,entailment
+19,The patient denies numbness in his foot.,0.9581,The patient has not had any numbing or tingling in their foot.,1,,entailment
+20,The patient denies tingling in his foot.,0.9554,The patient has not had any numbing or tingling in their foot.,1,,entailment
+21,The patient reports swelling in his right knee.,0.9737,The patient experiences swelling and pain in their knee.,1,,entailment
+22,The patient reports pain in his right knee.,0.9575,The patient's right knee is injured.,1,,entailment
+23,The patient's blood pressure is 120/77 in the office.,1.0,The patient's blood pressure is 120/77 in the office.,1,,entailment
+24,The patient has ecchymosis on his right knee.,0.9798,The patient's musculoskeletal exam shows ecchymosis on the right knee.,1,,entailment
+25,The patient has edema on his right knee.,0.9803,The patient's musculoskeletal exam shows edema on the right knee.,1,,entailment
+26,The patient has an effusion on his right knee.,0.979,The patient's musculoskeletal exam shows an effusion on the right knee.,1,,entailment
+27,There is pain to palpation of the right medial knee.,0.9398,The patient's musculoskeletal exam shows edema on the right knee.,0,fabrication,neutral
+28,The patient has decreased range of motion.,0.9689,The patient has decreased range of motion in their right knee.,1,,entailment
+29,The varus test is negative.,0.9681,The patient has a negative varus and valgus test.,1,,entailment
+30,The valgus test is negative.,0.9676,The patient has a negative varus and valgus test.,1,,entailment
+31,The Lachman sign is negative.,0.9847,The patient has a negative Lachman sign.,1,,entailment
+32,The patient has a palpable dorsalis pedis pulse.,0.9792,The patient has a palpable dorsalis pedis and posterior tibial pulse.,1,,entailment
+33,The patient has a palpable posterior tibial pulse.,0.9666,The patient has a palpable dorsalis pedis and posterior tibial pulse.,1,,entailment
+34,The patient has a medial collateral ligament strain in the right knee.,0.9593,The doctor diagnosed a medial collateral ligament strain.,1,,entailment
+35,The patient has hypertension.,0.9623,The patient has high blood pressure.,1,,entailment
+36,The patient has a past medical history of tonsillectomy.,0.942,The patient has had their tonsils removed.,1,,entailment
+37,The doctor prescribed meloxicam.,1.0,The doctor prescribed meloxicam.,1,,entailment
+38,The meloxicam dose is 15 mg.,0.9931,The meloxicam dose is 15 milligrams.,1,,entailment
+39,Meloxicam is taken once daily.,1.0,Meloxicam is taken once daily.,1,,entailment
+40,Meloxicam is prescribed to reduce swelling and pain in the right knee.,0.9839,Meloxicam is prescribed for the patient's knee pain and swelling.,1,,entailment
+41,The doctor ordered an x-ray of the right knee.,1.0,The doctor ordered an x-ray of the right knee.,1,,entailment
+42,The x-ray is to rule out any broken bones.,0.9137,The doctor ordered an x-ray of the right knee.,0,fabrication,neutral
+43,The doctor referred the patient to physical therapy.,0.9299,The doctor performed a physical exam.,0,fabrication,neutral
+44,Physical therapy is to strengthen the muscles around the knee.,0.9134,The doctor recommended rest for the patient's knee.,0,fabrication,neutral
+45,The doctor continued lisinopril 20 mg daily for hypertension.,0.9656,The lisinopril is prescribed for the patient's hypertension.,1,,entailment
+46,The lisinopril dose is 20 mg.,0.9931,The lisinopril dose is 20 milligrams.,1,,entailment
+47,Lisinopril is taken daily.,0.9944,Lisinopril is taken once daily.,1,,entailment
+48,Lisinopril is prescribed for hypertension.,0.994,The lisinopril is prescribed for the patient's hypertension.,1,,entailment
+49,The doctor ordered a lipid panel.,1.0,The doctor ordered a lipid panel.,1,,entailment
+50,The lipid panel is to check on lipid levels.,0.9543,The doctor ordered a lipid panel.,1,,entailment
+51,The doctor administered a tetanus shot.,0.9823,The doctor will administer a tetanus shot.,1,,entailment
+52,The tetanus shot is for health maintenance.,0.9332,The doctor will administer a tetanus shot.,1,,entailment
+53,The patient will return for follow-up after the results of the x-ray are available.,0.9118,The doctor ordered an x-ray of the right knee.,0,fabrication,neutral
+54,The patient will be reassessed for further treatment.,0.8851,The patient has not had any other surgeries.,0,fabrication,neutral

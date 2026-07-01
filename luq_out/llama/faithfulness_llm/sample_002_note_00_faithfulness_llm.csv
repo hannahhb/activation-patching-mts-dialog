@@ -1,0 +1,32 @@
+sentence_idx,sentence,supported,uncertainty,atom_faithfulness
+0,Subjective:,1,0,1.0
+1,"HPI: The patient, Gregory, has a non-healing foot ulcer on the dorsal aspect of the lateral right foot, which is approximately 1x2 inches in size.",1,0,0.75
+2,"It is red, draining, and has some edema around it.",1,0,1.0
+3,The patient reports that it throbs and is concerned about its healing.,1,0,1.0
+4,"The patient has had the ulcer for about two months, with recent worsening of symptoms.",1,0,1.0
+5,The patient attributes the onset of the ulcer to walking barefoot on the beach at Dewey Beach.,1,0,1.0
+6,The patient's primary concern is the drainage and redness of the ulcer.,1,0,1.0
+7,The patient has not taken the antibiotics prescribed by their primary care physician (PCP) yet.,1,0,1.0
+8,"Past medical history: The patient has diabetes, with an estimated A1C of 10.",1,0,1.0
+9,The patient takes medication for diabetes but does not regularly check their blood sugar levels.,1,0,1.0
+10,The patient's PCP has not created a treatment plan for their diabetes.,0,1,0.6667
+11,"Review of systems: The patient denies fever, but has some throbbing pain in the foot.",1,0,0.75
+12,Current medications: [NOT MENTIONED],0,1,1.0
+13,Objective:,1,0,1.0
+14,"Vital signs: The patient's vital signs are normal, with no fever.",1,0,1.0
+15,"Physical exam: The patient has a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, proximal to the fifth MTP joint.",1,0,1.0
+16,"The wound is red, draining, and has some edema around it.",1,0,1.0
+17,"There is fluid coming out of the wound, but no necrosis, odor, or bony exposure.",1,0,1.0
+18,"The patient feels increased pressure when the wound is touched, but it is not distinct pain.",1,0,1.0
+19,Test Results: An X-ray of the right foot shows no evidence of osteomyelitis.,1,0,1.0
+20,Assessment / Problem List:,1,0,1.0
+21,"Assessment: The patient has a diabetic foot ulcer with signs of infection, which is not healing due to poor blood supply.",0,1,0.75
+22,Problem list: Diabetic foot ulcer; suspected infection; uncontrolled diabetes; [NOT MENTIONED],1,0,1.0
+23,Plan:,1,0,1.0
+24,I ordered an ABI (ankle-brachial index) to determine the blood supply to the foot.,1,0,1.0
+25,I performed a debridement to remove dead tissue from the wound.,1,0,0.75
+26,I prescribed clindamycin 400mg twice daily for 7 days to treat the infection.,1,0,1.0
+27,I will provide a surgical shoe for the patient to wear to reduce pressure on the foot and promote healing.,1,0,1.0
+28,I will see the patient back in two weeks to assess the wound's progress and possibly perform another debridement.,1,0,1.0
+29,Follow-up: The patient will follow up with me in two weeks to assess the wound's progress.,1,0,1.0
+30,The patient is encouraged to call the office if they experience any issues or have any concerns.,1,0,1.0

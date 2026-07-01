@@ -1,0 +1,31 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Angela, presents with a history of recurrent kidney stones, having had seven or eight in the past, with the most recent one passing approximately three days ago.",Faithful,
+1,She denies current pain and blood in her urine.,Faithful,
+2,"Past medical history includes hypertension and diabetes, with a history of taking metformin 500mg daily.",Faithful,
+3,"She has been experiencing occasional insomnia, which she has attempted to manage with meditation apps.",Faithful,
+4,"She has been experiencing white coat hypertension, with a blood pressure reading of 150/90 in the office, but her at-home readings are typically 130-140/60-70.",Faithful,
+5,"She has a history of consuming fast food and sweets, which she finds challenging to avoid.",Faithful,
+6,"Past medical history: Angela has a history of hypertension, diabetes, and recurrent kidney stones.",Faithful,
+7,She is currently on norvasc 2.5mg daily for hypertension and metformin 500mg daily for diabetes.,Faithful,
+8,She denies any allergies.,Fabrication,She denies any allergies
+9,"Review of systems: Angela denies any chest pain, abdominal pain, or other symptoms.",Faithful,
+10,Current medications:,Faithful,
+11,- Norvasc 2.5mg daily for hypertension,Faithful,
+12,- Metformin 500mg daily for diabetes,Faithful,
+13,Objective:,Faithful,
+14,"Vital signs: Blood pressure was 150/90 in the office, but her at-home readings are typically 130-140/60-70.",Faithful,
+15,"Physical exam: The patient's lungs are clear bilaterally, and her heart exam reveals a grade 2/6 systolic ejection murmur.",Faithful,
+16,The abdomen exam shows no tenderness to palpation.,Faithful,
+17,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+18,Assessment / Problem List:,Faithful,
+19,"Assessment: Angela has a history of recurrent kidney stones, with the most recent one passing, but she continues to experience hypertension and diabetes, and she has occasional insomnia.",Faithful,
+20,Problem list: Kidney stones; hypertension; diabetes; insomnia.,Faithful,
+21,I prescribed metformin 500mg daily for diabetes and will continue to monitor her blood sugars.,Causality,I prescribed metformin 500mg daily for diabetes
+22,I will also have her take her blood sugars before every meal to gauge her diet.,Faithful,
+23,"For her hypertension, I will continue her on norvasc 2.5mg daily.",Faithful,
+24,I will refer her to urology for further evaluation of her recurrent kidney stones.,Faithful,
+25,I will also refer her to a nutritionist to help her manage her diet and reduce her sodium intake.,Faithful,
+26,I will prescribe melatonin 10mg as needed for her insomnia.,Faithful,
+27,I will see her in three months to follow up.,Faithful,
+28,Follow-up: The patient will return in three months for a follow-up appointment.,Faithful,
+29,Instructions:,Fabrication,Instructions:

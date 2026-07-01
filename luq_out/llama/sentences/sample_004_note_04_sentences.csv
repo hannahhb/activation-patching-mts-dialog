@@ -1,26 +1,26 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, Wayne, is a 68-year-old male presenting with a non-healing sore on his right foot that has been present for approximately 2-3 weeks.",0.9998
-2,"He reports that he initially had a blister from a new pair of shoes, but the wound has not improved despite treatment with antibiotics.",0.6198
-3,He denies any trauma to the foot and reports no pain or discomfort in the affected area.,0.3716
-4,"Past medical history: The patient has a history of diabetes, with an A1C of over 8% on his last check.",0.6563
-5,"He also mentions having a podiatrist in the past, but they are no longer available.",0.8863
-6,"Review of systems: The patient denies any fever, chills, drainage from the wound, or other symptoms.",0.4065
+1,"HPI: The patient, Wayne, is a 68-year-old male presenting with a non-healing sore on his right foot that has been present for approximately 2-3 weeks.",0.3602
+2,"He reports that he initially had a blister from a new pair of shoes, but the wound has not improved despite treatment with antibiotics.",0.3246
+3,He denies any trauma to the foot and reports no pain or discomfort in the affected area.,0.1762
+4,"Past medical history: The patient has a history of diabetes, with an A1C of over 8% on his last check.",0.1138
+5,"He also mentions having a podiatrist in the past, but they are no longer available.",0.367
+6,"Review of systems: The patient denies any fever, chills, drainage from the wound, or other symptoms.",0.0445
 7,Current medications: [NOT MENTIONED],0.5
 8,Objective:,0.5
-9,"Vital signs: The patient's temperature is 98.1°F, heart rate is 72, respirations are 16, and blood pressure is 110/65.",0.3972
-10,"Physical exam: The patient has a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, proximal to the right fifth MTP joint, with yellow slough and minimal granulation tissue.",0.6217
-11,"There is no surrounding erythema or cellulitis, no fluid collection, no necrosis, and no odor.",0.3936
-12,"The vascular exam shows palpable bilateral femoral and popliteal pulses, but no palpable DP or PT pulses, with Doppler signs present.",0.3553
-13,Test Results: The patient's right foot X-ray shows no evidence of osteomyelitis.,0.0223
+9,"Vital signs: The patient's temperature is 98.1°F, heart rate is 72, respirations are 16, and blood pressure is 110/65.",0.2186
+10,"Physical exam: The patient has a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, proximal to the right fifth MTP joint, with yellow slough and minimal granulation tissue.",0.1271
+11,"There is no surrounding erythema or cellulitis, no fluid collection, no necrosis, and no odor.",0.0805
+12,"The vascular exam shows palpable bilateral femoral and popliteal pulses, but no palpable DP or PT pulses, with Doppler signs present.",0.0275
+13,Test Results: The patient's right foot X-ray shows no evidence of osteomyelitis.,0.003
 14,Assessment / Problem List:,0.5
-15,Assessment: The patient presents with a diabetic foot ulcer that requires further evaluation and treatment.,0.4469
-16,Problem list: Diabetic foot ulcer; suspected vascular insufficiency; suspected diabetic neuropathy; diabetes mellitus; [NOT MENTIONED],0.7953
+15,Assessment: The patient presents with a diabetic foot ulcer that requires further evaluation and treatment.,0.0066
+16,Problem list: Diabetic foot ulcer; suspected vascular insufficiency; suspected diabetic neuropathy; diabetes mellitus; [NOT MENTIONED],0.362
 17,Plan:,0.5
-18,I ordered an Ankle Brachial Index (ABI) to determine the blood supply to the patient's foot.,0.0043
-19,I performed a debridement to remove dead tissue from the wound.,0.117
-20,I prescribed a collagenase ointment to be applied to the wound once daily and covered with a dry sterile dressing.,0.0064
-21,The patient is to wear a surgical shoe to reduce pressure on the affected area.,0.2238
-22,I do not think additional antibiotics are necessary at this time.,0.4464
-23,"The patient is to return in two weeks for follow-up, and we may refer him to a vascular specialist if the ABI indicates inadequate blood supply for wound healing.",0.2747
-24,Follow-up: The patient is to return in two weeks for follow-up.,0.0022
+18,I ordered an Ankle Brachial Index (ABI) to determine the blood supply to the patient's foot.,0.0002
+19,I performed a debridement to remove dead tissue from the wound.,0.0052
+20,I prescribed a collagenase ointment to be applied to the wound once daily and covered with a dry sterile dressing.,0.0005
+21,The patient is to wear a surgical shoe to reduce pressure on the affected area.,0.1773
+22,I do not think additional antibiotics are necessary at this time.,0.3327
+23,"The patient is to return in two weeks for follow-up, and we may refer him to a vascular specialist if the ABI indicates inadequate blood supply for wound healing.",0.0254
+24,Follow-up: The patient is to return in two weeks for follow-up.,0.0

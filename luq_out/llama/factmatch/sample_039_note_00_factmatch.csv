@@ -1,0 +1,58 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 56-year-old male.,1.0,The patient is a 56-year-old male.,1,,entailment
+1,The patient presents with difficulty swallowing.,0.9879,The patient has difficulty swallowing.,1,,entailment
+2,The patient describes difficulty swallowing as a sensation of something being stuck in his throat.,0.9524,The patient feels like something is stuck in his throat.,1,,entailment
+3,The sensation of something being stuck in his throat occurred over the last four to five weeks.,0.9441,The difficulty swallowing has lasted four to five weeks.,1,,entailment
+4,The sensation of something being stuck in his throat is more pronounced with solids.,0.95,The patient feels like something is stuck in his throat.,1,,entailment
+5,The sensation of something being stuck in his throat can be painful.,0.9626,The patient feels like something is stuck in his throat.,1,,entailment
+6,The patient denied coughing.,0.9417,The patient does not experience coughing with swallowing.,1,,entailment
+7,The patient denied vomiting.,1.0,The patient denied vomiting.,1,,entailment
+8,The patient denied blood in his stool.,1.0,The patient denied blood in his stool.,1,,entailment
+9,The patient denied weight loss.,1.0,The patient denied weight loss.,1,,entailment
+10,The patient denied changes in his weight.,0.9693,The patient denied weight loss.,1,,entailment
+11,The patient has a past medical history of diabetes.,0.9593,The patient has diabetes.,1,,entailment
+12,The patient has a past medical history of high blood pressure.,0.9659,The patient has high blood pressure.,1,,entailment
+13,The patient is taking metformin.,1.0,The patient is taking metformin.,1,,entailment
+14,The metformin dose is 500mg.,0.9845,Metformin is taken at a dose of 500 milligrams.,1,,entailment
+15,Metformin is taken twice a day.,1.0,Metformin is taken twice a day.,1,,entailment
+16,Metformin is prescribed for diabetes.,0.956,The patient is taking metformin.,1,,entailment
+17,The patient is taking norvasc.,1.0,The patient is taking norvasc.,1,,entailment
+18,Norvasc is prescribed for high blood pressure.,0.986,Norvasc is taken for high blood pressure.,1,,entailment
+19,The patient's blood pressure is 120/50 mmHg.,0.998,The patient's blood pressure is 120/50.,1,,entailment
+20,The patient's neck is fine.,1.0,The patient's neck is fine.,1,,entailment
+21,The patient's neck has no swelling.,0.9548,The patient has no masses or swelling in his throat.,1,,entailment
+22,The patient's thyroid feels normal.,1.0,The patient's thyroid feels normal.,1,,entailment
+23,There is no lymphadenopathy.,0.9505,The patient has no lymph nodes.,1,,entailment
+24,The throat examination is normal.,0.929,The patient's throat looks okay.,1,,entailment
+25,The throat examination shows no masses.,0.9699,The patient has no masses or swelling in his throat.,1,,entailment
+26,The throat examination shows no swelling.,0.9551,The patient has no masses or swelling in his throat.,1,,entailment
+27,The lung exam is clear.,0.9878,The patient's lung exam is clear.,1,,entailment
+28,The heart exam is normal.,0.9883,The patient's heart exam is normal.,1,,entailment
+29,There is epigastric tenderness on the right side.,0.9651,The patient has epigastric tenderness.,1,,entailment
+30,There are no masses on the right side.,0.93,The patient has no masses in his neck.,0,fabrication,neutral
+31,There is no significant swelling on the right side.,0.9279,The patient has no masses or swelling in his throat.,0,fabrication,neutral
+32,The back exam is normal.,0.9898,The patient's back exam is normal.,1,,entailment
+33,The extremity exam is fine.,0.9291,The patient's extremity exam looks normal.,1,,entailment
+34,The neurological exam is normal.,0.9446,The patient's neurological exam is fine.,1,,entailment
+35,The patient has difficulty swallowing due to a possible narrowing of the esophagus.,0.9653,The patient has difficulty swallowing.,1,,entailment
+36,The patient may require dilation of the esophagus.,0.913,The doctor is concerned about a stricture in the patient's esophagus.,0,fabrication,neutral
+37,The patient has diabetes.,1.0,The patient has diabetes.,1,,entailment
+38,The patient has high blood pressure.,1.0,The patient has high blood pressure.,1,,entailment
+39,The patient will undergo a gastroenterology consultation.,0.955,The doctor referred the patient to gastroenterology.,1,,entailment
+40,The gastroenterology consultation is for further evaluation.,0.9428,The doctor referred the patient to gastroenterology.,0,fabrication,neutral
+41,The gastroenterology consultation is for possible dilation of the esophagus.,0.9237,The doctor is concerned about a stricture in the patient's esophagus.,0,fabrication,neutral
+42,The doctor prescribed Prilosec.,1.0,The doctor prescribed prilosec.,1,,entailment
+43,The Prilosec dose is 20mg.,0.9847,Prilosec is taken at a dose of 20 milligrams.,1,,entailment
+44,Prilosec is taken once a day.,1.0,Prilosec is taken once a day.,1,,entailment
+45,Prilosec is prescribed for possible gastroesophageal reflux disease.,0.9837,Prilosec is prescribed for reflux.,1,,entailment
+46,The patient was advised to chew their foods frequently.,0.9843,The doctor recommended that the patient chew his food frequently.,1,,entailment
+47,The patient was advised to chew their foods carefully.,0.9617,The doctor recommended that the patient chew his food frequently.,1,,entailment
+48,The patient was advised to chew hard or sticky foods carefully.,0.9536,The doctor recommended that the patient chew his food frequently.,1,,entailment
+49,A repeat hemoglobin A1c was ordered.,0.9573,The doctor ordered a hemoglobin A1c test.,1,,entailment
+50,Kidney function tests were ordered.,0.9603,The doctor ordered blood work to check kidney function.,1,,entailment
+51,A referral to ophthalmology was ordered.,0.9554,The doctor referred the patient to ophthalmology.,1,,entailment
+52,The referral to ophthalmology is for diabetic retinopathy screening.,0.9355,The doctor referred the patient to ophthalmology.,0,fabrication,neutral
+53,The patient's norvasc prescription was refilled.,0.9903,The doctor refilled the patient's norvasc prescription.,1,,entailment
+54,The patient will be seen in about a month.,0.9755,The doctor will see the patient in a month.,1,,entailment
+55,The follow-up appointment is to review the results of the blood tests.,0.9301,The patient needs to follow up in a month.,0,fabrication,neutral
+56,The follow-up appointment is to make any necessary adjustments to the patient's treatment plan.,0.9383,The patient needs to follow up in a month.,0,fabrication,neutral

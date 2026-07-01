@@ -1,0 +1,63 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 30-year-old female.,0.9234,The patient was hospitalized for asthma symptoms when they were around eight years old.,0,fabrication,contradiction
+1,The patient has a history of asthma.,0.9476,The patient's last asthma exacerbation was about a month ago.,1,,entailment
+2,The patient experiences frequent asthma exacerbations.,0.9381,The patient has occasional expiratory wheezes.,0,fabrication,neutral
+3,The patient's asthma exacerbations occur when she gets sick with a cold.,0.9721,The patient's asthma is triggered by getting sick with a cold.,1,,entailment
+4,The patient's asthma exacerbations occur when exposed to her aunt's cat.,0.9823,The patient's asthma is also triggered by their aunt's cat.,1,,entailment
+5,The patient uses her albuterol inhaler daily.,0.9411,The patient uses their Ventolin inhaler almost every day.,1,,entailment
+6,The patient takes two puffs of albuterol every 4-6 hours as needed.,0.9565,The patient is to take two puffs of Ventolin every four to six hours as needed.,1,,entailment
+7,The patient occasionally uses steroids after urgent care visits.,0.9411,The patient is often started on prednisone during these visits.,0,fabrication,neutral
+8,The patient has had several urgent care visits in the past year.,0.983,The patient has visited the emergency room and urgent care several times in the past year.,1,,entailment
+9,The patient has had one emergency department visit in the past year.,0.9682,The patient has visited the emergency room and urgent care several times in the past year.,1,,entailment
+10,The patient's most recent asthma exacerbation occurred about a month ago.,0.9849,The patient's last asthma exacerbation was about a month ago.,1,,entailment
+11,The patient denies smoking.,0.9352,The patient does not smoke cigarettes.,1,,entailment
+12,The patient denies vaping.,0.9391,The patient does not vape.,1,,entailment
+13,The patient denies marijuana use.,0.9392,The patient does not smoke marijuana.,1,,entailment
+14,The patient has no history of seasonal allergies.,0.983,The patient does not have seasonal allergies.,1,,entailment
+15,The patient enjoys hiking and outdoor activities.,0.961,The patient enjoys walking and hiking.,1,,entailment
+16,The patient has to be careful with outdoor activities due to asthma symptoms.,0.9241,The patient's asthma is triggered by getting sick with a cold.,0,fabrication,neutral
+17,The patient was hospitalized for asthma at age 8.,0.9896,The patient was hospitalized for asthma symptoms when they were around eight years old.,1,,entailment
+18,The patient has had multiple urgent care visits in the past year.,0.98,The patient has visited the emergency room and urgent care several times in the past year.,1,,entailment
+19,The patient has had one emergency department visit in the past year.,0.9682,The patient has visited the emergency room and urgent care several times in the past year.,1,,entailment
+20,The patient reports coughing symptoms.,0.9734,The patient experiences coughing and wheezing.,1,,entailment
+21,The patient reports wheezing symptoms.,0.9757,The patient experiences coughing and wheezing.,1,,entailment
+22,The patient has no other symptoms in other organs.,0.9156,The patient does not have any lymphadenopathy.,0,fabrication,neutral
+23,The patient is prescribed Ventolin (albuterol).,0.9474,The Ventolin inhaler helps the patient.,1,,entailment
+24,The Ventolin (albuterol) dose is 2 puffs.,0.9514,The patient takes two puffs of their Ventolin inhaler when they use it.,1,,entailment
+25,Ventolin (albuterol) is taken every 4-6 hours.,0.9565,The patient is to take two puffs of Ventolin every four to six hours as needed.,1,,entailment
+26,Ventolin (albuterol) is taken as needed.,0.9327,The patient is to take two puffs of Ventolin every four to six hours as needed.,1,,entailment
+27,Ventolin (albuterol) is prescribed for asthma.,0.9464,The Ventolin inhaler helps the patient.,1,,entailment
+28,The patient is prescribed Flovent (fluticasone).,0.9673,The doctor prescribed Flovent to the patient.,1,,entailment
+29,The Flovent (fluticasone) dose is 110 micrograms.,0.9838,The Flovent dose is 110 micrograms.,1,,entailment
+30,The Flovent (fluticasone) dose is 1 puff.,0.9668,The Flovent dose is 110 micrograms.,1,,entailment
+31,Flovent (fluticasone) is taken twice per day.,0.9608,The patient is to take one puff of Flovent twice a day.,1,,entailment
+32,Flovent (fluticasone) is prescribed for asthma.,0.9642,Flovent is an inhaled steroid inhaler.,1,,entailment
+33,The patient's blood pressure is 128/82.,1.0,The patient's blood pressure is 128/82.,1,,entailment
+34,The patient's pulse rate is 16.,0.9643,The patient's respiratory rate is 16.,1,,entailment
+35,The patient's oxygen saturation is 99% on room air.,1.0,The patient's oxygen saturation is 99% on room air.,1,,entailment
+36,The patient's respiratory rate is 16.,1.0,The patient's respiratory rate is 16.,1,,entailment
+37,The patient has diminished lung sounds throughout.,0.9888,The patient has diminished lung sounds.,1,,entailment
+38,The patient has occasional slight expiratory wheeze bilaterally.,0.9774,The patient has occasional expiratory wheezes.,1,,entailment
+39,The patient's trachea is midline.,1.0,The patient's trachea is midline.,1,,entailment
+40,The patient has no lymphadenopathy.,0.9937,The patient does not have any lymphadenopathy.,1,,entailment
+41,The patient has no carotid bruit.,0.9943,The patient does not have any carotid bruit.,1,,entailment
+42,The patient has strong bilateral pulses.,1.0,The patient has strong bilateral pulses.,1,,entailment
+43,The patient has no clubbing on fingertips.,0.9958,The patient does not have any clubbing on their fingertips.,1,,entailment
+44,The patient has brisk capillary refill.,1.0,The patient has brisk capillary refill.,1,,entailment
+45,The patient's pulmonary function test results are consistent with asthma.,1.0,The patient's pulmonary function test results are consistent with asthma.,1,,entailment
+46,The patient has moderate intermittent asthma.,0.9771,The doctor diagnosed the patient with moderate intermittent asthma.,1,,entailment
+47,The patient has a history of asthma hospitalization.,0.9702,The patient has not been hospitalized for asthma since then.,1,,entailment
+48,The patient has a history of asthma exacerbations.,0.9626,The patient's last asthma exacerbation was about a month ago.,1,,entailment
+49,The doctor prescribed Flovent (fluticasone).,0.9758,The doctor prescribed Flovent to the patient.,1,,entailment
+50,The Flovent (fluticasone) dose is 110 micrograms.,0.9838,The Flovent dose is 110 micrograms.,1,,entailment
+51,Flovent (fluticasone) is taken 1 puff twice per day.,0.9715,The patient is to take one puff of Flovent twice a day.,1,,entailment
+52,Flovent (fluticasone) is prescribed to help prevent daily symptoms.,0.9554,Flovent is an inhaled steroid inhaler.,1,,entailment
+53,Flovent (fluticasone) is prescribed to reduce the need for rescue inhaler use.,0.9695,Flovent is an inhaled steroid inhaler.,1,,entailment
+54,The doctor advised the patient to continue using Ventolin (albuterol).,0.9595,The patient can continue using their Ventolin inhaler.,1,,entailment
+55,The Ventolin (albuterol) dose is 2 puffs.,0.9514,The patient takes two puffs of their Ventolin inhaler when they use it.,1,,entailment
+56,Ventolin (albuterol) is taken every 4-6 hours.,0.9565,The patient is to take two puffs of Ventolin every four to six hours as needed.,1,,entailment
+57,Ventolin (albuterol) is taken as needed.,0.9327,The patient is to take two puffs of Ventolin every four to six hours as needed.,1,,entailment
+58,The doctor will create an asthma action plan.,0.9867,The doctor is creating an asthma action plan for the patient.,1,,entailment
+59,The patient will be seen in 30 days.,0.9315,The patient is to follow up with the doctor in a month.,1,,entailment
+60,The patient's symptoms will be reassessed in 30 days.,0.9452,The patient is to follow up with the doctor in a month.,1,,entailment
+61,The patient's treatment will be adjusted as needed in 30 days.,0.941,The patient is sometimes given a tapering dose of prednisone over nine or ten days.,0,fabrication,neutral

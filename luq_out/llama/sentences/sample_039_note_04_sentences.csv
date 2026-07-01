@@ -1,32 +1,32 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"The patient, a 56-year-old male, presents with a 4-5 week history of difficulty swallowing.",0.4392
-2,"He describes a sensation of something being stuck in his throat, particularly with solid foods, and occasionally experiences some pain.",0.2773
-3,He reports that liquids do not cause this issue.,0.9974
-4,"He has not experienced any coughing, vomiting, or blood in his stool.",0.563
-5,He denies any weight loss or chest pain.,0.6564
-6,"He has a past medical history of diabetes and high blood pressure, for which he is currently taking metformin 500mg twice a day and norvasc.",0.472
+1,"The patient, a 56-year-old male, presents with a 4-5 week history of difficulty swallowing.",0.0155
+2,"He describes a sensation of something being stuck in his throat, particularly with solid foods, and occasionally experiences some pain.",0.0163
+3,He reports that liquids do not cause this issue.,0.5842
+4,"He has not experienced any coughing, vomiting, or blood in his stool.",0.0475
+5,He denies any weight loss or chest pain.,0.0792
+6,"He has a past medical history of diabetes and high blood pressure, for which he is currently taking metformin 500mg twice a day and norvasc.",0.0156
 7,Objective:,0.5
-8,Vital signs: Blood pressure 120/50 mmHg.,0.8895
-9,"Physical exam: The patient's neck is fine, with no swelling or masses.",0.3997
-10,"The thyroid feels normal, and there are no lymph nodes.",0.2503
-11,"The throat exam is normal, with no masses or swelling.",0.7055
-12,"The lung exam is clear, and the heart exam is normal with no murmurs.",0.5924
-13,"The belly exam reveals epigastric tenderness, but no masses or significant swelling.",0.3466
-14,"The back exam is normal, and the extremity exam is fine.",0.6213
-15,The neurological exam is normal.,0.3783
+8,Vital signs: Blood pressure 120/50 mmHg.,0.7845
+9,"Physical exam: The patient's neck is fine, with no swelling or masses.",0.3142
+10,"The thyroid feels normal, and there are no lymph nodes.",0.1758
+11,"The throat exam is normal, with no masses or swelling.",0.61
+12,"The lung exam is clear, and the heart exam is normal with no murmurs.",0.4345
+13,"The belly exam reveals epigastric tenderness, but no masses or significant swelling.",0.3395
+14,"The back exam is normal, and the extremity exam is fine.",0.5256
+15,The neurological exam is normal.,0.2528
 16,Test Results:,0.5
-17,None mentioned.,0.9936
+17,None mentioned.,0.9935
 18,Assessment / Problem List:,0.5
-19,"The patient has difficulty swallowing, likely due to a narrowing of the esophagus, which may be a stricture.",0.003
-20,Problem list: Difficulty swallowing; narrowing of the esophagus; diabetes; high blood pressure.,0.714
+19,"The patient has difficulty swallowing, likely due to a narrowing of the esophagus, which may be a stricture.",0.0
+20,Problem list: Difficulty swallowing; narrowing of the esophagus; diabetes; high blood pressure.,0.4169
 21,Plan:,0.5
-22,I prescribed prilosec 20mg once a day for reflux.,0.0211
-23,"I recommended that the patient chew foods frequently and thoroughly, especially hard foods like steak or meat, to prevent them from getting stuck.",0.8786
-24,I referred the patient to gastroenterology for a scope to investigate the narrowing of the esophagus.,0.7774
-25,"I ordered a repeat hemoglobin A1c, kidney function blood work, and an eye referral to ophthalmology to check for diabetic retinopathy.",0.2285
-26,I will continue the patient on metformin and norvasc.,0.3363
-27,I will see the patient back in a month to review the results of the blood work and make any necessary adjustments.,0.7021
+22,I prescribed prilosec 20mg once a day for reflux.,0.0185
+23,"I recommended that the patient chew foods frequently and thoroughly, especially hard foods like steak or meat, to prevent them from getting stuck.",0.3218
+24,I referred the patient to gastroenterology for a scope to investigate the narrowing of the esophagus.,0.4139
+25,"I ordered a repeat hemoglobin A1c, kidney function blood work, and an eye referral to ophthalmology to check for diabetic retinopathy.",0.1414
+26,I will continue the patient on metformin and norvasc.,0.3141
+27,I will see the patient back in a month to review the results of the blood work and make any necessary adjustments.,0.4361
 28,Follow-up:,0.5
-29,I will see the patient back in a month to review the results of the blood work and make any necessary adjustments.,0.1125
-30,I will also check on the patient's progress with the prilosec and the referral to gastroenterology.,0.9999
+29,I will see the patient back in a month to review the results of the blood work and make any necessary adjustments.,0.004
+30,I will also check on the patient's progress with the prilosec and the referral to gastroenterology.,0.6013

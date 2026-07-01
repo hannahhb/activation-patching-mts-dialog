@@ -1,0 +1,62 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Brandon.,1.0,The patient's name is Brandon.,1,,entailment
+1,The patient presented with neck pain.,0.9851,The patient is experiencing neck pain.,1,,entailment
+2,The patient's neck pain started after a car crash in February.,0.9582,The patient has been experiencing neck pain since the most recent car crash.,1,,entailment
+3,The patient rates his neck pain as 12 out of 10.,0.9608,The patient's neck pain is severe.,1,,entailment
+4,The patient's neck pain is sharp.,0.963,The patient's neck pain is severe.,1,,entailment
+5,The patient's neck pain is incapacitating.,0.9657,The patient's neck pain is severe.,1,,entailment
+6,The patient has had multiple car crashes.,0.9955,The patient has been in multiple car crashes.,1,,entailment
+7,The patient's most recent car crash occurred in February.,0.9809,The most recent car crash occurred in February.,1,,entailment
+8,The patient has been experiencing neck pain since the most recent car crash.,1.0,The patient has been experiencing neck pain since the most recent car crash.,1,,entailment
+9,The patient has been to therapy.,0.9047,The patient sees a therapist.,0,fabrication,neutral
+10,The patient has been to the pain clinic.,0.9286,Fentanyl was previously prescribed for the patient's pain.,0,fabrication,neutral
+11,The patient was prescribed fentanyl.,0.9789,The patient has previously been prescribed fentanyl.,1,,entailment
+12,The patient has not taken fentanyl in several weeks.,0.9839,The patient has not received a prescription for fentanyl in several weeks.,1,,entailment
+13,The patient reports stiffness.,0.9674,The patient experiences stiffness in their neck.,1,,entailment
+14,The patient reports headaches.,0.9851,The patient experiences headaches.,1,,entailment
+15,The patient reports dizziness.,0.9758,The patient experiences dizziness sometimes.,1,,entailment
+16,The patient reports visual disturbances.,0.9569,The patient does not currently experience visual disturbances.,1,,entailment
+17,The patient reports numbness in his left arm.,0.987,The patient experiences numbness in their left arm and right leg.,1,,entailment
+18,The patient reports numbness in his right leg.,0.9833,The patient experiences numbness in their left arm and right leg.,1,,entailment
+19,The patient reports spasms throughout his body.,0.9802,The patient experiences spasms.,1,,entailment
+20,The patient has been experiencing fatigue.,0.9512,The patient experiences fatigue since the accident.,1,,entailment
+21,The patient has undergone surgery after one of the car crashes.,0.9617,The patient had surgery after the third car crash.,1,,entailment
+22,The patient is taking Fentanyl.,0.9684,The patient was previously on fentanyl.,1,,entailment
+23,The Fentanyl dose is not specified.,0.9162,Fentanyl is a medication.,0,fabrication,neutral
+24,The Fentanyl frequency is not specified.,0.9096,Fentanyl is a medication.,0,fabrication,neutral
+25,Fentanyl is prescribed for pain.,0.9745,Fentanyl was previously prescribed for the patient's pain.,1,,entailment
+26,The patient is taking Robaxin.,0.9674,The doctor prescribed robaxin for the patient.,1,,entailment
+27,The Robaxin dose is 1500mg.,0.9945,The robaxin dose is 1500 milligrams.,1,,entailment
+28,Robaxin is taken every 6-8 hours.,0.9998,Robaxin is taken every 6 to 8 hours.,1,,entailment
+29,Robaxin is prescribed for muscle relaxation.,0.9818,Robaxin is prescribed to relax the muscles and reduce tension in the patient's neck.,1,,entailment
+30,The patient has pain on palpation of the neck.,0.9779,The patient experiences pain on palpation of the bony process and muscle in their neck.,1,,entailment
+31,The patient has pain on palpation of the bony process of the neck.,0.9911,The patient experiences pain on palpation of the bony process and muscle in their neck.,1,,entailment
+32,The patient has pain on palpation of the muscle of the neck.,0.9827,The patient experiences pain on palpation of the bony process and muscle in their neck.,1,,entailment
+33,The patient has moderate range of movement in his neck.,0.9987,The patient has a moderate range of movement in their neck.,1,,entailment
+34,The patient experiences pain when bending forward.,0.9536,The patient is unable to bend their neck forward without pain.,1,,entailment
+35,The patient experiences pain when bending backwards.,0.9583,The patient is unable to bend their neck backward without pain.,1,,entailment
+36,The patient does not have bruising on his neck.,0.969,The patient sometimes experiences bruising on their neck.,1,,entailment
+37,The patient does not have swelling on his neck.,0.9527,The doctor did not observe any bruising or swelling on the patient's neck during the exam.,1,,entailment
+38,The patient does not have laceration on his neck.,0.9225,The doctor did not observe any bruising or swelling on the patient's neck during the exam.,1,,entailment
+39,The patient has a neck sprain.,0.9676,The doctor diagnosed the patient with a neck sprain.,1,,entailment
+40,The patient's pain can be explained by multiple factors.,1.0,The patient's pain can be explained by multiple factors.,1,,entailment
+41,The patient does not have a broken neck.,0.9217,"Pamela, another healthcare provider, suggested the patient's neck might be broken.",0,fabrication,contradiction
+42,The patient's problem list includes neck sprain.,0.9488,The doctor diagnosed the patient with a neck sprain.,0,fabrication,neutral
+43,The patient's neck sprain is active.,0.934,The doctor diagnosed the patient with a neck sprain.,0,fabrication,neutral
+44,The doctor prescribed Robaxin.,0.9934,The doctor prescribed robaxin for the patient.,1,,entailment
+45,The Robaxin dose is 1500mg.,0.9945,The robaxin dose is 1500 milligrams.,1,,entailment
+46,Robaxin is taken every 6-8 hours.,0.9998,Robaxin is taken every 6 to 8 hours.,1,,entailment
+47,Robaxin is prescribed for muscle relaxation.,0.9818,Robaxin is prescribed to relax the muscles and reduce tension in the patient's neck.,1,,entailment
+48,The patient is advised to apply ice to his neck.,0.9151,"The patient's body hurts, particularly their neck.",0,fabrication,neutral
+49,The patient is advised to apply ice when experiencing bruising.,0.9271,The patient sometimes experiences bruising on their neck.,0,fabrication,neutral
+50,The patient is advised to apply ice when experiencing swelling.,0.9148,The doctor may use local injections to help the patient's pain.,0,fabrication,contradiction
+51,The patient is advised to perform exercises.,0.9025,The doctor performed a physical exam on the patient.,0,fabrication,neutral
+52,The patient's exercises are to improve range of movement.,0.9135,The patient has a moderate range of movement in their neck.,0,fabrication,neutral
+53,The patient was referred to physical therapy.,0.9412,The doctor will consider referring the patient to physical therapy after the MRI results are available.,0,fabrication,neutral
+54,The patient was ordered an MRI.,0.9832,The doctor ordered an MRI for the patient.,1,,entailment
+55,The MRI is to evaluate the extent of the injury.,0.947,The MRI will provide a thorough image of the patient's neck and soft tissues.,0,fabrication,neutral
+56,The patient may need local injections.,0.9599,The doctor may use local injections to help the patient's pain.,1,,entailment
+57,The patient will be given a work excuse.,0.9384,The doctor will provide the patient with a note to excuse them from work until the MRI results are available.,1,,entailment
+58,The work excuse is until the MRI results are available.,0.9545,The doctor will provide the patient with a note to excuse them from work until the MRI results are available.,1,,entailment
+59,The patient will be reassessed after the MRI results are available.,0.9406,The doctor will consider referring the patient to physical therapy after the MRI results are available.,1,,entailment
+60,The next course of action will be determined after the MRI results are available.,0.9214,The doctor will consider referring the patient to physical therapy after the MRI results are available.,1,,entailment

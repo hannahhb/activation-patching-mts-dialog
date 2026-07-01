@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Matthew, has been experiencing lower back pain for an extended period, with the pain radiating down his left leg.",Faithful,
+1,"He rates his current pain level as 6 out of 10, with a worst-case scenario of 13 out of 10.",Faithful,
+2,"The pain is exacerbated by standing, walking, coughing, and sneezing, and is alleviated by lying down.",Faithful,
+3,"He has difficulty standing and walking due to pain, and uses a cane for support.",Faithful,
+4,"He has numbness and tingling in his lower extremities, with weakness in both legs.",Faithful,
+5,"Past medical history: The patient had a fall off a roof 30 years ago, which may have resulted in a fracture or possible disk injury.",Faithful,
+6,He has been experiencing back pain for about a month.,Faithful,
+7,"Review of systems: The patient's symptoms are primarily localized to his lower back and left leg, with no mention of other systemic symptoms.",Faithful,
+8,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+9,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+10,"The patient's back exam revealed no bony abnormalities, redness, or bruising.",Faithful,
+11,"He was positive for pain to palpation at the L4 vertebrae, and experienced pain with flexion and extension of his back.",Faithful,
+12,"His strength in the left leg was 4 out of 5, and 5 out of 5 in the right leg.",Faithful,
+13,His reflexes were brisk and motor and sensory function was intact in both lower extremities.,Faithful,
+14,The MRI showed a disk herniation at the level of L4-L5 vertebrae associated with nerve root impingement.,Faithful,
+15,"The patient has acute disk herniation at L4-L5 with nerve root impingement, causing lower back pain and radiating pain down his left leg.",Faithful,
+16,Back pain; acute disk herniation at L4-L5 with nerve root impingement; lower back pain; leg pain; weakness in both legs.,Faithful,
+17,I recommended an epidural steroid injection to alleviate the inflammation and pain.,Faithful,
+18,I will refer the patient to physical therapy to strengthen the area.,Faithful,
+19,The patient will see me again in a month to assess the effectiveness of the treatment.,Faithful,
+20,I will see the patient in a month to review the effectiveness of the treatment and adjust as needed.,Causality,and adjust as needed

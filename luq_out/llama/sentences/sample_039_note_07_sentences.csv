@@ -1,31 +1,31 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, a 56-year-old male, presents with difficulty swallowing, a problem that has been ongoing for approximately 4-5 weeks.",0.3906
-2,"He describes a sensation of something being stuck in his throat, which is painful and occasionally requires him to wash it down with water.",0.8214
-3,He has never fully choked but has thought about it.,0.8905
-4,"The symptom is more pronounced with solid foods, particularly those that require chewing, such as steak.",0.9997
-5,"There is no coughing or vomiting, and he denies any blood in his stool or vomit.",0.484
-6,Past medical history: The patient has a history of diabetes and high blood pressure.,0.2961
-7,He is currently taking metformin 500mg twice daily for his diabetes and norvasc for his high blood pressure.,0.4497
-8,"Review of systems: The patient denies any chest pain, shortness of breath, nausea, vomiting, diarrhea, or other symptoms related to his diabetes or high blood pressure.",0.4373
+1,"HPI: The patient, a 56-year-old male, presents with difficulty swallowing, a problem that has been ongoing for approximately 4-5 weeks.",0.0074
+2,"He describes a sensation of something being stuck in his throat, which is painful and occasionally requires him to wash it down with water.",0.1284
+3,He has never fully choked but has thought about it.,0.1157
+4,"The symptom is more pronounced with solid foods, particularly those that require chewing, such as steak.",0.3405
+5,"There is no coughing or vomiting, and he denies any blood in his stool or vomit.",0.0409
+6,Past medical history: The patient has a history of diabetes and high blood pressure.,0.0129
+7,He is currently taking metformin 500mg twice daily for his diabetes and norvasc for his high blood pressure.,0.047
+8,"Review of systems: The patient denies any chest pain, shortness of breath, nausea, vomiting, diarrhea, or other symptoms related to his diabetes or high blood pressure.",0.0209
 9,Current medications:,0.5
-10,Metformin 500mg twice daily for diabetes,0.4673
-11,Norvasc for high blood pressure,0.6841
+10,Metformin 500mg twice daily for diabetes,0.0663
+11,Norvasc for high blood pressure,0.1572
 12,Objective:,0.5
-13,Vital signs: The patient's blood pressure is 120/80 mmHg.,0.8887
-14,Physical exam: The examination of the patient's neck is normal with no swelling or masses.,0.1431
-15,"The thyroid is normal, and there are no lymph nodes.",0.2847
-16,"The throat examination is also normal with no masses, swelling, or redness.",0.9904
-17,"The lung exam is clear, and the heart exam is normal with no murmurs.",0.5972
-18,"The belly exam reveals epigastric tenderness in the right upper quadrant, but no masses or significant swelling are palpable.",0.8346
-19,"The back exam is normal, and the extremity and neurological exams are also normal.",0.6748
+13,Vital signs: The patient's blood pressure is 120/80 mmHg.,0.8883
+14,Physical exam: The examination of the patient's neck is normal with no swelling or masses.,0.1348
+15,"The thyroid is normal, and there are no lymph nodes.",0.2463
+16,"The throat examination is also normal with no masses, swelling, or redness.",0.8623
+17,"The lung exam is clear, and the heart exam is normal with no murmurs.",0.4393
+18,"The belly exam reveals epigastric tenderness in the right upper quadrant, but no masses or significant swelling are palpable.",0.379
+19,"The back exam is normal, and the extremity and neurological exams are also normal.",0.6632
 20,Test Results: [NOT MENTIONED],0.5
 21,Assessment / Problem List:,0.5
-22,"Assessment: The patient is experiencing difficulty swallowing, which may be due to a narrowing in the throat, potentially caused by a stricture or narrowing of the esophagus.",0.0044
-23,Problem list: Difficulty swallowing; Narrowing of the esophagus; Diabetes; High blood pressure; Stricture of the esophagus; Reflux disease.,0.7865
+22,"Assessment: The patient is experiencing difficulty swallowing, which may be due to a narrowing in the throat, potentially caused by a stricture or narrowing of the esophagus.",0.0001
+23,Problem list: Difficulty swallowing; Narrowing of the esophagus; Diabetes; High blood pressure; Stricture of the esophagus; Reflux disease.,0.3945
 24,Plan:,0.5
-25,I prescribed prilosec 20mg once daily for reflux disease.,0.004
-26,"I recommended that the patient chew their foods frequently, particularly hard foods like steak or meat, to prevent them from getting stuck.",0.5601
-27,I also ordered a referral for gastroenterology to perform an esophagogastroduodenoscopy (EGD) to investigate the cause of the difficulty swallowing.,0.1174
-28,"I ordered a repeat hemoglobin A1c, kidney function tests, and an eye referral to ophthalmology to check for diabetic retinopathy.",0.2254
-29,Follow-up: I will see the patient in about a month to review the results of the blood tests and adjust his medication as needed.,0.1209
+25,I prescribed prilosec 20mg once daily for reflux disease.,0.0019
+26,"I recommended that the patient chew their foods frequently, particularly hard foods like steak or meat, to prevent them from getting stuck.",0.3744
+27,I also ordered a referral for gastroenterology to perform an esophagogastroduodenoscopy (EGD) to investigate the cause of the difficulty swallowing.,0.1153
+28,"I ordered a repeat hemoglobin A1c, kidney function tests, and an eye referral to ophthalmology to check for diabetic retinopathy.",0.1507
+29,Follow-up: I will see the patient in about a month to review the results of the blood tests and adjust his medication as needed.,0.0036

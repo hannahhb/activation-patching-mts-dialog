@@ -1,0 +1,21 @@
+sentence_idx,sentence,label
+0,"HPI: The patient, a 54-year-old male, presents with a complaint of stabbing, shooting pain in the right cheekbone area of his face, which has been ongoing for approximately 2-3 months.",Faithful
+1,He reports that the pain is exacerbated by certain temperatures and can be triggered by cold weather.,Faithful
+2,He denies numbness or tingling in the affected area and reports that his smile and vision are unchanged.,Faithful
+3,He describes the pain as excruciating and rates it as a 10 out of 10 in severity.,Faithful
+4,"He has tried ibuprofen, Motrin, and topical treatments such as tiger balm, which have provided minimal relief.",Faithful
+5,"Past medical history: The patient has a history of occasional headaches, for which he takes Tylenol, but denies a history of migraines or brain tumors.",Faithful
+6,Review of systems: The patient reports no symptoms in other organs or systems.,Fabrication
+7,Current medications: He takes Tylenol for occasional headaches.,Faithful
+8,Vital signs: Not mentioned.,Faithful
+9,"Physical exam: The patient was able to follow my finger in both directions, and his smile appeared symmetric.",Faithful
+10,He reported a little numbness on the right side of his face when I rubbed my fingers next to his ear.,Contextual
+11,"When I used a cotton tape to run along the side of his face, he reported feeling a little numb on the right side.",Faithful
+12,"When I poked him with a needle on the right side of his face, he reported feeling dull, whereas on the left side, he reported feeling sharp.",Contextual
+13,"Assessment: The patient has trigeminal neuralgia, a condition where compression of the trigeminal nerve by a small blood vessel causes shooting, electrical pain in the face.",Faithful
+14,Problem list: Trigeminal neuralgia; confirmed.,Fabrication
+15,I prescribed Tegretol 100mg orally 3 times a day for the treatment of trigeminal neuralgia.,Faithful
+16,"I explained the potential side effects of the medication, including memory loss, tingling, imbalance, and dermatologic reactions, particularly in individuals with Eustachian tube dysfunction.",Faithful
+17,I recommended genetic testing to ensure the medication is safe for the patient.,Faithful
+18,I instructed the patient to follow up in one month to assess the efficacy of the medication and to discuss further treatment options if necessary.,Faithful
+19,The patient will return in one month to assess the efficacy of the Tegretol and to discuss further treatment options if necessary.,Faithful

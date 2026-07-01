@@ -1,0 +1,13 @@
+sentence_idx,sentence,label,note_span
+0,"The patient, a 30-year-old female, presents with a chronic history of asthma symptoms, including coughing and wheezing, which have been exacerbated by respiratory infections and exposure to her aunt's cat.",Faithful,
+1,"She reports frequent use of her albuterol inhaler, often needing to use it daily, and experiencing wheezing and coughing at night.",Faithful,
+2,"She has had several urgent care visits and one emergency department visit in the past year, often requiring prednisone treatment.",Faithful,
+3,She denies any smoking or vaping history and has no history of seasonal allergies.,Faithful,
+4,"Vital signs: Blood pressure 128/82, respiratory rate 16, oxygen saturation 99% on room air.",Faithful,
+5,"Physical exam: Heart regular rate and rhythm, no ectopic beats, rubs, murmurs, or gallops; diminished lung sounds with occasional slight expiratory wheeze bilaterally; neck is supple, trachea midline, no lymphadenopathy, carotid bruit, clubbing, or capillary refill abnormality.",Faithful,
+6,"Assessment: The patient has moderate intermittent asthma, as evidenced by her symptoms and pulmonary function test results.",Faithful,
+7,Problem list: Asthma; moderate intermittent asthma; suspected asthma exacerbation.,Fabrication,suspected asthma exacerbation
+8,I prescribed Flovent 110 micrograms one puff twice per day to help prevent daily symptoms and reduce reliance on her albuterol inhaler.,Faithful,
+9,I will also provide an asthma action plan to help manage her symptoms and identify triggers.,Faithful,
+10,"She is to continue using her Ventolin inhaler as needed for acute exacerbations, taking 2 puffs every 4-6 hours as needed.",Faithful,
+11,I will see the patient in a month or sooner if she experiences worsening symptoms.,Faithful,

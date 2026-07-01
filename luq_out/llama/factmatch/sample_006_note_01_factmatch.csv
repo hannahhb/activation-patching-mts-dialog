@@ -1,0 +1,42 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Matthew.,1.0,The patient's name is Matthew.,1,,entailment
+1,The patient is a 30-year-old male.,0.9554,The patient is a male.,1,,entailment
+2,The patient has been experiencing back pain for an extended period.,0.9699,The back pain has been present for a long time.,1,,entailment
+3,The patient's back pain worsened over the past month.,0.9493,The patient's back pain worsens with walking.,0,fabrication,neutral
+4,The patient's pain is located in the lower back.,0.9453,"The patient's pain goes from their back into the hip, side of the leg, and calf, and to the big toe.",1,,entailment
+5,The patient's pain radiates down the left leg.,0.9922,The patient has pain radiating down their left leg.,1,,entailment
+6,"The patient describes his pain as an ""electrical toothache"".",0.9691,The pain in the left leg is described as an electrical toothache.,1,,entailment
+7,The patient's pain worsens with standing.,0.9912,The patient's back pain worsens with standing.,1,,entailment
+8,The patient's pain worsens with walking.,0.9857,The patient's back pain worsens with walking.,1,,entailment
+9,The patient's pain worsens with coughing.,0.9868,The patient's back pain worsens with coughing.,1,,entailment
+10,The patient's pain worsens with sneezing.,0.9859,The patient's back pain worsens with sneezing.,1,,entailment
+11,The patient rates his pain as 6 out of 10 currently.,0.9915,The patient rates their current pain as 6 out of 10.,1,,entailment
+12,The patient's pain can be as high as 13 out of 10.,0.9849,The patient's pain can be as high as 13 out of 10 when it gets really bad.,1,,entailment
+13,Laying down brings relief to the patient.,0.9628,The patient's back pain improves with laying down.,1,,entailment
+14,The patient had a past injury from a fall off a roof 30 years ago.,0.9778,The patient has a history of falling off a roof 30 years ago.,1,,entailment
+15,The patient's past injury may have resulted in a possible fracture.,0.9502,The patient was told they may have had a fracture after the fall.,1,,entailment
+16,The patient reports numbness in both lower extremities.,0.9317,The patient's motor and sensory functions are intact in both lower extremities.,0,negation,contradiction
+17,The patient reports tingling in both lower extremities.,0.9207,The patient's motor and sensory functions are intact in both lower extremities.,0,fabrication,contradiction
+18,The patient reports weakness in both legs.,0.9378,The patient has 4 out of 5 strength in their left leg.,0,negation,contradiction
+19,Coughing exacerbates the patient's symptoms.,0.9665,The patient's back pain worsens with coughing.,1,,entailment
+20,Sneezing exacerbates the patient's symptoms.,0.9681,The patient's back pain worsens with sneezing.,1,,entailment
+21,The patient has pain to palpation at the L4 vertebrae.,1.0,The patient has pain to palpation at the L4 vertebrae.,1,,entailment
+22,The patient has pain with flexion of the back.,0.986,The patient has pain with flexion and extension of their back.,1,,entailment
+23,The patient has pain with extension of the back.,0.9832,The patient has pain with flexion and extension of their back.,1,,entailment
+24,Strength in the patient's left leg is 4 out of 5.,0.9888,The patient has 4 out of 5 strength in their left leg.,1,,entailment
+25,Strength in the patient's right leg is 5 out of 5.,0.9886,The patient has 5 out of 5 strength in their right leg.,1,,entailment
+26,The patient's reflexes are brisk.,1.0,The patient's reflexes are brisk.,1,,entailment
+27,Motor function is intact in both of the patient's lower extremities.,0.9857,The patient's motor and sensory functions are intact in both lower extremities.,1,,entailment
+28,Sensory function is intact in both of the patient's lower extremities.,0.9886,The patient's motor and sensory functions are intact in both lower extremities.,1,,entailment
+29,The MRI shows a disk herniation at the level of L4-L5 vertebrae.,0.9759,The patient has a disk herniation at the L4-L5 vertebrae.,1,,entailment
+30,The disk herniation is associated with some nerve root impingement.,0.9982,The disk herniation is associated with nerve root impingement.,1,,entailment
+31,The patient has acute disk herniation at L4-L5 with nerve root impingement.,0.9894,The patient's diagnosis is acute disk herniation at L4-L5 with nerve root impingement.,1,,entailment
+32,The patient has lower back pain.,0.9624,The patient has back pain.,1,,entailment
+33,The patient has leg pain.,0.9479,The patient has pain radiating down their left leg.,1,,entailment
+34,The patient has weakness in both legs.,0.9428,The patient has 4 out of 5 strength in their left leg.,0,negation,contradiction
+35,The doctor prescribed an epidural steroid injection.,1.0,The doctor prescribed an epidural steroid injection.,1,,entailment
+36,The epidural steroid injection is to place anti-inflammatory medication at the site of inflammation.,0.9701,The epidural steroid injection is for the patient's back pain.,1,,entailment
+37,The doctor referred the patient to physical therapy.,0.967,The doctor recommends physical therapy for the patient.,1,,entailment
+38,Physical therapy is to strengthen the area.,0.9435,The doctor recommends physical therapy for the patient.,0,fabrication,neutral
+39,The patient is to return in about a month to reassess the effectiveness of the injection.,0.9448,The patient will see the doctor again in about a month.,0,fabrication,neutral
+40,The doctor wants to see the patient again in about a month.,0.9933,The patient will see the doctor again in about a month.,1,,entailment

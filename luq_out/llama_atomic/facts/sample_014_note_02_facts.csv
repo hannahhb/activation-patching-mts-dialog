@@ -1,0 +1,66 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Larry.,0.3736
+1,subjective,The patient is a 60-year-old male.,0.9999
+2,subjective,The patient has been experiencing chronic back pain.,0.0511
+3,subjective,The patient's back pain started after lifting furniture.,0.9747
+4,subjective,The patient's back pain has been present for a couple of years.,0.1503
+5,subjective,The patient describes the back pain as sharp stabbing.,0.0111
+6,subjective,The patient's back pain radiates down to his right leg.,0.0189
+7,subjective,The patient's back pain radiates down to his big toe.,0.2367
+8,subjective,The patient reports numbness in his right leg.,0.0177
+9,subjective,The patient reports tingling in his right leg.,0.0468
+10,subjective,The numbness and tingling are particularly in the right lateral thigh.,0.6919
+11,subjective,The numbness and tingling are at the L4 dermatome.,0.9994
+12,subjective,The patient denied loss of sensation in the genital area.,0.415
+13,subjective,The patient denied loss of sensation in the rectal area.,0.4353
+14,subjective,The patient denied weakness.,0.2004
+15,subjective,The patient denied loss of bladder control.,0.4527
+16,subjective,The patient denied loss of bowel control.,0.3227
+17,subjective,The patient denied any family history of spine conditions.,0.2367
+18,subjective,The patient has tried physical therapy.,0.0984
+19,subjective,The patient has tried pain medications.,0.0136
+20,subjective,The patient has been advised of surgery.,0.5796
+21,subjective,The patient prefers to avoid surgery.,0.6795
+22,subjective,The patient has gained weight due to his back pain.,0.119
+23,subjective,The patient has difficulty being active.,0.3348
+24,subjective,The patient used to enjoy playing golf.,0.7731
+25,subjective,The patient has had to stop playing golf due to his condition.,0.5941
+26,subjective,The patient denies any other symptoms.,0.5921
+27,objective,The patient had a musculoskeletal back exam.,0.0673
+28,objective,The musculoskeletal back exam revealed no overlying erythema.,0.6648
+29,objective,The musculoskeletal back exam revealed no ecchymosis.,0.6924
+30,objective,The patient had midline tenderness at L4-L5 disk space.,0.1518
+31,objective,The patient had right-sided lumbar paravertebral tenderness.,0.8818
+32,objective,The patient experienced pain with lumbar flexion.,0.0112
+33,objective,The patient had a positive straight leg test.,0.2066
+34,objective,The patient had a neurological examination.,0.3714
+35,objective,The neurological examination revealed decreased sensation to light touch at the right lateral thigh.,0.4788
+36,objective,The decreased sensation to light touch is at L4 dermatome.,0.9509
+37,objective,The patient had symmetrical patellar reflexes.,0.658
+38,objective,The patient had symmetrical Achilles reflexes.,0.609
+39,objective,The patient had an MRI.,0.013
+40,objective,The MRI results show disk herniation.,0.0041
+41,objective,The MRI results show nerve impingement.,0.0324
+42,objective,The disk herniation is at L4-L5.,0.9891
+43,objective,The nerve impingement is at L4-L5.,0.9925
+44,assessment,The patient has lumbar back pain.,0.017
+45,assessment,The patient has an L4-L5 herniated disk.,0.0216
+46,assessment,The patient has radiculopathy.,0.3714
+47,assessment,The patient has obesity.,0.9649
+48,assessment,The patient's symptoms are consistent with an L4-L5 herniated disk with radiculopathy.,0.0333
+49,assessment,The L4-L5 herniated disk with radiculopathy causes pain.,0.0238
+50,assessment,The L4-L5 herniated disk with radiculopathy causes numbness.,0.8887
+51,assessment,The pain is located in the right leg.,0.8896
+52,assessment,The numbness is located in the right leg.,0.8897
+53,plan,The doctor prescribed a corticosteroid injection.,0.0015
+54,plan,The corticosteroid injection is administered to the lumbar spine.,0.4296
+55,plan,The corticosteroid injection is administered under fluoroscopy.,0.0044
+56,plan,The corticosteroid injection is prescribed to reduce inflammation.,0.1448
+57,plan,The corticosteroid injection is prescribed to alleviate pain.,0.1446
+58,plan,The doctor will monitor the patient's response to the corticosteroid injection.,0.006
+59,plan,The patient will have follow-up appointments as needed.,0.0151
+60,plan,The patient will not require ongoing treatment.,0.9809
+61,plan,The patient may need up to four corticosteroid injections per year.,0.4487
+62,plan,The patient will return for a follow-up appointment.,0.1306
+63,plan,The follow-up appointment is to assess the effectiveness of the corticosteroid injection.,0.9994
+64,plan,The follow-up appointment is to schedule additional corticosteroid injections as needed.,0.7166

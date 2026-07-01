@@ -1,33 +1,33 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, William, presented with a history of injuring his right knee at a trampoline park a week ago, which he describes as a sudden pain and a ""pop"" when he landed.",0.7161
-2,"He has been experiencing pain on the outside of the knee, which has been managed with Tylenol but not significantly improved.",0.2695
-3,He reports a slight limp and difficulty walking.,0.8898
-4,"Past medical history: The patient has hypertension, for which he is currently taking 20mg of lisinopril daily.",0.2967
-5,"He also has diabetes, for which he is taking metformin 500mg daily, but his diet and exercise regimen are inconsistent.",0.6955
-6,He reports checking his blood sugar levels 4-5 times a week.,0.6958
+1,"HPI: The patient, William, presented with a history of injuring his right knee at a trampoline park a week ago, which he describes as a sudden pain and a ""pop"" when he landed.",0.0399
+2,"He has been experiencing pain on the outside of the knee, which has been managed with Tylenol but not significantly improved.",0.0588
+3,He reports a slight limp and difficulty walking.,0.3119
+4,"Past medical history: The patient has hypertension, for which he is currently taking 20mg of lisinopril daily.",0.0585
+5,"He also has diabetes, for which he is taking metformin 500mg daily, but his diet and exercise regimen are inconsistent.",0.1234
+6,He reports checking his blood sugar levels 4-5 times a week.,0.4303
 7,Review of systems: [NOT MENTIONED],0.5
 8,Current medications:,0.5
-9,Lisinopril 20mg daily for hypertension,0.4621
-10,Metformin 500mg daily for diabetes,0.6794
+9,Lisinopril 20mg daily for hypertension,0.0161
+10,Metformin 500mg daily for diabetes,0.116
 11,Objective:,0.5
 12,Vital signs:,0.5
-13,Blood pressure: 180/80,0.9964
+13,Blood pressure: 180/80,0.5138
 14,Pulse rate: [NOT MENTIONED],0.5
 15,Oxygen saturation: [NOT MENTIONED],0.5
 16,Temperature: [NOT MENTIONED],0.5
-17,Physical exam: The patient's blood pressure was noted to be high.,0.2262
-18,"The heart rate and rhythm were normal, and no murmur was appreciated.",0.7579
-19,The lungs sounded clear bilaterally.,0.6706
-20,"The knee exam revealed bruising and swelling (ecchymosis and edema) along the lateral aspect of the knee, but no effusion.",0.8926
-21,"The patient had a slight limp and pain with movement, but a decent range of motion.",0.4309
-22,Test Results: The patient's right knee x-ray showed no evidence of fracture or bony abnormality.,0.127
+17,Physical exam: The patient's blood pressure was noted to be high.,0.1116
+18,"The heart rate and rhythm were normal, and no murmur was appreciated.",0.6674
+19,The lungs sounded clear bilaterally.,0.4521
+20,"The knee exam revealed bruising and swelling (ecchymosis and edema) along the lateral aspect of the knee, but no effusion.",0.2027
+21,"The patient had a slight limp and pain with movement, but a decent range of motion.",0.0091
+22,Test Results: The patient's right knee x-ray showed no evidence of fracture or bony abnormality.,0.1015
 23,Assessment / Problem List:,0.5
-24,"Assessment: The patient has a lateral ligament strain of the right knee, hypertension, and diabetes.",0.1179
-25,Problem list: Right knee pain; hypertension; diabetes; suspected medication non-adherence.,0.5435
+24,"Assessment: The patient has a lateral ligament strain of the right knee, hypertension, and diabetes.",0.0068
+25,Problem list: Right knee pain; hypertension; diabetes; suspected medication non-adherence.,0.4575
 26,Plan:,0.5
-27,I prescribed Meloxicam 15mg daily for pain and swelling associated with the right knee injury.,0.3451
-28,I referred the patient to physical therapy to help strengthen the muscles around the area and prevent further injury.,0.0088
-29,I continued the patient's lisinopril at 20mg daily and ordered an echocardiogram to assess cardiac function and potential medication modification.,0.8907
-30,I also ordered an A1C and lipid panel to assess the patient's diabetes management.,0.1011
-31,Follow-up: I instructed the patient to follow up with me after receiving the results of the ordered tests.,0.3293
+27,I prescribed Meloxicam 15mg daily for pain and swelling associated with the right knee injury.,0.2332
+28,I referred the patient to physical therapy to help strengthen the muscles around the area and prevent further injury.,0.0007
+29,I continued the patient's lisinopril at 20mg daily and ordered an echocardiogram to assess cardiac function and potential medication modification.,0.031
+30,I also ordered an A1C and lipid panel to assess the patient's diabetes management.,0.099
+31,Follow-up: I instructed the patient to follow up with me after receiving the results of the ordered tests.,0.001

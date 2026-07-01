@@ -1,0 +1,19 @@
+sentence_idx,sentence,label
+0,"HPI: The patient is a female who has been experiencing headaches for years, starting from her teenage years, initially associated with her menstrual periods, but now also triggered by stress and exercise.",Faithful
+1,"She has noticed an increase in frequency and severity of headaches, which are mainly located on the right side and described as a pulsing sensation behind her eye.",Faithful
+2,"She also reports a ringing in her ears and blurred vision, which has been intermittent.",Faithful
+3,She denies numbness or tingling in her hands or feet or face.,Faithful
+4,Past medical history: The patient's past medical history is not mentioned.,Fabrication
+5,"Review of systems: The patient reports a ringing in her ears and blurred vision, which is new and concerning.",Faithful
+6,Current medications: [NOT MENTIONED],Fabrication
+7,"Vital signs: Blood pressure is normal, but specific values are not mentioned.",Faithful
+8,"Physical exam: The funduscopic exam shows papilledema, indicating swelling behind the eye.",Faithful
+9,"The cranial nerves one through twelve are intact, including a normal cranial reflex.",Faithful
+10,The patient's gait is normal.,Faithful
+11,Test Results: [NOT MENTIONED],Fabrication
+12,"Assessment: The patient's symptoms are concerning for idiopathic intracranial hypertension, a condition characterized by increased pressure in the brain without a known cause.",Faithful
+13,Problem list: Idiopathic intracranial hypertension; Suspected; Confirmed; [NOT MENTIONED],Fabrication
+14,I plan to order an MRI to confirm the diagnosis and rule out other potential contributing conditions.,Faithful
+15,I will also perform a spinal tap to evaluate the pressure in the brain and potentially alleviate symptoms.,Faithful
+16,"Additionally, I will refer the patient to a neuro-ophthalmologist for a comprehensive eye exam.",Faithful
+17,"Follow-up: The patient will be scheduled for an MRI after obtaining insurance preapproval, and the date and time will be communicated to her by the front office staff.",Faithful

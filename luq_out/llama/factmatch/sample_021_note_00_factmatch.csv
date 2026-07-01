@@ -1,0 +1,64 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Brandon.,1.0,The patient's name is Brandon.,1,,entailment
+1,The patient presents with neck pain.,0.9845,The patient is experiencing neck pain.,1,,entailment
+2,The neck pain started after a car crash in February of this year.,0.9626,The neck pain is due to a car crash.,1,,entailment
+3,The patient reports experiencing sharp pain.,0.9539,"The patient experiences sharp, incapacitating pain.",1,,entailment
+4,The patient reports experiencing incapacitating pain.,0.969,"The patient experiences sharp, incapacitating pain.",1,,entailment
+5,The pain worsens with movement.,0.9308,The patient is unable to move their neck from side to side without pain.,0,fabrication,neutral
+6,The pain worsens with bending forward.,0.9424,The patient is unable to bend their neck forward without pain.,0,fabrication,neutral
+7,The pain worsens with bending backward.,0.9482,The patient is unable to bend their neck backward without pain.,0,fabrication,neutral
+8,The patient reports experiencing numbness in his left arm.,0.9867,The patient experiences numbness in their left arm and right leg.,1,,entailment
+9,The patient reports experiencing numbness in his right leg.,0.9829,The patient experiences numbness in their left arm and right leg.,1,,entailment
+10,The patient reports experiencing spasms throughout his body.,0.9822,The patient experiences spasms.,1,,entailment
+11,The patient has had multiple car crashes in the past.,0.9889,The patient has been in multiple car crashes.,1,,entailment
+12,The patient underwent surgery after one of the car crashes.,0.9674,The patient had surgery after the third car crash.,1,,entailment
+13,The patient has been experiencing headaches.,0.9769,The patient experiences headaches.,1,,entailment
+14,The patient has been experiencing dizziness.,0.963,The patient experiences dizziness sometimes.,1,,entailment
+15,The patient has been experiencing visual disturbances.,0.9697,The patient does not currently experience visual disturbances.,1,,entailment
+16,The headaches have been relatively mild.,0.9377,The patient experiences headaches.,0,fabrication,neutral
+17,The dizziness has been relatively mild.,0.9453,The patient experiences dizziness sometimes.,0,fabrication,neutral
+18,The visual disturbances have been relatively mild.,0.9408,The patient does not currently experience visual disturbances.,0,fabrication,neutral
+19,The patient has been taking fentanyl for his pain.,0.9769,Fentanyl was previously prescribed for the patient's pain.,1,,entailment
+20,The fentanyl has not been prescribed recently.,0.9519,The patient has previously been prescribed fentanyl.,1,,entailment
+21,The patient rates his pain at a level 12 out of 10.,0.9845,The patient rates their pain as a 12 on a scale of 1 to 10.,1,,entailment
+22,The patient has a history of car crashes.,0.9612,The patient has been in multiple car crashes.,1,,entailment
+23,The patient has a history of surgery after a car crash.,0.949,The patient had surgery after the third car crash.,1,,entailment
+24,The patient has been in therapy for a few months after one of the crashes.,0.9517,The patient saw a therapist for a few months after the second car crash.,1,,entailment
+25,The patient has been to a pain clinic.,0.9303,Fentanyl was previously prescribed for the patient's pain.,0,fabrication,neutral
+26,The patient was prescribed fentanyl at a pain clinic.,0.979,Fentanyl was previously prescribed for the patient's pain.,1,,entailment
+27,The patient reports experiencing fatigue since the accident.,0.9922,The patient experiences fatigue since the accident.,1,,entailment
+28,The patient is currently taking fentanyl.,0.9687,The patient was previously on fentanyl.,1,,entailment
+29,The quantity of fentanyl is not specified.,0.9134,Fentanyl is a medication.,0,fabrication,neutral
+30,The patient recently stopped taking fentanyl.,0.9594,The patient was previously on fentanyl.,1,,entailment
+31,The patient's neck pain is exacerbated by palpation on the bony process.,0.9785,The patient experiences pain on palpation of the bony process and muscle in their neck.,1,,entailment
+32,The patient's neck pain is exacerbated by palpation on the muscle.,0.9684,The patient experiences pain on palpation of the bony process and muscle in their neck.,1,,entailment
+33,The patient is unable to move his neck from side to side.,0.984,The patient is unable to move their neck from side to side without pain.,1,,entailment
+34,The patient reports pain with bending forward.,0.9471,The patient is unable to bend their neck forward without pain.,1,,entailment
+35,The patient reports pain with bending backward.,0.9536,The patient is unable to bend their neck backward without pain.,1,,entailment
+36,There is no bruising noted.,0.9284,The doctor did not observe any bruising or swelling on the patient's neck during the exam.,1,,entailment
+37,There is no swelling noted.,0.923,The doctor did not observe any bruising or swelling on the patient's neck during the exam.,1,,entailment
+38,There is no laceration noted.,0.88,The doctor did not observe any bruising or swelling on the patient's neck during the exam.,1,,entailment
+39,An x-ray was performed.,0.9449,The X-ray did not show any fracture.,1,,entailment
+40,The x-ray did not show a fracture.,0.9969,The X-ray did not show any fracture.,1,,entailment
+41,The patient has a neck sprain.,0.9676,The doctor diagnosed the patient with a neck sprain.,1,,entailment
+42,The neck sprain is likely causing the patient's pain.,0.9611,The patient is experiencing neck pain.,1,,entailment
+43,The neck sprain is likely causing the patient's limited range of motion.,0.9449,The patient has a moderate range of movement in their neck.,0,fabrication,neutral
+44,The doctor prescribed robaxin.,0.9934,The doctor prescribed robaxin for the patient.,1,,entailment
+45,The robaxin dose is 1500mg.,0.9945,The robaxin dose is 1500 milligrams.,1,,entailment
+46,Robaxin is taken every 6-8 hours.,0.9998,Robaxin is taken every 6 to 8 hours.,1,,entailment
+47,Robaxin is taken as needed.,0.9503,Robaxin is taken every 6 to 8 hours.,1,,entailment
+48,Robaxin is prescribed for pain.,0.9853,Robaxin is prescribed for the patient's neck pain.,1,,entailment
+49,The doctor instructed the patient to apply ice to the affected area.,0.9111,The doctor may use local injections to help the patient's pain.,0,fabrication,contradiction
+50,The doctor instructed the patient to apply ice when experiencing bruising.,0.923,The patient sometimes experiences bruising on their neck.,0,fabrication,neutral
+51,The doctor instructed the patient to apply ice when experiencing swelling.,0.9221,The doctor may use local injections to help the patient's pain.,0,fabrication,contradiction
+52,The doctor instructed the patient to perform exercises.,0.9332,The doctor performed a physical exam on the patient.,0,fabrication,neutral
+53,The exercises are to maintain range of motion.,0.8968,The patient has a moderate range of movement in their neck.,0,fabrication,neutral
+54,The patient was referred to physical therapy.,0.9412,The doctor will consider referring the patient to physical therapy after the MRI results are available.,0,fabrication,neutral
+55,The patient was referred for an MRI.,0.9673,The doctor ordered an MRI for the patient.,1,,entailment
+56,The MRI is to further evaluate the extent of the injury.,0.9454,The MRI will provide a thorough image of the patient's neck and soft tissues.,0,fabrication,neutral
+57,The patient was referred to pain management.,0.93,Fentanyl was previously prescribed for the patient's pain.,1,,entailment
+58,The pain management is for consideration of local injections.,0.9599,The doctor may use local injections to help the patient's pain.,1,,entailment
+59,The pain management is for further pain management options.,0.9228,The doctor may use local injections to help the patient's pain.,0,fabrication,neutral
+60,The doctor will schedule a follow-up appointment.,0.9122,The doctor will monitor the patient's condition conservatively.,0,fabrication,neutral
+61,The follow-up appointment is to review the MRI results.,0.9282,The doctor will consider referring the patient to physical therapy after the MRI results are available.,1,,entailment
+62,The follow-up appointment is to determine the next steps in treatment.,0.9029,The doctor will consider referring the patient to physical therapy after the MRI results are available.,0,fabrication,neutral

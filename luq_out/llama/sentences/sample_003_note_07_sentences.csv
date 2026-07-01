@@ -1,29 +1,29 @@
 sentence_idx,sentence,uncertainty
 0,Here is the SOAP note:,0.5
 1,Subjective:,0.5
-2,"HPI: The patient, Stephanie Morales, is a 36-year-old female presenting with ankle pain, which occurred 2 days ago when she slipped on ice and twisted her left ankle on the outside.",0.8914
-3,"She reports pain, swelling, and difficulty walking.",0.498
-4,"She has tried ibuprofen, ice, and elevation for pain and swelling, with minimal relief.",0.5357
-5,Past medical history: The patient has a history of diabetes and high blood pressure.,0.6246
-6,She is currently taking metformin and norvasc.,0.3783
-7,Review of systems: No pain or symptoms in other organs are reported.,0.8929
+2,"HPI: The patient, Stephanie Morales, is a 36-year-old female presenting with ankle pain, which occurred 2 days ago when she slipped on ice and twisted her left ankle on the outside.",0.1376
+3,"She reports pain, swelling, and difficulty walking.",0.0525
+4,"She has tried ibuprofen, ice, and elevation for pain and swelling, with minimal relief.",0.1514
+5,Past medical history: The patient has a history of diabetes and high blood pressure.,0.0377
+6,She is currently taking metformin and norvasc.,0.12
+7,Review of systems: No pain or symptoms in other organs are reported.,0.3539
 8,Current medications:,0.5
-9,Metformin [dosage NOT MENTIONED] [frequency NOT MENTIONED] [indication: diabetes],0.997
-10,Norvasc [dosage NOT MENTIONED] [frequency NOT MENTIONED] [indication: high blood pressure],0.8891
+9,Metformin [dosage NOT MENTIONED] [frequency NOT MENTIONED] [indication: diabetes],0.4254
+10,Norvasc [dosage NOT MENTIONED] [frequency NOT MENTIONED] [indication: high blood pressure],0.4258
 11,Objective:,0.5
-12,"Vital signs: Blood pressure 120/70, [temperature NOT MENTIONED], [pulse rate NOT MENTIONED], [oxygen saturation NOT MENTIONED].",0.8881
-13,"Physical exam: The patient has tenderness over the lateral malleolus and the fifth metatarsal, with swelling and redness over the left ankle.",0.8293
-14,Valgus stressing of the ankle causes pain.,0.3925
-15,The patient has normal sensation and pulses in the affected area.,0.2951
-16,Test Results: [No lab results mentioned],0.9197
+12,"Vital signs: Blood pressure 120/70, [temperature NOT MENTIONED], [pulse rate NOT MENTIONED], [oxygen saturation NOT MENTIONED].",0.7411
+13,"Physical exam: The patient has tenderness over the lateral malleolus and the fifth metatarsal, with swelling and redness over the left ankle.",0.349
+14,Valgus stressing of the ankle causes pain.,0.387
+15,The patient has normal sensation and pulses in the affected area.,0.2786
+16,Test Results: [No lab results mentioned],0.7028
 17,Assessment / Problem List:,0.5
-18,"Assessment: The patient likely has an ankle sprain, and I am concerned for a possible fracture, which warrants an x-ray.",0.2232
-19,Problem list: Ankle sprain; possible fracture; diabetes; hypertension,0.9711
+18,"Assessment: The patient likely has an ankle sprain, and I am concerned for a possible fracture, which warrants an x-ray.",0.0451
+19,Problem list: Ankle sprain; possible fracture; diabetes; hypertension,0.3763
 20,Plan:,0.5
-21,I ordered an x-ray of the ankle to rule out a fracture.,0.1774
-22,I will put the patient in a splint and provide crutches until the x-ray results are available.,0.3545
-23,I prescribed naprosyn 500mg twice a day for pain control.,0.0121
-24,"I instructed the patient to elevate the ankle, apply ice, and avoid weightbearing until further notice.",0.4567
-25,I will call the patient if the x-ray shows a fracture and will refer her to orthopedics if necessary.,0.3375
-26,Follow-up: The patient will follow up with me after the x-ray results are available.,0.2275
-27,I will also see her in 2 weeks for a check-up and to review the results of the x-ray.,0.8891
+21,I ordered an x-ray of the ankle to rule out a fracture.,0.0496
+22,I will put the patient in a splint and provide crutches until the x-ray results are available.,0.0729
+23,I prescribed naprosyn 500mg twice a day for pain control.,0.0009
+24,"I instructed the patient to elevate the ankle, apply ice, and avoid weightbearing until further notice.",0.1728
+25,I will call the patient if the x-ray shows a fracture and will refer her to orthopedics if necessary.,0.1833
+26,Follow-up: The patient will follow up with me after the x-ray results are available.,0.1468
+27,I will also see her in 2 weeks for a check-up and to review the results of the x-ray.,0.6627

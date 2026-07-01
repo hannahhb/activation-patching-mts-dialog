@@ -1,0 +1,55 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 62-year-old male.,0.9162,The patient has diabetes.,0,fabrication,neutral
+1,The patient presents with a nonhealing foot ulcer.,0.9882,The patient has a nonhealing foot ulcer.,1,,entailment
+2,The foot ulcer is located on the dorsal aspect of the lateral right foot.,0.9494,There is a 1 by 2 inch circular wound on the dorsal aspect of the lateral right foot.,0,fabrication,neutral
+3,The foot ulcer has been present for approximately two months.,0.9912,The foot ulcer has lasted about two months.,1,,entailment
+4,The ulcer has recently become red.,0.9706,The patient's foot ulcer has recently become red.,1,,entailment
+5,The ulcer is draining.,0.9716,The patient's foot ulcer is draining.,1,,entailment
+6,The patient reports walking barefoot on the beach as a possible cause of the injury.,0.9599,The patient thinks they may have gotten the foot ulcer from walking barefoot on the beach.,1,,entailment
+7,The patient denies any trauma to the foot.,0.922,The patient is concerned about the healing of the foot ulcer.,0,fabrication,contradiction
+8,The patient was prescribed antibiotics by his primary care physician (PCP).,0.9629,The PCP prescribed medication for the patient.,1,,entailment
+9,The patient has not picked up the prescribed antibiotics.,0.9548,The patient did not pick up the prescribed medication from the pharmacy.,1,,entailment
+10,The patient does not recall the name of the prescribed medication.,1.0,The patient does not recall the name of the prescribed medication.,1,,entailment
+11,The patient reports occasional throbbing pain.,0.9363,The patient's foot sometimes throbs.,1,,entailment
+12,The patient reports redness around the ulcer.,0.9546,The patient's foot ulcer looks red.,1,,entailment
+13,The patient has a history of diabetes.,0.9713,The patient has diabetes.,1,,entailment
+14,The patient's diabetes is not well-controlled.,1.0,The patient's diabetes is not well-controlled.,1,,entailment
+15,The patient's reported A1c is around 10%.,0.9505,The patient's last A1c level was around 10.,1,,entailment
+16,The patient takes medication for diabetes.,1.0,The patient takes medication for diabetes.,1,,entailment
+17,The patient does not regularly check his blood sugar levels.,0.972,The patient does not check their sugar levels all the time.,1,,entailment
+18,The patient reports occasional throbbing pain in the foot.,0.9644,The patient's foot sometimes throbs.,1,,entailment
+19,The patient's temperature is normal.,0.9257,The patient does not have a fever.,1,,entailment
+20,The patient has no fever.,0.9905,The patient does not have a fever.,1,,entailment
+21,A one by two inch circular wound is present on the dorsal aspect of the lateral right foot.,0.9969,There is a 1 by 2 inch circular wound on the dorsal aspect of the lateral right foot.,1,,entailment
+22,The wound is proximal to the fifth MTP joint.,1.0,The wound is proximal to the fifth MTP joint.,1,,entailment
+23,The wound has redness.,0.9854,There is redness around the wound.,1,,entailment
+24,The wound has drainage.,0.9817,There is drainage present from the wound.,1,,entailment
+25,The wound has edema.,0.9787,There is edema around the wound.,1,,entailment
+26,The wound has fluid present.,0.9586,There is fluid coming out of the wound.,1,,entailment
+27,The wound has no necrosis.,0.991,There is no necrosis in the wound.,1,,entailment
+28,The wound has no odor.,0.9916,There is no odor from the wound.,1,,entailment
+29,The wound has no bony exposure.,0.9894,There is no bony exposure in the wound.,1,,entailment
+30,The patient reports increased pressure when the wound is touched.,0.9703,The doctor touched the wound and the patient felt increased pressure.,1,,entailment
+31,The patient reports no distinct pain when the wound is touched.,0.9614,The patient does not have distinct pain from the wound.,1,,entailment
+32,No evidence of osteomyelitis is present on an x-ray of the right foot.,0.973,The X-ray showed no evidence of osteomyelitis.,1,,entailment
+33,The patient has a diabetic foot ulcer.,0.9593,The patient is diabetic.,1,,entailment
+34,The diabetic foot ulcer has signs of infection.,0.9308,The patient has an infection in the wound.,0,fabrication,neutral
+35,The patient has an infection.,0.9648,The patient has an infection in the wound.,1,,entailment
+36,The patient has diabetes mellitus.,0.9957,The patient has diabetes.,1,,entailment
+37,The patient's diabetes mellitus is active.,0.9287,The patient's diabetes is not well-controlled.,1,,entailment
+38,The doctor ordered an ABI.,0.9497,The doctor wants to order an ABI (ankle brachial index) to determine blood supply in the foot.,1,,entailment
+39,The ABI is to determine the blood supply to the foot.,0.9726,The doctor wants to order an ABI (ankle brachial index) to determine blood supply in the foot.,1,,entailment
+40,The ABI is to assess the ability to heal the ulcer.,0.9431,The doctor wants to order an ABI (ankle brachial index) to determine blood supply in the foot.,0,fabrication,neutral
+41,The doctor performed a debridement.,0.9495,The doctor will perform a debridement to remove dead tissue.,1,,entailment
+42,The debridement was to remove dead tissue from the wound.,0.9678,The doctor will perform a debridement to remove dead tissue.,1,,entailment
+43,The doctor prescribed clindamycin.,1.0,The doctor prescribed clindamycin.,1,,entailment
+44,The clindamycin dose is 400mg.,0.9835,Clindamycin is 400 milligrams.,1,,entailment
+45,Clindamycin is taken twice daily.,0.9952,Clindamycin is taken twice a day.,1,,entailment
+46,Clindamycin is prescribed for 7 days.,0.9925,Clindamycin is taken for 7 days.,1,,entailment
+47,Clindamycin is prescribed to treat the infection.,0.9975,Clindamycin is prescribed for the infection.,1,,entailment
+48,The doctor arranged for a surgical shoe to be provided to the patient.,0.9613,The doctor will get the patient a surgical shoe.,1,,entailment
+49,The surgical shoe is to reduce pressure on the foot.,0.9314,The doctor will get the patient a surgical shoe.,0,fabrication,neutral
+50,The surgical shoe is to promote healing.,0.9282,The doctor will get the patient a surgical shoe.,0,fabrication,neutral
+51,The patient will return in two weeks for follow-up.,0.9623,The doctor will see the patient back in two weeks.,1,,entailment
+52,The patient will return in two weeks for possible debridement.,0.976,The doctor may perform another debridement in two weeks.,1,,entailment
+53,The patient is advised to contact the office if any issues arise before the scheduled appointment.,0.945,The patient can call the office if they have any issues.,0,fabrication,neutral

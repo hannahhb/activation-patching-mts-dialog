@@ -1,0 +1,43 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 54-year-old male.,1.0,The patient is a 54-year-old male.,1,,entailment
+1,"The patient presents with a 2-3 month history of stabbing, shooting pain in the right cheek bone area of his face.",0.9488,The facial pain is stabbing and shooting.,0,fabrication,neutral
+2,The patient describes the pain as excruciating and similar to being stabbed with an ice pick.,0.9193,The facial pain is stabbing and shooting.,0,fabrication,neutral
+3,The pain is triggered by certain temperatures.,0.9669,The patient's facial pain is triggered by certain temperatures.,1,,entailment
+4,The pain is triggered by wind.,0.9724,The patient's facial pain is triggered by wind.,1,,entailment
+5,The pain is triggered by cold.,0.9585,The patient's facial pain is triggered by cold temperatures.,1,,entailment
+6,The pain is not alleviated by ibuprofen.,0.9652,The patient has tried ibuprofen for pain relief.,1,,entailment
+7,The pain is not alleviated by Motrin.,0.9731,Motrin has not helped the patient's facial pain.,1,,entailment
+8,The pain is not alleviated by topical treatments such as tiger balm.,0.9695,The patient has tried tiger balm for pain relief.,1,,entailment
+9,The patient has not noticed any sensory loss in the affected area.,0.9083,The patient has some numbness on the right side of their face.,0,fabrication,contradiction
+10,The patient has not noticed any weakness in the affected area.,0.9033,The patient has some numbness on the right side of their face.,0,fabrication,contradiction
+11,The patient experiences numbness on the right side of his face.,0.9943,The patient has some numbness on the right side of their face.,1,,entailment
+12,The patient has a history of occasional headaches.,0.9659,The patient occasionally experiences headaches.,1,,entailment
+13,The patient has no history of migraines.,0.996,The patient does not have a history of migraines.,1,,entailment
+14,The patient has no history of brain tumors.,0.9964,The patient does not have a history of brain tumors.,1,,entailment
+15,The patient rates the pain as a 10 out of 10 in severity.,0.9682,"The patient's facial pain is severe, rated as a 10 out of 10.",1,,entailment
+16,The patient denies any symptoms in other organs relevant to his initial presentation.,0.9035,The root cause of the patient's problem is the compression of the blood vessel against the nerve.,0,fabrication,neutral
+17,The patient takes Tylenol.,0.957,The patient takes Tylenol for occasional headaches.,1,,entailment
+18,The Tylenol dose is not mentioned.,0.9136,The patient takes Tylenol for occasional headaches.,0,fabrication,contradiction
+19,Tylenol is taken for occasional headaches.,0.9873,The patient takes Tylenol for occasional headaches.,1,,entailment
+20,The patient's vital signs are not mentioned.,0.8769,The root cause of the patient's problem is the compression of the blood vessel against the nerve.,0,fabrication,contradiction
+21,The patient was able to follow the doctor's finger in both directions.,0.9565,The patient can follow the doctor's finger with their eyes.,1,,entailment
+22,The patient showed symmetrical teeth.,0.9681,The patient's teeth are symmetric.,1,,entailment
+23,The patient could hear on both sides of his face.,0.9213,The patient has some numbness on the right side of their face.,0,fabrication,contradiction
+24,The patient reported numbness on the right side of his face.,0.9937,The patient has some numbness on the right side of their face.,1,,entailment
+25,The patient reported a dull sensation on the right side when poked with a needle.,0.982,The patient feels a little bit dull sensation on the right side of their face when poked with a needle.,1,,entailment
+26,The patient reported a sharp sensation on the left side when poked with a needle.,0.98,The patient feels a sharp sensation on the left side of their face when poked with a needle.,1,,entailment
+27,The patient's MRI shows a small blood vessel abutting and pinching the trigeminal nerve.,0.9994,The patient's MRI shows a small blood vessel abutting and possibly pinching the trigeminal nerve.,1,,entailment
+28,The patient has symptoms consistent with trigeminal neuralgia.,0.9804,The patient may have trigeminal neuralgia.,1,,entailment
+29,Trigeminal neuralgia is a condition where nerve compression causes shooting electrical pain in the face.,0.9346,The patient may have trigeminal neuralgia.,0,fabrication,neutral
+30,The patient has trigeminal neuralgia.,0.9904,The patient may have trigeminal neuralgia.,1,,entailment
+31,The patient's trigeminal neuralgia is active.,0.9407,The patient may have trigeminal neuralgia.,0,fabrication,neutral
+32,The doctor prescribed Tegretol.,0.9947,The doctor prescribed Tegretol for the patient.,1,,entailment
+33,The Tegretol dose is 100mg.,0.9401,The patient will start with Tegretol.,0,fabrication,neutral
+34,Tegretol is taken twice daily.,0.9459,The patient will come back in a month to check on the effectiveness of the Tegretol.,0,fabrication,neutral
+35,Tegretol is prescribed for pain management.,0.9626,The doctor prescribed Tegretol for the patient.,1,,entailment
+36,The patient will undergo genetic testing.,0.9281,The patient may need genetic testing before taking Tegretol.,0,fabrication,neutral
+37,The genetic testing is to ensure the medication is safe for the patient.,0.9282,The patient may need genetic testing before taking Tegretol.,0,fabrication,neutral
+38,The patient will return in one month.,0.9529,The patient will follow up with the doctor in one month.,1,,entailment
+39,The patient will return in one month for a follow-up appointment.,0.9758,The patient will follow up with the doctor in one month.,1,,entailment
+40,The follow-up appointment is to assess the effectiveness of the medication.,0.9383,The patient will come back in a month to check on the effectiveness of the Tegretol.,1,,entailment
+41,The follow-up appointment is to discuss further treatment options if necessary.,0.9331,The patient will follow up with the doctor in one month.,0,fabrication,neutral

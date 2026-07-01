@@ -1,0 +1,52 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Jerry.,1.0,The patient's name is Jerry.,1,,entailment
+1,The patient is a 45-year-old male.,1.0,The patient is a 45-year-old male.,1,,entailment
+2,The patient presents with an ankle injury.,0.9826,The patient has an ankle injury.,1,,entailment
+3,The ankle injury was sustained while playing basketball.,0.941,The patient has an ankle injury.,0,fabrication,neutral
+4,"The patient's son collided with him, causing the injury.",0.8991,The patient has an ankle injury.,0,fabrication,neutral
+5,The patient's son is 10 years old.,0.9478,The patient is a 45-year-old male.,0,fabrication,neutral
+6,The patient's son is more aggressive than his peers.,0.8951,The patient is a 45-year-old male.,0,fabrication,neutral
+7,The patient landed awkwardly and twisted his ankle.,0.9625,"The patient went up for a shot and landed awkwardly, rolling and twisting his ankle.",1,,entailment
+8,The patient describes the pain as located on the outside of the ankle.,0.9694,The patient has exquisite tenderness on the outside of his ankle.,1,,entailment
+9,The ankle is swollen.,0.9839,The patient's ankle is swollen.,1,,entailment
+10,The ankle is bruised.,0.9716,The patient's ankle is bruised and swollen.,1,,entailment
+11,The patient has been having trouble walking.,1.0,The patient has been having trouble walking.,1,,entailment
+12,The patient feels the ankle is not stable.,0.9941,The patient's ankle does not feel stable.,1,,entailment
+13,The patient recently returned to working out after a period of inactivity.,0.9471,The patient recently got back into working out.,1,,entailment
+14,The patient is concerned about disrupting his progress.,0.905,The patient does not want to disrupt his workout routine.,1,,entailment
+15,The ankle is swollen on the lateral side.,0.951,The patient's ankle is swollen.,1,,entailment
+16,There is exquisite tenderness on palpation of the ankle.,0.9575,The patient has exquisite tenderness on the outside of his ankle.,1,,entailment
+17,There is tenderness over the medial deltoid region.,0.9891,The patient has some tenderness over the medial deltoid region.,1,,entailment
+18,The skin is intact.,0.9802,The patient's skin is intact.,1,,entailment
+19,Capillary refill is brisk.,0.9744,The patient has brisk capillary refill.,1,,entailment
+20,There is no malalignment.,0.9188,The patient's ankle has no horrible malalignment.,0,fabrication,neutral
+21,The patient is able to stand on the ankle.,0.9752,The patient can stand on his ankle but has trouble walking.,1,,entailment
+22,The patient reports difficulty walking due to instability.,0.9338,The patient can stand on his ankle but has trouble walking.,1,,entailment
+23,An X-ray of the right ankle was performed.,0.9379,The patient had an x-ray.,0,fabrication,neutral
+24,The X-ray shows a displaced lateral malleolus fracture.,0.9576,The x-ray shows a displaced lateral malleolus at the Weber C level.,1,,entailment
+25,The fracture is at the Weber C level.,0.9336,The x-ray shows a displaced lateral malleolus at the Weber C level.,0,fabrication,neutral
+26,There is no evidence of medial malleolar fractures.,0.9875,There is no evidence of medial or posterior malleolar fractures.,1,,entailment
+27,There is no evidence of posterior malleolar fractures.,0.9913,There is no evidence of medial or posterior malleolar fractures.,1,,entailment
+28,The patient has a displaced lateral malleolar fracture.,0.9605,The doctor diagnosed the patient with a lateral malleolar fracture.,1,,entailment
+29,The fracture is unstable.,1.0,The fracture is unstable.,1,,entailment
+30,The patient requires surgical intervention.,0.9398,The doctor recommends surgery for the patient.,1,,entailment
+31,The patient has a lateral malleolar fracture.,0.973,The doctor diagnosed the patient with a lateral malleolar fracture.,1,,entailment
+32,The patient has suspected instability.,0.9011,The patient's ankle does not feel stable.,1,,entailment
+33,I prescribed meloxicam.,0.9754,The doctor prescribed meloxicam for the patient.,1,,entailment
+34,The meloxicam dose is 7.5 mg.,0.9561,Meloxicam dose is not specified.,1,,entailment
+35,Meloxicam is taken PO.,0.9333,The doctor prescribed meloxicam for the patient.,0,fabrication,neutral
+36,Meloxicam is taken q12h.,0.9223,The doctor prescribed meloxicam for the patient.,0,fabrication,neutral
+37,Meloxicam is prescribed for pain.,0.9626,The doctor prescribed meloxicam for the patient.,1,,entailment
+38,Meloxicam is prescribed for inflammation.,0.9564,The doctor prescribed meloxicam for the patient.,1,,entailment
+39,I advised the patient to ice the ankle.,0.9791,The patient should ice his ankle.,1,,entailment
+40,I advised the patient to elevate the ankle regularly.,0.9828,The doctor told the patient to elevate his ankle regularly.,1,,entailment
+41,The patient works from home.,1.0,The patient works from home.,1,,entailment
+42,I ordered crutches.,0.958,The doctor ordered the patient to use crutches.,1,,entailment
+43,The crutches are to assist with mobility.,0.9273,The doctor ordered the patient to use crutches.,0,fabrication,neutral
+44,The patient is cleared to continue coaching his son's basketball team.,0.87,The patient volunteered to coach starting in April.,0,fabrication,neutral
+45,The patient will be out for approximately three months.,0.9993,The patient will be out for about three months.,1,,entailment
+46,The patient will be able to resume exercise after three months.,0.9312,The patient will be out for about three months.,0,fabrication,neutral
+47,The patient will be able to return to playing basketball after three months.,0.9303,The patient will be out for about three months.,0,fabrication,neutral
+48,The patient will follow up in three months.,0.9369,The patient will be out for about three months.,1,,entailment
+49,The follow-up is to assess healing.,0.8835,The patient will be out for about three months.,0,fabrication,neutral
+50,The follow-up is to assess progress.,0.8846,The patient will be out for about three months.,0,fabrication,neutral

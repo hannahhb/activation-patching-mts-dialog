@@ -1,0 +1,44 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Jerry.,1.0,The patient's name is Jerry.,1,,entailment
+1,The patient is a 45-year-old male.,1.0,The patient is a 45-year-old male.,1,,entailment
+2,The patient presents with an ankle injury.,0.9826,The patient has an ankle injury.,1,,entailment
+3,The ankle injury was sustained while playing basketball.,0.941,The patient has an ankle injury.,0,fabrication,neutral
+4,The patient's son is 10 years old.,0.9478,The patient is a 45-year-old male.,0,fabrication,neutral
+5,The patient landed awkwardly after being fouled and twisting his ankle.,0.9582,"The patient went up for a shot and landed awkwardly, rolling and twisting his ankle.",1,,entailment
+6,The patient experienced pain and swelling on the outside of the ankle.,0.9698,The patient has exquisite tenderness on the outside of his ankle.,1,,entailment
+7,The ankle is bruised and swollen.,0.9894,The patient's ankle is bruised and swollen.,1,,entailment
+8,The patient has been having trouble walking.,1.0,The patient has been having trouble walking.,1,,entailment
+9,The patient feels the ankle is not stable.,0.9941,The patient's ankle does not feel stable.,1,,entailment
+10,The patient recently started working out.,0.9732,The patient recently got back into working out.,1,,entailment
+11,The patient is concerned about disrupting his routine.,0.9365,The patient does not want to disrupt his workout routine.,1,,entailment
+12,The patient is a coach.,0.9163,The patient volunteered to coach starting in April.,1,,entailment
+13,The patient will start coaching in April.,0.9639,The patient volunteered to coach starting in April.,1,,entailment
+14,The patient's son is enthusiastic about basketball.,0.8813,The patient is a 45-year-old male.,0,fabrication,neutral
+15,The patient has exquisite tenderness to palpation laterally on the ankle.,0.961,The patient has exquisite tenderness on the outside of his ankle.,1,,entailment
+16,The patient has exquisite tenderness to palpation medially on the ankle.,0.958,The patient has exquisite tenderness on the outside of his ankle.,1,,entailment
+17,There is swelling on the lateral side of the ankle.,0.9543,The patient has a fracture on the lateral side of his ankle.,1,,entailment
+18,There is no epidermolysis on the ankle.,0.9,The patient has an ankle injury.,0,fabrication,contradiction
+19,The patient's skin is intact.,1.0,The patient's skin is intact.,1,,entailment
+20,The patient has brisk capillary refill.,1.0,The patient has brisk capillary refill.,1,,entailment
+21,There is no malalignment of the ankle.,0.9629,The patient's ankle has no horrible malalignment.,1,,entailment
+22,The patient has difficulty walking on the ankle due to instability.,0.9534,The patient can stand on his ankle but has trouble walking.,1,,entailment
+23,An x-ray of the right ankle was performed.,0.9379,The patient had an x-ray.,0,fabrication,neutral
+24,The x-ray shows a displaced lateral malleolus fracture.,0.9576,The x-ray shows a displaced lateral malleolus at the Weber C level.,1,,entailment
+25,The fracture is at the Weber C level.,0.9336,The x-ray shows a displaced lateral malleolus at the Weber C level.,0,fabrication,neutral
+26,There is no evidence of medial malleolar fractures.,0.9875,There is no evidence of medial or posterior malleolar fractures.,1,,entailment
+27,There is no evidence of posterior malleolar fractures.,0.9913,There is no evidence of medial or posterior malleolar fractures.,1,,entailment
+28,The patient has a displaced lateral malleolar fracture.,0.9605,The doctor diagnosed the patient with a lateral malleolar fracture.,1,,entailment
+29,The fracture is unstable.,1.0,The fracture is unstable.,1,,entailment
+30,The patient requires surgical intervention.,0.9398,The doctor recommends surgery for the patient.,1,,entailment
+31,The patient has a lateral malleolar fracture.,0.973,The doctor diagnosed the patient with a lateral malleolar fracture.,1,,entailment
+32,The patient has suspected instability of the ankle.,0.9347,The patient's ankle does not feel stable.,1,,entailment
+33,The doctor prescribed meloxicam.,0.9947,The doctor prescribed meloxicam for the patient.,1,,entailment
+34,The meloxicam is prescribed for pain management.,0.9639,The doctor prescribed meloxicam for the patient.,1,,entailment
+35,The patient was advised to ice the ankle.,0.9803,The patient should ice his ankle.,1,,entailment
+36,The patient was advised to keep the ankle elevated.,0.9877,The patient should keep his ankle elevated.,1,,entailment
+37,The patient was provided with crutches.,0.9625,The doctor ordered the patient to use crutches.,1,,entailment
+38,The patient should avoid putting weight on the ankle.,0.9341,The patient should keep his ankle elevated.,1,,entailment
+39,The patient will continue coaching in April.,0.9632,The patient volunteered to coach starting in April.,1,,entailment
+40,The patient will take a three-month leave from exercise.,0.9429,The patient will be out for about three months.,0,fabrication,neutral
+41,The patient will be seen again in three months.,0.9377,The patient will be out for about three months.,1,,entailment
+42,The follow-up appointment is to assess the healing of the ankle fracture.,0.9142,The doctor examined the patient's ankle.,0,fabrication,neutral

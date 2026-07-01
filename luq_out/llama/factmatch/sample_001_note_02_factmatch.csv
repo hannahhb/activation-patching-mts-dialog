@@ -1,0 +1,38 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient presented with low back pain.,0.9506,The patient had an X-ray of his lower back.,1,,entailment
+1,The patient presented with a tingling sensation in the right leg.,0.9946,The patient has a tingling sensation in his right leg.,1,,entailment
+2,The low back pain started after raking leaves in the yard.,0.9285,The patient's back started tightening up about two hours after raking leaves.,0,fabrication,neutral
+3,The low back pain lasted for 2 hours.,0.9439,"The patient had back pain like this once before, about three years ago.",0,fabrication,neutral
+4,The tingling sensation in the right leg started after raking leaves in the yard.,0.9473,The patient has a tingling sensation in his right leg.,0,fabrication,neutral
+5,The patient's low back pain was exacerbated by standing.,0.9323,The patient's partner reports that the patient's pain is worse when standing up.,0,fabrication,neutral
+6,The patient's low back pain improved with rest.,0.9328,"This time, the patient's back pain is worse.",0,negation,contradiction
+7,The patient's low back pain improved with a hot shower.,0.9856,A hot shower helped the patient's back pain.,1,,entailment
+8,The patient had a similar episode of low back pain 3 years ago.,0.9758,"The patient had back pain like this once before, about three years ago.",1,,entailment
+9,The patient's previous episode of low back pain resolved on its own.,0.9508,The previous back pain went away after a day.,1,,entailment
+10,The patient has a history of low back pain.,0.9543,The patient had an X-ray of his lower back.,1,,entailment
+11,The patient reports a tingling sensation in the right leg.,0.9963,The patient has a tingling sensation in his right leg.,1,,entailment
+12,The patient has no other relevant medical history.,0.9093,The patient is a male.,0,fabrication,neutral
+13,The patient had pain on flexion.,0.9062,The patient has pain to palpation on his lower back.,1,,entailment
+14,The patient had pain on palpation at the L5 level.,0.9589,The patient has pain to palpation on his lower back.,1,,entailment
+15,The patient had normal dorsiflexion.,0.9924,The patient's dorsiflexion is normal.,1,,entailment
+16,The patient's pulses were equal in all extremities.,0.9969,The patient's pulses are equal in all extremities.,1,,entailment
+17,The patient had an X-ray of the low back.,0.9881,The patient had an X-ray of his lower back.,1,,entailment
+18,The X-ray of the low back showed normal results.,0.9592,The patient had an X-ray of his lower back.,1,,entailment
+19,The patient likely sprained their low back.,0.9734,The doctor thinks the patient probably sprained his lower back.,1,,entailment
+20,The patient has low back sprain.,0.9511,The doctor thinks the patient probably sprained his lower back.,1,,entailment
+21,The patient has tingling sensation in the right leg.,0.9987,The patient has a tingling sensation in his right leg.,1,,entailment
+22,The patient has back pain.,0.95,"The patient had back pain like this once before, about three years ago.",1,,entailment
+23,The doctor prescribed meloxicam.,1.0,The doctor prescribed meloxicam.,1,,entailment
+24,The meloxicam dose is 15 mg.,0.9549,Meloxicam dose is not specified.,1,,entailment
+25,Meloxicam is taken orally.,0.9501,The doctor prescribed meloxicam.,1,,entailment
+26,Meloxicam is taken daily.,0.9415,The doctor prescribed meloxicam.,0,fabrication,neutral
+27,Meloxicam is prescribed for pain management.,0.9716,Meloxicam is for the patient's back pain.,1,,entailment
+28,The doctor prescribed physical therapy.,1.0,The doctor prescribed physical therapy.,1,,entailment
+29,Physical therapy is for stretches.,0.9347,Physical therapy is to help the patient's back pain.,0,negation,contradiction
+30,Physical therapy is for exercises.,0.9588,Physical therapy is to help the patient's back pain.,1,,entailment
+31,Physical therapy is to improve the patient's condition.,0.9736,Physical therapy is to help the patient's back pain.,1,,entailment
+32,The patient was instructed to rest.,0.8986,The doctor may order an MRI if the patient's back pain does not improve.,0,fabrication,neutral
+33,The patient will follow up with the doctor in two weeks.,0.9578,The doctor wants to reassess the patient in two weeks.,1,,entailment
+34,The patient will reassess their condition in two weeks.,0.9822,The doctor wants to reassess the patient in two weeks.,1,,entailment
+35,The patient will consider an MRI in two weeks if necessary.,0.9772,The doctor advised waiting two weeks before considering an MRI.,1,,entailment
+36,The patient will consider further testing in two weeks if necessary.,0.9463,The doctor wants to reassess the patient in two weeks.,0,fabrication,neutral

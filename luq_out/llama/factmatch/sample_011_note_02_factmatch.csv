@@ -1,0 +1,67 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 45-year-old male.,1.0,The patient is a 45-year-old male.,1,,entailment
+1,The patient has a history of diabetes type two.,1.0,The patient has a history of diabetes type two.,1,,entailment
+2,The patient has a history of mild intermittent asthma.,1.0,The patient has a history of mild intermittent asthma.,1,,entailment
+3,The patient presents with right elbow pain.,0.9903,The patient is experiencing right elbow pain.,1,,entailment
+4,The patient's right elbow pain started three weeks ago.,0.9685,The patient's elbow pain has lasted for three weeks.,1,,entailment
+5,The patient's right elbow pain is sharp.,0.9658,The patient is experiencing right elbow pain.,1,,entailment
+6,The patient's right elbow pain is stabbing.,0.9521,The patient is experiencing right elbow pain.,1,,entailment
+7,The patient's right elbow pain is throbbing.,0.9618,The patient is experiencing right elbow pain.,1,,entailment
+8,The patient's right elbow pain is rated 8/10 with movement.,0.9686,The patient rates the pain as an 8 out of 10 when using the elbow.,1,,entailment
+9,The patient's right elbow pain is rated 3/10 at rest.,0.9614,The patient rates the pain as an 8 out of 10 when using the elbow.,1,,entailment
+10,The patient has tried taking Tylenol.,0.9558,The patient has tried Tylenol and ibuprofen for pain relief.,1,,entailment
+11,The patient has tried taking ibuprofen.,0.9579,The patient has tried Tylenol and ibuprofen for pain relief.,1,,entailment
+12,Tylenol does not provide relief for the patient's right elbow pain.,0.9459,The patient has tried Tylenol and ibuprofen for pain relief.,0,fabrication,neutral
+13,Ibuprofen does not provide relief for the patient's right elbow pain.,0.9423,The patient is experiencing right elbow pain.,0,fabrication,neutral
+14,The patient has tried using ice for pain relief.,0.9354,The patient has tried icing the elbow for pain relief.,1,,entailment
+15,Ice does not provide much relief for the patient's right elbow pain.,0.9414,The patient is experiencing right elbow pain.,0,fabrication,neutral
+16,The patient has a history of playing tennis.,0.9714,The patient has been playing a lot of tennis recently.,1,,entailment
+17,The patient is currently taking metformin.,0.9907,The patient is taking metformin.,1,,entailment
+18,The metformin dose is 500mg.,0.9937,The metformin dose is 500 milligrams.,1,,entailment
+19,Metformin is taken twice a day.,1.0,Metformin is taken twice a day.,1,,entailment
+20,Metformin is prescribed for diabetes type two.,0.9845,Metformin is prescribed for diabetes.,1,,entailment
+21,The patient is currently taking Flovent.,0.9914,The patient is taking Flovent.,1,,entailment
+22,The Flovent dose is not specified.,1.0,The Flovent dose is not specified.,1,,entailment
+23,Flovent is taken twice a day.,1.0,Flovent is taken twice a day.,1,,entailment
+24,Flovent is prescribed for asthma.,1.0,Flovent is prescribed for asthma.,1,,entailment
+25,The patient is currently taking albuterol.,0.9928,The patient is taking albuterol.,1,,entailment
+26,The albuterol dose is not specified.,1.0,The albuterol dose is not specified.,1,,entailment
+27,Albuterol is taken as needed.,1.0,Albuterol is taken as needed.,1,,entailment
+28,Albuterol is prescribed for asthma.,1.0,Albuterol is prescribed for asthma.,1,,entailment
+29,The patient has a history of penicillin allergy.,0.9838,The patient has an allergy to penicillin.,1,,entailment
+30,The patient had his gallbladder removed.,0.9989,The patient had their gallbladder removed.,1,,entailment
+31,The patient's gallbladder was removed 10 years ago.,0.9971,The patient had their gallbladder removed about 10 years ago.,1,,entailment
+32,The patient denies any fever.,0.8966,The patient denied pain radiating to other areas.,0,fabrication,neutral
+33,The patient has moderate lateral epicondylar tenderness of the right elbow.,0.9883,The patient's musculoskeletal exam showed moderate lateral epicondylar tenderness of the right elbow.,1,,entailment
+34,The patient has pain on passive range of motion of the right elbow.,0.9958,The patient has moderate pain with passive range of motion of the right elbow.,1,,entailment
+35,The patient has mild pain with resisted extension of the right wrist.,1.0,The patient has mild pain with resisted extension of the right wrist.,1,,entailment
+36,The patient has a grade three out of six systolic ejection murmur.,0.987,The patient's heart exam showed a grade 3 out of 6 systolic ejection murmur.,1,,entailment
+37,The patient's systolic ejection murmur has not changed from prior exams.,0.942,The patient's heart exam showed a grade 3 out of 6 systolic ejection murmur.,0,fabrication,neutral
+38,The right elbow x-ray shows no acute fracture.,0.9866,The patient's right elbow x-ray showed no acute fracture or bony abnormality.,1,,entailment
+39,The right elbow x-ray shows no bony abnormality.,0.9841,The patient's right elbow x-ray showed no acute fracture or bony abnormality.,1,,entailment
+40,The right elbow x-ray shows no malalignment.,0.9647,The patient's right elbow x-ray showed no acute fracture or bony abnormality.,1,,entailment
+41,The right elbow x-ray shows no sign of joint effusion.,0.9584,The patient's right elbow x-ray showed no acute fracture or bony abnormality.,1,,entailment
+42,The patient has acute lateral epicondylitis of the right elbow.,0.986,The doctor diagnosed the patient with acute lateral epicondylitis of the right elbow.,1,,entailment
+43,The patient's acute lateral epicondylitis is also known as tennis elbow.,0.962,The doctor diagnosed the patient with acute lateral epicondylitis of the right elbow.,1,,entailment
+44,The patient's acute lateral epicondylitis is likely due to overuse of the elbow.,0.9597,The doctor diagnosed the patient with acute lateral epicondylitis of the right elbow.,1,,entailment
+45,The patient has active diabetes type two.,0.9596,The patient has a history of diabetes type two.,1,,entailment
+46,The patient has active asthma.,0.9242,The patient has a history of mild intermittent asthma.,0,fabrication,contradiction
+47,The doctor recommended that the patient rest his right arm.,0.9831,The doctor prescribed rest for the patient's right arm.,1,,entailment
+48,The doctor recommended that the patient stop tennis for 4-6 weeks.,0.9945,The doctor advised the patient to stop playing tennis for 4-6 weeks.,1,,entailment
+49,The doctor recommended that the patient avoid repetitive stress in the right arm.,0.9964,The doctor advised the patient to avoid repetitive stress on the right arm.,1,,entailment
+50,The doctor prescribed ultram.,1.0,The doctor prescribed Ultram.,1,,entailment
+51,The ultram dose is 50mg.,0.9887,The Ultram dose is 50 milligrams.,1,,entailment
+52,Ultram is taken once a day.,0.9982,Ultram is taken once per day.,1,,entailment
+53,Ultram is prescribed for pain relief.,0.9803,Ultram is prescribed for elbow pain.,1,,entailment
+54,The doctor ordered a hemoglobin A1c level.,1.0,The doctor ordered a hemoglobin A1c level.,1,,entailment
+55,The doctor ordered a CBC blood test.,1.0,The doctor ordered a CBC blood test.,1,,entailment
+56,The doctor ordered a chem-12 blood test.,1.0,The doctor ordered a chem-12 blood test.,1,,entailment
+57,The hemoglobin A1c level is to check the patient's diabetes control.,0.9635,The doctor ordered a hemoglobin A1c level.,1,,entailment
+58,The CBC blood test is to check the patient's diabetes control.,0.9486,The doctor ordered a CBC blood test.,0,fabrication,neutral
+59,The chem-12 blood test is to check the patient's diabetes control.,0.9622,The doctor ordered a chem-12 blood test.,1,,entailment
+60,The doctor prescribed a refill of albuterol.,0.9813,The doctor refilled the patient's albuterol prescription.,1,,entailment
+61,The albuterol refill is for asthma.,0.9598,Albuterol is prescribed for asthma.,1,,entailment
+62,The patient will be seen in 4 weeks.,0.9433,The doctor scheduled a follow-up appointment in 4 weeks.,1,,entailment
+63,The patient will be reevaluated in 4 weeks.,0.937,The doctor scheduled a follow-up appointment in 4 weeks.,1,,entailment
+64,Additional imaging may be considered if necessary.,0.8728,The patient's cardiovascular exam was otherwise normal.,0,fabrication,neutral
+65,A physical therapy referral may be considered if necessary.,0.8729,The patient's musculoskeletal exam showed moderate lateral epicondylar tenderness of the right elbow.,0,fabrication,neutral

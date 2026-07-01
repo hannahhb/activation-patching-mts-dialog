@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Jack, presents with neck pain that started after a car accident one week ago, where he was hit from behind and his neck and head were rapidly forward.",Faithful,
+1,"The pain is described as a 7/10, not constant, but worsens with neck movement.",Faithful,
+2,"He has tried ibuprofen with some relief, but it's still at 5/10.",Faithful,
+3,"He has had occasional headaches, but no visual disturbances or hearing problems.",Faithful,
+4,"He has a history of playing football years ago, but no previous neck issues.",Faithful,
+5,Past medical history: [NOT MENTIONED],Fabrication,Past medical history: [NOT MENTIONED]
+6,Review of systems: [NOT MENTIONED],Fabrication,Review of systems: [NOT MENTIONED]
+7,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+8,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+9,"Positive pain to palpation of the soft tissues of the neck, positive pain with flexion, severe positive pain to extension, positive pain with rotation, and positive pain on lateral bending.",Faithful,
+10,No pain with pressing on the back or shoulders.,Faithful,
+11,No signs of fracture or bony abnormalities on the x-ray.,Faithful,
+12,"The patient has neck strain, likely due to whiplash from the car accident.",Faithful,
+13,Neck strain; Whiplash; [NOT MENTIONED],Fabrication,[NOT MENTIONED]
+14,I prescribed Motrin 600mg every 6-8 hours for anti-inflammatory purposes.,Faithful,
+15,I also prescribed Flexeril 10mg every 12 hours as needed for muscle relaxation.,Faithful,
+16,I advised the patient to be conservative with neck movement and to relax the neck area.,Faithful,
+17,I ordered an MRI to rule out any nerve impingement or other complications.,Faithful,
+18,I referred the patient to either physical rehab or a chiropractor for further evaluation and treatment after the MRI results are available.,Faithful,
+19,I will follow up with the patient after the MRI results are available.,Fabrication,I will follow up with the patient after the MRI results are available.

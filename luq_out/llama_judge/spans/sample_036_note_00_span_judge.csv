@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 38-year-old male, presents with a 2-year history of living in the city and recently noticing shortness of breath, which he describes as catching his breath a lot more than usual, despite considering himself to be a healthy individual.",Fabrication,a 38-year-old male
+1,"He reports that this shortness of breath is sudden and without warning, and is not accompanied by other symptoms such as fever, rash, nausea, or vomiting.",Contextual,fever
+2,"He mentions that he has a dog that suffers from eye issues, which he attributes to allergies.",Causality,which he attributes to allergies
+3,"The patient has a history of heavy drinking, which is associated with diarrhea.",Faithful,
+4,He denies any issues with allergies in the past.,Faithful,
+5,"He reports that his symptoms occur in various situations, including being in the house, near his cat, and outside.",Faithful,
+6,"Past medical history: The patient has no history of allergies, no travel history, and no symptoms currently.",Fabrication,no travel history
+7,Review of systems: The patient reports no symptoms in other organs that are relevant to his initial presentation.,Fabrication,Review of systems
+8,Current medications: The patient is currently using an albuterol inhaler as prescribed by urgent care for his shortness of breath.,Faithful,
+9,"Objective: Vital signs: The patient's pulse is normal, and his pulse ox is normal.",Faithful,
+10,"Physical exam: The patient does not appear to be in distress, and there is no rash or angioedema.",Faithful,
+11,There is no audible stridor.,Faithful,
+12,The lungs exam reveals faint expiratory wheezing bilaterally in all lung fields.,Faithful,
+13,Test Results: The patient's chest x-ray and pulmonary function test results are normal.,Faithful,
+14,Assessment / Problem List: Assessment: The patient has newly diagnosed allergic asthma.,Faithful,
+15,"Problem list: Asthma, active; Allergies, suspected.",Faithful,
+16,I prescribed albuterol inhaler as directed for the patient's shortness of breath.,Contextual,as directed
+17,I also prescribed Singulair 10mg once daily to help decrease the occurrences of asthma symptoms.,Faithful,
+18,"I plan to proceed with allergy testing, starting with skin testing, to identify the triggers of the patient's asthma.",Faithful,
+19,I will schedule the patient to return in one week for the skin testing.,Faithful,
+20,I advised the patient to continue using his albuterol inhaler as soon as he feels any symptoms coming on.,Faithful,
+21,Follow-up: The patient is scheduled to return in one week for skin testing.,Faithful,

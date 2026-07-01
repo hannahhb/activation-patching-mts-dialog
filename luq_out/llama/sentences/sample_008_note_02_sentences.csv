@@ -1,25 +1,25 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, a woman, presents with a history of headaches that started at the age of 14, initially associated with menstrual periods, but now occurring more frequently and severely.",0.9795
-2,"The headaches are located on the right side, behind the eye, and described as a pulsing sensation.",0.178
-3,"The patient has noticed that exercising, specifically jogging, triggers or exacerbates the headaches.",0.3377
-4,"Recently, the patient has also experienced tinnitus (ringing in the ears) and blurred vision, particularly on the side, which is intermittent.",0.4657
-5,Past medical history: NOT MENTIONED,0.8426
-6,"Review of systems: The patient reports tinnitus and blurred vision, but denies numbness or tingling in the hands, feet, or face.",0.678
-7,Current medications: NOT MENTIONED,0.8426
+1,"HPI: The patient, a woman, presents with a history of headaches that started at the age of 14, initially associated with menstrual periods, but now occurring more frequently and severely.",0.0466
+2,"The headaches are located on the right side, behind the eye, and described as a pulsing sensation.",0.018
+3,"The patient has noticed that exercising, specifically jogging, triggers or exacerbates the headaches.",0.0985
+4,"Recently, the patient has also experienced tinnitus (ringing in the ears) and blurred vision, particularly on the side, which is intermittent.",0.0622
+5,Past medical history: NOT MENTIONED,0.5661
+6,"Review of systems: The patient reports tinnitus and blurred vision, but denies numbness or tingling in the hands, feet, or face.",0.2473
+7,Current medications: NOT MENTIONED,0.5661
 8,Objective:,0.5
-9,Vital signs: The patient's blood pressure was reviewed and is within normal limits.,0.3496
-10,"Physical exam: The patient's heart exam is normal, with no murmurs, rubs, or gallops.",0.5542
-11,"The funduscopic exam shows papilledema, which is swelling behind the eye.",0.3797
-12,"The neurological exam is normal, with intact cranial nerves one through twelve, including a normal cranial reflex.",0.2319
-13,The patient's gait is normal.,0.4458
-14,Test Results: NOT MENTIONED,0.3778
+9,Vital signs: The patient's blood pressure was reviewed and is within normal limits.,0.0576
+10,"Physical exam: The patient's heart exam is normal, with no murmurs, rubs, or gallops.",0.5329
+11,"The funduscopic exam shows papilledema, which is swelling behind the eye.",0.3727
+12,"The neurological exam is normal, with intact cranial nerves one through twelve, including a normal cranial reflex.",0.1412
+13,The patient's gait is normal.,0.4298
+14,Test Results: NOT MENTIONED,0.3533
 15,Assessment / Problem List:,0.5
-16,"Assessment: The patient is concerned for idiopathic intracranial hypertension, a condition characterized by increased pressure in the brain without a known cause, which is consistent with the patient's symptoms of headaches, tinnitus, and blurred vision.",0.8431
-17,Problem list: Idiopathic intracranial hypertension; Suspected.,0.1439
+16,"Assessment: The patient is concerned for idiopathic intracranial hypertension, a condition characterized by increased pressure in the brain without a known cause, which is consistent with the patient's symptoms of headaches, tinnitus, and blurred vision.",0.1524
+17,Problem list: Idiopathic intracranial hypertension; Suspected.,0.1703
 18,Plan:,0.5
-19,I prescribed [not mentioned] [dose] [frequency] [indication] [NOT MENTIONED].,0.9993
-20,"The patient is scheduled to undergo an MRI to confirm the diagnosis, which will be pre-approved by the insurance company.",0.2231
-21,The patient will also undergo a spinal tap to evaluate the pressure in the brain and potentially alleviate symptoms.,0.0051
-22,The patient will be referred to a neuro-ophthalmologist for a complete eye exam.,0.0038
-23,"Follow-up: The patient will be contacted to schedule the MRI and spinal tap, and will be seen by the neuro-ophthalmologist for a complete eye exam.",0.7736
+19,I prescribed [not mentioned] [dose] [frequency] [indication] [NOT MENTIONED].,0.9979
+20,"The patient is scheduled to undergo an MRI to confirm the diagnosis, which will be pre-approved by the insurance company.",0.0256
+21,The patient will also undergo a spinal tap to evaluate the pressure in the brain and potentially alleviate symptoms.,0.0
+22,The patient will be referred to a neuro-ophthalmologist for a complete eye exam.,0.0001
+23,"Follow-up: The patient will be contacted to schedule the MRI and spinal tap, and will be seen by the neuro-ophthalmologist for a complete eye exam.",0.5157

@@ -1,0 +1,29 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Stephanie Morales, a 36-year-old female, presents with a complaint of ankle pain and a history of diabetes and high blood pressure.",Faithful,
+1,She reports that her ankle pain began two days ago after slipping and twisting her left ankle on the outside of her hip while walking on ice and snow.,Faithful,
+2,She reports falling and being unable to walk due to significant pain and swelling.,Faithful,
+3,"She has tried ibuprofen, ice, and elevation for pain and swelling, but has only experienced minimal relief.",Faithful,
+4,Past medical history: The patient has a history of diabetes and high blood pressure.,Faithful,
+5,She is currently taking metformin and norvasc.,Faithful,
+6,She reports that her blood sugars have been stable and she is managing her diabetes through diet and regular sugar checks.,Faithful,
+7,She has an upcoming appointment for an eye exam and has had a hemoglobin A1c of 6.8 in the past.,Faithful,
+8,"Review of systems: The patient denies pain or discomfort in her calf, lower leg, or knee.",Faithful,
+9,She reports that her ankle pain is localized to the outside of her ankle.,Faithful,
+10,Current medications: I prescribed metformin for diabetes management and norvasc for high blood pressure management.,Contextual,I prescribed
+11,The patient reports needing a refill on her norvasc.,Faithful,
+12,Vital signs: Blood pressure is 120/70.,Faithful,
+13,"Physical exam: The patient's neck exam is normal, with no bruits.",Faithful,
+14,"Her lungs are clear, and her heart exam is normal, with a 2/6 systolic ejection murmur that is unchanged from previous exams.",Faithful,
+15,Her belly exam is normal.,Faithful,
+16,"The ankle exam reveals tenderness over the lateral malleolus and the fifth metatarsal, with swelling and redness.",Faithful,
+17,There is pain with valgus stressing of the ankle.,Faithful,
+18,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+19,"Assessment: The patient likely has an ankle sprain, but I am concerned about the possibility of a fracture due to tenderness over the fifth metatarsal.",Faithful,
+20,Problem list: Ankle sprain; Suspected fracture; Diabetes; High blood pressure,Faithful,
+21,I ordered an x-ray of the ankle to evaluate for a possible fracture.,Faithful,
+22,I will put the patient in a splint and provide crutches until the x-ray results are available.,Faithful,
+23,I prescribed naprosyn 500mg twice a day for pain control and instructed the patient to keep the ankle elevated and apply ice.,Faithful,
+24,I will re-evaluate the patient after the x-ray results are available and adjust the treatment plan as needed.,Faithful,
+25,Follow-up: I will contact the patient if the x-ray results show a fracture and refer her to orthopedics.,Faithful,
+26,"If the x-ray results are normal, I will have the patient follow up in a week to reassess the ankle and begin partial weight-bearing.",Causality,in a week
+27,Instructions:,Fabrication,Instructions:

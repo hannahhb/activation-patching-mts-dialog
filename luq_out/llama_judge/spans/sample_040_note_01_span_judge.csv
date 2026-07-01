@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Bryan, presents with a history of sudden onset low back pain and tingling sensation in the right foot, which started approximately two hours after engaging in yard work.",Faithful,
+1,"The pain is exacerbated by standing and bending, but relieved by sitting and a hot shower.",Faithful,
+2,The patient reports a similar episode three years ago that resolved on its own after a day.,Faithful,
+3,The patient's partner reports that the patient's back pain worsens when the patient stands up after bending over.,Faithful,
+4,"The patient denies any recent physical activity, but the partner reports that the patient has been doing yard work recently.",Causality,but the partner reports that the patient has been doing yard work recently
+5,Past medical history: Not mentioned.,Faithful,
+6,Review of systems: Not mentioned.,Faithful,
+7,"Current medications: The patient has not taken meloxicam before, but I prescribed it in the office for the current episode.",Faithful,
+8,No other medications mentioned.,Faithful,
+9,Vital signs: Not mentioned.,Faithful,
+10,"Physical exam: The patient's dorsiflexion is normal, and pulses are equal in all extremities.",Faithful,
+11,"The patient experiences pain on flexion, palpation of the L5 area, and exacerbation of pain when standing up after bending over.",Faithful,
+12,Test Results: The patient had a normal x-ray of the low back.,Faithful,
+13,"Assessment: The patient has acute low back strain, likely due to recent yard work.",Causality,likely due to recent yard work
+14,Problem list: Low back strain; suspected musculoskeletal injury.,Fabrication,suspected musculoskeletal injury
+15,I prescribed meloxicam 7.5mg PO BID for pain management.,Faithful,
+16,I also prescribed physical therapy to help with stretches and exercises to improve mobility and alleviate pain.,Faithful,
+17,I instructed the patient to rest the back and to follow up with me in two weeks if the pain persists.,Faithful,
+18,"If the pain does not improve, we will consider ordering an MRI.",Faithful,
+19,I instructed the patient to follow up with me in two weeks to reassess the pain and consider further testing if necessary.,Faithful,

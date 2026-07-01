@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Jack, is a 7/10 in terms of pain severity, describing a pain in the back of his neck that started after a car accident a week ago.",Faithful,
+1,The pain is not constant but worsens with movement.,Faithful,
+2,He has tried ibuprofen with some relief.,Faithful,
+3,The pain is not radiating to other areas such as the upper back or shoulders.,Faithful,
+4,Past medical history: [NOT MENTIONED],Faithful,
+5,"The patient denies any hearing problems, visual disturbances, or other symptoms.",Faithful,
+6,"He has a history of playing football, but no previous neck issues.",Faithful,
+7,Current medications: [NOT MENTIONED],Faithful,
+8,Vital signs: [NOT MENTIONED],Faithful,
+9,"Positive pain to palpation of the soft tissues of the neck, flexion, extension, rotation, and lateral bending.",Faithful,
+10,No pain with palpation of the back or shoulders.,Faithful,
+11,X-ray results show no signs of fracture or bony abnormalities.,Faithful,
+12,"Assessment: The patient has neck strain due to whiplash from a car accident, which is causing his neck pain.",Faithful,
+13,Problem list: Neck strain; suspected concussion (unknown status).,Causality,suspected concussion (unknown status)
+14,I prescribed Motrin 600mg every 6-8 hours for pain management.,Faithful,
+15,I also prescribed Flexeril 10mg every 12 hours as needed for muscle relaxation.,Faithful,
+16,I advised the patient to rest and avoid straining his neck.,Faithful,
+17,I ordered an MRI to rule out any nerve impingement or other complications.,Faithful,
+18,I referred the patient to either physical rehab or a chiropractor for further evaluation and treatment after the MRI results are available.,Faithful,
+19,The patient will be referred to a specialist for further evaluation and treatment after the MRI results are available.,Fabrication,The patient will be referred to a specialist

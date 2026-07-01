@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 25-year-old male, presented with neck pain following a car accident one week ago.",Fabrication,a 25-year-old male
+1,"He described the accident as a rear-end collision, where his head and neck moved forward quickly.",Faithful,
+2,"The pain has been persistent, with a severity of 7 out of 10, exacerbated by movement of the neck.",Faithful,
+3,The pain is localized to the back of the neck and has not been constant.,Faithful,
+4,The patient has tried ibuprofen with minimal relief.,Faithful,
+5,"He reports pain with flexion, extension, rotation, and lateral bending of the neck.",Faithful,
+6,Past medical history: [NOT MENTIONED],Faithful,
+7,"Review of systems: The patient denies any hearing problems, visual disturbances, or symptoms in other organs.",Faithful,
+8,Current medications: [NOT MENTIONED],Faithful,
+9,Vital signs: [NOT MENTIONED],Faithful,
+10,"Physical exam: The patient had positive pain to palpation of the soft tissues of the neck, pain with flexion, extension, rotation, and lateral bending of the neck.",Faithful,
+11,"The patient was able to move his neck from side to side, but with pain.",Faithful,
+12,Test Results: The x-ray results showed no signs of fracture or bony abnormalities.,Faithful,
+13,"Assessment: I believe the patient has a neck strain, likely caused by whiplash from the car accident.",Faithful,
+14,Problem list: Neck strain; Suspected whiplash.,Fabrication,Problem list
+15,I prescribed Motrin 600mg every 6-8 hours for anti-inflammatory purposes.,Faithful,
+16,I also prescribed Flexeril 10mg every 12 hours as needed for muscle relaxation.,Faithful,
+17,I advised the patient to be conservative with neck movement and to try to relax the neck.,Faithful,
+18,I ordered an MRI to rule out any underlying conditions.,Faithful,
+19,I referred the patient to either physical rehab or a chiropractor for further evaluation and treatment.,Faithful,
+20,Follow-up: I will review the MRI results and provide further instructions based on the findings.,Fabrication,Follow-up: I will review the MRI results and provide further instructions based on the findings
+21,Instructions:,Fabrication,Instructions:

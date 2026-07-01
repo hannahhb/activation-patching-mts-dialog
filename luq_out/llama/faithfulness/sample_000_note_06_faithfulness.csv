@@ -1,0 +1,25 @@
+sentence_idx,sentence,faithfulness,uncertainty
+0,Subjective:,0.9999,0.0001
+1,"HPI: The patient presented with a history of shortness of breath, which he describes as a sudden onset, and a feeling of being winded more easily than he used to be.",0.9978,0.0022
+2,"He reports that this has been ongoing for some time, but it has worsened recently.",0.9299,0.0701
+3,"He mentions that he has a dog that also experiences eye watering, which he attributes to allergies.",0.7551,0.2449
+4,"The patient has a history of heavy drinking, which may be contributing to his gastrointestinal symptoms.",0.9778,0.0222
+5,Past medical history: The patient has a history of heavy drinking and reports frequent diarrhea after drinking.,0.9879,0.0121
+6,He has never had any issues with allergies in the past.,0.3576,0.6424
+7,"Review of systems: The patient reports eye watering in his dog, but no other symptoms of allergies.",0.8913,0.1087
+8,"He denies having a rash, nausea, vomiting, or lip or throat swelling.",0.9579,0.0421
+9,Current medications: The patient is currently taking an albuterol inhaler as prescribed by the urgent care for his shortness of breath.,0.9569,0.0431
+10,Objective:,0.9984,0.0016
+11,"Vital signs: The patient's vital signs are within normal limits, with a normal pulse and pulse oximetry.",0.9998,0.0002
+12,"Physical exam: The patient appears to be in no distress, with no rash or angioedema noted.",0.9999,0.0001
+13,The lung exam reveals faint expiratory wheezing bilaterally in all lung fields.,0.9997,0.0003
+14,Test Results: The patient's chest X-ray and pulmonary function test were both normal.,0.9999,0.0001
+15,Assessment / Problem List:,0.9939,0.0061
+16,Assessment: The patient has newly diagnosed allergic asthma.,0.9999,0.0001
+17,Problem list: Asthma; Active,0.9792,0.0208
+18,Plan:,0.9979,0.0021
+19,I prescribed albuterol inhaler as previously prescribed by the urgent care for the patient's shortness of breath.,0.5628,0.4372
+20,I also prescribed singulair 10mg once daily to decrease the occurrences of asthma symptoms.,0.5883,0.4117
+21,"I will proceed with allergy testing, starting with skin testing to identify potential triggers.",1.0,0.0
+22,I want to see the patient next week to schedule the skin testing.,0.9999,0.0001
+23,Follow-up: The patient will return next week to schedule the skin testing.,0.9997,0.0003

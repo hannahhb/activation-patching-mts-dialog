@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Gregory, presents with a non-healing foot ulcer on the dorsal aspect of the lateral right foot, which has been present for approximately two months.",Faithful,
+1,The ulcer has recently become red and is draining.,Faithful,
+2,"The patient reports occasional throbbing pain, but no specific pain.",Faithful,
+3,"He has not had any trauma to the foot prior to the development of the ulcer, but thinks he may have gotten it from walking barefoot on the beach at Dewey Beach.",Faithful,
+4,"Past Medical History: The patient has diabetes, for which he takes medication, but does not regularly check his sugar levels.",Faithful,
+5,His last A1c was around 10.,Faithful,
+6,"Review of Systems: The patient reports occasional throbbing pain in the foot, but no other symptoms.",Faithful,
+7,Current Medications: [NOT MENTIONED],Fabrication,Current Medications: [NOT MENTIONED]
+8,"Vital Signs: Normal vital signs, including no fever.",Faithful,
+9,"Physical Exam: The patient has a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, proximal to the fifth MTP joint.",Faithful,
+10,"The wound is red, draining, and has some edema around it.",Faithful,
+11,"There is fluid present, but no necrosis, odor, or bony exposure.",Faithful,
+12,"The wound is tender to pressure, but not distinct pain.",Faithful,
+13,Test Results: An x-ray of the right foot shows no evidence of osteomyelitis.,Faithful,
+14,Assessment: The patient has a diabetic foot ulcer with signs of infection.,Faithful,
+15,Problem list: Diabetic foot ulcer; Infection; Uncontrolled diabetes; Unknown: Peripheral artery disease; Unknown: Foot trauma.,Fabrication,Unknown: Peripheral artery disease; Unknown: Foot trauma
+16,I prescribed clindamycin 400mg twice daily for 7 days to treat the infection.,Faithful,
+17,I will perform a debridement to remove dead tissue.,Faithful,
+18,I will order an ABI to assess blood supply to the foot.,Faithful,
+19,I will get the patient a surgical shoe to wear while the ulcer heals.,Faithful,
+20,The patient will return in 2 weeks for follow-up to assess the progress of the ulcer and possibly perform another debridement.,Faithful,

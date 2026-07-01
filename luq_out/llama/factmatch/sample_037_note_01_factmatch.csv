@@ -1,0 +1,71 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 36-year-old female.,0.9873,The patient is 36 years old.,1,,entailment
+1,The patient presents with a complaint of ankle pain.,0.9773,The patient has ankle pain.,1,,entailment
+2,The ankle pain occurred two days ago.,0.9546,The patient has ankle pain.,1,,entailment
+3,The patient slipped and twisted her left ankle on the outside.,0.956,The fall caused the patient's left ankle to twist underneath them.,1,,entailment
+4,The patient fell due to twisting her ankle.,0.9646,The fall caused the patient's left ankle to twist underneath them.,1,,entailment
+5,The patient reports swelling.,0.9434,The patient has swelling and redness on their ankle.,1,,entailment
+6,The patient reports pain.,0.9285,The patient has tried ibuprofen for pain.,1,,entailment
+7,The patient reports difficulty walking.,0.9503,The patient has difficulty walking due to the ankle pain.,1,,entailment
+8,The patient has tried ibuprofen.,0.9868,The patient has tried ibuprofen for pain.,1,,entailment
+9,The patient has tried ice.,0.9677,The patient has tried ice for pain.,1,,entailment
+10,The patient has tried elevation.,0.97,The patient has tried elevation for pain.,1,,entailment
+11,"Ibuprofen, ice, and elevation have provided some relief.",0.9817,"The ibuprofen, ice, and elevation have helped the patient's pain a little.",1,,entailment
+12,The pain is localized to the outside of her ankle.,0.9813,The patient's pain is mostly on the outside of their ankle.,1,,entailment
+13,The patient denies radiation of pain to her calf.,0.9387,The patient does not have pain in their calf.,1,,entailment
+14,The patient denies radiation of pain to her lower leg.,0.9292,The patient does not have pain in their lower leg.,1,,entailment
+15,The patient denies radiation of pain to her knee.,0.9231,The patient does not have pain in their knee.,1,,entailment
+16,The patient denies bleeding.,0.9062,The patient's ankle is swollen but not bleeding.,0,fabrication,neutral
+17,The patient has a history of diabetes.,1.0,The patient has a history of diabetes.,1,,entailment
+18,The patient has a history of high blood pressure.,1.0,The patient has a history of high blood pressure.,1,,entailment
+19,The patient takes metformin.,1.0,The patient takes metformin.,1,,entailment
+20,The metformin is taken for diabetes.,0.9798,Metformin is prescribed for diabetes.,1,,entailment
+21,The patient takes Norvasc.,0.9455,The patient needs a refill on norvasc.,1,,entailment
+22,The Norvasc is taken for high blood pressure.,0.9816,Norvasc is prescribed for high blood pressure.,1,,entailment
+23,The patient's hemoglobin A1c is 6.8.,1.0,The patient's hemoglobin A1c is 6.8.,1,,entailment
+24,The patient's diabetes is well-controlled.,0.9554,The patient manages their diabetes through diet.,1,,entailment
+25,The patient is due for an eye exam.,0.91,The patient is instructed to keep their eye appointment.,1,,entailment
+26,The patient has an appointment scheduled for an eye exam.,0.9601,The patient is instructed to keep their eye appointment.,1,,entailment
+27,The eye exam is for her diabetes checkup.,0.9257,The patient is instructed to keep their eye appointment.,0,fabrication,neutral
+28,The appointment is scheduled for the next couple of weeks.,0.9398,The patient has an appointment with an ophthalmologist in the next couple of weeks.,1,,entailment
+29,The patient's blood pressure is 120/70.,1.0,The patient's blood pressure is 120/70.,1,,entailment
+30,The patient's neck exam is normal.,0.966,The patient's neck exam is fine.,1,,entailment
+31,The patient has no bruits.,0.9595,The doctor did not find any bruits.,1,,entailment
+32,The patient's lungs are clear.,1.0,The patient's lungs are clear.,1,,entailment
+33,The patient's heart exam is normal.,1.0,The patient's heart exam is normal.,1,,entailment
+34,The patient has a 2/6 systolic ejection murmur.,1.0,The patient has a 2/6 systolic ejection murmur.,1,,entailment
+35,The systolic ejection murmur has been unchanged from previous exams.,0.9288,The patient has a 2/6 systolic ejection murmur.,0,fabrication,neutral
+36,The patient's belly exam is normal.,0.982,The patient's belly exam is good.,1,,entailment
+37,The patient has tenderness over the lateral malleolus.,1.0,The patient has tenderness over the lateral malleolus.,1,,entailment
+38,The patient has tenderness over the fifth metatarsal.,1.0,The patient has tenderness over the fifth metatarsal.,1,,entailment
+39,The patient has swelling on her ankle.,0.9815,The patient's ankle is swollen.,1,,entailment
+40,The patient has redness on her ankle.,0.9839,The patient has swelling and redness on their ankle.,1,,entailment
+41,The patient has pain with valgus stressing of the ankle.,0.9994,The patient has pain with valgus stressing of their ankle.,1,,entailment
+42,The patient has normal sensation in her lower extremities.,0.9647,The patient has normal sensation.,1,,entailment
+43,The patient has normal pulses in her lower extremities.,0.9679,The patient has normal pulses.,1,,entailment
+44,The patient has an ankle sprain.,0.9702,The patient has ankle pain.,1,,entailment
+45,The patient has a possible fracture.,0.9201,The patient will be sent to orthopedics if the x-ray shows a fracture.,1,,entailment
+46,The patient is being treated with an air splint.,0.9563,The doctor put the patient in an air splint.,1,,entailment
+47,The patient is being treated with crutches.,0.9522,The doctor gave the patient crutches.,1,,entailment
+48,The patient is to avoid weightbearing until an x-ray can be obtained.,0.9563,The patient is instructed to avoid weightbearing.,1,,entailment
+49,The patient has diabetes.,0.9713,The patient has a history of diabetes.,1,,entailment
+50,The patient has high blood pressure.,0.9742,The patient has a history of high blood pressure.,1,,entailment
+51,The patient has a suspected fracture.,0.9038,The patient will be sent to orthopedics if the x-ray shows a fracture.,1,,entailment
+52,An x-ray of the patient's ankle was ordered.,0.9911,The doctor ordered an x-ray of the patient's ankle.,1,,entailment
+53,The x-ray is to rule out a fracture.,0.9297,The patient will be sent to orthopedics if the x-ray shows a fracture.,0,fabrication,neutral
+54,The patient was put in an air splint.,0.9815,The doctor put the patient in an air splint.,1,,entailment
+55,The patient was given crutches.,0.9725,The doctor gave the patient crutches.,1,,entailment
+56,The patient was prescribed Naprosyn.,0.9821,The doctor prescribed naprosyn.,1,,entailment
+57,The Naprosyn dose is 500mg.,0.9688,Naprosyn is 500 milligrams.,1,,entailment
+58,Naprosyn is taken twice a day.,1.0,Naprosyn is taken twice a day.,1,,entailment
+59,Naprosyn is prescribed for pain control.,1.0,Naprosyn is prescribed for pain control.,1,,entailment
+60,The patient was instructed to keep the ankle elevated.,0.9955,The patient is instructed to keep their ankle elevated.,1,,entailment
+61,The patient was instructed to apply ice.,0.9628,The patient is instructed to put ice on their ankle.,1,,entailment
+62,The patient was instructed to continue with her current medications.,0.9568,The patient is instructed to continue taking metformin.,1,,entailment
+63,The patient was instructed to continue taking metformin.,0.9955,The patient is instructed to continue taking metformin.,1,,entailment
+64,The patient was instructed to continue taking Norvasc.,0.9508,The doctor refilled the patient's norvasc prescription.,1,,entailment
+65,Baseline labs were ordered.,0.9385,The doctor will check baseline labs.,1,,entailment
+66,A hemoglobin A1c test was ordered.,0.9725,The doctor ordered another hemoglobin A1c test.,1,,entailment
+67,The hemoglobin A1c test is to monitor her diabetes control.,0.95,The doctor ordered another hemoglobin A1c test.,1,,entailment
+68,The patient will follow up after the x-ray results are available.,0.9294,The patient will be sent to orthopedics if the x-ray shows a fracture.,0,fabrication,neutral
+69,The follow-up is to determine the next course of treatment.,0.899,The patient is instructed to continue taking metformin.,0,fabrication,neutral

@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Angela, presents with a history of recurrent kidney stones, with this being her seventh or eighth episode.",Faithful,
+1,"She reports that the current stone has passed, with symptoms resolving within the past three days.",Faithful,
+2,She denies any current pain or blood in her urine.,Faithful,
+3,"Past medical history includes hypertension and diabetes, for which she is currently on norvasc 2.5mg daily and metformin 500mg daily.",Faithful,
+4,"She reports having some difficulty adhering to a healthy diet due to her busy lifestyle, often consuming fast food and high-sodium foods.",Faithful,
+5,"Review of systems: The patient denies any chest pain, abdominal pain, or other symptoms.",Faithful,
+6,Current medications: Norvasc 2.5mg daily for hypertension; metformin 500mg daily for diabetes.,Faithful,
+7,Vital signs: Blood pressure 150/90 mmHg.,Faithful,
+8,"Physical exam: The patient's lungs are clear bilaterally, with no crackles heard.",Faithful,
+9,"A grade 2/6 systolic ejection murmur is present, as previously noted.",Faithful,
+10,Abdominal exam reveals no tenderness to palpation or on the CVA.,Faithful,
+11,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+12,"Assessment: The patient has a history of recurrent kidney stones, with the current stone having passed, but ongoing issues with hypertension and diabetes management.",Faithful,
+13,Problem list: Kidney stones; hypertension; diabetes; insomnia.,Faithful,
+14,I prescribed metformin 500mg daily for diabetes.,Negation,I prescribed metformin 500mg daily for diabetes
+15,I will give Angela a consult to a nutritionist to help with dietary changes to manage hypertension and diabetes.,Faithful,
+16,I will also have her start taking her blood sugars before every meal to gauge her glucose levels.,Faithful,
+17,"For insomnia, I prescribed melatonin 10mg as needed.",Faithful,
+18,"I will refer Angela to Dr. Harris, a urologist, for further evaluation of her recurrent kidney stones.",Faithful,
+19,"Angela will follow up in three months to re-evaluate her blood pressure, blood sugar control, and kidney function.",Faithful,

@@ -1,0 +1,55 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Angela.,1.0,The patient's name is Angela.,1,,entailment
+1,The patient has a history of recurrent kidney stones.,0.9578,The patient has had kidney stones in the past.,1,,entailment
+2,This is the patient's seventh or eighth episode of kidney stones.,0.9522,The patient has had seven or eight kidney stones.,1,,entailment
+3,The patient's current kidney stone passed about three days ago.,0.9836,The patient passed the kidney stone about three days ago.,1,,entailment
+4,The patient is no longer experiencing pain.,0.9959,The patient is no longer having pain.,1,,entailment
+5,The patient is no longer experiencing blood in her urine.,0.975,The patient is no longer noticing blood in their urine.,1,,entailment
+6,The patient has a past medical history of hypertension.,1.0,The patient has a past medical history of hypertension.,1,,entailment
+7,The patient has a past medical history of diabetes.,1.0,The patient has a past medical history of diabetes.,1,,entailment
+8,The patient is taking Norvasc.,0.9883,The patient has been taking norvasc regularly.,1,,entailment
+9,The Norvasc dose is 2.5mg.,0.9431,The patient is on 2.5 of norvasc.,1,,entailment
+10,Norvasc is taken daily.,0.9615,The patient has been taking norvasc regularly.,1,,entailment
+11,Norvasc is prescribed for hypertension.,0.948,The patient has been taking norvasc regularly.,0,fabrication,neutral
+12,The patient is taking Metformin.,0.9911,The patient has been taking metformin.,1,,entailment
+13,The Metformin dose is 500mg.,0.9723,The patient is on 500 milligrams of metformin daily.,1,,entailment
+14,Metformin is taken daily.,0.9614,The patient is on 500 milligrams of metformin daily.,1,,entailment
+15,Metformin is prescribed for diabetes.,0.9432,The patient has been taking metformin.,1,,entailment
+16,The patient has white coat syndrome.,0.9839,The patient experiences white coat syndrome.,1,,entailment
+17,The patient has a history of high blood pressure readings in the office.,0.9445,The patient has a past medical history of hypertension.,0,fabrication,neutral
+18,The patient has normal blood pressure readings at home.,0.9689,The patient's blood pressure is usually great at home.,1,,entailment
+19,The patient has difficulty adhering to a healthy diet.,0.9519,The patient has been having issues with their diet.,1,,entailment
+20,The patient frequently consumes fast food.,0.9465,The patient has been eating fast food and cakes and cookies.,0,fabrication,neutral
+21,The patient frequently consumes sweets.,0.9062,The patient has been eating fast food and cakes and cookies.,0,fabrication,neutral
+22,The patient has a history of insomnia.,0.9668,The patient has been having issues with insomnia.,1,,entailment
+23,The patient has tried meditation apps for insomnia.,0.9956,The patient has tried meditation apps to help with insomnia.,1,,entailment
+24,The patient has tried sleep hygiene practices for insomnia.,0.9462,The patient has been having issues with insomnia.,0,fabrication,neutral
+25,The patient reported no chest pain.,0.9823,The patient is not having any chest pain.,1,,entailment
+26,The patient reported no abdominal pain.,0.9411,The patient is not having any belly pain.,1,,entailment
+27,The patient's blood pressure is 150/90 mmHg.,0.9889,The patient's blood pressure was 150 over 90.,1,,entailment
+28,The patient's lungs are clear bilaterally.,1.0,The patient's lungs are clear bilaterally.,1,,entailment
+29,No crackles were heard in the patient's lungs.,0.906,The patient is not having any chest pain.,0,fabrication,neutral
+30,The patient has a grade 2/6 systolic ejection murmur.,0.9974,The patient has a grade 2 out of 6 systolic ejection murmur.,1,,entailment
+31,The patient's abdominal exam was negative for tenderness to palpation.,0.9677,The patient's abdomen is not tender to palpation.,1,,entailment
+32,The patient's abdominal exam was negative for tenderness of the CVA.,0.9313,The patient's abdomen is not tender to palpation.,0,fabrication,neutral
+33,The patient has kidney stones.,0.976,The patient has had kidney stones in the past.,1,,entailment
+34,The patient has hypertension.,0.9664,The patient has a past medical history of hypertension.,1,,entailment
+35,The patient has diabetes.,0.9593,The patient has a past medical history of diabetes.,1,,entailment
+36,The patient has insomnia.,0.9742,The patient has been having issues with insomnia.,1,,entailment
+37,The patient is suspected to have an underlying cause of kidney stones.,0.9481,The patient has had kidney stones in the past.,0,fabrication,neutral
+38,The doctor prescribed Percocet.,0.9529,The pain medicine was percocet.,1,,entailment
+39,The Percocet dose is not specified.,0.9003,The pain medicine was percocet.,0,fabrication,neutral
+40,Percocet is taken as needed.,0.9143,The pain medicine was percocet.,0,fabrication,neutral
+41,Percocet is prescribed for pain management.,0.9733,The pain medicine was percocet.,1,,entailment
+42,The patient will be referred to urology.,0.9637,The doctor wants to give the patient a referral to urology.,1,,entailment
+43,The referral to urology is to investigate the underlying cause of the patient's recurrent kidney stones.,0.9467,The doctor wants to give the patient a referral to urology.,0,fabrication,neutral
+44,The doctor will order a urinalysis.,0.9665,The doctor wants to get a urinalysis.,1,,entailment
+45,The doctor will order a urine culture.,0.9734,The doctor wants to get a urine culture.,1,,entailment
+46,The urinalysis and urine culture are to ensure the current stone has passed and there are no remaining issues.,0.9295,The doctor wants to get a urine culture.,0,fabrication,neutral
+47,The patient will be given a consult to nutrition.,0.9777,The doctor wants to give the patient a consult to nutrition.,1,,entailment
+48,The consult to nutrition is to help the patient with her diet and adherence to a healthy eating plan.,0.9687,The doctor wants to give the patient a consult to nutrition.,1,,entailment
+49,The doctor prescribed Melatonin.,0.9527,The doctor is going to prescribe the patient 10 milligrams of melatonin as needed.,1,,entailment
+50,The Melatonin dose is 10mg.,0.9904,The melatonin dose is 10 milligrams.,1,,entailment
+51,Melatonin is taken as needed.,1.0,Melatonin is taken as needed.,1,,entailment
+52,Melatonin is prescribed for insomnia.,1.0,Melatonin is prescribed for insomnia.,1,,entailment
+53,The patient will return in three months for a follow-up appointment.,0.957,The patient is going to come back in three months.,1,,entailment

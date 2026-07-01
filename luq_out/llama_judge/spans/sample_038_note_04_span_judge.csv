@@ -1,0 +1,20 @@
+sentence_idx,sentence,label,note_span
+0,HPI: The patient presents with anxiety regarding recent blood work showing hepatitis C.,Faithful,
+1,"She reports no prior knowledge of the diagnosis and attributes her symptoms to a history of IV drug use in the past, which she has been clean from for over 15 years.",Faithful,
+2,"She denies any history of alcohol or drug use in the present, but reports a history of heavy alcohol use in the past, consuming about one beer a day, and currently smoking one to two cigarettes a day.",Causality,denies any history of alcohol or drug use in the present
+3,"She reports feeling tired at the end of the day, despite getting enough sleep, and has a family history of hypertension, diabetes, and depression.",Faithful,
+4,"Past medical history is otherwise unremarkable, with no prior conditions or treatments mentioned.",Faithful,
+5,The patient reports no other symptoms.,Faithful,
+6,Current Medications: [NOT MENTIONED],Fabrication,Current Medications: [NOT MENTIONED]
+7,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+8,The patient appears in no distress and no jaundice is present on skin exam.,Faithful,
+9,"The heart exam reveals a regular rate and rhythm with a 2/6 systolic murmur, which has not changed from last year.",Faithful,
+10,"Lung exam is clear with no wheezes, rales, or rhonchi.",Faithful,
+11,Abdominal exam is soft with normal bowel sounds and no hepatosplenomegaly.,Faithful,
+12,Musculoskeletal exam is unremarkable with no gait disturbance or edema.,Faithful,
+13,"The patient's recent blood work shows a positive HCV antibody test and an elevated AST at 39, but normal albumin and total bilirubin levels.",Faithful,
+14,"The patient is diagnosed with hepatitis C, a viral infection affecting the liver, likely acquired years ago, based on initial labs showing a positive HCV antibody test and an elevated AST level.",Faithful,
+15,Problem list: Hepatitis C; active.,Fabrication,Hepatitis C; active
+16,"I ordered additional blood work to confirm the diagnosis, including checking the HCV RNA and genotype, and an ultrasound to determine the severity of liver disease by checking for fibrosis.",Faithful,
+17,I will review the results in three weeks and proceed with treatment accordingly.,Faithful,
+18,I will see the patient in three weeks to review the results of the additional blood work and ultrasound and determine the next steps in treatment.,Faithful,

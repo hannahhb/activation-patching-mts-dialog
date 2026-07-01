@@ -354,9 +354,15 @@ def compute_ecs_pks_single_pass(
     device: str,
     top_k_frac: float = 0.10,
     copying_mask: Optional[np.ndarray] = None,
-) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+) -> Tuple[np.ndarray, np.ndarray, np.ndarray,
+           np.ndarray, np.ndarray, np.ndarray]:
     """
-    Single forward pass. Returns (ecs_mean, ecs_copy, pks), each (n_layers, n_sents).
+    Single forward pass.
+
+    Returns (ecs_mean, ecs_copy, pks, ecs_tok_mean, ecs_tok_copy, pks_tok):
+      ecs_mean, ecs_copy, pks        — (n_layers, n_sents)  sentence-level
+      ecs_tok_mean, ecs_tok_copy,
+      pks_tok                        — (n_layers, n_note_tokens) token-level
 
     ECS — faithful to ReDeEP Eq 3 at sentence (chunk) granularity:
       * For layer l, head h: chunk attention a^{l,h} = mean over the sentence's note
@@ -379,16 +385,20 @@ def compute_ecs_pks_single_pass(
     n_sents  = len(sent_spans)
     T        = transcript_len
     k_top    = max(1, int(T * top_k_frac))
+    n_note   = tokens.shape[1] - T          # note token count (incl. EOS)
 
     chunk_attn: List[Optional[List]] = [None] * n_layers
-    pks_all = np.zeros((n_layers, n_sents), dtype=np.float64)
-    x_last  = [None]
+    tok_attn_all: List[Optional[np.ndarray]] = [None] * n_layers  # (n_heads, n_note, T)
+    pks_all  = np.zeros((n_layers, n_sents), dtype=np.float64)
+    pks_tok  = np.full((n_layers, n_note),   np.nan, dtype=np.float64)
+    x_last   = [None]
     _mid_tmp = [None]
 
     def make_pattern_hook(l: int):
         def fn(value, hook):
             attn    = value[0].to(torch.float32).cpu().numpy()
             seq_len = attn.shape[-1]
+            # sentence-level (existing)
             chunks  = []
             for s_start, s_end in sent_spans:
                 abs_s = T + s_start
@@ -399,6 +409,9 @@ def compute_ecs_pks_single_pass(
                     w = np.zeros((n_heads, T), dtype=np.float32)
                 chunks.append(w)
             chunk_attn[l] = chunks
+            # token-level: attention from every note token to context
+            t_end = min(T + n_note, seq_len)
+            tok_attn_all[l] = attn[:, T:t_end, :T].copy()      # (n_heads, n_note', T)
             return value
         return fn
 
@@ -422,10 +435,14 @@ def compute_ecs_pks_single_pass(
                 kl1 = np.sum(q_mid  * (np.log(q_mid  + eps) - np.log(m + eps)), axis=-1)
                 kl2 = np.sum(q_post * (np.log(q_post + eps) - np.log(m + eps)), axis=-1)
                 tok_jsd = np.clip(0.5 * kl1 + 0.5 * kl2, 0.0, 1.0)
+                # sentence-level aggregation (existing)
                 for si, (s_start, s_end) in enumerate(sent_spans):
                     s_e = min(s_end, len(tok_jsd))
                     if s_start < s_e:
                         pks_all[l, si] = tok_jsd[s_start:s_e].mean()
+                # token-level: store raw JSD per note token
+                n_jsd = len(tok_jsd)
+                pks_tok[l, :n_jsd] = tok_jsd
                 _mid_tmp[0] = None
 
             # ── Capture FINAL-LAYER hidden states (x^L) for ECS (Eq 3) ──
@@ -480,7 +497,7 @@ def compute_ecs_pks_single_pass(
                 if denom > 1e-8:
                     ecs_lh[l, h, si] = float(np.dot(e, s_vec) / denom)
 
-    # Aggregate over heads.
+    # Aggregate over heads — sentence level.
     ecs_mean = np.nanmean(ecs_lh, axis=1)                     # (n_layers, n_sents)
     if copying_mask is not None and copying_mask.any():
         ecs_copy = np.full((n_layers, n_sents), np.nan, dtype=np.float64)
@@ -491,9 +508,44 @@ def compute_ecs_pks_single_pass(
     else:
         ecs_copy = np.full((n_layers, n_sents), np.nan, dtype=np.float64)
 
-    return (np.clip(ecs_mean, -1.0, 1.0),
-            np.clip(ecs_copy, -1.0, 1.0),
-            pks_all)
+    # ── Token-level ECS post-pass ─────────────────────────────────────────────
+    # Per note token t: ECS^{l,h}(t) = cos(mean_pool(top-k final-layer context
+    # hidden states attended at layer l head h by token t), x_last[T+t]).
+    # Same definition as sentence-level but without mean-pooling across the chunk.
+    x_note   = x_arr[T:T + n_note]                            # (n_note, d_model)
+    norm_x   = np.linalg.norm(x_note, axis=-1)                # (n_note,)
+
+    ecs_tok_lh = np.full((n_layers, n_heads, n_note), np.nan, dtype=np.float64)
+    for l in range(n_layers):
+        if tok_attn_all[l] is None:
+            continue
+        attn_l = tok_attn_all[l]                              # (n_heads, n_note', T)
+        n_tok  = attn_l.shape[1]                              # may be < n_note near EOS
+        for h in range(n_heads):
+            top_h  = np.argpartition(attn_l[h], -k_top, axis=-1)[:, -k_top:]
+            # top_h: (n_tok, k_top) — indices into context (T positions)
+            e_h    = x_trans[top_h].mean(axis=1)             # (n_tok, d_model)
+            num    = (e_h * x_note[:n_tok]).sum(axis=-1)     # (n_tok,)
+            ne     = np.linalg.norm(e_h, axis=-1)            # (n_tok,)
+            denom  = ne * norm_x[:n_tok]
+            ecs_tok_lh[l, h, :n_tok] = np.where(denom > 1e-8, num / denom, np.nan)
+
+    ecs_tok_mean = np.nanmean(ecs_tok_lh, axis=1)            # (n_layers, n_note)
+    if copying_mask is not None and copying_mask.any():
+        ecs_tok_copy = np.full((n_layers, n_note), np.nan, dtype=np.float64)
+        for l in range(n_layers):
+            heads = np.where(copying_mask[l])[0]
+            if heads.size:
+                ecs_tok_copy[l] = np.nanmean(ecs_tok_lh[l, heads], axis=0)
+    else:
+        ecs_tok_copy = np.full((n_layers, n_note), np.nan, dtype=np.float64)
+
+    return (np.clip(ecs_mean,     -1.0, 1.0),
+            np.clip(ecs_copy,     -1.0, 1.0),
+            pks_all,
+            np.clip(ecs_tok_mean, -1.0, 1.0),
+            np.clip(ecs_tok_copy, -1.0, 1.0),
+            pks_tok)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -934,6 +986,9 @@ def main() -> None:
                              "eigenvalue-fraction cut. If set, overrides --copying-top-frac.")
     parser.add_argument("--note-idx",     type=int,   default=None,
                         help="Restrict to one note index (default: all K)")
+    parser.add_argument("--notes",        type=int,   default=None, metavar="N",
+                        help="Process first N generations per sample (default: all K). "
+                             "Overridden by --note-idx.")
     parser.add_argument("--samples",      type=int,   default=None,
                         help="Max number of samples to process")
     parser.add_argument("--no-cache",     action="store_true")
@@ -1025,7 +1080,12 @@ def main() -> None:
         notes      = gen_data["notes"]
         K          = len(notes)
 
-        note_indices = [args.note_idx] if args.note_idx is not None else range(K)
+        if args.note_idx is not None:
+            note_indices = [args.note_idx]
+        elif args.notes is not None:
+            note_indices = range(min(args.notes, K))
+        else:
+            note_indices = range(K)
 
         for k in note_indices:
             if k >= K:
@@ -1094,10 +1154,11 @@ def main() -> None:
                 continue
 
             # ── Load from disk cache if available ─────────────────────────────
-            cache_npz = cache_dir / f"{note_name}.npz"
+            cache_npz  = cache_dir / f"{note_name}.npz"
+            tokens_npz = act_dir   / f"sample_{si:03d}_gen_{k:02d}_tokens.npz"
 
             cached_ok = False
-            if not args.no_cache and cache_npz.exists():
+            if not args.no_cache and cache_npz.exists() and tokens_npz.exists():
                 d = np.load(str(cache_npz))
                 # ecs_copy depends on the copying-head selection; invalidate if it changed.
                 cached_sig = str(d["copying_sig"]) if "copying_sig" in d else None
@@ -1112,11 +1173,12 @@ def main() -> None:
                     print(f"ECS={np.nanmean(ecs_l):.3f}  PKS={pks_l.mean():.3f}  (cached)")
             if not cached_ok:
                 try:
-                    ecs_l, ecscopy_l, pks_l = compute_ecs_pks_single_pass(
-                        model, tokens, transcript_len, spans,
-                        device=args.device, top_k_frac=args.top_k_frac,
-                        copying_mask=copying_mask,
-                    )
+                    ecs_l, ecscopy_l, pks_l, ecs_tok_l, ecs_tok_copy_l, pks_tok_l = \
+                        compute_ecs_pks_single_pass(
+                            model, tokens, transcript_len, spans,
+                            device=args.device, top_k_frac=args.top_k_frac,
+                            copying_mask=copying_mask,
+                        )
                 except Exception as exc:
                     print(f"forward ERROR: {exc}")
                     if args.device == "cuda":
@@ -1126,6 +1188,28 @@ def main() -> None:
                 np.savez_compressed(str(cache_npz),
                                     ecs=ecs_l, ecs_copy=ecscopy_l, pks=pks_l,
                                     copying_sig=np.array(copying_sig))
+
+                # Token-level NPZ: full (n_layers, n_note_tokens) arrays.
+                # Use float32 to halve disk usage; NaN is preserved.
+                # Also save per-token decoded strings so downstream analysis
+                # (word-level plots) can align spans without reloading the model.
+                tokenizer      = model.tokenizer
+                note_token_ids = tokens[0, transcript_len:].tolist()
+                # Decode each token in isolation using prefix-decode trick to
+                # handle multi-byte BPE correctly (same approach as find_sent_spans).
+                tok_strs = []
+                prev_len = 0
+                full_dec = ""
+                for i, tid in enumerate(note_token_ids):
+                    full_dec = tokenizer.decode(note_token_ids[: i + 1],
+                                                skip_special_tokens=False)
+                    tok_strs.append(full_dec[prev_len:])
+                    prev_len = len(full_dec)
+                np.savez_compressed(str(tokens_npz),
+                                    ecs        = ecs_tok_l.astype(np.float32),
+                                    ecs_copy   = ecs_tok_copy_l.astype(np.float32),
+                                    pks        = pks_tok_l.astype(np.float32),
+                                    token_strs = np.array(tok_strs, dtype=object))
 
                 n_valid = min(ecs_l.shape[1], len(luq_scores))
                 ecs_l, ecscopy_l, pks_l = (ecs_l[:, :n_valid],

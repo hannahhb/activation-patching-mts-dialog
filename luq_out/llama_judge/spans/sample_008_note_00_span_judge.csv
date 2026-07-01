@@ -1,0 +1,24 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient is a woman who has been experiencing headaches for years, starting in her teenage years.",Faithful,
+1,"Initially, her headaches were related to her menstrual cycle, but over time, they have become more frequent and severe.",Faithful,
+2,"She reports that they are typically located on the right side of her head, behind her eye, and are described as a pulsing sensation.",Faithful,
+3,"She has also noticed that her headaches worsen with exercise, particularly when she starts to jog.",Faithful,
+4,"Additionally, she has been experiencing tinnitus (ringing in the ears) and blurred vision, which is intermittent but affects the side of her vision.",Faithful,
+5,She denies numbness or tingling in her hands or feet.,Faithful,
+6,Past medical history: [NOT MENTIONED],Fabrication,Past medical history: [NOT MENTIONED]
+7,Review of systems: The patient reports tinnitus and blurred vision.,Faithful,
+8,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+9,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+10,"The patient's heart exam is normal, with a normal sinus rhythm and no murmurs, rubs, or gallops.",Faithful,
+11,"The funduscopic exam reveals papilledema, which is swelling behind the eye.",Faithful,
+12,"The patient's neurological exam is normal, with intact cranial nerves and a normal cranial reflex.",Faithful,
+13,Her gait is normal.,Faithful,
+14,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+15,"Assessment: The patient's symptoms are concerning for idiopathic intracranial hypertension, a condition characterized by increased pressure in the brain without a known cause.",Faithful,
+16,Problem list: Idiopathic intracranial hypertension; suspected; confirmed.,Causality,suspected; confirmed
+17,I prescribed an MRI to confirm the diagnosis and evaluate for any other contributing conditions.,Faithful,
+18,I also plan to perform a spinal tap to evaluate the pressure in the brain and potentially decrease the pressure by removing a small amount of fluid.,Faithful,
+19,"Additionally, I referred the patient to a neuro-ophthalmologist for a complete eye exam.",Faithful,
+20,I will work with the patient's insurance company to obtain preapproval for the MRI and schedule the test once approved.,Faithful,
+21,"The patient will be scheduled for an MRI and spinal tap, and will be seen by a neuro-ophthalmologist for a complete eye exam.",Contextual,The patient will be scheduled
+22,The patient will be contacted to schedule the MRI once the insurance preapproval is obtained.,Faithful,

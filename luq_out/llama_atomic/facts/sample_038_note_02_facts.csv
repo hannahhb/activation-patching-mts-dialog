@@ -1,0 +1,61 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient presents with anxiety.,0.0085
+1,subjective,The patient's blood work shows a diagnosis of hepatitis C.,0.0383
+2,subjective,The patient reports feeling fine despite the diagnosis of hepatitis C.,0.1407
+3,subjective,The patient denied a past medical history of hepatitis C.,0.9121
+4,subjective,The patient has a history of intravenous drug use.,0.0105
+5,subjective,The patient has a history of alcohol consumption.,0.0105
+6,subjective,The patient's current alcohol intake is one beer per day.,0.3671
+7,subjective,The patient smokes one to two cigarettes per day.,0.1942
+8,subjective,The patient has a family history of hypertension.,0.3135
+9,subjective,The patient has a family history of diabetes.,0.3948
+10,subjective,The patient has a family history of depression.,0.2695
+11,subjective,The patient has been clean from intravenous drug use for over 15 years.,0.0194
+12,subjective,The patient's past alcohol consumption was heavy.,0.4503
+13,subjective,The patient reports feeling tired at the end of the day.,0.009
+14,subjective,The patient gets enough sleep.,0.5553
+15,subjective,The patient denied any other symptoms besides feeling tired.,0.3441
+16,objective,The patient appears in no distress.,0.0093
+17,objective,The patient has no jaundice on skin exam.,0.019
+18,objective,The patient's heart exam reveals a regular rate.,0.0123
+19,objective,The patient's heart exam reveals a regular rhythm.,0.0077
+20,objective,The patient has a 2/6 systolic murmur.,0.0091
+21,objective,The patient's systolic murmur has not changed from last year.,0.0096
+22,objective,The patient's lung exam is clear.,0.0097
+23,objective,The patient has no wheezes.,0.0244
+24,objective,The patient has no rales.,0.4677
+25,objective,The patient has no rhonchi.,0.1679
+26,objective,The patient has present bowel sounds.,0.4319
+27,objective,The patient's abdomen is soft.,0.0094
+28,objective,The patient has no hepatosplenomegaly.,0.2701
+29,objective,The patient's musculoskeletal exam is unremarkable.,0.0103
+30,objective,The patient's HCV antibody test was positive.,0.0087
+31,objective,The patient's liver panel showed an elevated AST.,0.2145
+32,objective,The patient's AST level is 39.,0.01
+33,objective,The patient's albumin level is normal.,0.3432
+34,objective,The patient's total bilirubin level is normal.,0.0172
+35,assessment,The patient has a confirmed diagnosis of hepatitis C.,0.0015
+36,assessment,The patient tested positive for HCV antibody.,0.6633
+37,assessment,The patient has an elevated AST level.,0.8896
+38,assessment,The patient has a diagnosis of Hepatitis C.,0.0016
+39,assessment,The patient has a diagnosis of Hypertension.,0.9998
+40,assessment,The patient has a diagnosis of Diabetes.,0.9999
+41,assessment,The patient has a diagnosis of Depression.,0.9998
+42,plan,The doctor prescribed additional blood work.,0.3028
+43,plan,The additional blood work is to confirm the diagnosis.,0.376
+44,plan,The additional blood work is to determine the severity of the patient's liver disease.,0.6163
+45,plan,The patient will undergo HCV RNA testing.,0.0034
+46,plan,The HCV RNA testing is part of the additional blood work.,0.3773
+47,plan,The patient will undergo HCV genotype testing.,0.128
+48,plan,The HCV genotype testing is part of the additional blood work.,0.3761
+49,plan,The doctor ordered an ultrasound.,0.0043
+50,plan,The ultrasound is to assess liver fibrosis.,0.3844
+51,plan,The patient has liver disease.,0.014
+52,plan,The patient has hepatitis C.,0.5333
+53,plan,The doctor will schedule follow-up appointments in three weeks.,0.4434
+54,plan,The follow-up appointments are to discuss the results of the additional testing.,0.2767
+55,plan,The follow-up appointments are to determine the next steps in treatment.,0.656
+56,plan,The doctor will recommend screening for hepatitis C to the patient's family members.,0.2533
+57,plan,The patient will have a follow-up appointment in three weeks.,0.0052
+58,plan,The doctor will review the results of the additional testing at the follow-up appointment.,0.1341
+59,plan,The doctor will discuss the next steps in treatment at the follow-up appointment.,0.3841

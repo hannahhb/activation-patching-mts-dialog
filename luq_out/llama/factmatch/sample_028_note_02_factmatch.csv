@@ -1,0 +1,50 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Matthew.,1.0,The patient's name is Matthew.,1,,entailment
+1,The patient has been experiencing lower back pain for an extended period.,0.9645,The patient has been having back pain for about a month.,1,,entailment
+2,The patient's lower back pain radiates down his left leg.,0.9827,The patient experiences pain radiating down their left leg.,1,,entailment
+3,The patient rates his current pain level as 6 out of 10.,0.993,The patient's current pain level is 6 out of 10.,1,,entailment
+4,The patient's worst-case pain level is 13 out of 10.,0.9683,The patient's current pain level is 6 out of 10.,1,,entailment
+5,The patient's pain is exacerbated by standing.,0.9751,The patient's back pain worsens with standing.,1,,entailment
+6,The patient's pain is exacerbated by walking.,0.966,The patient's back pain worsens with walking.,1,,entailment
+7,The patient's pain is exacerbated by coughing.,0.9733,The patient's back pain worsens with coughing.,1,,entailment
+8,The patient's pain is exacerbated by sneezing.,0.9749,The patient's back pain worsens with sneezing.,1,,entailment
+9,The patient's pain is alleviated by lying down.,0.9642,The patient's pain improves with laying down.,1,,entailment
+10,The patient has difficulty standing due to pain.,0.9636,The patient's back pain worsens with standing.,1,,entailment
+11,The patient has difficulty walking due to pain.,0.9579,The patient's back pain worsens with walking.,1,,entailment
+12,The patient uses a cane for support.,0.9661,The patient uses a cane to walk.,1,,entailment
+13,The patient has numbness in his lower extremities.,0.9323,The patient has weakness in both legs.,0,fabrication,neutral
+14,The patient has tingling in his lower extremities.,0.9182,The patient's motor and sensory functions are intact in both lower extremities.,0,fabrication,contradiction
+15,The patient has weakness in both legs.,1.0,The patient has weakness in both legs.,1,,entailment
+16,The patient had a fall off a roof 30 years ago.,0.964,The patient is 30 years post a fall from a roof.,1,,entailment
+17,The patient's fall may have resulted in a fracture.,0.9415,The patient had a possible fracture 30 years ago.,0,fabrication,neutral
+18,The patient's fall may have resulted in a disk injury.,0.9058,The doctor diagnosed the patient with acute disk herniation at L4-L5 with nerve root impingement.,0,fabrication,neutral
+19,The patient has been experiencing back pain for about a month.,0.9979,The patient has been having back pain for about a month.,1,,entailment
+20,The patient's symptoms are primarily localized to his lower back and left leg.,0.9702,The patient's pain is located in the lower back.,1,,entailment
+21,The patient does not have other systemic symptoms.,0.8995,The patient has no redness on their back.,0,fabrication,neutral
+22,The patient's back exam revealed no bony abnormalities.,0.9805,The patient has no bony abnormalities on their back.,1,,entailment
+23,The patient's back exam revealed no redness.,0.9826,The patient has no redness on their back.,1,,entailment
+24,The patient's back exam revealed no bruising.,0.9778,The patient has no bruising on their back.,1,,entailment
+25,The patient was positive for pain to palpation at the L4 vertebrae.,0.9844,The patient has pain to palpation at the L4 vertebrae.,1,,entailment
+26,The patient experienced pain with flexion of his back.,0.9797,The patient has pain with flexion and extension of their back.,1,,entailment
+27,The patient experienced pain with extension of his back.,0.9763,The patient has pain with flexion and extension of their back.,1,,entailment
+28,The patient's strength in the left leg is 4 out of 5.,0.9916,The patient has 4 out of 5 strength in their left leg.,1,,entailment
+29,The patient's strength in the right leg is 5 out of 5.,0.9914,The patient has 5 out of 5 strength in their right leg.,1,,entailment
+30,The patient's reflexes were brisk.,0.9956,The patient's reflexes are brisk.,1,,entailment
+31,The patient's motor function is intact in both lower extremities.,0.9875,The patient's motor and sensory functions are intact in both lower extremities.,1,,entailment
+32,The patient's sensory function is intact in both lower extremities.,0.9926,The patient's motor and sensory functions are intact in both lower extremities.,1,,entailment
+33,The MRI showed a disk herniation at the level of L4-L5 vertebrae.,0.9952,The MRI shows a disk herniation at the L4-L5 vertebrae.,1,,entailment
+34,The disk herniation is associated with nerve root impingement.,1.0,The disk herniation is associated with nerve root impingement.,1,,entailment
+35,The patient has acute disk herniation at L4-L5 with nerve root impingement.,0.9873,The doctor diagnosed the patient with acute disk herniation at L4-L5 with nerve root impingement.,1,,entailment
+36,The patient has back pain.,1.0,The patient has back pain.,1,,entailment
+37,The patient has acute disk herniation at L4-L5 with nerve root impingement.,0.9873,The doctor diagnosed the patient with acute disk herniation at L4-L5 with nerve root impingement.,1,,entailment
+38,The patient has lower back pain.,0.9702,The patient's pain is located in the lower back.,1,,entailment
+39,The patient has leg pain.,0.9468,The patient experiences pain radiating down their left leg.,1,,entailment
+40,The patient has weakness in both legs.,1.0,The patient has weakness in both legs.,1,,entailment
+41,The doctor recommended an epidural steroid injection.,0.9911,The doctor prescribed an epidural steroid injection.,1,,entailment
+42,The epidural steroid injection is to alleviate the inflammation.,0.9718,The epidural steroid injection is for the patient's back pain and leg pain.,1,,entailment
+43,The epidural steroid injection is to alleviate the pain.,0.9806,The epidural steroid injection is for the patient's back pain and leg pain.,1,,entailment
+44,The doctor will refer the patient to physical therapy.,1.0,The doctor will refer the patient to physical therapy.,1,,entailment
+45,The physical therapy is to strengthen the area.,0.92,The doctor will refer the patient to physical therapy.,0,fabrication,neutral
+46,The patient will see the doctor again in a month.,0.9918,The patient will see the doctor again in about a month.,1,,entailment
+47,The follow-up appointment is to assess the effectiveness of the treatment.,0.9,The patient will see the doctor again in about a month.,0,fabrication,neutral
+48,The treatment plan will be adjusted as needed.,0.9121,The doctor expects the patient to do well with the treatment plan.,0,fabrication,neutral

@@ -1,0 +1,55 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient presents with a history of a knee injury.,0.961,The patient has had knee pain since the injury.,1,,entailment
+1,The patient's knee injury was sustained while skiing in Vermont.,0.9695,The injury occurred while skiing in Vermont.,1,,entailment
+2,The patient's knee injury occurred last weekend.,0.9408,The patient has had knee pain since the injury.,0,fabrication,neutral
+3,The patient caught her ski and fell.,0.9768,The patient caught her ski while coming off the lift and fell.,1,,entailment
+4,The patient experienced a popping sensation in her knee.,0.946,The patient's knee popped during the fall.,1,,entailment
+5,The patient has experienced pain in the knee since the injury.,0.9952,The patient has had knee pain since the injury.,1,,entailment
+6,The patient has experienced instability in the knee since the injury.,0.9686,The patient has had knee pain since the injury.,1,,entailment
+7,The patient's knee pain is particularly on the lateral aspect.,0.9272,The patient experiences pain when trying to straighten her knee all the way.,0,fabrication,neutral
+8,The patient is unable to bear weight.,0.9686,The patient was unable to bear weight after the injury.,1,,entailment
+9,The patient has a decreased range of motion.,0.9381,The patient's right knee has decreased flexion and extension.,1,,entailment
+10,The patient has pain on palpation of the lateral knee.,0.9585,The patient's right knee is painful to palpation.,1,,entailment
+11,The patient has a positive Lachman sign.,0.9766,The patient's right knee has a positive Lachman sign.,1,,entailment
+12,The patient has been taking ibuprofen.,0.9775,The patient is taking ibuprofen for pain.,1,,entailment
+13,The ibuprofen dose is 600-800mg.,0.9741,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+14,Ibuprofen is taken every 8 hours.,0.9802,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+15,Ibuprofen is taken as needed.,0.9566,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+16,Ibuprofen is prescribed for pain management.,0.9768,The patient is taking ibuprofen for pain.,1,,entailment
+17,The patient has no known medical conditions.,0.9298,The patient is generally healthy.,1,,entailment
+18,The patient has no allergies.,0.9044,The patient does not have diabetes.,0,fabrication,neutral
+19,The patient has no history of substance abuse.,0.8968,The patient does not have diabetes.,0,fabrication,neutral
+20,The patient is generally healthy.,1.0,The patient is generally healthy.,1,,entailment
+21,The patient has no high blood pressure.,0.9931,The patient does not have high blood pressure.,1,,entailment
+22,The patient has no diabetes.,0.9908,The patient does not have diabetes.,1,,entailment
+23,The patient has no other chronic conditions.,0.9175,The patient does not have diabetes.,0,fabrication,neutral
+24,There are no additional symptoms reported in other organs.,0.8902,The patient does not have any heart murmur.,0,fabrication,neutral
+25,The patient has edema over the right knee.,0.9924,The patient's right knee has edema.,1,,entailment
+26,The patient has an effusion over the right knee.,0.9917,The patient's right knee has an effusion.,1,,entailment
+27,The patient has pain on palpation of the lateral knee.,0.9585,The patient's right knee is painful to palpation.,1,,entailment
+28,The patient has decreased flexion of the right knee.,0.9906,The patient's right knee has decreased flexion and extension.,1,,entailment
+29,The patient has decreased extension of the right knee.,0.9909,The patient's right knee has decreased flexion and extension.,1,,entailment
+30,The patient has a positive Lachman sign.,0.9766,The patient's right knee has a positive Lachman sign.,1,,entailment
+31,The patient has a palpable dorsalis pedis pulse.,0.961,The patient's right knee has a palpable dorsalis pedis and posterior tibial pulse.,1,,entailment
+32,The patient has a palpable posterior tibial pulse.,0.9627,The patient's right knee has a palpable dorsalis pedis and posterior tibial pulse.,1,,entailment
+33,There is no leg edema in the ankle.,0.9828,The patient does not have leg edema in the ankle.,1,,entailment
+34,The patient likely has a ruptured anterior cruciate ligament (ACL) in her right knee.,0.9578,The doctor suspects the patient may have ruptured her ACL.,1,,entailment
+35,The patient's ruptured ACL is causing pain.,0.9408,The doctor suspects the patient may have ruptured her ACL.,0,fabrication,neutral
+36,The patient's ruptured ACL is causing instability.,0.9429,The doctor suspects the patient may have ruptured her ACL.,0,fabrication,neutral
+37,The patient has ACL rupture.,0.959,The doctor suspects the patient may have ruptured her ACL.,1,,entailment
+38,The patient has knee pain.,0.9706,The patient has had knee pain since the injury.,1,,entailment
+39,The patient has knee instability.,0.9449,The patient has had knee pain since the injury.,0,fabrication,neutral
+40,The patient has knee effusion.,0.9744,The patient's right knee has an effusion.,1,,entailment
+41,A knee MRI was ordered.,0.9818,The doctor ordered a knee MRI.,1,,entailment
+42,The knee MRI is to confirm the diagnosis.,0.9574,The doctor ordered a knee MRI.,1,,entailment
+43,The knee MRI is to rule out any other damage to surrounding structures.,0.9406,The doctor ordered a knee MRI.,0,fabrication,neutral
+44,The doctor prescribed ibuprofen.,1.0,The doctor prescribed ibuprofen.,1,,entailment
+45,The ibuprofen dose is 600-800mg.,0.9741,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+46,Ibuprofen is taken every 8 hours.,0.9802,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+47,Ibuprofen is taken as needed.,0.9566,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+48,Ibuprofen is prescribed for pain management.,0.9768,The patient is taking ibuprofen for pain.,1,,entailment
+49,The patient was recommended to continue using a brace.,0.9369,The doctor prescribed a brace for the patient's knee.,1,,entailment
+50,The brace is to support the knee.,0.9457,The doctor prescribed a brace for the patient's knee.,1,,entailment
+51,The patient will be seen again soon.,0.9823,The doctor will see the patient again soon.,1,,entailment
+52,The follow-up appointment is to discuss the results of the MRI.,0.9016,The doctor ordered a knee MRI.,0,fabrication,neutral
+53,The follow-up appointment is to plan for further treatment.,0.8917,The doctor will see the patient again soon.,0,fabrication,neutral

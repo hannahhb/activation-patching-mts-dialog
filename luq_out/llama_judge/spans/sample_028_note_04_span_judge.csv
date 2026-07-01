@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Matthew, has been experiencing back pain for an extended period, with the pain becoming more severe over the past month.",Faithful,
+1,"He reports that the pain radiates from his lower back down through his hip and into his left leg, with the pain in the leg being described as a burning sensation, like an electrical toothache.",Faithful,
+2,"He rates his pain as a 6 out of 10, but when it gets worse, it is a 13 out of 10.",Faithful,
+3,"He mentions that standing, walking, and activities such as coughing and sneezing exacerbate the pain, while lying down provides some relief.",Faithful,
+4,He has been bedridden for the past month due to the severity of his symptoms.,Contextual,bedridden for the past month
+5,"The patient also reports weakness in both his back and legs, with his legs being particularly weak.",Faithful,
+6,Past medical history: [NOT MENTIONED],Faithful,
+7,Review of systems: [NOT MENTIONED],Faithful,
+8,Current medications: [NOT MENTIONED],Faithful,
+9,Vital signs: The patient's vitals are good.,Faithful,
+10,"Physical exam: On examination, the patient is positive for pain to palpation at the L4 vertebrae, and he experiences pain with flexion and extension of his back.",Faithful,
+11,He has 4 out of 5 strength in the left leg and 5 out of 5 strength in the right leg.,Faithful,
+12,Reflexes are brisk and motor and sensory are intact in both lower extremities.,Faithful,
+13,The MRI shows a disk herniation at the level of L4-L5 vertebrae associated with nerve root impingement.,Faithful,
+14,Assessment: The patient has acute disk herniation at L4-L5 with nerve root impingement causing lower back pain and leg pain.,Faithful,
+15,Problem list: Disk herniation at L4-L5; Nerve root impingement; Lower back pain; Leg pain; Weakness in both back and legs.,Faithful,
+16,I prescribed an epidural steroid injection to be administered today for the acute disk herniation at L4-L5 with nerve root impingement.,Faithful,
+17,I will refer the patient to physical therapy to strengthen the area.,Faithful,
+18,I want the patient to see me again in about a month to reassess the effectiveness of the injection.,Faithful,
+19,The patient will see me again in about a month to reassess the effectiveness of the epidural steroid injection.,Fabrication,The patient will see me again in about a month

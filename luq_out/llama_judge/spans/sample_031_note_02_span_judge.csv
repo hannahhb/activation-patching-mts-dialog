@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"The patient presents with a history of headaches for years, starting in her teenage years, initially associated with menstrual periods, but becoming more frequent and severe over time.",Faithful,
+1,"She reports a pulsing sensation behind her right eye, particularly after exercise, and also experiences ringing in her ears and blurred vision, particularly on the side.",Faithful,
+2,"The patient denies numbness or tingling in her hands, feet, or face.",Faithful,
+3,She is a runner and uses Asics shoes.,Faithful,
+4,"Past medical history: The patient has a history of headaches, but no other relevant medical conditions or allergies are mentioned.",Fabrication,or allergies are mentioned
+5,"The patient reports headaches, ringing in her ears, and blurred vision.",Faithful,
+6,Current medications: [NOT MENTIONED],Fabrication,Current medications
+7,"Vital signs: The patient's blood pressure is normal, but not specified.",Faithful,
+8,"The patient's heart exam is normal, with no murmurs, rubs, or gallops.",Faithful,
+9,"The funduscopic exam shows papilledema, indicating swelling behind the eye.",Faithful,
+10,"The neurological exam is normal, with intact cranial nerves one through twelve, including normal cranial reflexes.",Faithful,
+11,"The musculoskeletal exam is normal, with a normal gait.",Faithful,
+12,Test Results: [NOT MENTIONED],Fabrication,Test Results
+13,"The patient's symptoms are concerning for idiopathic intracranial hypertension, a condition with increased pressure in the brain without a known cause, characterized by headaches, worsening with activity, ringing in the ears, and changes in vision.",Faithful,
+14,The patient also presents with papilledema.,Faithful,
+15,The patient's problems include: idiopathic intracranial hypertension; confirmed; and papilledema; confirmed.,Fabrication,; confirmed
+16,I prescribed an MRI to check for any other conditions that could be contributing to the patient's symptoms.,Contextual,I prescribed
+17,I will also perform a spinal tap to evaluate the pressure in the brain and potentially alleviate symptoms by decreasing the pressure.,Contextual,I will also perform
+18,The patient will be referred to a neuro-ophthalmologist for a complete eye exam.,Faithful,
+19,The patient will need to get preapproval from her insurance company for the MRI.,Faithful,
+20,"The patient will be scheduled for an MRI and spinal tap, and will be referred to a neuro-ophthalmologist for a complete eye exam.",Causality,and spinal tap
+21,Instructions:,Fabrication,Instructions

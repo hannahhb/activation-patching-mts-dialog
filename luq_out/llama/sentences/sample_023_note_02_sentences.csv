@@ -1,25 +1,25 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, Brandon, a male in his mid-twenties, presents with neck pain that began after a car crash in February of this year.",0.891
-2,"He reports experiencing severe pain, rated 12 out of 10, which is sharp and incapacitating.",0.2965
-3,"He has a history of multiple car crashes, including the most recent one in February, which resulted in neck and back pain.",0.9934
-4,"He has been to a pain clinic and has been prescribed fentanyl, but has not taken it in several weeks.",0.7286
-5,"He reports experiencing fatigue, headaches, dizziness, visual disturbances, numbness in his left arm and right leg, and spasms throughout his body.",0.7883
+1,"HPI: The patient, Brandon, a male in his mid-twenties, presents with neck pain that began after a car crash in February of this year.",0.1792
+2,"He reports experiencing severe pain, rated 12 out of 10, which is sharp and incapacitating.",0.0185
+3,"He has a history of multiple car crashes, including the most recent one in February, which resulted in neck and back pain.",0.1771
+4,"He has been to a pain clinic and has been prescribed fentanyl, but has not taken it in several weeks.",0.0685
+5,"He reports experiencing fatigue, headaches, dizziness, visual disturbances, numbness in his left arm and right leg, and spasms throughout his body.",0.2651
 6,Past medical history: [NOT MENTIONED],0.5
-7,"Review of systems: The patient reports experiencing fatigue, headaches, dizziness, visual disturbances, numbness in his left arm and right leg, and spasms throughout his body.",0.8017
-8,Current medications: Fentanyl [DOSE NOT MENTIONED] [FREQUENCY NOT MENTIONED] [INDICATION] (stopped taking several weeks ago),0.9375
+7,"Review of systems: The patient reports experiencing fatigue, headaches, dizziness, visual disturbances, numbness in his left arm and right leg, and spasms throughout his body.",0.2916
+8,Current medications: Fentanyl [DOSE NOT MENTIONED] [FREQUENCY NOT MENTIONED] [INDICATION] (stopped taking several weeks ago),0.4233
 9,Objective:,0.5
 10,Vital signs: [NOT MENTIONED],0.5
-11,"Physical exam: The patient has limited range of motion in his neck, with pain on palpation on the bony process and muscle.",0.0177
-12,He is unable to move his neck from side to side or bend it forward and backward without pain.,0.2117
+11,"Physical exam: The patient has limited range of motion in his neck, with pain on palpation on the bony process and muscle.",0.0027
+12,He is unable to move his neck from side to side or bend it forward and backward without pain.,0.0199
 13,Test Results: [NOT MENTIONED],0.5
 14,Assessment / Problem List:,0.5
-15,"Assessment: The patient has a neck sprain, which is a non-fractured injury to the neck, as evidenced by the absence of a fracture on the imaging results.",0.9992
-16,Problem list: Neck sprain; suspected neck fracture; [NO OTHER PROBLEMS MENTIONED],0.7774
+15,"Assessment: The patient has a neck sprain, which is a non-fractured injury to the neck, as evidenced by the absence of a fracture on the imaging results.",0.3033
+16,Problem list: Neck sprain; suspected neck fracture; [NO OTHER PROBLEMS MENTIONED],0.5816
 17,Plan:,0.5
-18,"I prescribed Robaxin 1500 mg, 6-8 hours, 6-8 hours for muscle relaxation and pain management.",0.3371
-19,I will refer the patient to physical therapy to evaluate additional steps for treatment.,0.1212
-20,I will also refer the patient to pain management for further evaluation of local injections and alternative pain management options.,0.9967
-21,I will order an MRI to obtain a thorough image of the neck and soft tissues.,0.9999
-22,I will give the patient a note to excuse him from work until the MRI results are available.,0.7536
-23,Follow-up: I will follow up with the patient after the MRI results are available to discuss further treatment options.,0.2241
+18,"I prescribed Robaxin 1500 mg, 6-8 hours, 6-8 hours for muscle relaxation and pain management.",0.0675
+19,I will refer the patient to physical therapy to evaluate additional steps for treatment.,0.0015
+20,I will also refer the patient to pain management for further evaluation of local injections and alternative pain management options.,0.5154
+21,I will order an MRI to obtain a thorough image of the neck and soft tissues.,0.2618
+22,I will give the patient a note to excuse him from work until the MRI results are available.,0.5239
+23,Follow-up: I will follow up with the patient after the MRI results are available to discuss further treatment options.,0.0078

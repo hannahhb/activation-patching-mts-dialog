@@ -1,0 +1,50 @@
+fact_idx,section,fact,transcript_support,factuality_uncertainty
+0,subjective,The patient is a 35-year-old male.,0.0017,0.9983
+1,subjective,The patient presented with symptoms of shortness of breath.,0.9978,0.0022
+2,subjective,The patient experiences shortness of breath more frequently than usual.,0.0027,0.9973
+3,subjective,The patient's shortness of breath occurs without a specific reason.,0.0405,0.9595
+4,subjective,The patient has a history of hunting.,0.0181,0.9819
+5,subjective,The patient has venison at home.,0.9968,0.0032
+6,subjective,The patient's symptoms are not location-specific.,0.0711,0.9289
+7,subjective,The patient has a cat.,0.9985,0.0015
+8,subjective,The patient has used an inhaler in the past for his symptoms.,0.9586,0.0414
+9,subjective,The patient was prescribed an inhaler by urgent care.,0.9982,0.0018
+10,subjective,The patient has no history of allergies.,0.2841,0.7159
+11,subjective,The patient denies rash.,0.9902,0.0098
+12,subjective,The patient denies nausea.,0.9973,0.0027
+13,subjective,The patient denies vomiting.,0.9969,0.0031
+14,subjective,The patient denies lip swelling.,0.9959,0.0041
+15,subjective,The patient denies throat swelling.,0.9958,0.0042
+16,subjective,The patient denies diarrhea.,0.9873,0.0127
+17,subjective,The doctor prescribed albuterol inhaler.,0.9934,0.0066
+18,subjective,The albuterol inhaler dose is not specified.,0.1892,0.8108
+19,subjective,The albuterol inhaler frequency is not specified.,0.4205,0.5795
+20,subjective,The albuterol inhaler is prescribed for asthma.,0.4635,0.5365
+21,objective,The patient's pulse is within normal limits.,0.1939,0.8061
+22,objective,The patient's pulse ox is within normal limits.,0.3132,0.6868
+23,objective,The patient's blood pressure is within normal limits.,0.2437,0.7563
+24,objective,The patient does not have a rash.,0.2151,0.7849
+25,objective,The patient does not have angioedema.,0.3691,0.6309
+26,objective,There is no audible stridor.,0.2435,0.7565
+27,objective,The patient has faint expiratory wheezing bilaterally in all lung fields.,0.3062,0.6938
+28,objective,The patient's chest X-ray is normal.,0.2231,0.7769
+29,objective,The patient's pulmonary function test is normal.,0.1033,0.8967
+30,assessment,The patient has allergic asthma.,0.0213,0.9787
+31,assessment,The patient has asthma suspected.,0.9954,0.0046
+32,assessment,The patient has allergies unknown.,0.8206,0.1794
+33,assessment,Allergic asthma is a diagnosis.,0.9984,0.0016
+34,assessment,Asthma suspected is a diagnosis.,0.9984,0.0016
+35,assessment,Allergies unknown is a diagnosis.,0.987,0.013
+36,assessment,The patient is diagnosed with allergic asthma.,0.0237,0.9763
+37,assessment,The patient is diagnosed with asthma suspected.,0.9953,0.0047
+38,assessment,The patient is diagnosed with allergies unknown.,0.9877,0.0123
+39,plan,The doctor prescribed Singulair.,0.4115,0.5885
+40,plan,The Singulair dose is 10mg.,0.2516,0.7484
+41,plan,Singulair is taken once daily.,0.3052,0.6948
+42,plan,Singulair is prescribed for asthma.,0.7296,0.2704
+43,plan,The doctor plans to proceed with allergy testing.,0.9988,0.0012
+44,plan,Allergy testing will start with skin testing.,0.9968,0.0032
+45,plan,Skin testing is to identify the triggers of asthma.,0.9056,0.0944
+46,plan,The patient will schedule the skin testing next week.,0.9981,0.0019
+47,plan,The patient will return next week.,0.0036,0.9964
+48,plan,The patient's return is to schedule the skin testing.,0.9887,0.0113

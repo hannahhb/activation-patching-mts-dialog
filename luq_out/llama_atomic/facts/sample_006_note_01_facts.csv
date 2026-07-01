@@ -1,0 +1,59 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Matthew.,0.5592
+1,subjective,The patient is a male.,0.7786
+2,subjective,The patient is 30 years old.,0.7842
+3,subjective,The patient has been experiencing back pain.,0.0051
+4,subjective,The back pain has been worsening over the past month.,0.5902
+5,subjective,The pain is located in the lower back.,0.1308
+6,subjective,The pain radiates down the left leg.,0.0225
+7,subjective,"The patient describes the pain as an ""electrical toothache"".",0.7219
+8,subjective,The pain worsens with standing.,0.2531
+9,subjective,The pain worsens with walking.,0.4412
+10,subjective,The pain worsens with coughing.,0.4584
+11,subjective,The pain worsens with sneezing.,0.6388
+12,subjective,The patient rates his current pain as 6 out of 10.,0.4722
+13,subjective,The patient's pain can be as high as 13 out of 10.,0.0813
+14,subjective,Laying down brings relief to the patient.,0.5479
+15,subjective,The patient has a past injury from a fall off a roof.,0.7418
+16,subjective,The fall off a roof occurred 30 years ago.,0.9643
+17,subjective,The patient may have had a possible fracture from the fall.,0.6809
+18,subjective,The patient reports numbness in both lower extremities.,0.4545
+19,subjective,The patient reports tingling in both lower extremities.,0.4621
+20,subjective,The patient reports weakness in both legs.,0.1222
+21,subjective,Coughing exacerbates the patient's symptoms.,0.3804
+22,subjective,Sneezing exacerbates the patient's symptoms.,0.6131
+23,objective,The patient has pain to palpation at the L4 vertebrae.,0.015
+24,objective,The patient has pain with flexion of the back.,0.0139
+25,objective,The patient has pain with extension of the back.,0.0386
+26,objective,The strength in the left leg is 4 out of 5.,0.3139
+27,objective,The strength in the right leg is 5 out of 5.,0.9554
+28,objective,The reflexes are brisk.,0.9941
+29,objective,Motor function is intact in both lower extremities.,0.1093
+30,objective,Sensory function is intact in both lower extremities.,0.0635
+31,objective,The MRI shows a disk herniation.,0.0035
+32,objective,The disk herniation is at the level of L4-L5 vertebrae.,0.9586
+33,objective,There is nerve root impingement associated with the disk herniation.,0.0197
+34,assessment,The patient has acute disk herniation at L4-L5.,0.007
+35,assessment,The patient has nerve root impingement.,0.0092
+36,assessment,The nerve root impingement is at L4-L5.,0.0789
+37,assessment,The patient has lower back pain.,0.0053
+38,assessment,The patient has leg pain.,0.1409
+39,assessment,The patient has weakness in both legs.,0.5588
+40,assessment,Acute disk herniation at L4-L5 causes lower back pain.,0.005
+41,assessment,Acute disk herniation at L4-L5 causes leg pain.,0.2695
+42,assessment,Nerve root impingement causes lower back pain.,0.0051
+43,assessment,Nerve root impingement causes leg pain.,0.1249
+44,assessment,The patient's problem list includes acute disk herniation at L4-L5 with nerve root impingement.,0.0013
+45,assessment,The patient's problem list includes lower back pain.,0.0014
+46,assessment,The patient's problem list includes leg pain.,0.0021
+47,assessment,The patient's problem list includes weakness in both legs.,0.556
+48,plan,The doctor recommended an epidural steroid injection.,0.0017
+49,plan,The epidural steroid injection is to place anti-inflammatory medication.,0.2357
+50,plan,The anti-inflammatory medication is placed at the site of inflammation.,0.5483
+51,plan,The doctor referred the patient to physical therapy.,0.002
+52,plan,The physical therapy is to strengthen the area.,0.067
+53,plan,The patient is to see physical therapy.,0.0036
+54,plan,The patient is to return in about a month.,0.0072
+55,plan,The return visit is to reassess the effectiveness of the injection.,0.118
+56,plan,The doctor wants to see the patient again in about a month.,0.0123
+57,plan,The follow-up visit is to reassess the effectiveness of the injection.,0.1179

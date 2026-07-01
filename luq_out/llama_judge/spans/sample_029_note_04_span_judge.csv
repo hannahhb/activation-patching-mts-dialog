@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient is a 54-year-old male presenting with a 2-3 month history of stabbing, shooting pain in the right cheekbone area, which can be triggered by certain temperatures, wind, or cold.",Faithful,
+1,The pain is described as excruciating and can last from a few minutes to an hour.,Faithful,
+2,"He has tried ibuprofen, Motrin, and topical tiger balm without relief.",Faithful,
+3,He was referred to our office by his family doctor for further evaluation.,Faithful,
+4,Past medical history: The patient denies any history of multiple sclerosis or brain tumors.,Faithful,
+5,"He occasionally gets headaches, but they are not migraines and are managed with Tylenol.",Faithful,
+6,"Review of systems: The patient denies any sensory loss or numbness in the face, except for a slight numbness on the right side when the doctor's fingers are run along the side of his face.",Contextual,except for a slight numbness on the right side
+7,He has not noticed any weakness on that side of the face.,Faithful,
+8,Current medications: The patient is currently taking Tylenol for occasional headaches.,Faithful,
+9,Vital signs: Not mentioned.,Faithful,
+10,"Physical exam: The patient's smile is symmetric, and he can hear equally on both sides of his face.",Faithful,
+11,The patient feels a little numb on the right side of his face when the doctor's fingers are run along the side of his face.,Faithful,
+12,"When the doctor pokes the patient's face with a needle, he feels a dull sensation on the left side and a sharp sensation on the right side.",Negation,dull sensation on the left side and a sharp sensation on the right side
+13,Test Results: The patient's MRI shows a small blood vessel abutting and potentially pinching the trigeminal nerve.,Faithful,
+14,"Assessment: The patient likely has trigeminal neuralgia, a condition where compression of the trigeminal nerve causes shooting electrical pain in the face.",Faithful,
+15,Problem list: Trigeminal neuralgia; active.,Faithful,
+16,I prescribed Tegretol 100mg PO BID for trigeminal neuralgia.,Faithful,
+17,I will follow up with the patient in one month to assess the efficacy of the medication.,Faithful,
+18,We will discuss surgical options if the medication does not provide adequate pain relief.,Faithful,
+19,The patient will have genetic testing to ensure the safety of the medication.,Faithful,
+20,Follow-up: The patient will return in one month to reassess the efficacy of the medication and discuss further treatment options.,Faithful,

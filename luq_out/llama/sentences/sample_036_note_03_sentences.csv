@@ -1,24 +1,24 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient reports noticing difficulty breathing, catching his breath a lot more than usual, and feeling short of breath, which started suddenly for no apparent reason.",0.7498
-2,"He denies having any other symptoms such as fever, nausea, vomiting, rash, or lip/throat swelling.",0.9923
-3,"He mentions having a history of heavy drinking and experiencing diarrhea afterwards, but does not consider this relevant to his current symptoms.",0.9572
-4,"He also mentions having a dog and a cat, but denies any issues with allergies in the past.",0.8597
-5,"Past medical history: The patient has a history of heavy drinking, which is associated with diarrhea.",0.5286
-6,"He has a pet dog and a cat, but does not have any known allergies.",0.7883
-7,Review of systems: The patient denies any symptoms in other organs that are relevant to his initial presentation.,0.8908
-8,"Current medications: I prescribed albuterol inhaler for asthma, which he uses as needed.",0.6047
-9,He was previously prescribed an inhaler by the urgent care for similar symptoms.,0.8854
+1,"HPI: The patient reports noticing difficulty breathing, catching his breath a lot more than usual, and feeling short of breath, which started suddenly for no apparent reason.",0.2494
+2,"He denies having any other symptoms such as fever, nausea, vomiting, rash, or lip/throat swelling.",0.2512
+3,"He mentions having a history of heavy drinking and experiencing diarrhea afterwards, but does not consider this relevant to his current symptoms.",0.3383
+4,"He also mentions having a dog and a cat, but denies any issues with allergies in the past.",0.4846
+5,"Past medical history: The patient has a history of heavy drinking, which is associated with diarrhea.",0.1662
+6,"He has a pet dog and a cat, but does not have any known allergies.",0.5117
+7,Review of systems: The patient denies any symptoms in other organs that are relevant to his initial presentation.,0.2683
+8,"Current medications: I prescribed albuterol inhaler for asthma, which he uses as needed.",0.0677
+9,He was previously prescribed an inhaler by the urgent care for similar symptoms.,0.4271
 10,Objective:,0.5
-11,"Vital signs: The patient's vital signs are within normal limits, with a normal pulse, pulse oximetry, and no signs of distress.",0.3244
-12,"Physical exam: The physical exam revealed no rash, no angioedema, no audible stridor, and faint expiratory wheezing bilaterally in all lung fields.",0.2264
-13,Test Results: The patient had a normal chest x-ray and pulmonary function test.,0.0093
+11,"Vital signs: The patient's vital signs are within normal limits, with a normal pulse, pulse oximetry, and no signs of distress.",0.0581
+12,"Physical exam: The physical exam revealed no rash, no angioedema, no audible stridor, and faint expiratory wheezing bilaterally in all lung fields.",0.1047
+13,Test Results: The patient had a normal chest x-ray and pulmonary function test.,0.0004
 14,Assessment / Problem List:,0.5
-15,Assessment: The patient has newly diagnosed allergic asthma.,0.006
-16,Problem list: Allergic asthma; Asthma symptoms; [Unknown].,0.3685
+15,Assessment: The patient has newly diagnosed allergic asthma.,0.0002
+16,Problem list: Allergic asthma; Asthma symptoms; [Unknown].,0.073
 17,Plan:,0.5
-18,"I want the patient to continue using the albuterol inhaler as needed, and I prescribed Singulair 10mg once daily to help decrease the occurrences of asthma.",0.2058
-19,"I will proceed with allergy testing, starting with skin testing to identify potential triggers.",0.0083
-20,"If skin testing is inconclusive, we will discuss further testing in the blood and immunotherapy.",0.8891
-21,The patient will return next week to schedule the skin testing.,0.2747
-22,Follow-up: The patient will return next week to schedule the skin testing.,0.3412
+18,"I want the patient to continue using the albuterol inhaler as needed, and I prescribed Singulair 10mg once daily to help decrease the occurrences of asthma.",0.2009
+19,"I will proceed with allergy testing, starting with skin testing to identify potential triggers.",0.0005
+20,"If skin testing is inconclusive, we will discuss further testing in the blood and immunotherapy.",0.613
+21,The patient will return next week to schedule the skin testing.,0.2409
+22,Follow-up: The patient will return next week to schedule the skin testing.,0.3345

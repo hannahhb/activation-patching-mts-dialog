@@ -1,0 +1,51 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is male.,0.8907,The patient's body hurts.,0,fabrication,neutral
+1,The patient presented with neck pain.,0.9851,The patient is experiencing neck pain.,1,,entailment
+2,The patient's neck pain started after a car crash.,0.9745,The neck pain is due to a car crash.,1,,entailment
+3,The car crash occurred in February of this year.,0.9809,The most recent car crash occurred in February.,1,,entailment
+4,The patient reports sharp pain.,0.9484,The patient's pain is sharp and incapacitating.,1,,entailment
+5,The patient reports incapacitating pain.,0.9628,The patient's pain is sharp and incapacitating.,1,,entailment
+6,The patient's pain is rated at 12 out of 10.,0.986,The patient rates their pain as a 12 on a scale of 1 to 10.,1,,entailment
+7,The patient's pain has prevented him from working.,0.9715,The patient is unable to work due to the pain.,1,,entailment
+8,The patient has a history of multiple car crashes.,0.9844,The patient has been in multiple car crashes.,1,,entailment
+9,The patient underwent surgery after a previous car crash.,0.9629,The patient had surgery after the third car crash.,1,,entailment
+10,The patient has been in therapy.,0.9025,The patient has not received a prescription for fentanyl in several weeks.,1,,entailment
+11,The patient reports stiffness.,0.9674,The patient experiences stiffness in their neck.,1,,entailment
+12,The patient reports headaches.,0.9825,The patient has headaches.,1,,entailment
+13,The patient reports dizziness.,0.9758,The patient experiences dizziness sometimes.,1,,entailment
+14,The patient reports visual disturbances.,0.9129,The patient experiences dizziness sometimes.,0,fabrication,contradiction
+15,The patient reports numbness in his left arm.,0.9854,The patient has numbness in their left arm and right leg.,1,,entailment
+16,The patient reports numbness in his right leg.,0.9814,The patient has numbness in their left arm and right leg.,1,,entailment
+17,The patient reports spasms throughout his body.,0.9802,The patient experiences spasms.,1,,entailment
+18,The patient has been experiencing fatigue.,0.9671,The patient has been experiencing fatigue since the accident.,1,,entailment
+19,The patient was previously prescribed fentanyl.,0.988,The patient has been prescribed fentanyl in the past.,1,,entailment
+20,The patient has not taken fentanyl for several weeks.,0.9834,The patient has not received a prescription for fentanyl in several weeks.,1,,entailment
+21,The patient has pain on palpation of the neck.,0.9961,The patient experiences pain on palpation of the neck.,1,,entailment
+22,The patient has pain on palpation of the bony process of the neck.,0.9758,The patient experiences pain on palpation of the neck.,1,,entailment
+23,The patient has pain on palpation of the muscle of the neck.,0.9863,The patient experiences pain on palpation of the neck.,1,,entailment
+24,The patient has moderate range of movement in his neck.,0.9987,The patient has a moderate range of movement in their neck.,1,,entailment
+25,The patient experiences pain when bending forward.,0.9536,The patient is unable to bend their neck forward without pain.,1,,entailment
+26,The patient experiences pain when bending backwards.,0.9583,The patient is unable to bend their neck backward without pain.,1,,entailment
+27,There is no bruising observed on the patient.,0.962,The doctor did not notice any bruising on the patient's neck.,1,,entailment
+28,There is no swelling observed on the patient.,0.9594,The doctor did not notice any swelling on the patient's neck.,1,,entailment
+29,There is no laceration observed on the patient.,0.9571,The doctor did not notice any laceration on the patient's neck.,1,,entailment
+30,The patient had an x-ray.,0.9667,The doctor ordered an x-ray for the patient.,1,,entailment
+31,The x-ray did not show a fracture.,0.9969,The x-ray did not show any fracture.,1,,entailment
+32,The patient has a neck sprain.,0.9676,The doctor diagnosed the patient with a neck sprain.,1,,entailment
+33,The neck sprain can be explained by the recent car crash.,0.9489,The neck pain is due to a car crash.,0,fabrication,neutral
+34,The patient's problem list includes neck sprain.,0.9488,The doctor diagnosed the patient with a neck sprain.,0,fabrication,neutral
+35,The patient's neck sprain is active.,0.934,The doctor diagnosed the patient with a neck sprain.,0,fabrication,neutral
+36,The doctor prescribed robaxin.,0.9934,The doctor prescribed robaxin for the patient.,1,,entailment
+37,The robaxin dose is 1500mg.,0.9945,The robaxin dose is 1500 milligrams.,1,,entailment
+38,Robaxin is taken every 6-8 hours.,0.9998,Robaxin is taken every 6 to 8 hours.,1,,entailment
+39,Robaxin is prescribed for muscle relaxation.,0.9841,Robaxin is prescribed to relax the muscles in the area.,1,,entailment
+40,Robaxin is prescribed for pain relief.,0.9715,Robaxin is prescribed to relax the muscles in the area.,1,,entailment
+41,The patient was instructed to apply ice to the affected area.,0.9299,The patient is going to put ice on their neck when they experience bruising and swelling.,1,,entailment
+42,The patient was instructed to perform exercises to maintain range of motion.,0.9421,The patient is going to do exercises to help with their neck movement.,1,,entailment
+43,The patient will be referred to physical therapy.,0.9957,The patient is going to be referred to physical therapy.,1,,entailment
+44,An MRI will be ordered to further evaluate the patient's condition.,0.9547,The patient is going to have an MRI.,1,,entailment
+45,Local injections will be explored.,0.9107,The doctor may use local injections to help with the patient's pain.,1,,entailment
+46,The patient will be referred to pain management if necessary.,0.9391,The doctor may refer the patient to pain medicine if the robaxin is not effective.,1,,entailment
+47,The patient will be given a note to excuse him from work.,0.9004,The patient is unable to work and will be given time off until the MRI results are available.,0,fabrication,neutral
+48,The patient will be seen after the MRI results are available.,0.9568,The patient is going to have an MRI.,1,,entailment
+49,The patient will discuss further treatment options after the MRI results are available.,0.9441,The doctor will wait for the MRI results to determine the next steps.,1,,entailment

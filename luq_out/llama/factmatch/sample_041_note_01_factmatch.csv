@@ -1,0 +1,46 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Bobby.,1.0,The patient's name is Bobby.,1,,entailment
+1,The patient is a 50-year-old male.,0.9453,The patient is male.,0,fabrication,neutral
+2,The patient presents with a 2-3 week history of right shoulder pain.,0.9837,The right shoulder pain has lasted a few weeks.,1,,entailment
+3,The patient attributes his right shoulder pain to recent physical activity.,0.9593,The patient has right shoulder pain.,1,,entailment
+4,The patient's right shoulder pain is located on the outside of the shoulder.,0.9892,The patient's right shoulder pain is on the outside.,1,,entailment
+5,The patient's right shoulder pain is exacerbated by movement.,0.9722,The patient has pain in his right shoulder when he moves it.,1,,entailment
+6,The patient's right shoulder pain is not constant.,0.9633,The patient has right shoulder pain.,1,,entailment
+7,The patient denied numbness in his arm.,0.9767,The patient has not experienced numbness in his arm or hands.,1,,entailment
+8,The patient denied numbness in his hands.,0.9784,The patient has not experienced numbness in his arm or hands.,1,,entailment
+9,The patient has a history of occasional shoulder pain.,0.9437,The patient has right shoulder pain.,0,fabrication,neutral
+10,The patient's history of occasional shoulder pain is due to a previous injury playing baseball.,0.9608,The patient has a history of hurting his right shoulder playing baseball.,1,,entailment
+11,The patient has been managing his symptoms with ibuprofen (Advil).,0.9666,The patient has been taking Advil for pain.,1,,entailment
+12,The patient has been managing his symptoms with icing.,0.941,Icing helps the patient's pain a little bit.,1,,entailment
+13,Ibuprofen (Advil) is prescribed as needed.,0.9421,The patient has been taking Advil for pain.,0,fabrication,neutral
+14,Ibuprofen (Advil) is prescribed for pain.,0.9674,The patient has been taking Advil for pain.,1,,entailment
+15,The patient's temperature is 97.8°F.,0.9319,The patient's heart rate is 62.,0,fabrication,neutral
+16,The patient's heart rate is 62 bpm.,0.9922,The patient's heart rate is 62.,1,,entailment
+17,The patient's respirations are 16.,1.0,The patient's respirations are 16.,1,,entailment
+18,The patient's blood pressure is 116/84.,0.9911,The patient's blood pressure is 116 over 84.,1,,entailment
+19,The patient's oxygen saturation is 99%.,0.9964,The patient's oxygen saturation is 99 percent.,1,,entailment
+20,The patient has limited active range of motion in the right shoulder.,0.9956,The patient has limited active and passive range of motion in his right shoulder.,1,,entailment
+21,The patient has limited passive range of motion in the right shoulder.,0.9954,The patient has limited active and passive range of motion in his right shoulder.,1,,entailment
+22,The patient has tenderness at the greater tuberosity of the humerus.,0.9901,The patient has tenderness at the great tuberosity of the humerus.,1,,entailment
+23,There is no tenderness at the sternoclavicular joint.,0.9782,The patient has no tenderness at the sternoclavicular or acromioclavicular joints.,1,,entailment
+24,There is no tenderness at the acromioclavicular joint.,0.9772,The patient has no tenderness at the sternoclavicular or acromioclavicular joints.,1,,entailment
+25,The patient has a good hand grip.,1.0,The patient has a good hand grip.,1,,entailment
+26,The patient's capillary refill is less than 3 seconds.,0.9982,The patient's capillary refill is less than three seconds.,1,,entailment
+27,The patient's sensation to touch is intact.,1.0,The patient's sensation to touch is intact.,1,,entailment
+28,The patient's shoulder X-ray shows no fracture.,1.0,The patient's shoulder x-ray shows no fracture.,1,,entailment
+29,The patient's symptoms are most likely due to rotator cuff tendinopathy.,0.9722,Rotator cuff tendinopathy is the cause of the patient's right shoulder pain.,1,,entailment
+30,Rotator cuff tendinopathy is an injury to the tendons of the muscles that help make the shoulder muscles.,0.9683,Rotator cuff tendinopathy is the cause of the patient's right shoulder pain.,1,,entailment
+31,The patient has rotator cuff tendinopathy.,1.0,The patient has rotator cuff tendinopathy.,1,,entailment
+32,The patient's rotator cuff tendinopathy status is confirmed.,0.9588,The patient has rotator cuff tendinopathy.,1,,entailment
+33,The patient has sore feet.,0.9893,The patient's feet are sore.,1,,entailment
+34,The patient's sore feet status is suspected.,0.9519,The patient's feet are sore.,1,,entailment
+35,The doctor prescribed Tylenol.,1.0,The doctor prescribed Tylenol.,1,,entailment
+36,The Tylenol dose is not specified.,0.9196,The doctor prescribed Tylenol.,0,fabrication,neutral
+37,Tylenol is prescribed for pain relief.,0.9683,Tylenol is for the patient's right shoulder pain.,1,,entailment
+38,The doctor ordered an MRI.,0.9593,The doctor ordered an MRI for the patient's right shoulder.,1,,entailment
+39,The MRI is to further evaluate the patient's shoulder.,0.9626,The doctor ordered an MRI for the patient's right shoulder.,1,,entailment
+40,The patient was referred to physical therapy.,0.9894,The doctor referred the patient to physical therapy.,1,,entailment
+41,The patient's physical therapy will last approximately 6-8 weeks.,0.9864,The patient will attend physical therapy for approximately six to eight weeks.,1,,entailment
+42,A steroid injection in the shoulder may be considered if the patient's symptoms do not improve.,0.9773,The doctor will consider a steroid injection if the patient's symptoms do not improve.,1,,entailment
+43,The patient will follow up with the doctor in 6-8 weeks.,0.9428,The patient will attend physical therapy for approximately six to eight weeks.,0,fabrication,neutral
+44,The follow-up is to assess the effectiveness of the physical therapy.,0.9244,The patient will attend physical therapy for approximately six to eight weeks.,0,fabrication,neutral

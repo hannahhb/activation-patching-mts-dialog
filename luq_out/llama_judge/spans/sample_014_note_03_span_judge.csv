@@ -1,0 +1,24 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 50-year-old male, presents with chronic back pain that has been ongoing for 2 years, initially starting after moving furniture one weekend.",Fabrication,a 50-year-old male
+1,"He describes the pain as sharp stabbing in his back, radiating down to his right leg and as far as his big toe.",Faithful,
+2,"He also experiences numbness and tingling in his right leg, especially to his foot.",Faithful,
+3,"He denies any loss of sensation in the genital or rectal area, weakness, or loss of control of bladder or bowels.",Faithful,
+4,"He has tried physical therapy and strong pain medications in the past, but with limited success.",Faithful,
+5,He has gained weight due to decreased activity level.,Faithful,
+6,Past medical history: The patient denies any family members with spine conditions.,Faithful,
+7,He quit smoking 20 years ago.,Faithful,
+8,Review of systems: None mentioned.,Faithful,
+9,Current medications: [NOT MENTIONED],Fabrication,Current medications
+10,Vital signs: [NOT MENTIONED],Fabrication,Vital signs
+11,The musculoskeletal back exam reveals no overlying erythema or ecchymosis.,Faithful,
+12,There is midline tenderness at L4-L5 disk space with right-sided lumbar paravertebral tenderness.,Faithful,
+13,The supine straight leg test is positive.,Faithful,
+14,The neurological examination reveals decreased sensation to light touch at the right lateral thigh at L4 dermatome.,Faithful,
+15,The patellar and Achilles reflexes are symmetrical.,Faithful,
+16,The MRI shows disk herniation with nerve impingement.,Faithful,
+17,Assessment: The patient's symptoms are consistent with an L4-L5 herniated disk with radiculopathy.,Faithful,
+18,Problem list: Herniated disk at L4-L5; radiculopathy; chronic lumbar back pain; weight gain.,Faithful,
+19,I prescribed a spinal injection with a corticosteroid medication to help reduce inflammation and alleviate pain.,Faithful,
+20,The injection will be administered under fluoroscopy to target the exact area of pain.,Faithful,
+21,I will monitor the patient's response to the injection and schedule follow-up appointments as needed.,Faithful,
+22,The patient will be scheduled for a follow-up appointment to assess response to the injection and determine if additional treatments are needed.,Contextual,The patient will be scheduled for a follow-up appointment

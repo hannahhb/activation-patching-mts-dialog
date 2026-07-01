@@ -1,0 +1,52 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is female.,1.0,The patient is female.,1,,entailment
+1,The patient is an adult.,0.9378,The patient is a doctor.,1,,entailment
+2,The patient has a history of headaches.,0.972,The patient has been experiencing headaches.,1,,entailment
+3,The patient's headaches started in her teenage years.,0.9894,The headaches started when the patient was a teenager.,1,,entailment
+4,The patient's headaches were initially associated with menstrual periods.,0.9796,The headaches are related to the patient's menstrual periods.,1,,entailment
+5,The patient's headaches have become more frequent over time.,0.978,The patient's headaches have increased in frequency.,1,,entailment
+6,The patient's headaches have become more severe over time.,0.9835,The patient's headaches have increased in severity.,1,,entailment
+7,The patient's headaches are typically located on the right side.,0.9926,The headaches are mostly on the patient's right side.,1,,entailment
+8,The patient's headaches are located behind her eye.,0.9955,The headaches are located behind the patient's eye.,1,,entailment
+9,The patient's headaches have a pulsing sensation.,0.9826,The headaches are described as a pulsing sensation.,1,,entailment
+10,The patient experiences an exacerbation of symptoms with exercise.,0.9502,The patient's headaches worsen with exercise.,1,,entailment
+11,The patient experiences an exacerbation of symptoms with jogging.,0.9492,The patient starts to experience headaches when jogging.,1,,entailment
+12,The patient has experienced ringing in her ears.,0.9884,The patient has been having a ringing in their ears.,1,,entailment
+13,The patient has experienced blurred vision.,0.993,The patient is experiencing blurred vision.,1,,entailment
+14,The patient's blurred vision is particularly on the side of her vision.,0.9918,The blurred vision is on the side of the patient's vision.,1,,entailment
+15,The patient denied numbness in her hands.,0.9621,The patient does not experience numbness or tingling in their hands or feet.,1,,entailment
+16,The patient denied numbness in her feet.,0.9552,The patient does not experience numbness or tingling in their hands or feet.,1,,entailment
+17,The patient denied numbness in her face.,0.9605,The patient does not experience numbness or tingling in their face.,1,,entailment
+18,The patient denied tingling in her hands.,0.958,The patient does not experience numbness or tingling in their hands or feet.,1,,entailment
+19,The patient denied tingling in her feet.,0.9548,The patient does not experience numbness or tingling in their hands or feet.,1,,entailment
+20,The patient denied tingling in her face.,0.9609,The patient does not experience numbness or tingling in their face.,1,,entailment
+21,The patient's blood pressure is within normal limits.,0.9866,The patient's blood pressure is normal.,1,,entailment
+22,The patient's heart exam is normal.,0.97,The patient's heart exam shows a normal sinus rhythm.,1,,entailment
+23,The patient has a normal sinus rhythm.,0.9778,The patient's heart exam shows a normal sinus rhythm.,1,,entailment
+24,The patient has no murmurs.,0.9483,"The patient's heart exam shows no murmurs, rubs, or gallops.",1,,entailment
+25,The patient has no rubs.,0.9173,"The patient's heart exam shows no murmurs, rubs, or gallops.",1,,entailment
+26,The patient has no gallops.,0.9234,"The patient's heart exam shows no murmurs, rubs, or gallops.",1,,entailment
+27,The patient has papilledema.,1.0,The patient has papilledema.,1,,entailment
+28,The patient has swelling behind the eye.,0.9409,Papilledema is swelling behind the eye.,1,,entailment
+29,The patient's neurological exam is normal.,0.9332,The patient's cranial reflex is normal.,1,,entailment
+30,The patient's cranial nerves are intact.,1.0,The patient's cranial nerves are intact.,1,,entailment
+31,The patient's cranial reflex is normal.,1.0,The patient's cranial reflex is normal.,1,,entailment
+32,The patient's gait is normal.,1.0,The patient's gait is normal.,1,,entailment
+33,The patient's symptoms are concerning for idiopathic intracranial hypertension.,1.0,The patient's symptoms are concerning for idiopathic intracranial hypertension.,1,,entailment
+34,Idiopathic intracranial hypertension is characterized by increased pressure in the brain without a known cause.,0.9963,Idiopathic intracranial hypertension is a condition with increased pressure in the brain without a known cause.,1,,entailment
+35,Idiopathic intracranial hypertension is often associated with headaches.,0.9626,The patient's symptoms are consistent with idiopathic intracranial hypertension.,1,,entailment
+36,Idiopathic intracranial hypertension is often associated with ringing in the ears.,0.9375,The patient's symptoms are consistent with idiopathic intracranial hypertension.,0,fabrication,neutral
+37,Idiopathic intracranial hypertension is often associated with changes in vision.,0.9594,The patient's symptoms are consistent with idiopathic intracranial hypertension.,1,,entailment
+38,The patient has idiopathic intracranial hypertension.,0.9735,The patient's symptoms are consistent with idiopathic intracranial hypertension.,1,,entailment
+39,The doctor prescribed an MRI.,0.9372,The doctor's team will help schedule the MRI once it is preapproved.,1,,entailment
+40,The MRI is to confirm the diagnosis.,0.9808,The patient may need an MRI to confirm the diagnosis.,1,,entailment
+41,The MRI is to rule out other contributing conditions.,0.9472,The patient may need an MRI to confirm the diagnosis.,0,fabrication,neutral
+42,The doctor plans to perform a spinal tap.,0.9298,The patient may need a spinal tap to evaluate the pressure in their brain.,0,fabrication,neutral
+43,The spinal tap is to evaluate the pressure in the brain.,0.9795,The patient may need a spinal tap to evaluate the pressure in their brain.,1,,entailment
+44,The spinal tap is to alleviate symptoms.,0.9272,The patient may need a spinal tap to evaluate the pressure in their brain.,0,fabrication,neutral
+45,The doctor will refer the patient to a neuro-ophthalmologist.,0.9612,The patient may need to see a neuro-ophthalmologist for a complete eye exam.,1,,entailment
+46,The patient will undergo a complete eye exam.,0.952,The patient may need to see a neuro-ophthalmologist for a complete eye exam.,1,,entailment
+47,The patient needs preapproval from her insurance company for the MRI.,0.9812,The doctor will work on getting preapproval from the patient's insurance company for the MRI.,1,,entailment
+48,The MRI will be scheduled once approved.,0.9536,The patient will be called to schedule the MRI once it is preapproved.,1,,entailment
+49,The patient will follow up with the office after the MRI and spinal tap results are available.,0.9271,The patient may need an MRI to confirm the diagnosis.,0,fabrication,neutral
+50,The patient will discuss further management and treatment options at follow-up.,0.8984,The patient may need an MRI to confirm the diagnosis.,0,fabrication,neutral

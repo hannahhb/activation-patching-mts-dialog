@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Gregory, presents with a non-healing foot ulcer on his right foot that has been present for approximately two months.",Faithful,
+1,"He reports that the ulcer has recently become red and is draining, causing concern about its healing.",Faithful,
+2,"He denies any trauma to the foot prior to the onset of the ulcer, stating that he may have gotten it from walking barefoot on the beach at Dewey Beach.",Faithful,
+3,"He reports occasional throbbing pain, but no specific pain, and is concerned about the redness and drainage.",Faithful,
+4,"Past Medical History: The patient has diabetes, for which he takes medication but does not regularly check his sugar levels.",Faithful,
+5,"His last A1c is reportedly around 10, which is high.",Faithful,
+6,He has not seen his primary care physician (PCP) in a while and has not picked up his prescribed antibiotics.,Contextual,has not seen his primary care physician (PCP) in a while
+7,"Review of Systems: The patient denies fever, but reports occasional throbbing pain in his foot.",Faithful,
+8,Current Medications: [NOT MENTIONED],Fabrication,Current Medications: [NOT MENTIONED]
+9,"Vital Signs: The patient's vital signs are normal, with no fever.",Faithful,
+10,"Physical Exam: The patient has a one by two inch circular wound on the dorsal aspect of the lateral right foot, proximal to the fifth MTP joint, with redness, drainage, edema, and fluid coming out of the wound.",Faithful,
+11,"There is no necrosis, odor, or bony exposure.",Faithful,
+12,"Test Results: The patient had an X-ray of his right foot, which showed no evidence of osteomyelitis.",Faithful,
+13,Assessment: The patient has a diabetic foot ulcer with an underlying infection.,Faithful,
+14,Problem List: Diabetic foot ulcer; suspected infection; uncontrolled diabetes.,Faithful,
+15,I ordered an ABI (ankle brachial index) to determine the blood supply to the foot.,Faithful,
+16,I performed a debridement to remove dead tissue from the wound.,Faithful,
+17,I prescribed clindamycin 400mg twice a day for seven days to treat the infection.,Faithful,
+18,I will also provide the patient with a surgical shoe to wear for the next month to reduce pressure on the foot.,Faithful,
+19,I will see the patient back in two weeks to assess the progress of the wound and consider another debridement if necessary.,Faithful,
+20,Follow-up: The patient will return in two weeks for a follow-up appointment.,Faithful,
+21,"He is advised to call the office if he experiences any issues or concerns in the meantime, and to seek urgent care or the emergency room if he develops a fever, blackening of the foot, or other concerning symptoms.",Faithful,

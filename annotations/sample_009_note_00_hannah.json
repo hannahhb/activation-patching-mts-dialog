@@ -1,0 +1,123 @@
+{
+  "token_spans": [
+    {
+      "text": "The patient, a 25-year-old male",
+      "type": "oth",
+      "severity": "3",
+      "char_start": 18,
+      "char_end": 49
+    },
+    {
+      "text": "accident as a rear-end collision,",
+      "type": "word",
+      "severity": "3",
+      "char_start": 132,
+      "char_end": 165
+    },
+    {
+      "text": "he pain has been persistent,",
+      "type": "cond",
+      "severity": "3",
+      "char_start": 214,
+      "char_end": 242
+    }
+  ],
+  "sentence_labels": {
+    "0": {
+      "type": "Contextual",
+      "faithful": "Not Faithful"
+    },
+    "1": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "2": {
+      "type": "Fabrication"
+    },
+    "3": {
+      "faithful": "Not Faithful",
+      "type": "Negation"
+    },
+    "4": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "5": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "6": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "7": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "8": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "9": {
+      "faithful": "Not Faithful",
+      "type": "Fabrication"
+    },
+    "12": {
+      "faithful": "Not Faithful",
+      "type": "Fabrication",
+      "severity": "N/A"
+    },
+    "13": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "14": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "16": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "19": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "20": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "21": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "22": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "23": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "24": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    }
+  },
+  "note_html": "Subjective:\n\nHPI: <span class=\"hl-oth\" data-hl-type=\"oth\" data-hl-sev=\"3\" data-char-start=\"18\" data-char-end=\"49\" title=\"oth \u00b7 severity 3 [18:49]\">The patient, a 25-year-old male</span>, presented with neck pain following a car accident one week ago. He described the <span class=\"hl-word\" data-hl-type=\"word\" data-hl-sev=\"3\" data-char-start=\"132\" data-char-end=\"165\" title=\"word \u00b7 severity 3 [132:165]\">accident as a rear-end collision,</span> where his head and neck moved forward quickly. T<span class=\"hl-cond\" data-hl-type=\"cond\" data-hl-sev=\"3\" data-char-start=\"214\" data-char-end=\"242\" title=\"cond \u00b7 severity 3 [214:242]\">he pain has been persistent,</span> with a severity of 7 out of 10, exacerbated by movement of the neck. The pain is localized to the back of the neck and has not been constant. The patient has tried ibuprofen with minimal relief. He reports pain with flexion, extension, rotation, and lateral bending of the neck.\n\nPast medical history: [NOT MENTIONED]\n\nReview of systems: The patient denies any hearing problems, visual disturbances, or symptoms in other organs.\n\nCurrent medications: [NOT MENTIONED]\n\nObjective:\n\nVital signs: [NOT MENTIONED]\n\nPhysical exam: The patient had positive pain to palpation of the soft tissues of the neck, pain with flexion, extension, rotation, and lateral bending of the neck. The patient was able to move his neck from side to side, but with pain.\n\nTest Results: The x-ray results showed no signs of fracture or bony abnormalities.\n\nAssessment / Problem List:\n\nAssessment: I believe the patient has a neck strain, likely caused by whiplash from the car accident.\n\nProblem list: Neck strain; Suspected whiplash.\n\nPlan:\n\nI prescribed Motrin 600mg every 6-8 hours for anti-inflammatory purposes. I also prescribed Flexeril 10mg every 12 hours as needed for muscle relaxation. I advised the patient to be conservative with neck movement and to try to relax the neck. I ordered an MRI to rule out any underlying conditions. I referred the patient to either physical rehab or a chiropractor for further evaluation and treatment.\n\nFollow-up: I will review the MRI results and provide further instructions based on the findings."
+}

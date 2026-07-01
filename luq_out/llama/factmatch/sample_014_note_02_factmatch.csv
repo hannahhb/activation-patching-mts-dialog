@@ -1,0 +1,54 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Larry.,1.0,The patient's name is Larry.,1,,entailment
+1,The patient is a 60-year-old male.,0.912,The patient quit smoking twenty years ago.,0,fabrication,neutral
+2,The patient has been experiencing chronic back pain.,0.9813,The patient has been having back pain.,1,,entailment
+3,The patient's back pain started after lifting furniture.,0.9775,The patient's back pain started after moving furniture.,1,,entailment
+4,The patient's back pain has been present for a couple of years.,0.9855,The back pain has lasted a couple of years.,1,,entailment
+5,The patient describes the pain as sharp stabbing.,0.9709,The back pain feels like a sharp stabbing pain.,1,,entailment
+6,The patient's pain radiates down to his right leg.,0.9927,The pain radiates down to the right leg.,1,,entailment
+7,The patient's pain radiates down to his big toe.,0.9682,The pain sometimes reaches the big toe.,1,,entailment
+8,The patient reports numbness in his right leg.,0.9694,The numbness is located in the right leg.,1,,entailment
+9,The patient reports tingling in his right leg.,0.9241,The patient has decreased sensation to light touch at the right lateral thigh.,0,fabrication,contradiction
+10,The patient's numbness and tingling are particularly in the right lateral thigh at L4 dermatome.,0.9498,The patient has decreased sensation to light touch at the right lateral thigh.,0,fabrication,neutral
+11,The patient denied loss of sensation in the genital area.,0.9882,The patient does not have loss of sensation in the genital area.,1,,entailment
+12,The patient denied loss of sensation in the rectal area.,0.9872,The patient does not have loss of sensation in the rectal area.,1,,entailment
+13,The patient denied weakness.,0.9697,The patient does not have weakness.,1,,entailment
+14,The patient denied loss of bladder control.,0.984,The patient does not have loss of control of the bladder.,1,,entailment
+15,The patient denied loss of bowel control.,0.9832,The patient does not have loss of control of the bowels.,1,,entailment
+16,The patient denied any family history of spine conditions.,0.9728,The patient does not have any family members with spine conditions.,1,,entailment
+17,The patient has tried physical therapy.,1.0,The patient has tried physical therapy.,1,,entailment
+18,The patient has tried pain medications.,0.9606,The patient has been prescribed strong pain medications in the past.,1,,entailment
+19,The patient has been advised of surgery.,0.9242,The patient was mentioned as a candidate for surgery.,1,,entailment
+20,The patient prefers to avoid surgery.,0.9873,The patient wants to avoid surgery.,1,,entailment
+21,The patient has gained weight due to his back pain.,0.9994,The patient has gained weight due to the back pain.,1,,entailment
+22,The patient has difficulty being active.,0.9368,The patient tries to be as active as possible.,0,fabrication,neutral
+23,The patient used to enjoy playing golf.,0.9753,The patient used to like playing golf.,1,,entailment
+24,The patient has had to stop playing golf due to his condition.,0.9403,The back pain has set back the patient's golfing.,1,,entailment
+25,The patient denies any other symptoms.,0.9024,The patient tried many things to alleviate the back pain.,0,fabrication,neutral
+26,The musculoskeletal back exam revealed no overlying erythema.,0.9638,There is no overlying erythema on the patient's back.,1,,entailment
+27,The musculoskeletal back exam revealed no ecchymosis.,0.9583,There is no ecchymosis on the patient's back.,1,,entailment
+28,The patient has midline tenderness at L4-L5 disk space.,0.9934,There is midline tenderness at the L4-L5 disk space.,1,,entailment
+29,The patient has right-sided lumbar paravertebral tenderness.,0.9942,There is right-sided lumbar paravertebral tenderness.,1,,entailment
+30,The patient experienced pain with lumbar flexion.,0.9943,The patient experiences pain with lumbar flexion.,1,,entailment
+31,The patient had a positive straight leg test.,0.9626,The supine straight leg test is positive.,1,,entailment
+32,The neurological examination revealed decreased sensation to light touch at the right lateral thigh at L4 dermatome.,0.9766,The patient has decreased sensation to light touch at the right lateral thigh.,1,,entailment
+33,The patient has symmetrical patellar reflexes.,0.9812,The patient's patellar and achilles reflexes are symmetrical.,1,,entailment
+34,The patient has symmetrical Achilles reflexes.,0.9798,The patient's patellar and achilles reflexes are symmetrical.,1,,entailment
+35,The MRI results show disk herniation.,0.9911,The MRI shows disk herniation.,1,,entailment
+36,The MRI results show nerve impingement.,0.9921,The MRI shows nerve impingement.,1,,entailment
+37,The patient's symptoms are consistent with an L4-L5 herniated disk with radiculopathy.,0.9759,The doctor diagnosed an L4-L5 herniated disk with radiculopathy.,1,,entailment
+38,The patient has lumbar back pain.,0.9556,The patient has been having back pain.,1,,entailment
+39,The patient has an L4-L5 herniated disk.,0.9621,The doctor diagnosed an L4-L5 herniated disk with radiculopathy.,1,,entailment
+40,The patient has radiculopathy.,0.9348,The doctor diagnosed an L4-L5 herniated disk with radiculopathy.,1,,entailment
+41,The patient has obesity.,0.9216,The patient has gained weight due to the back pain.,1,,entailment
+42,The doctor prescribed a corticosteroid injection.,0.988,The doctor prescribed a corticosteroid.,1,,entailment
+43,The corticosteroid injection is to the lumbar spine.,0.9861,The corticosteroid will be injected into the lumbar spine.,1,,entailment
+44,The corticosteroid injection is under fluoroscopy.,0.9573,The injection will be done under fluoroscopy.,1,,entailment
+45,The corticosteroid injection is to help reduce inflammation.,0.9829,The corticosteroid is for reducing inflammation.,1,,entailment
+46,The corticosteroid injection is to alleviate pain.,0.965,The corticosteroid is for reducing inflammation.,1,,entailment
+47,The doctor will monitor the patient's response to the corticosteroid injection.,0.9814,The doctor will monitor the patient's response to the injection.,1,,entailment
+48,The patient will not require any ongoing treatment.,0.8856,The patient will be out of the office within an hour.,1,,entailment
+49,The patient may need up to four corticosteroid injections per year.,0.9537,The injections will not be more than four times a year.,1,,entailment
+50,The patient will return for a follow-up appointment.,0.9074,The patient's primary care doctor referred them to the specialist.,0,fabrication,neutral
+51,The follow-up appointment is to assess the effectiveness of the corticosteroid injection.,0.9194,The doctor will monitor the patient's response to the injection.,0,fabrication,neutral
+52,The follow-up appointment is to schedule additional injections as needed.,0.9235,The patient may need multiple injections.,0,fabrication,neutral

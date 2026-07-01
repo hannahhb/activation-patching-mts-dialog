@@ -1,26 +1,26 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, Jack, a 30-year-old male, presents with a one-week history of neck pain following a car accident.",0.7746
-2,"He reports that he was hit in the back, his neck went forward, and his head went forward quickly.",0.7484
-3,"He describes the pain as a 7 out of 10, which is exacerbated by movement of his neck.",0.0232
-4,The pain is localized to the back of his neck and has not been relieved by ibuprofen.,0.182
-5,He reports occasional headaches but denies any hearing or visual disturbances.,0.5673
-6,Past medical history: The patient has a history of playing football years ago without any neck-related issues.,0.9419
-7,"He denies any previous medical conditions, treatments, or encounters that may be relevant to his current presentation.",0.5826
-8,Review of systems: The patient denies any symptoms in other organs that are relevant to his initial presentation.,0.8785
-9,Current medications: The patient is currently taking ibuprofen as needed.,0.9997
+1,"HPI: The patient, Jack, a 30-year-old male, presents with a one-week history of neck pain following a car accident.",0.4658
+2,"He reports that he was hit in the back, his neck went forward, and his head went forward quickly.",0.5127
+3,"He describes the pain as a 7 out of 10, which is exacerbated by movement of his neck.",0.0003
+4,The pain is localized to the back of his neck and has not been relieved by ibuprofen.,0.1194
+5,He reports occasional headaches but denies any hearing or visual disturbances.,0.2341
+6,Past medical history: The patient has a history of playing football years ago without any neck-related issues.,0.552
+7,"He denies any previous medical conditions, treatments, or encounters that may be relevant to his current presentation.",0.3749
+8,Review of systems: The patient denies any symptoms in other organs that are relevant to his initial presentation.,0.3193
+9,Current medications: The patient is currently taking ibuprofen as needed.,0.8854
 10,Objective:,0.5
 11,Vital signs: [NOT MENTIONED],0.5
-12,"Physical exam: The patient exhibits positive pain to palpation of the soft tissues of the neck, pain with flexion, severe pain with extension, and positive pain with rotation.",0.7779
-13,"He is able to turn his neck from side to side with some pain, but is unable to touch his ear to his shoulders.",0.6716
-14,Test Results: The patient's x-ray results show no signs of fracture or bony abnormalities.,0.0082
+12,"Physical exam: The patient exhibits positive pain to palpation of the soft tissues of the neck, pain with flexion, severe pain with extension, and positive pain with rotation.",0.29
+13,"He is able to turn his neck from side to side with some pain, but is unable to touch his ear to his shoulders.",0.3963
+14,Test Results: The patient's x-ray results show no signs of fracture or bony abnormalities.,0.001
 15,Assessment / Problem List:,0.5
-16,"Assessment: I believe the patient has a neck strain, likely caused by whiplash from the car accident.",0.3361
-17,Problem list: Neck strain; whiplash; [NOT MENTIONED],0.7493
+16,"Assessment: I believe the patient has a neck strain, likely caused by whiplash from the car accident.",0.0423
+17,Problem list: Neck strain; whiplash; [NOT MENTIONED],0.5076
 18,Plan:,0.5
-19,I prescribed Motrin 600 milligrams every 6 to 8 hours for anti-inflammatory purposes.,0.0052
-20,I also prescribed Flexeril 10 milligrams every 12 hours as needed for muscle relaxation.,0.0077
-21,I instructed the patient to be conservative with his neck movement and avoid straining it.,0.0048
-22,"I ordered an MRI to rule out any underlying conditions, such as a concussion.",0.8893
-23,I will refer the patient to either physical rehab or a chiropractor once the MRI results are available.,0.0086
-24,Follow-up: The patient will return for follow-up to discuss the results of the MRI and further management.,0.4496
+19,I prescribed Motrin 600 milligrams every 6 to 8 hours for anti-inflammatory purposes.,0.0001
+20,I also prescribed Flexeril 10 milligrams every 12 hours as needed for muscle relaxation.,0.0002
+21,I instructed the patient to be conservative with his neck movement and avoid straining it.,0.0
+22,"I ordered an MRI to rule out any underlying conditions, such as a concussion.",0.5217
+23,I will refer the patient to either physical rehab or a chiropractor once the MRI results are available.,0.0
+24,Follow-up: The patient will return for follow-up to discuss the results of the MRI and further management.,0.0167

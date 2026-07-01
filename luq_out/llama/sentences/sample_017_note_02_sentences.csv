@@ -1,33 +1,33 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, a 56-year-old male, presents with a 4-5 week history of difficulty swallowing, specifically feeling like something is stuck in his throat, especially with solid foods.",0.3269
-2,"He denies coughing, vomiting blood, or weight loss.",0.3516
-3,He has a past medical history of diabetes and high blood pressure.,0.1901
-4,He is currently taking metformin 500mg twice a day for diabetes and norvasc for high blood pressure.,0.432
-5,His hemoglobin A1c was previously 7.4.,0.8981
-6,"He reports taking his medications as directed and checking his blood sugars 80% of the time, with numbers within target range.",0.8883
-7,He denies any side effects from metformin.,0.4752
-8,"Past medical history: Diabetes, high blood pressure, taking metformin 500mg twice a day and norvasc.",0.5054
-9,He reports improved diet and exercise.,0.9154
-10,"Review of systems: Denies coughing, vomiting blood, weight loss, chest pain, or shortness of breath.",0.6183
-11,"Current medications: Metformin 500mg twice a day for diabetes, norvasc for high blood pressure.",0.7064
+1,"HPI: The patient, a 56-year-old male, presents with a 4-5 week history of difficulty swallowing, specifically feeling like something is stuck in his throat, especially with solid foods.",0.0595
+2,"He denies coughing, vomiting blood, or weight loss.",0.0489
+3,He has a past medical history of diabetes and high blood pressure.,0.0363
+4,He is currently taking metformin 500mg twice a day for diabetes and norvasc for high blood pressure.,0.1192
+5,His hemoglobin A1c was previously 7.4.,0.34
+6,"He reports taking his medications as directed and checking his blood sugars 80% of the time, with numbers within target range.",0.5087
+7,He denies any side effects from metformin.,0.2443
+8,"Past medical history: Diabetes, high blood pressure, taking metformin 500mg twice a day and norvasc.",0.1438
+9,He reports improved diet and exercise.,0.7395
+10,"Review of systems: Denies coughing, vomiting blood, weight loss, chest pain, or shortness of breath.",0.173
+11,"Current medications: Metformin 500mg twice a day for diabetes, norvasc for high blood pressure.",0.2732
 12,Objective:,0.5
-13,"Vital signs: BP 120/50, no other vital signs mentioned.",0.849
-14,"Physical exam: The patient's neck is fine, no swelling or masses.",0.3513
-15,"Thyroid feels normal, no lymph nodes.",0.4412
-16,"Throat exam is clear, no masses or swelling.",0.1844
-17,"Lung exam is clear, heart exam is normal, no murmurs.",0.5721
-18,"Belly exam reveals epigastric tenderness, but no masses or significant swelling.",0.464
-19,"Back exam is normal, extremity exam is fine, neurological exam is normal.",0.2689
+13,"Vital signs: BP 120/50, no other vital signs mentioned.",0.7269
+14,"Physical exam: The patient's neck is fine, no swelling or masses.",0.2525
+15,"Thyroid feels normal, no lymph nodes.",0.2561
+16,"Throat exam is clear, no masses or swelling.",0.1168
+17,"Lung exam is clear, heart exam is normal, no murmurs.",0.2522
+18,"Belly exam reveals epigastric tenderness, but no masses or significant swelling.",0.3024
+19,"Back exam is normal, extremity exam is fine, neurological exam is normal.",0.211
 20,Test Results: [NOT MENTIONED],0.5
 21,Assessment / Problem List:,0.5
-22,"Assessment: The patient presents with difficulty swallowing, likely due to a narrowing of the throat, possibly a stricture in the esophagus.",0.0016
-23,Problem list: Difficulty swallowing (active); Diabetes (active); High blood pressure (active).,0.928
+22,"Assessment: The patient presents with difficulty swallowing, likely due to a narrowing of the throat, possibly a stricture in the esophagus.",0.0001
+23,Problem list: Difficulty swallowing (active); Diabetes (active); High blood pressure (active).,0.4615
 24,Plan:,0.5
-25,I will refer the patient to gastroenterology for a scope to evaluate the esophagus.,0.1142
-26,I will start the patient on prilosec 20mg once a day for reflux.,0.0763
-27,"I will recommend chewing food frequently and thoroughly, especially hard foods like steak or meat.",0.7773
-28,"I will order another hemoglobin A1c, kidney function tests, and refer the patient to ophthalmology for diabetic retinopathy evaluation.",0.1328
-29,I will continue the patient on metformin and norvasc as before.,0.7718
-30,I will have the patient return in a month for follow-up.,0.5627
-31,Follow-up: The patient will return in one month for follow-up and to discuss the results of the blood tests and any necessary adjustments to treatment.,0.2239
+25,I will refer the patient to gastroenterology for a scope to evaluate the esophagus.,0.1113
+26,I will start the patient on prilosec 20mg once a day for reflux.,0.0732
+27,"I will recommend chewing food frequently and thoroughly, especially hard foods like steak or meat.",0.4359
+28,"I will order another hemoglobin A1c, kidney function tests, and refer the patient to ophthalmology for diabetic retinopathy evaluation.",0.0339
+29,I will continue the patient on metformin and norvasc as before.,0.5619
+30,I will have the patient return in a month for follow-up.,0.5184
+31,Follow-up: The patient will return in one month for follow-up and to discuss the results of the blood tests and any necessary adjustments to treatment.,0.011

@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Jacqueline, presented to the clinic today expressing anxiety about her recent blood work results, which showed that she has hepatitis C.",Faithful,
+1,She stated that she was not aware of having hepatitis C in the past and has been feeling fine.,Faithful,
+2,"She has a history of using intravenous drugs in the past, but has been clean for over 15 years.",Faithful,
+3,"She also reported a history of heavy alcohol use, but has reduced her consumption to about one beer a day.",Faithful,
+4,She also smokes one to two cigarettes a day.,Faithful,
+5,"Past medical history: The patient has a history of hypertension, diabetes, and depression, which run in her family.",Faithful,
+6,"She has a history of smoking, with a past use of one to one and a half packs of cigarettes per day.",Faithful,
+7,"Review of systems: The patient reported feeling tired at the end of the day, despite getting enough sleep.",Faithful,
+8,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+9,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+10,The patient appears in no distress and no jaundice on skin exam.,Faithful,
+11,"The heart exam revealed a regular rate and rhythm with a 2/6 systolic murmur, which has not changed from last year.",Faithful,
+12,"The lung exam was clear with no wheezes, rales, or rhonchi.",Faithful,
+13,"The abdominal exam was normal, with present bowel sounds and a soft abdomen without hepatosplenomegaly.",Faithful,
+14,"The musculoskeletal exam was normal, with no gait disturbance or edema.",Faithful,
+15,"The patient's recent blood work showed a positive HCV antibody test and an elevated AST at 39, but normal albumin and total bilirubin levels.",Faithful,
+16,"Assessment: The patient has hepatitis C, a viral infection that affects the liver, which she most likely acquired years ago.",Faithful,
+17,Problem list: Hepatitis C; active; Hypertension; active; Diabetes; active; Depression; active.,Faithful,
+18,"I ordered additional blood work to confirm the diagnosis of hepatitis C, including checking the HCV RNA and HCV genotype.",Faithful,
+19,I also ordered an ultrasound to determine the severity of the patient's liver disease and assess for fibrosis.,Faithful,
+20,I will use this information to determine the next steps for treatment.,Faithful,
+21,Follow-up: The patient will be scheduled to return in three weeks for follow-up.,Faithful,

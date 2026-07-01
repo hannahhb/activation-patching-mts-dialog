@@ -1,0 +1,69 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 45-year-old male.,1.0,The patient is a 45-year-old male.,1,,entailment
+1,The patient presents with a 3-week history of right elbow pain.,0.9771,The patient's elbow pain has lasted for three weeks.,1,,entailment
+2,The patient's right elbow pain worsened with movement.,0.9613,The patient is experiencing right elbow pain.,1,,entailment
+3,The patient's right elbow pain improved with rest.,0.9646,The patient is experiencing right elbow pain.,1,,entailment
+4,The patient describes the pain as sharp.,0.9663,"The patient describes the pain as sharp, stabbing, and aching.",1,,entailment
+5,The patient describes the pain as stabbing.,0.9729,"The patient describes the pain as sharp, stabbing, and aching.",1,,entailment
+6,The patient describes the pain as throbbing.,0.9498,"The patient describes the pain as sharp, stabbing, and aching.",1,,entailment
+7,The patient rates the pain an 8/10 when using the arm.,0.9647,The patient rates the pain as an 8 out of 10 when using the elbow.,1,,entailment
+8,The patient rates the pain 3/10 when resting.,0.995,The patient rates the pain as a 3 out of 10 when resting.,1,,entailment
+9,The pain is localized to the outside part of the elbow.,0.9919,The pain is located on the outside part of the elbow.,1,,entailment
+10,The pain does not radiate to other areas.,0.9726,The patient denied pain radiating to other areas.,1,,entailment
+11,The patient denies any recent trauma.,0.9239,The patient has not had any recent trauma to the elbow.,1,,entailment
+12,The patient denies feeling a pop in the elbow.,0.9204,The patient is experiencing right elbow pain.,0,fabrication,contradiction
+13,The patient has tried taking Tylenol.,0.9609,The patient has tried taking Tylenol and ibuprofen for the pain.,1,,entailment
+14,The patient has tried taking ibuprofen.,0.9609,The patient has tried taking Tylenol and ibuprofen for the pain.,1,,entailment
+15,Tylenol does not provide significant relief.,0.9279,The patient has tried taking Tylenol and ibuprofen for the pain.,0,fabrication,neutral
+16,Ibuprofen does not provide significant relief.,0.9206,The patient has tried taking Tylenol and ibuprofen for the pain.,0,fabrication,neutral
+17,The patient has a history of type 2 diabetes.,0.9904,The patient has a history of diabetes type two.,1,,entailment
+18,The patient's type 2 diabetes is managed with metformin.,0.9584,The patient is taking metformin.,1,,entailment
+19,The metformin dose is 500mg.,0.9937,The metformin dose is 500 milligrams.,1,,entailment
+20,Metformin is taken twice daily.,0.9947,Metformin is taken twice a day.,1,,entailment
+21,The patient has mild intermittent asthma.,0.9848,The patient has a history of mild intermittent asthma.,1,,entailment
+22,The patient's asthma is managed with flovent.,0.9694,Flovent is prescribed for asthma.,1,,entailment
+23,The patient's asthma is managed with albuterol.,0.9699,Albuterol is prescribed for asthma.,1,,entailment
+24,Albuterol is taken as needed.,1.0,Albuterol is taken as needed.,1,,entailment
+25,The patient has a known allergy to penicillin.,0.9883,The patient has an allergy to penicillin.,1,,entailment
+26,The patient underwent a cholecystectomy 10 years ago.,0.9633,The patient had their gallbladder removed about 10 years ago.,1,,entailment
+27,The patient's asthma is under good control.,0.9323,The patient has a history of mild intermittent asthma.,0,fabrication,neutral
+28,The patient has had no recent asthma exacerbations.,0.9465,The patient has a history of mild intermittent asthma.,0,fabrication,neutral
+29,The patient is currently taking metformin 500mg twice daily.,0.9743,Metformin is taken twice a day.,1,,entailment
+30,The patient is currently taking flovent.,0.9914,The patient is taking Flovent.,1,,entailment
+31,The patient is currently taking albuterol as needed.,0.9865,The patient is taking albuterol.,1,,entailment
+32,The patient's cardiovascular exam is normal.,0.9029,The patient has a grade 3 out of 6 systolic ejection murmur.,0,fabrication,contradiction
+33,The patient has a grade 3/6 systolic ejection murmur.,0.9974,The patient has a grade 3 out of 6 systolic ejection murmur.,1,,entailment
+34,The patient has moderate lateral epicondylar tenderness of the right elbow.,0.9994,The patient has moderate lateral epicondylar tenderness in the right elbow.,1,,entailment
+35,The patient has pain on passive range of motion of the right elbow.,0.9991,The patient has pain with passive range of motion of the right elbow.,1,,entailment
+36,The patient has mild pain with resisted extension of the wrist.,0.9951,The patient has mild pain with resisted extension of the right wrist.,1,,entailment
+37,There is no palpable joint effusion in the right elbow.,0.9349,The patient's right elbow x-ray shows no acute fracture or bony abnormality.,0,fabrication,neutral
+38,The patient's right elbow X-ray shows no acute fracture.,0.9937,The patient's right elbow x-ray shows no acute fracture or bony abnormality.,1,,entailment
+39,The patient's right elbow X-ray shows no bony abnormality.,0.9912,The patient's right elbow x-ray shows no acute fracture or bony abnormality.,1,,entailment
+40,The patient's right elbow X-ray shows no malalignment.,0.9718,The patient's right elbow x-ray shows no acute fracture or bony abnormality.,1,,entailment
+41,The patient's right elbow X-ray shows no joint effusion.,0.9679,The patient's right elbow x-ray shows no acute fracture or bony abnormality.,1,,entailment
+42,The patient has acute lateral epicondylitis of the right elbow.,0.9705,The patient has moderate lateral epicondylar tenderness in the right elbow.,1,,entailment
+43,The patient has tennis elbow.,0.9388,The patient has been playing a lot of tennis recently.,0,fabrication,neutral
+44,The patient has diabetes type 2.,0.9776,The patient has a history of diabetes type two.,1,,entailment
+45,The patient has asthma.,0.9412,The patient has a history of mild intermittent asthma.,1,,entailment
+46,The doctor prescribed Ultram.,1.0,The doctor prescribed Ultram.,1,,entailment
+47,The Ultram dose is 50mg.,0.9887,The Ultram dose is 50 milligrams.,1,,entailment
+48,Ultram is taken once daily.,0.9953,Ultram is taken once per day.,1,,entailment
+49,Ultram is prescribed for right elbow pain.,0.9939,Ultram is prescribed for elbow pain.,1,,entailment
+50,The patient was recommended to rest the right arm.,0.9763,The doctor prescribed rest for the patient's right arm.,1,,entailment
+51,The patient was recommended to avoid repetitive stress in the right arm.,0.9917,The doctor advised the patient to avoid repetitive stress on the right arm.,1,,entailment
+52,The patient was recommended to ice the right elbow.,0.96,"The doctor advised the patient to ice the right elbow for 20 minutes, three times a day.",1,,entailment
+53,The patient should ice the right elbow for 20 minutes.,0.9804,"The doctor advised the patient to ice the right elbow for 20 minutes, three times a day.",1,,entailment
+54,The patient should ice the right elbow at least 3 times a day.,0.9798,"The doctor advised the patient to ice the right elbow for 20 minutes, three times a day.",1,,entailment
+55,The doctor ordered a hemoglobin A1c level.,1.0,The doctor ordered a hemoglobin A1c level.,1,,entailment
+56,The doctor ordered a CBC blood test.,1.0,The doctor ordered a CBC blood test.,1,,entailment
+57,The doctor ordered a chem-12 blood test.,1.0,The doctor ordered a chem-12 blood test.,1,,entailment
+58,The purpose of the hemoglobin A1c level is to assess diabetes control.,0.9535,The doctor ordered a hemoglobin A1c level.,1,,entailment
+59,The purpose of the CBC blood test is to assess diabetes control.,0.9442,The doctor ordered a CBC blood test.,0,fabrication,neutral
+60,The purpose of the chem-12 blood test is to assess diabetes control.,0.9531,The doctor ordered a chem-12 blood test.,1,,entailment
+61,The patient's metformin was increased to 1000mg.,0.9822,The doctor increased the patient's metformin dose to 1000 milligrams.,1,,entailment
+62,The patient's metformin is taken twice daily.,0.9884,Metformin is taken twice a day.,1,,entailment
+63,The doctor wrote a prescription for a refill of albuterol.,0.9779,The doctor refilled the patient's albuterol prescription.,1,,entailment
+64,The patient will be seen in 4 weeks.,0.9433,The doctor scheduled a follow-up appointment in 4 weeks.,1,,entailment
+65,The purpose of the follow-up is to reevaluate the elbow.,0.9107,The doctor scheduled a follow-up appointment in 4 weeks.,0,fabrication,neutral
+66,The doctor may consider additional imaging if necessary.,0.8876,The doctor ordered a CBC blood test.,0,fabrication,neutral
+67,The doctor may consider a physical therapy referral if necessary.,0.886,The doctor scheduled a follow-up appointment in 4 weeks.,0,fabrication,neutral

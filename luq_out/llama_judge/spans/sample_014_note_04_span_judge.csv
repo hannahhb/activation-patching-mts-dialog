@@ -1,0 +1,25 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Larry, has been experiencing chronic back pain for a couple of years, initially occurring after moving furniture.",Faithful,
+1,"The pain is described as sharp stabbing and radiates down to his right leg, specifically to his right big toe.",Faithful,
+2,"He also experiences numbness and tingling in his right leg, but no loss of sensation in the genital or rectal area, and no weakness.",Faithful,
+3,"He has tried physical therapy, strong pain medications, and has been considered for surgery, but would like to avoid it.",Faithful,
+4,"His daily activities are limited due to back pain, which has led to weight gain.",Faithful,
+5,He used to enjoy playing golf but has been unable to participate due to his back pain.,Faithful,
+6,"Past medical history: The patient denies any family members with spine conditions and does not smoke, having quit 20 years ago.",Faithful,
+7,He has not mentioned any other past medical conditions or relevant social history.,Fabrication,any other past medical conditions or relevant social history
+8,"Review of systems: The patient reports numbness and tingling in his right leg, but denies any loss of sensation, weakness, loss of control of bladder or bowels, or other symptoms.",Faithful,
+9,Current medications: Not mentioned.,Faithful,
+10,Vital signs: Not mentioned.,Faithful,
+11,Physical exam: The patient has no overlying erythema or ecchymosis on his back.,Faithful,
+12,There is midline tenderness at L4-L5 disk space with right-sided lumbar paravertebral tenderness.,Faithful,
+13,The patient experiences pain with lumbar flexion and a positive straight leg test.,Faithful,
+14,The neurological examination reveals decreased sensation to light touch at the right lateral thigh at L4 dermatome.,Faithful,
+15,Patellar and Achilles reflexes are symmetrical.,Faithful,
+16,Test Results: The patient's MRI shows disk herniation with nerve impingement.,Faithful,
+17,Assessment: The patient's symptoms are consistent with an L4-L5 herniated disk with radiculopathy.,Faithful,
+18,Problem list: Herniated disk at L4-L5; Radiculopathy; Chronic back pain.,Faithful,
+19,"I recommended a spinal injection with a corticosteroid, which will be administered under fluoroscopy to help reduce inflammation and alleviate pain.",Faithful,
+20,I will monitor the patient's response to the injection and schedule follow-up appointments as needed.,Faithful,
+21,"I explained to the patient that the procedure is relatively quick and common, and he should be able to return to normal activities within an hour.",Faithful,
+22,Follow-up: The patient will return for follow-up after the procedure to assess his response and determine if further injections are necessary.,Fabrication,The patient will return for follow-up after the procedure to assess his response and determine if further injections are necessary
+23,Instructions:,Fabrication,Instructions: 

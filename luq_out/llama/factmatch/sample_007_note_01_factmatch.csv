@@ -1,0 +1,50 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Jacqueline.,1.0,The patient's name is Jacqueline.,1,,entailment
+1,The patient has anxiety about her recent blood work results.,0.9799,The patient is anxious about their recent blood work.,1,,entailment
+2,The patient was diagnosed with hepatitis C.,0.9691,The patient was told they have hepatitis C.,1,,entailment
+3,The patient's primary care physician informed her of her hepatitis C status.,0.9627,The patient was told they have hepatitis C.,1,,entailment
+4,The patient reports feeling fine despite the diagnosis.,0.954,The patient has been feeling fine.,1,,entailment
+5,The patient has a history of intravenous drug use.,0.9773,The patient has a history of IV drug use.,1,,entailment
+6,The patient used intravenous drugs 15 years ago.,0.9719,The patient used IV drugs years ago.,1,,entailment
+7,The patient denies any recent intravenous drug use.,0.9483,The patient has a history of IV drug use.,0,negation,contradiction
+8,The patient has a history of excessive alcohol use.,0.9609,The patient used to drink a lot of alcohol.,1,,entailment
+9,The patient currently consumes about 1 beer per day.,0.9784,The patient now drinks about a beer a day.,1,,entailment
+10,The patient smokes 1-2 cigarettes per day.,0.9968,The patient smokes one to two cigarettes a day.,1,,entailment
+11,The patient feels tired at the end of the day.,1.0,The patient feels tired at the end of the day.,1,,entailment
+12,The patient attributes her tiredness to work-related stress.,0.9411,The patient works and gets enough sleep but still feels tired.,0,fabrication,neutral
+13,The patient has a family history of hypertension.,0.968,Hypertension runs in the patient's family.,1,,entailment
+14,The patient has a family history of diabetes.,0.9591,Diabetes runs in the patient's family.,1,,entailment
+15,The patient has a family history of depression.,0.9591,Depression runs in the patient's family.,1,,entailment
+16,The patient appears in no distress.,1.0,The patient appears in no distress.,1,,entailment
+17,The patient has no jaundice on skin exam.,0.9524,The patient has no jaundice.,1,,entailment
+18,The patient's heart exam reveals a regular rate and rhythm.,0.9766,The patient has a regular heart rate and rhythm.,1,,entailment
+19,The patient has a 2/6 systolic murmur.,0.9836,The patient has a 2 out of 6 systolic murmur.,1,,entailment
+20,The patient's systolic murmur has not changed from last year.,0.9863,The patient's heart murmur has not changed from last year.,1,,entailment
+21,The patient's lung exam is clear.,0.9717,The patient's lungs are clear.,1,,entailment
+22,The patient has no wheezes.,0.9507,"The patient has no wheezes, rales, or rhonchi.",1,,entailment
+23,The patient has no rales.,0.9319,"The patient has no wheezes, rales, or rhonchi.",1,,entailment
+24,The patient has no rhonchi.,0.9512,"The patient has no wheezes, rales, or rhonchi.",1,,entailment
+25,The patient's abdominal exam reveals present bowel sounds.,0.9747,The patient's bowel sounds are present.,1,,entailment
+26,The patient has a soft abdomen.,0.9891,The patient's abdomen is soft.,1,,entailment
+27,The patient has no hepatosplenomegaly.,1.0,The patient has no hepatosplenomegaly.,1,,entailment
+28,The patient's recent blood work results show a positive HCV antibody test.,0.9785,The patient's HCV antibody test was positive.,1,,entailment
+29,The patient has an elevated AST at 39.,0.9807,The patient's liver panel showed an elevated AST at 39.,1,,entailment
+30,The patient has normal ALT levels.,0.9647,"The patient's ALT, albumin, and total bilirubin are within normal limits.",1,,entailment
+31,The patient has normal total bilirubin levels.,0.9583,"The patient's ALT, albumin, and total bilirubin are within normal limits.",1,,entailment
+32,The patient has a confirmed diagnosis of hepatitis C.,0.9622,The patient was told they have hepatitis C.,1,,entailment
+33,Hepatitis C is a viral infection that affects the liver.,0.9215,The doctor wants to confirm the hepatitis C diagnosis with additional blood work.,0,fabrication,neutral
+34,The patient most likely contracted hepatitis C years ago.,0.9493,The patient had not been previously told they have hepatitis C.,0,fabrication,neutral
+35,The patient's problem list includes hepatitis C.,0.9336,The doctor recommends testing the patient's wife and kids for hepatitis C.,1,,entailment
+36,The patient's hepatitis C is active.,0.9236,The patient was told they have hepatitis C.,0,fabrication,neutral
+37,The doctor prescribed no medications at this time.,0.9823,The doctor prescribed no medication.,1,,entailment
+38,The doctor will order additional blood work.,0.9382,The doctor wants to confirm the hepatitis C diagnosis with additional blood work.,1,,entailment
+39,The additional blood work will include checking the HCV RNA.,0.9874,The additional blood work includes checking the HCV genotype.,1,,entailment
+40,The additional blood work will include checking the HCV genotype.,0.998,The additional blood work includes checking the HCV genotype.,1,,entailment
+41,The doctor will order an ultrasound.,0.9385,The doctor will order a special ultrasound to check for fibrosis of the liver.,1,,entailment
+42,The ultrasound will assess liver fibrosis.,0.9602,The doctor will order a special ultrasound to check for fibrosis of the liver.,1,,entailment
+43,The doctor will follow up with the patient in three weeks.,0.9732,The doctor will see the patient in three weeks.,1,,entailment
+44,The doctor will discuss the results with the patient in three weeks.,0.9749,The doctor will see the patient in three weeks.,1,,entailment
+45,The doctor will proceed with treatment after discussing the results with the patient.,0.9143,The doctor will see the patient in three weeks.,0,fabrication,neutral
+46,The patient will have a follow-up appointment in three weeks.,0.9543,The doctor will see the patient in three weeks.,1,,entailment
+47,The follow-up appointment will discuss the results of the additional blood work and ultrasound.,0.9251,The doctor will order a special ultrasound to check for fibrosis of the liver.,0,fabrication,neutral
+48,The follow-up appointment will determine the next steps in the patient's treatment plan.,0.8991,The doctor will see the patient in three weeks.,0,fabrication,neutral

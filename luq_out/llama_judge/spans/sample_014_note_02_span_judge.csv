@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Larry, a 60-year-old male, has been experiencing chronic back pain for the past couple of years, which started after lifting furniture one weekend.",Fabrication,a 60-year-old male
+1,He describes the pain as sharp stabbing and radiating down to his right leg and big toe.,Faithful,
+2,"He also reports numbness and tingling in his right leg, particularly in the right lateral thigh at L4 dermatome.",Contextual,particularly in the right lateral thigh at L4 dermatome
+3,"He denies loss of sensation in the genital or rectal area, weakness, loss of bladder or bowel control, and any family history of spine conditions.",Faithful,
+4,"He has tried physical therapy, pain medications, and has been advised of surgery, but prefers to avoid it.",Faithful,
+5,He has gained weight due to his back pain and has difficulty being active.,Faithful,
+6,He used to enjoy playing golf but has had to stop due to his condition.,Faithful,
+7,Past medical history: Not mentioned.,Faithful,
+8,Review of systems: The patient denies any other symptoms.,Fabrication,The patient denies any other symptoms
+9,Current medications: Not mentioned.,Faithful,
+10,Vital signs: Not mentioned.,Faithful,
+11,"The musculoskeletal back exam revealed no overlying erythema or ecchymosis, but midline tenderness at L4-L5 disk space with right-sided lumbar paravertebral tenderness.",Faithful,
+12,The patient experienced pain with lumbar flexion and a positive straight leg test.,Faithful,
+13,"The neurological examination revealed decreased sensation to light touch at the right lateral thigh at L4 dermatome, but symmetrical patellar and Achilles reflexes.",Faithful,
+14,The MRI results show disk herniation with nerve impingement.,Faithful,
+15,"Assessment: The patient's symptoms are consistent with an L4-L5 herniated disk with radiculopathy, causing pain and numbness in the right leg.",Faithful,
+16,Problem list: Lumbar back pain; L4-L5 herniated disk; Radiculopathy; Obesity.,Fabrication,Obesity
+17,I prescribed a corticosteroid injection to the lumbar spine under fluoroscopy to help reduce inflammation and alleviate pain.,Faithful,
+18,I will monitor the patient's response to the injection and schedule follow-up appointments as needed.,Faithful,
+19,"The patient will not require any ongoing treatment, but may need up to four injections per year.",Negation,The patient will not require any ongoing treatment
+20,The patient will return for a follow-up appointment to assess the effectiveness of the corticosteroid injection and to schedule additional injections as needed.,Faithful,

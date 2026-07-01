@@ -1,25 +1,25 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, a 45-year-old male, presents with a 3-week history of right elbow pain, exacerbated by playing tennis.",0.6697
-2,"The pain is located on the outside of the elbow, is sharp and stabbing, and radiates to a level of 8/10 with movement and 3/10 at rest.",0.4904
-3,The patient reports taking Tylenol and ibuprofen with minimal relief.,0.5737
-4,He has a history of diabetes type two and mild intermittent asthma.,0.4678
-5,"Past medical history: The patient has a history of diabetes type two, mild intermittent asthma, and a surgical history of gallbladder removal 10 years ago.",0.7447
-6,He has an allergy to penicillin.,0.7558
-7,Review of systems: No other symptoms were reported.,0.9997
-8,"Current medications: Metformin 500mg twice daily, Flovent twice daily, and Albuterol as needed.",0.8976
+1,"HPI: The patient, a 45-year-old male, presents with a 3-week history of right elbow pain, exacerbated by playing tennis.",0.2134
+2,"The pain is located on the outside of the elbow, is sharp and stabbing, and radiates to a level of 8/10 with movement and 3/10 at rest.",0.1382
+3,The patient reports taking Tylenol and ibuprofen with minimal relief.,0.145
+4,He has a history of diabetes type two and mild intermittent asthma.,0.0175
+5,"Past medical history: The patient has a history of diabetes type two, mild intermittent asthma, and a surgical history of gallbladder removal 10 years ago.",0.2115
+6,He has an allergy to penicillin.,0.0228
+7,Review of systems: No other symptoms were reported.,0.627
+8,"Current medications: Metformin 500mg twice daily, Flovent twice daily, and Albuterol as needed.",0.4573
 9,Objective:,0.5
-10,Vital signs: Not mentioned.,0.5471
-11,"Physical exam: The patient has moderate lateral epicondylar tenderness of the right elbow, with pain with passive range of motion and mild pain with resisted extension of the right wrist.",0.2306
-12,No palpable joint effusion.,0.425
-13,"A grade 3/6 systolic ejection murmur was heard on the heart exam, unchanged from prior exam.",0.7468
-14,Test Results: Normal right elbow x-ray showing no acute fracture or other bony abnormality.,0.1235
+10,Vital signs: Not mentioned.,0.2436
+11,"Physical exam: The patient has moderate lateral epicondylar tenderness of the right elbow, with pain with passive range of motion and mild pain with resisted extension of the right wrist.",0.0236
+12,No palpable joint effusion.,0.3354
+13,"A grade 3/6 systolic ejection murmur was heard on the heart exam, unchanged from prior exam.",0.2405
+14,Test Results: Normal right elbow x-ray showing no acute fracture or other bony abnormality.,0.0133
 15,Assessment / Problem List:,0.5
-16,"Assessment: The patient has acute lateral epicondylitis of the right elbow, also known as tennis elbow, likely due to overuse from increased tennis activity.",0.2286
-17,Problem list: Acute lateral epicondylitis of the right elbow (confirmed); Diabetes type two (status: active); Mild intermittent asthma (status: suspected).,0.5625
+16,"Assessment: The patient has acute lateral epicondylitis of the right elbow, also known as tennis elbow, likely due to overuse from increased tennis activity.",0.0143
+17,Problem list: Acute lateral epicondylitis of the right elbow (confirmed); Diabetes type two (status: active); Mild intermittent asthma (status: suspected).,0.3039
 18,Plan:,0.5
-19,I prescribed Ultram 50mg once daily for right elbow pain.,0.1181
-20,"I advised the patient to rest the right arm, stop tennis for 4-6 weeks, and avoid repetitive stress in the right arm.",0.4469
-21,"I ordered a hemoglobin A1c level, CBC, and chem-12 blood test.",0.2277
-22,I increased the patient's metformin to 1000mg twice daily and prescribed a refill of Albuterol.,0.3529
-23,Follow-up: I will see the patient in 4 weeks to reevaluate the right elbow and consider additional imaging or physical therapy if needed.,0.9998
+19,I prescribed Ultram 50mg once daily for right elbow pain.,0.0162
+20,"I advised the patient to rest the right arm, stop tennis for 4-6 weeks, and avoid repetitive stress in the right arm.",0.1143
+21,"I ordered a hemoglobin A1c level, CBC, and chem-12 blood test.",0.2212
+22,I increased the patient's metformin to 1000mg twice daily and prescribed a refill of Albuterol.,0.2266
+23,Follow-up: I will see the patient in 4 weeks to reevaluate the right elbow and consider additional imaging or physical therapy if needed.,0.0698

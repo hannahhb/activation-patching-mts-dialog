@@ -1,0 +1,47 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Jack.,1.0,The patient's name is Jack.,1,,entailment
+1,The patient presents with a one-week history of neck pain.,0.9618,The patient has neck pain.,1,,entailment
+2,The neck pain followed a car accident.,0.9862,The neck pain started after a car accident.,1,,entailment
+3,The patient describes the neck pain as a 7/10.,0.9581,The patient rates their neck pain as a 7 out of 10.,1,,entailment
+4,The neck pain worsens with movement of the neck.,0.9769,The patient's neck pain gets worse when they move their neck.,1,,entailment
+5,The pain is localized to the back of the neck.,0.9737,The patient experiences pain in the back of their neck.,1,,entailment
+6,The neck pain has not been constant.,0.9912,The neck pain is not constant.,1,,entailment
+7,The patient has tried ibuprofen for neck pain.,0.9743,The patient has tried ibuprofen for pain relief.,1,,entailment
+8,Ibuprofen provided some relief for the neck pain.,0.9683,Ibuprofen helped the patient's pain a little bit.,1,,entailment
+9,The patient's neck pain remains at a 5/10 after taking ibuprofen.,0.9499,The patient has tried ibuprofen for pain relief.,0,fabrication,neutral
+10,The patient had headaches early on.,0.9637,The patient had headaches early on after the car accident.,1,,entailment
+11,The patient's headaches have subsided.,0.9619,The patient has had headaches.,1,,entailment
+12,The patient denies any visual disturbances.,0.9679,The patient does not have visual disturbances.,1,,entailment
+13,The patient denies any hearing problems.,0.9586,The patient does not have hearing problems.,1,,entailment
+14,The patient has a history of playing football.,0.9594,The patient played football.,1,,entailment
+15,The patient has no previous neck issues.,0.9524,The patient did not have neck issues before the car accident.,1,,entailment
+16,The patient denies any symptoms in other organs relevant to the initial presentation.,0.9077,The patient experiences pain in the back of their neck.,0,fabrication,neutral
+17,The patient exhibited positive pain to palpation of the soft tissues of the neck.,0.945,The patient has neck pain.,0,fabrication,neutral
+18,The patient had pain with flexion of the neck.,0.9625,The patient experiences pain when flexing their neck.,1,,entailment
+19,The patient had pain with extension of the neck.,0.9717,The patient experiences pain when extending their neck.,1,,entailment
+20,The patient had pain with rotation of the neck.,0.9705,The patient experiences pain when rotating their neck.,1,,entailment
+21,The patient had pain with lateral bending of the neck.,0.9483,The patient experiences pain when turning their neck.,1,,entailment
+22,The patient had an x-ray.,0.9667,The doctor ordered an x-ray for the patient.,1,,entailment
+23,The x-ray showed no signs of fracture.,0.982,The x-ray results show no signs of fracture or bony abnormalities.,1,,entailment
+24,The x-ray showed no bony abnormalities.,0.9813,The x-ray results show no signs of fracture or bony abnormalities.,1,,entailment
+25,The doctor believes the patient has neck strain.,0.9677,The doctor diagnosed the patient with neck strain.,1,,entailment
+26,The patient has neck strain.,0.9657,The doctor diagnosed the patient with neck strain.,1,,entailment
+27,The status of other conditions is unknown.,0.8712,The patient does not have any other questions.,0,fabrication,neutral
+28,The doctor prescribed Motrin.,0.9931,The doctor prescribed Motrin to the patient.,1,,entailment
+29,The Motrin dose is 600mg.,0.9936,The Motrin dose is 600 milligrams.,1,,entailment
+30,Motrin is taken every 6-8 hours.,0.9998,Motrin is taken every 6 to 8 hours.,1,,entailment
+31,Motrin is prescribed for anti-inflammatory purposes.,0.9829,Motrin is an anti-inflammatory.,1,,entailment
+32,The doctor prescribed Flexeril.,0.9941,The doctor prescribed Flexeril to the patient.,1,,entailment
+33,The Flexeril dose is 10mg.,0.9934,The Flexeril dose is 10 milligrams.,1,,entailment
+34,Flexeril is taken every 12 hours.,1.0,Flexeril is taken every 12 hours.,1,,entailment
+35,Flexeril is taken as needed.,1.0,Flexeril is taken as needed.,1,,entailment
+36,Flexeril is prescribed for muscle relaxation.,0.9823,Flexeril is a muscle relaxant.,1,,entailment
+37,The doctor advised the patient to be conservative with neck movement.,0.9175,The patient can mostly turn their neck from side to side.,0,fabrication,neutral
+38,The doctor advised the patient to try to relax the neck.,0.9352,The doctor diagnosed the patient with neck strain.,0,fabrication,neutral
+39,The doctor ordered an MRI.,0.9936,The doctor ordered an MRI for the patient.,1,,entailment
+40,The MRI is to rule out nerve impingement.,0.9011,The doctor ordered an MRI for the patient.,0,fabrication,neutral
+41,The MRI is to rule out other conditions.,0.9372,The doctor ordered an MRI for the patient.,0,fabrication,neutral
+42,The doctor referred the patient to physical rehab.,0.9641,The doctor wants to refer the patient to physical rehab or a chiropractor.,1,,entailment
+43,The doctor referred the patient to a chiropractor.,0.9469,The doctor wants to refer the patient to physical rehab or a chiropractor.,1,,entailment
+44,The doctor will follow up with the patient once the MRI results are available.,0.9526,The doctor ordered an MRI for the patient.,1,,entailment
+45,The follow-up is to discuss further management.,0.8808,The doctor wants to refer the patient to physical rehab or a chiropractor.,1,,entailment

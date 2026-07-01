@@ -1,0 +1,20 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: Jerry, a 45-year-old male, presented with an ankle injury sustained while playing basketball with his son.",Faithful,
+1,"He landed awkwardly and twisted his ankle, resulting in pain and swelling on the outside, which is visible and bruised.",Faithful,
+2,"He reports difficulty walking due to instability and pain, particularly on the lateral side of the ankle.",Faithful,
+3,"He has been having trouble with stability and walking, which is a concern for him since he recently started working out and wants to avoid disrupting his routine.",Faithful,
+4,Past medical history: [NOT MENTIONED],Fabrication,Past medical history
+5,Review of systems: [NOT MENTIONED],Fabrication,Review of systems
+6,Current medications: [NOT MENTIONED],Fabrication,Current medications
+7,Vital signs: [NOT MENTIONED],Fabrication,Vital signs
+8,"The ankle is swollen on the lateral side, with exquisite tenderness to palpation, particularly on the lateral and medial deltoid regions.",Faithful,
+9,"Skin is intact, with brisk capillary refill, and no malalignment.",Faithful,
+10,The patient reports pain with weight-bearing.,Faithful,
+11,"X-ray of the right ankle shows a displaced lateral malleolus fracture at the Weber C level, with no evidence of medial or posterior malleolar fractures.",Faithful,
+12,"The patient has a displaced lateral malleolar fracture, which is likely to require surgical intervention to achieve proper healing and stability.",Faithful,
+13,Problem list: Lateral malleolar fracture; suspected instability; suspected pain.,Fabrication,suspected instability; suspected pain
+14,I prescribed meloxicam to manage pain and reduce swelling.,Faithful,
+15,"I advised the patient to ice the ankle and keep it elevated regularly, especially at work since he works from home.",Faithful,
+16,I also recommended using crutches to avoid putting weight on the affected ankle.,Faithful,
+17,I will schedule a follow-up appointment to reassess the patient's progress.,Fabrication,I will schedule a follow-up appointment
+18,I plan to see the patient again in 3 months to assess the healing of the fracture and to plan for further treatment or rehabilitation.,Faithful,

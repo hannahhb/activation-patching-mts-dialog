@@ -1,0 +1,20 @@
+sentence_idx,sentence,label,note_span
+0,"The patient, Angela, presents with a history of recurrent kidney stones, with this being her seventh or eighth episode.",Faithful,
+1,"She reports that the current stone has passed, and she is no longer experiencing pain or blood in her urine.",Faithful,
+2,"She also has a past medical history of hypertension and diabetes, for which she is currently taking 2.5 mg of Norvasc and 500 mg of metformin daily.",Faithful,
+3,Her blood pressure was 150/90 mmHg at the time of her visit.,Faithful,
+4,"She admits to having difficulty controlling her diet, particularly with regard to fast food and sweets, and has not been checking her blood sugar levels regularly.",Faithful,
+5,"Vital signs: Blood pressure 150/90 mmHg, pulse rate not mentioned, oxygen saturation not mentioned, temperature not mentioned.",Fabrication,"pulse rate not mentioned, oxygen saturation not mentioned, temperature not mentioned"
+6,"Physical exam: The lungs are clear bilaterally, and the heart exam reveals a grade 2 out of 6 systolic ejection murmur, which has not worsened since her previous visit.",Faithful,
+7,The abdomen exam is notable for no tenderness to palpation on the right side.,Faithful,
+8,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+9,"Assessment: The patient has a history of recurrent kidney stones, hypertension, and diabetes, and is currently doing well on her current medications.",Faithful,
+10,Problem list: Kidney stones (resolved); Hypertension (controlled); Diabetes (controlled).,Faithful,
+11,I prescribed Norvasc 2.5 mg daily for hypertension.,Faithful,
+12,I gave her a prescription refill for Norvasc as needed.,Causality,as needed
+13,I prescribed a consult to a nutritionist to help her with her diet.,Faithful,
+14,I also prescribed 500 mg of metformin daily for diabetes and advised her to start taking her blood sugar levels before meals.,Faithful,
+15,I gave her a referral to urology to evaluate her recurrent kidney stones.,Faithful,
+16,I prescribed 10 mg of melatonin as needed for insomnia.,Faithful,
+17,"I will see the patient in three months to re-evaluate her hypertension, diabetes, and kidney stones.",Faithful,
+18,"I will see the patient in three months to re-evaluate her hypertension, diabetes, and kidney stones.",Faithful,

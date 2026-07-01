@@ -1,0 +1,57 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 30-year-old male.,0.9015,The patient played football years ago.,0,fabrication,neutral
+1,The patient presented with neck pain.,0.9887,The patient has neck pain.,1,,entailment
+2,The neck pain started one week ago.,0.9606,The neck pain started after a car accident.,1,,entailment
+3,The neck pain was caused by a car accident.,0.9824,The neck pain started after a car accident.,1,,entailment
+4,The patient described the neck pain as 7 out of 10 in severity.,0.9856,The patient rates their neck pain as a 7 out of 10.,1,,entailment
+5,The neck pain exacerbates upon movement of the neck.,0.9701,The neck pain occurs when the patient moves their head.,1,,entailment
+6,The patient tried ibuprofen for neck pain.,0.9714,The patient has tried ibuprofen for pain relief.,1,,entailment
+7,Ibuprofen provided some relief for the patient's neck pain.,0.9735,Ibuprofen helped the patient's pain a little bit.,1,,entailment
+8,The patient's neck pain remains despite ibuprofen.,0.9542,The patient has tried ibuprofen for pain relief.,1,,entailment
+9,The patient reports pain in the back of his neck.,0.9912,The patient experiences pain in the back of their neck.,1,,entailment
+10,Ibuprofen improved the patient's neck pain.,0.9724,Ibuprofen helped the patient's pain a little bit.,1,,entailment
+11,The patient's neck pain is 5 out of 10 after ibuprofen.,0.9542,The patient rates the effectiveness of ibuprofen as 5 out of 10.,1,,entailment
+12,The patient denies any worsening of neck pain.,0.951,The patient has neck pain.,1,,entailment
+13,The patient reports increased pain with neck movement.,0.9622,The neck pain occurs when the patient moves their head.,1,,entailment
+14,The patient has a history of headaches.,0.9805,The patient has had headaches.,1,,entailment
+15,The patient has not had headaches recently.,0.9725,The patient has had headaches.,1,,entailment
+16,The patient denies any hearing disturbances.,0.9499,The patient does not have hearing problems.,1,,entailment
+17,The patient denies any visual disturbances.,0.9679,The patient does not have visual disturbances.,1,,entailment
+18,The patient has a history of playing football.,0.9679,The patient played football years ago.,1,,entailment
+19,The patient has no previous neck issues.,0.9393,The patient has neck pain.,0,fabrication,neutral
+20,The patient did not seek medical attention after the accident.,0.9523,The patient did not go to the emergency room after the car accident.,1,,entailment
+21,The patient did not seek medical attention due to cost concerns.,0.9338,The patient did not want to pay for an emergency room visit.,1,,entailment
+22,The patient denies any swelling on his neck.,0.9555,The patient does not know if they had swelling or bruising on their neck.,1,,entailment
+23,The patient denies any bruising on his neck.,0.9567,The patient does not know if they had swelling or bruising on their neck.,1,,entailment
+24,The patient exhibited positive pain to palpation of the soft tissues of the neck.,0.945,The patient has neck pain.,0,fabrication,neutral
+25,The patient's neck pain exacerbates upon flexion.,0.961,The patient experiences pain when flexing their neck.,1,,entailment
+26,The patient's neck pain exacerbates upon extension.,0.9728,The patient experiences severe pain when extending their neck.,1,,entailment
+27,The patient's neck pain exacerbates upon rotation.,0.9676,The patient experiences pain when rotating their neck.,1,,entailment
+28,The patient's neck pain exacerbates upon lateral bending.,0.9461,The patient experiences pain when turning their neck.,1,,entailment
+29,The patient has difficulty turning his neck from side to side.,0.979,The patient can mostly turn their neck from side to side.,1,,entailment
+30,The patient's x-ray results showed no signs of fracture.,0.9803,The x-ray results show no signs of fracture or bony abnormalities.,1,,entailment
+31,The patient's x-ray results showed no bony abnormalities.,0.9793,The x-ray results show no signs of fracture or bony abnormalities.,1,,entailment
+32,The patient has neck strain.,0.9657,The doctor diagnosed the patient with neck strain.,1,,entailment
+33,The neck strain is likely secondary to whiplash.,0.9261,The patient's condition is commonly referred to as whiplash.,0,fabrication,neutral
+34,The patient has suspected whiplash.,0.9415,The patient's condition is commonly referred to as whiplash.,1,,entailment
+35,The doctor prescribed Motrin.,1.0,The doctor prescribed Motrin.,1,,entailment
+36,The Motrin dose is 600mg.,0.9936,The Motrin dose is 600 milligrams.,1,,entailment
+37,Motrin is taken every 6-8 hours.,0.9998,Motrin is taken every 6 to 8 hours.,1,,entailment
+38,Motrin is prescribed for pain management.,0.9607,The doctor prescribed Motrin.,1,,entailment
+39,The doctor prescribed Flexeril.,1.0,The doctor prescribed Flexeril.,1,,entailment
+40,The Flexeril dose is 10mg.,0.9934,The Flexeril dose is 10 milligrams.,1,,entailment
+41,Flexeril is taken every 12 hours.,1.0,Flexeril is taken every 12 hours.,1,,entailment
+42,Flexeril is taken as needed.,1.0,Flexeril is taken as needed.,1,,entailment
+43,Flexeril is prescribed for muscle relaxation.,0.9823,Flexeril is a muscle relaxant.,1,,entailment
+44,The patient was advised to avoid straining his neck.,0.9713,The doctor wants the patient to avoid straining their neck.,1,,entailment
+45,The patient was advised to be conservative with movement.,0.8873,The doctor offered physical therapy as an alternative option.,0,fabrication,contradiction
+46,The doctor ordered an MRI.,0.9936,The doctor ordered an MRI for the patient.,1,,entailment
+47,The MRI is to rule out nerve impingement.,0.9382,The doctor wants to check for nerve impingement.,0,fabrication,neutral
+48,The MRI is to rule out other complications.,0.9347,The doctor ordered an MRI for the patient.,0,fabrication,neutral
+49,The patient will be referred to physical rehab.,0.9832,The doctor may refer the patient to physical rehab.,1,,entailment
+50,The patient will be referred to a chiropractor.,0.9841,The doctor may refer the patient to a chiropractor.,1,,entailment
+51,The referral is for further evaluation.,0.9031,The doctor ordered an MRI for the patient.,1,,entailment
+52,The referral is for further treatment.,0.9131,The doctor may refer the patient to physical rehab.,1,,entailment
+53,The doctor will review the MRI results.,0.9537,The doctor ordered an MRI for the patient.,1,,entailment
+54,The doctor will follow up with the patient.,0.9105,The doctor performed a physical exam on the patient.,0,fabrication,neutral
+55,The follow-up is to discuss further treatment options.,0.8948,The doctor offered physical therapy as an alternative option.,0,fabrication,neutral

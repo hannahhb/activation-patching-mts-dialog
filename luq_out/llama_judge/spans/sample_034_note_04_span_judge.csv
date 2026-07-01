@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"The patient presented with a three-month history of an intermittent cough that started after a physically demanding activity, initially thought to be a cold, but was diagnosed as bronchitis by their primary care physician.",Faithful,
+1,They were referred to me for further evaluation of a lung nodule found on a chest X-ray and confirmed by a CT scan.,Faithful,
+2,"The patient has a history of rheumatoid arthritis, which is currently under control with methotrexate 7.5mg weekly.",Faithful,
+3,"They are a former smoker, quitting about seven years ago.",Faithful,
+4,"They have a family history of breast cancer, but no history of lung cancer or other malignancies.",Faithful,
+5,They have no previous history of lung infections or pneumonia.,Faithful,
+6,"The patient denies any pain, shortness of breath, or other symptoms.",Faithful,
+7,I prescribed methotrexate 7.5mg weekly for rheumatoid arthritis.,Fabrication,I prescribed methotrexate 7.5mg weekly for rheumatoid arthritis
+8,"Vital signs: The patient's blood pressure is 124/76, heart rate is 70, respiratory rate is 16, oxygen saturation on room air is 98%, and the patient is afebrile.",Causality,124/76
+9,"Physical exam: The patient's lungs are clear and equal bilateral when auscultated, with no wheezes or rales.",Faithful,
+10,"The heart is regular in rate and rhythm, with no clicks, rubs, or murmurs.",Faithful,
+11,"The extremities have normal skin temperature and moisture, with no edema.",Faithful,
+12,"There is some swelling of the knuckles on both hands, which is likely related to the patient's rheumatoid arthritis.",Faithful,
+13,"The patient had a CT scan that showed a solitary 2cm nodule in the lateral aspect of the right upper lobe, which appears smooth and without evidence of emphysematous disease.",Faithful,
+14,The patient has an incidentally found right upper lobe lung nodule that is being further evaluated with a PET CT and pulmonary function tests.,Faithful,
+15,Problem list: Lung nodule confirmed; active rheumatoid arthritis; history of smoking.,Contextual,active rheumatoid arthritis
+16,I will order a pulmonary function test (PFT) to establish a baseline for lung function.,Faithful,
+17,I will also schedule a PET CT to determine if the nodule is metabolically active.,Faithful,
+18,"I will suggest video-assisted thoracoscopy to remove the nodule, which will be performed under general anesthesia, and the patient will be admitted for one night and discharged the following day.",Faithful,
+19,The patient will continue to follow up with their rheumatologist and maintain their current medication therapy.,Faithful,
+20,The patient will be seen again in a few minutes to sign the necessary paperwork and begin the treatment process.,Faithful,

@@ -1,0 +1,26 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Larry, has been experiencing chronic back pain for a couple of years, which started after moving furniture one weekend.",Faithful,
+1,"The pain is a sharp stabbing pain in the back that radiates down to the right leg, even to the big toe.",Faithful,
+2,"He also experiences numbness and tingling in the right leg, especially in the foot.",Faithful,
+3,"He has difficulty getting comfortable, especially when sitting.",Faithful,
+4,The pain is exacerbated by lumbar flexion.,Faithful,
+5,"The patient denies any numbness or tingling in the genital or rectal area, weakness, loss of bladder or bowel control, or any family members with spine conditions.",Faithful,
+6,He is a former smoker who quit 20 years ago.,Faithful,
+7,"Past medical history: The patient has tried physical therapy and strong pain medications in the past, but with temporary relief.",Faithful,
+8,"Surgery was also mentioned as an option, which he wants to avoid.",Faithful,
+9,He has gained weight due to his limited mobility.,Faithful,
+10,"Review of systems: The patient reports that his day is affected by his back pain, which limits his activities, including playing golf, which he has recently taken up.",Faithful,
+11,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+12,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+13,"On musculoskeletal back exam, there is no overlying erythema or ecchymosis.",Faithful,
+14,There is midline tenderness at L4-L5 disk space with right-sided lumbar paravertebral tenderness.,Faithful,
+15,The patient experiences pain with lumbar flexion and a positive straight leg test.,Faithful,
+16,"On neurological examination, there is decreased sensation to light touch at the right lateral thigh at L4 dermatome.",Faithful,
+17,Patellar and Achilles reflexes are symmetrical.,Faithful,
+18,The patient's MRI results show disk herniation with nerve impingement.,Faithful,
+19,Assessment: The patient's symptoms are consistent with an L4-L5 herniated disk with radiculopathy.,Faithful,
+20,Problem list: Lumbar back pain; L4-L5 herniated disk with radiculopathy; Radiculopathy; Chronic back pain.,Faithful,
+21,"I recommended a spinal injection with a corticosteroid, specifically a corticosteroid injection into the lumbar spine under fluoroscopy.",Faithful,
+22,"The patient will be monitored for response to the injection, and the interval between injections will be determined based on individual response.",Faithful,
+23,The patient will not need to take any medication long-term.,Fabrication,The patient will not need to take any medication long-term
+24,Follow-up: The patient will return for a follow-up appointment to assess the effectiveness of the injection and to schedule the next one if necessary.,Faithful,

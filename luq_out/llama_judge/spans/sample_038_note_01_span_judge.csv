@@ -1,0 +1,20 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Jacqueline, presented with anxiety about recent blood work results indicating hepatitis C.",Faithful,
+1,"She reported feeling fine despite being diagnosed with hepatitis C and has a history of IV drug use 15 years ago, but has been clean since then.",Faithful,
+2,"She also reported a history of heavy alcohol use, smoking, and a family history of hypertension, diabetes, and depression.",Faithful,
+3,"Past medical history: The patient has a history of IV drug use, heavy alcohol use, and smoking.",Faithful,
+4,"She also has a family history of hypertension, diabetes, and depression.",Faithful,
+5,Review of systems: The patient reported feeling tired at the end of the day despite getting enough sleep.,Faithful,
+6,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+7,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+8,The patient appeared in no distress and no jaundice on skin exam.,Faithful,
+9,"The heart exam revealed a regular rate and rhythm with a 2/6 systolic murmur, which has not changed from last year.",Faithful,
+10,"The lungs were clear with no wheezes, rales, or rhonchi.",Faithful,
+11,"The abdomen was soft with no hepatosplenomegaly, and bowel sounds were present.",Faithful,
+12,The musculoskeletal exam was normal with no gait disturbance or edema.,Faithful,
+13,"The patient's recent blood work showed a positive HCV antibody test and an elevated AST of 39, but normal albumin and total bilirubin levels.",Faithful,
+14,"The patient has been diagnosed with hepatitis C, a viral infection that affects the liver, and initial labs are consistent with this diagnosis.",Faithful,
+15,Problem list: Hepatitis C; [Status: confirmed]; Family history of hypertension; Family history of diabetes; Family history of depression.,Faithful,
+16,"I would like to confirm the diagnosis with additional blood work, including checking the HCV RNA and HCV genotype, and determine the severity of liver disease by checking for fibrosis of the liver with an ultrasound.",Faithful,
+17,I will schedule an ultrasound and schedule follow-up appointments for the patient's family members for screening.,Faithful,
+18,I will see the patient in about three weeks to review the results of the additional blood work and ultrasound and determine the next steps in treatment.,Faithful,

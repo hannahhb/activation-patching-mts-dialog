@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient presents with a complaint of back pain and tingling sensation in the right leg, which started after raking leaves in the yard.",Faithful,
+1,"The patient reports that the pain was fine when they were raking leaves, but worsened after being indoors for 2 hours.",Faithful,
+2,"The patient has had similar pain in the past, which resolved on its own after a day.",Faithful,
+3,Past medical history: The patient reports a past episode of back pain 3 years ago that resolved on its own.,Faithful,
+4,"The patient's partner reports that the patient normally does not engage in physical activity, but has been doing yard work lately.",Causality,but has been doing yard work lately
+5,The patient and partner have a high pain tolerance and do not usually complain about pain.,Faithful,
+6,"Review of systems: The patient reports tingling sensation in the right leg, but no other symptoms in other organs.",Faithful,
+7,Current medications: [NOT MENTIONED],Fabrication,Current medications
+8,"Vital signs: Blood pressure, pulse rate, oxygen saturation, and temperature were not mentioned.",Fabrication,"Blood pressure, pulse rate, oxygen saturation, and temperature"
+9,"Physical exam: The patient has some pain on flexion, no pain on extension, and pain to palpation around the L5.",Faithful,
+10,The patient's partner reports that the patient's pain worsens when standing up.,Contextual,The patient's partner reports that the patient's pain worsens when standing up
+11,"The patient's dorsiflexion is normal, and pulses are equal in all extremities.",Faithful,
+12,Test Results: The patient had a normal x-ray of the low back.,Faithful,
+13,"Assessment: The patient likely sprained their low back, as evidenced by the normal x-ray and physical exam findings.",Faithful,
+14,Problem list: Lower back sprain; suspected muscle strain; confirmed lumbar pain; [NOT MENTIONED],Fabrication,suspected muscle strain; confirmed lumbar pain
+15,I prescribed meloxicam 7.5 mg PO q 12 hours for pain management.,Faithful,
+16,I also prescribed physical therapy to help with stretches and exercises to improve the patient's flexibility and strength.,Faithful,
+17,I want the patient to rest and avoid heavy lifting or bending for the next 2 weeks.,Causality,for the next 2 weeks
+18,"If the patient's symptoms do not improve, I will consider ordering an MRI.",Faithful,
+19,"The patient will follow up with me in 2 weeks to re-evaluate their symptoms and consider further testing, such as an MRI, if necessary.",Faithful,

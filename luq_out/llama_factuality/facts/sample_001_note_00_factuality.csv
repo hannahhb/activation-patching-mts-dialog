@@ -1,0 +1,48 @@
+fact_idx,section,fact,transcript_support,factuality_uncertainty
+0,subjective,The patient is a 50-year-old male.,0.0011,0.9989
+1,subjective,The patient presents with low back pain.,0.9973,0.0027
+2,subjective,The patient presents with a tingling sensation in his right leg.,0.9984,0.0016
+3,subjective,The low back pain started after raking leaves.,0.0059,0.9941
+4,subjective,The low back pain has a 2-hour history.,0.0068,0.9932
+5,subjective,The patient's pain did not improve with rest.,0.008,0.992
+6,subjective,The patient's pain did not improve with ice.,0.9572,0.0428
+7,subjective,The patient's pain did not improve with over-the-counter pain medication.,0.0064,0.9936
+8,subjective,The patient's pain is worse when standing up.,0.9963,0.0037
+9,subjective,The patient's pain is better when sitting.,0.5843,0.4157
+10,subjective,The patient's pain is better when lying down.,0.042,0.958
+11,subjective,The patient had a similar episode of back pain 3 years ago.,0.0008,0.9992
+12,subjective,The patient's previous episode of back pain resolved on its own.,0.0267,0.9733
+13,subjective,The patient reports a tingling sensation in his right leg.,0.9984,0.0016
+14,subjective,The patient's partner reports that the patient has pain when standing up.,0.9986,0.0014
+15,objective,The patient has pain on flexion.,0.9843,0.0157
+16,objective,The patient has pain on palpation.,0.9946,0.0054
+17,objective,The pain is located around the L5 region.,0.0108,0.9892
+18,objective,Dorsiflexion is normal.,0.9804,0.0196
+19,objective,Pulses are equal in all extremities.,0.974,0.026
+20,objective,An X-ray of the low back was performed.,0.9983,0.0017
+21,objective,The X-ray of the low back shows normal results.,0.4294,0.5706
+22,assessment,The patient has a probable strain of the low back.,0.9983,0.0017
+23,assessment,The patient has low back strain.,0.9928,0.0072
+24,assessment,The patient has suspected nerve compression.,0.1289,0.8711
+25,assessment,The patient has an unknown condition.,0.0095,0.9905
+26,plan,The doctor prescribed meloxicam.,0.992,0.008
+27,plan,The meloxicam dose is 7.5 mg.,0.1414,0.8586
+28,plan,Meloxicam is taken orally.,0.5691,0.4309
+29,plan,Meloxicam is taken twice a day.,0.5382,0.4618
+30,plan,Meloxicam is prescribed for pain.,0.9827,0.0173
+31,plan,Meloxicam is prescribed for inflammation.,0.3317,0.6683
+32,plan,The doctor prescribed physical therapy.,0.9964,0.0036
+33,plan,Physical therapy is for stretches.,0.6751,0.3249
+34,plan,Physical therapy is for exercises.,0.0362,0.9638
+35,plan,Physical therapy is to improve mobility.,0.0115,0.9885
+36,plan,Physical therapy is to reduce pain.,0.0101,0.9899
+37,plan,The patient was instructed to rest.,0.998,0.002
+38,plan,The patient was instructed to avoid strenuous activities.,0.1949,0.8051
+39,plan,The patient was instructed to avoid strenuous activities for two weeks.,0.028,0.972
+40,plan,The doctor will re-evaluate the patient in two weeks.,0.0039,0.9961
+41,plan,The doctor will consider ordering an MRI.,0.9592,0.0408
+42,plan,The doctor will consider ordering an MRI if symptoms do not improve.,0.9962,0.0038
+43,plan,The patient was instructed to follow up with the doctor in two weeks.,0.9974,0.0026
+44,plan,The follow-up is to re-evaluate symptoms.,0.8745,0.1255
+45,plan,The follow-up is to consider further imaging.,0.8588,0.1412
+46,plan,The follow-up is to consider further imaging if necessary.,0.9816,0.0184

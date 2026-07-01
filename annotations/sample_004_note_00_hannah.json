@@ -1,0 +1,160 @@
+{
+  "token_spans": [
+    {
+      "text": " a 38-year-old ",
+      "type": "num",
+      "severity": "3",
+      "char_start": 30,
+      "char_end": 45
+    }
+  ],
+  "sentence_labels": {
+    "0": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "1": {
+      "faithful": "Not Faithful",
+      "type": "Fabrication"
+    },
+    "2": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "3": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "4": {
+      "faithful": "Not Faithful",
+      "type": "Negation"
+    },
+    "5": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "6": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "7": {
+      "faithful": "Not Faithful",
+      "type": "Fabrication"
+    },
+    "8": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "9": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "10": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "11": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "12": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "13": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "14": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "15": {
+      "faithful": "Not Faithful",
+      "type": "Negation"
+    },
+    "16": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "17": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "18": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "19": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "20": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "21": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "22": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "23": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "24": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "25": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "26": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "27": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "28": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "29": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    }
+  },
+  "note_html": "Subjective:\n\nHPI: The patient,<span class=\"hl-num\" data-hl-type=\"num\" data-hl-sev=\"3\" data-char-start=\"30\" data-char-end=\"45\" title=\"num \u00b7 severity 3 [30:45]\"> a 38-year-old </span>male, presents with a non-healing wound on his right foot that has been present for approximately two to three weeks. The wound is described as a one by two inch circular lesion on the dorsal aspect of the lateral right foot, proximal to the right fifth metatarsophalangeal joint. The patient reports that he has been experiencing neuropathy and attributes the wound to a new pair of shoes that caused a blister. He denies any trauma to the foot and has not experienced any symptoms such as fever, chills, or drainage from the wound. He has completed a course of antibiotics prescribed by his primary care physician, but the wound has not shown significant improvement.\n\nPast Medical History: The patient has a history of diabetes, with an HbA1c level slightly above 8%. He has a history of neuropathy, but the exact duration is not specified. He has not mentioned any other past medical conditions, social history, or allergies.\n\nReview of Systems: The patient denies any other symptoms or concerns.\n\nCurrent Medications: [NOT MENTIONED]\n\nObjective:\n\nVital Signs: The patient's temperature is 98.1\u00b0F, heart rate is 72, respirations are 16, and blood pressure is 110/65.\n\nPhysical Exam: The examination of the right foot reveals a one by two inch circular wound on the dorsal aspect of the lateral right foot, with yellow slough and minimal granulation tissue. There is no surrounding erythema or cellulitis, and no evidence of fluid collection or necrosis. The vascular exam is unremarkable, with palpable bilateral femoral and popliteal pulses, but no palpable dorsalis pedis or posterior tibial pulses. Doppler signs are present.\n\nTest Results: The patient's right foot X-ray shows no evidence of osteomyelitis.\n\nAssessment / Problem List:\n\nAssessment: The patient presents with a diabetic foot ulcer that requires further evaluation and treatment to promote wound healing.\n\nProblem list: Diabetic foot ulcer; diabetes mellitus; neuropathy; unknown.\n\nPlan:\n\nI will order an Ankle Brachial Index (ABI) to determine the blood supply to the foot. I will perform a debridement in the office to remove dead tissue from the wound. I will prescribe collagenase ointment to be applied to the wound once daily, covered with a dry sterile dressing. The patient will wear a surgical shoe to alleviate pressure on the area. I will see the patient again in two weeks to assess the wound's progress. If the ABI indicates poor blood supply, I may refer the patient to a vascular specialist. I will also refer the patient to a diabetic specialist to discuss ways to manage his diabetes and lower his HbA1c level.\n\nFollow-up: The patient will be seen in two weeks to reassess the wound's progress."
+}

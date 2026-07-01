@@ -1,0 +1,66 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Stephanie Morales.,1.0,The patient's name is Stephanie Morales.,1,,entailment
+1,The patient is a 36-year-old female.,0.9873,The patient is 36 years old.,1,,entailment
+2,The patient presents with a complaint of ankle pain.,0.9773,The patient has ankle pain.,1,,entailment
+3,The patient slipped and twisted her left ankle two days ago.,0.9554,The patient slipped and fell two days ago.,1,,entailment
+4,The patient fell on ice.,0.9274,The patient has tried ice for pain.,0,fabrication,neutral
+5,The patient required assistance to get up after falling.,0.9672,The patient was able to get up after the fall.,1,,entailment
+6,The patient experienced significant soreness after falling.,0.9224,The patient slipped and fell two days ago.,0,fabrication,neutral
+7,The patient experienced swelling after falling.,0.9195,The patient slipped and fell two days ago.,0,fabrication,neutral
+8,The patient experienced pain after falling.,0.936,The patient slipped and fell two days ago.,0,fabrication,neutral
+9,The pain is localized to the outside of her ankle.,0.9813,The patient's pain is mostly on the outside of their ankle.,1,,entailment
+10,The patient has no pain in her calf.,0.9948,The patient does not have pain in their calf.,1,,entailment
+11,The patient has no pain in her lower leg.,0.9951,The patient does not have pain in their lower leg.,1,,entailment
+12,The patient has no pain in her knee.,0.9933,The patient does not have pain in their knee.,1,,entailment
+13,The patient has no tenderness in her calf.,0.9727,The patient does not have pain in their calf.,1,,entailment
+14,The patient has no tenderness in her lower leg.,0.9672,The patient does not have pain in their lower leg.,1,,entailment
+15,The patient has no tenderness in her knee.,0.9642,The patient does not have pain in their knee.,1,,entailment
+16,The patient tried ibuprofen for pain relief.,0.9946,The patient has tried ibuprofen for pain.,1,,entailment
+17,The patient tried ice for pain relief.,0.9919,The patient has tried ice for pain.,1,,entailment
+18,The patient tried elevation for pain relief.,0.9927,The patient has tried elevation for pain.,1,,entailment
+19,The patient has a history of diabetes.,1.0,The patient has a history of diabetes.,1,,entailment
+20,The patient has a history of high blood pressure.,1.0,The patient has a history of high blood pressure.,1,,entailment
+21,The patient is taking metformin.,0.988,The patient takes metformin.,1,,entailment
+22,The metformin dose is not specified.,0.9256,Metformin is prescribed for diabetes.,0,fabrication,neutral
+23,The metformin frequency is not specified.,0.923,Metformin is prescribed for diabetes.,0,fabrication,neutral
+24,Metformin is prescribed for diabetes.,1.0,Metformin is prescribed for diabetes.,1,,entailment
+25,The patient is taking norvasc.,0.9482,Norvasc is prescribed for high blood pressure.,1,,entailment
+26,The norvasc dose is not specified.,0.9441,Norvasc is prescribed for high blood pressure.,0,fabrication,neutral
+27,The norvasc frequency is not specified.,0.9323,Norvasc is prescribed for high blood pressure.,0,fabrication,neutral
+28,Norvasc is prescribed for high blood pressure.,1.0,Norvasc is prescribed for high blood pressure.,1,,entailment
+29,The patient's blood pressure is 120/70.,1.0,The patient's blood pressure is 120/70.,1,,entailment
+30,The patient's neck exam is normal.,0.966,The patient's neck exam is fine.,1,,entailment
+31,The patient's lung exam is normal.,0.9635,The patient's heart exam is normal.,1,,entailment
+32,The patient's heart exam is normal.,1.0,The patient's heart exam is normal.,1,,entailment
+33,The patient has a 2/6 systolic ejection murmur.,1.0,The patient has a 2/6 systolic ejection murmur.,1,,entailment
+34,The patient's belly exam is normal.,0.982,The patient's belly exam is good.,1,,entailment
+35,The patient has tenderness over the lateral malleolus.,1.0,The patient has tenderness over the lateral malleolus.,1,,entailment
+36,The patient has tenderness over the fifth metatarsal.,1.0,The patient has tenderness over the fifth metatarsal.,1,,entailment
+37,The patient has swelling in her ankle.,0.9822,The patient's ankle is swollen.,1,,entailment
+38,The patient has redness in her ankle.,0.9829,The patient has swelling and redness on their ankle.,1,,entailment
+39,The patient has pain with valgus stressing of her ankle.,0.999,The patient has pain with valgus stressing of their ankle.,1,,entailment
+40,The patient has normal sensation in her ankle.,0.9628,The patient has normal sensation.,1,,entailment
+41,The patient has normal pulses in her ankle.,0.9728,The patient has normal pulses.,1,,entailment
+42,The doctor diagnosed the patient with an ankle sprain.,1.0,The doctor diagnosed the patient with an ankle sprain.,1,,entailment
+43,The doctor is concerned about a possible fracture of the fifth metatarsal.,0.9499,The patient has tenderness over the fifth metatarsal.,0,fabrication,neutral
+44,The patient has a possible fracture of the fifth metatarsal.,0.9524,The patient has tenderness over the fifth metatarsal.,1,,entailment
+45,The doctor will order an x-ray of the ankle.,0.9848,The doctor ordered an x-ray of the patient's ankle.,1,,entailment
+46,The doctor will put the patient in an air splint.,0.9927,The doctor put the patient in an air splint.,1,,entailment
+47,The doctor will provide the patient with crutches.,0.9794,The doctor gave the patient crutches.,1,,entailment
+48,The doctor prescribed naprosyn.,1.0,The doctor prescribed naprosyn.,1,,entailment
+49,The naprosyn dose is 500mg.,0.9688,Naprosyn is 500 milligrams.,1,,entailment
+50,Naprosyn is taken twice a day.,1.0,Naprosyn is taken twice a day.,1,,entailment
+51,Naprosyn is prescribed for pain control.,1.0,Naprosyn is prescribed for pain control.,1,,entailment
+52,The doctor instructed the patient to keep her ankle elevated.,0.9872,The patient is instructed to keep their ankle elevated.,1,,entailment
+53,The doctor instructed the patient to apply ice.,0.9536,The patient is instructed to put ice on their ankle.,1,,entailment
+54,The doctor instructed the patient to avoid weightbearing.,0.9848,The patient is instructed to avoid weightbearing.,1,,entailment
+55,The doctor will refer the patient to orthopedics if the x-ray shows a fracture.,0.987,The patient will be sent to orthopedics if the x-ray shows a fracture.,1,,entailment
+56,The doctor will contact the patient once the x-ray results are available.,0.9486,The doctor will call the patient back if the x-ray shows a fracture.,1,,entailment
+57,The patient has a follow-up appointment with the ophthalmologist.,0.9657,The patient has an appointment with an ophthalmologist in the next couple of weeks.,1,,entailment
+58,The doctor will refill the patient's norvasc.,0.9807,The doctor refilled the patient's norvasc prescription.,1,,entailment
+59,The doctor will order another hemoglobin A1c.,0.9814,The doctor ordered another hemoglobin A1c test.,1,,entailment
+60,The hemoglobin A1c is to check the patient's blood sugar levels.,0.9582,The patient's hemoglobin A1c is 6.8.,1,,entailment
+61,The patient's problem list includes ankle sprain.,0.9469,The patient has ankle pain.,0,fabrication,neutral
+62,The patient's problem list includes possible fracture of the fifth metatarsal.,0.9495,The patient has tenderness over the fifth metatarsal.,0,fabrication,neutral
+63,The patient's problem list includes diabetes.,0.9397,The patient has a history of diabetes.,1,,entailment
+64,The patient's problem list includes high blood pressure.,0.9543,The patient has a history of high blood pressure.,1,,entailment

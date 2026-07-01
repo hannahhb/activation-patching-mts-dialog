@@ -1,0 +1,62 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient presents with a 2-week history of right shoulder pain.,0.9826,The right shoulder pain has lasted a few weeks.,1,,entailment
+1,The patient's right shoulder pain is initially exacerbated by work projects in the backyard.,0.9575,The patient was doing work in his backyard when the pain started.,1,,entailment
+2,The patient's right shoulder pain is exacerbated by lifting.,0.9578,The patient's right shoulder pain is tender when he raises his arm.,1,,entailment
+3,The patient's right shoulder pain is exacerbated by physical activity.,0.964,Physical therapy is for the patient's right shoulder pain.,1,,entailment
+4,The pain is located on the outside of the shoulder.,0.9694,The patient's right shoulder pain is on the outside.,1,,entailment
+5,The pain is more tender to the touch when raising the arm.,0.9599,The patient's right shoulder pain is tender when he raises his arm.,1,,entailment
+6,The patient reports no restriction in arm movement.,0.9781,The patient has no restriction in moving his arm.,1,,entailment
+7,The patient experiences pain with movement.,0.9477,The patient has pain in his right shoulder when he moves it.,1,,entailment
+8,The patient experiences pain at night when sleeping on the affected side.,0.9546,The patient has pain in his right shoulder at night.,1,,entailment
+9,The patient has taken Advil.,0.9521,The patient has been taking Advil for pain.,1,,entailment
+10,The Advil dose is not specified.,0.8989,The patient has been taking Advil for pain.,0,fabrication,neutral
+11,Advil is taken for pain.,0.9768,The patient has been taking Advil for pain.,1,,entailment
+12,The patient has applied ice.,0.9232,The patient has been putting ice on his feet and keeping them elevated.,1,,entailment
+13,The patient applied ice to alleviate symptoms.,0.9163,The patient has been putting ice on his feet and keeping them elevated.,1,,entailment
+14,The patient has a history of occasional shoulder pain.,0.9437,The patient has right shoulder pain.,0,fabrication,neutral
+15,The patient's history of shoulder pain is particularly on the right side.,0.9731,The patient has right shoulder pain.,1,,entailment
+16,The patient's shoulder pain dates back to a childhood injury.,0.9201,The patient has right shoulder pain.,0,fabrication,neutral
+17,The childhood injury was from playing baseball.,0.911,The patient used to play baseball.,0,fabrication,neutral
+18,The patient reports no numbness in the arm.,0.9802,The patient has not experienced numbness in his arm or hands.,1,,entailment
+19,The patient reports no numbness in the hands.,0.9804,The patient has not experienced numbness in his arm or hands.,1,,entailment
+20,The patient is taking Advil.,0.9557,The patient has been taking Advil for pain.,1,,entailment
+21,The Advil dose is not specified.,0.8989,The patient has been taking Advil for pain.,0,fabrication,neutral
+22,Advil is taken for pain.,0.9768,The patient has been taking Advil for pain.,1,,entailment
+23,The patient's temperature is 97.8°F.,0.9319,The patient's heart rate is 62.,0,fabrication,neutral
+24,The patient's heart rate is 62.,1.0,The patient's heart rate is 62.,1,,entailment
+25,The patient's respirations are 16.,1.0,The patient's respirations are 16.,1,,entailment
+26,The patient's blood pressure is 116/84.,0.9911,The patient's blood pressure is 116 over 84.,1,,entailment
+27,The patient's oxygen saturation is 99%.,0.9964,The patient's oxygen saturation is 99 percent.,1,,entailment
+28,The patient has limited active range of motion in the right shoulder.,0.9956,The patient has limited active and passive range of motion in his right shoulder.,1,,entailment
+29,The patient has limited passive range of motion in the right shoulder.,0.9954,The patient has limited active and passive range of motion in his right shoulder.,1,,entailment
+30,The patient has tenderness at the greater tuberosity of the humerus.,0.9901,The patient has tenderness at the great tuberosity of the humerus.,1,,entailment
+31,The patient has no tenderness at the sternoclavicular joint.,0.9836,The patient has no tenderness at the sternoclavicular or acromioclavicular joints.,1,,entailment
+32,The patient has no tenderness at the acromioclavicular joint.,0.9846,The patient has no tenderness at the sternoclavicular or acromioclavicular joints.,1,,entailment
+33,The patient has a good hand grip.,1.0,The patient has a good hand grip.,1,,entailment
+34,The patient's capillary refill is less than 3 seconds.,0.9982,The patient's capillary refill is less than three seconds.,1,,entailment
+35,The patient's sensation to touch is intact.,1.0,The patient's sensation to touch is intact.,1,,entailment
+36,The patient's shoulder x-ray shows no fracture.,1.0,The patient's shoulder x-ray shows no fracture.,1,,entailment
+37,The patient's symptoms are most likely due to rotator cuff tendinopathy.,0.9722,Rotator cuff tendinopathy is the cause of the patient's right shoulder pain.,1,,entailment
+38,Rotator cuff tendinopathy is an injury to the tendons of the muscles that help make the shoulder muscles.,0.9683,Rotator cuff tendinopathy is the cause of the patient's right shoulder pain.,1,,entailment
+39,The patient has rotator cuff tendinopathy.,1.0,The patient has rotator cuff tendinopathy.,1,,entailment
+40,The patient's rotator cuff tendinopathy is active.,0.9555,The patient has rotator cuff tendinopathy.,1,,entailment
+41,The patient's rotator cuff tendinopathy is suspected.,0.9724,The patient has rotator cuff tendinopathy.,1,,entailment
+42,The patient has past shoulder pain.,0.9428,The patient has been icing his shoulder for pain.,1,,entailment
+43,The patient's past shoulder pain is active.,0.9343,The patient's right shoulder pain is tender when he raises his arm.,1,,entailment
+44,The patient's past shoulder pain is suspected.,0.9246,The patient has a history of hurting his right shoulder playing baseball.,1,,entailment
+45,The doctor prescribed Advil.,0.9426,The patient has been taking Advil for pain.,0,fabrication,neutral
+46,The Advil dose is not specified.,0.8989,The patient has been taking Advil for pain.,0,fabrication,neutral
+47,Advil is taken as needed.,0.9233,The patient has been taking Advil for pain.,0,fabrication,neutral
+48,Advil is prescribed for pain relief.,0.9738,Advil helps the patient's pain a little bit.,1,,entailment
+49,The doctor ordered an MRI.,0.9593,The doctor ordered an MRI for the patient's right shoulder.,1,,entailment
+50,The MRI is to further evaluate the patient's shoulder.,0.9626,The doctor ordered an MRI for the patient's right shoulder.,1,,entailment
+51,The doctor referred the patient to physical therapy.,1.0,The doctor referred the patient to physical therapy.,1,,entailment
+52,The patient will attend physical therapy for approximately 6-8 weeks.,0.9991,The patient will attend physical therapy for approximately six to eight weeks.,1,,entailment
+53,The doctor advised the patient to continue taking Tylenol.,0.9783,The patient will continue taking Tylenol.,1,,entailment
+54,The doctor considered a steroid injection.,0.9488,The doctor will consider a steroid injection if the patient's symptoms do not improve.,1,,entailment
+55,The steroid injection is for if symptoms do not improve.,0.9797,The doctor will consider a steroid injection if the patient's symptoms do not improve.,1,,entailment
+56,The doctor recommended soaking the patient's feet in Epsom salts.,0.9741,The doctor suggested Epsom salts for the patient's sore feet.,1,,entailment
+57,Soaking the patient's feet in Epsom salts is to alleviate foot and ankle soreness.,0.9768,Epsom salts are to help the patient's sore feet.,1,,entailment
+58,The patient will follow up with the doctor in approximately 6-8 weeks.,0.9441,The patient will attend physical therapy for approximately six to eight weeks.,0,fabrication,neutral
+59,The follow-up is to reassess symptoms.,0.8979,The doctor will consider a steroid injection if the patient's symptoms do not improve.,0,fabrication,neutral
+60,The follow-up is to assess progress with physical therapy.,0.9255,The patient will attend physical therapy for approximately six to eight weeks.,0,fabrication,neutral

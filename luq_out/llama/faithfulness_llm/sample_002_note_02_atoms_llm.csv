@@ -1,0 +1,84 @@
+sentence_idx,atom_idx,atom,supported,uncertainty
+2,0,The patient's name is Gregory.,1,0
+2,1,The patient is 2 months old.,0,1
+2,2,The patient has a foot ulcer.,1,0
+2,3,The foot ulcer is located on the dorsal aspect of the foot.,1,0
+2,4,The foot ulcer is on the lateral right foot.,1,0
+2,5,The foot ulcer is nonhealing.,1,0
+2,6,The foot ulcer has recently become red.,1,0
+2,7,The foot ulcer is draining.,1,0
+3,0,He reports that the wound throbs occasionally.,1,0
+3,1,He does not have specific pain.,1,0
+4,0,He has a concern.,1,0
+4,1,The concern is his biggest concern.,1,0
+4,2,The concern is about the redness.,1,0
+4,3,The concern is about the drainage.,1,0
+5,0,He mentions that he got the wound from walking barefoot on the beach.,1,0
+5,1,He got the wound from walking barefoot on the beach.,1,0
+5,2,He walked barefoot on the beach.,1,0
+5,3,The incident occurred at Dewey Beach.,1,0
+5,4,He got a wound.,1,0
+6,0,The patient has diabetes.,1,0
+6,1,The patient takes medication for his diabetes.,1,0
+6,2,The patient does not regularly check his blood sugar levels.,1,0
+7,0,His last A1c is around 10%.,1,0
+7,1,An A1c of around 10% is considered high.,1,0
+8,0,He has not seen his PCP in a while.,0,1
+8,1,He has a PCP.,1,0
+8,2,He was prescribed antibiotics.,1,0
+8,3,He has not filled his prescribed antibiotics.,1,0
+9,0,The patient has undergone a review of systems.,0,1
+9,1,The patient reports pain in the affected foot.,1,0
+9,2,The pain in the affected foot is throbbing.,1,0
+9,3,The pain in the affected foot is occasional.,1,0
+10,0,The sentence does not provide any information about current medications.,1,0
+10,1,There is no list of current medications mentioned.,1,0
+12,0,The patient has vital signs.,1,0
+12,1,The patient's vital signs are normal.,1,0
+12,2,The patient has no fever.,1,0
+13,0,A physical exam was performed.,1,0
+13,1,The physical exam revealed a wound on the right foot.,1,0
+13,2,The wound is located on the dorsal aspect of the lateral right foot.,1,0
+13,3,The wound is proximal to the fifth MTP joint.,1,0
+13,4,The wound is circular in shape.,1,0
+13,5,The wound measures 1x2 inches in size.,1,0
+13,6,Redness is present around the wound.,1,0
+13,7,Drainage is present from the wound.,1,0
+13,8,Edema is present around the wound.,1,0
+13,9,Fluid is present around the wound.,1,0
+14,0,The patient reports increased pressure when the wound is touched.,1,0
+14,1,The patient does not report distinct pain when the wound is touched.,1,0
+15,0,An X-ray was taken of the right foot.,1,0
+15,1,The X-ray was examined for evidence of osteomyelitis.,1,0
+15,2,No evidence of osteomyelitis was found on the X-ray.,1,0
+17,0,The patient has a diabetic foot ulcer.,1,0
+17,1,The patient has a suspected infection.,1,0
+18,0,The patient has a diabetic foot ulcer.,1,0
+18,1,The patient is suspected of having an infection.,1,0
+18,2,The patient has uncontrolled diabetes.,1,0
+18,3,The patient has received poor wound care.,0,1
+18,4,The patient has lacked follow-up with their primary care physician.,0,1
+20,0,I prescribed clindamycin.,1,0
+20,1,The dosage of clindamycin prescribed was 400mg.,1,0
+20,2,Clindamycin was prescribed to be taken twice daily.,1,0
+20,3,The treatment duration was 7 days.,1,0
+20,4,The purpose of the prescription was to treat an infection.,1,0
+20,5,The infection being treated was suspected.,1,0
+21,0,I will perform a procedure.,1,0
+21,1,The procedure is a debridement.,1,0
+21,2,The purpose of the debridement is to remove dead tissue.,1,0
+21,3,The dead tissue is located in a wound.,1,0
+22,0,I will order an ABI.,1,0
+22,1,An ABI is used to determine the blood supply to the foot.,1,0
+23,0,The patient has an affected foot.,1,0
+23,1,The patient needs to reduce pressure on the affected foot.,1,0
+23,2,A surgical shoe can reduce pressure on the foot.,1,0
+23,3,The patient will need to wear a surgical shoe.,1,0
+24,0,I will see the patient back in 2 weeks.,1,0
+24,1,The purpose of the follow-up is for follow-up.,0,1
+24,2,The purpose of the follow-up may also include possible repeat debridement.,1,0
+24,3,The patient is scheduled for a follow-up.,1,0
+25,0,The patient will be seen for follow-up.,1,0
+25,1,The follow-up will occur in 2 weeks.,1,0
+25,2,The patient may require a repeat debridement.,1,0
+25,3,"The repeat debridement, if necessary, will occur at the follow-up appointment.",1,0

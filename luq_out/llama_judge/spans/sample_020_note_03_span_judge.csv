@@ -1,0 +1,25 @@
+sentence_idx,sentence,label,note_span
+0,HPI: The patient presents with a history of a knee injury sustained while skiing in Vermont last weekend.,Faithful,
+1,She reports that her knee popped and has been painful ever since.,Faithful,
+2,She was unable to bear weight and had to be taken down the mountain by the ski patrol.,Faithful,
+3,The patient describes pain on the outside of her knee and a feeling that it won't hold her weight.,Faithful,
+4,She is unable to bend her knee fully and experiences pain with straightening.,Faithful,
+5,She denies numbness or tingling in her toes and is able to feel her toes.,Faithful,
+6,She is generally healthy and denies any high blood pressure or diabetes.,Faithful,
+7,The patient has twins and is a stay-at-home mom.,Causality,is a stay-at-home mom
+8,Past medical history: [NOT MENTIONED],Faithful,
+9,Review of systems: [NOT MENTIONED],Faithful,
+10,Current medications: I prescribed ibuprofen 600-800mg every 8 hours as needed for pain.,Contextual,I prescribed
+11,Vital signs: [NOT MENTIONED],Faithful,
+12,The examination of the right knee reveals edema and an effusion.,Faithful,
+13,"There is pain to palpation of the right lateral knee, decreased flexion, and extension.",Faithful,
+14,The Lachman sign is positive.,Faithful,
+15,"The dorsalis pedis and posterior tibial pulses are palpable, and there is no leg edema in the ankle.",Faithful,
+16,Test Results: [NOT MENTIONED],Faithful,
+17,"Assessment: The patient likely has a ruptured anterior cruciate ligament (ACL) in her right knee, which is confirmed by the physical exam.",Faithful,
+18,Problem list: ACL rupture; right knee pain; right knee edema; right knee effusion.,Faithful,
+19,I ordered a knee MRI to confirm the diagnosis.,Contextual,I ordered
+20,I instructed the patient to continue taking ibuprofen 600-800mg every 8 hours as needed for pain.,Contextual,I instructed
+21,I recommended a knee brace to provide additional support.,Contextual,I recommended
+22,I scheduled a follow-up appointment to discuss the results of the MRI and determine the next steps in treatment.,Contextual,I scheduled
+23,The patient will return in a few days for a follow-up appointment to discuss the MRI results and determine the next steps in treatment.,Causality,in a few days

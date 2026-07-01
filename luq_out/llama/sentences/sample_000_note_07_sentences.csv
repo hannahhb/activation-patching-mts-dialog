@@ -1,26 +1,26 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, Charles, a 38-year-old male, presented with a 2-year history of shortness of breath, which he describes as catching his breath a lot more than he used to.",0.9992
-2,He mentions that he considers himself to be pretty healthy but has noticed that his breathing has changed since moving to the city two years ago.,0.9878
-3,"He reports that he gets shortness of breath suddenly, without any clear reason, and has had this symptom for an unknown duration.",0.583
-4,"Past medical history: The patient has a history of heavy drinking, which results in diarrhea after consuming alcohol.",0.7036
-5,"He also has a dog that gets eye discharge, and he gets eye discharge himself, which he attributes to allergies.",0.9822
-6,He has never had any issues with allergies in the past.,0.9778
-7,Review of systems: The patient reports that his shortness of breath is his only current symptom.,0.8063
-8,"He denies having any other symptoms such as a rash, nausea, vomiting, lip or throat swelling, or eye discharge when he is near his cat.",0.9014
-9,Current medications: The patient is currently using an albuterol inhaler prescribed by the urgent care for his shortness of breath.,0.8115
+1,"HPI: The patient, Charles, a 38-year-old male, presented with a 2-year history of shortness of breath, which he describes as catching his breath a lot more than he used to.",0.3562
+2,He mentions that he considers himself to be pretty healthy but has noticed that his breathing has changed since moving to the city two years ago.,0.396
+3,"He reports that he gets shortness of breath suddenly, without any clear reason, and has had this symptom for an unknown duration.",0.151
+4,"Past medical history: The patient has a history of heavy drinking, which results in diarrhea after consuming alcohol.",0.391
+5,"He also has a dog that gets eye discharge, and he gets eye discharge himself, which he attributes to allergies.",0.6539
+6,He has never had any issues with allergies in the past.,0.6757
+7,Review of systems: The patient reports that his shortness of breath is his only current symptom.,0.2936
+8,"He denies having any other symptoms such as a rash, nausea, vomiting, lip or throat swelling, or eye discharge when he is near his cat.",0.4375
+9,Current medications: The patient is currently using an albuterol inhaler prescribed by the urgent care for his shortness of breath.,0.1484
 10,Objective:,0.5
-11,"Vital signs: The patient's pulse is normal, and his pulse oximetry is normal.",0.1282
-12,He does not appear to be in any distress.,0.508
-13,"Physical exam: The patient does not have any rash, angioedema, or audible stridor.",0.1197
-14,He has faint expiratory wheezing bilaterally in all lung fields.,0.1033
-15,Test Results: The patient's chest X-ray and pulmonary function test were both normal.,0.0194
+11,"Vital signs: The patient's pulse is normal, and his pulse oximetry is normal.",0.0126
+12,He does not appear to be in any distress.,0.0099
+13,"Physical exam: The patient does not have any rash, angioedema, or audible stridor.",0.0186
+14,He has faint expiratory wheezing bilaterally in all lung fields.,0.0008
+15,Test Results: The patient's chest X-ray and pulmonary function test were both normal.,0.0013
 16,Assessment / Problem List:,0.5
-17,Assessment: The patient has newly diagnosed allergic asthma.,0.0056
-18,Problem list: Allergic asthma; Asthma symptoms; Normal chest X-ray; Normal pulmonary function test.,0.7578
+17,Assessment: The patient has newly diagnosed allergic asthma.,0.0002
+18,Problem list: Allergic asthma; Asthma symptoms; Normal chest X-ray; Normal pulmonary function test.,0.5811
 19,Plan:,0.5
-20,I prescribed albuterol inhaler as before for asthma symptoms.,0.2219
-21,I also prescribed Singulair 10mg once daily to help decrease the occurrences of asthma.,0.3281
-22,"I will proceed with allergy testing, starting with skin testing to target the triggers of his asthma.",0.1674
-23,"If the skin testing does not identify the triggers, we will discuss further testing in his blood and consider immunotherapy.",0.7781
-24,Follow-up: I would like to see the patient next week to schedule the skin testing.,0.0348
+20,I prescribed albuterol inhaler as before for asthma symptoms.,0.1304
+21,I also prescribed Singulair 10mg once daily to help decrease the occurrences of asthma.,0.1662
+22,"I will proceed with allergy testing, starting with skin testing to target the triggers of his asthma.",0.0048
+23,"If the skin testing does not identify the triggers, we will discuss further testing in his blood and consider immunotherapy.",0.5779
+24,Follow-up: I would like to see the patient next week to schedule the skin testing.,0.0017

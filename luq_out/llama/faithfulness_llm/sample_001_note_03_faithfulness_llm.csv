@@ -1,0 +1,24 @@
+sentence_idx,sentence,supported,uncertainty,atom_faithfulness
+0,Subjective:,1,0,1.0
+1,"HPI: The patient, a 47-year-old male, presents with a 2-hour history of lower back pain and numbness in the right foot, which began after raking leaves in the yard.",1,0,0.8333
+2,He reports that the pain worsened when standing up.,1,0,0.6667
+3,"He denies any previous similar episodes, except for one 3-year-old episode that resolved within a day.",1,0,0.75
+4,"He tried icing and taking 2 Advil, but it did not provide relief.",1,0,1.0
+5,"His partner reports that the patient's pain worsens when standing up, but not when bending over.",1,0,0.8
+6,Past Medical History: [NOT MENTIONED],0,1,0.0
+7,Review of Systems: [NOT MENTIONED],0,1,0.5
+8,Current Medications: [NOT MENTIONED],1,0,0.5
+9,Objective:,1,0,1.0
+10,Vital Signs: [NOT MENTIONED],0,1,0.3333
+11,Physical Exam: The patient has some pain on flexion of the low back and tenderness to palpation around the L5 area.,1,0,1.0
+12,"Dorsiflexion is normal, and pulses are equal in all extremities.",1,0,1.0
+13,Test Results: The patient had a normal X-ray of the low back.,1,0,1.0
+14,Assessment / Problem List:,1,0,1.0
+15,Assessment: The patient likely sprained his low back.,1,0,1.0
+16,Problem list: Low back sprain; [Condition] [Status: active]; [Condition] [Status: active],1,0,0.6667
+17,Plan:,1,0,1.0
+18,I prescribed meloxicam 7.5mg PO QD for pain management.,1,0,0.6
+19,I also prescribed physical therapy to help improve mobility and strength.,1,0,0.6667
+20,I want the patient to rest the affected area and follow up with me in two weeks to reassess the condition.,1,0,0.8333
+21,"If the pain persists, we will consider ordering an MRI.",1,0,1.0
+22,Follow-up: I want the patient to follow up with me in two weeks to reassess the condition and consider further imaging if necessary.,1,0,0.8

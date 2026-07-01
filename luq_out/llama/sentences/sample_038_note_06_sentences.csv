@@ -1,29 +1,29 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, a 38-year-old female, presents with anxiety regarding recent blood work showing hepatitis C.",0.8905
-2,She reports being surprised by the diagnosis as she has been feeling fine.,0.1843
-3,"She denies any previous knowledge of having hepatitis C and reports a history of IV drug use in the past, which she has been clean from for over 15 years.",0.3306
-4,"She also reports a history of excessive alcohol use, currently consuming about 1 beer per day and slightly more on weekends.",0.9993
-5,"She admits to smoking, having decreased her intake from 1-2 packs per day to 1-2 cigarettes per day.",0.4617
-6,"She reports being tired at the end of the day, despite getting enough sleep, and attributes this to her work schedule.",0.9991
-7,"She has a family history of hypertension, diabetes, and depression.",0.0518
-8,"Past medical history: The patient reports a physical examination by her primary care physician (PCP) 6 months ago, which showed no other conditions.",0.9922
-9,Review of systems: The patient reports no other symptoms.,0.4681
+1,"HPI: The patient, a 38-year-old female, presents with anxiety regarding recent blood work showing hepatitis C.",0.3133
+2,She reports being surprised by the diagnosis as she has been feeling fine.,0.1544
+3,"She denies any previous knowledge of having hepatitis C and reports a history of IV drug use in the past, which she has been clean from for over 15 years.",0.2533
+4,"She also reports a history of excessive alcohol use, currently consuming about 1 beer per day and slightly more on weekends.",0.2253
+5,"She admits to smoking, having decreased her intake from 1-2 packs per day to 1-2 cigarettes per day.",0.1578
+6,"She reports being tired at the end of the day, despite getting enough sleep, and attributes this to her work schedule.",0.4046
+7,"She has a family history of hypertension, diabetes, and depression.",0.001
+8,"Past medical history: The patient reports a physical examination by her primary care physician (PCP) 6 months ago, which showed no other conditions.",0.5135
+9,Review of systems: The patient reports no other symptoms.,0.3437
 10,Current medications: [NOT MENTIONED],0.5
 11,Objective:,0.5
 12,Vital signs: [NOT MENTIONED],0.5
-13,Physical exam: The patient appears in no distress and no jaundice on skin exam.,0.0366
-14,"The heart exam shows a regular rate and rhythm with a 2/6 systolic murmur, which has not changed from last year.",0.0181
-15,"The lungs are clear with no wheezes, rales, or rhonchi.",0.1276
-16,The abdomen is soft with no hepatosplenomegaly.,0.5219
-17,"The musculoskeletal exam is normal, with no gait disturbance or edema.",0.3455
-18,"Test Results: The patient's HCV antibody test is positive, and her liver panel shows an elevated AST of 39, but normal albumin and total bilirubin levels.",0.0289
+13,Physical exam: The patient appears in no distress and no jaundice on skin exam.,0.0038
+14,"The heart exam shows a regular rate and rhythm with a 2/6 systolic murmur, which has not changed from last year.",0.002
+15,"The lungs are clear with no wheezes, rales, or rhonchi.",0.0373
+16,The abdomen is soft with no hepatosplenomegaly.,0.1263
+17,"The musculoskeletal exam is normal, with no gait disturbance or edema.",0.0092
+18,"Test Results: The patient's HCV antibody test is positive, and her liver panel shows an elevated AST of 39, but normal albumin and total bilirubin levels.",0.0014
 19,Assessment / Problem List:,0.5
-20,"Assessment: The patient has a confirmed diagnosis of hepatitis C, with initial labs consistent with the infection.",0.7777
-21,Problem list: Hepatitis C; Suspected liver fibrosis.,0.9936
+20,"Assessment: The patient has a confirmed diagnosis of hepatitis C, with initial labs consistent with the infection.",0.0705
+21,Problem list: Hepatitis C; Suspected liver fibrosis.,0.5966
 22,Plan:,0.5
-23,I prescribed a liver ultrasound to determine the severity of the patient's liver disease and an HCV RNA test to confirm the diagnosis.,0.0022
-24,I also recommended that the patient's family members undergo the same screening as the patient.,0.4472
-25,The patient will be scheduled for follow-up in 3 weeks.,0.4466
+23,I prescribed a liver ultrasound to determine the severity of the patient's liver disease and an HCV RNA test to confirm the diagnosis.,0.0001
+24,I also recommended that the patient's family members undergo the same screening as the patient.,0.1406
+25,The patient will be scheduled for follow-up in 3 weeks.,0.2758
 26,Follow-up:,0.5
-27,The patient will be seen in 3 weeks for follow-up and to discuss the results of the liver ultrasound and HCV RNA test.,0.9998
+27,The patient will be seen in 3 weeks for follow-up and to discuss the results of the liver ultrasound and HCV RNA test.,0.0225

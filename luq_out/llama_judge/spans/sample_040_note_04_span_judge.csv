@@ -1,0 +1,20 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient presents with a 2-hour history of worsening low back pain and tingling sensation in the right foot, which began after raking leaves in the yard.",Faithful,
+1,He reports that the pain is exacerbated by standing and improves with rest and a hot shower.,Causality,exacerbated by standing
+2,He denies taking any medication for the pain prior to presentation.,Negation,denies taking any medication
+3,He has a past history of similar back pain 3 years ago that resolved within a day.,Faithful,
+4,"His partner reports similar symptoms, with pain upon standing but not bending over.",Contextual,similar symptoms
+5,"The patient's partner also reports that the patient's pain tolerance is high, and he would not typically report pain unless it was significant.",Faithful,
+6,Past medical history: Not mentioned.,Faithful,
+7,Review of systems: The patient reports tingling sensation in the right leg.,Faithful,
+8,Current medications: None mentioned.,Faithful,
+9,Vital signs: Not mentioned.,Faithful,
+10,Physical exam: The patient has some pain to palpation around the L5 region.,Faithful,
+11,He has normal dorsiflexion and equal pulses in all extremities.,Faithful,
+12,Test Results: The patient had a normal x-ray of the low back.,Faithful,
+13,"Assessment: The patient has acute low back strain, likely due to raking leaves, with radicular symptoms in the right leg.",Faithful,
+14,Problem list: Low back strain; Radicular pain; [Unknown].,Fabrication,[Unknown]
+15,I prescribed meloxicam 7.5 mg PO BID for pain management.,Faithful,
+16,I also prescribed physical therapy to help improve flexibility and strength in the low back and alleviate pain.,Faithful,
+17,"The patient will follow up with me in two weeks to reassess symptoms and consider further imaging, such as an MRI, if the symptoms do not improve.",Faithful,
+18,Follow-up: The patient will follow up with me in two weeks to reassess symptoms.,Faithful,

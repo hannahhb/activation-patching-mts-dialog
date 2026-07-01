@@ -1,0 +1,56 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Angela.,1.0,The patient's name is Angela.,1,,entailment
+1,The patient has a history of recurrent kidney stones.,0.965,The patient has a past medical history of kidney stones.,1,,entailment
+2,The patient has had 7 or 8 episodes of kidney stones.,0.9637,The patient thinks they have had seven or eight kidney stones.,1,,entailment
+3,The patient believes she has passed the current kidney stone.,0.9695,The patient thinks the kidney stone passed.,1,,entailment
+4,The patient's symptoms have resolved over the past 3 days.,0.9275,The patient went to the emergency room last week.,0,fabrication,neutral
+5,The patient reports no current pain.,0.9585,The patient no longer has pain.,1,,entailment
+6,The patient reports no blood in her urine.,0.9715,The patient no longer has blood in their urine.,1,,entailment
+7,The patient has a past medical history of hypertension.,1.0,The patient has a past medical history of hypertension.,1,,entailment
+8,The patient has a past medical history of diabetes.,0.9918,The patient has a history of diabetes.,1,,entailment
+9,The patient's current blood pressure reading is 150/90.,0.974,The patient's blood pressure was 150 over 90.,1,,entailment
+10,The patient's past blood pressure reading was 180/90.,0.9712,The patient's blood pressure was 150 over 90.,1,,entailment
+11,The patient is taking norvasc.,0.9883,The patient has been taking norvasc regularly.,1,,entailment
+12,The norvasc dose is 2.5mg.,0.9945,The norvasc dose is 2.5.,1,,entailment
+13,Norvasc is taken daily.,0.9615,The patient has been taking norvasc regularly.,1,,entailment
+14,Norvasc is prescribed for hypertension.,1.0,Norvasc is prescribed for hypertension.,1,,entailment
+15,The patient is taking metformin.,0.9909,The patient is on metformin.,1,,entailment
+16,The metformin dose is 500mg.,0.9937,The metformin dose is 500 milligrams.,1,,entailment
+17,Metformin is taken daily.,1.0,Metformin is taken daily.,1,,entailment
+18,Metformin is prescribed for diabetes.,1.0,Metformin is prescribed for diabetes.,1,,entailment
+19,The patient's diet is high in fast food and processed foods.,0.9691,The patient's diet includes fast food and sweets.,1,,entailment
+20,The patient is struggling to change her diet.,0.924,The patient has trouble giving up fast food.,1,,entailment
+21,The patient reports occasional insomnia.,0.9733,The patient has insomnia.,1,,entailment
+22,The patient manages insomnia with meditation.,0.9627,The patient has tried meditation apps to help with insomnia.,1,,entailment
+23,The patient manages insomnia with a sleep app.,0.9537,The patient has tried meditation apps to help with insomnia.,1,,entailment
+24,The patient denies current chest pain.,0.9539,The patient does not have chest pain.,1,,entailment
+25,The patient denies belly pain.,0.9646,The patient does not have belly pain.,1,,entailment
+26,The patient denies other symptoms.,0.9095,The patient no longer has pain.,0,fabrication,neutral
+27,The patient's blood pressure is 150/90.,0.991,The patient's blood pressure was 150 over 90.,1,,entailment
+28,The patient's lungs are clear bilaterally.,0.9756,The patient's lungs are clear.,1,,entailment
+29,The patient has a grade 2/6 systolic ejection murmur.,0.9974,The patient has a grade 2 out of 6 systolic ejection murmur.,1,,entailment
+30,The patient has no tenderness to palpation of the abdomen.,0.9639,The patient's abdomen is not tender.,1,,entailment
+31,The patient has no tenderness to palpation of the CVA.,0.9164,The patient's abdomen is not tender.,0,fabrication,neutral
+32,The patient has a history of recurrent kidney stones.,0.965,The patient has a past medical history of kidney stones.,1,,entailment
+33,The patient has hypertension.,0.9664,The patient has a past medical history of hypertension.,1,,entailment
+34,The patient's hypertension is well-controlled on norvasc 2.5mg daily.,0.9655,Norvasc is prescribed for hypertension.,1,,entailment
+35,The patient has diabetes.,0.9713,The patient has a history of diabetes.,1,,entailment
+36,The patient's diabetes is well-controlled on metformin 500mg daily.,0.9632,The metformin dose is 500 milligrams.,1,,entailment
+37,The patient has insomnia.,1.0,The patient has insomnia.,1,,entailment
+38,The doctor prescribed metformin.,0.9646,Metformin is prescribed for diabetes.,1,,entailment
+39,The metformin dose is 500mg.,0.9937,The metformin dose is 500 milligrams.,1,,entailment
+40,Metformin is taken daily.,1.0,Metformin is taken daily.,1,,entailment
+41,Metformin is prescribed for diabetes.,1.0,Metformin is prescribed for diabetes.,1,,entailment
+42,The patient was referred to a urologist.,0.9597,The doctor wants to give the patient a referral to urology.,1,,entailment
+43,The urologist referral is for evaluation of recurrent kidney stones.,0.9405,The doctor wants to give the patient a referral to urology.,0,fabrication,neutral
+44,The patient was given a consult to nutrition.,0.9711,The doctor wants to give the patient a consult to nutrition.,1,,entailment
+45,The nutrition consult is for diet modification.,0.9347,The doctor wants to give the patient a consult to nutrition.,0,fabrication,neutral
+46,The patient's daily sodium intake goal is 2300mg or less.,0.9169,The patient's home blood pressure readings are usually 130 to 140 over 60 to 70.,0,fabrication,neutral
+47,The doctor prescribed melatonin.,1.0,The doctor prescribed melatonin.,1,,entailment
+48,The melatonin dose is 10mg.,0.9904,The melatonin dose is 10 milligrams.,1,,entailment
+49,Melatonin is taken as needed.,1.0,Melatonin is taken as needed.,1,,entailment
+50,Melatonin is prescribed for insomnia.,1.0,Melatonin is prescribed for insomnia.,1,,entailment
+51,The patient was advised to practice proper sleep hygiene.,0.977,The patient will try to practice proper sleep hygiene.,1,,entailment
+52,The patient was advised to take blood sugars before every meal.,0.9889,The patient will try to take their blood sugars before every meal.,1,,entailment
+53,The patient is to monitor her blood sugar levels.,0.9479,The patient will try to take their blood sugars before every meal.,1,,entailment
+54,The patient is to return in 3 months for follow-up.,0.9723,The patient will follow up with the doctor in three months.,1,,entailment

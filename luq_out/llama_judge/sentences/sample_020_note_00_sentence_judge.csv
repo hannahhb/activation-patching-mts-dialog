@@ -1,0 +1,39 @@
+sentence_idx,sentence,label
+0,"The patient, Michelle, a 4-year-old mother of twins, presented with a complaint of knee pain after a skiing accident in Vermont.",Fabrication
+1,She reports that her knee popped and she was unable to bear weight after falling while coming off the lift.,Faithful
+2,The pain is located on the outside of the knee and feels like it will buckle.,Faithful
+3,She is unable to bend the knee fully and experiences pain with straightening.,Faithful
+4,There is no numbness or tingling in her toes.,Faithful
+5,"She denies any history of high blood pressure, diabetes, or other significant medical conditions.",Faithful
+6,"She is currently taking ibuprofen for pain, which provides some relief.",Faithful
+7,Past medical history: [NOT MENTIONED],Fabrication
+8,Review of systems: [NOT MENTIONED],Fabrication
+9,Current medications:,Faithful
+10,Ibuprofen 600-800mg every 8 hours as needed for pain.,Faithful
+11,Vital signs: [NOT MENTIONED],Fabrication
+12,"The heart sounds are in a nice regular rate and rhythm, and there is no murmur on lung exam.",Faithful
+13,The lungs are clear to auscultation.,Faithful
+14,"On the right knee examination, there is edema and an effusion, pain to palpation of the lateral knee, decreased flexion and extension, a positive Lachman sign, palpable dorsalis pedis and posterior tibial pulse, and no leg edema in the ankle.",Faithful
+15,Test Results: [NOT MENTIONED],Fabrication
+16,Assessment: The patient likely has a ruptured anterior cruciate ligament (ACL) in her right knee.,Faithful
+17,Problem list: Right knee pain; Right ACL tear; Knee effusion.,Faithful
+18,I ordered a knee MRI to confirm the diagnosis.,Faithful
+19,I prescribed ibuprofen 600-800mg every 8 hours as needed for pain.,Faithful
+20,I recommended a knee brace to provide support.,Faithful
+21,I will follow up with the patient in a few days to discuss the MRI results and further management.,Faithful
+22,The patient will return in a few days to discuss the MRI results and further management.,Faithful
+23,Split the note into individual sentences.,Fabrication
+24,For each sentence assign exactly one label from the taxonomy below.,Fabrication
+25,TAXONOMY:,Fabrication
+26,Faithful    — The sentence is fully supported by the transcript.,Fabrication
+27,Fabrication — The sentence contains information not mentioned anywhere in the transcript.,Fabrication
+28,Negation    — The sentence contradicts something explicitly stated in the transcript.,Fabrication
+29,Causality   — The sentence describes a causal or temporal relationship that is absent or incorrect in the transcript.,Fabrication
+30,"Contextual  — The content exists in the transcript but is misattributed or taken out of context (e.g. said by the doctor but presented as patient-reported, or a conditional stated as definite).",Fabrication
+31,"Return a JSON array — one object per sentence, in note order:",Fabrication
+32,[,Fabrication
+33,"{""sentence_idx"": 0, ""sentence"": ""<exact sentence text>"", ""label"": ""<label>""}",Fabrication
+34,...,Fabrication
+35,],Fabrication
+36,"Return only the JSON array, no other text.",Fabrication
+37,Instructions:,Fabrication

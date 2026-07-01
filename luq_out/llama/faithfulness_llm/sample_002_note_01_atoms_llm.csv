@@ -1,0 +1,86 @@
+sentence_idx,atom_idx,atom,supported,uncertainty
+1,0,The patient's name is Gregory.,1,0
+1,1,The patient presents with a foot ulcer.,1,0
+1,2,The foot ulcer is located on the patient's right foot.,1,0
+1,3,The foot ulcer is non-healing.,1,0
+1,4,The foot ulcer has been present for approximately two months.,1,0
+2,0,He reports that the ulcer has recently become red.,1,0
+2,1,The ulcer is draining.,1,0
+2,2,He has concern about the ulcer's healing.,1,0
+2,3,"The ulcer was previously not red, or its redness has increased.",1,0
+2,4,The ulcer's drainage is a recent development.,1,0
+3,0,He denies any trauma to the foot prior to the onset of the ulcer.,0,1
+3,1,He claims that he may have gotten the ulcer from walking barefoot on the beach.,1,0
+3,2,The beach where he walked barefoot is located at Dewey Beach.,1,0
+4,0,He reports occasional throbbing pain.,1,0
+4,1,He reports no specific pain.,1,0
+4,2,He is concerned about the redness.,1,0
+4,3,He is concerned about the drainage.,1,0
+5,0,The patient has diabetes.,1,0
+5,1,The patient takes medication for his diabetes.,1,0
+5,2,The patient does not regularly check his sugar levels.,1,0
+6,0,He has had an A1c test.,1,0
+6,1,The result of his last A1c test is reportedly around 10.,1,0
+6,2,An A1c result of 10 is considered high.,1,0
+7,0,He has a primary care physician (PCP).,1,0
+7,1,He has not seen his PCP in a while.,0,1
+7,2,He was prescribed antibiotics.,1,0
+7,3,He has not picked up his prescribed antibiotics.,1,0
+8,0,The patient denies fever.,1,0
+8,1,The patient reports pain in his foot.,1,0
+8,2,The pain in the patient's foot is occasional.,1,0
+8,3,The pain in the patient's foot is throbbing.,1,0
+9,0,The sentence is about current medications.,0,1
+9,1,The current medications are not mentioned.,1,0
+11,0,The patient's vital signs are normal.,1,0
+11,1,The patient has no fever.,1,0
+12,0,The patient has a wound on the dorsal aspect of the lateral right foot.,1,0
+12,1,The wound is circular in shape.,1,0
+12,2,The wound is one inch by two inches in size.,1,0
+12,3,The wound is located proximal to the fifth MTP joint.,1,0
+12,4,The wound has redness.,1,0
+12,5,The wound has drainage.,1,0
+12,6,The wound has edema.,1,0
+12,7,There is fluid coming out of the wound.,1,0
+13,0,There is no necrosis.,1,0
+13,1,There is no odor.,1,0
+13,2,There is no bony exposure.,1,0
+14,0,The patient had an X-ray.,1,0
+14,1,The X-ray was of the patient's right foot.,1,0
+14,2,The X-ray showed no evidence of osteomyelitis.,1,0
+16,0,The patient has a diabetic foot ulcer.,1,0
+16,1,The patient has an underlying infection.,1,0
+16,2,The diabetic foot ulcer has an underlying infection.,1,0
+17,0,The patient has a diabetic foot ulcer.,1,0
+17,1,The patient is suspected of having an infection.,1,0
+17,2,The patient has uncontrolled diabetes.,1,0
+19,0,I ordered an ABI.,1,0
+19,1,An ABI is an ankle brachial index.,1,0
+19,2,The purpose of ordering the ABI was to determine the blood supply.,1,0
+19,3,The blood supply in question is to the foot.,1,0
+20,0,I performed a debridement.,1,0
+20,1,The purpose of the debridement was to remove dead tissue.,1,0
+20,2,The dead tissue was located in a wound.,1,0
+21,0,I prescribed clindamycin.,1,0
+21,1,The dosage of clindamycin prescribed was 400mg.,1,0
+21,2,Clindamycin was prescribed to be taken twice a day.,1,0
+21,3,Clindamycin was prescribed for seven days.,1,0
+21,4,The purpose of prescribing clindamycin was to treat an infection.,1,0
+22,0,I will provide the patient with a surgical shoe.,1,0
+22,1,The patient will wear the surgical shoe for the next month.,1,0
+22,2,The purpose of wearing the surgical shoe is to reduce pressure on the foot.,1,0
+23,0,I will see the patient back in two weeks.,1,0
+23,1,The purpose of the follow-up visit is to assess the progress of the wound.,1,0
+23,2,The wound's progress will be assessed during the follow-up visit.,1,0
+23,3,Another debridement may be considered during the follow-up visit.,1,0
+23,4,The consideration of another debridement is contingent on its necessity.,1,0
+24,0,The patient will return for a follow-up appointment.,1,0
+24,1,The follow-up appointment is scheduled to occur in two weeks.,1,0
+25,0,He is advised to call the office if he experiences any issues.,1,0
+25,1,He is advised to call the office if he experiences any concerns.,1,0
+25,2,He should seek urgent care if he develops a fever.,1,0
+25,3,He should seek urgent care if he experiences blackening of the foot.,1,0
+25,4,He should seek urgent care if he experiences other concerning symptoms.,1,0
+25,5,He should go to the emergency room if he develops a fever.,1,0
+25,6,He should go to the emergency room if he experiences blackening of the foot.,1,0
+25,7,He should go to the emergency room if he experiences other concerning symptoms.,1,0

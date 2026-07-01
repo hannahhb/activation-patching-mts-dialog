@@ -1,33 +1,33 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: Mr. Jackson, a 45-year-old male, presents with right elbow pain that has been ongoing for three weeks, starting after increasing his tennis activity.",0.9973
-2,"He describes the pain as an 8/10 when using his arm and 3/10 when at rest, with a sharp, stabbing, and throbbing sensation.",0.6413
-3,The pain is localized to the outside part of his elbow and does not radiate to his arm or shoulder.,0.9991
-4,"He has tried taking Tylenol and ibuprofen, but they provide only temporary relief.",0.8178
-5,He has not noticed any improvement with ice application.,0.9336
-6,He has a history of playing tennis in his younger years and was a state champion in high school.,0.9999
-7,"Past medical history: Mr. Jackson has a history of diabetes type 2, mild intermittent asthma, a history of penicillin allergy, and a surgical history of gallbladder removal 10 years ago.",0.9983
+1,"HPI: Mr. Jackson, a 45-year-old male, presents with right elbow pain that has been ongoing for three weeks, starting after increasing his tennis activity.",0.077
+2,"He describes the pain as an 8/10 when using his arm and 3/10 when at rest, with a sharp, stabbing, and throbbing sensation.",0.1694
+3,The pain is localized to the outside part of his elbow and does not radiate to his arm or shoulder.,0.2865
+4,"He has tried taking Tylenol and ibuprofen, but they provide only temporary relief.",0.03
+5,He has not noticed any improvement with ice application.,0.5901
+6,He has a history of playing tennis in his younger years and was a state champion in high school.,0.6992
+7,"Past medical history: Mr. Jackson has a history of diabetes type 2, mild intermittent asthma, a history of penicillin allergy, and a surgical history of gallbladder removal 10 years ago.",0.197
 8,Review of systems: [NOT MENTIONED],0.5
 9,Current medications:,0.5
-10,Metformin 500 milligrams twice a day for diabetes,0.7773
-11,Flovent  twice a day for asthma,0.9988
-12,Albuterol as needed for asthma,0.9986
+10,Metformin 500 milligrams twice a day for diabetes,0.1926
+11,Flovent  twice a day for asthma,0.4061
+12,Albuterol as needed for asthma,0.3878
 13,Objective:,0.5
 14,Vital signs: [NOT MENTIONED],0.5
-15,"Physical exam: The physical exam is largely unremarkable, except for moderate lateral epicondylar tenderness of the right elbow, which worsens with passive range of motion and palpation.",0.7138
-16,There is mild pain with resisted extension of the right wrist.,0.1557
-17,"The cardiovascular exam is normal, with a grade 3/6 systolic ejection murmur.",0.1524
-18,The musculoskeletal exam is otherwise normal.,0.9643
+15,"Physical exam: The physical exam is largely unremarkable, except for moderate lateral epicondylar tenderness of the right elbow, which worsens with passive range of motion and palpation.",0.0154
+16,There is mild pain with resisted extension of the right wrist.,0.0226
+17,"The cardiovascular exam is normal, with a grade 3/6 systolic ejection murmur.",0.0469
+18,The musculoskeletal exam is otherwise normal.,0.1651
 19,Test Results:,0.5
-20,"Right elbow x-ray: No acute fracture or bony abnormality, no malalignment, and no joint effusion.",0.531
+20,"Right elbow x-ray: No acute fracture or bony abnormality, no malalignment, and no joint effusion.",0.1595
 21,Assessment / Problem List:,0.5
-22,"Assessment: Mr. Jackson has acute lateral epicondylitis of his right elbow, also known as tennis elbow, likely due to overuse from increased tennis activity.",0.9999
-23,"His diabetes type 2 is out of control, and his asthma is under good control.",0.8889
-24,Problem list: Diabetes type 2; Acute lateral epicondylitis of the right elbow; Mild intermittent asthma,0.6705
+22,"Assessment: Mr. Jackson has acute lateral epicondylitis of his right elbow, also known as tennis elbow, likely due to overuse from increased tennis activity.",0.258
+23,"His diabetes type 2 is out of control, and his asthma is under good control.",0.5944
+24,Problem list: Diabetes type 2; Acute lateral epicondylitis of the right elbow; Mild intermittent asthma,0.1324
 25,Plan:,0.5
-26,I prescribed Ultram 50 milligrams once a day for pain management of his right elbow.,0.1156
-27,"I want him to rest his right arm as much as possible, avoid repetitive stress, and ice the right elbow for 20 minutes, 3 times a day.",0.3366
-28,"I also ordered a hemoglobin A1c level, a CBC blood test, and a chem-12 blood test to assess his diabetes control.",0.5486
-29,I increased his metformin to 1000 milligrams twice a day.,0.3394
-30,I will also prescribe a refill of Albuterol as needed for asthma.,0.9922
-31,Follow-up: I will see Mr. Jackson in 4 weeks to reevaluate his elbow and adjust his treatment plan as needed.,0.9998
+26,I prescribed Ultram 50 milligrams once a day for pain management of his right elbow.,0.0172
+27,"I want him to rest his right arm as much as possible, avoid repetitive stress, and ice the right elbow for 20 minutes, 3 times a day.",0.1627
+28,"I also ordered a hemoglobin A1c level, a CBC blood test, and a chem-12 blood test to assess his diabetes control.",0.1857
+29,I increased his metformin to 1000 milligrams twice a day.,0.2237
+30,I will also prescribe a refill of Albuterol as needed for asthma.,0.52
+31,Follow-up: I will see Mr. Jackson in 4 weeks to reevaluate his elbow and adjust his treatment plan as needed.,0.0612

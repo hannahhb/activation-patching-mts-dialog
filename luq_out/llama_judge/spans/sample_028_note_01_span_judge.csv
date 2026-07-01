@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Matthew, has been experiencing lower back pain for a while, which worsens with standing, walking, and activities such as coughing and sneezing.",Faithful,
+1,"The pain is described as an electrical toothache and radiates down the left leg, affecting the hip, side of the calf, and big toe.",Faithful,
+2,"The patient rates the pain as a 6 out of 10 at the moment, but it can reach up to 13 out of 10 when severe.",Faithful,
+3,"The pain is exacerbated by standing and walking, but laying down provides some relief.",Faithful,
+4,"The patient has been experiencing numbness and tingling in both legs, with weakness in both the back and legs.",Faithful,
+5,"The patient has been unable to perform daily activities due to the pain, including tying shoelaces and walking without a cane.",Faithful,
+6,"Past medical history: The patient has a history of a fall 30 years ago that may have resulted in a possible fracture, but the exact diagnosis is unknown.",Faithful,
+7,The patient has been bedridden for a while due to the pain.,Causality,for a while due to the pain
+8,"Review of systems: The patient's pain affects the lower back, hip, side of the calf, and big toe, with radiation down the left leg.",Faithful,
+9,Current medications: [NOT MENTIONED],Fabrication,Current medications
+10,Vital signs: [NOT MENTIONED],Fabrication,Vital signs
+11,"The patient has positive pain to palpation at the L4 vertebrae, with pain with flexion and extension of the back.",Faithful,
+12,The patient has 4 out of 5 strength in the left leg and 5 out of 5 strength in the right leg.,Faithful,
+13,Reflexes are brisk and motor and sensory are intact in both lower extremities.,Faithful,
+14,The MRI shows a disk herniation at the level of L4-L5 vertebrae with associated nerve root impingement.,Faithful,
+15,Assessment: The patient has acute disk herniation at L4-L5 with nerve root impingement causing lower back pain and pain radiating down the left leg.,Faithful,
+16,Problem list: Acute disk herniation at L4-L5 with nerve root impingement; lower back pain; pain radiating down the left leg; numbness and tingling in both legs; weakness in both the back and legs.,Faithful,
+17,I recommended an epidural steroid injection to place anti-inflammatory medication at the site of inflammation.,Faithful,
+18,I will refer the patient to physical therapy (PT) to strengthen the area.,Faithful,
+19,The patient will see me again in about a month to assess the effectiveness of the injection.,Faithful,
+20,Follow-up: The patient will see me again in about a month.,Fabrication,Follow-up

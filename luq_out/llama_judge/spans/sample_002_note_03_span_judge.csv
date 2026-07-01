@@ -1,0 +1,26 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Gregory, presents with a nonhealing foot ulcer on the dorsal aspect of the lateral right foot, which has been present for approximately two months.",Faithful,
+1,The ulcer has recently become red and is draining.,Faithful,
+2,The patient reports that he may have obtained the ulcer from walking barefoot on the beach at Dewey Beach.,Faithful,
+3,"He describes the ulcer as sometimes throbbing and experiencing increased pressure when touched, but no distinct pain.",Faithful,
+4,The patient's biggest concern is the recent redness and drainage.,Faithful,
+5,"Past medical history: The patient has diabetes, for which he takes medication, but does not regularly check his blood sugar levels.",Faithful,
+6,His last A1c was reported to be around 10.,Faithful,
+7,"The patient did not recall the name of the antibiotics prescribed by his primary care physician (PCP) before coming in, but did not pick them up from the pharmacy yet.",Faithful,
+8,Review of systems: The patient reports that he has not experienced any other symptoms related to his ulcer or diabetes.,Fabrication,The patient reports that he has not experienced any other symptoms related to his ulcer or diabetes
+9,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+10,"Vital signs: Normal vital signs were reported, with no fever.",Faithful,
+11,"Physical exam: A one by two inch circular wound is present on the dorsal aspect of the lateral right foot, proximal to the fifth MTP joint.",Faithful,
+12,"The wound is red, swollen, and has drainage present, with some edema around it.",Faithful,
+13,"The patient reports increased pressure when touched, but no distinct pain.",Faithful,
+14,"No necrosis, odor, or bony exposure was noted.",Faithful,
+15,Test Results: An X-ray of the right foot showed no evidence of osteomyelitis.,Faithful,
+16,Assessment: The patient has a diabetic foot ulcer with a possible infection.,Faithful,
+17,Problem list: Diabetic foot ulcer; Suspected infection; Uncontrolled diabetes.,Faithful,
+18,I prescribed clindamycin 400mg twice daily for 7 days to treat the suspected infection.,Faithful,
+19,I will perform a debridement to remove dead tissue from the ulcer.,Faithful,
+20,I will order an ABI to assess blood supply to the foot.,Faithful,
+21,I will also provide a surgical shoe to wear for the next month to reduce pressure on the foot.,Faithful,
+22,The patient will return in 2 weeks for another debridement and to assess the healing of the ulcer.,Faithful,
+23,Follow-up: The patient will return in 2 weeks for a follow-up appointment.,Contextual,Follow-up: The patient will return in 2 weeks for a follow-up appointment
+24,The patient is advised to call the office if he experiences any issues or if his symptoms worsen.,Faithful,

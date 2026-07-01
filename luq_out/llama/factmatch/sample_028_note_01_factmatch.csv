@@ -1,0 +1,52 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Matthew.,1.0,The patient's name is Matthew.,1,,entailment
+1,The patient has been experiencing lower back pain.,0.9539,The patient's pain is located in the lower back.,1,,entailment
+2,The lower back pain worsens with standing.,0.9853,The patient's back pain worsens with standing.,1,,entailment
+3,The lower back pain worsens with walking.,0.9819,The patient's back pain worsens with walking.,1,,entailment
+4,The lower back pain worsens with activities such as coughing.,0.9749,The patient's back pain worsens with coughing.,1,,entailment
+5,The lower back pain worsens with activities such as sneezing.,0.9765,The patient's back pain worsens with sneezing.,1,,entailment
+6,The patient describes the pain as an electrical toothache.,0.9707,The pain in the left leg is described as an electrical toothache.,1,,entailment
+7,The pain radiates down the left leg.,0.9851,The patient experiences pain radiating down their left leg.,1,,entailment
+8,The pain affects the hip.,0.9338,"The patient's pain radiates down to their left leg, hip, and calf, and goes to the big toe.",1,,entailment
+9,The pain affects the side of the calf.,0.9416,"The patient's pain radiates down to their left leg, hip, and calf, and goes to the big toe.",1,,entailment
+10,The pain affects the big toe.,0.9529,"The patient's pain radiates down to their left leg, hip, and calf, and goes to the big toe.",1,,entailment
+11,The patient rates the pain as a 6 out of 10 at the moment.,0.9729,The patient's current pain level is 6 out of 10.,1,,entailment
+12,The patient's pain can reach up to 13 out of 10 when severe.,0.9799,The patient's pain level can reach 13 out of 10 when it gets really bad.,1,,entailment
+13,The pain is exacerbated by standing.,0.9636,The patient's back pain worsens with standing.,1,,entailment
+14,The pain is exacerbated by walking.,0.955,The patient's back pain worsens with walking.,1,,entailment
+15,Laying down provides some relief for the patient's pain.,0.9836,The patient's pain improves with laying down.,1,,entailment
+16,The patient has been experiencing numbness in both legs.,0.9487,The patient has weakness in both legs.,0,fabrication,neutral
+17,The patient has been experiencing tingling in both legs.,0.9261,The patient has weakness in both legs.,0,fabrication,neutral
+18,The patient has weakness in the back.,0.999,The patient has weakness in their back.,1,,entailment
+19,The patient has weakness in the legs.,0.9898,The patient has weakness in both legs.,1,,entailment
+20,The patient has been unable to perform daily activities due to the pain.,0.9229,The patient's pain level can reach 13 out of 10 when it gets really bad.,0,fabrication,neutral
+21,The patient is unable to tie shoelaces due to the pain.,0.9018,"The patient's pain radiates down to their left leg, hip, and calf, and goes to the big toe.",0,fabrication,neutral
+22,The patient is unable to walk without a cane due to the pain.,0.9448,The patient uses a cane to walk.,0,fabrication,neutral
+23,The patient has a history of a fall 30 years ago.,0.9386,The patient is 30 years post a fall from a roof.,1,,entailment
+24,The patient's fall 30 years ago may have resulted in a possible fracture.,0.9817,The patient had a possible fracture 30 years ago.,1,,entailment
+25,The exact diagnosis of the patient's fall 30 years ago is unknown.,0.9234,The patient had a possible fracture 30 years ago.,0,fabrication,neutral
+26,The patient has been bedridden for a while due to the pain.,0.9209,The patient has been having back pain for about a month.,0,fabrication,neutral
+27,The patient's pain affects the lower back.,0.9817,The patient's pain is located in the lower back.,1,,entailment
+28,The patient has positive pain to palpation at the L4 vertebrae.,0.9884,The patient has pain to palpation at the L4 vertebrae.,1,,entailment
+29,The patient has pain with flexion of the back.,0.986,The patient has pain with flexion and extension of their back.,1,,entailment
+30,The patient has pain with extension of the back.,0.9832,The patient has pain with flexion and extension of their back.,1,,entailment
+31,The patient has 4 out of 5 strength in the left leg.,0.9995,The patient has 4 out of 5 strength in their left leg.,1,,entailment
+32,The patient has 5 out of 5 strength in the right leg.,0.9995,The patient has 5 out of 5 strength in their right leg.,1,,entailment
+33,The patient's reflexes are brisk.,1.0,The patient's reflexes are brisk.,1,,entailment
+34,The patient's motor is intact in both lower extremities.,0.9838,The patient's motor and sensory functions are intact in both lower extremities.,1,,entailment
+35,The patient's sensory is intact in both lower extremities.,0.9888,The patient's motor and sensory functions are intact in both lower extremities.,1,,entailment
+36,The MRI shows a disk herniation at the level of L4-L5 vertebrae.,0.9977,The MRI shows a disk herniation at the L4-L5 vertebrae.,1,,entailment
+37,The disk herniation is associated with nerve root impingement.,1.0,The disk herniation is associated with nerve root impingement.,1,,entailment
+38,The patient has acute disk herniation at L4-L5 with nerve root impingement.,0.9873,The doctor diagnosed the patient with acute disk herniation at L4-L5 with nerve root impingement.,1,,entailment
+39,The acute disk herniation at L4-L5 with nerve root impingement causes lower back pain.,0.9718,The doctor diagnosed the patient with acute disk herniation at L4-L5 with nerve root impingement.,1,,entailment
+40,The acute disk herniation at L4-L5 with nerve root impingement causes pain radiating down the left leg.,0.9668,The doctor diagnosed the patient with acute disk herniation at L4-L5 with nerve root impingement.,1,,entailment
+41,The patient has lower back pain.,0.9702,The patient's pain is located in the lower back.,1,,entailment
+42,The patient has pain radiating down the left leg.,0.9967,The patient experiences pain radiating down their left leg.,1,,entailment
+43,The patient has numbness and tingling in both legs.,0.9408,The patient has weakness in both legs.,0,fabrication,neutral
+44,The patient has weakness in both the back and legs.,0.9844,The patient has weakness in their back.,1,,entailment
+45,The doctor recommended an epidural steroid injection.,0.9911,The doctor prescribed an epidural steroid injection.,1,,entailment
+46,The epidural steroid injection is to place anti-inflammatory medication at the site of inflammation.,0.9671,The epidural steroid injection is for the patient's back pain and leg pain.,1,,entailment
+47,The doctor will refer the patient to physical therapy (PT).,0.9842,The doctor will refer the patient to physical therapy.,1,,entailment
+48,The physical therapy (PT) is to strengthen the area.,0.9169,The doctor will refer the patient to physical therapy.,0,fabrication,neutral
+49,The patient will see the doctor again in about a month.,1.0,The patient will see the doctor again in about a month.,1,,entailment
+50,The follow-up appointment is to assess the effectiveness of the injection.,0.8977,The epidural steroid injection can take about 2 to 3 weeks to take full effect.,0,fabrication,neutral

@@ -1,0 +1,50 @@
+fact_idx,section,fact,transcript_support,factuality_uncertainty
+0,subjective,The patient is a 38-year-old male.,0.0018,0.9982
+1,subjective,The patient presents with shortness of breath.,0.9976,0.0024
+2,subjective,The patient describes shortness of breath as catching his breath a lot more than he used to.,0.9973,0.0027
+3,subjective,The patient feels like he is not breathing as well as he used to.,0.9958,0.0042
+4,subjective,The shortness of breath started suddenly.,0.5882,0.4118
+5,subjective,The patient denied rash.,0.9933,0.0067
+6,subjective,The patient denied nausea.,0.9975,0.0025
+7,subjective,The patient denied vomiting.,0.9974,0.0026
+8,subjective,The patient denied lip swelling.,0.9958,0.0042
+9,subjective,The patient denied throat swelling.,0.9961,0.0039
+10,subjective,The patient denies having any issues with allergies in the past.,0.9972,0.0028
+11,subjective,The symptoms occur at home.,0.0086,0.9914
+12,subjective,The symptoms occur outside.,0.0246,0.9754
+13,subjective,The symptoms occur around his cat.,0.0086,0.9914
+14,subjective,The patient moved to a new location two years ago.,0.9633,0.0367
+15,subjective,The patient owns a plot of land.,0.9977,0.0023
+16,subjective,The patient is a hunter.,0.3897,0.6103
+17,subjective,The patient has a refrigerator full of venison.,0.9803,0.0197
+18,subjective,The patient denies any other symptoms in other organs or systems.,0.9942,0.0058
+19,subjective,The doctor prescribed an albuterol inhaler.,0.9409,0.0591
+20,subjective,The albuterol inhaler dose is not specified.,0.1892,0.8108
+21,subjective,The albuterol inhaler frequency is not specified.,0.4205,0.5795
+22,subjective,The albuterol inhaler is prescribed for shortness of breath.,0.9741,0.0259
+23,objective,The patient's pulse is within normal limits.,0.1939,0.8061
+24,objective,The patient's oxygen saturation is within normal limits.,0.0067,0.9933
+25,objective,The patient's temperature is within normal limits.,0.0151,0.9849
+26,objective,The patient appears healthy.,0.0048,0.9952
+27,objective,The lungs exam reveals faint expiratory wheezing bilaterally in all lung fields.,0.6028,0.3972
+28,objective,There is no rash.,0.0115,0.9885
+29,objective,There is no angioedema.,0.062,0.938
+30,objective,There is no audible stridor.,0.2435,0.7565
+31,objective,The patient had a normal chest x-ray.,0.0008,0.9992
+32,objective,The patient had a normal pulmonary function test.,0.0006,0.9994
+33,assessment,The patient has allergic asthma.,0.0213,0.9787
+34,assessment,The patient's asthma is newly diagnosed.,0.4064,0.5936
+35,plan,The doctor prescribed albuterol inhaler.,0.9934,0.0066
+36,plan,The albuterol inhaler is prescribed for shortness of breath.,0.9741,0.0259
+37,plan,The doctor prescribed Singulair.,0.4115,0.5885
+38,plan,The Singulair dose is 10mg.,0.2516,0.7484
+39,plan,Singulair is taken once daily.,0.3052,0.6948
+40,plan,Singulair is prescribed for asthma.,0.7296,0.2704
+41,plan,The doctor planned allergy testing.,0.9987,0.0013
+42,plan,The allergy testing will start with skin testing.,0.9987,0.0013
+43,plan,Skin testing is to identify the triggers of asthma.,0.9056,0.0944
+44,plan,The doctor will discuss further testing.,0.991,0.009
+45,plan,Further testing may be done in the patient's blood.,0.9987,0.0013
+46,plan,The doctor may prescribe immunotherapy.,0.0013,0.9987
+47,plan,The patient is to return in one week.,0.5808,0.4192
+48,plan,The patient is to schedule the skin testing next week.,0.9986,0.0014

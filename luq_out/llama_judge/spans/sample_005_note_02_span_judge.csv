@@ -1,0 +1,27 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 38-year-old male, presents with a 1-week history of right knee pain after an injury at a trampoline park.",Fabrication,a 38-year-old male
+1,"He reports hearing a snap and instant pain when landing, with pain localized to the lateral aspect of the knee.",Faithful,
+2,"He denies taking any medication other than Tylenol, which provided minimal relief.",Faithful,
+3,"He has not tried icing, heating, or elevating the knee.",Negation,or elevating the knee
+4,"Past medical history: The patient has hypertension, for which he is taking 20mg of lisinopril daily, and diabetes, for which he is taking 500mg of metformin.",Faithful,
+5,He denies any other medical conditions.,Fabrication,He denies any other medical conditions
+6,"Review of systems: The patient denies any other symptoms, but mentions that he has been inconsistent with his exercise regimen.",Faithful,
+7,Current medications:,Faithful,
+8,- Lisinopril 20mg daily for hypertension,Faithful,
+9,- Metformin 500mg daily for diabetes,Faithful,
+10,- Tylenol (dose and frequency not specified) for pain,Faithful,
+11,Objective:,Faithful,
+12,"Vital signs: The patient's blood pressure is 180/80, which is higher than desired.",Faithful,
+13,"Physical exam: The patient has a slight limp and a gait disturbance, with ecchymosis and edema along the lateral aspect of the knee.",Faithful,
+14,"The knee has a decent range of motion, but the patient experiences pain with movement.",Faithful,
+15,Test Results: The patient's right knee x-ray shows no evidence of fracture or bony abnormality.,Faithful,
+16,Assessment / Problem List:,Faithful,
+17,"Assessment: The patient presents with a right knee ligament strain and hypertension, for which his blood pressure is not well-controlled, and diabetes.",Faithful,
+18,Problem list: Right knee ligament strain; hypertension; diabetes; suspected hypertension.,Fabrication,suspected hypertension
+19,Plan:,Faithful,
+20,I prescribed meloxicam 15mg daily for pain and swelling related to the right knee ligament strain.,Faithful,
+21,I referred the patient to physical therapy to strengthen the muscles around the knee and prevent further injury.,Faithful,
+22,"I will continue the lisinopril at 20mg daily for hypertension, and order an echo to assess cardiac function.",Faithful,
+23,I also ordered an A1c and lipid panel to assess long-term blood sugar control and lipid levels.,Faithful,
+24,"Follow-up: The patient will return for a follow-up appointment to discuss the results of the echo, A1c, and lipid panel, and to reassess the right knee.",Fabrication,"to discuss the results of the echo, A1c, and lipid panel"
+25,Instructions:,Faithful,

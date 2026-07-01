@@ -1,0 +1,65 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 4-year-old's mother.,0.9313,The patient chases her two four-year-old children.,0,fabrication,neutral
+1,The patient is a female.,0.9181,The patient has twins.,0,fabrication,neutral
+2,The patient sustained a knee injury while skiing.,0.9412,The patient caught her ski while coming off the lift and fell.,0,fabrication,neutral
+3,The patient's injury occurred in Vermont.,0.9512,The injury occurred while skiing in Vermont.,1,,entailment
+4,The patient's injury occurred last weekend.,0.9051,The patient has had knee pain since the injury.,0,fabrication,neutral
+5,The patient caught her ski when getting off the lift.,0.9853,The patient caught her ski while coming off the lift and fell.,1,,entailment
+6,The patient fell and felt a popping sensation in her knee.,0.9588,The patient's knee popped during the fall.,1,,entailment
+7,The patient's knee has been painful since the injury.,0.9882,The patient has had knee pain since the injury.,1,,entailment
+8,The patient was unable to bear weight after the injury.,1.0,The patient was unable to bear weight after the injury.,1,,entailment
+9,The patient had to be taken down by the ski patrol.,0.9668,The patient was taken down the hill by the ski patrol.,1,,entailment
+10,The pain is located on the outside of the knee.,0.9506,The patient's knee hurts on the outside.,1,,entailment
+11,The patient feels like her knee won't hold her weight.,0.9962,The patient's knee feels like it won't hold her weight.,1,,entailment
+12,The patient was able to bend her knee immediately after the injury.,1.0,The patient was able to bend her knee immediately after the injury.,1,,entailment
+13,The patient is unable to bend her knee now.,0.9926,The patient is not able to bend her knee now.,1,,entailment
+14,Straightening the knee causes significant pain.,0.9604,The patient experiences pain when trying to straighten her knee all the way.,1,,entailment
+15,The patient denies numbness in her toes.,0.9678,The patient does not have numbing or tingling in her toes.,1,,entailment
+16,The patient denies tingling in her toes.,0.9626,The patient does not have numbing or tingling in her toes.,1,,entailment
+17,The patient can feel her toes.,1.0,The patient can feel her toes.,1,,entailment
+18,The patient is an active person.,1.0,The patient is an active person.,1,,entailment
+19,The patient chases her two children.,0.9697,The patient chases her two four-year-old children.,1,,entailment
+20,The patient has a supportive husband.,0.9259,The patient's husband is able to help out at home.,1,,entailment
+21,The patient's husband works long hours.,0.9482,The patient's husband works a job that takes him away from home quite a bit.,1,,entailment
+22,The patient cares for her children alone.,0.9001,The patient's husband is able to help out at home.,0,fabrication,contradiction
+23,The patient takes ibuprofen for pain.,0.9949,The patient is taking ibuprofen for pain.,1,,entailment
+24,Ibuprofen provides some relief for the patient's pain.,0.9809,The patient is taking ibuprofen for pain.,1,,entailment
+25,The patient's past medical history is otherwise generally healthy.,0.9567,The patient is generally healthy.,1,,entailment
+26,The patient has no history of high blood pressure.,0.9708,The patient does not have high blood pressure.,1,,entailment
+27,The patient has no history of diabetes.,0.9705,The patient does not have diabetes.,1,,entailment
+28,The patient has no other significant medical conditions.,0.9267,The patient is generally healthy.,1,,entailment
+29,The patient has a family of four.,0.9043,The patient chases her two four-year-old children.,0,fabrication,neutral
+30,The patient has two young children.,0.9254,The patient chases her two four-year-old children.,1,,entailment
+31,The patient is taking Ibuprofen.,0.9862,The patient is taking ibuprofen for pain.,1,,entailment
+32,The Ibuprofen dose is 600-800mg.,0.9741,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+33,Ibuprofen is taken every 8 hours.,0.9802,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+34,Ibuprofen is taken as needed.,0.9566,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+35,The patient has edema over the right knee.,0.9924,The patient's right knee has edema.,1,,entailment
+36,The patient has an effusion over the right knee.,0.9917,The patient's right knee has an effusion.,1,,entailment
+37,Palpation of the right lateral knee elicits pain.,0.9674,The patient's right knee is painful to palpation.,1,,entailment
+38,There is decreased flexion of the right knee.,0.9813,The patient's right knee has decreased flexion and extension.,1,,entailment
+39,There is decreased extension of the right knee.,0.9799,The patient's right knee has decreased flexion and extension.,1,,entailment
+40,The Lachman sign is positive.,0.9642,The patient's right knee has a positive Lachman sign.,1,,entailment
+41,The dorsalis pedis pulse is palpable.,0.9514,The patient's right knee has a palpable dorsalis pedis and posterior tibial pulse.,1,,entailment
+42,The posterior tibial pulse is palpable.,0.9532,The patient's right knee has a palpable dorsalis pedis and posterior tibial pulse.,1,,entailment
+43,There is no leg edema in the ankle.,0.9828,The patient does not have leg edema in the ankle.,1,,entailment
+44,The patient likely has a ruptured anterior cruciate ligament (ACL) in her right knee.,0.9578,The doctor suspects the patient may have ruptured her ACL.,1,,entailment
+45,The patient has an anterior cruciate ligament tear.,0.9287,The doctor suspects the patient may have ruptured her ACL.,0,fabrication,neutral
+46,The patient has knee pain.,0.9706,The patient has had knee pain since the injury.,1,,entailment
+47,The patient has knee effusion.,0.9744,The patient's right knee has an effusion.,1,,entailment
+48,The doctor prescribed Ibuprofen.,1.0,The doctor prescribed ibuprofen.,1,,entailment
+49,The Ibuprofen dose is 600-800mg.,0.9741,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+50,Ibuprofen is taken every 8 hours.,0.9802,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+51,Ibuprofen is taken as needed.,0.9566,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+52,Ibuprofen is prescribed for pain.,0.9835,The doctor prescribed ibuprofen for pain.,1,,entailment
+53,The doctor ordered a knee MRI.,1.0,The doctor ordered a knee MRI.,1,,entailment
+54,The knee MRI is to confirm the suspected ACL tear.,0.9422,The doctor ordered a knee MRI.,0,fabrication,neutral
+55,The doctor will put the patient in a knee brace.,0.9741,The patient will be put in a brace to support her knee.,1,,entailment
+56,The knee brace is to provide support.,0.9574,The patient will be put in a brace to support her knee.,1,,entailment
+57,The doctor will review the MRI results.,0.935,The doctor wants to get the MRI done in the next couple of days.,0,fabrication,neutral
+58,The doctor will discuss further treatment options with the patient.,0.9242,The doctor will see the patient again soon.,0,fabrication,neutral
+59,Further treatment options may include surgery.,0.8755,Ibuprofen is helping the patient somewhat.,0,fabrication,neutral
+60,Surgery may be to repair the ACL.,0.9192,The doctor suspects the patient may have ruptured her ACL.,0,fabrication,neutral
+61,The doctor will see the patient again soon.,1.0,The doctor will see the patient again soon.,1,,entailment
+62,The follow-up appointment is to discuss the MRI results.,0.933,The doctor wants to get the MRI done in the next couple of days.,0,fabrication,neutral
+63,The follow-up appointment is to plan further treatment.,0.8903,The doctor will see the patient again soon.,0,fabrication,neutral

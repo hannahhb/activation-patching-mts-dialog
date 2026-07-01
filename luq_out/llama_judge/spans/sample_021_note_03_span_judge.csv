@@ -1,0 +1,40 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Brandon, is a 36-year-old male who presents with neck pain following multiple car crashes, with the most recent crash occurring in February of this year.",Faithful,
+1,"He reports experiencing sharp, incapacitating pain, rated as a 12 out of 10, which prevents him from working.",Faithful,
+2,He has had previous therapy for a few months after a second crash and had surgery after a third crash.,Faithful,
+3,"He has been experiencing numbness in his left arm and right leg, as well as spasms in his body.",Faithful,
+4,He has been prescribed fentanyl in the past but has not received a new prescription for several weeks.,Faithful,
+5,"He reports fatigue since the accident and has been experiencing headaches, dizziness, and visual disturbances.",Faithful,
+6,He denies any bruising or swelling but has noticed some bruising on occasion.,Faithful,
+7,"Past medical history: The patient has a history of multiple car crashes, including one in February of this year, and has undergone therapy and surgery for previous crashes.",Faithful,
+8,He has also been to a pain clinic.,Faithful,
+9,"Review of systems: The patient reports experiencing numbness, spasms, headaches, dizziness, and visual disturbances.",Faithful,
+10,Current medications: [NOT MENTIONED],Faithful,
+11,Vital signs: [NOT MENTIONED],Faithful,
+12,"Physical exam: The patient has moderate range of movement in his neck, with pain on palpation on both the bony process and muscle.",Faithful,
+13,He is unable to move his neck from side to side or bend it forward and backward without experiencing pain.,Faithful,
+14,"No bruising, swelling, or laceration is noted.",Faithful,
+15,"An x-ray was performed prior to the visit, which did not show a fracture.",Faithful,
+16,The doctor is planning to order an MRI to further evaluate the condition.,Faithful,
+17,"Assessment: The patient has a neck sprain, which is a condition that can cause pain, numbness, and stiffness in the neck and surrounding areas.",Faithful,
+18,Problem list: Neck sprain; suspected fracture (status: suspected); previous car crashes; history of therapy and surgery; pain; numbness; spasms; headaches; dizziness; visual disturbances; fatigue.,Faithful,
+19,I prescribed robaxin 1500mg every 6-8 hours as needed for pain.,Faithful,
+20,I also recommended applying ice to the affected area and doing exercises to maintain range of motion.,Faithful,
+21,I will refer the patient to physical therapy and schedule an MRI to further evaluate the condition.,Faithful,
+22,"If the patient's symptoms do not improve with conservative treatment, I may consider referring them to pain medication and exploring local injections.",Faithful,
+23,The patient will be given a note to excuse them from work until further notice.,Faithful,
+24,Follow-up: The patient will follow up with me after the MRI results are available to discuss further treatment options.,Faithful,
+25,Instructions:,Fabrication,Instructions:
+26,Split the note into individual sentences.,Fabrication,Split the note into individual sentences.
+27,For each sentence assign exactly one label from the taxonomy below.,Fabrication,For each sentence assign exactly one label from the taxonomy below.
+28,"For any sentence that is NOT Faithful, also provide the exact verbatim span from that sentence that is erroneous (the minimal phrase that causes the error — not the whole sentence).",Fabrication,"For any sentence that is NOT Faithful, also provide the exact verbatim span from that sentence that is erroneous (the minimal phrase that causes the error — not the whole sentence)."
+29,TAXONOMY:,Fabrication,TAXONOMY:
+30,Faithful    — The sentence is fully supported by the transcript.,Fabrication,Faithful    — The sentence is fully supported by the transcript.
+31,Fabrication — The sentence contains information not mentioned anywhere in the transcript.,Fabrication,Fabrication — The sentence contains information not mentioned anywhere in the transcript.
+32,Negation    — The sentence contradicts something explicitly stated in the transcript.,Fabrication,Negation    — The sentence contradicts something explicitly stated in the transcript.
+33,Causality   — The sentence describes a causal or temporal relationship that is absent or incorrect in the transcript.,Fabrication,Causality   — The sentence describes a causal or temporal relationship that is absent or incorrect in the transcript.
+34,"Contextual  — The content exists in the transcript but is misattributed or taken out of context (e.g. said by the doctor but presented as patient-reported, or a conditional stated as definite).",Fabrication,"Contextual  — The content exists in the transcript but is misattributed or taken out of context (e.g. said by the doctor but presented as patient-reported, or a conditional stated as definite)."
+35,"Return a JSON array — one object per sentence, in note order.",Fabrication,"Return a JSON array — one object per sentence, in note order."
+36,"For Faithful sentences: {""sentence_idx"": 0, ""sentence"": ""..."", ""label"": ""Faithful""}",Fabrication,"For Faithful sentences: {""sentence_idx"": 0, ""sentence"": ""..."", ""label"": ""Faithful""}"
+37,"For non-Faithful sentences: {""sentence_idx"": 1, ""sentence"": ""..."", ""label"": ""Fabrication"", ""note_span"": ""<exact words from the sentence>""}",Fabrication,"For non-Faithful sentences: {""sentence_idx"": 1, ""sentence"": ""..."", ""label"": ""Fabrication"", ""note_span"": ""<exact words from the sentence>""}"
+38,"Return only the JSON array, no other text.",Fabrication,"Return only the JSON array, no other text."

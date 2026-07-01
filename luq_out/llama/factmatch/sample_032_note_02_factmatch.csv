@@ -1,0 +1,58 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 45-year-old male.,1.0,The patient is a 45-year-old male.,1,,entailment
+1,The patient has a history of diabetes type two.,1.0,The patient has a history of diabetes type two.,1,,entailment
+2,The patient has a history of mild intermittent asthma.,1.0,The patient has a history of mild intermittent asthma.,1,,entailment
+3,The patient presents with right elbow pain.,0.9903,The patient is experiencing right elbow pain.,1,,entailment
+4,The right elbow pain began three weeks ago.,0.9639,The patient is experiencing right elbow pain.,1,,entailment
+5,The right elbow pain is due to increasing tennis activity.,0.9658,The patient's elbow pain started after increasing tennis activity.,1,,entailment
+6,The pain is located on the outside of the elbow.,0.9978,The pain is located on the outside part of the elbow.,1,,entailment
+7,The pain is described as sharp.,0.9604,"The patient describes the pain as sharp, stabbing, and aching.",1,,entailment
+8,The pain is described as stabbing.,0.9702,"The patient describes the pain as sharp, stabbing, and aching.",1,,entailment
+9,The pain is described as throbbing.,0.9466,"The patient describes the pain as sharp, stabbing, and aching.",1,,entailment
+10,The pain severity is 8/10 when using the elbow.,0.9835,The patient rates the pain as an 8 out of 10 when using the elbow.,1,,entailment
+11,The pain severity is 3/10 when at rest.,0.9735,The patient rates the pain as a 3 out of 10 when resting.,1,,entailment
+12,The patient denies any trauma.,0.8937,The patient has not had any recent trauma to the elbow.,1,,entailment
+13,The patient denies recent falls.,0.9084,The patient denied having a fever recently.,0,fabrication,contradiction
+14,The patient has tried taking Tylenol.,0.9609,The patient has tried taking Tylenol and ibuprofen for the pain.,1,,entailment
+15,The patient has tried taking ibuprofen.,0.9609,The patient has tried taking Tylenol and ibuprofen for the pain.,1,,entailment
+16,Tylenol provides minimal relief.,0.9353,The patient has tried taking Tylenol and ibuprofen for the pain.,0,fabrication,neutral
+17,Ibuprofen provides minimal relief.,0.9266,The patient has tried taking Tylenol and ibuprofen for the pain.,0,fabrication,neutral
+18,The patient has a penicillin allergy.,0.9965,The patient has an allergy to penicillin.,1,,entailment
+19,The patient has a surgical history of gallbladder removal.,0.9696,The patient had their gallbladder removed about 10 years ago.,1,,entailment
+20,The gallbladder removal was 10 years ago.,0.9806,The patient had their gallbladder removed about 10 years ago.,1,,entailment
+21,The patient denies any other symptoms.,0.9233,The patient denied pain radiating to other areas.,0,fabrication,neutral
+22,The patient is taking Metformin.,1.0,The patient is taking metformin.,1,,entailment
+23,The Metformin dose is 500mg.,0.9937,The metformin dose is 500 milligrams.,1,,entailment
+24,Metformin is taken twice a day.,1.0,Metformin is taken twice a day.,1,,entailment
+25,Metformin is prescribed for diabetes.,1.0,Metformin is prescribed for diabetes.,1,,entailment
+26,The patient is taking Flovent.,1.0,The patient is taking Flovent.,1,,entailment
+27,The Flovent dose is 2 puffs.,0.9457,The Flovent dose is not specified.,0,negation,contradiction
+28,Flovent is taken twice a day.,1.0,Flovent is taken twice a day.,1,,entailment
+29,Flovent is prescribed for asthma.,1.0,Flovent is prescribed for asthma.,1,,entailment
+30,The patient is taking albuterol.,1.0,The patient is taking albuterol.,1,,entailment
+31,Albuterol is taken as needed.,1.0,Albuterol is taken as needed.,1,,entailment
+32,Albuterol is prescribed for asthma.,1.0,Albuterol is prescribed for asthma.,1,,entailment
+33,The patient has a normal cardiovascular exam.,0.9052,The patient has a grade 3 out of 6 systolic ejection murmur.,0,fabrication,contradiction
+34,The patient has a grade 3/6 systolic ejection murmur.,0.9974,The patient has a grade 3 out of 6 systolic ejection murmur.,1,,entailment
+35,The patient has moderate lateral epicondylar tenderness of the right elbow.,0.9994,The patient has moderate lateral epicondylar tenderness in the right elbow.,1,,entailment
+36,The patient has pain on passive range of motion of the right elbow.,0.9991,The patient has pain with passive range of motion of the right elbow.,1,,entailment
+37,The patient has mild pain with resisted extension of the right wrist.,1.0,The patient has mild pain with resisted extension of the right wrist.,1,,entailment
+38,The right elbow x-ray shows no acute fracture.,0.9881,The patient's right elbow x-ray shows no acute fracture or bony abnormality.,1,,entailment
+39,The right elbow x-ray shows no bony abnormality.,0.9864,The patient's right elbow x-ray shows no acute fracture or bony abnormality.,1,,entailment
+40,The patient has acute lateral epicondylitis of the right elbow.,0.9705,The patient has moderate lateral epicondylar tenderness in the right elbow.,1,,entailment
+41,The acute lateral epicondylitis is due to overuse.,0.939,The doctor diagnosed the patient with acute lateral epicondylitis.,0,fabrication,neutral
+42,The overuse is likely caused by increasing tennis activity.,0.917,The patient's elbow pain started after increasing tennis activity.,0,fabrication,neutral
+43,The patient has diabetes type two.,0.9848,The patient has a history of diabetes type two.,1,,entailment
+44,The patient has mild intermittent asthma.,0.9848,The patient has a history of mild intermittent asthma.,1,,entailment
+45,The doctor recommended rest for the right arm.,0.9851,The doctor prescribed rest for the patient's right arm.,1,,entailment
+46,The doctor recommended stopping tennis for 4-6 weeks.,0.9895,The doctor advised the patient to stop playing tennis for 4-6 weeks.,1,,entailment
+47,The doctor recommended avoiding repetitive stress in the right arm.,0.9913,The doctor advised the patient to avoid repetitive stress on the right arm.,1,,entailment
+48,The doctor prescribed ultram.,1.0,The doctor prescribed Ultram.,1,,entailment
+49,The ultram dose is 50mg.,0.9887,The Ultram dose is 50 milligrams.,1,,entailment
+50,Ultram is taken once a day.,0.9982,Ultram is taken once per day.,1,,entailment
+51,Ultram is prescribed for pain relief.,0.9803,Ultram is prescribed for elbow pain.,1,,entailment
+52,The doctor ordered a brace for the right forearm.,0.9889,The doctor prescribed a brace for the patient's right forearm.,1,,entailment
+53,The patient will return in 4 weeks for follow-up.,0.9672,The doctor scheduled a follow-up appointment in 4 weeks.,1,,entailment
+54,The doctor will reevaluate the elbow in 4 weeks.,0.9455,The patient's elbow pain has lasted for three weeks.,0,fabrication,neutral
+55,The doctor will consider additional imaging if needed.,0.8859,The doctor ordered a CBC blood test.,0,fabrication,neutral
+56,The doctor will consider physical therapy if needed.,0.9,The doctor examined the patient.,0,fabrication,neutral

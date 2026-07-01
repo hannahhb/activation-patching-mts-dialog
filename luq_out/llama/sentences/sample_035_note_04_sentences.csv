@@ -1,29 +1,29 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, Wayne, presents with a non-healing wound on his right foot, which he has had for 2-3 weeks.",0.4069
-2,"The wound is a 1x2 inch circular lesion on the dorsal aspect of the lateral right foot, proximal to the right fifth MTP joint, with yellow slough and minimal granulation tissue.",0.8853
-3,"The patient reports no pain or discomfort, but mentions that the wound sticks to his sock when he removes it.",0.5128
-4,"He has a history of neuropathy and has been wearing new shoes that caused a blister, which eventually developed into the current wound.",0.4877
-5,"Past medical history: The patient has diabetes, with a recent HbA1c of 8.1%.",0.4504
-6,"He has a history of using a podiatrist, but they moved and he was unable to find a replacement.",0.6845
-7,"Review of systems: The patient denies any symptoms of fever, chills, drainage, or odor from the wound.",0.9194
-8,He reports no trauma to the foot.,0.2487
+1,"HPI: The patient, Wayne, presents with a non-healing wound on his right foot, which he has had for 2-3 weeks.",0.1472
+2,"The wound is a 1x2 inch circular lesion on the dorsal aspect of the lateral right foot, proximal to the right fifth MTP joint, with yellow slough and minimal granulation tissue.",0.5493
+3,"The patient reports no pain or discomfort, but mentions that the wound sticks to his sock when he removes it.",0.2616
+4,"He has a history of neuropathy and has been wearing new shoes that caused a blister, which eventually developed into the current wound.",0.2886
+5,"Past medical history: The patient has diabetes, with a recent HbA1c of 8.1%.",0.1452
+6,"He has a history of using a podiatrist, but they moved and he was unable to find a replacement.",0.368
+7,"Review of systems: The patient denies any symptoms of fever, chills, drainage, or odor from the wound.",0.3322
+8,He reports no trauma to the foot.,0.2327
 9,Current medications: [NOT MENTIONED],0.5
 10,Objective:,0.5
-11,"Vital signs: Temperature 98.1°F, heart rate 72, respirations 16, blood pressure 110/65.",0.3226
-12,"Physical exam: The wound is a 1x2 inch circular lesion on the dorsal aspect of the lateral right foot, proximal to the right fifth MTP joint, with yellow slough and minimal granulation tissue.",0.1332
-13,"There is no surrounding erythema or cellulitis, no fluid collection, and no necrosis.",0.1182
-14,There is no odor.,0.9466
-15,"Vascular exam reveals palpable bilateral femoral and popliteal pulses, with no palpable DP or PT pulses, but Doppler signs are present.",0.2863
-16,Test Results: The patient's right foot X-ray shows no evidence of osteomyelitis.,0.1381
+11,"Vital signs: Temperature 98.1°F, heart rate 72, respirations 16, blood pressure 110/65.",0.1191
+12,"Physical exam: The wound is a 1x2 inch circular lesion on the dorsal aspect of the lateral right foot, proximal to the right fifth MTP joint, with yellow slough and minimal granulation tissue.",0.0106
+13,"There is no surrounding erythema or cellulitis, no fluid collection, and no necrosis.",0.009
+14,There is no odor.,0.0824
+15,"Vascular exam reveals palpable bilateral femoral and popliteal pulses, with no palpable DP or PT pulses, but Doppler signs are present.",0.0168
+16,Test Results: The patient's right foot X-ray shows no evidence of osteomyelitis.,0.0363
 17,Assessment / Problem List:,0.5
-18,"Assessment: The patient has a diabetic foot ulcer on the right foot, with a wound that has not healed despite previous treatment with antibiotics.",0.9999
-19,Problem list: Diabetic foot ulcer; suspected impaired wound healing; diabetes mellitus; [NOT MENTIONED],0.622
+18,"Assessment: The patient has a diabetic foot ulcer on the right foot, with a wound that has not healed despite previous treatment with antibiotics.",0.2909
+19,Problem list: Diabetic foot ulcer; suspected impaired wound healing; diabetes mellitus; [NOT MENTIONED],0.4117
 20,Plan:,0.5
-21,"I prescribed collagenase ointment to be applied to the wound once daily, covered with a dry sterile dressing.",0.0077
-22,I performed a debridement in the office to remove dead tissue.,0.0064
-23,I ordered an Ankle Brachial Index (ABI) to assess blood supply to the foot.,0.0023
-24,I instructed the patient to wear a surgical shoe to reduce pressure on the wound.,0.3341
-25,I do not think further antibiotics are necessary at this time.,0.6684
-26,Follow-up: The patient will return in two weeks for follow-up.,0.0027
-27,"If the ABI indicates poor blood supply, a vascular specialist may be referred.",0.8895
+21,"I prescribed collagenase ointment to be applied to the wound once daily, covered with a dry sterile dressing.",0.0002
+22,I performed a debridement in the office to remove dead tissue.,0.0002
+23,I ordered an Ankle Brachial Index (ABI) to assess blood supply to the foot.,0.0001
+24,I instructed the patient to wear a surgical shoe to reduce pressure on the wound.,0.2197
+25,I do not think further antibiotics are necessary at this time.,0.5867
+26,Follow-up: The patient will return in two weeks for follow-up.,0.0
+27,"If the ABI indicates poor blood supply, a vascular specialist may be referred.",0.4459

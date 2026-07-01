@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 38-year-old male, presents with a 2-3 week history of right shoulder pain, initially developed after a period of intense physical activity in his backyard, including lifting and moving stones for a patio extension and flower boxes.",Faithful,
+1,"The pain is localized to the outside of the shoulder, more pronounced when raising the arm, and is exacerbated by movement.",Faithful,
+2,"The patient reports some pain at night, particularly when sleeping on the affected side.",Faithful,
+3,He denies numbness in the arm or hands.,Faithful,
+4,"Past medical history: The patient has a history of a previous injury to the same shoulder while playing baseball as a younger athlete, resulting in some ongoing issues.",Faithful,
+5,He has not mentioned any other significant past medical conditions.,Faithful,
+6,"Review of systems: The patient reports no other symptoms, except for bilateral foot soreness, which he attributes to recent yard work and possibly dehydration.",Faithful,
+7,Current medications: The patient is taking Advil for pain relief and icing his shoulder.,Faithful,
+8,"Vital signs: The patient's vital signs are within normal limits, with a temperature of 97.8°F, heart rate of 62, respirations of 16, blood pressure of 116/84, and oxygen saturation of 99%.",Faithful,
+9,"Physical exam: The patient has limited active and passive range of motion of the right shoulder, with tenderness at the greater tuberosity of the humerus, but no tenderness at the sternoclavicular or acromioclavicular joints.",Faithful,
+10,"The patient has a good hand grip, and on neurovascular exam, his capillary refill is less than 3 seconds, and sensation to touch is intact.",Faithful,
+11,Test Results: The patient's shoulder X-ray shows no fracture.,Faithful,
+12,"Assessment: The patient's symptoms are most likely due to rotator cuff tendinopathy, likely exacerbated by recent physical activity.",Faithful,
+13,Problem list: Rotator cuff tendinopathy; possible dehydration and foot strain; unknown.,Fabrication,unknown
+14,Plan: I plan to refer the patient to physical therapy for approximately 6-8 weeks.,Faithful,
+15,"During this time, I recommend continuing Tylenol for pain relief and icing the shoulder as needed.",Causality,continuing Tylenol
+16,"If symptoms do not improve, we will consider a steroid injection.",Faithful,
+17,I also advise the patient to try soaking his feet in Epsom salts to alleviate foot soreness.,Faithful,
+18,Follow-up: The patient will follow up in approximately 6-8 weeks to assess progress and adjust the treatment plan as necessary.,Faithful,
+19,Instructions:,Fabrication,Instructions:

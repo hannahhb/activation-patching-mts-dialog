@@ -1,0 +1,18 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient presented with a complaint of back pain that started 2 hours after raking leaves in his yard, with a history of similar symptoms 3 years ago that resolved on its own.",Faithful,
+1,He reports a tingling sensation in his right leg and pain with flexion and palpation around the L5 area.,Faithful,
+2,His partner reports similar symptoms when the patient stands up.,Contextual,similar symptoms
+3,"Past medical history: The patient has a history of similar back pain 3 years ago, but no other relevant medical history was mentioned.",Faithful,
+4,Review of systems: The patient reports tingling in his right leg and pain with certain movements.,Faithful,
+5,Current medications: None mentioned.,Faithful,
+6,Vital signs: Not mentioned.,Faithful,
+7,"Physical exam: The patient had some pain with flexion, palpation around the L5 area, and dorsiflexion was normal.",Faithful,
+8,Pulses were equal in all extremities.,Faithful,
+9,Test Results: Normal x-ray of the low back.,Faithful,
+10,Assessment: The patient likely has a low back sprain.,Faithful,
+11,Problem list: Low back sprain; unknown.,Fabrication,unknown
+12,I prescribed meloxicam 7.5 mg orally twice a day for pain management.,Faithful,
+13,"I also prescribed physical therapy to get the patient back in shape, with stretches and exercises to help alleviate symptoms.",Faithful,
+14,"If the patient's symptoms do not improve after 2 weeks, I will consider ordering an MRI.",Faithful,
+15,"The patient will follow up with me in 2 weeks to reassess symptoms and consider further testing, including an MRI if necessary.",Faithful,
+16,Instructions:,Fabrication,Instructions

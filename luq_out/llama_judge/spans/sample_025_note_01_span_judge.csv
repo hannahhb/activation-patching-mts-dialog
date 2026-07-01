@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 4-year-old's mother, presented with a complaint of right knee pain after a skiing accident.",Contextual,a 4-year-old's mother
+1,"She fell while coming off a lift and caught her ski, causing her knee to pop.",Faithful,
+2,She was unable to bear weight and was taken down by the ski patrol.,Faithful,
+3,The pain is located on the outside of the knee and feels like it won't hold her weight.,Faithful,
+4,She has had difficulty bending and straightening the knee since the injury.,Faithful,
+5,She has not experienced numbness or tingling in her toes.,Faithful,
+6,"Past medical history: The patient is otherwise healthy, with no history of high blood pressure, diabetes, or other medical conditions.",Faithful,
+7,"She has twins at home and her husband is often away for work, leaving her to care for the children.",Faithful,
+8,Review of systems: The patient denies any additional symptoms in other organs.,Fabrication,Review of systems
+9,Current medications: The patient is taking ibuprofen 600-800mg every 8 hours as needed for pain.,Faithful,
+10,Vital signs: [NOT MENTIONED],Fabrication,Vital signs
+11,Examination of the right knee revealed edema and an effusion.,Faithful,
+12,Palpation of the right lateral knee caused pain.,Faithful,
+13,"There was decreased flexion and extension, and a positive Lachman sign.",Faithful,
+14,"Palpable dorsalis pedis and posterior tibial pulses were present, and no leg edema was found in the ankle.",Faithful,
+15,Assessment: The patient likely has a ruptured anterior cruciate ligament (ACL) in her right knee.,Faithful,
+16,Problem list: Right knee pain; ACL injury; knee effusion.,Fabrication,Problem list
+17,I prescribed ibuprofen 600-800mg every 8 hours as needed for pain.,Contextual,I prescribed
+18,I ordered a knee MRI to confirm the suspected ACL injury.,Contextual,I ordered
+19,I also recommended a knee brace to provide additional support.,Contextual,I also recommended
+20,I will follow up with the patient to discuss the results of the MRI and determine the next steps for treatment.,Contextual,I will follow up
+21,The patient will be seen again soon to discuss the results of the MRI and plan for further treatment.,Faithful,

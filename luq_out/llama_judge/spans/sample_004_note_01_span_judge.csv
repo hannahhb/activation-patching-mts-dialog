@@ -1,0 +1,27 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Wayne, presents with a non-healing wound on his right foot, approximately 1-2 inches in diameter, located on the dorsal aspect of the lateral right foot, proximal to the right fifth MTP joint.",Faithful,
+1,He reports the wound has been present for 2-3 weeks and has not improved despite previous treatment with antibiotics.,Faithful,
+2,The patient denies any trauma to the foot and reports that the wound is painless.,Faithful,
+3,"Past Medical History: The patient has a history of diabetes, with an HbA1c of 8%.",Faithful,
+4,He has not had any recent issues with his diabetes management.,Fabrication,He has not had any recent issues with his diabetes management
+5,"He also mentions that he used to see a podiatrist, but they moved and he has not been able to find another one.",Faithful,
+6,"Review of Systems: The patient denies any other symptoms such as fever, chills, drainage, or odor from the wound.",Faithful,
+7,Current Medications: [NOT MENTIONED],Fabrication,Current Medications: [NOT MENTIONED]
+8,"Vital Signs: Temperature 98.1°F, heart rate 72, respirations 16, blood pressure 110/65.",Faithful,
+9,"Physical Exam: There is a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, with yellow slough present and minimal granulation tissue.",Faithful,
+10,"There is no surrounding erythema or cellulitis, no fluid collection, and no necrosis.",Faithful,
+11,The wound does not have an odor.,Faithful,
+12,Bony exposure is not appreciated.,Faithful,
+13,"Vascular exam reveals palpable bilateral femoral and popliteal pulses, but no palpable DP or PT pulses.",Faithful,
+14,Doppler signs are present.,Faithful,
+15,Test Results: Right foot X-ray shows no evidence of osteomyelitis.,Faithful,
+16,"Assessment: The patient has a diabetic foot ulcer on the right foot, with evidence of non-healing despite previous treatment with antibiotics.",Faithful,
+17,Problem list: Diabetic foot ulcer; Suspected poor blood supply to the foot; Diabetes mellitus; [NOT MENTIONED],Fabrication,[NOT MENTIONED]
+18,I prescribed Collagenase ointment to be applied to the wound once daily and covered with a dry sterile dressing.,Faithful,
+19,I will perform a debridement in the office to remove dead tissue.,Faithful,
+20,I will also order an Ankle Brachial Index (ABI) to assess blood supply to the foot.,Faithful,
+21,The patient will wear a surgical shoe to take pressure off the area.,Faithful,
+22,I do not think any further antibiotics are needed at this time.,Faithful,
+23,I will see the patient in 2 weeks to reassess the wound.,Faithful,
+24,I may refer the patient to a vascular specialist if the ABI indicates poor blood supply.,Faithful,
+25,Follow-up: I will see the patient in 2 weeks to reassess the wound.,Causality,Follow-up: I will see the patient in 2 weeks to reassess the wound

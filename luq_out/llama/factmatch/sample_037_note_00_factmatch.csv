@@ -1,0 +1,58 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Stephanie Morales.,1.0,The patient's name is Stephanie Morales.,1,,entailment
+1,The patient is a 36-year-old female.,0.9873,The patient is 36 years old.,1,,entailment
+2,The patient presents with a 2-day history of ankle pain.,0.9575,The patient has ankle pain.,1,,entailment
+3,The patient's ankle pain started after slipping on ice and twisting her left ankle.,0.9358,The fall caused the patient's left ankle to twist underneath them.,0,fabrication,neutral
+4,The patient fell and experienced severe pain.,0.9383,The patient slipped and fell two days ago.,0,fabrication,neutral
+5,The patient experienced swelling.,0.9408,The patient's ankle is swollen.,1,,entailment
+6,The patient had difficulty walking.,0.9481,The patient has difficulty walking due to the ankle pain.,1,,entailment
+7,The patient tried ibuprofen.,0.983,The patient has tried ibuprofen for pain.,1,,entailment
+8,The patient tried ice.,0.9618,The patient has tried ice for pain.,1,,entailment
+9,The patient tried elevation.,0.9654,The patient has tried elevation for pain.,1,,entailment
+10,"Ibuprofen, ice, and elevation provided some relief.",0.9788,"The ibuprofen, ice, and elevation have helped the patient's pain a little.",1,,entailment
+11,The pain is localized to the outside of her ankle.,0.9813,The patient's pain is mostly on the outside of their ankle.,1,,entailment
+12,The patient denied pain radiating to her calf.,0.9551,The patient does not have pain in their calf.,1,,entailment
+13,The patient denied pain radiating to her lower leg.,0.9563,The patient does not have pain in their lower leg.,1,,entailment
+14,The patient denied pain radiating to her knee.,0.9476,The patient does not have pain in their knee.,1,,entailment
+15,The patient denied bleeding.,0.9117,The patient's ankle is swollen but not bleeding.,0,fabrication,neutral
+16,The patient denied significant swelling.,0.924,The patient has swelling and redness on their ankle.,0,fabrication,contradiction
+17,The patient has a history of diabetes.,1.0,The patient has a history of diabetes.,1,,entailment
+18,The patient has a history of high blood pressure.,1.0,The patient has a history of high blood pressure.,1,,entailment
+19,The patient is taking metformin.,0.988,The patient takes metformin.,1,,entailment
+20,The metformin dose is not mentioned.,0.9292,Metformin is prescribed for diabetes.,0,fabrication,neutral
+21,The metformin frequency is not mentioned.,0.9194,Metformin is prescribed for diabetes.,0,fabrication,neutral
+22,The patient is taking norvasc.,0.9482,Norvasc is prescribed for high blood pressure.,1,,entailment
+23,The norvasc dose is not mentioned.,0.9488,Norvasc is prescribed for high blood pressure.,0,fabrication,neutral
+24,The norvasc frequency is not mentioned.,0.9296,Norvasc is prescribed for high blood pressure.,0,fabrication,neutral
+25,The patient's hemoglobin A1c is 6.8.,1.0,The patient's hemoglobin A1c is 6.8.,1,,entailment
+26,The patient's blood pressure is 120/70.,1.0,The patient's blood pressure is 120/70.,1,,entailment
+27,The patient's pulse rate is not mentioned.,0.9108,The patient's blood pressure is 120/70.,0,fabrication,contradiction
+28,The patient's oxygen saturation is not mentioned.,0.8853,The patient's hemoglobin A1c is 6.8.,0,fabrication,contradiction
+29,The patient's temperature is not mentioned.,0.8905,The patient is 36 years old.,0,fabrication,neutral
+30,The patient has tenderness over the lateral malleolus.,1.0,The patient has tenderness over the lateral malleolus.,1,,entailment
+31,The patient has tenderness over the fifth metatarsal.,1.0,The patient has tenderness over the fifth metatarsal.,1,,entailment
+32,The patient has some swelling.,0.9494,The patient has swelling and redness on their ankle.,1,,entailment
+33,The patient has redness.,0.9425,The patient has swelling and redness on their ankle.,1,,entailment
+34,The ankle exam shows pain with valgus stressing.,0.9692,The patient has pain with valgus stressing of their ankle.,1,,entailment
+35,The patient has normal sensation in the affected area.,0.9783,The patient has normal sensation.,1,,entailment
+36,The patient has normal pulses in the affected area.,0.967,The patient has normal pulses.,1,,entailment
+37,I suspect the patient has an ankle sprain.,0.9517,The doctor diagnosed the patient with an ankle sprain.,1,,entailment
+38,I will order an x-ray to rule out a fracture.,0.9397,The patient will be sent to orthopedics if the x-ray shows a fracture.,0,negation,contradiction
+39,The patient has ankle sprain.,0.9705,The patient has ankle pain.,1,,entailment
+40,The patient has diabetes.,0.9713,The patient has a history of diabetes.,1,,entailment
+41,The patient has high blood pressure.,0.9742,The patient has a history of high blood pressure.,1,,entailment
+42,I prescribed naprosyn.,0.9835,The doctor prescribed naprosyn.,1,,entailment
+43,The naprosyn dose is 500mg.,0.9688,Naprosyn is 500 milligrams.,1,,entailment
+44,Naprosyn is taken twice a day.,1.0,Naprosyn is taken twice a day.,1,,entailment
+45,Naprosyn is prescribed for pain control.,1.0,Naprosyn is prescribed for pain control.,1,,entailment
+46,I will give the patient a splint.,0.9305,The doctor put the patient in an air splint.,0,negation,contradiction
+47,I will give the patient crutches.,0.9676,The doctor gave the patient crutches.,1,,entailment
+48,The patient will avoid weightbearing until the x-ray results are available.,0.9491,The patient is instructed to avoid weightbearing.,0,fabrication,neutral
+49,I will order an x-ray of the ankle.,0.9598,The doctor ordered an x-ray of the patient's ankle.,1,,entailment
+50,I will order baseline labs.,0.9389,The doctor will check baseline labs.,0,negation,contradiction
+51,The baseline labs include a hemoglobin A1c.,0.9357,The patient's hemoglobin A1c is 6.8.,0,fabrication,neutral
+52,The hemoglobin A1c is to monitor the patient's diabetes.,0.9514,The patient's hemoglobin A1c is 6.8.,1,,entailment
+53,I will refill the patient's norvasc prescription.,0.978,The doctor refilled the patient's norvasc prescription.,1,,entailment
+54,I will contact the patient once the x-ray results are available.,0.9415,The doctor will call the patient back if the x-ray shows a fracture.,1,,entailment
+55,I will determine the next course of action once the x-ray results are available.,0.9095,The patient will be sent to orthopedics if the x-ray shows a fracture.,0,fabrication,neutral
+56,"If the x-ray shows a fracture, I will refer the patient to orthopedics.",0.9883,The patient will be sent to orthopedics if the x-ray shows a fracture.,1,,entailment

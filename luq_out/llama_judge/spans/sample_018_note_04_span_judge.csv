@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 45-year-old male, presented with an ankle injury sustained while playing basketball with his son.",Faithful,
+1,"He described landing awkwardly after being fouled by his son, resulting in a twisted and rolled ankle.",Causality,being fouled by his son
+2,"He reported pain on the outside of the ankle, swelling, and bruising.",Faithful,
+3,He has been experiencing difficulty walking and feels the ankle is not stable.,Faithful,
+4,The patient has been working out regularly and is concerned about disrupting his routine.,Faithful,
+5,Past medical history: [NOT MENTIONED],Fabrication,Past medical history
+6,Review of systems: [NOT MENTIONED],Fabrication,Review of systems
+7,Current medications: [NOT MENTIONED],Fabrication,Current medications
+8,Vital signs: [NOT MENTIONED],Fabrication,Vital signs
+9,"The patient's ankle was found to have exquisite tenderness laterally, tenderness over the medial deltoid region, and swelling on the lateral side.",Faithful,
+10,The skin is intact with brisk capillary refill.,Faithful,
+11,The ankle does not exhibit malalignment.,Faithful,
+12,"The patient had an X-ray taken, which revealed a displaced lateral malleolus fracture at the Weber C level, with no evidence of medial or posterior malleolar fractures.",Faithful,
+13,Assessment: The patient has a displaced lateral malleolar fracture.,Faithful,
+14,Problem list: Lateral malleolar fracture; suspected instability; [NOT MENTIONED],Fabrication,[NOT MENTIONED]
+15,I prescribed meloxicam to reduce swelling.,Faithful,
+16,I advised the patient to ice the ankle and keep it elevated.,Faithful,
+17,I also recommended that the patient use crutches to avoid further injury.,Faithful,
+18,"I suggested that the patient continue coaching in April, but advised him to avoid putting weight on the ankle for approximately three months.",Faithful,
+19,I will follow up with the patient in the future to assess his progress.,Fabrication,I will follow up with the patient in the future to assess his progress
+20,Follow-up: [NOT MENTIONED],Fabrication,Follow-up

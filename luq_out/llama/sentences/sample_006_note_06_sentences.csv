@@ -1,24 +1,24 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, a 30-year-old male, presents with a 1-month history of worsening lower back pain radiating to his left leg, which worsens with standing and improves with lying down.",0.8895
-2,"He has a 30-year history of intermittent back pain, with a notable exacerbation following a fall from a roof 30 years ago, which was evaluated with an MRI showing a possible fracture.",0.9986
-3,"He describes the pain as an electrical toothache, rating it 6/10 currently, with a maximum of 13/10.",0.3584
-4,He has tried NSAIDs and physical therapy without relief.,0.9381
-5,"Past Medical History: The patient has a history of a possible fracture from a fall from a roof 30 years ago, with an MRI showing a possible fracture, but no further information is available.",0.9998
-6,"Review of Systems: The patient reports numbness and tingling in his lower extremities, with weakness in both legs.",0.6259
-7,Coughing and sneezing exacerbate the pain.,0.9952
+1,"HPI: The patient, a 30-year-old male, presents with a 1-month history of worsening lower back pain radiating to his left leg, which worsens with standing and improves with lying down.",0.2073
+2,"He has a 30-year history of intermittent back pain, with a notable exacerbation following a fall from a roof 30 years ago, which was evaluated with an MRI showing a possible fracture.",0.2912
+3,"He describes the pain as an electrical toothache, rating it 6/10 currently, with a maximum of 13/10.",0.2219
+4,He has tried NSAIDs and physical therapy without relief.,0.4013
+5,"Past Medical History: The patient has a history of a possible fracture from a fall from a roof 30 years ago, with an MRI showing a possible fracture, but no further information is available.",0.4709
+6,"Review of Systems: The patient reports numbness and tingling in his lower extremities, with weakness in both legs.",0.1686
+7,Coughing and sneezing exacerbate the pain.,0.2924
 8,Current Medications: [NOT MENTIONED],0.5
 9,Objective:,0.5
-10,Vital Signs: Not mentioned.,0.9756
-11,"Physical Exam: On examination, the patient has pain to palpation at the L4 vertebrae, with pain on flexion and extension of the back.",0.0114
-12,He has 4/5 strength in the left leg and 5/5 strength in the right leg.,0.1229
-13,Reflexes are brisk and motor and sensory are intact in both lower extremities.,0.9925
-14,Test Results: MRI shows a disk herniation at the level of L4-L5 vertebrae with associated nerve root impingement.,0.0302
+10,Vital Signs: Not mentioned.,0.8773
+11,"Physical Exam: On examination, the patient has pain to palpation at the L4 vertebrae, with pain on flexion and extension of the back.",0.0029
+12,He has 4/5 strength in the left leg and 5/5 strength in the right leg.,0.0963
+13,Reflexes are brisk and motor and sensory are intact in both lower extremities.,0.9374
+14,Test Results: MRI shows a disk herniation at the level of L4-L5 vertebrae with associated nerve root impingement.,0.0066
 15,Assessment / Problem List:,0.5
-16,"Assessment: The patient has acute disk herniation at L4-L5 with nerve root impingement, causing lower back pain and leg pain.",0.0113
-17,Problem list: Acute disk herniation at L4-L5 with nerve root impingement; lower back pain; leg pain.,0.5303
+16,"Assessment: The patient has acute disk herniation at L4-L5 with nerve root impingement, causing lower back pain and leg pain.",0.0003
+17,Problem list: Acute disk herniation at L4-L5 with nerve root impingement; lower back pain; leg pain.,0.248
 18,Plan:,0.5
-19,I prescribed an epidural steroid injection to reduce inflammation at the site of the herniation.,0.7783
-20,I will refer the patient to physical therapy to strengthen the area.,0.0106
-21,I want the patient to follow up with me in about a month to assess the efficacy of the injection.,0.1182
-22,Follow-up: I want the patient to see me again in about a month to assess the efficacy of the epidural steroid injection.,0.668
+19,I prescribed an epidural steroid injection to reduce inflammation at the site of the herniation.,0.1204
+20,I will refer the patient to physical therapy to strengthen the area.,0.0001
+21,I want the patient to follow up with me in about a month to assess the efficacy of the injection.,0.0004
+22,Follow-up: I want the patient to see me again in about a month to assess the efficacy of the epidural steroid injection.,0.0464

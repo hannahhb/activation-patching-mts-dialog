@@ -1,28 +1,28 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, a 46-year-old male, presented to the office with a complaint of right knee pain after a trampoline incident one week ago.",0.9957
-2,He reported hearing a snap and experiencing immediate pain.,0.009
-3,"He has not sought medical attention until now, despite experiencing persistent pain.",0.9988
-4,"He has not tried any treatments for the pain except for Tylenol, which provided minimal relief.",0.9998
-5,"He has a history of hypertension and diabetes, for which he is currently taking lisinopril 20mg and metformin 500mg daily.",0.1198
-6,"Past medical history: The patient has a history of hypertension, for which he is currently taking lisinopril 20mg daily.",0.2978
-7,"He also has diabetes, for which he is taking metformin 500mg daily.",0.6547
-8,"He has not measured his blood pressure regularly, despite my previous recommendation to do so.",0.881
-9,Review of systems: The patient denied any other symptoms.,0.5883
-10,"Current medications: Lisinopril 20mg daily, metformin 500mg daily.",0.3541
+1,"HPI: The patient, a 46-year-old male, presented to the office with a complaint of right knee pain after a trampoline incident one week ago.",0.5109
+2,He reported hearing a snap and experiencing immediate pain.,0.0009
+3,"He has not sought medical attention until now, despite experiencing persistent pain.",0.5018
+4,"He has not tried any treatments for the pain except for Tylenol, which provided minimal relief.",0.9088
+5,"He has a history of hypertension and diabetes, for which he is currently taking lisinopril 20mg and metformin 500mg daily.",0.0018
+6,"Past medical history: The patient has a history of hypertension, for which he is currently taking lisinopril 20mg daily.",0.041
+7,"He also has diabetes, for which he is taking metformin 500mg daily.",0.0318
+8,"He has not measured his blood pressure regularly, despite my previous recommendation to do so.",0.3377
+9,Review of systems: The patient denied any other symptoms.,0.5269
+10,"Current medications: Lisinopril 20mg daily, metformin 500mg daily.",0.093
 11,Objective:,0.5
-12,"Vital signs: Blood pressure 180/80, pulse rate [NOT MENTIONED], oxygen saturation [NOT MENTIONED], temperature [NOT MENTIONED].",0.8238
-13,"Physical exam: The patient had a regular heart rate and rhythm, clear lungs bilaterally, and a slight limp when walking.",0.6962
-14,"There was ecchymosis and edema along the lateral aspect of the knee, but no effusion.",0.7769
-15,"The patient had a decent range of motion, but pain with movement.",0.6642
-16,Test Results: Right knee x-ray showed no evidence of fracture or bony abnormality.,0.1223
+12,"Vital signs: Blood pressure 180/80, pulse rate [NOT MENTIONED], oxygen saturation [NOT MENTIONED], temperature [NOT MENTIONED].",0.2411
+13,"Physical exam: The patient had a regular heart rate and rhythm, clear lungs bilaterally, and a slight limp when walking.",0.2537
+14,"There was ecchymosis and edema along the lateral aspect of the knee, but no effusion.",0.0653
+15,"The patient had a decent range of motion, but pain with movement.",0.0332
+16,Test Results: Right knee x-ray showed no evidence of fracture or bony abnormality.,0.089
 17,Assessment / Problem List:,0.5
-18,Assessment: The patient has a lateral ligament strain of the right knee and hypertension and diabetes.,0.1174
-19,Problem list: Lateral ligament strain of the right knee; Hypertension; Diabetes; [NOT MENTIONED],0.5341
+18,Assessment: The patient has a lateral ligament strain of the right knee and hypertension and diabetes.,0.0047
+19,Problem list: Lateral ligament strain of the right knee; Hypertension; Diabetes; [NOT MENTIONED],0.2718
 20,Plan:,0.5
-21,I prescribed meloxicam 15mg daily for pain and swelling related to the lateral ligament strain.,0.6679
-22,I referred the patient to physical therapy to help strengthen the muscles around the knee and prevent further injury.,0.2251
-23,"I continued the patient's current medications, including lisinopril 20mg daily.",0.0012
-24,I ordered an echo to assess the patient's cardiac function and blood pressure control.,0.1228
-25,I also ordered an A1c and lipid panel to assess the patient's diabetes management.,0.0039
-26,Follow-up: The patient will return for a follow-up appointment to discuss the results of the ordered tests and to reassess the patient's knee and diabetes management.,0.9963
+21,I prescribed meloxicam 15mg daily for pain and swelling related to the lateral ligament strain.,0.5255
+22,I referred the patient to physical therapy to help strengthen the muscles around the knee and prevent further injury.,0.0081
+23,"I continued the patient's current medications, including lisinopril 20mg daily.",0.0001
+24,I ordered an echo to assess the patient's cardiac function and blood pressure control.,0.001
+25,I also ordered an A1c and lipid panel to assess the patient's diabetes management.,0.0014
+26,Follow-up: The patient will return for a follow-up appointment to discuss the results of the ordered tests and to reassess the patient's knee and diabetes management.,0.3289

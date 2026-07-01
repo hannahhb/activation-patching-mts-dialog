@@ -1,0 +1,51 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Matthew.,1.0,The patient's name is Matthew.,1,,entailment
+1,The patient has a chronic history of back pain.,0.9684,The patient has been having back pain for about a month.,1,,entailment
+2,The patient's back pain has been exacerbated by recent weather changes.,0.9523,The patient's back pain worsens with coughing.,1,,entailment
+3,The patient's back pain has been exacerbated by prolonged sitting.,0.95,The patient's back pain worsens with standing.,1,,entailment
+4,The patient reports difficulty standing due to pain.,0.9608,The patient's back pain worsens with standing.,1,,entailment
+5,The patient reports difficulty walking due to pain.,0.9559,The patient's back pain worsens with walking.,1,,entailment
+6,The patient experiences significant pain radiating down his left leg.,0.9982,The patient experiences pain radiating down their left leg.,1,,entailment
+7,The patient describes the pain as an electrical toothache.,0.9707,The pain in the left leg is described as an electrical toothache.,1,,entailment
+8,The patient rates his pain as a 6 out of 10.,0.9755,The patient's current pain level is 6 out of 10.,1,,entailment
+9,The patient's pain can worsen to a 13 out of 10.,0.9715,The patient's pain level can reach 13 out of 10 when it gets really bad.,1,,entailment
+10,The patient has been experiencing numbness in both legs.,0.9487,The patient has weakness in both legs.,0,fabrication,neutral
+11,The patient has been experiencing tingling in both legs.,0.9261,The patient has weakness in both legs.,0,fabrication,neutral
+12,The patient has weakness in both lower extremities.,0.9862,The patient has weakness in both legs.,1,,entailment
+13,The patient has been bedridden for the past month.,0.9094,The patient has been having back pain for about a month.,0,fabrication,neutral
+14,The patient uses a cane for support.,0.9661,The patient uses a cane to walk.,1,,entailment
+15,The patient has a history of a fall off a roof 30 years ago.,0.9633,The patient is 30 years post a fall from a roof.,1,,entailment
+16,The patient may have had a fracture from a fall off a roof 30 years ago.,0.9624,The patient is 30 years post a fall from a roof.,1,,entailment
+17,The patient has been treated for back pain in the past with NSAIDs.,0.9625,The patient has tried NSAIDs in the past without relief.,1,,entailment
+18,The NSAIDs dose is not mentioned.,0.9215,The patient has tried NSAIDs in the past without relief.,0,fabrication,neutral
+19,NSAIDs are taken with an unknown frequency.,0.9183,The patient has tried NSAIDs in the past without relief.,0,fabrication,neutral
+20,NSAIDs were prescribed for back pain.,0.9322,The patient has back pain.,0,fabrication,neutral
+21,The patient has been treated for back pain in the past with physical therapy (PT).,0.9533,The patient has done physical therapy in the past.,1,,entailment
+22,The patient did not find relief with NSAIDs.,0.9776,The patient has tried NSAIDs in the past without relief.,1,,entailment
+23,The patient did not find relief with physical therapy (PT).,0.9335,The patient has done physical therapy in the past.,0,fabrication,neutral
+24,The patient reports worsening pain with coughing.,0.9691,The patient's back pain worsens with coughing.,1,,entailment
+25,The patient reports worsening pain with sneezing.,0.9722,The patient's back pain worsens with sneezing.,1,,entailment
+26,The patient reports worsening pain with standing.,0.9732,The patient's back pain worsens with standing.,1,,entailment
+27,The patient experiences relief with laying down.,0.9708,The patient's pain improves with laying down.,1,,entailment
+28,The patient has a positive pain response to palpation at the L4 vertebrae.,0.9813,The patient has pain to palpation at the L4 vertebrae.,1,,entailment
+29,The patient experiences pain with flexion of the back.,0.9802,The patient has pain with flexion and extension of their back.,1,,entailment
+30,The patient experiences pain with extension of the back.,0.9778,The patient has pain with flexion and extension of their back.,1,,entailment
+31,The patient's strength in the left leg is 4 out of 5.,0.9916,The patient has 4 out of 5 strength in their left leg.,1,,entailment
+32,The patient's strength in the right leg is 5 out of 5.,0.9914,The patient has 5 out of 5 strength in their right leg.,1,,entailment
+33,The patient's reflexes are brisk.,1.0,The patient's reflexes are brisk.,1,,entailment
+34,The patient's motor function is intact in both lower extremities.,0.9875,The patient's motor and sensory functions are intact in both lower extremities.,1,,entailment
+35,The patient's sensory function is intact in both lower extremities.,0.9926,The patient's motor and sensory functions are intact in both lower extremities.,1,,entailment
+36,The patient's MRI shows a disk herniation at the level of L4-L5 vertebrae.,0.9936,The MRI shows a disk herniation at the L4-L5 vertebrae.,1,,entailment
+37,The disk herniation is associated with nerve root impingement.,1.0,The disk herniation is associated with nerve root impingement.,1,,entailment
+38,The patient has acute disk herniation at L4-L5 with nerve root impingement.,0.9873,The doctor diagnosed the patient with acute disk herniation at L4-L5 with nerve root impingement.,1,,entailment
+39,The patient has chronic back pain.,0.9761,The patient has back pain.,1,,entailment
+40,The patient has leg pain.,0.9468,The patient experiences pain radiating down their left leg.,1,,entailment
+41,The patient has numbness and tingling in both legs.,0.9408,The patient has weakness in both legs.,0,fabrication,neutral
+42,The patient has weakness in both lower extremities.,0.9862,The patient has weakness in both legs.,1,,entailment
+43,The doctor prescribed an epidural steroid injection.,1.0,The doctor prescribed an epidural steroid injection.,1,,entailment
+44,The epidural steroid injection is prescribed to alleviate inflammation.,0.9702,The epidural steroid injection is for the patient's back pain and leg pain.,1,,entailment
+45,The doctor referred the patient back to physical therapy (PT).,0.9674,The doctor will refer the patient to physical therapy.,1,,entailment
+46,Physical therapy (PT) is prescribed for strengthening exercises.,0.9183,The doctor will refer the patient to physical therapy.,0,fabrication,neutral
+47,The patient is advised to see the doctor again in a month.,0.98,The patient will see the doctor again in about a month.,1,,entailment
+48,The follow-up appointment is to assess the effectiveness of the treatment plan.,0.9094,The doctor expects the patient to do well with the treatment plan.,0,fabrication,neutral
+49,The follow-up appointment is scheduled in about a month.,0.9332,The patient will see the doctor again in about a month.,1,,entailment

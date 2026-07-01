@@ -1,0 +1,44 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient presents with right shoulder pain.,0.9801,The shoulder pain is in the right shoulder.,1,,entailment
+1,The patient's right shoulder pain has been ongoing for several weeks.,0.9756,The patient has had the shoulder pain for a few weeks.,1,,entailment
+2,The patient's right shoulder pain initially developed after strenuous work in his backyard.,0.9606,The patient was doing work in his backyard when the pain started.,1,,entailment
+3,The pain is located on the outside of the shoulder.,0.9751,The patient's current pain is on the outside of his right shoulder.,1,,entailment
+4,The patient's right shoulder pain is exacerbated by movement.,0.9552,The shoulder pain is in the right shoulder.,1,,entailment
+5,The patient's right shoulder pain is not present at rest.,0.9602,The shoulder pain is in the right shoulder.,1,,entailment
+6,The patient has a history of similar pain in the same shoulder from a past injury.,0.9366,The patient has had the shoulder pain for a few weeks.,0,fabrication,neutral
+7,The patient's current episode of right shoulder pain is more localized to the outside of the shoulder.,0.9841,The patient's current pain is on the outside of his right shoulder.,1,,entailment
+8,The patient reports no numbness in the arm.,0.9802,The patient has not experienced numbness in his arm or hands.,1,,entailment
+9,The patient reports no tingling in the hands.,0.9404,The patient has not experienced numbness in his arm or hands.,1,,entailment
+10,The patient has been managing the pain with Advil.,0.9879,The patient has been taking Advil for pain.,1,,entailment
+11,The patient has been managing the pain with icing.,0.9582,The patient has been icing his shoulder for pain.,1,,entailment
+12,Advil provides some relief for the patient's pain.,0.9742,The patient has been taking Advil for pain.,1,,entailment
+13,Icing provides some relief for the patient's pain.,0.9322,The patient has been icing his shoulder for pain.,1,,entailment
+14,The patient has a history of injuring the right shoulder playing baseball in the past.,0.9835,The patient has a history of hurting his right shoulder playing baseball.,1,,entailment
+15,The patient's current episode is distinct from the past baseball injury.,0.9165,The patient has a history of hurting his right shoulder playing baseball.,0,fabrication,neutral
+16,The patient has no additional symptoms in other organs or systems.,0.9199,The patient has no fever.,0,fabrication,neutral
+17,The doctor prescribed Tylenol.,1.0,The doctor prescribed Tylenol.,1,,entailment
+18,The Tylenol dose is as needed.,0.9367,Tylenol is for pain.,1,,entailment
+19,Tylenol is taken for pain management.,0.985,Tylenol is for pain.,1,,entailment
+20,The patient's temperature is 97.8°F.,0.9319,The patient's heart rate is 62.,0,fabrication,neutral
+21,The patient's heart rate is 62 beats per minute.,0.9894,The patient's heart rate is 62.,1,,entailment
+22,The patient's respirations are 16 breaths per minute.,0.9777,The patient's respirations are 16.,1,,entailment
+23,The patient's blood pressure is 116/84 mmHg.,0.987,The patient's blood pressure is 116 over 84.,1,,entailment
+24,The patient's oxygen saturation is 99%.,0.9964,The patient's oxygen saturation is 99 percent.,1,,entailment
+25,The patient has limited active range of motion of the right shoulder.,0.9951,The patient has limited active and passive range of motion in his right shoulder.,1,,entailment
+26,The patient has limited passive range of motion of the right shoulder.,0.995,The patient has limited active and passive range of motion in his right shoulder.,1,,entailment
+27,The patient has tenderness at the greater tuberosity of the humerus.,0.98,There is tenderness at the great tuberosity of the humerus.,1,,entailment
+28,The patient has a good hand grip.,1.0,The patient has a good hand grip.,1,,entailment
+29,The patient's capillary refill is less than 3 seconds.,0.9982,The patient's capillary refill is less than three seconds.,1,,entailment
+30,The patient's sensation to touch is intact.,1.0,The patient's sensation to touch is intact.,1,,entailment
+31,The patient's shoulder X-ray shows no fracture.,0.9642,The x-ray showed no fracture.,1,,entailment
+32,The patient's symptoms are most likely due to rotator cuff tendinopathy.,0.9435,The doctor diagnosed rotator cuff tendinopathy.,1,,entailment
+33,The patient has rotator cuff tendinopathy.,0.9663,The doctor diagnosed rotator cuff tendinopathy.,1,,entailment
+34,The patient has suspected injury to the tendons of the muscles that help make the shoulder muscles.,0.9368,The patient has shoulder pain.,0,fabrication,neutral
+35,The doctor referred the patient to physical therapy.,1.0,The doctor referred the patient to physical therapy.,1,,entailment
+36,The patient will attend physical therapy for approximately 6-8 weeks.,0.9851,The physical therapy will last approximately six to eight weeks.,1,,entailment
+37,Physical therapy is for rotator cuff tendinopathy.,0.9324,The doctor diagnosed rotator cuff tendinopathy.,0,fabrication,neutral
+38,The doctor recommended continuing to take Tylenol as needed for pain management.,0.9599,Tylenol is for pain.,1,,entailment
+39,A steroid injection is a possible future treatment for the patient's shoulder.,0.9709,A steroid injection is for shoulder pain.,1,,entailment
+40,The patient will follow up with the doctor in 6-8 weeks.,0.9333,The patient will have a follow-up appointment after physical therapy.,0,fabrication,neutral
+41,The follow-up appointment is to assess progress with physical therapy.,0.9779,The patient will have a follow-up appointment after physical therapy.,1,,entailment
+42,The treatment plan will be adjusted as needed at the follow-up appointment.,0.9407,The patient will have a follow-up appointment after physical therapy.,0,fabrication,neutral

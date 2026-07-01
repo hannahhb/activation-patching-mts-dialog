@@ -1,0 +1,45 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 54-year-old male.,1.0,The patient is a 54-year-old male.,1,,entailment
+1,"The patient presents with stabbing, shooting pain in the right cheekbone area of his face.",0.9533,The facial pain is stabbing and shooting.,1,,entailment
+2,The patient's pain has been ongoing for approximately 2-3 months.,0.954,The facial pain has been present for a couple of months.,1,,entailment
+3,The patient's pain is exacerbated by certain temperatures.,0.9643,The patient's facial pain is triggered by certain temperatures.,1,,entailment
+4,The patient's pain can be triggered by cold weather.,0.9687,The patient's facial pain is triggered by cold temperatures.,1,,entailment
+5,The patient denied numbness in the affected area initially.,0.9523,The patient has some numbness on the right side of their face.,1,,entailment
+6,The patient denied tingling in the affected area initially.,0.9038,Tegretol can have side effects including tingling.,0,fabrication,neutral
+7,The patient's smile is unchanged.,0.8782,The patient's teeth are symmetric.,0,fabrication,neutral
+8,The patient's vision is unchanged.,0.8686,The patient is a 54-year-old male.,0,fabrication,neutral
+9,The patient describes the pain as excruciating.,0.9085,The patient experiences episodes of facial pain.,0,fabrication,neutral
+10,The patient rates his pain as a 10 out of 10 in severity.,0.9688,"The patient's facial pain is severe, rated as a 10 out of 10.",1,,entailment
+11,The patient has tried ibuprofen.,0.9838,The patient has tried ibuprofen for pain relief.,1,,entailment
+12,The patient has tried Motrin.,0.9685,The patient has tried Motrin for pain relief.,1,,entailment
+13,The patient has tried topical treatments such as tiger balm.,0.9609,The patient has tried tiger balm for pain relief.,1,,entailment
+14,Ibuprofen has provided minimal relief.,0.958,The patient has tried ibuprofen for pain relief.,1,,entailment
+15,Motrin has provided minimal relief.,0.9611,The patient has tried Motrin for pain relief.,1,,entailment
+16,Topical treatments such as tiger balm have provided minimal relief.,0.9535,The patient has tried tiger balm for pain relief.,1,,entailment
+17,The patient has a history of occasional headaches.,0.9659,The patient occasionally experiences headaches.,1,,entailment
+18,The patient takes Tylenol for occasional headaches.,1.0,The patient takes Tylenol for occasional headaches.,1,,entailment
+19,The patient denies a history of migraines.,0.9709,The patient does not have a history of migraines.,1,,entailment
+20,The patient denies a history of brain tumors.,0.9726,The patient does not have a history of brain tumors.,1,,entailment
+21,The patient reports no symptoms in other organs or systems.,0.9016,The patient occasionally experiences headaches.,0,fabrication,neutral
+22,The patient takes Tylenol.,0.957,The patient takes Tylenol for occasional headaches.,1,,entailment
+23,The patient was able to follow the doctor's finger in both directions.,0.9588,The patient followed the doctor's finger during the physical exam.,1,,entailment
+24,The patient's smile appeared symmetric.,0.9452,The patient's teeth are symmetric.,0,fabrication,neutral
+25,The patient reported numbness on the right side of his face when rubbed next to his ear.,0.97,The patient has some numbness on the right side of their face.,1,,entailment
+26,The patient reported numbness on the right side of his face when a cotton tape was run along the side of his face.,0.9539,The patient has some numbness on the right side of their face.,1,,entailment
+27,The patient felt dull when poked with a needle on the right side of his face.,0.9861,The patient feels a little bit dull sensation on the right side of their face when poked with a needle.,1,,entailment
+28,The patient felt sharp when poked with a needle on the left side of his face.,0.9836,The patient feels a sharp sensation on the left side of their face when poked with a needle.,1,,entailment
+29,The patient has trigeminal neuralgia.,0.9904,The patient may have trigeminal neuralgia.,1,,entailment
+30,"Trigeminal neuralgia is a condition where compression of the trigeminal nerve by a small blood vessel causes shooting, electrical pain in the face.",0.9406,The patient may have trigeminal neuralgia.,0,fabrication,neutral
+31,The doctor prescribed Tegretol.,0.9947,The doctor prescribed Tegretol for the patient.,1,,entailment
+32,The Tegretol dose is 100mg.,0.9401,The patient will start with Tegretol.,0,fabrication,neutral
+33,Tegretol is taken orally.,0.95,The patient will start with Tegretol.,1,,entailment
+34,Tegretol is taken 3 times a day.,0.9391,The patient will start with Tegretol.,0,fabrication,neutral
+35,Tegretol is prescribed for trigeminal neuralgia.,0.9637,Tegretol is used to reduce the excitability of the nerve.,1,,entailment
+36,"The patient was informed of potential side effects of Tegretol, including memory loss.",0.9839,Tegretol can have side effects including memory loss.,1,,entailment
+37,"The patient was informed of potential side effects of Tegretol, including tingling.",0.9841,Tegretol can have side effects including tingling.,1,,entailment
+38,"The patient was informed of potential side effects of Tegretol, including imbalance.",0.982,Tegretol can have side effects including imbalance.,1,,entailment
+39,"The patient was informed of potential side effects of Tegretol, including dermatologic reactions.",0.9839,Tegretol can have side effects including dermatologic reactions.,1,,entailment
+40,Genetic testing was recommended to ensure Tegretol is safe for the patient.,0.9763,The patient may need genetic testing before taking Tegretol.,1,,entailment
+41,The patient will follow up in one month.,0.9852,The doctor will follow up with the patient in one month.,1,,entailment
+42,The follow-up is to assess the efficacy of the Tegretol.,0.939,The doctor prescribed Tegretol for the patient.,0,fabrication,neutral
+43,The follow-up is to discuss further treatment options if necessary.,0.9402,The patient will return for a follow-up appointment in one month.,0,fabrication,neutral

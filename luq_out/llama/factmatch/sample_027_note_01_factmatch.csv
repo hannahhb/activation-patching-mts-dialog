@@ -1,0 +1,64 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Kenneth.,1.0,The patient's name is Kenneth.,1,,entailment
+1,The patient is a frequent water skier.,1.0,The patient is a frequent water skier.,1,,entailment
+2,The patient enjoys outdoor activities.,0.8804,The patient is referred to physical therapy.,0,fabrication,neutral
+3,The patient presented with a 5-day history of right knee pain.,0.9492,The patient has knee pain.,0,fabrication,neutral
+4,The patient's right knee pain followed a skiing accident.,0.9421,The knee pain started after a water skiing incident.,0,fabrication,neutral
+5,The patient twisted his knee upon landing.,0.9648,"The patient jumped and twisted while landing, which caused the knee pain.",1,,entailment
+6,The patient reports no hearing of a pop.,0.9474,The patient did not hear anything pop during the incident.,1,,entailment
+7,The patient reports no feeling of anything popping.,0.9347,The patient has not had any numbing or tingling in their foot.,1,,entailment
+8,The patient describes a sensation of stretching.,0.9275,The patient felt something stretch during the incident.,1,,entailment
+9,The patient describes subsequent swelling.,0.929,The patient has swelling and pain in their knee.,1,,entailment
+10,The patient has been taking over-the-counter Aleve.,0.9011,The patient has taken Aleve for pain.,0,fabrication,neutral
+11,The Aleve dose is not specified.,0.9326,The Aleve dose is twice a day.,0,negation,contradiction
+12,Aleve is taken twice daily.,0.9761,The Aleve dose is twice a day.,1,,entailment
+13,Aleve provided some relief.,0.9398,The cold pack and Aleve have helped with the pain.,1,,entailment
+14,The patient applied a cold pack.,0.9537,The patient has used a cold pack on their knee.,1,,entailment
+15,The cold pack provided some relief.,0.9342,The cold pack and Aleve have helped with the pain.,1,,entailment
+16,The patient denies any numbness.,0.9357,The patient has not had any numbing or tingling in their foot.,1,,entailment
+17,The patient denies any tingling in his foot.,0.9629,The patient has not had any numbing or tingling in their foot.,1,,entailment
+18,The patient was able to get out of the water after the incident.,0.9947,The patient was able to get out of the water by themselves after the incident.,1,,entailment
+19,The patient experienced pain with squatting.,0.9442,The patient has difficulty squatting or bending due to knee pain.,1,,entailment
+20,The patient experienced pain with bending.,0.9438,The patient has difficulty squatting or bending due to knee pain.,1,,entailment
+21,The patient has no history of similar knee injuries.,0.9645,The patient has not injured this knee before.,1,,entailment
+22,The patient has a history of hypertension.,0.9434,The patient has high blood pressure.,0,fabrication,neutral
+23,The patient is currently taking lisinopril.,0.9771,The patient is taking lisinopril for high blood pressure.,1,,entailment
+24,The lisinopril dose is 20mg.,0.9931,The lisinopril dose is 20 milligrams.,1,,entailment
+25,Lisinopril is taken daily.,0.9944,Lisinopril is taken once daily.,1,,entailment
+26,Lisinopril is prescribed for hypertension.,0.9733,The patient is taking lisinopril for high blood pressure.,1,,entailment
+27,The patient reports managing his blood pressure well.,0.9862,The patient is managing their blood pressure well.,1,,entailment
+28,The patient's blood pressure readings are 125/80 mmHg at home.,0.9912,The patient's blood pressure at home is usually around 125/80.,1,,entailment
+29,The patient had his tonsils removed in the past.,0.9852,The patient had their tonsils removed.,1,,entailment
+30,The patient denies any surgeries.,0.9116,The patient has had surgery before.,0,fabrication,contradiction
+31,The patient denies any medical conditions.,0.8955,The patient's heart exam shows no murmur.,0,fabrication,neutral
+32,The patient's blood pressure is 120/77 mmHg.,0.9807,The patient's blood pressure at home is usually around 125/80.,1,,entailment
+33,The patient has ecchymosis on the right knee.,0.9677,The patient's musculoskeletal exam shows ecchymosis and edema in the right knee.,1,,entailment
+34,The patient has edema on the right knee.,0.9575,The patient's right knee is affected.,1,,entailment
+35,The patient has an effusion on the right knee.,0.9783,The patient's musculoskeletal exam shows an effusion in the right knee.,1,,entailment
+36,There is pain to palpation of the right medial knee.,0.9387,The patient's musculoskeletal exam shows an effusion in the right knee.,0,fabrication,neutral
+37,The patient has decreased range of motion.,0.9772,The patient has decreased range of motion in their knee.,1,,entailment
+38,The varus test is negative.,0.9681,The patient has a negative varus and valgus test.,1,,entailment
+39,The valgus test is negative.,0.9676,The patient has a negative varus and valgus test.,1,,entailment
+40,The Lachman sign is negative.,0.9847,The patient has a negative Lachman sign.,1,,entailment
+41,The dorsalis pedis pulses are palpable.,0.9683,The patient has a palpable dorsalis pedis and posterior tibial pulse.,1,,entailment
+42,The posterior tibial pulses are palpable.,0.9532,The patient has a palpable dorsalis pedis and posterior tibial pulse.,1,,entailment
+43,There is no lower extremity edema.,0.984,The patient has no lower extremity edema.,1,,entailment
+44,The patient has a medial collateral ligament strain of the right knee.,0.9584,The doctor diagnosed a medial collateral ligament strain.,1,,entailment
+45,The patient has hypertension.,0.9623,The patient has high blood pressure.,1,,entailment
+46,The doctor prescribed meloxicam.,1.0,The doctor prescribed meloxicam.,1,,entailment
+47,The meloxicam dose is 15mg.,0.9923,The meloxicam dose is 15 milligrams.,1,,entailment
+48,Meloxicam is taken once daily.,1.0,Meloxicam is taken once daily.,1,,entailment
+49,Meloxicam is prescribed for pain.,0.9762,Meloxicam is prescribed for the patient's knee pain and swelling.,1,,entailment
+50,Meloxicam is prescribed for inflammation.,0.9678,Meloxicam is prescribed for the patient's knee pain and swelling.,1,,entailment
+51,The doctor ordered an x-ray of the right knee.,0.9974,The doctor ordered an x-ray of the patient's right knee.,1,,entailment
+52,The x-ray is to rule out any fractures.,0.9082,The doctor ordered an x-ray of the patient's right knee.,0,fabrication,neutral
+53,The doctor referred the patient to physical therapy.,0.9857,The patient is referred to physical therapy.,1,,entailment
+54,Physical therapy is to strengthen the muscles around the knee.,0.9149,The patient is referred to physical therapy.,0,fabrication,neutral
+55,The patient will continue taking lisinopril 20mg daily.,0.9704,The doctor continues the patient on lisinopril 20 milligrams a day for hypertension.,1,,entailment
+56,Lisinopril 20mg daily is for hypertension.,0.977,The doctor continues the patient on lisinopril 20 milligrams a day for hypertension.,1,,entailment
+57,The doctor ordered a lipid panel.,1.0,The doctor ordered a lipid panel.,1,,entailment
+58,The lipid panel is to check for any potential effects of the hypertension medication.,0.9349,The doctor ordered a lipid panel.,0,fabrication,neutral
+59,The doctor administered a tetanus shot.,0.9698,The doctor will give the patient a tetanus shot.,1,,entailment
+60,The tetanus shot is for health maintenance.,0.9333,The doctor will give the patient a tetanus shot.,1,,entailment
+61,The doctor will follow up with the patient after the x-ray results are available.,0.9345,The doctor does not want the patient to go skiing until the x-ray results are available.,0,fabrication,neutral
+62,The doctor will follow up with the patient to assess the patient's progress with physical therapy.,0.9429,The patient is referred to physical therapy.,0,fabrication,neutral

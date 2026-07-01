@@ -1,0 +1,19 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 47-year-old male, presents with a 2-hour history of low back pain and right leg tingling, which began after raking leaves in his yard.",Faithful,
+1,"He describes the pain as tightening up in his back and radiating to his right foot, with some improvement with a hot shower and sitting.",Faithful,
+2,"He reports no prior similar episodes, but a similar episode 3 years ago resolved after a day.",Negation,no prior similar episodes
+3,"He denies taking any pain medication, but has tried ice and 2 Advil, which did not help.",Faithful,
+4,Past medical history: Not mentioned.,Faithful,
+5,Review of systems: Not mentioned.,Faithful,
+6,Current medications: [NOT MENTIONED],Faithful,
+7,Vital signs: Not mentioned.,Faithful,
+8,"Physical exam: The patient's dorsiflexion is normal, and pulses are equal in all extremities.",Faithful,
+9,The patient reports some tingling in his right leg.,Faithful,
+10,The patient has some pain on flexion and palpation around the L5 area.,Faithful,
+11,Test Results: Normal X-ray of the low back.,Faithful,
+12,Assessment: The patient has a probable sprain of the low back.,Faithful,
+13,Problem list: Acute low back strain; suspected radiculopathy; unknown.,Fabrication,suspected radiculopathy; unknown
+14,I prescribed meloxicam 7.5 mg PO q12h for pain and inflammation.,Faithful,
+15,I also prescribed physical therapy to help with stretches and exercises to improve mobility and strength.,Faithful,
+16,The patient will follow up with me in 2 weeks to re-evaluate the condition and consider an MRI if the symptoms do not improve.,Faithful,
+17,"Follow-up: The patient will follow up with me in 2 weeks to re-evaluate the condition and consider further testing, such as an MRI, if necessary.",Causality,"consider further testing, such as an MRI, if necessary"

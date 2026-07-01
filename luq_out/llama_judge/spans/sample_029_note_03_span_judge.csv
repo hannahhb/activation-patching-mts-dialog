@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 54-year-old male, presents with a complaint of stabbing, shooting pain in the right cheekbone area of his face, which has been present for approximately 2-3 months.",Faithful,
+1,"The pain is exacerbated by certain temperatures and cold weather, and is described as excruciating, with a severity rating of 10 out of 10.",Faithful,
+2,"The patient has tried ibuprofen, Motrin, and topical Tiger Balm without relief.",Faithful,
+3,"He has a history of occasional headaches, but no history of migraines or other neurological conditions.",Faithful,
+4,He denies numbness or tingling in the affected area.,Negation,denies numbness or tingling
+5,"Past medical history: The patient has not mentioned any significant past medical history, social history, or allergies.",Fabrication,"social history, or allergies"
+6,"Review of systems: The patient has no symptoms of numbness or tingling in the affected area, and denies weakness on the right side of his face.",Negation,denies weakness on the right side of his face
+7,"He has occasional headaches, but no history of migraines.",Faithful,
+8,Current medications: The patient is taking Tylenol for occasional headaches.,Faithful,
+9,Vital signs: Not mentioned.,Faithful,
+10,"Physical exam: The patient's smile is symmetric, and he has no weakness on the right side of his face.",Faithful,
+11,He can hear sounds on both sides of his face.,Faithful,
+12,The patient reports feeling numbness on the right side of his face when the doctor runs cotton tape along the side of his face.,Faithful,
+13,"The patient reports feeling dull sensation on the left side of his face when the doctor pokes the area with a needle, and sharp sensation on the right side.",Causality,dull sensation on the left side of his face
+14,Test Results: The patient's MRI shows a small blood vessel abutting and pinching the trigeminal nerve.,Faithful,
+15,"Assessment: The patient has symptoms consistent with trigeminal neuralgia, a condition caused by compression of the trigeminal nerve by a small blood vessel.",Faithful,
+16,Problem list: Trigeminal neuralgia; active.,Faithful,
+17,I prescribed Tegretol 100mg twice daily for the treatment of trigeminal neuralgia.,Faithful,
+18,I will follow up with the patient in one month to assess the efficacy of the medication and discuss further treatment options if necessary.,Faithful,
+19,The patient will undergo genetic testing to rule out Eustachian tube dysfunction before starting Tegretol.,Fabrication,Eustachian tube dysfunction
+20,Follow-up: The patient will return in one month to reassess the efficacy of the medication and discuss further treatment options if necessary.,Faithful,

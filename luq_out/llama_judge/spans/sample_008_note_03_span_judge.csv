@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a woman in her 30s, has been experiencing frequent and severe headaches for years, which have worsened in frequency and severity over time.",Fabrication,a woman in her 30s
+1,"The headaches are located on the right side, behind the eye, and are described as a pulsing sensation.",Faithful,
+2,"The patient reports that the headaches are exacerbated by exercise, particularly jogging, and are accompanied by symptoms such as ringing in the ears and blurred vision.",Faithful,
+3,"The patient denies numbness or tingling in her hands, feet, or face.",Faithful,
+4,The patient has a history of menstrual-related headaches but reports that these have changed over time.,Faithful,
+5,Past medical history: [NOT MENTIONED],Fabrication,Past medical history: [NOT MENTIONED]
+6,"Review of systems: The patient reports ringing in the ears and blurred vision, which are new symptoms that have developed over the past few months.",Faithful,
+7,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+8,"Vital signs: Blood pressure is normal, but this is not specified as to what the normal range is.",Faithful,
+9,Physical exam:,Faithful,
+10,"- Funduscopic exam shows papilledema, which is swelling behind the eye.",Faithful,
+11,"- The patient's heart exam is normal with no murmurs, rubs, or gallops.",Faithful,
+12,- The patient's gait is normal.,Faithful,
+13,"- Cranial nerves one through twelve are intact, including a normal cranial reflex.",Faithful,
+14,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+15,"Assessment: The patient's symptoms are concerning for idiopathic intracranial hypertension, a condition characterized by increased pressure in the brain without a known cause.",Faithful,
+16,Problem list: Idiopathic intracranial hypertension; Suspected; Confirmed; [NOT MENTIONED],Fabrication,Problem list: Idiopathic intracranial hypertension; Suspected; Confirmed; [NOT MENTIONED]
+17,I prescribed an MRI to confirm the diagnosis and evaluate for other potential contributing conditions.,Faithful,
+18,I will also be performing a spinal tap to evaluate the pressure in the brain and to potentially alleviate symptoms by removing some fluid.,Faithful,
+19,I will refer the patient to a neuro-ophthalmologist for a complete eye exam.,Faithful,
+20,"Follow-up: The patient will be scheduled for an MRI after pre-approval from the insurance company is obtained, and the results will guide further management.",Faithful,

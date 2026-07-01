@@ -1,0 +1,52 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Mr. Edwards.,0.961,The patient's name is Mister Edwards.,1,,entailment
+1,The patient is a 54-year-old male.,1.0,The patient is a 54-year-old male.,1,,entailment
+2,"The patient presents with a 2-3 month history of stabbing, shooting pain in the right cheekbone area of his face.",0.9438,The facial pain is stabbing and shooting.,0,fabrication,neutral
+3,The patient describes the pain as excruciating.,0.9085,The patient experiences episodes of facial pain.,0,fabrication,neutral
+4,The pain is sometimes triggered by certain temperatures or wind.,0.9591,The patient's facial pain is triggered by certain temperatures.,1,,entailment
+5,The patient has tried ibuprofen.,0.9838,The patient has tried ibuprofen for pain relief.,1,,entailment
+6,The patient has tried Motrin.,0.9685,The patient has tried Motrin for pain relief.,1,,entailment
+7,The patient has tried tiger balm.,0.97,The patient has tried tiger balm for pain relief.,1,,entailment
+8,"The patient reports no relief from ibuprofen, Motrin, and tiger balm.",0.9473,Tiger balm has not helped the patient's facial pain.,0,fabrication,neutral
+9,The patient reports no numbness in the affected area initially.,0.9563,The patient has some numbness on the right side of their face.,1,,entailment
+10,The patient reports no tingling in the affected area initially.,0.9159,The patient feels a little bit dull sensation on the right side of their face when poked with a needle.,1,,entailment
+11,The patient reports no weakness on the right side of his face.,0.9538,The patient has some numbness on the right side of their face.,1,,entailment
+12,The patient's pain episodes can last from a few minutes to an hour.,0.9723,The episodes of facial pain can last from a few minutes to an hour.,1,,entailment
+13,The patient's pain severity is 10/10 when it occurs.,0.9598,"The patient's facial pain is severe, rated as a 10 out of 10.",1,,entailment
+14,The patient has a history of occasional headaches.,0.9659,The patient occasionally experiences headaches.,1,,entailment
+15,The patient has no history of migraines.,0.996,The patient does not have a history of migraines.,1,,entailment
+16,The patient has no history of brain tumors.,0.9964,The patient does not have a history of brain tumors.,1,,entailment
+17,The patient has no history of multiple sclerosis.,0.9966,The patient does not have a history of multiple sclerosis.,1,,entailment
+18,The patient is concerned about the possibility of a brain tumor.,0.9325,The patient does not have a history of brain tumors.,0,fabrication,neutral
+19,The patient has a history of headaches.,0.9605,The patient occasionally experiences headaches.,1,,entailment
+20,The patient has no migraines.,0.9734,The patient does not have a history of migraines.,1,,entailment
+21,The patient has no history of brain tumors.,0.9964,The patient does not have a history of brain tumors.,1,,entailment
+22,The patient has no history of multiple sclerosis.,0.9966,The patient does not have a history of multiple sclerosis.,1,,entailment
+23,The patient reports no symptoms of numbness or tingling in the affected area.,0.9432,The patient has some numbness on the right side of their face.,0,negation,contradiction
+24,The patient reports no weakness on the right side of his face.,0.9538,The patient has some numbness on the right side of their face.,1,,entailment
+25,The patient reports no other symptoms of headache or neurological disorders.,0.9579,The patient occasionally experiences headaches.,1,,entailment
+26,The patient is currently taking Tylenol.,0.936,The patient takes Tylenol for occasional headaches.,0,fabrication,neutral
+27,The patient takes Tylenol for occasional headaches.,1.0,The patient takes Tylenol for occasional headaches.,1,,entailment
+28,The patient follows the doctor's finger in both directions with his eyes open.,0.9516,The patient followed the doctor's finger during the physical exam.,1,,entailment
+29,The patient follows the doctor's finger in both directions with his eyes closed.,0.9509,The patient followed the doctor's finger during the physical exam.,1,,entailment
+30,The patient has symmetric teeth.,0.9905,The patient's teeth are symmetric.,1,,entailment
+31,The patient can hear with both ears.,0.9074,The patient can hear the doctor's fingers rubbing next to their ear.,0,fabrication,neutral
+32,The patient reports feeling numb on the right side of his face when touched with cotton tape.,0.9635,The patient feels a cotton tape on the left side of their face.,1,,entailment
+33,The patient reports a dull sensation on the right side when poked with a needle.,0.984,The patient feels a little bit dull sensation on the right side of their face when poked with a needle.,1,,entailment
+34,The patient reports a sharp sensation on the left side when poked with a needle.,0.9817,The patient feels a sharp sensation on the left side of their face when poked with a needle.,1,,entailment
+35,The patient's MRI shows a small blood vessel abutting the trigeminal nerve.,0.9901,The patient's MRI shows a small blood vessel abutting and possibly pinching the trigeminal nerve.,1,,entailment
+36,The patient's MRI shows a small blood vessel possibly pinching the trigeminal nerve.,0.9925,The patient's MRI shows a small blood vessel abutting and possibly pinching the trigeminal nerve.,1,,entailment
+37,The patient has trigeminal neuralgia.,0.9904,The patient may have trigeminal neuralgia.,1,,entailment
+38,Trigeminal neuralgia is characterized by shooting electrical pain in the face due to nerve compression.,0.9373,The patient may have trigeminal neuralgia.,0,fabrication,neutral
+39,The patient is actively experiencing trigeminal neuralgia.,0.9623,The patient may have trigeminal neuralgia.,1,,entailment
+40,The doctor prescribed tegretol.,0.9947,The doctor prescribed Tegretol for the patient.,1,,entailment
+41,The tegretol dose is 100mg.,0.9401,The patient will start with Tegretol.,0,fabrication,neutral
+42,Tegretol is taken orally.,0.95,The patient will start with Tegretol.,1,,entailment
+43,Tegretol is taken twice a day.,0.9419,The doctor prescribed Tegretol for the patient.,0,fabrication,neutral
+44,Tegretol is prescribed for trigeminal neuralgia.,0.9637,Tegretol is used to reduce the excitability of the nerve.,1,,entailment
+45,The doctor will follow up with the patient in one month.,1.0,The doctor will follow up with the patient in one month.,1,,entailment
+46,The follow-up is to assess the effectiveness of the medication.,0.9372,The doctor will follow up with the patient in one month.,0,fabrication,neutral
+47,The patient will discuss surgical options if the pain persists.,0.8999,The facial pain has been present for a couple of months.,0,fabrication,neutral
+48,Surgical options are to decompress the nerve.,0.892,The patient may have trigeminal neuralgia.,0,fabrication,neutral
+49,The patient will undergo genetic testing.,0.9281,The patient may need genetic testing before taking Tegretol.,0,fabrication,neutral
+50,Genetic testing is to ensure the medication is safe for the patient.,0.9302,The patient may need genetic testing before taking Tegretol.,0,fabrication,neutral

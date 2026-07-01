@@ -1,0 +1,23 @@
+sentence_idx,sentence,label
+0,HPI: The patient presents with a history of a knee injury sustained while skiing in Vermont last weekend.,Faithful
+1,"She caught her ski and fell, resulting in a popping sensation in her knee.",Faithful
+2,"Since the injury, she has experienced pain and instability in the knee, particularly on the lateral aspect.",Faithful
+3,"She is unable to bear weight and has a decreased range of motion, with pain on palpation of the lateral knee and a positive Lachman sign.",Faithful
+4,"She has been taking ibuprofen for pain management, which has provided some relief.",Faithful
+5,"Past medical history: The patient has no known medical conditions, no allergies, and no history of substance abuse.",Faithful
+6,"She is otherwise generally healthy, with no high blood pressure, diabetes, or other chronic conditions.",Faithful
+7,Review of systems: There are no additional symptoms reported in other organs.,Faithful
+8,Current medications: Ibuprofen 600-800mg every 8 hours as needed for pain.,Faithful
+9,Vital signs: Not mentioned.,Fabrication
+10,"Physical exam: The patient has edema and an effusion over the right knee, with pain on palpation of the lateral knee.",Faithful
+11,"There is decreased flexion and extension of the right knee, a positive Lachman sign, and palpable dorsalis pedis and posterior tibial pulse.",Faithful
+12,There is no leg edema in the ankle.,Faithful
+13,Test Results: Not mentioned.,Fabrication
+14,"Assessment: The patient likely has a ruptured anterior cruciate ligament (ACL) in her right knee, which is causing pain and instability.",Faithful
+15,Problem list: ACL rupture; knee pain; knee instability; knee effusion.,Faithful
+16,I ordered a knee MRI to confirm the diagnosis and rule out any other damage to surrounding structures.,Faithful
+17,I prescribed ibuprofen 600-800mg every 8 hours as needed for pain management.,Faithful
+18,I recommended that the patient continue to use a brace to support the knee.,Faithful
+19,I will see the patient again soon to discuss the results of the MRI and plan for further treatment.,Faithful
+20,Follow-up: I will see the patient again soon to discuss the results of the MRI and plan for further treatment.,Causality
+21,Instructions:,Fabrication

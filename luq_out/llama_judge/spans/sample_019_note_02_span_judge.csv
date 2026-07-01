@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"The patient, Mr. Edwards, is a 54-year-old male presenting with a 2-3 month history of stabbing, shooting pain in the right cheekbone area of his face.",Faithful,
+1,"He describes the pain as excruciating, sometimes triggered by certain temperatures or wind.",Faithful,
+2,"He has tried ibuprofen, Motrin, and tiger balm without relief.",Faithful,
+3,"He reports no numbness or tingling in the affected area, and no weakness on the right side of his face.",Faithful,
+4,"His pain episodes can last from a few minutes to an hour, with a severity of 10/10 when it occurs.",Faithful,
+5,"He has a history of occasional headaches, but no migraines or history of brain tumors or multiple sclerosis.",Faithful,
+6,He is concerned about the possibility of a brain tumor.,Fabrication,He is concerned about the possibility of a brain tumor
+7,"The patient has a history of headaches, but no migraines or history of brain tumors or multiple sclerosis.",Faithful,
+8,"The patient reports no symptoms of numbness or tingling in the affected area, no weakness on the right side of his face, and no other symptoms of headache or neurological disorders.",Faithful,
+9,The patient is currently taking Tylenol for occasional headaches.,Faithful,
+10,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+11,The patient follows my finger in both directions with his eyes open and closed.,Faithful,
+12,He shows symmetric teeth and can hear with both ears.,Faithful,
+13,He reports feeling numb on the right side of his face when I run cotton tape along the side of his face.,Faithful,
+14,He reports feeling a dull sensation on the right side and a sharp sensation on the left side when I poke him with a needle.,Causality,a dull sensation on the right side and a sharp sensation on the left side
+15,The patient's MRI shows a small blood vessel abutting and possibly pinching the trigeminal nerve.,Faithful,
+16,"The patient has a condition called trigeminal neuralgia, characterized by shooting electrical pain in the face due to nerve compression.",Faithful,
+17,Problem list: Trigeminal neuralgia; active.,Fabrication,Problem list: Trigeminal neuralgia; active
+18,"I prescribed tegretol 100mg orally, twice a day for trigeminal neuralgia.",Faithful,
+19,I will follow up with the patient in one month to assess the effectiveness of the medication.,Faithful,
+20,"If the pain persists, we will discuss surgical options to decompress the nerve.",Faithful,
+21,We will also perform genetic testing to ensure the medication is safe for the patient.,Faithful,

@@ -1,0 +1,71 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Angela.,0.1265
+1,subjective,The patient has a history of kidney stones.,0.1543
+2,subjective,The patient has had seven or eight episodes of kidney stones.,0.3524
+3,subjective,The patient's current kidney stone has passed.,0.7585
+4,subjective,The patient is currently pain-free.,0.6748
+5,subjective,The patient has a past medical history of hypertension.,0.2916
+6,subjective,The patient has a past medical history of diabetes.,0.2662
+7,subjective,The patient is taking norvasc.,0.434
+8,subjective,The norvasc dose is 2.5mg.,0.2287
+9,subjective,Norvasc is taken daily.,0.4762
+10,subjective,Norvasc is prescribed for hypertension.,0.2845
+11,subjective,The patient is taking metformin.,0.4931
+12,subjective,The metformin dose is 500mg.,0.3157
+13,subjective,Metformin is taken daily.,0.5785
+14,subjective,Metformin is prescribed for diabetes.,0.121
+15,subjective,The patient has a history of high blood pressure readings.,0.545
+16,subjective,The patient's home blood pressure readings have been within normal limits.,0.7572
+17,subjective,The patient has difficulty controlling her diet.,0.523
+18,subjective,The patient consumes fast food.,0.5441
+19,subjective,The patient consumes sugary snacks.,0.7836
+20,subjective,The patient has insomnia.,0.5026
+21,subjective,The patient has trouble sleeping.,0.641
+22,subjective,The patient uses meditation apps to help with insomnia.,0.453
+23,subjective,The patient attributes insomnia to worrying.,0.8886
+24,subjective,The patient denied chest pain.,0.3442
+25,subjective,The patient denied belly pain.,0.4173
+26,subjective,The patient denied other symptoms.,0.3293
+27,objective,The patient's blood pressure is 150/90.,0.2298
+28,objective,The patient's lungs are clear bilaterally.,0.009
+29,objective,The patient's heart exam shows a grade 2/6 systolic ejection murmur.,0.1125
+30,objective,The grade 2/6 systolic ejection murmur has not worsened since the last visit.,0.8813
+31,objective,The abdomen exam shows no tenderness to palpation.,0.2264
+32,objective,The patient's lungs are clear bilaterally.,0.009
+33,objective,The patient's heart exam shows a grade 2/6 systolic ejection murmur.,0.1125
+34,objective,The abdomen exam shows no tenderness to palpation.,0.2264
+35,assessment,The patient has a history of recurrent kidney stones.,0.0028
+36,assessment,The patient has a history of hypertension.,0.0422
+37,assessment,The patient has a history of diabetes.,0.3701
+38,assessment,The current kidney stone appears to have passed.,0.446
+39,assessment,The patient has kidney stones.,0.0027
+40,assessment,The patient has hypertension.,0.0088
+41,assessment,The patient has diabetes.,0.2399
+42,assessment,The patient has insomnia.,0.3905
+43,plan,The doctor prescribed a urinalysis.,0.5887
+44,plan,The doctor prescribed a urine culture.,0.6692
+45,plan,The purpose of the urinalysis is to ensure the kidney stone has fully passed.,0.9764
+46,plan,The purpose of the urinalysis is to check for residual issues.,0.9997
+47,plan,The purpose of the urine culture is to ensure the kidney stone has fully passed.,0.9701
+48,plan,The purpose of the urine culture is to check for residual issues.,0.9996
+49,plan,The patient has kidney stones.,0.3366
+50,plan,The patient's kidney stones are recurrent.,0.229
+51,plan,The doctor referred the patient to urology.,0.0031
+52,plan,The purpose of the urology referral is to further evaluate the patient's kidney stones.,0.1148
+53,plan,The purpose of the urology referral is to manage the patient's kidney stones.,0.0904
+54,plan,The doctor referred the patient to a nutritionist.,0.0029
+55,plan,The purpose of the nutritionist referral is to help the patient with dietary modifications.,0.2257
+56,plan,The purpose of the dietary modifications is to manage the patient's hypertension.,0.9988
+57,plan,The purpose of the dietary modifications is to manage the patient's diabetes.,0.9976
+58,plan,The patient has hypertension.,0.3638
+59,plan,The patient has diabetes.,0.3531
+60,plan,The doctor advised the patient to monitor her glucose levels.,0.0144
+61,plan,The patient is to take her blood sugars before meals.,0.1922
+62,plan,The doctor prescribed melatonin.,0.0015
+63,plan,The melatonin dose is 10mg.,0.1127
+64,plan,Melatonin is taken as needed.,0.1897
+65,plan,Melatonin is prescribed for insomnia.,0.0019
+66,plan,The patient has insomnia.,0.0491
+67,plan,The doctor advised the patient to practice good sleep hygiene.,0.7988
+68,plan,The patient will return in three months.,0.1194
+69,plan,The purpose of the follow-up appointment is to check on the patient's condition.,0.9998

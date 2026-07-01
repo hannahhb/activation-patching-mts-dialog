@@ -1,0 +1,74 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 30-year-old female.,0.7005
+1,subjective,The patient has a history of asthma.,0.1107
+2,subjective,The patient experiences frequent asthma exacerbations.,0.1267
+3,subjective,The patient's asthma exacerbations occur when she gets sick with a cold.,0.9995
+4,subjective,The patient's asthma exacerbations occur when exposed to her aunt's cat.,0.9452
+5,subjective,The patient uses her albuterol inhaler daily.,0.294
+6,subjective,The patient takes two puffs of albuterol every 4-6 hours as needed.,0.5602
+7,subjective,The patient occasionally uses steroids.,0.9968
+8,subjective,The patient had several urgent care visits in the past year.,0.5557
+9,subjective,The patient had one emergency department visit in the past year.,0.7896
+10,subjective,The patient's most recent asthma exacerbation occurred about a month ago.,0.8136
+11,subjective,The patient denies smoking.,0.4437
+12,subjective,The patient denies vaping.,0.5474
+13,subjective,The patient denies marijuana use.,0.5521
+14,subjective,The patient has no history of seasonal allergies.,0.6877
+15,subjective,The patient enjoys hiking.,0.8888
+16,subjective,The patient enjoys outdoor activities.,0.8403
+17,subjective,The patient has to be careful with outdoor activities due to asthma symptoms.,0.889
+18,subjective,The patient was hospitalized for asthma at age 8.,0.5598
+19,subjective,The patient reports coughing symptoms.,0.1254
+20,subjective,The patient reports wheezing symptoms.,0.1177
+21,subjective,The patient denies other symptoms in other organs.,0.697
+22,subjective,The doctor prescribed Ventolin.,0.7751
+23,subjective,The Ventolin dose is 2 puffs.,0.2712
+24,subjective,Ventolin is taken every 4-6 hours.,0.5816
+25,subjective,Ventolin is taken as needed.,0.657
+26,subjective,Ventolin is prescribed for asthma.,0.2161
+27,subjective,The doctor prescribed Flovent.,0.8896
+28,subjective,The Flovent dose is 110 micrograms.,0.7895
+29,subjective,The Flovent dose is 1 puff.,0.8693
+30,subjective,Flovent is taken twice per day.,0.8181
+31,subjective,Flovent is prescribed for asthma.,0.7827
+32,subjective,The patient had multiple urgent care visits in the past year.,0.5059
+33,subjective,The patient had one emergency department visit in the past year.,0.7896
+34,objective,The patient's blood pressure is 128/82.,0.0042
+35,objective,The patient's pulse rate is 16.,0.3597
+36,objective,The patient's oxygen saturation is 99%.,0.0084
+37,objective,The patient's oxygen saturation was measured on room air.,0.0063
+38,objective,The patient's respiratory rate is 16.,0.0042
+39,objective,The patient has diminished lung sounds throughout.,0.145
+40,objective,The patient has occasional slight expiratory wheeze bilaterally.,0.0106
+41,objective,The trachea is midline.,0.6904
+42,objective,The patient denied lymphadenopathy.,0.2254
+43,objective,The patient denied carotid bruit.,0.6669
+44,objective,The patient has strong bilateral pulses.,0.2337
+45,objective,The patient denied clubbing on fingertips.,0.6644
+46,objective,The patient has brisk capillary refill.,0.4599
+47,objective,The pulmonary function test results are consistent with asthma.,0.1216
+48,objective,The patient has asthma.,0.2185
+49,assessment,The patient has moderate intermittent asthma.,0.0163
+50,assessment,The asthma is confirmed by pulmonary function test results.,0.8903
+51,assessment,The asthma is confirmed by clinical presentation.,0.1228
+52,assessment,The patient has a history of asthma hospitalization.,0.9999
+53,assessment,The history of asthma hospitalization is past.,1.0
+54,assessment,The patient has a history of asthma exacerbations.,0.9998
+55,assessment,The history of asthma exacerbations is active.,0.9995
+56,assessment,Asthma is active.,0.2722
+57,plan,The doctor prescribed Flovent.,0.0024
+58,plan,The Flovent dose is 110 micrograms.,0.0018
+59,plan,Flovent is taken 1 puff twice per day.,0.0049
+60,plan,Flovent is prescribed to help prevent daily symptoms.,0.0022
+61,plan,Flovent is prescribed to reduce the need for rescue inhaler use.,0.0392
+62,plan,The doctor prescribed Ventolin.,0.0075
+63,plan,The Ventolin dose is 2 puffs.,0.1268
+64,plan,Ventolin is taken every 4-6 hours.,0.2726
+65,plan,Ventolin is taken as needed.,0.7726
+66,plan,Ventolin is prescribed for acute exacerbations.,0.6676
+67,plan,The doctor will create an asthma action plan.,0.1184
+68,plan,The asthma action plan is to help manage symptoms.,0.0122
+69,plan,The asthma action plan is to identify triggers.,0.3714
+70,plan,The patient will be seen in 30 days.,0.2021
+71,plan,The purpose of the follow-up is to reassess symptoms.,0.8949
+72,plan,The purpose of the follow-up is to adjust treatment as needed.,0.778

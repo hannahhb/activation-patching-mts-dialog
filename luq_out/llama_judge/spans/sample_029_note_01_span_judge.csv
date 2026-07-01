@@ -1,0 +1,28 @@
+sentence_idx,sentence,label,note_span
+0,"The patient, a 54-year-old male, presents with a complaint of stabbing, shooting pain in the right cheek bone area of his face, which he describes as excruciating.",Faithful,
+1,He reports that the pain started approximately two to three months ago and has been ongoing.,Faithful,
+2,He denies any numbness or tingling in the affected area.,Negation,denies any numbness or tingling
+3,"The pain is triggered by certain temperatures, wind, and cold.",Faithful,
+4,"He has tried ibuprofen, Motrin, and tiger balm without relief.",Faithful,
+5,He has a history of occasional headaches but denies migraines.,Faithful,
+6,He rates the pain as a 10 out of 10 when it occurs.,Faithful,
+7,He denies any history of multiple sclerosis or brain tumors.,Faithful,
+8,Past medical history: The patient has a family doctor who referred him to see me.,Faithful,
+9,He takes Tylenol for occasional headaches.,Faithful,
+10,Review of systems: The patient denies any symptoms in other organs.,Fabrication,Review of systems
+11,Current medications: - Tylenol as needed for headaches,Faithful,
+12,Vital signs: - Blood pressure: [NOT MENTIONED] - Pulse rate: [NOT MENTIONED] - Oxygen saturation: [NOT MENTIONED] - Temperature: [NOT MENTIONED],Fabrication,Vital signs
+13,The patient follows the doctor's finger in both directions without difficulty.,Faithful,
+14,His smile appears equal on both sides.,Faithful,
+15,He reports a little bit of numbness on the right side of his face.,Faithful,
+16,"The doctor uses a cotton tape to run along the side of his face, which the patient feels on both sides but reports as slightly numb on the right side.",Faithful,
+17,"The doctor pokes the patient with a needle on the right side of his face and reports that it feels dull, whereas on the left side it feels sharp.",Causality,"on the right side of his face and reports that it feels dull, whereas on the left side it feels sharp"
+18,MRI: The patient has a small blood vessel abutting and perhaps pinching the trigeminal nerve.,Faithful,
+19,"Assessment: The patient has symptoms consistent with trigeminal neuralgia, a condition where the compression of the trigeminal nerve causes shooting electrical pain in the face.",Faithful,
+20,Problem list: Trigeminal neuralgia; active.,Fabrication,Problem list
+21,"I prescribed Tegretol for the patient to start with, as the first line of treatment for trigeminal neuralgia.",Faithful,
+22,"I explained the potential side effects of the medication, including memory loss, tingling, imbalance, and dermatologic reactions.",Faithful,
+23,I recommended genetic testing to ensure the medication is safe for him.,Faithful,
+24,"If the pain continues, we can discuss surgical options to treat the pain.",Faithful,
+25,The patient will return in one month to check if the medication has been effective in controlling his pain.,Faithful,
+26,Instructions: Split the note into individual sentences.,Fabrication,Instructions

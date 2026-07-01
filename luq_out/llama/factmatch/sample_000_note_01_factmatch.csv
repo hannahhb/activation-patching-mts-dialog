@@ -1,0 +1,49 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 38-year-old male.,0.9016,The patient moved about two years ago.,0,fabrication,neutral
+1,The patient presents with a complaint of shortness of breath.,0.9838,The patient experiences shortness of breath.,1,,entailment
+2,The patient describes shortness of breath as catching his breath a lot more than he used to.,0.9605,The patient catches their breath a lot more than they used to.,1,,entailment
+3,The patient feels like he is not breathing as well as he used to.,0.9274,The patient experiences shortness of breath.,1,,entailment
+4,The symptom of shortness of breath started suddenly.,0.9701,The shortness of breath is a new symptom.,1,,entailment
+5,The patient denied rash.,1.0,The patient denied rash.,1,,entailment
+6,The patient denied nausea.,1.0,The patient denied nausea.,1,,entailment
+7,The patient denied vomiting.,1.0,The patient denied vomiting.,1,,entailment
+8,The patient denied lip swelling.,0.9845,The patient denied lip or throat swelling.,1,,entailment
+9,The patient denied throat swelling.,0.9855,The patient denied lip or throat swelling.,1,,entailment
+10,The patient denies having any issues with allergies in the past.,0.9809,The patient denied past issues with allergies.,1,,entailment
+11,The symptoms occur in various situations.,0.9447,The patient notices symptoms in multiple situations.,1,,entailment
+12,The symptoms occur at home.,0.9359,The patient notices symptoms in the house.,1,,entailment
+13,The symptoms occur outside.,0.9343,The patient notices symptoms outside the house.,1,,entailment
+14,The symptoms occur around his cat.,0.9201,The patient notices symptoms outside the house.,0,fabrication,neutral
+15,The patient moved to a new location two years ago.,0.9698,The patient moved about two years ago.,1,,entailment
+16,The patient owns a plot of land.,0.958,The patient bought a big plot of land.,1,,entailment
+17,The patient is a hunter.,0.9494,The doctor is a hunter.,0,negation,contradiction
+18,The patient has a refrigerator full of venison.,0.9904,The patient has a refrigerator full of venison at home.,1,,entailment
+19,The patient denies any other symptoms in other organs or systems.,0.9126,The patient notices symptoms in multiple situations.,0,fabrication,contradiction
+20,The patient is currently taking an albuterol inhaler.,0.9465,Albuterol is an inhaler.,0,fabrication,neutral
+21,The albuterol inhaler is prescribed by urgent care.,0.9469,The patient was given a nebulizer at urgent care.,0,fabrication,neutral
+22,The albuterol inhaler is prescribed for shortness of breath.,0.96,Albuterol is an inhaler.,1,,entailment
+23,The patient's pulse is within normal limits.,0.9445,The patient's pulse ox is normal.,1,,entailment
+24,The patient's oxygen saturation is within normal limits.,0.9313,The patient's pulse ox is normal.,1,,entailment
+25,The patient's temperature is within normal limits.,0.9046,The patient's pulmonary function test was normal.,0,fabrication,neutral
+26,The patient appears healthy.,0.9305,The patient considers themselves to be pretty healthy.,1,,entailment
+27,The lungs exam reveals faint expiratory wheezing bilaterally in all lung fields.,0.9836,The doctor appreciated faint expiratory wheezing bilaterally in all lung fields.,1,,entailment
+28,There is no rash.,0.9488,The patient denied rash.,0,fabrication,neutral
+29,There is no angioedema.,0.9392,The doctor did not appreciate any angioedema.,0,negation,contradiction
+30,There is no audible stridor.,0.9539,The doctor did not appreciate any audible stridor.,1,,entailment
+31,The patient had a normal chest x-ray.,0.9946,The patient's chest x-ray was normal.,1,,entailment
+32,The patient had a normal pulmonary function test.,0.9954,The patient's pulmonary function test was normal.,1,,entailment
+33,The patient has newly diagnosed allergic asthma.,0.9658,The doctor diagnosed the patient with allergic asthma.,1,,entailment
+34,Allergic asthma is confirmed.,0.9477,The doctor diagnosed the patient with allergic asthma.,1,,entailment
+35,The doctor prescribed albuterol inhaler.,0.9925,The doctor prescribed albuterol.,1,,entailment
+36,The albuterol inhaler is prescribed for shortness of breath.,0.96,Albuterol is an inhaler.,1,,entailment
+37,The doctor prescribed singulair.,1.0,The doctor prescribed singulair.,1,,entailment
+38,The singulair dose is 10mg.,0.9755,Singulair is 10 milligrams.,1,,entailment
+39,Singulair is taken once daily.,1.0,Singulair is taken once daily.,1,,entailment
+40,Singulair is prescribed to decrease the occurrences of asthma.,0.9873,Singulair will help decrease the occurrences of the patient's asthma.,1,,entailment
+41,The doctor will proceed with allergy testing.,1.0,The doctor will proceed with allergy testing.,1,,entailment
+42,Allergy testing will start with skin testing.,0.9561,The doctor will start with skin testing.,1,,entailment
+43,Skin testing is to identify the triggers of his asthma.,0.9358,The doctor will start with skin testing.,0,fabrication,neutral
+44,The patient will discuss further testing in his blood if the skin testing does not reveal a cause.,0.9354,The doctor will start with skin testing.,0,fabrication,neutral
+45,The patient will discuss immunotherapy if the skin testing does not reveal a cause.,0.9146,The doctor will start with skin testing.,0,fabrication,neutral
+46,The patient is to return in one week.,0.9031,The doctor wants to schedule the skin testing for the next week.,1,,entailment
+47,The patient is to return for skin testing scheduling.,0.9487,The doctor wants to schedule the skin testing for the next week.,1,,entailment

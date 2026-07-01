@@ -1,0 +1,18 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Jack, is a 30-year-old male who was in a car accident a week ago and experienced neck pain, which he describes as a 7 out of 10 in severity.",Fabrication,30-year-old male
+1,The pain is located in the back of his neck and worsens with movement.,Faithful,
+2,"He has tried ibuprofen, which provided some relief, but not significantly.",Faithful,
+3,"He has also experienced headaches, but they are not ongoing.",Faithful,
+4,"Past medical history: The patient has a history of playing football years ago, but no prior issues with his neck.",Faithful,
+5,"Review of systems: The patient denies any visual disturbances, hearing problems, or swelling/bruising on his neck.",Faithful,
+6,Current medications: I prescribed Motrin 600mg every 6-8 hours for pain management.,Contextual,I prescribed
+7,Vital signs: Not mentioned.,Faithful,
+8,"Physical exam: The patient exhibited positive pain to palpation of the soft tissues of the neck, positive pain with flexion, extension, and lateral bending, but no pain with palpation of the back or shoulders.",Faithful,
+9,Test Results: The results of the x-ray show no signs of fracture or bony abnormalities.,Faithful,
+10,"Assessment: I believe the patient has neck strain, likely due to whiplash from the car accident.",Contextual,I believe
+11,Problem list: Neck strain; suspected whiplash; [NOT MENTIONED],Fabrication,[NOT MENTIONED]
+12,I prescribed Motrin 600mg every 6-8 hours for pain management and Flexeril 10mg every 12 hours as needed for muscle relaxation.,Contextual,I prescribed
+13,I advised the patient to be conservative with his neck movement and avoid straining it.,Contextual,I advised
+14,I also ordered an MRI to rule out any underlying conditions.,Contextual,I also ordered
+15,I will refer the patient to either physical rehab or a chiropractor once the MRI results are available.,Contextual,I will refer
+16,Follow-up: I will schedule a follow-up appointment to review the MRI results and discuss further management.,Fabrication,I will schedule

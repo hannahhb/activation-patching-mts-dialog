@@ -1,25 +1,25 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient presents with a chronic history of back pain, exacerbated by sitting and standing, with a recent worsening of symptoms over the past month.",0.7304
-2,"The pain is described as an electric toothache that radiates from the lower back down to the left leg, with a maximum severity of 13 out of 10.",0.7906
-3,"The pain is worsened by coughing, sneezing, and walking, but improved by lying down.",0.8597
-4,"The patient has a history of a fall 30 years ago, which may have caused a fracture or disk injury.",0.8867
-5,The patient's pain level is currently 6 out of 10.,0.8884
-6,"Past medical history: The patient has a history of back pain and leg pain, with a recent MRI showing a disk herniation at the level of L4-L5 vertebrae with nerve root impingement.",0.9943
-7,The patient has tried NSAIDs in the past without relief and has undergone physical therapy.,0.9012
-8,"Review of systems: The patient reports numbness and tingling in both lower extremities, with weakness in both legs.",0.755
+1,"HPI: The patient presents with a chronic history of back pain, exacerbated by sitting and standing, with a recent worsening of symptoms over the past month.",0.3002
+2,"The pain is described as an electric toothache that radiates from the lower back down to the left leg, with a maximum severity of 13 out of 10.",0.3279
+3,"The pain is worsened by coughing, sneezing, and walking, but improved by lying down.",0.0912
+4,"The patient has a history of a fall 30 years ago, which may have caused a fracture or disk injury.",0.1474
+5,The patient's pain level is currently 6 out of 10.,0.335
+6,"Past medical history: The patient has a history of back pain and leg pain, with a recent MRI showing a disk herniation at the level of L4-L5 vertebrae with nerve root impingement.",0.5377
+7,The patient has tried NSAIDs in the past without relief and has undergone physical therapy.,0.418
+8,"Review of systems: The patient reports numbness and tingling in both lower extremities, with weakness in both legs.",0.2757
 9,Current medications: [NOT MENTIONED],0.5
 10,Objective:,0.5
-11,Vital signs: Not mentioned.,0.9762
-12,"Physical exam: The patient has a positive pain response to palpation at the L4 vertebrae, with pain also present with flexion and extension of the back.",0.0029
-13,The patient has 4 out of 5 strength in the left leg and 5 out of 5 strength in the right leg.,0.4351
-14,Reflexes are brisk and motor and sensory are intact in both lower extremities.,0.9922
-15,Test Results: MRI results show a disk herniation at the level of L4-L5 vertebrae with nerve root impingement.,0.024
+11,Vital signs: Not mentioned.,0.8734
+12,"Physical exam: The patient has a positive pain response to palpation at the L4 vertebrae, with pain also present with flexion and extension of the back.",0.0003
+13,The patient has 4 out of 5 strength in the left leg and 5 out of 5 strength in the right leg.,0.4132
+14,Reflexes are brisk and motor and sensory are intact in both lower extremities.,0.9322
+15,Test Results: MRI results show a disk herniation at the level of L4-L5 vertebrae with nerve root impingement.,0.0064
 16,Assessment / Problem List:,0.5
-17,"Assessment: The patient has acute disk herniation at L4-L5 with nerve root impingement, causing lower back pain and leg pain.",0.015
-18,Problem list: Disk herniation at L4-L5 with nerve root impingement; lower back pain; leg pain; numbness and tingling in both lower extremities; weakness in both legs.,0.6338
+17,"Assessment: The patient has acute disk herniation at L4-L5 with nerve root impingement, causing lower back pain and leg pain.",0.0003
+18,Problem list: Disk herniation at L4-L5 with nerve root impingement; lower back pain; leg pain; numbness and tingling in both lower extremities; weakness in both legs.,0.3456
 19,Plan:,0.5
-20,I recommended an epidural steroid injection to alleviate the inflammation and pain caused by the disk herniation.,0.9997
-21,I referred the patient to physical therapy to strengthen the area.,0.003
-22,The patient will see the physical therapist and return for follow-up in about a month to assess the effectiveness of the injection and physical therapy.,0.3396
-23,Follow-up: The patient will see me again in about a month to assess the effectiveness of the treatment plan.,0.775
+20,I recommended an epidural steroid injection to alleviate the inflammation and pain caused by the disk herniation.,0.1548
+21,I referred the patient to physical therapy to strengthen the area.,0.0001
+22,The patient will see the physical therapist and return for follow-up in about a month to assess the effectiveness of the injection and physical therapy.,0.0016
+23,Follow-up: The patient will see me again in about a month to assess the effectiveness of the treatment plan.,0.0425

@@ -1,0 +1,24 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Jacqueline, presents with anxiety regarding her recent blood work showing hepatitis C.",Faithful,
+1,"She reports being surprised by this diagnosis, despite feeling fine.",Faithful,
+2,"She has a history of IV drug use in the past, but has been clean for over 15 years.",Faithful,
+3,"She also reports a history of heavy alcohol use, currently consuming about a beer a day, and smoking one to two cigarettes a day.",Faithful,
+4,She denies any other medical conditions.,Faithful,
+5,"Past medical history: The patient has a history of hypertension, diabetes, and depression.",Contextual,"The patient has a history of hypertension, diabetes, and depression"
+6,"Her family history is significant for hypertension, diabetes, and depression.",Faithful,
+7,"Review of systems: The patient reports fatigue at the end of the day, despite getting enough sleep, but denies any other symptoms.",Faithful,
+8,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+9,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+10,Physical exam: The patient appears in no distress and no jaundice on skin exam.,Faithful,
+11,"The heart exam reveals a regular rate and rhythm with a 2/6 systolic murmur, which has not changed from last year.",Faithful,
+12,"The lungs are clear with no wheezes, rales, or rhonchi.",Faithful,
+13,"The abdomen is soft with no hepatosplenomegaly, and bowel sounds are present.",Faithful,
+14,The musculoskeletal exam is unremarkable.,Faithful,
+15,"Test Results: The patient's recent blood work shows a positive HCV antibody test and an elevated AST at 39, but normal ALT, albumin, and total bilirubin levels.",Faithful,
+16,"Assessment: The patient has a confirmed diagnosis of hepatitis C, a viral infection affecting the liver.",Faithful,
+17,Problem list: Hepatitis C; Suspected liver disease; Suspected liver fibrosis.,Fabrication,Suspected liver disease; Suspected liver fibrosis
+18,I ordered additional blood work to confirm the diagnosis with HCV RNA and HCV genotype testing.,Faithful,
+19,I also ordered a special ultrasound to determine the severity of the patient's liver disease and to assess for liver fibrosis.,Faithful,
+20,I will use this information to guide treatment.,Faithful,
+21,Follow-up: I will see the patient in about three weeks to review the results of the additional testing and to discuss further management.,Faithful,
+22,I instructed the patient to schedule her family members for HCV screening.,Faithful,

@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a frequent water skier, reports experiencing right knee pain since a skiing accident five days ago, where he twisted his knee while landing from a jump.",Faithful,
+1,"He describes the pain as sore to climb stairs and squat, but denies any numbness or tingling in the foot.",Faithful,
+2,"He has been taking over-the-counter Aleve twice a day and applying a cold pack, which has provided some relief.",Faithful,
+3,"He has a history of high blood pressure, for which he is taking lisinopril 20mg daily, and has been managing his blood pressure well, with readings of 125/80 at home.",Faithful,
+4,Past medical history: The patient has a history of having his tonsils removed and no other significant medical conditions.,Faithful,
+5,"He is a non-smoker, and his social history is notable for frequent water skiing and occasional baseball watching.",Fabrication,and occasional baseball watching
+6,Review of systems: The patient denies any other symptoms or complaints.,Faithful,
+7,Current medications: Lisinopril 20mg daily.,Faithful,
+8,Vital signs: Blood pressure is 120/77.,Faithful,
+9,"Physical exam: The patient has ecchymosis and edema on the right knee, with an effusion present.",Faithful,
+10,"There is pain to palpation of the right medial knee, and the patient has decreased range of motion.",Faithful,
+11,"The varus and valgus test, Lachman sign, and dorsalis pedis and posterior tibial pulse are all negative.",Faithful,
+12,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+13,Assessment: The patient has a medial collateral ligament strain in the right knee.,Faithful,
+14,"Problem list: Medial collateral ligament strain, right knee; Hypertension; Past: tonsillectomy.",Faithful,
+15,I prescribed meloxicam 15mg once a day to help reduce swelling and pain in the right knee.,Faithful,
+16,I ordered an x-ray of the right knee to rule out any fractures.,Faithful,
+17,I referred the patient to physical therapy to strengthen the muscles around the knee and prevent future injuries.,Faithful,
+18,I continued the patient on lisinopril 20mg daily for his hypertension and ordered a lipid panel to monitor his lipid levels.,Faithful,
+19,I administered a tetanus shot for health maintenance.,Faithful,
+20,"Follow-up: The patient will return for follow-up after the results of the x-ray are available, and I will reassess his knee and provide further instructions.",Fabrication,and I will reassess his knee and provide further instructions
+21,Instructions:,Fabrication,Instructions:

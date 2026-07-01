@@ -1,0 +1,20 @@
+sentence_idx,sentence,label,note_span
+0,"The patient presents with a chronic history of lower back pain that started about a month ago, which has worsened to the point of being an 8 out of 10 in severity.",Faithful,
+1,"The pain is located in the lower back, radiates down the left leg, and affects the hip, side of the leg, side of the calf, and big toe.",Faithful,
+2,The patient has difficulty walking and has been using a cane for support.,Faithful,
+3,"The pain is exacerbated by standing, walking, coughing, and sneezing, and is relieved by lying down.",Faithful,
+4,"The patient denies any numbness or tingling in the lower extremities, but reports weakness in both legs.",Faithful,
+5,"The patient has a history of a fall from a roof 30 years ago, which may have resulted in a possible fracture.",Faithful,
+6,"The patient has been bedridden due to the pain, and has been unable to play football.",Faithful,
+7,The patient reports no other symptoms in other organs.,Fabrication,The patient reports no other symptoms in other organs
+8,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+9,"The patient has pain to palpation at the L4 vertebrae, and pain with flexion and extension of the back.",Faithful,
+10,The patient has 4 out of 5 strength in the left leg and 5 out of 5 strength in the right leg.,Faithful,
+11,Reflexes are brisk and motor and sensory are intact in both lower extremities.,Faithful,
+12,The MRI shows a disk herniation at the level of L4-L5 vertebrae associated with nerve root impingement.,Faithful,
+13,Assessment: The patient presents with acute disk herniation at L4-L5 with nerve root impingement causing lower back pain and leg pain.,Faithful,
+14,Problem list: Disk herniation at L4-L5; Nerve root impingement; Lower back pain; Leg pain.,Fabrication,Problem list: Disk herniation at L4-L5; Nerve root impingement; Lower back pain; Leg pain
+15,"I prescribed a course of treatment consisting of an epidural steroid injection, which will be administered today.",Faithful,
+16,I will also refer the patient to physical therapy to strengthen the area.,Faithful,
+17,The patient is to follow up with me in about a month to assess the effectiveness of the treatment.,Faithful,
+18,The patient will follow up with me in about a month to assess the effectiveness of the treatment.,Causality,to assess the effectiveness of the treatment

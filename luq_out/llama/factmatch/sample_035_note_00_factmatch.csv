@@ -1,0 +1,62 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Wayne.,1.0,The patient's name is Wayne.,1,,entailment
+1,The patient presents with a sore on his right foot.,0.9697,The patient has a sore on his foot.,1,,entailment
+2,The sore on the patient's right foot has not been healing for approximately two to three weeks.,0.9413,The patient has had the wound for a couple of weeks.,0,fabrication,neutral
+3,The wound on the patient's right foot was initially a blister caused by a new pair of shoes.,0.9651,The blister was caused by a new pair of shoes.,1,,entailment
+4,The patient denies any trauma to the foot.,0.9118,The patient's right foot x-ray shows no evidence of osteomyelitis.,0,fabrication,neutral
+5,The patient had previously seen a podiatrist.,0.9686,The patient has not seen a podiatrist for a couple of years.,1,,entailment
+6,The patient's podiatrist moved and he was unable to find a replacement.,0.9154,The patient has not seen a podiatrist for a couple of years.,0,fabrication,neutral
+7,The patient was referred to the current physician by his primary care physician (PCP).,0.9586,The PCP referred the patient to the doctor.,1,,entailment
+8,The patient finished a course of antibiotics yesterday.,0.9609,The patient finished a course of antibiotics for the wound.,1,,entailment
+9,The course of antibiotics did not improve the wound.,0.9507,The patient finished a course of antibiotics for the wound.,1,,entailment
+10,The patient denies any pain or discomfort in the wound.,0.954,The patient does not feel pain in the wound.,1,,entailment
+11,The wound on the patient's right foot sticks to his sock when he removes it.,0.9622,The wound sometimes sticks to the patient's sock.,1,,entailment
+12,The patient reports neuropathy in his foot.,0.9716,The patient has neuropathy.,1,,entailment
+13,The patient has diabetes.,1.0,The patient has diabetes.,1,,entailment
+14,The patient's recent HbA1c is slightly over 8.,0.9758,The patient's last HbA1c was a little over 8.,1,,entailment
+15,The patient has a history of wearing Hoka shoes.,0.9335,The shoes are Hoka brand.,0,fabrication,neutral
+16,The patient purchased Hoka shoes at REI two years ago.,0.9461,The patient bought the shoes at REI.,0,fabrication,neutral
+17,The patient denies any fever.,0.9637,The patient has no fever.,1,,entailment
+18,The patient denies any chills.,0.9624,The patient has no chills.,1,,entailment
+19,The patient denies any drainage from the wound.,0.9771,The patient has no drainage from the wound.,1,,entailment
+20,The patient reports issues with stability in his shoes.,0.9638,The patient has had issues with stability.,1,,entailment
+21,The patient's temperature is 98.1°F.,0.9959,The patient's temperature is 98.1.,1,,entailment
+22,The patient's heart rate is 72.,1.0,The patient's heart rate is 72.,1,,entailment
+23,The patient's respirations are 16.,1.0,The patient's respirations are 16.,1,,entailment
+24,The patient's blood pressure is 110/65.,0.9876,The patient's blood pressure is 110 over 65.,1,,entailment
+25,The patient has a 1x2 inch circular wound on the dorsal aspect of the lateral right foot.,0.9984,The patient has a 1 by 2 inch circular wound on the dorsal aspect of the lateral right foot.,1,,entailment
+26,The wound is proximal to the right fifth MTP joint.,0.9916,The wound is just proximal to the right fifth metatarsophalangeal (MTP) joint.,1,,entailment
+27,There is yellow slough present in the wound.,0.9921,The wound has some yellow slough present.,1,,entailment
+28,There is minimal granulation tissue in the wound.,0.9927,The wound has minimal granulation tissue.,1,,entailment
+29,There is no surrounding erythema or cellulitis in the wound.,0.9952,The wound has no surrounding erythema or cellulitis.,1,,entailment
+30,There is no fluid collection in the wound.,0.9822,The wound has no evidence of fluid collection.,1,,entailment
+31,There is no necrosis in the wound.,0.991,The wound has no necrosis.,1,,entailment
+32,There is no odor in the wound.,0.9928,The wound has no odor.,1,,entailment
+33,There is no bony exposure on examination of the wound.,0.9474,The patient's right foot x-ray shows no evidence of osteomyelitis.,1,,entailment
+34,The patient has palpable bilateral femoral pulses.,0.9879,The patient has palpable bilateral femoral and popliteal pulses.,1,,entailment
+35,The patient has palpable bilateral popliteal pulses.,0.99,The patient has palpable bilateral femoral and popliteal pulses.,1,,entailment
+36,The patient has no palpable DP pulses.,0.9577,The patient has no palpable dorsal pedis (DP) or posterior tibial (PT) pulses.,1,,entailment
+37,The patient has no palpable PT pulses.,0.9409,The patient has no palpable dorsal pedis (DP) or posterior tibial (PT) pulses.,1,,entailment
+38,There are Doppler signs present in the patient's foot.,0.9749,The patient has Doppler signs present.,1,,entailment
+39,The patient has a diabetic foot ulcer.,0.9494,The patient has diabetes.,0,fabrication,neutral
+40,The patient has no evidence of osteomyelitis on the right foot.,0.9878,The patient's right foot x-ray shows no evidence of osteomyelitis.,1,,entailment
+41,The patient has diabetic neuropathy.,0.9779,The patient has neuropathy.,1,,entailment
+42,The patient has possible impaired circulation.,0.9017,The doctor may refer the patient to a vascular specialist if the ABI indicates poor blood supply.,1,,entailment
+43,The patient has diabetes.,1.0,The patient has diabetes.,1,,entailment
+44,The doctor will order an ankle-brachial index (ABI) for the patient.,0.9816,The doctor ordered an ankle-brachial index (ABI) to determine the blood supply to the foot.,1,,entailment
+45,The ankle-brachial index (ABI) will determine the blood supply to the patient's foot.,0.9898,The doctor ordered an ankle-brachial index (ABI) to determine the blood supply to the foot.,1,,entailment
+46,The doctor will perform a debridement in the office to remove dead tissue from the wound.,0.9733,The doctor performed a debridement to remove dead tissue from the wound.,1,,entailment
+47,The doctor will prescribe collagenase ointment.,0.9874,The doctor prescribed collagenase ointment.,1,,entailment
+48,The collagenase ointment dose is not specified.,0.9446,The collagenase ointment is to be applied to the wound once daily.,0,fabrication,neutral
+49,The collagenase ointment is taken once daily.,0.9988,Collagenase ointment is taken once daily.,1,,entailment
+50,The collagenase ointment is applied to the wound.,0.984,Collagenase ointment is for the wound.,1,,entailment
+51,The collagenase ointment is covered with a dry sterile dressing.,0.9488,Collagenase ointment is for the wound.,0,fabrication,neutral
+52,The collagenase ointment is prescribed for the diabetic foot ulcer.,0.9749,Collagenase ointment is for the wound.,1,,entailment
+53,The doctor will have the patient wear a surgical shoe.,0.9448,The patient is to wear a surgical shoe to take pressure off the area.,0,fabrication,neutral
+54,The surgical shoe will take pressure off the area of the wound.,0.9773,The patient is to wear a surgical shoe to take pressure off the area.,1,,entailment
+55,The doctor does not think any further antibiotics are needed at this time.,0.9797,The doctor does not think more antibiotics are needed at this time.,1,,entailment
+56,The doctor will see the patient again in two weeks.,0.9517,The patient is to follow up in two weeks.,1,,entailment
+57,The doctor may refer the patient to a vascular specialist if the ABI indicates poor blood supply.,1.0,The doctor may refer the patient to a vascular specialist if the ABI indicates poor blood supply.,1,,entailment
+58,The doctor will refer the patient to a diabetic specialist.,0.9347,The doctor may get a diabetic consult to help modify the patient's diet.,0,negation,contradiction
+59,The diabetic specialist will discuss ways to modify the patient's diet.,0.9653,The doctor may get a diabetic consult to help modify the patient's diet.,1,,entailment
+60,The diabetic specialist will discuss ways to bring down the patient's HbA1c.,0.942,The doctor wants to bring the patient's hemoglobin A1c into a better level.,0,fabrication,neutral

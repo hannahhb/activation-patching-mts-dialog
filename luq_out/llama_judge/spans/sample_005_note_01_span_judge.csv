@@ -1,0 +1,24 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 46-year-old male, presented to the office with a complaint of right knee pain after a trampoline incident one week ago.",Fabrication,a 46-year-old male
+1,He reported hearing a snap and experiencing immediate pain.,Faithful,
+2,"He has not sought medical attention until now, despite experiencing persistent pain.",Faithful,
+3,"He has not tried any treatments for the pain except for Tylenol, which provided minimal relief.",Faithful,
+4,"He has a history of hypertension and diabetes, for which he is currently taking lisinopril 20mg and metformin 500mg daily.",Faithful,
+5,"Past medical history: The patient has a history of hypertension, for which he is currently taking lisinopril 20mg daily.",Faithful,
+6,"He also has diabetes, for which he is taking metformin 500mg daily.",Faithful,
+7,"He has not measured his blood pressure regularly, despite my previous recommendation to do so.",Contextual,my previous recommendation to do so
+8,Review of systems: The patient denied any other symptoms.,Fabrication,The patient denied any other symptoms
+9,"Current medications: Lisinopril 20mg daily, metformin 500mg daily.",Faithful,
+10,"Vital signs: Blood pressure 180/80, pulse rate [NOT MENTIONED], oxygen saturation [NOT MENTIONED], temperature [NOT MENTIONED].",Faithful,
+11,"Physical exam: The patient had a regular heart rate and rhythm, clear lungs bilaterally, and a slight limp when walking.",Faithful,
+12,"There was ecchymosis and edema along the lateral aspect of the knee, but no effusion.",Faithful,
+13,"The patient had a decent range of motion, but pain with movement.",Faithful,
+14,Test Results: Right knee x-ray showed no evidence of fracture or bony abnormality.,Faithful,
+15,Assessment: The patient has a lateral ligament strain of the right knee and hypertension and diabetes.,Faithful,
+16,Problem list: Lateral ligament strain of the right knee; Hypertension; Diabetes; [NOT MENTIONED],Fabrication,[NOT MENTIONED]
+17,I prescribed meloxicam 15mg daily for pain and swelling related to the lateral ligament strain.,Faithful,
+18,I referred the patient to physical therapy to help strengthen the muscles around the knee and prevent further injury.,Faithful,
+19,"I continued the patient's current medications, including lisinopril 20mg daily.",Faithful,
+20,I ordered an echo to assess the patient's cardiac function and blood pressure control.,Faithful,
+21,I also ordered an A1c and lipid panel to assess the patient's diabetes management.,Faithful,
+22,Follow-up: The patient will return for a follow-up appointment to discuss the results of the ordered tests and to reassess the patient's knee and diabetes management.,Fabrication,The patient will return for a follow-up appointment

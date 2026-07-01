@@ -1,0 +1,24 @@
+sentence_idx,sentence,supported,uncertainty,atom_faithfulness
+0,Subjective:,1,0,1.0
+1,"HPI: The patient, a 38-year-old male, presents with a complaint of shortness of breath, which he describes as catching his breath a lot more than he used to, and feeling like he is not breathing as well as he used to.",1,0,0.75
+2,"He reports that this symptom started suddenly and is not accompanied by any other symptoms such as a rash, nausea, vomiting, or lip or throat swelling.",1,0,0.8333
+3,"He denies having any issues with allergies in the past and reports that the symptoms occur in various situations, including at home, outside, and around his cat.",1,0,1.0
+4,"Past medical history: The patient moved to a new location two years ago and owns a plot of land, indicating a possible change in environment that may be contributing to his symptoms.",0,1,0.75
+5,He is a hunter and has a refrigerator full of venison.,1,0,1.0
+6,Review of systems: The patient denies any other symptoms in other organs or systems.,0,1,1.0
+7,Current medications: The patient is currently taking an albuterol inhaler as prescribed by urgent care for his shortness of breath.,1,0,1.0
+8,Objective:,1,0,1.0
+9,"Vital signs: The patient's pulse, oxygen saturation, and temperature are within normal limits.",1,0,1.0
+10,"Physical exam: The patient appears healthy, but the lungs exam reveals faint expiratory wheezing bilaterally in all lung fields.",1,0,1.0
+11,"There is no rash, angioedema, or audible stridor.",1,0,1.0
+12,Test Results: The patient had a normal chest x-ray and pulmonary function test.,1,0,1.0
+13,Assessment / Problem List:,1,0,1.0
+14,Assessment: The patient has newly diagnosed allergic asthma.,1,0,1.0
+15,Problem list: Allergic asthma; confirmed.,1,0,1.0
+16,Plan:,1,0,1.0
+17,I prescribed albuterol inhaler as directed for shortness of breath.,1,0,1.0
+18,I also prescribed singulair 10mg once daily to decrease the occurrences of asthma.,1,0,1.0
+19,"I will proceed with allergy testing, starting with skin testing, to identify the triggers of his asthma.",1,0,1.0
+20,"If the skin testing does not reveal a cause, we will discuss further testing in his blood and immunotherapy.",1,0,1.0
+21,I want to see the patient next week to schedule the skin testing.,1,0,0.6667
+22,Follow-up: The patient is to return in one week to schedule the skin testing.,1,0,1.0

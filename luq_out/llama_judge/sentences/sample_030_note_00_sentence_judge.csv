@@ -1,0 +1,32 @@
+sentence_idx,sentence,label
+0,"The patient presents with a history of chronic asthma symptoms, specifically coughing and wheezing, which she describes as persistent and debilitating.",Faithful
+1,"She reports that her symptoms flare up every month or every other month for the past six months, requiring frequent visits to urgent care and her primary care physician, including one emergency department visit.",Faithful
+2,She attributes her symptoms to getting sick with a cold and exposure to her aunt's cat.,Faithful
+3,"She currently uses an albuterol inhaler (Ventolin) daily, often taking two puffs, and reports that it provides relief but does not completely resolve her symptoms.",Faithful
+4,"She has had previous exacerbations requiring prednisone treatment, most recently about a month ago.",Faithful
+5,"The patient has a history of asthma, with a previous hospitalization at age 8.",Faithful
+6,"She does not have a history of smoking, vaping, or marijuana use.",Faithful
+7,"She occasionally visits bars with friends, where she is exposed to secondhand smoke.",Faithful
+8,No other symptoms mentioned.,Faithful
+9,Albuterol (Ventolin) 2 puffs as needed.,Faithful
+10,Vital signs:,Faithful
+11,- Blood pressure: 128/82,Faithful
+12,- Pulse rate: not mentioned,Fabrication
+13,- Oxygen saturation: 99% on room air,Faithful
+14,- Temperature: not mentioned,Fabrication
+15,Physical exam:,Faithful
+16,- Heart rate and rhythm regular,Faithful
+17,"- No ectopic beats, rubs, murmurs, or gallops",Faithful
+18,"- Diminished lung sounds with occasional slight expiratory wheeze, bilaterally",Faithful
+19,"- Neck is supple, trachea is midline, no lymphadenopathy",Faithful
+20,- No carotid bruit,Faithful
+21,"- Strong bilateral pulses, no clubbing on fingertips, brisk capillary refill",Faithful
+22,Pulmonary function test results consistent with asthma.,Faithful
+23,Assessment: The patient has moderate intermittent asthma.,Faithful
+24,Problem list: Asthma; Asthma (suspected); Asthma (past); Asthma (unknown).,Fabrication
+25,I prescribed Flovent 110 micrograms one puff twice per day to be taken consistently to help prevent daily symptoms and reduce the need for rescue inhaler use.,Faithful
+26,The patient can continue using albuterol (Ventolin) 2 puffs every 4-6 hours as needed for acute exacerbations.,Faithful
+27,I will create an asthma action plan to help manage symptoms and identify triggers.,Faithful
+28,Follow-up appointment in 30 days.,Faithful
+29,I will see the patient in 30 days to reassess symptoms and adjust treatment as needed.,Faithful
+30,Instructions:,Fabrication

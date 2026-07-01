@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 71-year-old male, presented with a 3-month history of cough, initially noticed while loading horses, which he attributes to strenuous activity.",Fabrication,a 71-year-old male
+1,"He had a cold that resolved, and his cough has been intermittent since then.",Faithful,
+2,"He has a history of bronchitis diagnosed by his primary care physician and a lung nodule found on a chest X-ray, confirmed by a CT scan.",Faithful,
+3,He has not experienced pain or shortness of breath.,Faithful,
+4,"He is a former smoker, having stopped 7 years ago, and has a history of rheumatoid arthritis, which is currently under control with methotrexate 7.5mg weekly.",Faithful,
+5,"Past medical history: The patient has a history of rheumatoid arthritis, which is currently under control with medication.",Faithful,
+6,"He has a history of smoking, having quit 7 years ago.",Faithful,
+7,"Review of systems: The patient denies any pain, shortness of breath, or other symptoms.",Faithful,
+8,Current medications: Methotrexate 7.5mg weekly.,Faithful,
+9,"Vital signs: Blood pressure 124/76, heart rate 70, respiration rate 16, oxygen saturation 98% on room air, and the patient is afebrile.",Causality,124/76
+10,"Physical exam: The lungs are clear and equal bilateral, the heart is regular rate and rhythm, and there are no clicks, rubs, or murmurs.",Faithful,
+11,"The skin is pink, warm, and dry, and there is no edema to the lower extremities.",Faithful,
+12,"The patient has some swelling to the knuckles on each hand, which may be related to his rheumatoid arthritis, but pulses are intact and capillary refill is brisk.",Faithful,
+13,"Test Results: A chest CT scan showed a solitary 2-centimeter nodule in the lateral aspect of the right upper lobe, which appears smooth in appearance and without evidence of emphysematous disease.",Faithful,
+14,"Assessment: The patient has an incidentally found right upper lobe lung nodule, which is a solitary 2-centimeter nodule in the lateral aspect of the right upper lobe.",Faithful,
+15,Problem list: Lung nodule; Rheumatoid Arthritis; Smoking History.,Faithful,
+16,I will order a pulmonary function test (PFT) to establish a baseline for the patient's lung function.,Faithful,
+17,I will schedule a PET CT scan to determine if the nodule is metabolically active.,Faithful,
+18,"I will recommend a video-assisted thoracoscopy to remove the nodule, which will involve three small incisions on the side of the right chest and general anesthesia.",Faithful,
+19,The patient will be under observation for one night in the hospital and discharged the following day.,Faithful,
+20,I will also instruct the patient to continue following up with his rheumatologist and adhere to his current medication therapy.,Faithful,
+21,Follow-up: The patient will be seen in a few minutes to sign paperwork and begin the treatment process.,Faithful,

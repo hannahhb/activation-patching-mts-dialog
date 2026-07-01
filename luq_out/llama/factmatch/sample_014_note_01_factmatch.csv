@@ -1,0 +1,46 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Larry.,1.0,The patient's name is Larry.,1,,entailment
+1,The patient presents with chronic back pain.,0.9531,The back pain has lasted a couple of years.,1,,entailment
+2,The patient's back pain started 2 years ago.,0.9681,The back pain has lasted a couple of years.,1,,entailment
+3,The patient associates back pain with moving furniture.,0.9698,The patient's back pain started after moving furniture.,1,,entailment
+4,The patient describes the pain as sharp stabbing in his back.,0.9808,The back pain feels like a sharp stabbing pain.,1,,entailment
+5,The patient's back pain radiates down to his right leg.,0.9861,The pain radiates down to the right leg.,1,,entailment
+6,The patient's back pain radiates to his right big toe.,0.9562,The pain sometimes reaches the big toe.,1,,entailment
+7,The patient experiences numbness in his right leg.,0.9724,The numbness is located in the right leg.,1,,entailment
+8,The patient experiences tingling in his right leg.,0.9242,The patient has decreased sensation to light touch at the right lateral thigh.,0,fabrication,neutral
+9,The patient experiences numbness in his right foot.,0.9661,The numbness is located in the right leg.,1,,entailment
+10,The patient experiences tingling in his right foot.,0.9141,The patient has decreased sensation to light touch at the right lateral thigh.,0,fabrication,contradiction
+11,The patient has tried physical therapy in the past.,0.9891,The patient has tried physical therapy.,1,,entailment
+12,The patient has tried strong pain medications in the past.,0.99,The patient has been prescribed strong pain medications in the past.,1,,entailment
+13,The patient had temporary relief from physical therapy and strong pain medications.,0.9599,The patient has been prescribed strong pain medications in the past.,1,,entailment
+14,The patient has been advised about surgery.,0.9256,The patient wants to avoid surgery.,1,,entailment
+15,The patient wants to avoid surgery.,1.0,The patient wants to avoid surgery.,1,,entailment
+16,The patient quit smoking 20 years ago.,0.9987,The patient quit smoking twenty years ago.,1,,entailment
+17,The patient does not recall any family members with spine conditions.,0.9704,The patient does not have any family members with spine conditions.,1,,entailment
+18,The patient denies numbness in the genital area.,0.9502,The patient does not have loss of sensation in the genital area.,1,,entailment
+19,The patient denies numbness in the rectal area.,0.9551,The patient does not have loss of sensation in the rectal area.,1,,entailment
+20,The patient denies tingling in the genital area.,0.934,The patient does not have loss of sensation in the genital area.,1,,entailment
+21,The patient denies tingling in the rectal area.,0.9387,The patient does not have loss of sensation in the rectal area.,0,fabrication,neutral
+22,The patient denies loss of sensation.,0.9433,The patient does not have loss of sensation in the genital area.,1,,entailment
+23,The patient denies weakness.,0.9501,The patient does not have weakness.,1,,entailment
+24,The patient denies loss of control of bladder.,0.9787,The patient does not have loss of control of the bladder.,1,,entailment
+25,The patient denies loss of control of bowels.,0.9786,The patient does not have loss of control of the bowels.,1,,entailment
+26,The patient has midline tenderness at L4-L5 disk space.,0.9934,There is midline tenderness at the L4-L5 disk space.,1,,entailment
+27,The patient has right-sided lumbar paravertebral tenderness.,0.9942,There is right-sided lumbar paravertebral tenderness.,1,,entailment
+28,Lumbar flexion causes the patient pain.,0.9851,The patient experiences pain with lumbar flexion.,1,,entailment
+29,The patient has a positive supine straight leg test.,0.991,The supine straight leg test is positive.,1,,entailment
+30,The patient has decreased sensation to light touch at the right lateral thigh at L4 dermatome.,0.9836,The patient has decreased sensation to light touch at the right lateral thigh.,1,,entailment
+31,The patient's patellar reflexes are symmetrical.,0.9881,The patient's patellar and achilles reflexes are symmetrical.,1,,entailment
+32,The patient's Achilles reflexes are symmetrical.,0.9849,The patient's patellar and achilles reflexes are symmetrical.,1,,entailment
+33,The patient's MRI results show disk herniation.,0.9838,The MRI shows disk herniation.,1,,entailment
+34,The patient's MRI results show nerve impingement.,0.9862,The MRI shows nerve impingement.,1,,entailment
+35,The patient has an L4-L5 herniated disk with radiculopathy.,0.981,The doctor diagnosed an L4-L5 herniated disk with radiculopathy.,1,,entailment
+36,The patient has chronic lumbar back pain.,0.9549,The patient has been having back pain.,1,,entailment
+37,The doctor recommended a spinal injection.,1.0,The doctor recommended a spinal injection.,1,,entailment
+38,The spinal injection will be with a corticosteroid.,0.9871,The spinal injection will contain a corticosteroid.,1,,entailment
+39,The corticosteroid will be injected into the lumbar spine.,1.0,The corticosteroid will be injected into the lumbar spine.,1,,entailment
+40,The corticosteroid injection will be under fluoroscopy.,0.9606,The injection will be done under fluoroscopy.,1,,entailment
+41,The doctor will monitor the patient's response to the injection.,1.0,The doctor will monitor the patient's response to the injection.,1,,entailment
+42,The patient will be scheduled for up to 4 injections per year.,0.9656,The injections will not be more than four times a year.,1,,entailment
+43,The patient will be scheduled for a follow-up appointment.,0.8963,The patient's primary care doctor referred them to the specialist.,0,fabrication,neutral
+44,The follow-up appointment is to monitor the patient's response to the injection.,0.9561,The doctor will monitor the patient's response to the injection.,1,,entailment

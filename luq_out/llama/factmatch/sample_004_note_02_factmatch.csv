@@ -1,0 +1,52 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient presents with a non-healing wound on his right foot.,0.9414,The patient's right foot x-ray shows no evidence of osteomyelitis.,0,fabrication,neutral
+1,The wound on the patient's right foot has been present for 2-3 weeks.,0.966,The patient has had the wound for a couple of weeks.,1,,entailment
+2,The patient initially thought the wound was a blister from a new pair of shoes.,0.9614,The blister was caused by a new pair of shoes.,1,,entailment
+3,The wound progressed to a larger wound.,0.9016,The patient has had the wound for a couple of weeks.,0,fabrication,neutral
+4,The patient denies any trauma to the foot.,0.9118,The patient's right foot x-ray shows no evidence of osteomyelitis.,0,fabrication,neutral
+5,The patient has not experienced any pain or discomfort from the wound.,0.9763,The patient does not feel pain in the wound.,1,,entailment
+6,The wound does not hurt when the patient touches it.,0.9515,The doctor did not appreciate any pain when touching the wound.,1,,entailment
+7,The patient has diabetes.,1.0,The patient has diabetes.,1,,entailment
+8,The patient's last HbA1c was 8.1%.,0.9874,The patient's last HbA1c was a little over 8.,1,,entailment
+9,The patient used to see a podiatrist.,1.0,The patient used to see a podiatrist.,1,,entailment
+10,The patient's podiatrist moved and he was unable to find a new one.,0.9297,The patient has not seen a podiatrist for a couple of years.,0,fabrication,neutral
+11,The patient denies fever.,0.9564,The patient has no fever.,1,,entailment
+12,The patient denies chills.,0.9542,The patient has no chills.,1,,entailment
+13,The patient denies drainage from the wound.,0.9745,The patient has no drainage from the wound.,1,,entailment
+14,The patient denies odor from the wound.,0.9561,The wound has no odor.,1,,entailment
+15,The patient's temperature is 98.1°F.,0.9959,The patient's temperature is 98.1.,1,,entailment
+16,The patient's heart rate is 72.,1.0,The patient's heart rate is 72.,1,,entailment
+17,The patient's respirations are 16.,1.0,The patient's respirations are 16.,1,,entailment
+18,The patient's blood pressure is 110/65.,0.9876,The patient's blood pressure is 110 over 65.,1,,entailment
+19,There is a 1x2 inch circular wound on the dorsal aspect of the lateral right foot.,0.9928,The patient has a 1 by 2 inch circular wound on the dorsal aspect of the lateral right foot.,1,,entailment
+20,The wound is proximal to the right fifth MTP joint.,0.9916,The wound is just proximal to the right fifth metatarsophalangeal (MTP) joint.,1,,entailment
+21,The wound has yellow slough.,0.9932,The wound has some yellow slough present.,1,,entailment
+22,The wound has minimal granulation tissue.,1.0,The wound has minimal granulation tissue.,1,,entailment
+23,The wound has no surrounding erythema.,0.9857,The wound has no surrounding erythema or cellulitis.,1,,entailment
+24,The wound has no cellulitis.,0.9668,The wound has no surrounding erythema or cellulitis.,1,,entailment
+25,There is no fluid collection in the wound.,0.9822,The wound has no evidence of fluid collection.,1,,entailment
+26,There is no necrosis in the wound.,0.991,The wound has no necrosis.,1,,entailment
+27,There is no odor from the wound.,0.9916,The wound has no odor.,1,,entailment
+28,The vascular exam shows palpable bilateral femoral pulses.,0.9721,The patient has palpable bilateral femoral and popliteal pulses.,1,,entailment
+29,The vascular exam shows palpable bilateral popliteal pulses.,0.9742,The patient has palpable bilateral femoral and popliteal pulses.,1,,entailment
+30,The vascular exam shows no palpable DP pulses.,0.9436,The patient has no palpable dorsal pedis (DP) or posterior tibial (PT) pulses.,0,fabrication,neutral
+31,The vascular exam shows no palpable PT pulses.,0.9297,The patient has no palpable dorsal pedis (DP) or posterior tibial (PT) pulses.,0,fabrication,neutral
+32,Doppler signs are present.,0.9826,The patient has Doppler signs present.,1,,entailment
+33,The right foot X-ray shows no evidence of osteomyelitis.,0.9959,The patient's right foot x-ray shows no evidence of osteomyelitis.,1,,entailment
+34,The patient has a diabetic foot ulcer.,0.9494,The patient has diabetes.,0,fabrication,neutral
+35,The patient has inadequate blood supply.,0.8984,The doctor may refer the patient to a vascular specialist if the ABI indicates the blood supply is not optimal for wound healing.,0,fabrication,neutral
+36,The patient has diabetes mellitus.,0.9957,The patient has diabetes.,1,,entailment
+37,The doctor prescribed collagenase ointment.,1.0,The doctor prescribed collagenase ointment.,1,,entailment
+38,The collagenase ointment dose is not specified.,1.0,The collagenase ointment dose is not specified.,1,,entailment
+39,Collagenase ointment is applied to the wound once daily.,0.9948,Collagenase ointment is to be applied to the wound once daily.,1,,entailment
+40,Collagenase ointment is prescribed for a diabetic foot ulcer.,0.9904,The collagenase ointment is for the diabetic foot ulcer.,1,,entailment
+41,The patient will wear a surgical shoe.,0.9512,The patient is to wear a surgical shoe to take pressure off the area.,1,,entailment
+42,The surgical shoe is to take pressure off the area.,0.9813,The patient is to wear a surgical shoe to take pressure off the area.,1,,entailment
+43,A debridement will be performed in the office.,0.9303,The doctor is going to perform a debridement to take off some of the dead tissue.,0,fabrication,neutral
+44,The debridement is to remove dead tissue.,0.9635,The doctor is going to perform a debridement to take off some of the dead tissue.,1,,entailment
+45,The doctor ordered an Ankle Brachial Index (ABI).,0.9801,The doctor is going to order an ankle-brachial index (ABI) to determine the blood supply to the patient's foot.,1,,entailment
+46,The ABI is to determine the blood supply to the foot.,0.9728,The doctor is going to order an ankle-brachial index (ABI) to determine the blood supply to the patient's foot.,1,,entailment
+47,The patient will be seen again in two weeks.,0.9844,The doctor wants to see the patient again in two weeks.,1,,entailment
+48,The patient may be referred to a vascular specialist.,0.9326,The doctor may refer the patient to a vascular specialist if the ABI indicates the blood supply is not optimal for wound healing.,1,,entailment
+49,The referral to a vascular specialist is dependent on the ABI results.,0.9543,The doctor may refer the patient to a vascular specialist if the ABI indicates the blood supply is not optimal for wound healing.,1,,entailment
+50,The patient's diabetes needs to be under control to aid in wound healing.,0.9842,The doctor wants to get the patient's diabetes under control to help the wound heal.,1,,entailment

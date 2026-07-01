@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 36-year-old female, presents with ankle pain and a history of diabetes and high blood pressure.",Faithful,
+1,"She reports that two days ago, she slipped on ice and twisted her left ankle, which is more on the outside of her hip.",Contextual,which is more on the outside of her hip
+2,"She fell and was able to get up with assistance, but experienced significant soreness, swelling, and pain, making it hard to walk.",Fabrication,with assistance
+3,"She has tried ibuprofen, ice, and elevation, which provided some relief.",Faithful,
+4,"The pain is localized to the outside of her ankle, with no pain or tenderness in her calf, lower leg, or knee.",Faithful,
+5,Past medical history: The patient has a history of diabetes and high blood pressure.,Faithful,
+6,Review of systems: No additional symptoms in other organs were mentioned.,Faithful,
+7,"Current medications: The patient is currently taking metformin for diabetes, and norvasc for high blood pressure.",Faithful,
+8,Vital signs: The patient's blood pressure was 120/70.,Faithful,
+9,"Physical exam: The patient's neck exam was fine with no bruits, lungs were clear, heart exam was normal with a 2/6 systolic ejection murmur (unchanged from before), belly exam was good, and ankle exam showed tenderness over the lateral malleolus and the fifth metatarsal, with swelling, redness, and pain with valgus stressing of the ankle.",Faithful,
+10,Test Results: None mentioned.,Faithful,
+11,"Assessment: The patient likely has an ankle sprain, and I would like to order an X-ray of the ankle to rule out a fracture.",Faithful,
+12,Problem list: Ankle sprain; Diabetes; High blood pressure.,Faithful,
+13,I ordered an X-ray of the ankle and prescribed naprosyn 500mg twice a day for pain control.,Faithful,
+14,"I instructed the patient to elevate the ankle, apply ice, and avoid weightbearing until the X-ray results are back.",Faithful,
+15,"If the X-ray shows a fracture, I will refer the patient to orthopedics.",Faithful,
+16,I also prescribed crutches and will have the patient return to the office once the X-ray results are back.,Faithful,
+17,I will check the patient's hemoglobin A1c and order baseline labs as part of her diabetes management.,Faithful,
+18,I will refill the patient's norvasc and instruct her to continue monitoring her blood pressure.,Faithful,
+19,"Follow-up: The patient will return to the office once the X-ray results are back, and I will reassess her ankle and provide further instructions.",Fabrication,and provide further instructions

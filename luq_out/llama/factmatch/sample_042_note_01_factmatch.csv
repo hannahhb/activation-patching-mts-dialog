@@ -1,0 +1,61 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Larry.,1.0,The patient's name is Larry.,1,,entailment
+1,The patient has a chronic history of back pain.,0.9619,The back pain has lasted a couple of years.,1,,entailment
+2,The patient's back pain has been ongoing for two years.,0.9815,The back pain has lasted a couple of years.,1,,entailment
+3,The patient reports a sharp stabbing pain in his back.,0.9777,The back pain feels like a sharp stabbing pain.,1,,entailment
+4,The patient's back pain radiates down to his right leg.,0.9695,The pain goes down to the right leg.,1,,entailment
+5,The patient's back pain radiates to his big toe.,0.9658,The pain goes down to the big toe.,1,,entailment
+6,The patient's back pain is exacerbated by sitting.,0.9577,The discomfort worsens when sitting down.,1,,entailment
+7,The patient experiences numbness in his right leg.,0.9724,The numbness is located in the right leg.,1,,entailment
+8,The patient experiences tingling in his right leg.,0.9686,The patient experiences tingling.,1,,entailment
+9,The patient experiences numbness and tingling in his foot.,0.9586,The patient experiences numbness.,1,,entailment
+10,The patient denied loss of sensation in the genital area.,0.9867,The patient denied loss of sensation in the genital or rectal area.,1,,entailment
+11,The patient denied loss of sensation in the rectal area.,0.9912,The patient denied loss of sensation in the genital or rectal area.,1,,entailment
+12,The patient denied weakness.,1.0,The patient denied weakness.,1,,entailment
+13,The patient denied loss of control of his bladder.,0.9874,The patient denied loss of control of the bladder or bowels.,1,,entailment
+14,The patient denied loss of control of his bowels.,0.9833,The patient denied loss of control of the bladder or bowels.,1,,entailment
+15,The patient has tried physical therapy in the past.,0.9976,The patient tried physical therapy in the past.,1,,entailment
+16,The patient has tried strong pain medications in the past.,0.9888,The patient was prescribed strong pain medications in the past.,1,,entailment
+17,The patient has not found relief from physical therapy.,0.9464,The patient tried physical therapy in the past.,0,fabrication,neutral
+18,The patient has not found relief from strong pain medications.,0.9711,The patient was prescribed strong pain medications in the past.,1,,entailment
+19,The patient has gained weight.,0.9577,The patient has gained weight due to the back pain.,1,,entailment
+20,The patient's activity level is decreased.,0.9077,The discomfort worsens when sitting down.,1,,entailment
+21,The patient is unable to participate in activities he enjoys.,0.9007,The patient tries to be active despite the back pain.,0,fabrication,neutral
+22,The patient enjoys golf.,0.9388,The patient used to like playing golf.,1,,entailment
+23,The patient has no family members with spine conditions.,0.9094,The patient has back pain.,0,fabrication,contradiction
+24,The patient has not smoked in the past 20 years.,0.9686,The patient quit smoking twenty years ago.,1,,entailment
+25,The patient has a history of attempting to manage his back pain with physical therapy.,0.9666,The patient tried many things to alleviate the back pain.,1,,entailment
+26,The patient has a history of attempting to manage his back pain with pain medications.,0.9602,The patient tried many things to alleviate the back pain.,1,,entailment
+27,The patient denies any symptoms in other organs relevant to his initial presentation.,0.9118,The patient denied loss of sensation in the genital or rectal area.,0,fabrication,neutral
+28,The patient has midline tenderness at the L4-L5 disk space.,0.9931,There is midline tenderness at the L4-L5 disk space.,1,,entailment
+29,The patient has right-sided lumbar paravertebral tenderness.,0.9942,There is right-sided lumbar paravertebral tenderness.,1,,entailment
+30,The supine straight leg test is positive.,1.0,The supine straight leg test is positive.,1,,entailment
+31,There is decreased sensation to light touch at the right lateral thigh at L4 dermatome.,0.9957,The patient has decreased sensation to light touch at the right lateral thigh at the L4 dermatome.,1,,entailment
+32,Patellar reflexes are symmetrical.,0.9731,The patient's patellar and achilles reflexes are symmetrical.,1,,entailment
+33,Achilles reflexes are symmetrical.,0.9723,The patient's patellar and achilles reflexes are symmetrical.,1,,entailment
+34,The MRI results show disk herniation.,0.9638,The MRI shows disk herniation with nerve impingement.,1,,entailment
+35,The MRI results show nerve impingement.,0.9712,The MRI shows disk herniation with nerve impingement.,1,,entailment
+36,The patient has an L4-L5 herniated disk with radiculopathy.,0.981,The doctor diagnosed an L4-L5 herniated disk with radiculopathy.,1,,entailment
+37,The patient's disk is bulging out.,0.9374,The herniated disk is bulging out and pinching nerves.,1,,entailment
+38,The patient's disk is pinching on nerves.,0.9507,The herniated disk is bulging out and pinching nerves.,1,,entailment
+39,The patient's nerves are causing tingling in his leg.,0.9446,The patient experiences tingling.,0,fabrication,neutral
+40,The problem list includes Herniated disk with radiculopathy.,0.9527,The doctor diagnosed an L4-L5 herniated disk with radiculopathy.,1,,entailment
+41,The problem list includes Active.,0.8836,The patient tries to be active despite the back pain.,0,fabrication,contradiction
+42,The doctor recommended a spinal injection.,1.0,The doctor recommended a spinal injection.,1,,entailment
+43,The spinal injection will be administered with a corticosteroid.,0.9834,The corticosteroid is administered via spinal injection.,1,,entailment
+44,The corticosteroid is prescribed to reduce inflammation.,0.9591,The corticosteroid is for the patient's back pain.,1,,entailment
+45,The corticosteroid is prescribed to alleviate pain.,0.9736,The corticosteroid is for the patient's back pain.,1,,entailment
+46,The spinal injection will be administered under fluoroscopy.,0.9598,The corticosteroid will be injected into the lumbar spine under fluoroscopy.,1,,entailment
+47,The spinal injection targets the exact area of pain.,0.9404,The injection should help with inflammation causing the pain.,0,fabrication,neutral
+48,The procedure is expected to be relatively quick.,0.9662,The procedure is relatively quick and common.,1,,entailment
+49,The procedure is expected to be common.,0.9505,The procedure is relatively quick and common.,1,,entailment
+50,The patient can expect to be out of the office within an hour.,0.9748,The patient should be out of the office within an hour after the procedure.,1,,entailment
+51,The patient will be monitored.,0.9015,The doctor reviewed the patient's vitals.,0,fabrication,neutral
+52,The patient will be monitored to determine the effectiveness of the injection.,0.9149,The patient may need to have the injection repeated.,0,fabrication,neutral
+53,The interval between subsequent injections will be adjusted accordingly.,0.9261,The patient may need to have the injection repeated.,0,fabrication,neutral
+54,The patient will be scheduled for the first injection today.,0.9149,The patient may need to have the injection repeated.,0,fabrication,contradiction
+55,Subsequent injections will be scheduled as needed.,0.9385,The patient may need to have the injection repeated.,0,fabrication,neutral
+56,The doctor prescribed a corticosteroid.,1.0,The doctor prescribed a corticosteroid.,1,,entailment
+57,The corticosteroid dose is not mentioned.,0.9777,The corticosteroid dose is not specified.,1,,entailment
+58,The corticosteroid is taken via spinal injection.,0.9873,The corticosteroid is administered via spinal injection.,1,,entailment
+59,The corticosteroid is prescribed for Herniated disk with radiculopathy.,0.9537,The corticosteroid is for the patient's back pain.,1,,entailment

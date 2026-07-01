@@ -1,0 +1,25 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 30-year-old male, presents with right knee pain that began a week ago after an injury at a trampoline park.",Fabrication,a 30-year-old male
+1,He reports hearing a snap and feeling instant pain when landing.,Faithful,
+2,"He has not tried any treatments other than Tylenol, which provided minimal relief.",Faithful,
+3,He has a history of hypertension and diabetes.,Faithful,
+4,"Past medical history: The patient has hypertension and diabetes, for which he is taking lisinopril 20mg and metformin 500mg, respectively.",Faithful,
+5,He has not been taking his medications consistently and has not measured his blood pressure regularly.,Faithful,
+6,Review of systems: The patient reports no other symptoms.,Fabrication,The patient reports no other symptoms
+7,Current medications:,Faithful,
+8,Lisinopril 20mg daily for hypertension,Faithful,
+9,Metformin 500mg daily for diabetes,Faithful,
+10,Vital signs: Blood pressure 180/80 mmHg.,Faithful,
+11,Physical exam: The patient has a slight gait and a limp when walking.,Faithful,
+12,"The knee has ecchymosis and edema along the lateral aspect, but no effusion.",Faithful,
+13,"Range of motion is normal, but movement causes pain.",Causality,Range of motion is normal
+14,"The heart has a regular rate and rhythm, and no murmur is appreciated.",Faithful,
+15,The lungs are clear bilaterally.,Faithful,
+16,Test Results: An X-ray of the right knee showed no evidence of fracture or bony abnormality.,Faithful,
+17,"Assessment: The patient has a lateral ligament strain in the right knee, hypertension, and diabetes.",Faithful,
+18,Problem list: Lateral ligament strain of the right knee; Hypertension; Diabetes; Suspected medication non-adherence.,Faithful,
+19,I prescribed Meloxicam 15mg daily for pain and swelling in the right knee.,Faithful,
+20,I referred the patient to physical therapy to strengthen the muscles around the knee and prevent further injury.,Faithful,
+21,I will continue the lisinopril 20mg daily for hypertension and order an echo to assess cardiac function.,Faithful,
+22,I also ordered an A1C and lipid panel to evaluate the patient's diabetes management.,Faithful,
+23,"Follow-up: The patient will return for a follow-up appointment to discuss the results of the echo, A1C, and lipid panel, as well as to reassess the knee injury.",Fabrication,"to discuss the results of the echo, A1C, and lipid panel"

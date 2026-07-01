@@ -1,0 +1,26 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Wayne, presents with a non-healing wound on the dorsal aspect of the lateral right foot, which he reports has been present for 2-3 weeks.",Faithful,
+1,He denies any trauma to the foot and states that the wound was caused by a blister from a new pair of Hoka shoes.,Faithful,
+2,"He has been applying a band-aid and taking antibiotics as prescribed by his PCP, which he completed yesterday.",Faithful,
+3,He denies any pain or discomfort in the wound and reports that it does not hurt when touched.,Faithful,
+4,"He also denies any other symptoms such as fever, chills, or drainage from the wound.",Faithful,
+5,He is wearing a different pair of shoes now and is upset about losing his Hoka shoes.,Contextual,losing his Hoka shoes
+6,"Past medical history: The patient has diabetes, with an HbA1c of 8.1, and has seen a podiatrist in the past, but they moved and he has not been able to get another one.",Causality,8.1
+7,He has neuropathy.,Faithful,
+8,Review of systems: The patient denies any other symptoms in other organs that are relevant to his initial presentation.,Faithful,
+9,Current medications: [NOT MENTIONED],Fabrication,Current medications
+10,"Vital signs: The patient's temperature is 98.1, heart rate is 72, respirations are 16, and blood pressure is 110/65.",Faithful,
+11,"Physical exam: There is a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, just proximal to the right fifth MTP joint, with yellow slough and minimal granulation tissue.",Faithful,
+12,"There is no surrounding erythema or cellulitis, no fluid collection, and no necrosis.",Faithful,
+13,There is no odor.,Faithful,
+14,"The vascular exam shows palpable bilateral femoral and popliteal pulses, but no palpable DP or PT pulses, with Doppler signs present.",Faithful,
+15,Test Results: The patient's right foot X-ray shows no evidence of osteomyelitis.,Faithful,
+16,Assessment: The patient has a diabetic foot ulcer on the dorsal aspect of the lateral right foot.,Faithful,
+17,Problem list: Diabetic foot ulcer; Diabetes mellitus; Peripheral neuropathy; [NOT MENTIONED],Fabrication,[NOT MENTIONED]
+18,"I prescribed Collagenase ointment to be applied to the wound once daily, covered with a dry sterile dressing, and ordered an Ankle Brachial Index (ABI) to determine the blood supply to the foot.",Faithful,
+19,I performed a debridement of the wound in the office.,Faithful,
+20,I want the patient to wear a surgical shoe to take pressure off the area.,Faithful,
+21,I do not think any more antibiotics are needed at this time.,Faithful,
+22,I want to see the patient again in two weeks and may refer him to a vascular specialist if the ABI indicates poor blood supply.,Faithful,
+23,I will also refer him to a diabetic specialist to help him control his diabetes.,Faithful,
+24,Follow-up: I want to see the patient again in two weeks.,Faithful,

@@ -1,0 +1,54 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 38-year-old male.,0.9343,The patient's heart rate is 62.,0,fabrication,neutral
+1,The patient presents with a 2-3 week history of right shoulder pain.,0.9734,The patient has had the shoulder pain for a few weeks.,1,,entailment
+2,The patient's right shoulder pain initially developed after intense physical activity.,0.9586,The shoulder pain is in the right shoulder.,1,,entailment
+3,The patient was lifting and moving stones for a patio extension and flower boxes.,0.9101,The patient has been lifting stones.,0,fabrication,neutral
+4,The pain is localized to the outside of the shoulder.,0.9686,The patient's current pain is on the outside of his right shoulder.,1,,entailment
+5,The pain is more pronounced when raising the arm.,0.9725,The pain is tender when he raises his arm.,1,,entailment
+6,The pain is exacerbated by movement.,0.9358,The patient only feels pain when he moves his arm.,0,fabrication,neutral
+7,The patient reports some pain at night.,0.9665,The patient feels some pain at night because he sleeps on his right side.,1,,entailment
+8,The patient reports pain when sleeping on the affected side.,0.9631,The patient feels some pain at night because he sleeps on his right side.,1,,entailment
+9,The patient denied numbness in the arm.,0.9765,The patient has not experienced numbness in his arm or hands.,1,,entailment
+10,The patient denied numbness in the hands.,0.9782,The patient has not experienced numbness in his arm or hands.,1,,entailment
+11,The patient has a history of a previous injury to the same shoulder.,0.9433,The patient has a history of hurting his right shoulder playing baseball.,1,,entailment
+12,The patient's previous injury occurred while playing baseball.,0.9424,The patient has a history of hurting his right shoulder playing baseball.,1,,entailment
+13,The patient has ongoing issues from the previous injury.,0.9018,The patient has had issues with his right shoulder before.,0,fabrication,neutral
+14,The patient reports bilateral foot soreness.,0.9412,The patient's feet are sore.,0,fabrication,neutral
+15,The patient attributes foot soreness to recent yard work.,0.9279,The patient's feet are sore.,0,fabrication,neutral
+16,The patient attributes foot soreness to possibly dehydration.,0.94,The patient's feet are sore.,0,fabrication,neutral
+17,The patient is taking Advil.,0.9557,The patient has been taking Advil for pain.,1,,entailment
+18,The Advil dose is not specified.,0.8989,The patient has been taking Advil for pain.,0,fabrication,neutral
+19,Advil is taken for pain relief.,0.9753,The patient has been taking Advil for pain.,1,,entailment
+20,The patient is icing his shoulder.,0.981,The patient has been icing his shoulder for pain.,1,,entailment
+21,The patient's temperature is 97.8°F.,0.9319,The patient's heart rate is 62.,0,fabrication,neutral
+22,The patient's heart rate is 62.,1.0,The patient's heart rate is 62.,1,,entailment
+23,The patient's respirations are 16.,1.0,The patient's respirations are 16.,1,,entailment
+24,The patient's blood pressure is 116/84.,0.9911,The patient's blood pressure is 116 over 84.,1,,entailment
+25,The patient's oxygen saturation is 99%.,0.9964,The patient's oxygen saturation is 99 percent.,1,,entailment
+26,The patient has limited active range of motion of the right shoulder.,0.9951,The patient has limited active and passive range of motion in his right shoulder.,1,,entailment
+27,The patient has limited passive range of motion of the right shoulder.,0.995,The patient has limited active and passive range of motion in his right shoulder.,1,,entailment
+28,The patient has tenderness at the greater tuberosity of the humerus.,0.98,There is tenderness at the great tuberosity of the humerus.,1,,entailment
+29,The patient has no tenderness at the sternoclavicular joint.,0.9773,There is no tenderness at the sternoclavicular or acromioclavicular joints.,1,,entailment
+30,The patient has no tenderness at the acromioclavicular joint.,0.978,There is no tenderness at the sternoclavicular or acromioclavicular joints.,1,,entailment
+31,The patient has a good hand grip.,1.0,The patient has a good hand grip.,1,,entailment
+32,The patient's capillary refill is less than 3 seconds.,0.9982,The patient's capillary refill is less than three seconds.,1,,entailment
+33,The patient's sensation to touch is intact.,1.0,The patient's sensation to touch is intact.,1,,entailment
+34,The patient's shoulder X-ray shows no fracture.,0.9642,The x-ray showed no fracture.,1,,entailment
+35,The patient's symptoms are most likely due to rotator cuff tendinopathy.,0.9435,The doctor diagnosed rotator cuff tendinopathy.,1,,entailment
+36,Rotator cuff tendinopathy is likely exacerbated by recent physical activity.,0.9129,The doctor diagnosed rotator cuff tendinopathy.,0,fabrication,neutral
+37,The patient has rotator cuff tendinopathy.,0.9663,The doctor diagnosed rotator cuff tendinopathy.,1,,entailment
+38,The patient has possible dehydration.,0.9073,The patient's wife thinks he does not drink enough water.,0,fabrication,neutral
+39,The patient has possible foot strain.,0.9206,The patient's feet are sore.,0,fabrication,neutral
+40,The patient has an unknown condition.,0.8831,The patient is putting in an outdoor shower.,0,fabrication,neutral
+41,The doctor plans to refer the patient to physical therapy.,0.9815,The doctor referred the patient to physical therapy.,1,,entailment
+42,The patient will attend physical therapy for approximately 6-8 weeks.,0.9851,The physical therapy will last approximately six to eight weeks.,1,,entailment
+43,The doctor recommends continuing Tylenol.,0.9524,The patient will continue taking Tylenol.,1,,entailment
+44,The Tylenol dose is not specified.,0.9196,The doctor prescribed Tylenol.,0,fabrication,neutral
+45,Tylenol is taken for pain relief.,0.9855,Tylenol is for pain.,1,,entailment
+46,The doctor recommends icing the shoulder as needed.,0.9514,The patient has been icing his shoulder for pain.,1,,entailment
+47,The doctor will consider a steroid injection if symptoms do not improve.,0.9988,The doctor may consider a steroid injection if symptoms do not improve.,1,,entailment
+48,The doctor advises the patient to soak his feet in Epsom salts.,0.9767,The doctor suggested soaking his feet in Epsom salts.,1,,entailment
+49,The patient will soak his feet in Epsom salts to alleviate foot soreness.,0.9699,The doctor suggested soaking his feet in Epsom salts.,1,,entailment
+50,The patient will follow up in approximately 6-8 weeks.,0.9396,The physical therapy will last approximately six to eight weeks.,1,,entailment
+51,The follow-up appointment is to assess progress.,0.9461,The patient will have a follow-up appointment after physical therapy.,0,fabrication,neutral
+52,The follow-up appointment is to adjust the treatment plan as necessary.,0.9509,The patient will have a follow-up appointment after physical therapy.,1,,entailment

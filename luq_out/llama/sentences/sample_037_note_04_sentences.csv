@@ -1,31 +1,31 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, a 36-year-old female, presents with complaints of ankle pain, which began after slipping and twisting her left ankle two days ago.",0.4086
-2,"She reports falling onto the outside of her ankle, resulting in swelling and pain, making it difficult to walk.",0.1464
-3,"She has tried ibuprofen, ice, and elevation for pain and swelling, with minimal relief.",0.3197
-4,"She denies bleeding and reports pain primarily on the outside of her ankle, with no pain radiating to her calf, lower leg, or knee.",0.3849
-5,Past medical history: The patient has a history of diabetes and high blood pressure.,0.3912
-6,She is currently taking metformin for diabetes and norvasc for high blood pressure.,0.4333
-7,"Her hemoglobin A1c was 6.8 last recorded, and she is due for a follow-up eye exam for her diabetes.",0.7572
-8,Review of systems: The patient reports no additional symptoms in other organs.,0.7924
-9,"Current medications: Metformin, norvasc.",0.8181
+1,"HPI: The patient, a 36-year-old female, presents with complaints of ankle pain, which began after slipping and twisting her left ankle two days ago.",0.0053
+2,"She reports falling onto the outside of her ankle, resulting in swelling and pain, making it difficult to walk.",0.0125
+3,"She has tried ibuprofen, ice, and elevation for pain and swelling, with minimal relief.",0.0344
+4,"She denies bleeding and reports pain primarily on the outside of her ankle, with no pain radiating to her calf, lower leg, or knee.",0.1072
+5,Past medical history: The patient has a history of diabetes and high blood pressure.,0.0067
+6,She is currently taking metformin for diabetes and norvasc for high blood pressure.,0.0231
+7,"Her hemoglobin A1c was 6.8 last recorded, and she is due for a follow-up eye exam for her diabetes.",0.2341
+8,Review of systems: The patient reports no additional symptoms in other organs.,0.1868
+9,"Current medications: Metformin, norvasc.",0.211
 10,Objective:,0.5
-11,"Vital signs: Blood pressure 120/70, oxygen saturation [NOT MENTIONED], temperature [NOT MENTIONED].",0.8831
-12,"Physical exam: The patient's neck exam is fine, with no bruits.",0.5001
-13,"Her lungs are clear, and her heart exam is normal, except for a 2/6 systolic ejection murmur, which is unchanged from previous exams.",0.4734
-14,Her belly exam is good.,0.3055
-15,"On her ankle exam, she has tenderness over the lateral malleolus and the fifth metatarsal, with swelling and redness.",0.2403
-16,She has normal sensation and pulses in her lower extremities.,0.2464
+11,"Vital signs: Blood pressure 120/70, oxygen saturation [NOT MENTIONED], temperature [NOT MENTIONED].",0.7779
+12,"Physical exam: The patient's neck exam is fine, with no bruits.",0.4895
+13,"Her lungs are clear, and her heart exam is normal, except for a 2/6 systolic ejection murmur, which is unchanged from previous exams.",0.3732
+14,Her belly exam is good.,0.2312
+15,"On her ankle exam, she has tenderness over the lateral malleolus and the fifth metatarsal, with swelling and redness.",0.2327
+16,She has normal sensation and pulses in her lower extremities.,0.1128
 17,Test Results: [NOT MENTIONED],0.5
 18,Assessment / Problem List:,0.5
-19,"Assessment: The patient likely has an ankle sprain, but an x-ray is needed to rule out a fracture.",0.3303
-20,Problem list: Ankle sprain; High blood pressure; Diabetes mellitus.,0.999
+19,"Assessment: The patient likely has an ankle sprain, but an x-ray is needed to rule out a fracture.",0.0089
+20,Problem list: Ankle sprain; High blood pressure; Diabetes mellitus.,0.5449
 21,Plan:,0.5
-22,I ordered an x-ray of the patient's ankle to rule out a fracture.,0.2149
-23,I will place her in an air splint and have her use crutches until the results are back.,0.4436
-24,I prescribed naprosyn 500mg twice a day for pain control.,0.1173
-25,"I instructed her to keep her ankle elevated, apply ice, and avoid weight-bearing.",0.1136
-26,"If the x-ray shows a fracture, I will refer her to orthopedics.",0.4376
-27,"I also refilled her norvasc and ordered baseline labs, including a hemoglobin A1c, to check on her diabetes management.",0.5546
-28,I advised her to continue her metformin and attend her scheduled eye exam.,0.7783
-29,"Follow-up: The patient will return for follow-up after the x-ray results are back, and if necessary, to reassess her ankle and adjust her treatment plan.",0.8889
+22,I ordered an x-ray of the patient's ankle to rule out a fracture.,0.0152
+23,I will place her in an air splint and have her use crutches until the results are back.,0.1761
+24,I prescribed naprosyn 500mg twice a day for pain control.,0.1091
+25,"I instructed her to keep her ankle elevated, apply ice, and avoid weight-bearing.",0.1113
+26,"If the x-ray shows a fracture, I will refer her to orthopedics.",0.1813
+27,"I also refilled her norvasc and ordered baseline labs, including a hemoglobin A1c, to check on her diabetes management.",0.1781
+28,I advised her to continue her metformin and attend her scheduled eye exam.,0.7767
+29,"Follow-up: The patient will return for follow-up after the x-ray results are back, and if necessary, to reassess her ankle and adjust her treatment plan.",0.2956

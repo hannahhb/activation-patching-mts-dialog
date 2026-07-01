@@ -1,0 +1,52 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 54-year-old male.,1.0,The patient is a 54-year-old male.,1,,entailment
+1,"The patient presents with stabbing, shooting pain in the right cheek bone area of his face.",0.9576,The facial pain is stabbing and shooting.,1,,entailment
+2,The patient describes the pain as excruciating.,0.9085,The patient experiences episodes of facial pain.,0,fabrication,neutral
+3,The pain started approximately two to three months ago.,0.9412,The facial pain has been present for a couple of months.,1,,entailment
+4,The pain has been ongoing.,0.9171,The facial pain has been present for a couple of months.,1,,entailment
+5,The patient denied numbness in the affected area initially.,0.9523,The patient has some numbness on the right side of their face.,1,,entailment
+6,The pain is triggered by certain temperatures.,0.9669,The patient's facial pain is triggered by certain temperatures.,1,,entailment
+7,The pain is triggered by wind.,0.9724,The patient's facial pain is triggered by wind.,1,,entailment
+8,The pain is triggered by cold.,0.9585,The patient's facial pain is triggered by cold temperatures.,1,,entailment
+9,The patient has tried ibuprofen.,0.9838,The patient has tried ibuprofen for pain relief.,1,,entailment
+10,The patient has tried Motrin.,0.9685,The patient has tried Motrin for pain relief.,1,,entailment
+11,The patient has tried tiger balm.,0.97,The patient has tried tiger balm for pain relief.,1,,entailment
+12,"The patient did not experience relief from ibuprofen, Motrin, and tiger balm.",0.9499,Tiger balm has not helped the patient's facial pain.,0,fabrication,neutral
+13,The patient has a history of occasional headaches.,0.9659,The patient occasionally experiences headaches.,1,,entailment
+14,The patient denies migraines.,0.9363,The patient does not have a history of migraines.,1,,entailment
+15,The patient rates the pain as a 10 out of 10 when it occurs.,0.9615,"The patient's facial pain is severe, rated as a 10 out of 10.",1,,entailment
+16,The patient denies any history of multiple sclerosis.,0.9793,The patient does not have a history of multiple sclerosis.,1,,entailment
+17,The patient denies any history of brain tumors.,0.9744,The patient does not have a history of brain tumors.,1,,entailment
+18,The patient has a family doctor.,0.9189,The patient's family doctor recommended a consultation with a neurosurgeon.,1,,entailment
+19,The patient's family doctor referred him to see the current doctor.,0.9174,The patient's family doctor recommended a consultation with a neurosurgeon.,1,,entailment
+20,The patient takes Tylenol.,0.957,The patient takes Tylenol for occasional headaches.,1,,entailment
+21,The Tylenol dose is not specified.,0.904,The patient takes Tylenol for occasional headaches.,0,fabrication,neutral
+22,Tylenol is taken as needed.,0.9397,The patient takes Tylenol for occasional headaches.,1,,entailment
+23,Tylenol is prescribed for headaches.,0.9792,The patient takes Tylenol for occasional headaches.,1,,entailment
+24,The patient denies any symptoms in other organs.,0.903,The root cause of the patient's problem is the compression of the blood vessel against the nerve.,0,fabrication,neutral
+25,The patient follows the doctor's finger in both directions without difficulty.,0.9553,The patient can follow the doctor's finger with their eyes.,1,,entailment
+26,The patient's smile appears equal on both sides.,0.929,The patient's teeth are symmetric.,1,,entailment
+27,The patient reports numbness on the right side of his face.,0.9941,The patient has some numbness on the right side of their face.,1,,entailment
+28,The patient feels a cotton tape on both sides of his face.,0.9895,The patient feels a cotton tape on the left side of their face.,1,,entailment
+29,The patient reports the cotton tape as slightly numb on the right side.,0.9638,The patient feels a cotton tape on the left side of their face.,1,,entailment
+30,The patient feels a needle poke on both sides of his face.,0.9693,The patient feels a sharp sensation on the left side of their face when poked with a needle.,1,,entailment
+31,The needle poke feels dull on the right side of the patient's face.,0.9861,The patient feels a little bit dull sensation on the right side of their face when poked with a needle.,1,,entailment
+32,The needle poke feels sharp on the left side of the patient's face.,0.9821,The patient feels a sharp sensation on the left side of their face when poked with a needle.,1,,entailment
+33,The patient had an MRI.,0.9515,The doctor reviewed the patient's MRI.,1,,entailment
+34,The MRI shows a small blood vessel abutting the trigeminal nerve.,0.9854,The patient's MRI shows a small blood vessel abutting and possibly pinching the trigeminal nerve.,1,,entailment
+35,The MRI shows a small blood vessel perhaps pinching the trigeminal nerve.,0.9865,The patient's MRI shows a small blood vessel abutting and possibly pinching the trigeminal nerve.,1,,entailment
+36,The patient has symptoms consistent with trigeminal neuralgia.,0.9804,The patient may have trigeminal neuralgia.,1,,entailment
+37,Trigeminal neuralgia is a condition where the compression of the trigeminal nerve causes shooting electrical pain in the face.,0.9345,The patient may have trigeminal neuralgia.,0,fabrication,neutral
+38,The patient has trigeminal neuralgia.,0.9904,The patient may have trigeminal neuralgia.,1,,entailment
+39,The doctor prescribed Tegretol.,0.9947,The doctor prescribed Tegretol for the patient.,1,,entailment
+40,The Tegretol dose is not specified.,0.9326,The doctor prescribed Tegretol for the patient.,0,fabrication,neutral
+41,Tegretol is prescribed for trigeminal neuralgia.,0.9637,Tegretol is used to reduce the excitability of the nerve.,1,,entailment
+42,Tegretol may cause memory loss.,0.9868,Tegretol can have side effects including memory loss.,1,,entailment
+43,Tegretol may cause tingling.,0.9827,Tegretol can have side effects including tingling.,1,,entailment
+44,Tegretol may cause imbalance.,0.9827,Tegretol can have side effects including imbalance.,1,,entailment
+45,Tegretol may cause dermatologic reactions.,0.9863,Tegretol can have side effects including dermatologic reactions.,1,,entailment
+46,The doctor recommended genetic testing.,0.9199,The patient may need genetic testing before taking Tegretol.,0,fabrication,neutral
+47,Genetic testing is to ensure Tegretol is safe for the patient.,0.9743,The patient may need genetic testing before taking Tegretol.,1,,entailment
+48,The patient will discuss surgical options if the pain continues.,0.9066,The patient will consider surgical options if the Tegretol is not effective.,0,fabrication,neutral
+49,The patient will return in one month.,0.9529,The patient will follow up with the doctor in one month.,1,,entailment
+50,The follow-up is to check if the medication has been effective in controlling the patient's pain.,0.9413,The patient will follow up with the doctor in one month.,0,fabrication,neutral

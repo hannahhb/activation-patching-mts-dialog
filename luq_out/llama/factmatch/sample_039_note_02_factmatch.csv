@@ -1,0 +1,71 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 56-year-old male.,1.0,The patient is a 56-year-old male.,1,,entailment
+1,The patient presents with a chief complaint of difficulty swallowing.,0.9633,The patient has difficulty swallowing.,1,,entailment
+2,The patient describes difficulty swallowing as a sensation of something being stuck in his throat.,0.9524,The patient feels like something is stuck in his throat.,1,,entailment
+3,The difficulty swallowing has been present for 4-5 weeks.,0.9936,The difficulty swallowing has lasted four to five weeks.,1,,entailment
+4,The difficulty swallowing is more noticeable when eating solids.,0.9569,The patient has difficulty swallowing solids.,1,,entailment
+5,The difficulty swallowing can be painful.,0.9682,The patient experiences pain when swallowing.,1,,entailment
+6,The patient has not experienced any coughing.,0.9612,The patient does not experience coughing with swallowing.,1,,entailment
+7,The patient has not experienced any vomiting blood.,0.947,The patient denied vomiting.,0,fabrication,neutral
+8,The patient has a past medical history of diabetes.,0.9593,The patient has diabetes.,1,,entailment
+9,The patient has a past medical history of high blood pressure.,0.9659,The patient has high blood pressure.,1,,entailment
+10,The patient is taking metformin.,1.0,The patient is taking metformin.,1,,entailment
+11,The metformin dose is 500mg.,0.9845,Metformin is taken at a dose of 500 milligrams.,1,,entailment
+12,Metformin is taken twice daily.,0.9947,Metformin is taken twice a day.,1,,entailment
+13,The patient is taking norvasc.,1.0,The patient is taking norvasc.,1,,entailment
+14,The patient's hemoglobin A1c was previously measured at 7.4.,0.9891,The patient's hemoglobin A1c was 7.4.,1,,entailment
+15,The patient's blood sugars have been within target range.,0.9752,The patient's blood sugar numbers are within the target range.,1,,entailment
+16,The patient occasionally skips checking his blood glucose levels.,0.9413,The patient is checking his blood sugars.,0,fabrication,neutral
+17,The patient denied nausea.,0.9651,The patient denied vomiting.,1,,entailment
+18,The patient denied vomiting.,1.0,The patient denied vomiting.,1,,entailment
+19,The patient denied diarrhea.,0.9407,The patient denied blood in his stool.,0,fabrication,neutral
+20,The patient's blood pressure is 120/50 mmHg.,0.998,The patient's blood pressure is 120/50.,1,,entailment
+21,The patient's neck is fine.,1.0,The patient's neck is fine.,1,,entailment
+22,The patient's neck has no swelling.,0.9548,The patient has no masses or swelling in his throat.,1,,entailment
+23,The patient's neck has no masses.,0.9963,The patient has no masses in his neck.,1,,entailment
+24,The patient's thyroid gland feels normal.,0.9972,The patient's thyroid feels normal.,1,,entailment
+25,The patient has no lymph nodes.,1.0,The patient has no lymph nodes.,1,,entailment
+26,The patient's throat examination is normal.,0.9421,The patient's throat looks okay.,1,,entailment
+27,The patient's throat has no masses.,0.9821,The patient has no masses or swelling in his throat.,1,,entailment
+28,The patient's throat has no swelling.,0.9721,The patient has no masses or swelling in his throat.,1,,entailment
+29,The patient's throat has no redness.,0.9267,The patient has no masses or swelling in his throat.,0,fabrication,neutral
+30,The patient's lung exam is clear.,1.0,The patient's lung exam is clear.,1,,entailment
+31,The patient's heart exam is clear.,0.9655,The patient's lung exam is clear.,1,,entailment
+32,The patient's heart has no murmurs.,0.9885,The patient has no murmurs.,1,,entailment
+33,The patient's abdomen exam reveals epigastric tenderness.,0.9777,The patient has epigastric tenderness.,1,,entailment
+34,The epigastric tenderness is in the right upper quadrant.,0.96,The patient has epigastric tenderness.,1,,entailment
+35,The patient's abdomen has no masses.,0.939,The patient has no masses or significant swelling in his belly.,1,,entailment
+36,The patient's abdomen has no significant swelling.,0.9405,The patient has no masses or significant swelling in his belly.,1,,entailment
+37,The patient's back exam is normal.,1.0,The patient's back exam is normal.,1,,entailment
+38,The patient's extremity exam is normal.,0.9848,The patient's extremity exam looks normal.,1,,entailment
+39,The patient's neurological exam is fine.,1.0,The patient's neurological exam is fine.,1,,entailment
+40,The patient has difficulty swallowing (esophageal dysphagia).,0.9784,The patient has difficulty swallowing.,1,,entailment
+41,The esophageal dysphagia is likely due to a narrowing of the esophagus.,0.916,The patient has difficulty swallowing.,0,fabrication,neutral
+42,The narrowing of the esophagus may be a stricture.,0.9292,The doctor is concerned about a stricture in the patient's esophagus.,1,,entailment
+43,The patient has diabetes.,1.0,The patient has diabetes.,1,,entailment
+44,The patient's diabetes is uncontrolled.,0.9372,The patient has diabetes.,0,fabrication,neutral
+45,The patient's hemoglobin A1c is 7.4.,0.999,The patient's hemoglobin A1c was 7.4.,1,,entailment
+46,The patient has high blood pressure.,1.0,The patient has high blood pressure.,1,,entailment
+47,The patient's high blood pressure is controlled.,0.9606,The patient has high blood pressure.,1,,entailment
+48,The patient is taking norvasc for high blood pressure.,0.9811,Norvasc is taken for high blood pressure.,1,,entailment
+49,The doctor will refer the patient to gastroenterology.,0.9815,The doctor referred the patient to gastroenterology.,1,,entailment
+50,The referral to gastroenterology is for further evaluation.,0.9558,The doctor referred the patient to gastroenterology.,1,,entailment
+51,The referral to gastroenterology is for possible endoscopy.,0.9429,The doctor referred the patient to gastroenterology.,0,fabrication,neutral
+52,The endoscopy is to investigate the cause of difficulty swallowing.,0.9347,The patient has difficulty swallowing.,0,fabrication,neutral
+53,The doctor prescribed prilosec.,1.0,The doctor prescribed prilosec.,1,,entailment
+54,The prilosec dose is 20mg.,0.9847,Prilosec is taken at a dose of 20 milligrams.,1,,entailment
+55,Prilosec is taken once daily.,0.9948,Prilosec is taken once a day.,1,,entailment
+56,Prilosec is prescribed for reflux.,1.0,Prilosec is prescribed for reflux.,1,,entailment
+57,The doctor recommends that the patient chew his food frequently.,0.9951,The doctor recommended that the patient chew his food frequently.,1,,entailment
+58,The doctor recommends chewing food especially when eating solids.,0.944,The doctor recommended that the patient chew his food frequently.,0,fabrication,neutral
+59,The doctor will order another hemoglobin A1c.,0.9674,The doctor ordered a hemoglobin A1c test.,1,,entailment
+60,The doctor will order kidney function tests.,0.9683,The doctor ordered blood work to check kidney function.,1,,entailment
+61,The doctor will refer the patient to ophthalmology.,0.9798,The doctor referred the patient to ophthalmology.,1,,entailment
+62,The referral to ophthalmology is for diabetic retinopathy screening.,0.9355,The doctor referred the patient to ophthalmology.,0,fabrication,neutral
+63,The doctor will continue the patient's current medication regimen.,0.9343,The patient will continue taking metformin.,1,,entailment
+64,The patient's current medication regimen includes metformin.,0.9676,The patient is taking metformin.,1,,entailment
+65,The patient's current medication regimen includes norvasc.,0.9703,The patient is taking norvasc.,1,,entailment
+66,The doctor will schedule a follow-up appointment in one month.,0.9604,The patient needs to follow up in a month.,1,,entailment
+67,The follow-up appointment is to review the results of the blood tests.,0.9301,The patient needs to follow up in a month.,0,fabrication,neutral
+68,The follow-up appointment is to make any necessary adjustments to the patient's medication regimen.,0.9362,The patient needs to follow up in a month.,0,fabrication,neutral
+69,The patient will return in one month for a follow-up appointment.,0.9632,The patient needs to follow up in a month.,1,,entailment

@@ -1,28 +1,28 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient presents with a 3-month history of cough, which initially started 4 months ago while loading horses and increased after a cold.",0.8103
-2,The patient reports that the cough has gone away when they exercise and bike.,0.7857
-3,The patient denies any pain or shortness of breath.,0.0466
-4,"The patient has a history of rheumatoid arthritis, which is currently under control with methotrexate 7.5mg weekly.",0.1993
-5,The patient stopped smoking 7 years ago.,0.1064
-6,The patient's mother had breast cancer but is currently doing well.,0.9924
-7,The patient has no previous history of lung infections or pneumonia.,0.7512
-8,Past medical history: The patient has a history of rheumatoid arthritis and was a previous smoker.,0.1043
-9,Review of systems: The patient denies any pain or shortness of breath.,0.0466
-10,Current medications: Methotrexate 7.5mg weekly.,0.4804
+1,"HPI: The patient presents with a 3-month history of cough, which initially started 4 months ago while loading horses and increased after a cold.",0.6014
+2,The patient reports that the cough has gone away when they exercise and bike.,0.7288
+3,The patient denies any pain or shortness of breath.,0.0051
+4,"The patient has a history of rheumatoid arthritis, which is currently under control with methotrexate 7.5mg weekly.",0.1382
+5,The patient stopped smoking 7 years ago.,0.0849
+6,The patient's mother had breast cancer but is currently doing well.,0.4457
+7,The patient has no previous history of lung infections or pneumonia.,0.4766
+8,Past medical history: The patient has a history of rheumatoid arthritis and was a previous smoker.,0.0936
+9,Review of systems: The patient denies any pain or shortness of breath.,0.0051
+10,Current medications: Methotrexate 7.5mg weekly.,0.3666
 11,Objective:,0.5
-12,"Vital signs: Blood pressure 124/76, heart rate 70, respiration rate 16, oxygen saturation 98% on room air, and the patient is afebrile.",0.5675
-13,"Physical exam: The patient's lungs are clear and equal bilateral when auscultated, the heart has a regular rate and rhythm with no clicks, rubs, or murmurs, and the extremities have intact pulses and brisk capillary refill.",0.2245
-14,"The patient has a little bit of swelling to the knuckles on each hand, which is likely due to rheumatoid arthritis.",0.1354
-15,"Test Results: The patient had a chest CT that showed a solitary 2cm nodule in the lateral aspect of the right upper lobe, which is smooth in appearance and has no evidence of emphysematous disease.",0.2578
+12,"Vital signs: Blood pressure 124/76, heart rate 70, respiration rate 16, oxygen saturation 98% on room air, and the patient is afebrile.",0.4408
+13,"Physical exam: The patient's lungs are clear and equal bilateral when auscultated, the heart has a regular rate and rhythm with no clicks, rubs, or murmurs, and the extremities have intact pulses and brisk capillary refill.",0.0453
+14,"The patient has a little bit of swelling to the knuckles on each hand, which is likely due to rheumatoid arthritis.",0.0714
+15,"Test Results: The patient had a chest CT that showed a solitary 2cm nodule in the lateral aspect of the right upper lobe, which is smooth in appearance and has no evidence of emphysematous disease.",0.0063
 16,Assessment / Problem List:,0.5
-17,Assessment: The patient has an incidentally found right upper lobe lung nodule that requires further evaluation and management.,0.6662
-18,Problem list: Lung nodule confirmed; Rheumatoid arthritis; History of smoking; Family history of breast cancer.,0.9394
+17,Assessment: The patient has an incidentally found right upper lobe lung nodule that requires further evaluation and management.,0.1067
+18,Problem list: Lung nodule confirmed; Rheumatoid arthritis; History of smoking; Family history of breast cancer.,0.644
 19,Plan:,0.5
-20,I will order a pulmonary function test to establish a baseline for the patient's lung function.,0.1172
-21,I will also schedule a PET CT to determine if the nodule is metabolically active.,0.1261
-22,The patient will undergo a video-assisted thoracoscopy to remove the nodule and a small portion of the lung.,0.8891
-23,The patient will be under general anesthesia and will require a chest tube until the following day.,0.3313
-24,The patient will be admitted to the hospital for one night and discharged the next day.,0.1488
-25,The patient should continue to follow up with their rheumatologist and continue their medication therapy as previously outlined.,0.5567
-26,Follow-up: The patient will be discharged the day after the procedure.,0.8904
+20,I will order a pulmonary function test to establish a baseline for the patient's lung function.,0.002
+21,I will also schedule a PET CT to determine if the nodule is metabolically active.,0.0249
+22,The patient will undergo a video-assisted thoracoscopy to remove the nodule and a small portion of the lung.,0.1001
+23,The patient will be under general anesthesia and will require a chest tube until the following day.,0.2658
+24,The patient will be admitted to the hospital for one night and discharged the next day.,0.1378
+25,The patient should continue to follow up with their rheumatologist and continue their medication therapy as previously outlined.,0.5174
+26,Follow-up: The patient will be discharged the day after the procedure.,0.8886

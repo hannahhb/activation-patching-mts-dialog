@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Brandon, presented with neck pain following multiple car crashes, with the most recent incident occurring in February of this year.",Faithful,
+1,"He reports experiencing sharp, incapacitating pain that prevents him from working, accompanied by headaches, dizziness, numbness in his left arm and right leg, and spasms throughout his body.",Faithful,
+2,He has been experiencing fatigue since the accident.,Faithful,
+3,"He has a history of previous car crashes, including one that required surgery, and has been to therapy and a pain clinic.",Faithful,
+4,He has been prescribed fentanyl in the past but has not received a prescription for several weeks.,Faithful,
+5,"Past medical history: The patient has a history of multiple car crashes, including one that required surgery.",Faithful,
+6,He has also been to therapy and a pain clinic.,Faithful,
+7,"Review of systems: The patient reports headaches, dizziness, numbness in his left arm and right leg, and spasms throughout his body.",Faithful,
+8,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+9,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+10,"Physical exam: The patient has pain on palpation of the bony process and muscle in the neck, with limited range of motion, including difficulty bending the neck forward and sideways.",Faithful,
+11,No bruising or swelling is noted.,Causality,No bruising or swelling is noted
+12,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+13,"Assessment: The patient has a neck sprain, with pain explained by multiple factors, but no fracture.",Faithful,
+14,Problem list: Neck sprain; Suspected cervical spine injury; Fatigue; Numbness in left arm and right leg; Spasms throughout body; Headaches; Dizziness.,Fabrication,Suspected cervical spine injury
+15,"I prescribed Robaxin 1500 milligrams every 6 to 8 hours for 6 to 8 hours, to help relax the muscles in the area and alleviate pain.",Faithful,
+16,I recommended that the patient apply ice to the affected area and perform exercises to improve range of motion.,Faithful,
+17,I also ordered an MRI to further evaluate the extent of the injury.,Faithful,
+18,The patient will be referred to physical therapy and pain management if necessary.,Faithful,
+19,The patient will be given a note excusing him from work until the MRI results are available.,Faithful,
+20,Follow-up: The patient will be seen after the MRI results are available to determine the next course of treatment.,Fabrication,Follow-up: The patient will be seen after the MRI results are available to determine the next course of treatment

@@ -1,0 +1,27 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 36-year-old female, presents with complaints of ankle pain, which began after slipping and twisting her left ankle two days ago.",Faithful,
+1,"She reports falling onto the outside of her ankle, resulting in swelling and pain, making it difficult to walk.",Faithful,
+2,"She has tried ibuprofen, ice, and elevation for pain and swelling, with minimal relief.",Faithful,
+3,"She denies bleeding and reports pain primarily on the outside of her ankle, with no pain radiating to her calf, lower leg, or knee.",Faithful,
+4,Past medical history: The patient has a history of diabetes and high blood pressure.,Faithful,
+5,She is currently taking metformin for diabetes and norvasc for high blood pressure.,Faithful,
+6,"Her hemoglobin A1c was 6.8 last recorded, and she is due for a follow-up eye exam for her diabetes.",Faithful,
+7,Review of systems: The patient reports no additional symptoms in other organs.,Fabrication,The patient reports no additional symptoms in other organs
+8,"Current medications: Metformin, norvasc.",Faithful,
+9,"Vital signs: Blood pressure 120/70, oxygen saturation [NOT MENTIONED], temperature [NOT MENTIONED].",Causality,"oxygen saturation [NOT MENTIONED], temperature [NOT MENTIONED]"
+10,"Physical exam: The patient's neck exam is fine, with no bruits.",Faithful,
+11,"Her lungs are clear, and her heart exam is normal, except for a 2/6 systolic ejection murmur, which is unchanged from previous exams.",Faithful,
+12,Her belly exam is good.,Faithful,
+13,"On her ankle exam, she has tenderness over the lateral malleolus and the fifth metatarsal, with swelling and redness.",Faithful,
+14,She has normal sensation and pulses in her lower extremities.,Faithful,
+15,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+16,"Assessment: The patient likely has an ankle sprain, but an x-ray is needed to rule out a fracture.",Faithful,
+17,Problem list: Ankle sprain; High blood pressure; Diabetes mellitus.,Faithful,
+18,I ordered an x-ray of the patient's ankle to rule out a fracture.,Faithful,
+19,I will place her in an air splint and have her use crutches until the results are back.,Faithful,
+20,I prescribed naprosyn 500mg twice a day for pain control.,Faithful,
+21,"I instructed her to keep her ankle elevated, apply ice, and avoid weight-bearing.",Faithful,
+22,"If the x-ray shows a fracture, I will refer her to orthopedics.",Faithful,
+23,"I also refilled her norvasc and ordered baseline labs, including a hemoglobin A1c, to check on her diabetes management.",Faithful,
+24,I advised her to continue her metformin and attend her scheduled eye exam.,Faithful,
+25,"Follow-up: The patient will return for follow-up after the x-ray results are back, and if necessary, to reassess her ankle and adjust her treatment plan.",Fabrication,"The patient will return for follow-up after the x-ray results are back, and if necessary, to reassess her ankle and adjust her treatment plan"

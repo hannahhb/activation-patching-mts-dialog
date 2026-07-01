@@ -1,0 +1,79 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Brandon.,1.0,The patient's name is Brandon.,1,,entailment
+1,The patient is a 30-year-old male.,0.9017,The patient's body hurts.,0,fabrication,neutral
+2,The patient presents with neck pain.,0.9845,The patient is experiencing neck pain.,1,,entailment
+3,The patient presents with stiffness.,0.9695,The patient experiences stiffness in their neck.,1,,entailment
+4,The neck pain and stiffness started after a car crash.,0.9617,The neck pain is due to a car crash.,1,,entailment
+5,The car crash occurred in February of this year.,0.9809,The most recent car crash occurred in February.,1,,entailment
+6,The patient reports experiencing sharp pain.,0.9456,The patient's pain is sharp and incapacitating.,1,,entailment
+7,The patient reports experiencing incapacitating pain.,0.9597,The patient's pain is sharp and incapacitating.,1,,entailment
+8,The pain makes it difficult for the patient to move his neck.,0.9397,The patient is experiencing neck pain.,0,fabrication,neutral
+9,The pain makes it difficult for the patient to perform daily activities.,0.9505,The patient is unable to work due to the pain.,1,,entailment
+10,The patient has a history of multiple car crashes.,0.9844,The patient has been in multiple car crashes.,1,,entailment
+11,The patient has a history of car crashes that required surgery.,0.9391,The patient had surgery after the third car crash.,1,,entailment
+12,The patient has been to therapy.,0.9017,The patient has not received a prescription for fentanyl in several weeks.,1,,entailment
+13,The patient has been prescribed fentanyl.,0.9867,The patient has been prescribed fentanyl in the past.,1,,entailment
+14,The patient has been prescribed fentanyl for pain management.,0.9727,The patient has been prescribed fentanyl in the past.,1,,entailment
+15,The patient has not received a prescription for fentanyl in several weeks.,1.0,The patient has not received a prescription for fentanyl in several weeks.,1,,entailment
+16,The patient denies fever.,0.8967,The doctor wants to help the patient avoid danger from fentanyl.,0,fabrication,contradiction
+17,The patient denies headache.,0.9587,The patient has headaches.,1,,entailment
+18,The patient denies dizziness.,0.9477,The patient experiences dizziness sometimes.,0,negation,contradiction
+19,The patient denies visual disturbances.,0.8923,The patient has headaches.,0,fabrication,contradiction
+20,The patient denies numbness.,0.9432,The patient has numbness in their left arm and right leg.,0,negation,contradiction
+21,The patient reports experiencing fatigue.,0.9515,The patient has been experiencing fatigue since the accident.,1,,entailment
+22,The patient reports experiencing fatigue since the accident.,0.9905,The patient has been experiencing fatigue since the accident.,1,,entailment
+23,The patient has been experiencing bruising.,0.9534,The patient sometimes experiences bruising on their neck.,1,,entailment
+24,The patient has been experiencing swelling.,0.931,The patient is going to put ice on their neck when they experience bruising and swelling.,1,,entailment
+25,The patient has been experiencing bruising and swelling in the area of the neck.,0.9697,The patient sometimes experiences bruising on their neck.,1,,entailment
+26,No laceration is present.,0.9185,The x-ray did not show any fracture.,1,,entailment
+27,The patient is currently taking no medications other than possibly fentanyl.,0.9634,The patient has been prescribed fentanyl in the past.,1,,entailment
+28,The patient has not received a prescription for fentanyl in several weeks.,1.0,The patient has not received a prescription for fentanyl in several weeks.,1,,entailment
+29,The patient has a history of multiple car crashes.,0.9844,The patient has been in multiple car crashes.,1,,entailment
+30,The patient has a history of car crashes that required surgery.,0.9391,The patient had surgery after the third car crash.,1,,entailment
+31,The patient has been to therapy.,0.9017,The patient has not received a prescription for fentanyl in several weeks.,1,,entailment
+32,The patient has been prescribed fentanyl for pain management.,0.9727,The patient has been prescribed fentanyl in the past.,1,,entailment
+33,The patient denies fever.,0.8967,The doctor wants to help the patient avoid danger from fentanyl.,0,fabrication,contradiction
+34,The patient denies headache.,0.9587,The patient has headaches.,1,,entailment
+35,The patient denies dizziness.,0.9477,The patient experiences dizziness sometimes.,0,negation,contradiction
+36,The patient denies visual disturbances.,0.8923,The patient has headaches.,0,fabrication,contradiction
+37,The patient denies numbness.,0.9432,The patient has numbness in their left arm and right leg.,0,negation,contradiction
+38,The patient reports experiencing fatigue.,0.9515,The patient has been experiencing fatigue since the accident.,1,,entailment
+39,The patient reports experiencing fatigue since the accident.,0.9905,The patient has been experiencing fatigue since the accident.,1,,entailment
+40,The patient has pain on palpation of the neck.,0.9961,The patient experiences pain on palpation of the neck.,1,,entailment
+41,The patient has pain on palpation of the bony process of the neck.,0.9758,The patient experiences pain on palpation of the neck.,1,,entailment
+42,The patient has pain on palpation of the muscle of the neck.,0.9863,The patient experiences pain on palpation of the neck.,1,,entailment
+43,The patient has a moderate range of movement in his neck.,0.9993,The patient has a moderate range of movement in their neck.,1,,entailment
+44,The patient reports pain when bending forward.,0.9498,The patient is unable to bend their neck forward without pain.,1,,entailment
+45,The patient reports pain when bending backwards.,0.9546,The patient is unable to bend their neck backward without pain.,1,,entailment
+46,The patient denies bruising on examination.,0.9459,The doctor did not notice any bruising on the patient's neck.,1,,entailment
+47,The patient denies swelling on examination.,0.9462,The doctor did not notice any bruising on the patient's neck.,1,,entailment
+48,The patient had an x-ray.,0.9667,The doctor ordered an x-ray for the patient.,1,,entailment
+49,The x-ray showed no fracture.,0.9917,The x-ray did not show any fracture.,1,,entailment
+50,The patient has a neck sprain.,0.9676,The doctor diagnosed the patient with a neck sprain.,1,,entailment
+51,The neck sprain is causing sharp pain.,0.9386,The neck pain is due to a car crash.,0,fabrication,neutral
+52,The neck sprain is causing incapacitating pain.,0.9426,The patient is experiencing neck pain.,0,fabrication,neutral
+53,The neck sprain is causing stiffness.,0.9519,The patient experiences stiffness in their neck.,1,,entailment
+54,The patient has a suspected fracture.,0.918,The x-ray did not show any fracture.,0,fabrication,neutral
+55,The suspected fracture is suspected.,0.9059,The x-ray did not show any fracture.,0,fabrication,contradiction
+56,The patient has a past medical history of multiple car crashes.,0.9731,The patient has been in multiple car crashes.,1,,entailment
+57,The patient has a history of fentanyl use.,0.9754,The patient has been prescribed fentanyl in the past.,1,,entailment
+58,The history of fentanyl use is past.,0.9556,The patient has been prescribed fentanyl in the past.,1,,entailment
+59,The doctor prescribed robaxin.,0.9934,The doctor prescribed robaxin for the patient.,1,,entailment
+60,The robaxin dose is 1500mg.,0.9945,The robaxin dose is 1500 milligrams.,1,,entailment
+61,Robaxin is taken orally.,0.954,Robaxin is taken every 6 to 8 hours.,1,,entailment
+62,Robaxin is taken every 6-8 hours.,0.9998,Robaxin is taken every 6 to 8 hours.,1,,entailment
+63,Robaxin is taken as needed.,0.9503,Robaxin is taken every 6 to 8 hours.,1,,entailment
+64,Robaxin is prescribed for muscle relaxation.,0.9841,Robaxin is prescribed to relax the muscles in the area.,1,,entailment
+65,Robaxin is prescribed for pain management.,0.969,Robaxin is prescribed to relax the muscles in the area.,1,,entailment
+66,The patient was referred to physical therapy.,0.984,The patient is going to be referred to physical therapy.,1,,entailment
+67,Physical therapy is for pain management.,0.9264,The doctor may use local injections to help with the patient's pain.,0,fabrication,neutral
+68,The doctor ordered an MRI.,0.9394,The patient is going to have an MRI.,1,,entailment
+69,The MRI is to further evaluate the extent of the injury.,0.9106,The patient is going to have an MRI.,0,fabrication,neutral
+70,The doctor will refer the patient to pain medication.,0.9488,The doctor may use local injections to help with the patient's pain.,0,fabrication,neutral
+71,The referral to pain medication is if the robaxin is not effective.,0.9887,The doctor may refer the patient to pain medicine if the robaxin is not effective.,1,,entailment
+72,The doctor will give the patient a note.,0.9066,The doctor performed a physical exam on the patient.,0,fabrication,neutral
+73,The note is to take off work.,0.8793,The patient is unable to work and will be given time off until the MRI results are available.,1,,entailment
+74,The note is due to the patient's condition.,0.8709,The doctor performed a physical exam on the patient.,0,fabrication,neutral
+75,The patient will return for follow-up.,0.9165,The patient is going to be referred to physical therapy.,0,fabrication,neutral
+76,The follow-up is after the MRI results are available.,0.936,The doctor will wait for the MRI results to determine the next steps.,1,,entailment
+77,The follow-up will be in 1-2 weeks.,0.9061,Robaxin is taken every 6 to 8 hours.,0,fabrication,neutral

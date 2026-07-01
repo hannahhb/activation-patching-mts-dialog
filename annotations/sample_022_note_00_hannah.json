@@ -1,0 +1,122 @@
+{
+  "token_spans": [
+    {
+      "text": "I will follow up with the patient in the future to monitor the progress of the healing.",
+      "type": "incr",
+      "severity": "3",
+      "char_start": 1601,
+      "char_end": 1688
+    }
+  ],
+  "sentence_labels": {
+    "0": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "1": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "2": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "3": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "5": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "6": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "7": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "8": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "9": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "10": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "11": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "12": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "13": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "14": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "15": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "16": {
+      "faithful": "Not Faithful",
+      "type": "Fabrication",
+      "severity": "N/A"
+    },
+    "17": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "18": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "19": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "20": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "21": {
+      "faithful": "Not Faithful",
+      "type": "Fabrication"
+    },
+    "22": {
+      "faithful": "Not Faithful",
+      "type": "Fabrication"
+    }
+  },
+  "note_html": "Subjective:\nHPI: Jerry is a 45-year-old male who sustained an ankle injury while playing basketball with his son. He landed awkwardly and twisted his ankle, causing pain and swelling on the outside, which is visible and bruised. He reports trouble walking and instability on the ankle, which has disrupted his recent progress in working out. He is concerned about not being able to coach his son's basketball team starting in April.\n\nPast medical history: [NOT MENTIONED]\n\nReview of systems: [NOT MENTIONED]\n\nCurrent medications: [NOT MENTIONED]\n\nObjective:\nVital signs: [NOT MENTIONED]\n\nPhysical exam: The ankle is swollen, with exquisite tenderness on the lateral side and some tenderness on the medial deltoid region. The skin is intact, and there is brisk capillary refill. The ankle does not appear to be misaligned.\n\nTest Results: X-ray results show a displaced lateral malleolus fracture at the Weber C level, with no evidence of medial or posterior malleolar fractures.\n\nAssessment / Problem List:\nAssessment: The patient has a lateral malleolar fracture, which is a displaced fracture on the lateral side of the ankle that is causing instability.\n\nProblem list: Lateral malleolar fracture; suspected instability; unknown status for past medical history.\n\nPlan:\nI prescribed meloxicam to help reduce swelling, and instructed the patient to ice and elevate the ankle. I also recommended using crutches to avoid further injury. The patient will continue coaching his son's basketball team starting in April, but will need to sit out for approximately three months to allow the fracture to heal. <span class=\"hl-incr\" data-hl-type=\"incr\" data-hl-sev=\"3\" data-char-start=\"1601\" data-char-end=\"1688\" title=\"incr \u00b7 severity 3 [1601:1688]\">I will follow up with the patient in the future to monitor the progress of the healing.</span>\n\nFollow-up: The patient will follow up with me in the future to monitor the progress of the healing."
+}

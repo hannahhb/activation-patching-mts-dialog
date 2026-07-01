@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,HPI: The patient reports feeling short of breath and experiencing sudden episodes of shortness of breath for which he is unsure of the reason.,Faithful,
+1,He mentions that he has a history of heavy drinking and has experienced diarrhea after heavy drinking.,Faithful,
+2,"He has also noticed that his symptoms occur in various situations, including at home when the cat is not around, outside, and when he is near his cat.",Faithful,
+3,"He denies any symptoms of nausea, vomiting, rash, lip or throat swelling, and allergies.",Faithful,
+4,He has a history of using an inhaler prescribed by the urgent care for his symptoms.,Faithful,
+5,"He also mentions that he has a refrigerator full of venison, indicating that he is a hunter.",Faithful,
+6,Past medical history: [NOT MENTIONED],Fabrication,Past medical history: [NOT MENTIONED]
+7,The patient denies any symptoms in other organs that are relevant to his initial presentation.,Faithful,
+8,"The patient's vital signs were not mentioned in the transcript, so I do not have any information to document.",Faithful,
+9,The patient's physical exam revealed faint expiratory wheezing bilaterally in all lung fields.,Faithful,
+10,"There was no rash, angioedema, or audible stridor.",Faithful,
+11,"The patient had a chest x-ray and pulmonary function test, both of which were normal.",Faithful,
+12,Assessment: The patient has newly diagnosed allergic asthma.,Faithful,
+13,Problem list: Allergic asthma; unknown.,Fabrication,unknown
+14,I prescribed Singulair 10mg daily to help decrease the occurrences of asthma symptoms.,Faithful,
+15,"I also plan to proceed with allergy testing, starting with skin testing, to target the triggers of the patient's asthma.",Faithful,
+16,We will schedule the skin testing for next week.,Faithful,
+17,The patient should continue taking his albuterol inhaler as needed.,Faithful,
+18,I will see the patient next week to schedule the skin testing.,Causality,to schedule the skin testing
+19,Current medications: I prescribed albuterol inhaler as needed for asthma symptoms.,Negation,I prescribed albuterol inhaler
+20,The patient is already taking this medication.,Faithful,

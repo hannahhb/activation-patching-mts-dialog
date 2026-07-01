@@ -1,0 +1,57 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is anxious about her recent blood work.,0.9962,The patient is anxious about their recent blood work.,1,,entailment
+1,The patient's blood work shows hepatitis C.,0.9625,The patient's initial labs are consistent with hepatitis C.,1,,entailment
+2,The patient was not aware she had hepatitis C.,0.9635,The patient had not been previously told they have hepatitis C.,1,,entailment
+3,The patient does not have symptoms of hepatitis C.,0.9625,The patient has hepatitis C.,1,,entailment
+4,The patient has a history of IV drug use.,1.0,The patient has a history of IV drug use.,1,,entailment
+5,The patient has been clean from IV drug use for over 15 years.,0.9549,The patient used IV drugs years ago.,1,,entailment
+6,The patient has a history of alcohol use.,0.961,The patient used to drink a lot of alcohol.,1,,entailment
+7,The patient currently consumes about a beer a day.,0.9855,The patient now drinks about a beer a day.,1,,entailment
+8,The patient smokes one to two cigarettes a day.,1.0,The patient smokes one to two cigarettes a day.,1,,entailment
+9,The patient denies any other medical conditions except fatigue.,0.9142,The patient works and gets enough sleep but still feels tired.,0,fabrication,neutral
+10,The patient feels tired at the end of the day after working.,0.9923,The patient tends to be really tired at the end of the day after working.,1,,entailment
+11,The patient's family history is significant for hypertension.,0.9591,Hypertension runs in the patient's family.,1,,entailment
+12,The patient's family history is significant for diabetes.,0.9484,Diabetes runs in the patient's family.,1,,entailment
+13,The patient's family history is significant for depression.,0.9509,Depression runs in the patient's family.,1,,entailment
+14,The patient is a workaholic.,1.0,The patient is a workaholic.,1,,entailment
+15,The patient is working on addressing her workaholism.,0.9571,The patient is a workaholic.,1,,entailment
+16,The patient reports no other symptoms except fatigue.,0.9233,The patient works and gets enough sleep but still feels tired.,0,fabrication,neutral
+17,The patient appears in no distress.,1.0,The patient appears in no distress.,1,,entailment
+18,The patient has no jaundice on skin exam.,0.9524,The patient has no jaundice.,1,,entailment
+19,The patient's heart exam reveals a regular rate and rhythm.,0.9766,The patient has a regular heart rate and rhythm.,1,,entailment
+20,The patient has a 2/6 systolic murmur.,0.9836,The patient has a 2 out of 6 systolic murmur.,1,,entailment
+21,The patient's 2/6 systolic murmur has not changed from last year.,0.9615,The patient's heart murmur has not changed from last year.,1,,entailment
+22,The patient's lungs are clear.,1.0,The patient's lungs are clear.,1,,entailment
+23,The patient has no wheezes.,0.9507,"The patient has no wheezes, rales, or rhonchi.",1,,entailment
+24,The patient has no rales.,0.9319,"The patient has no wheezes, rales, or rhonchi.",1,,entailment
+25,The patient has no rhonchi.,0.9512,"The patient has no wheezes, rales, or rhonchi.",1,,entailment
+26,The patient's abdomen is soft.,1.0,The patient's abdomen is soft.,1,,entailment
+27,The patient has no hepatosplenomegaly.,1.0,The patient has no hepatosplenomegaly.,1,,entailment
+28,The patient's musculoskeletal exam is unremarkable.,0.9346,The doctor checked the patient's musculoskeletal system.,0,fabrication,neutral
+29,The patient's HCV antibody test was positive.,1.0,The patient's HCV antibody test was positive.,1,,entailment
+30,The patient's liver panel showed an elevated AST.,0.9883,The patient's liver panel showed an elevated AST at 39.,1,,entailment
+31,The patient's AST is 39.,0.9685,The patient's liver panel showed an elevated AST at 39.,1,,entailment
+32,The patient's ALT is within normal limits.,0.9715,"The patient's ALT, albumin, and total bilirubin are within normal limits.",1,,entailment
+33,The patient's albumin is within normal limits.,0.9636,"The patient's ALT, albumin, and total bilirubin are within normal limits.",1,,entailment
+34,The patient's total bilirubin is within normal limits.,0.9683,"The patient's ALT, albumin, and total bilirubin are within normal limits.",1,,entailment
+35,The patient is diagnosed with hepatitis C.,0.9965,The patient was diagnosed with hepatitis C.,1,,entailment
+36,Hepatitis C is a viral infection that affects the liver.,0.9828,The hepatitis C is a viral infection.,1,,entailment
+37,The patient most likely has had hepatitis C for years.,0.9861,The patient may have had hepatitis C for years.,1,,entailment
+38,The patient has hepatitis C.,1.0,The patient has hepatitis C.,1,,entailment
+39,The patient has suspected liver disease.,0.9352,The patient was diagnosed with hepatitis C.,1,,entailment
+40,The patient has suspected fibrosis of the liver.,0.9228,The patient was diagnosed with hepatitis C.,0,fabrication,neutral
+41,The patient has suspected hypertension.,0.9249,Hypertension runs in the patient's family.,1,,entailment
+42,The patient has suspected diabetes.,0.9023,Diabetes runs in the patient's family.,1,,entailment
+43,The patient has suspected depression.,0.9125,Depression runs in the patient's family.,1,,entailment
+44,The doctor will order additional blood work.,0.9754,The doctor ordered additional blood,1,,entailment
+45,The additional blood work is to confirm the diagnosis of hepatitis C.,0.966,The additional blood work includes checking the HCV genotype.,1,,entailment
+46,The doctor will check the HCV RNA.,0.9746,The doctor will check the patient's HCV genotype.,1,,entailment
+47,The doctor will check the HCV genotype.,0.9959,The doctor will check the patient's HCV genotype.,1,,entailment
+48,The doctor will order a special ultrasound.,0.9863,The doctor ordered a special ultrasound.,1,,entailment
+49,The special ultrasound is to determine the severity of the patient's liver disease.,0.9735,The special ultrasound is to check for fibrosis of the liver.,1,,entailment
+50,The nurse will schedule follow-up appointments for the patient's wife and children.,0.9218,The patient will have their family doctor test their wife and kids.,0,fabrication,contradiction
+51,The patient's wife and children will undergo screening for hepatitis C.,0.9805,The patient will have their wife and kids tested for hepatitis C.,1,,entailment
+52,The doctor will see the patient in about three weeks.,1.0,The doctor will see the patient in about three weeks.,1,,entailment
+53,The doctor will review the results of the additional blood work in about three weeks.,0.9464,The doctor will see the patient in three weeks.,0,fabrication,neutral
+54,The doctor will review the results of the ultrasound in about three weeks.,0.9528,The doctor will see the patient in about three weeks.,1,,entailment
+55,The doctor will determine the next steps in treatment in about three weeks.,0.958,The doctor will see the patient in three weeks.,1,,entailment

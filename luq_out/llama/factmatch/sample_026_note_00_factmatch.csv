@@ -1,0 +1,77 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 30-year-old male.,0.9554,The patient is a male.,1,,entailment
+1,The patient injured his right knee while participating in a trampoline activity.,0.9696,The patient injured his knee at a trampoline park.,1,,entailment
+2,The patient heard a snap in his knee.,0.9885,The patient heard a snap when he injured his knee.,1,,entailment
+3,The patient experienced instant pain in the knee.,0.9899,The patient experienced instant pain when he injured his knee.,1,,entailment
+4,"The patient's pain is located on the outside of the knee, lateral aspect.",0.9468,The patient has ecchymosis and edema on the lateral aspect of his knee.,1,,entailment
+5,The patient denied taking any medication for the pain except for Tylenol.,0.9762,The patient took Tylenol for the pain.,1,,entailment
+6,The patient took Tylenol for pain.,0.9991,The patient took Tylenol for the pain.,1,,entailment
+7,Tylenol provided minimal relief for the patient's pain.,0.9817,The Tylenol did not help the patient's pain.,1,,entailment
+8,The patient has been elevating the knee.,0.9479,The patient elevated his knee to help with the pain.,1,,entailment
+9,The patient has not attempted to ice the knee.,0.9527,The patient did not use ice or heat on his knee.,1,,entailment
+10,The patient has not attempted to use heat on the knee.,0.9724,The patient did not use ice or heat on his knee.,1,,entailment
+11,The patient has not measured his blood pressure regularly.,0.9827,The patient has not measured his blood pressure recently.,1,,entailment
+12,The patient has not obtained a blood pressure cuff as recommended.,0.9686,The patient did not get a blood pressure cuff.,1,,entailment
+13,The patient takes lisinopril most days.,1.0,The patient takes lisinopril most days.,1,,entailment
+14,The patient does not take lisinopril consistently.,0.9625,The patient is taking lisinopril.,1,,entailment
+15,The patient checks his blood sugar levels 4-5 times a week.,0.9969,The patient checks his blood sugar four or five times a week.,1,,entailment
+16,The patient is not consistent with checking his blood sugar levels.,0.9307,The patient checks his blood sugar four or five times a week.,0,negation,contradiction
+17,The patient reports a decent diet.,0.9601,The patient's diet is decent but could be better.,1,,entailment
+18,The patient could improve his diet.,0.9262,The patient's diet is decent but could be better.,1,,entailment
+19,The patient denied being on a specific diet.,0.9676,The patient does not follow a specific diet.,1,,entailment
+20,The patient denied being on the keto diet.,0.9826,The patient is not on the keto diet.,1,,entailment
+21,The patient has hypertension.,1.0,The patient has hypertension.,1,,entailment
+22,The patient has diabetes.,1.0,The patient has diabetes.,1,,entailment
+23,The patient takes 20mg of lisinopril.,0.9875,The patient is taking 20 milligrams of lisinopril.,1,,entailment
+24,The lisinopril dose is 20mg.,0.9739,The patient is taking 20 milligrams of lisinopril.,1,,entailment
+25,Lisinopril is taken daily.,0.9509,The patient takes lisinopril most days.,1,,entailment
+26,Lisinopril is prescribed for hypertension.,0.989,Lisinopril is prescribed for the patient's blood pressure.,1,,entailment
+27,The patient takes metformin 500mg.,0.9839,The patient is taking 500 milligrams of metformin.,1,,entailment
+28,The metformin dose is 500mg.,0.9723,The patient is taking 500 milligrams of metformin.,1,,entailment
+29,Metformin is taken daily.,0.9493,The patient is taking 500 milligrams of metformin.,0,fabrication,neutral
+30,Metformin is prescribed for diabetes.,0.9934,Metformin is prescribed for the patient's diabetes.,1,,entailment
+31,The patient had a high blood pressure reading of 180/80.,0.9745,The patient's blood pressure is 180 over 80.,1,,entailment
+32,The patient denied any other symptoms in other organs relevant to his initial presentation.,0.8996,The patient's injury happened a week ago.,0,fabrication,neutral
+33,The patient's blood pressure is 180/80.,0.9919,The patient's blood pressure is 180 over 80.,1,,entailment
+34,The patient's heart has a regular rate and rhythm.,1.0,The patient's heart has a regular rate and rhythm.,1,,entailment
+35,The patient's heart has no murmur.,0.92,The patient's heart has a regular rate and rhythm.,0,fabrication,neutral
+36,The patient's lungs sound clear bilaterally.,0.9785,The patient's lungs sound clear.,1,,entailment
+37,The patient's knee examination reveals ecchymosis.,0.9664,The patient has ecchymosis and edema on the lateral aspect of his knee.,1,,entailment
+38,The patient's knee examination reveals edema.,0.9482,The patient has ecchymosis and edema on the lateral aspect of his knee.,1,,entailment
+39,The ecchymosis is along the lateral aspect of the knee.,0.9719,The patient has ecchymosis and edema on the lateral aspect of his knee.,1,,entailment
+40,The edema is along the lateral aspect of the knee.,0.9607,The patient has ecchymosis and edema on the lateral aspect of his knee.,1,,entailment
+41,The patient's knee has no effusion.,0.9205,The patient has a decent range of motion in his knee.,0,fabrication,neutral
+42,The patient has a slight limp.,1.0,The patient has a slight limp.,1,,entailment
+43,The patient can bear weight.,0.9558,The patient can bear weight on his right knee.,1,,entailment
+44,The patient has a small gait disturbance.,0.9059,The patient has a slight limp.,1,,entailment
+45,The patient has a decent range of motion.,0.9639,The patient has a decent range of motion in his knee.,1,,entailment
+46,The patient experiences pain with some movement.,0.9133,The patient took Tylenol for the pain.,1,,entailment
+47,The patient's right knee x-ray shows no evidence of fracture.,0.9532,The x-ray showed no evidence of fracture or bony abnormality.,1,,entailment
+48,The patient's right knee x-ray shows no bony abnormality.,0.9524,The doctor ordered an x-ray of the patient's right knee.,1,,entailment
+49,The patient has a lateral ligament strain of the right knee.,0.9549,The doctor diagnosed the patient with a lateral ligament strain.,1,,entailment
+50,The patient's hypertension requires further evaluation.,0.9592,The patient has hypertension.,1,,entailment
+51,The patient's hypertension may require medication modification.,0.9471,The doctor may need to modify the patient's medication.,0,fabrication,neutral
+52,The patient's diabetes requires further evaluation.,0.9476,The patient has diabetes.,0,fabrication,neutral
+53,The patient's diabetes requires an A1c.,0.9582,The doctor ordered an A1C test for the patient.,1,,entailment
+54,The patient's diabetes requires a lipid panel.,0.9566,The doctor ordered a lipid panel for the patient.,1,,entailment
+55,The doctor prescribed meloxicam.,0.9947,The doctor prescribed meloxicam for the patient.,1,,entailment
+56,The meloxicam dose is 15mg.,0.9923,The meloxicam dose is 15 milligrams.,1,,entailment
+57,Meloxicam is taken daily.,0.9825,The doctor prescribed meloxicam to be taken daily.,1,,entailment
+58,Meloxicam is prescribed for pain.,0.9883,Meloxicam is prescribed for pain and swelling.,1,,entailment
+59,Meloxicam is prescribed for swelling.,0.9932,Meloxicam is prescribed for pain and swelling.,1,,entailment
+60,Meloxicam is prescribed for the lateral ligament strain.,0.955,Meloxicam is prescribed for pain and swelling.,1,,entailment
+61,The patient was referred to physical therapy.,0.9894,The doctor referred the patient to physical therapy.,1,,entailment
+62,Physical therapy is to help strengthen the muscles around the knee.,0.9149,The patient elevated his knee to help with the pain.,0,fabrication,neutral
+63,Physical therapy is to prevent further injury.,0.9182,The doctor referred the patient to physical therapy.,0,fabrication,neutral
+64,The patient's lisinopril was continued at 20mg daily.,0.9755,The patient is taking 20 milligrams of lisinopril.,1,,entailment
+65,The doctor ordered an echo.,0.9919,The doctor ordered an echo for the patient.,1,,entailment
+66,The echo is to evaluate the patient's blood pressure.,0.952,The doctor ordered an echo for the patient.,1,,entailment
+67,The doctor ordered an A1c.,0.9885,The doctor ordered an A1C test for the patient.,1,,entailment
+68,The A1c is to evaluate the patient's diabetes.,0.9625,The doctor ordered an A1C test for the patient.,1,,entailment
+69,The doctor ordered a lipid panel.,0.9934,The doctor ordered a lipid panel for the patient.,1,,entailment
+70,The lipid panel is to evaluate the patient's diabetes.,0.961,The doctor ordered a lipid panel for the patient.,1,,entailment
+71,The patient will follow up in 1-2 weeks.,0.9118,The patient checks his blood sugar four or five times a week.,0,fabrication,neutral
+72,The follow-up is to discuss the results of the echo.,0.9264,The doctor ordered an echo for the patient.,0,fabrication,neutral
+73,The follow-up is to discuss the results of the A1c.,0.9386,The doctor ordered an A1C test for the patient.,0,fabrication,neutral
+74,The follow-up is to discuss the results of the lipid panel.,0.9413,The doctor ordered a lipid panel for the patient.,0,fabrication,neutral
+75,The follow-up is to reassess the patient's knee.,0.921,The doctor ordered an x-ray of the patient's right knee.,0,fabrication,neutral

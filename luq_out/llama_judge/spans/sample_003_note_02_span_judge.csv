@@ -1,0 +1,24 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: Stephanie Morales, a 36-year-old female, presents with ankle pain after a fall on her left ankle two days ago, which twisted underneath her.",Faithful,
+1,"She reports pain, swelling, and difficulty walking.",Faithful,
+2,"She has tried ibuprofen, ice, and elevation for pain and swelling, but it has provided only minimal relief.",Faithful,
+3,"The pain is located on the outside of her ankle, not on her calf, lower leg, or knee.",Faithful,
+4,She denies any bleeding.,Faithful,
+5,Past medical history: Stephanie has a history of diabetes and high blood pressure.,Faithful,
+6,Review of systems: No additional symptoms in other organs are mentioned.,Faithful,
+7,Current medications: None mentioned.,Fabrication,None mentioned
+8,"Vital signs: Blood pressure 120/70, pulse rate not mentioned, oxygen saturation not mentioned, temperature not mentioned.",Faithful,
+9,"Physical exam: The neck exam is fine, lungs are clear, heart exam is normal with a 2/6 systolic ejection murmur that is unchanged from before.",Faithful,
+10,The belly exam is good.,Faithful,
+11,"The ankle exam reveals tenderness over the lateral malleolus and the fifth metatarsal, swelling, and redness.",Faithful,
+12,"There is pain with valgus stressing of the ankle, but normal sensation and pulses.",Faithful,
+13,Test Results: None mentioned.,Fabrication,None mentioned
+14,"Assessment: I diagnose Stephanie Morales with an ankle sprain, but due to tenderness over the fifth metatarsal, I am concerned about a possible fracture, so I will order an x-ray.",Faithful,
+15,Problem list: Ankle sprain; possible fracture; diabetes; hypertension.,Faithful,
+16,I prescribed naprosyn 500mg twice a day for pain control.,Faithful,
+17,I gave her a splint and instructed her to avoid weightbearing until the x-ray results are back.,Faithful,
+18,I also ordered an x-ray of her ankle.,Faithful,
+19,"If the x-ray shows a fracture, I will refer her to orthopedics.",Faithful,
+20,I will have her follow up with me to discuss the results.,Faithful,
+21,I instructed her to follow up with me to discuss the x-ray results and to check on her ankle.,Causality,to check on her ankle
+22,I also instructed her to keep her scheduled appointment for her eye exam for her diabetes checkup.,Faithful,

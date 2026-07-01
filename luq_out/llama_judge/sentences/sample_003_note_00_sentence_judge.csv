@@ -1,0 +1,26 @@
+sentence_idx,sentence,label
+0,"HPI: The patient, a 36-year-old female, presents with ankle pain after a fall two days ago.",Faithful
+1,"She reports that her left ankle twisted underneath her on the outside, causing pain and swelling.",Faithful
+2,"She has tried ibuprofen, ice, and elevation for pain and swelling, with minimal relief.",Faithful
+3,"The pain is localized to the outside of her ankle, with no pain in her calf, lower leg, or knee.",Faithful
+4,Past medical history: The patient has a history of diabetes and high blood pressure.,Faithful
+5,She is currently taking metformin for diabetes and norvasc for high blood pressure.,Faithful
+6,Review of systems: The patient reports no symptoms in other organs relevant to her initial presentation.,Fabrication
+7,Current medications: Metformin [dosage not mentioned] for diabetes; Norvasc [dosage not mentioned] for high blood pressure.,Faithful
+8,Vital signs: Blood pressure 130/70.,Fabrication
+9,"Physical exam: The patient's neck exam is fine, with no bruits.",Faithful
+10,"Her lungs are clear, and her heart exam is normal, with a 2/6 systolic ejection murmur that has not changed from previous exams.",Faithful
+11,Her belly exam is good.,Faithful
+12,"On her ankle exam, she has tenderness over the lateral malleolus and the fifth metatarsal, with some swelling and redness.",Faithful
+13,"There is pain with valgus stressing of the ankle, but normal sensation and pulses.",Faithful
+14,Test Results: [NOT MENTIONED],Fabrication
+15,"Assessment: The patient likely has an ankle sprain, but a fracture is a possibility, so an x-ray is ordered.",Faithful
+16,Problem list: Ankle sprain; diabetes; high blood pressure.,Faithful
+17,I prescribed naprosyn 500mg twice a day for pain control.,Faithful
+18,I ordered an x-ray of the ankle to rule out a fracture.,Faithful
+19,I put the patient in an air splint and provided crutches for weightbearing avoidance.,Faithful
+20,I will give a call back if the x-ray shows a fracture and refer to orthopedics if necessary.,Faithful
+21,"The patient should keep the ankle elevated, apply ice, and continue with pain medication as prescribed.",Faithful
+22,"Follow-up: The patient will follow up with the eye appointment already scheduled for her diabetes checkup, and I will order another hemoglobin A1c test.",Faithful
+23,I will also check some baseline labs.,Faithful
+24,"The patient's high blood pressure will be monitored, and the norvasc will be refilled as needed.",Faithful

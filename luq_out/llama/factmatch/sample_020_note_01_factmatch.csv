@@ -1,0 +1,63 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 4-year-old's mother.,0.9313,The patient chases her two four-year-old children.,0,fabrication,neutral
+1,The patient is a female.,0.9181,The patient has twins.,0,fabrication,neutral
+2,The patient injured her right knee.,1.0,The patient injured her right knee.,1,,entailment
+3,The injury occurred while skiing.,0.9579,The injury occurred while skiing in Vermont.,1,,entailment
+4,The injury occurred in Vermont.,0.9663,The injury occurred while skiing in Vermont.,1,,entailment
+5,The patient fell off a ski lift.,0.9767,The patient caught her ski while coming off the lift and fell.,1,,entailment
+6,The patient heard a loud popping sound during the injury.,0.906,The patient's knee popped during the fall.,0,fabrication,neutral
+7,The patient has persistent pain.,0.9099,The patient has had knee pain since the injury.,1,,entailment
+8,The patient has pain on the outside of her right knee.,0.9655,The patient's knee hurts on the outside.,1,,entailment
+9,The patient feels like her knee will buckle.,0.9904,The patient's knee feels like it's going to buckle.,1,,entailment
+10,The patient has decreased flexion.,0.9657,The patient's right knee has decreased flexion and extension.,1,,entailment
+11,The patient has decreased extension.,0.957,The patient's right knee has decreased flexion and extension.,1,,entailment
+12,The patient has a positive Lachman sign.,0.9766,The patient's right knee has a positive Lachman sign.,1,,entailment
+13,The patient is unable to straighten her knee fully.,0.9745,The patient is able to straighten her knee somewhat.,1,,entailment
+14,The patient denied numbness in her toes.,0.9708,The patient does not have numbing or tingling in her toes.,1,,entailment
+15,The patient denied tingling in her toes.,0.9706,The patient does not have numbing or tingling in her toes.,1,,entailment
+16,The patient is able to feel her toes.,0.9912,The patient can feel her toes.,1,,entailment
+17,The patient has a history of being an active person.,0.966,The patient is an active person.,1,,entailment
+18,The patient chases her children.,0.9597,The patient chases her two four-year-old children.,1,,entailment
+19,The patient has been using crutches since the injury.,0.9196,The patient has had knee pain since the injury.,0,fabrication,neutral
+20,The patient is otherwise healthy.,0.9675,The patient is generally healthy.,1,,entailment
+21,The patient denied high blood pressure.,0.9686,The patient does not have high blood pressure.,1,,entailment
+22,The patient denied diabetes.,0.9569,The patient does not have diabetes.,1,,entailment
+23,The patient has no other medical conditions.,0.9348,The patient does not have diabetes.,0,fabrication,neutral
+24,The patient has a supportive home environment.,0.9059,The patient's husband is able to help out at home.,0,fabrication,neutral
+25,The patient's husband is at home.,0.9632,The patient's husband is able to help out at home.,1,,entailment
+26,The patient's husband works part-time.,0.9468,The patient's husband works a job that takes him away from home quite a bit.,0,negation,contradiction
+27,The patient has twins.,1.0,The patient has twins.,1,,entailment
+28,The patient's twins are 4 years old.,0.948,The patient has twins.,0,fabrication,neutral
+29,The doctor prescribed ibuprofen.,1.0,The doctor prescribed ibuprofen.,1,,entailment
+30,The ibuprofen dose is 600-800mg.,0.9741,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+31,Ibuprofen is taken every 8 hours.,0.9802,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+32,Ibuprofen is taken as needed.,0.9566,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+33,Ibuprofen is prescribed for pain.,0.9835,The doctor prescribed ibuprofen for pain.,1,,entailment
+34,The patient has edema over the right knee.,0.9924,The patient's right knee has edema.,1,,entailment
+35,The patient has an effusion over the right knee.,0.9917,The patient's right knee has an effusion.,1,,entailment
+36,The patient has pain to palpation of the right lateral knee.,0.9751,The patient's right knee is painful to palpation.,1,,entailment
+37,The dorsalis pedis pulse is palpable.,0.9514,The patient's right knee has a palpable dorsalis pedis and posterior tibial pulse.,1,,entailment
+38,The posterior tibial pulse is palpable.,0.9532,The patient's right knee has a palpable dorsalis pedis and posterior tibial pulse.,1,,entailment
+39,There is no leg edema in the ankle.,0.9828,The patient does not have leg edema in the ankle.,1,,entailment
+40,The patient likely has a ruptured anterior cruciate ligament (ACL) in her right knee.,0.9578,The doctor suspects the patient may have ruptured her ACL.,1,,entailment
+41,The patient has a ruptured ACL.,0.9628,The doctor suspects the patient may have ruptured her ACL.,1,,entailment
+42,The patient has right knee pain.,0.9642,The patient's right knee has edema.,1,,entailment
+43,The patient has decreased flexion and extension.,0.9785,The patient's right knee has decreased flexion and extension.,1,,entailment
+44,The patient has a positive Lachman sign.,0.9766,The patient's right knee has a positive Lachman sign.,1,,entailment
+45,The patient has knee effusion.,0.9744,The patient's right knee has an effusion.,1,,entailment
+46,The patient has knee edema.,0.9754,The patient's right knee has edema.,1,,entailment
+47,The doctor ordered a knee MRI.,1.0,The doctor ordered a knee MRI.,1,,entailment
+48,The knee MRI is to confirm the suspected ACL tear.,0.9422,The doctor ordered a knee MRI.,0,fabrication,neutral
+49,The patient was advised to continue taking ibuprofen 600-800mg.,0.9756,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+50,The ibuprofen dose is 600-800mg.,0.9741,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+51,Ibuprofen is taken every 8 hours.,0.9802,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+52,Ibuprofen is taken as needed.,0.9566,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+53,Ibuprofen is prescribed for pain.,0.9835,The doctor prescribed ibuprofen for pain.,1,,entailment
+54,The patient was recommended to wear a knee brace.,0.9655,The patient will be put in a brace to support her knee.,1,,entailment
+55,The knee brace is to provide support to the knee.,0.96,The patient will be put in a brace to support her knee.,1,,entailment
+56,The doctor will schedule a follow-up appointment.,0.9111,The doctor will see the patient again soon.,1,,entailment
+57,The follow-up appointment is to discuss the MRI results.,0.933,The doctor wants to get the MRI done in the next couple of days.,0,fabrication,neutral
+58,The follow-up appointment is to determine the next steps for treatment.,0.8926,The doctor wants to get the MRI done in the next couple of days.,0,fabrication,neutral
+59,The doctor will see the patient again soon.,1.0,The doctor will see the patient again soon.,1,,entailment
+60,The doctor will discuss the MRI results soon.,0.9512,The doctor wants to get the MRI done in the next couple of days.,1,,entailment
+61,The doctor will plan for further treatment soon.,0.9416,The doctor will see the patient again soon.,0,fabrication,neutral

@@ -1,0 +1,50 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 25-year-old male.,0.8891,The patient does not have hearing problems.,0,fabrication,neutral
+1,The patient presented with neck pain.,0.9887,The patient has neck pain.,1,,entailment
+2,The neck pain started one week ago.,0.9606,The neck pain started after a car accident.,1,,entailment
+3,The patient was involved in a car accident.,0.9293,The car accident occurred about a week ago.,1,,entailment
+4,The car accident was a rear-end collision.,0.9175,The car accident occurred about a week ago.,0,fabrication,neutral
+5,The patient's head and neck moved forward quickly during the accident.,0.9819,The patient's head went forward quickly during the car accident.,1,,entailment
+6,The patient's neck pain has been persistent.,0.9679,The patient has neck pain.,1,,entailment
+7,The patient's neck pain severity is 7 out of 10.,0.9879,The patient rates their neck pain as a 7 out of 10.,1,,entailment
+8,The patient's neck pain is exacerbated by movement of the neck.,0.9733,The neck pain occurs when the patient moves their head.,1,,entailment
+9,The patient's neck pain is localized to the back of the neck.,0.9816,The patient experiences pain in the back of their neck.,1,,entailment
+10,The patient's neck pain is not constant.,0.9922,The neck pain is not constant.,1,,entailment
+11,The patient tried ibuprofen.,0.9802,The patient has tried ibuprofen for pain relief.,1,,entailment
+12,The patient had minimal relief from ibuprofen.,0.9693,The patient has tried ibuprofen for pain relief.,1,,entailment
+13,The patient reports pain with flexion of the neck.,0.9705,The patient experiences pain when flexing their neck.,1,,entailment
+14,The patient reports pain with extension of the neck.,0.9792,The patient experiences pain when extending their neck.,1,,entailment
+15,The patient reports pain with rotation of the neck.,0.9778,The patient experiences pain when rotating their neck.,1,,entailment
+16,The patient reports pain with lateral bending of the neck.,0.9519,The patient experiences pain in the back of their neck.,1,,entailment
+17,The patient denies hearing problems.,0.9542,The patient does not have hearing problems.,1,,entailment
+18,The patient denies visual disturbances.,0.9653,The patient does not have visual disturbances.,1,,entailment
+19,The patient denies symptoms in other organs.,0.9049,The patient does not have any other questions.,0,fabrication,neutral
+20,The patient had positive pain to palpation of the soft tissues of the neck.,0.9442,The patient has neck pain.,0,fabrication,neutral
+21,The patient had pain with flexion of the neck on physical exam.,0.9584,The patient experiences pain when flexing their neck.,1,,entailment
+22,The patient had pain with extension of the neck on physical exam.,0.9659,The patient experiences pain when extending their neck.,1,,entailment
+23,The patient had pain with rotation of the neck on physical exam.,0.9652,The patient experiences pain when rotating their neck.,1,,entailment
+24,The patient had pain with lateral bending of the neck on physical exam.,0.9467,The patient experiences pain when the doctor presses on the side of their neck.,1,,entailment
+25,The patient was able to move his neck from side to side.,0.9553,The patient can mostly turn their neck from side to side.,1,,entailment
+26,The patient moved his neck from side to side with pain.,0.955,The neck pain occurs when the patient moves their head.,1,,entailment
+27,The x-ray results showed no signs of fracture.,0.9855,The x-ray results show no signs of fracture or bony abnormalities.,1,,entailment
+28,The x-ray results showed no bony abnormalities.,0.9867,The x-ray results show no signs of fracture or bony abnormalities.,1,,entailment
+29,The doctor diagnosed neck strain.,0.9931,The doctor diagnosed the patient with neck strain.,1,,entailment
+30,The neck strain is likely caused by whiplash.,0.9156,The doctor diagnosed the patient with neck strain.,0,fabrication,neutral
+31,The doctor suspected whiplash.,0.8981,The patient has had headaches.,0,fabrication,neutral
+32,The doctor prescribed Motrin.,0.9931,The doctor prescribed Motrin to the patient.,1,,entailment
+33,The Motrin dose is 600mg.,0.9936,The Motrin dose is 600 milligrams.,1,,entailment
+34,Motrin is taken every 6-8 hours.,0.9998,Motrin is taken every 6 to 8 hours.,1,,entailment
+35,Motrin is prescribed for anti-inflammatory purposes.,0.9829,Motrin is an anti-inflammatory.,1,,entailment
+36,The doctor prescribed Flexeril.,0.9941,The doctor prescribed Flexeril to the patient.,1,,entailment
+37,The Flexeril dose is 10mg.,0.9934,The Flexeril dose is 10 milligrams.,1,,entailment
+38,Flexeril is taken every 12 hours.,1.0,Flexeril is taken every 12 hours.,1,,entailment
+39,Flexeril is taken as needed.,1.0,Flexeril is taken as needed.,1,,entailment
+40,Flexeril is prescribed for muscle relaxation.,0.9823,Flexeril is a muscle relaxant.,1,,entailment
+41,The doctor advised the patient to be conservative with neck movement.,0.9175,The patient can mostly turn their neck from side to side.,0,fabrication,neutral
+42,The doctor advised the patient to relax the neck.,0.9368,The doctor diagnosed the patient with neck strain.,0,fabrication,neutral
+43,The doctor ordered an MRI.,0.9936,The doctor ordered an MRI for the patient.,1,,entailment
+44,The MRI is to rule out underlying conditions.,0.9309,The doctor ordered an MRI for the patient.,0,fabrication,neutral
+45,The doctor referred the patient to physical rehab.,0.9641,The doctor wants to refer the patient to physical rehab or a chiropractor.,1,,entailment
+46,The doctor referred the patient to a chiropractor.,0.9469,The doctor wants to refer the patient to physical rehab or a chiropractor.,1,,entailment
+47,The doctor will review the MRI results.,0.9537,The doctor ordered an MRI for the patient.,1,,entailment
+48,The doctor will provide further instructions based on the MRI findings.,0.9546,The doctor ordered an MRI for the patient.,1,,entailment

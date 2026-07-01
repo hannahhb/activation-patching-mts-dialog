@@ -1,0 +1,19 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 50-year-old male, presents with a 2-hour history of low back pain and tingling sensation in his right leg.",Fabrication,a 50-year-old male
+1,"The pain started after raking leaves in his yard yesterday and has not improved with rest, ice, or over-the-counter pain medication.",Faithful,
+2,The patient reports that the pain is worse when standing up and better when sitting or lying down.,Causality,worse when standing up
+3,His partner also reports that the patient has pain when standing up.,Contextual,His partner also reports that the patient has pain when standing up
+4,Past medical history: The patient has had a similar episode of back pain 3 years ago that resolved on its own.,Faithful,
+5,Review of systems: The patient reports tingling sensation in his right leg.,Faithful,
+6,Current medications: None mentioned.,Faithful,
+7,Vital signs: Not mentioned.,Faithful,
+8,Physical exam: The patient has some pain on flexion and palpation around the L5 region.,Faithful,
+9,"Dorsiflexion is normal, and pulses are equal in all extremities.",Faithful,
+10,Test Results: X-ray of the low back shows normal results.,Faithful,
+11,Assessment: The patient has a probable strain of the low back.,Faithful,
+12,Problem list: Low back strain; suspected nerve compression; [unknown].,Fabrication,suspected nerve compression; [unknown]
+13,I prescribed meloxicam 7.5 mg orally twice a day for pain and inflammation.,Faithful,
+14,I also prescribed physical therapy to help with stretches and exercises to improve the patient's mobility and reduce pain.,Faithful,
+15,I instructed the patient to rest and avoid strenuous activities for the next two weeks.,Faithful,
+16,I will re-evaluate the patient in two weeks and consider ordering an MRI if the symptoms do not improve.,Faithful,
+17,Follow-up: I instructed the patient to follow up with me in two weeks to re-evaluate his symptoms and consider further imaging if necessary.,Faithful,

@@ -1,0 +1,23 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient presents with a complaint of back pain and tingling sensation in the right leg, which started after raking leaves in the yard for 2 hours.",0.0001
+2,The pain is worse when standing up and improves with sitting and a hot shower.,0.2378
+3,"The patient has had similar back pain in the past, but it resolved within a day.",0.451
+4,The patient's partner reports similar pain when the patient is standing up.,0.2009
+5,Past medical history: [NOT MENTIONED],0.5
+6,Review of systems: [NOT MENTIONED],0.5
+7,Current medications: [NOT MENTIONED],0.5
+8,Objective:,0.5
+9,Vital signs: [NOT MENTIONED],0.5
+10,Physical exam: The patient has some pain on flexion of the low back and pain to palpation around the L5 region.,0.0109
+11,"Dorsiflexion is normal, and pulses are equal in all extremities.",0.089
+12,The patient has a tingling sensation in the right leg.,0.4319
+13,Test Results: The patient had a normal X-ray of the low back.,0.0092
+14,Assessment / Problem List:,0.5
+15,Assessment: The patient likely sprained their low back.,0.1512
+16,Problem list: Low back sprain; suspected nerve compression; [NOT MENTIONED],0.3951
+17,Plan:,0.5
+18,I prescribed meloxicam 15mg orally once daily for pain.,0.8888
+19,"I also prescribed physical therapy to get the patient back in shape, and to provide stretches and exercises.",0.0598
+20,"If the patient's symptoms do not improve, I will consider ordering an MRI in two weeks.",0.0001
+21,Follow-up: The patient will follow up with me in two weeks to re-evaluate their symptoms.,0.0297

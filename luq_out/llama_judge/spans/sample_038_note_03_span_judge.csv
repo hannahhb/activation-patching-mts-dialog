@@ -1,0 +1,24 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Jacqueline, presents with anxiety regarding recent blood work showing hepatitis C, which was not previously known to her.",Faithful,
+1,She reports feeling fine despite this diagnosis.,Faithful,
+2,"She mentions a history of IV drug use in the past, but has been clean for over 15 years.",Faithful,
+3,"She also reports a history of excessive alcohol use, currently consuming about 1 beer a day, and smoking 1-2 cigarettes a day, down from a previous pack and a half a day.",Faithful,
+4,"She mentions feeling tired at the end of the day, but attributes this to work-related stress.",Faithful,
+5,"Her family history includes hypertension, diabetes, and depression.",Faithful,
+6,Past medical history is otherwise unremarkable.,Faithful,
+7,Review of systems: Fatigue.,Faithful,
+8,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+9,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+10,The patient appears in no distress and no jaundice on skin exam.,Faithful,
+11,"Heart exam reveals a regular rate and rhythm with a 2/6 systolic murmur, which has not changed from last year.",Faithful,
+12,"Lung exam is clear with no wheezes, rales, or rhonchi.",Faithful,
+13,Abdomen is soft with present bowel sounds and no hepatosplenomegaly.,Faithful,
+14,Musculoskeletal exam is unremarkable with no gait disturbance or edema.,Faithful,
+15,"HCV antibody test is positive, liver panel shows elevated AST at 39, but ALT and total bilirubin are within normal limits.",Faithful,
+16,"The patient has a confirmed diagnosis of hepatitis C, which is a viral infection that affects the liver, likely acquired years ago.",Faithful,
+17,Problem list: Hepatitis C; Suspected liver disease; Suspected liver fibrosis.,Faithful,
+18,I prescribed hepatitis C RNA testing and HCV genotype testing to confirm the diagnosis and determine the severity of liver disease.,Faithful,
+19,I also ordered an ultrasound to assess liver fibrosis.,Faithful,
+20,"I advised the patient to schedule hepatitis C screening for her family members, starting with her children.",Causality,starting with her children
+21,I instructed the nurse to schedule follow-up appointments for the patient in three weeks.,Faithful,
+22,The patient will return in three weeks for follow-up and further management of her hepatitis C.,Faithful,

@@ -1,0 +1,18 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient presented with a 2-hour history of low back pain and tingling sensation in the right leg, which started after raking leaves in the yard.",Faithful,
+1,The pain was exacerbated by standing and improved with rest and a hot shower.,Causality,exacerbated by standing
+2,The patient had a similar episode 3 years ago that resolved on its own.,Faithful,
+3,"Past medical history: The patient has a history of similar low back pain 3 years ago, which resolved on its own.",Faithful,
+4,No other relevant medical history was mentioned.,Faithful,
+5,Review of systems: The patient reports tingling sensation in the right leg.,Faithful,
+6,Current medications: None mentioned.,Faithful,
+7,Vital signs: [NOT MENTIONED],Fabrication,Vital signs
+8,"Physical exam: The patient had pain on flexion, palpation at the L5 level, and normal dorsiflexion.",Faithful,
+9,The pulses were equal in all extremities.,Faithful,
+10,Test Results: X-ray of the low back showed normal results.,Faithful,
+11,"Assessment: The patient likely sprained their low back, causing the current symptoms.",Faithful,
+12,Problem list: Low back sprain; Tingling sensation in the right leg; Back pain.,Faithful,
+13,I prescribed meloxicam 15 mg orally daily for pain management.,Causality,15 mg orally daily
+14,I also prescribed physical therapy to help with stretches and exercises to improve the patient's condition.,Faithful,
+15,"I instructed the patient to rest and follow up with me in two weeks if the symptoms do not improve, at which point we will consider an MRI.",Faithful,
+16,"Follow-up: The patient will follow up with me in two weeks to reassess the condition and consider further testing, including an MRI if necessary.",Faithful,

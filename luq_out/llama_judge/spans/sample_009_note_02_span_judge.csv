@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Jack, presents with a one-week history of neck pain following a car accident.",Faithful,
+1,"He describes the pain as a 7/10, which worsens with movement of the neck.",Faithful,
+2,The pain is localized to the back of the neck and has not been constant.,Faithful,
+3,"He has tried ibuprofen, which provided some relief, but the pain remains at a 5/10.",Faithful,
+4,"The patient reports having had headaches early on, but they have subsided.",Faithful,
+5,He denies any visual disturbances or hearing problems.,Faithful,
+6,"He has a history of playing football years ago, but no previous neck issues.",Faithful,
+7,Past medical history: [NOT MENTIONED],Fabrication,Past medical history: [NOT MENTIONED]
+8,The patient denies any symptoms in other organs that are relevant to the initial presentation.,Faithful,
+9,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+10,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+11,"The patient exhibited positive pain to palpation of the soft tissues of the neck, pain with flexion, extension, rotation, and lateral bending.",Faithful,
+12,The patient also had positive pain with rotation of the neck.,Causality,The patient also had positive pain with rotation of the neck
+13,"The patient had an x-ray, which showed no signs of fracture or bony abnormalities.",Faithful,
+14,I believe the patient has neck strain.,Faithful,
+15,Neck strain; unknown status for other conditions.,Fabrication,unknown status for other conditions
+16,I prescribed Motrin 600mg every 6-8 hours for anti-inflammatory purposes.,Faithful,
+17,I also prescribed Flexeril 10mg every 12 hours as needed for muscle relaxation.,Faithful,
+18,I advised the patient to be conservative with neck movement and to try to relax the neck.,Faithful,
+19,I ordered an MRI to rule out any nerve impingement or other conditions.,Faithful,
+20,I referred the patient to either physical rehab or a chiropractor for further evaluation and treatment.,Faithful,
+21,I will follow up with the patient once the MRI results are available to discuss further management.,Faithful,

@@ -1,0 +1,50 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient presents with a 2-3 week history of right shoulder pain.,0.9837,The right shoulder pain has lasted a few weeks.,1,,entailment
+1,The patient's right shoulder pain worsened after working on various projects in his backyard.,0.961,The patient was doing work in his backyard when the pain started.,1,,entailment
+2,The patient lifted heavy objects in his backyard.,0.9183,The patient is lifting stones for his yard work.,0,fabrication,neutral
+3,The patient describes the pain as sore and tender on the outside of the shoulder.,0.9567,The patient's right shoulder pain is on the outside.,1,,entailment
+4,The patient experiences pain on the outside of the shoulder when raising his arm.,0.9683,The patient feels pain on the outside of his arm when he moves it.,1,,entailment
+5,The patient has had previous issues with this shoulder from playing baseball as a child.,0.9581,The patient has a history of hurting his right shoulder playing baseball.,1,,entailment
+6,The patient's current shoulder pain is a new and persistent problem.,0.9278,The patient has right shoulder pain.,0,fabrication,neutral
+7,The patient's pain is exacerbated by movement.,0.9416,The patient has pain in his right shoulder when he moves it.,0,fabrication,neutral
+8,The patient's pain is improved with rest.,0.9255,Physical therapy is for the patient's right shoulder pain.,0,fabrication,contradiction
+9,The patient's pain is improved with Advil.,0.9828,Advil helps the patient's pain a little bit.,1,,entailment
+10,The patient experiences some pain at night.,0.9593,The patient has pain in his right shoulder at night.,1,,entailment
+11,The patient's nighttime pain is likely due to sleeping on the affected side.,0.9419,The patient has pain in his right shoulder at night.,0,fabrication,neutral
+12,The patient has a history of playing baseball.,0.9581,The patient has a history of hurting his right shoulder playing baseball.,1,,entailment
+13,The patient's history of playing baseball resulted in previous shoulder pain.,0.9689,The patient has a history of hurting his right shoulder playing baseball.,1,,entailment
+14,The patient denies numbness in his arm.,0.967,The patient has not experienced numbness in his arm or hands.,1,,entailment
+15,The patient denies numbness in his hands.,0.9688,The patient has not experienced numbness in his arm or hands.,1,,entailment
+16,The doctor prescribed Tylenol.,1.0,The doctor prescribed Tylenol.,1,,entailment
+17,The Tylenol is prescribed for pain management.,0.9645,Tylenol is for the patient's right shoulder pain.,1,,entailment
+18,The patient's blood pressure is 116/84.,0.9911,The patient's blood pressure is 116 over 84.,1,,entailment
+19,The patient's heart rate is 62.,1.0,The patient's heart rate is 62.,1,,entailment
+20,The patient's respirations are 16.,1.0,The patient's respirations are 16.,1,,entailment
+21,The patient's temperature is 97.8.,0.9356,The patient's heart rate is 62.,0,fabrication,neutral
+22,The patient's oxygen saturation is 99%.,0.9964,The patient's oxygen saturation is 99 percent.,1,,entailment
+23,The patient has limited active range of motion in the right shoulder.,0.9956,The patient has limited active and passive range of motion in his right shoulder.,1,,entailment
+24,The patient has limited passive range of motion in the right shoulder.,0.9954,The patient has limited active and passive range of motion in his right shoulder.,1,,entailment
+25,The patient has tenderness at the greater tuberosity of the humerus.,0.9901,The patient has tenderness at the great tuberosity of the humerus.,1,,entailment
+26,There is no tenderness at the sternoclavicular joint.,0.9782,The patient has no tenderness at the sternoclavicular or acromioclavicular joints.,1,,entailment
+27,There is no tenderness at the acromioclavicular joint.,0.9772,The patient has no tenderness at the sternoclavicular or acromioclavicular joints.,1,,entailment
+28,The patient has a good hand grip.,1.0,The patient has a good hand grip.,1,,entailment
+29,The patient's capillary refill is less than 3 seconds.,0.9982,The patient's capillary refill is less than three seconds.,1,,entailment
+30,The patient's sensation to touch is intact.,1.0,The patient's sensation to touch is intact.,1,,entailment
+31,The patient's shoulder X-ray shows no fracture.,1.0,The patient's shoulder x-ray shows no fracture.,1,,entailment
+32,The patient's symptoms are most likely due to rotator cuff tendinopathy.,0.9722,Rotator cuff tendinopathy is the cause of the patient's right shoulder pain.,1,,entailment
+33,Rotator cuff tendinopathy is an injury to the tendons of the muscles that help make the shoulder muscles.,0.9683,Rotator cuff tendinopathy is the cause of the patient's right shoulder pain.,1,,entailment
+34,The patient has rotator cuff tendinopathy.,1.0,The patient has rotator cuff tendinopathy.,1,,entailment
+35,The patient's rotator cuff tendinopathy is active.,0.9555,The patient has rotator cuff tendinopathy.,1,,entailment
+36,The patient's rotator cuff tendinopathy is confirmed.,0.9725,The patient has rotator cuff tendinopathy.,1,,entailment
+37,The doctor referred the patient to physical therapy.,1.0,The doctor referred the patient to physical therapy.,1,,entailment
+38,The patient will attend physical therapy for approximately 6-8 weeks.,0.9991,The patient will attend physical therapy for approximately six to eight weeks.,1,,entailment
+39,Physical therapy is to address the rotator cuff tendinopathy.,0.9508,Physical therapy is for the patient's right shoulder pain.,1,,entailment
+40,The doctor ordered an MRI.,0.9593,The doctor ordered an MRI for the patient's right shoulder.,1,,entailment
+41,The MRI is to further evaluate the condition.,0.9448,The patient will have an MRI.,0,fabrication,neutral
+42,The patient is recommended to continue taking Tylenol.,0.9833,The patient will continue taking Tylenol.,1,,entailment
+43,Tylenol is for pain management.,0.9634,Tylenol is for the patient's right shoulder pain.,1,,entailment
+44,A steroid injection may be considered for further relief.,0.9626,The doctor will consider a steroid injection if the patient's symptoms do not improve.,1,,entailment
+45,A steroid injection may be considered if symptoms do not improve.,0.9873,The doctor will consider a steroid injection if the patient's symptoms do not improve.,1,,entailment
+46,The patient will follow up with the doctor after physical therapy.,0.9446,The doctor referred the patient to physical therapy.,0,fabrication,neutral
+47,The follow-up is to assess progress.,0.8921,The doctor performed a physical exam on the patient.,0,fabrication,neutral
+48,The follow-up is to adjust the treatment plan as needed.,0.8949,The patient will attend physical therapy for approximately six to eight weeks.,0,fabrication,neutral

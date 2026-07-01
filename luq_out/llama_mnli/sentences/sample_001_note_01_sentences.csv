@@ -1,0 +1,25 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient presents with a complaint of back pain and tingling sensation in the right leg, which started after raking leaves in the yard.",0.0001
+2,"The patient reports that the pain was fine when they were raking leaves, but worsened after being indoors for 2 hours.",0.3564
+3,"The patient has had similar pain in the past, which resolved on its own after a day.",0.1575
+4,Past medical history: The patient reports a past episode of back pain 3 years ago that resolved on its own.,0.1523
+5,"The patient's partner reports that the patient normally does not engage in physical activity, but has been doing yard work lately.",0.2474
+6,The patient and partner have a high pain tolerance and do not usually complain about pain.,0.7544
+7,"Review of systems: The patient reports tingling sensation in the right leg, but no other symptoms in other organs.",0.1932
+8,Current medications: [NOT MENTIONED],0.5
+9,Objective:,0.5
+10,"Vital signs: Blood pressure, pulse rate, oxygen saturation, and temperature were not mentioned.",0.3114
+11,"Physical exam: The patient has some pain on flexion, no pain on extension, and pain to palpation around the L5.",0.1955
+12,The patient's partner reports that the patient's pain worsens when standing up.,0.5909
+13,"The patient's dorsiflexion is normal, and pulses are equal in all extremities.",0.0965
+14,Test Results: The patient had a normal x-ray of the low back.,0.0103
+15,Assessment / Problem List:,0.5
+16,"Assessment: The patient likely sprained their low back, as evidenced by the normal x-ray and physical exam findings.",0.526
+17,Problem list: Lower back sprain; suspected muscle strain; confirmed lumbar pain; [NOT MENTIONED],0.4754
+18,Plan:,0.5
+19,I prescribed meloxicam 7.5 mg PO q 12 hours for pain management.,0.7558
+20,I also prescribed physical therapy to help with stretches and exercises to improve the patient's flexibility and strength.,0.1534
+21,I want the patient to rest and avoid heavy lifting or bending for the next 2 weeks.,0.3358
+22,"If the patient's symptoms do not improve, I will consider ordering an MRI.",0.0001
+23,"Follow-up: The patient will follow up with me in 2 weeks to re-evaluate their symptoms and consider further testing, such as an MRI, if necessary.",0.1839

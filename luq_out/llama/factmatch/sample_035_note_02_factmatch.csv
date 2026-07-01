@@ -1,0 +1,52 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Wayne.,1.0,The patient's name is Wayne.,1,,entailment
+1,The patient is a male.,0.9191,The patient has diabetes.,0,fabrication,neutral
+2,The patient has a 2-3 week history of a non-healing wound.,0.9698,The patient has had the wound for a couple of weeks.,1,,entailment
+3,The wound is located on the right foot.,0.9403,The patient has a 1 by 2 inch circular wound on the dorsal aspect of the lateral right foot.,1,,entailment
+4,The wound was caused by a blister from a new pair of Hoka shoes.,0.9644,The blister was caused by a new pair of shoes.,1,,entailment
+5,The patient reports no trauma to the foot.,0.9246,The patient's right foot x-ray shows no evidence of osteomyelitis.,0,fabrication,neutral
+6,The patient denied pain.,0.9326,The patient does not feel pain in the wound.,1,,entailment
+7,The patient denied fever.,0.972,The patient has no fever.,1,,entailment
+8,The patient denied chills.,0.9673,The patient has no chills.,1,,entailment
+9,The patient denied drainage from the wound.,0.9799,The patient has no drainage from the wound.,1,,entailment
+10,The wound is 1x2 inch in size.,0.9398,The patient has a 1 by 2 inch circular wound on the dorsal aspect of the lateral right foot.,1,,entailment
+11,The wound is circular in shape.,0.9364,The patient has a 1 by 2 inch circular wound on the dorsal aspect of the lateral right foot.,1,,entailment
+12,The wound is located on the dorsal aspect of the lateral right foot.,0.9658,The patient has a 1 by 2 inch circular wound on the dorsal aspect of the lateral right foot.,1,,entailment
+13,The wound has yellow slough.,0.9932,The wound has some yellow slough present.,1,,entailment
+14,The wound has minimal granulation tissue.,1.0,The wound has minimal granulation tissue.,1,,entailment
+15,The patient has a history of diabetes.,0.9713,The patient has diabetes.,1,,entailment
+16,The patient's A1C is over 8.,0.9428,The patient's last HbA1c was a little over 8.,1,,entailment
+17,The patient has not seen a podiatrist in 2 years.,0.9927,The patient has not seen a podiatrist for a couple of years.,1,,entailment
+18,The patient's temperature is 98.1.,1.0,The patient's temperature is 98.1.,1,,entailment
+19,The patient's heart rate is 72.,1.0,The patient's heart rate is 72.,1,,entailment
+20,The patient's respirations are 16.,1.0,The patient's respirations are 16.,1,,entailment
+21,The patient's blood pressure is 110/65.,0.9876,The patient's blood pressure is 110 over 65.,1,,entailment
+22,The wound is not painful to touch.,0.9572,The doctor did not appreciate any pain when touching the wound.,1,,entailment
+23,There is no surrounding erythema.,0.9526,The wound has no surrounding erythema or cellulitis.,1,,entailment
+24,There is no surrounding cellulitis.,0.9604,The wound has no surrounding erythema or cellulitis.,1,,entailment
+25,There is no fluid collection.,0.94,The patient has no drainage from the wound.,1,,entailment
+26,There is no necrosis.,0.9637,The wound has no necrosis.,1,,entailment
+27,There is no odor.,0.9205,The wound has no odor.,1,,entailment
+28,The patient has palpable bilateral femoral pulses.,0.9879,The patient has palpable bilateral femoral and popliteal pulses.,1,,entailment
+29,The patient has palpable bilateral popliteal pulses.,0.99,The patient has palpable bilateral femoral and popliteal pulses.,1,,entailment
+30,The patient has no palpable DP pulses.,0.9577,The patient has no palpable dorsal pedis (DP) or posterior tibial (PT) pulses.,1,,entailment
+31,The patient has no palpable PT pulses.,0.9409,The patient has no palpable dorsal pedis (DP) or posterior tibial (PT) pulses.,1,,entailment
+32,Doppler signs are present.,0.9826,The patient has Doppler signs present.,1,,entailment
+33,The patient's right foot X-ray shows no evidence of osteomyelitis.,1.0,The patient's right foot x-ray shows no evidence of osteomyelitis.,1,,entailment
+34,The patient has a diabetic foot ulcer.,0.9494,The patient has diabetes.,0,fabrication,neutral
+35,The patient's diabetes is not well-controlled.,0.9472,The doctor wants to get the patient's diabetes under control to help the wound heal.,1,,entailment
+36,The patient has diabetes mellitus.,0.9957,The patient has diabetes.,1,,entailment
+37,The doctor prescribed collagenase ointment.,1.0,The doctor prescribed collagenase ointment.,1,,entailment
+38,The collagenase ointment dose is not specified.,0.9446,The collagenase ointment is to be applied to the wound once daily.,0,fabrication,neutral
+39,The collagenase ointment is applied once daily.,0.9918,Collagenase ointment is taken once daily.,1,,entailment
+40,The collagenase ointment is used for the diabetic foot ulcer.,0.9765,Collagenase ointment is for the wound.,1,,entailment
+41,The doctor will perform a debridement.,0.9676,The doctor performed a debridement on the wound.,1,,entailment
+42,The debridement is to remove dead tissue.,0.9935,Debridement is a procedure to remove dead tissue.,1,,entailment
+43,The doctor will order an ankle-brachial index (ABI).,0.9817,The doctor ordered an ankle-brachial index (ABI) to determine the blood supply to the foot.,1,,entailment
+44,The ABI is to determine the blood supply to the foot.,0.9767,The doctor ordered an ankle-brachial index (ABI) to determine the blood supply to the foot.,1,,entailment
+45,The doctor will refer the patient to a vascular specialist.,0.949,The doctor may refer the patient to a vascular specialist if the ABI indicates poor blood supply.,0,fabrication,neutral
+46,The referral to a vascular specialist is for poor blood supply for wound healing.,0.9487,The doctor may refer the patient to a vascular specialist if the ABI indicates poor blood supply.,0,fabrication,neutral
+47,The doctor will refer the patient to a diabetic specialist.,0.9347,The doctor may get a diabetic consult to help modify the patient's diet.,0,negation,contradiction
+48,The referral to a diabetic specialist is to discuss ways to control diabetes.,0.9364,The doctor may get a diabetic consult to help modify the patient's diet.,1,,entailment
+49,The patient will return in 2 weeks for follow-up.,0.9832,The patient is to follow up in two weeks.,1,,entailment
+50,The patient may need to be referred to a vascular specialist if the ABI indicates poor blood supply.,0.9943,The doctor may refer the patient to a vascular specialist if the ABI indicates poor blood supply.,1,,entailment

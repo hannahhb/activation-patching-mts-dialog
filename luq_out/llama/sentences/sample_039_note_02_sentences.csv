@@ -1,28 +1,28 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"The patient, a 56-year-old male, presents with a chief complaint of difficulty swallowing, which he describes as a sensation of something being stuck in his throat for the past 4-5 weeks.",0.2735
-2,"He reports that it is more noticeable when eating solids, such as meat or sandwiches, and can be painful.",0.9327
-3,He has not experienced any coughing or vomiting blood.,0.353
-4,"He has a past medical history of diabetes and high blood pressure, for which he is currently taking metformin 500mg twice daily and norvasc.",0.4117
-5,His hemoglobin A1c was previously measured at 7.4.,0.7854
-6,"He reports that his blood sugars have been within target range, but he occasionally skips checking his blood glucose levels.",0.9996
-7,"He denies any nausea, vomiting, or diarrhea.",0.3739
+1,"The patient, a 56-year-old male, presents with a chief complaint of difficulty swallowing, which he describes as a sensation of something being stuck in his throat for the past 4-5 weeks.",0.0025
+2,"He reports that it is more noticeable when eating solids, such as meat or sandwiches, and can be painful.",0.0689
+3,He has not experienced any coughing or vomiting blood.,0.0176
+4,"He has a past medical history of diabetes and high blood pressure, for which he is currently taking metformin 500mg twice daily and norvasc.",0.0141
+5,His hemoglobin A1c was previously measured at 7.4.,0.1938
+6,"He reports that his blood sugars have been within target range, but he occasionally skips checking his blood glucose levels.",0.4987
+7,"He denies any nausea, vomiting, or diarrhea.",0.0129
 8,Objective:,0.5
-9,Vital signs: Blood pressure is 120/50 mmHg.,0.891
-10,"Physical exam: The patient's neck is fine, with no swelling or masses.",0.4308
-11,"The thyroid gland feels normal, and there are no lymph nodes.",0.4272
-12,"The throat examination is normal, with no masses, swelling, or redness.",0.7694
-13,"The lung and heart exams are clear, with no murmurs.",0.5621
-14,"The abdomen exam reveals epigastric tenderness in the right upper quadrant, but no masses or significant swelling.",0.5727
-15,"The back and extremity exams are normal, and the neurological exam is fine.",0.4842
+9,Vital signs: Blood pressure is 120/50 mmHg.,0.8866
+10,"Physical exam: The patient's neck is fine, with no swelling or masses.",0.4243
+11,"The thyroid gland feels normal, and there are no lymph nodes.",0.3636
+12,"The throat examination is normal, with no masses, swelling, or redness.",0.6811
+13,"The lung and heart exams are clear, with no murmurs.",0.4881
+14,"The abdomen exam reveals epigastric tenderness in the right upper quadrant, but no masses or significant swelling.",0.2116
+15,"The back and extremity exams are normal, and the neurological exam is fine.",0.4772
 16,Assessment / Problem List:,0.5
-17,"The patient has difficulty swallowing (esophageal dysphagia) likely due to a narrowing of the esophagus, possibly a stricture.",0.2812
-18,Diabetes (uncontrolled) with hemoglobin A1c of 7.4; high blood pressure (controlled) on norvasc.,0.9999
+17,"The patient has difficulty swallowing (esophageal dysphagia) likely due to a narrowing of the esophagus, possibly a stricture.",0.0207
+18,Diabetes (uncontrolled) with hemoglobin A1c of 7.4; high blood pressure (controlled) on norvasc.,0.7022
 19,Plan:,0.5
-20,I will refer the patient to gastroenterology for further evaluation and possible endoscopy to investigate the cause of his difficulty swallowing.,0.3278
-21,I will also prescribe prilosec 20mg once daily for reflux.,0.0942
-22,"I recommend that the patient chew his food frequently, especially when eating solids, to prevent getting stuck.",0.284
-23,"I will order another hemoglobin A1c, kidney function tests, and refer the patient to ophthalmology for diabetic retinopathy screening.",0.1142
-24,"I will also continue the patient's current medication regimen, including metformin and norvasc, and schedule a follow-up appointment in one month to review the results of the blood tests and make any necessary adjustments.",0.5638
+20,I will refer the patient to gastroenterology for further evaluation and possible endoscopy to investigate the cause of his difficulty swallowing.,0.1275
+21,I will also prescribe prilosec 20mg once daily for reflux.,0.0145
+22,"I recommend that the patient chew his food frequently, especially when eating solids, to prevent getting stuck.",0.1658
+23,"I will order another hemoglobin A1c, kidney function tests, and refer the patient to ophthalmology for diabetic retinopathy screening.",0.1085
+24,"I will also continue the patient's current medication regimen, including metformin and norvasc, and schedule a follow-up appointment in one month to review the results of the blood tests and make any necessary adjustments.",0.4394
 25,Follow-up:,0.5
-26,The patient will return in one month for a follow-up appointment to review the results of the blood tests and make any necessary adjustments to his medication regimen.,0.1131
+26,The patient will return in one month for a follow-up appointment to review the results of the blood tests and make any necessary adjustments to his medication regimen.,0.0046

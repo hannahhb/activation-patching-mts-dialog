@@ -1,0 +1,54 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Larry.,1.0,The patient's name is Larry.,1,,entailment
+1,The patient is a 40-year-old male.,0.9087,The patient quit smoking twenty years ago.,0,fabrication,neutral
+2,The patient has been experiencing chronic back pain.,0.9813,The patient has been having back pain.,1,,entailment
+3,The patient's back pain has lasted for approximately 2 years.,0.9903,The back pain has lasted a couple of years.,1,,entailment
+4,The patient attributes his back pain to moving furniture.,0.9684,The patient's back pain started after moving furniture.,1,,entailment
+5,The patient's back pain is sharp and stabbing in nature.,0.9833,The back pain feels like a sharp stabbing pain.,1,,entailment
+6,The patient's back pain radiates down to his right leg.,0.9861,The pain radiates down to the right leg.,1,,entailment
+7,The patient's back pain radiates to his big toe.,0.9661,The pain sometimes reaches the big toe.,1,,entailment
+8,The patient's back pain worsens with sitting.,0.9658,The discomfort worsens when sitting down.,1,,entailment
+9,The patient reports numbness in his right leg.,0.9694,The numbness is located in the right leg.,1,,entailment
+10,The patient reports tingling in his right leg.,0.9241,The patient has decreased sensation to light touch at the right lateral thigh.,0,fabrication,contradiction
+11,The patient reports numbness and tingling in his foot.,0.9512,The patient experiences numbness.,1,,entailment
+12,The patient denied loss of sensation in the genital area.,0.9882,The patient does not have loss of sensation in the genital area.,1,,entailment
+13,The patient denied loss of sensation in the rectal area.,0.9872,The patient does not have loss of sensation in the rectal area.,1,,entailment
+14,The patient denied weakness.,0.9697,The patient does not have weakness.,1,,entailment
+15,The patient denied loss of bladder control.,0.984,The patient does not have loss of control of the bladder.,1,,entailment
+16,The patient denied loss of bowel control.,0.9832,The patient does not have loss of control of the bowels.,1,,entailment
+17,The patient has tried physical therapy.,1.0,The patient has tried physical therapy.,1,,entailment
+18,The patient has been prescribed strong pain medications in the past.,1.0,The patient has been prescribed strong pain medications in the past.,1,,entailment
+19,The patient's past pain medications provided only temporary relief.,0.969,The pain medications were only temporary.,1,,entailment
+20,The patient has been considered for surgery.,0.9601,The patient was mentioned as a candidate for surgery.,1,,entailment
+21,The patient wishes to avoid surgery.,0.9945,The patient wants to avoid surgery.,1,,entailment
+22,The patient has gained weight over the years.,0.9534,The patient has gained weight due to the back pain.,1,,entailment
+23,The patient's back pain has limited his activity level.,0.9547,The patient has been having back pain.,1,,entailment
+24,The patient's back pain has limited his interest in golf.,0.9543,The back pain has set back the patient's golfing.,1,,entailment
+25,The patient reports difficulty sleeping.,0.9082,The patient has difficulty getting comfortable.,0,fabrication,neutral
+26,The patient's difficulty sleeping is due to discomfort.,0.9297,The discomfort worsens when sitting down.,0,fabrication,neutral
+27,The patient has midline tenderness at the L4-L5 disk space.,0.9931,There is midline tenderness at the L4-L5 disk space.,1,,entailment
+28,The patient has right-sided lumbar paravertebral tenderness.,0.9942,There is right-sided lumbar paravertebral tenderness.,1,,entailment
+29,The patient has pain with lumbar flexion.,0.995,The patient experiences pain with lumbar flexion.,1,,entailment
+30,The patient has a positive straight leg test.,0.9662,The supine straight leg test is positive.,1,,entailment
+31,The patient has decreased sensation to light touch at the right lateral thigh.,1.0,The patient has decreased sensation to light touch at the right lateral thigh.,1,,entailment
+32,The patient's decreased sensation is at the L4 dermatome.,0.9934,The decreased sensation is at the L4 dermatome.,1,,entailment
+33,The patient's patellar reflexes are symmetrical.,0.9881,The patient's patellar and achilles reflexes are symmetrical.,1,,entailment
+34,The patient's Achilles reflexes are symmetrical.,0.9849,The patient's patellar and achilles reflexes are symmetrical.,1,,entailment
+35,The patient's MRI results show disk herniation.,0.9838,The MRI shows disk herniation.,1,,entailment
+36,The patient's MRI results show nerve impingement.,0.9862,The MRI shows nerve impingement.,1,,entailment
+37,The patient's symptoms are consistent with an L4-L5 herniated disk with radiculopathy.,0.9759,The doctor diagnosed an L4-L5 herniated disk with radiculopathy.,1,,entailment
+38,The patient has chronic lumbar back pain.,0.9549,The patient has been having back pain.,1,,entailment
+39,The patient has an L4-L5 herniated disk with radiculopathy.,0.981,The doctor diagnosed an L4-L5 herniated disk with radiculopathy.,1,,entailment
+40,The doctor recommended a spinal injection.,1.0,The doctor recommended a spinal injection.,1,,entailment
+41,The spinal injection will be with a corticosteroid.,0.9871,The spinal injection will contain a corticosteroid.,1,,entailment
+42,The corticosteroid is to reduce inflammation.,0.997,The corticosteroid is for reducing inflammation.,1,,entailment
+43,The corticosteroid is to relieve pain.,0.9745,The corticosteroid is for the patient's back pain.,1,,entailment
+44,The procedure will be performed under fluoroscopy.,0.9709,The injection will be done under fluoroscopy.,1,,entailment
+45,The fluoroscopy is to localize the exact area of pain.,0.9278,The injection will be done under fluoroscopy.,0,fabrication,neutral
+46,The doctor will monitor the patient's response to the injection.,1.0,The doctor will monitor the patient's response to the injection.,1,,entailment
+47,The patient will have follow-up appointments as needed.,0.9027,The patient's primary care doctor referred them to the specialist.,0,fabrication,neutral
+48,The patient's follow-up appointments will not exceed four times a year.,0.9344,The injections will not be more than four times a year.,0,fabrication,neutral
+49,The procedure is relatively quick.,1.0,The procedure is relatively quick.,1,,entailment
+50,The patient should be out of the office within an hour.,0.9939,The patient will be out of the office within an hour.,1,,entailment
+51,The patient will be scheduled for the first injection today.,0.9036,The injections will not be more than four times a year.,0,fabrication,contradiction
+52,The patient will have subsequent follow-ups as needed.,0.9006,The patient's primary care doctor referred them to the specialist.,0,fabrication,neutral

@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a female who was sent by her primary care physician (PCP), presents with a long history of headaches, which began during her teenage years.",Faithful,
+1,The headaches initially occurred in association with her menstrual periods but have become more frequent and severe over time.,Faithful,
+2,"She reports a pulsing sensation behind her right eye, which worsens with exercise, particularly jogging.",Faithful,
+3,"She also experiences ringing in her ears and occasional blurred vision, particularly on the side of her vision.",Faithful,
+4,Past medical history: [NOT MENTIONED],Fabrication,Past medical history: [NOT MENTIONED]
+5,"The patient reports no numbness or tingling in her hands, feet, or face.",Faithful,
+6,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+7,Vital signs: The patient's blood pressure is normal.,Faithful,
+8,"Physical exam: The patient's heart exam shows a normal sinus rhythm with no murmurs, rubs, or gallops.",Faithful,
+9,"The funduscopic exam reveals papilledema, which is swelling behind the eye.",Faithful,
+10,"The neurological exam shows intact cranial nerves one through twelve, including a normal cranial reflex.",Faithful,
+11,The patient's gait is normal.,Faithful,
+12,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+13,"Assessment: The patient's symptoms are concerning for idiopathic intracranial hypertension, a condition characterized by increased pressure in the brain without a known cause.",Faithful,
+14,Problem list: Idiopathic intracranial hypertension; suspected.,Faithful,
+15,I plan to order an MRI to check for any other conditions that could be contributing to the patient's symptoms.,Faithful,
+16,I will also perform a spinal tap to evaluate the pressure in the brain and to help decrease the pressure if it is elevated.,Faithful,
+17,I will refer the patient to a neuro-ophthalmologist for a complete eye exam.,Faithful,
+18,"The patient will need to get preapproval from her insurance company for the MRI, which will be scheduled once the preapproval is obtained.",Faithful,
+19,"Follow-up: The patient will follow up with me once the MRI and spinal tap results are available, and we will discuss the next steps in her treatment.",Contextual,The patient will follow up with me
+20,Instructions:,Fabrication,Instructions:

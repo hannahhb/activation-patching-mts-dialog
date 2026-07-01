@@ -1,0 +1,62 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Gregory.,0.0159
+1,subjective,The patient is 2 months old.,0.999
+2,subjective,The patient has a nonhealing foot ulcer.,0.0202
+3,subjective,The foot ulcer is located on the dorsal aspect of the lateral right foot.,0.6352
+4,subjective,The foot ulcer has recently become red.,0.148
+5,subjective,The foot ulcer is draining.,0.1435
+6,subjective,The patient experiences throbbing pain in the foot ulcer occasionally.,0.0151
+7,subjective,The patient does not have specific pain.,0.1694
+8,subjective,The patient's biggest concern is the redness of the foot ulcer.,0.7217
+9,subjective,The patient's biggest concern is the drainage of the foot ulcer.,0.7759
+10,subjective,The patient got the wound from walking barefoot on the beach.,0.994
+11,subjective,The patient got the wound at Dewey Beach.,0.9986
+12,subjective,The patient has diabetes.,0.0193
+13,subjective,The patient takes medication for diabetes.,0.1231
+14,subjective,The patient does not regularly check his blood sugar levels.,0.0755
+15,subjective,The patient's last A1c is around 10%.,0.4273
+16,subjective,The patient's last A1c is considered high.,0.8905
+17,subjective,The patient has not seen his PCP in a while.,0.9232
+18,subjective,The patient has not filled his prescribed antibiotics.,0.4742
+19,subjective,The patient reports occasional throbbing pain in the affected foot.,0.1557
+20,objective,The patient's vital signs are normal.,0.5687
+21,objective,The patient has no fever.,0.4271
+22,objective,There is a wound on the dorsal aspect of the lateral right foot.,0.0138
+23,objective,The wound is 1x2 inches in size.,0.404
+24,objective,The wound is circular in shape.,0.0725
+25,objective,The wound is proximal to the fifth MTP joint.,0.9973
+26,objective,The wound has redness.,0.3392
+27,objective,The wound has drainage.,0.6997
+28,objective,The wound has edema.,0.995
+29,objective,The wound has fluid present.,0.2598
+30,objective,The patient reports increased pressure when the wound is touched.,0.4999
+31,objective,The patient reports no distinct pain.,0.454
+32,objective,An X-ray was taken of the right foot.,0.0054
+33,objective,The X-ray shows no evidence of osteomyelitis.,0.007
+34,assessment,The patient has a diabetic foot ulcer.,0.0023
+35,assessment,The patient has a suspected infection.,0.0062
+36,assessment,The patient has uncontrolled diabetes.,0.1215
+37,assessment,The patient has poor wound care.,0.9998
+38,assessment,The patient has a lack of follow-up with PCP.,0.9999
+39,assessment,The diabetic foot ulcer is a problem.,0.3954
+40,assessment,The suspected infection is a problem.,0.9945
+41,assessment,The uncontrolled diabetes is a problem.,0.9972
+42,assessment,The poor wound care is a problem.,0.9998
+43,assessment,The lack of follow-up with PCP is a problem.,0.9998
+44,plan,The doctor prescribed clindamycin.,0.0023
+45,plan,The clindamycin dose is 400mg.,0.0029
+46,plan,Clindamycin is taken twice daily.,0.013
+47,plan,Clindamycin is prescribed for 7 days.,0.003
+48,plan,Clindamycin is prescribed to treat the suspected infection.,0.0031
+49,plan,The doctor will perform a debridement.,0.1196
+50,plan,The debridement is to remove dead tissue.,0.0347
+51,plan,The debridement is to remove dead tissue from the wound.,0.0264
+52,plan,The doctor will order an ABI.,0.0149
+53,plan,The ABI is to determine the blood supply.,0.0167
+54,plan,The ABI is to determine the blood supply to the foot.,0.0131
+55,plan,The patient will wear a surgical shoe.,0.0084
+56,plan,The surgical shoe is to reduce pressure.,0.2027
+57,plan,The surgical shoe is to reduce pressure on the affected foot.,0.1337
+58,plan,The patient will be seen back in 2 weeks.,0.0065
+59,plan,The patient will be seen back for follow-up.,0.0075
+60,plan,The patient will be seen back for possible repeat debridement.,0.3348

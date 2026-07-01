@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Gregory, is a 2-month-old nonhealing foot ulcer on the dorsal aspect of the lateral right foot, which has recently become red and is draining.",Faithful,
+1,"He reports that the wound throbs occasionally, but he does not have specific pain.",Faithful,
+2,His biggest concern is the redness and drainage.,Faithful,
+3,He mentions that he got the wound from walking barefoot on the beach at Dewey Beach.,Faithful,
+4,"Past medical history: The patient has diabetes, for which he takes medication but does not regularly check his blood sugar levels.",Faithful,
+5,"His last A1c is around 10%, which is considered high.",Faithful,
+6,He has not seen his PCP in a while and has not filled his prescribed antibiotics.,Causality,and has not filled his prescribed antibiotics
+7,Review of systems: The patient reports occasional throbbing pain in the affected foot.,Faithful,
+8,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+9,"Vital signs: The patient's vital signs are normal, with no fever.",Faithful,
+10,"Physical exam: The physical exam reveals a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, proximal to the fifth MTP joint, with redness, drainage, edema, and fluid present.",Faithful,
+11,"The patient reports increased pressure when the wound is touched, but no distinct pain.",Faithful,
+12,Test Results: An X-ray of the right foot shows no evidence of osteomyelitis.,Faithful,
+13,Assessment: The patient has a diabetic foot ulcer with a suspected infection.,Faithful,
+14,Problem list: Diabetic foot ulcer; Suspected infection; Uncontrolled diabetes; Poor wound care and lack of follow-up with PCP.,Causality,Poor wound care and lack of follow-up with PCP
+15,I prescribed clindamycin 400mg twice daily for 7 days to treat the suspected infection.,Faithful,
+16,I will perform a debridement to remove dead tissue from the wound.,Faithful,
+17,I will also order an ABI to determine the blood supply to the foot.,Faithful,
+18,The patient will need to wear a surgical shoe to reduce pressure on the affected foot.,Faithful,
+19,I will see the patient back in 2 weeks for follow-up and possible repeat debridement.,Faithful,
+20,Follow-up: The patient will be seen back in 2 weeks for follow-up and possible repeat debridement.,Fabrication,Follow-up: The patient will be seen back in 2 weeks for follow-up and possible repeat debridement
+21,Instructions:,Fabrication,Instructions:

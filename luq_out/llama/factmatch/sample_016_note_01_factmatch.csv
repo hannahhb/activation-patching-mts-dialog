@@ -1,0 +1,66 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient presented with a history of coughing.,0.9676,The patient has a cough.,1,,entailment
+1,The patient's coughing lasted for approximately three months.,0.954,The patient has a cough.,1,,entailment
+2,The patient initially noticed coughing while working with horses.,0.9377,The patient has a cough.,0,fabrication,neutral
+3,The patient initially noticed coughing while loading hay.,0.9764,The patient started coughing more after loading hay.,1,,entailment
+4,The patient's coughing improved after a cold.,0.9443,The patient has a cough.,0,fabrication,neutral
+5,The patient is a previous smoker.,0.9397,The patient stopped smoking about 7 years ago.,1,,entailment
+6,The patient quit smoking seven years ago.,0.9883,The patient stopped smoking about 7 years ago.,1,,entailment
+7,The patient has a history of rheumatoid arthritis.,1.0,The patient has a history of rheumatoid arthritis.,1,,entailment
+8,The patient's rheumatoid arthritis is well-controlled.,0.9955,The patient's rheumatoid arthritis is fairly controlled.,1,,entailment
+9,The patient is taking methotrexate.,0.9892,The patient takes methotrexate.,1,,entailment
+10,The methotrexate dose is 7.5mg.,0.97,The patient takes 7.5 milligrams of methotrexate.,1,,entailment
+11,Methotrexate is taken weekly.,0.988,Methotrexate is taken once a week.,1,,entailment
+12,Methotrexate is prescribed for rheumatoid arthritis.,0.9851,Methotrexate is taken for rheumatoid arthritis.,1,,entailment
+13,The patient exercises regularly.,0.9641,The patient exercises.,1,,entailment
+14,The patient exercises with biking.,0.9581,The patient does a lot of biking.,1,,entailment
+15,The patient has a family history of breast cancer.,0.9503,The patient's mother had breast cancer.,1,,entailment
+16,The patient denied a history of lung cancer.,0.9849,The patient has no history of lung cancer.,1,,entailment
+17,The patient denied a history of other malignancies.,0.9447,The patient has no history of lung cancer.,0,fabrication,neutral
+18,The patient denies pain.,0.9554,The patient has no pain.,1,,entailment
+19,The patient denies shortness of breath.,0.9765,The patient has no shortness of breath.,1,,entailment
+20,The doctor prescribed methotrexate.,0.9633,The patient takes methotrexate.,1,,entailment
+21,The methotrexate dose is 7.5mg.,0.97,The patient takes 7.5 milligrams of methotrexate.,1,,entailment
+22,Methotrexate is taken weekly.,0.988,Methotrexate is taken once a week.,1,,entailment
+23,Methotrexate is prescribed for rheumatoid arthritis.,0.9851,Methotrexate is taken for rheumatoid arthritis.,1,,entailment
+24,The patient's blood pressure is 124/76.,1.0,The patient's blood pressure is 124/76.,1,,entailment
+25,The patient's heart rate is 70.,1.0,The patient's heart rate is 70.,1,,entailment
+26,The patient's respiration rate is 16.,1.0,The patient's respiration rate is 16.,1,,entailment
+27,The patient's oxygen saturation is 98% on room air.,1.0,The patient's oxygen saturation is 98% on room air.,1,,entailment
+28,The patient is afebrile.,1.0,The patient is afebrile.,1,,entailment
+29,The patient's lungs are clear.,0.9601,The patient's lungs are clear and equal bilaterally.,1,,entailment
+30,The patient's lungs are equal bilateral.,0.9738,The patient's lungs are clear and equal bilaterally.,1,,entailment
+31,The patient's heart has a regular rate and rhythm.,1.0,The patient's heart has a regular rate and rhythm.,1,,entailment
+32,The patient's heart has no clicks.,0.9654,"The patient has no clicks, rubs, or murmurs in their heart.",1,,entailment
+33,The patient's heart has no rubs.,0.9486,"The patient has no clicks, rubs, or murmurs in their heart.",1,,entailment
+34,The patient's heart has no murmurs.,0.9595,"The patient has no clicks, rubs, or murmurs in their heart.",1,,entailment
+35,The patient's extremities have pink skin.,0.9022,The patient has horses.,0,fabrication,neutral
+36,The patient's extremities have warm skin.,0.9176,The patient got a cold.,0,fabrication,contradiction
+37,The patient's extremities have dry skin.,0.9029,The patient has problems with their hands.,0,fabrication,contradiction
+38,The patient's extremities have no edema.,0.9139,The patient has intact pulses in all extremities.,0,fabrication,neutral
+39,The patient's pulses are intact.,0.9719,The patient has intact pulses in all extremities.,1,,entailment
+40,The patient has brisk capillary refill.,1.0,The patient has brisk capillary refill.,1,,entailment
+41,The patient had a chest CT.,0.9722,The patient had a chest x-ray.,1,,entailment
+42,The chest CT showed a solitary nodule.,0.9712,The chest CT showed a solitary 2-centimeter nodule in the right upper lobe.,1,,entailment
+43,The nodule is in the lateral aspect of the right upper lobe.,0.9577,The chest CT showed a solitary 2-centimeter nodule in the right upper lobe.,1,,entailment
+44,The nodule is 2cm.,0.9434,The chest CT showed a solitary 2-centimeter nodule in the right upper lobe.,1,,entailment
+45,The nodule is smooth in appearance.,1.0,The nodule is smooth in appearance.,1,,entailment
+46,The patient has no emphysematous disease.,0.969,There is no evidence of emphysematous disease.,1,,entailment
+47,The patient has a confirmed right upper lobe lung nodule.,0.9641,The chest CT showed a solitary 2-centimeter nodule in the right upper lobe.,1,,entailment
+48,The patient has rheumatoid arthritis.,0.9781,The patient has a history of rheumatoid arthritis.,1,,entailment
+49,The patient has an unknown problem.,0.8814,The patient is nervous.,0,fabrication,neutral
+50,The doctor ordered a pulmonary function test (PFT).,0.9853,The doctor ordered a pulmonary function test.,1,,entailment
+51,The PFT is to obtain a baseline for lung function.,0.9597,The pulmonary function test is to check the patient's lung function.,1,,entailment
+52,The doctor scheduled a PET CT.,1.0,The doctor scheduled a PET CT.,1,,entailment
+53,The PET CT is to determine if the nodule is metabolically active.,1.0,The PET CT is to determine if the nodule is metabolically active.,1,,entailment
+54,The doctor plans to remove the nodule.,0.9545,The doctor suggested removing the nodule via video-assisted thoracoscopy.,1,,entailment
+55,The nodule removal will be via video-assisted thoracoscopy.,0.9745,The doctor suggested removing the nodule via video-assisted thoracoscopy.,1,,entailment
+56,The procedure involves three small incisions on the right chest.,0.9893,The procedure will involve three small incisions on the side of the patient's right chest.,1,,entailment
+57,The procedure will be under general anesthesia.,0.9775,The patient will be under general anesthesia.,1,,entailment
+58,The patient will require a chest tube for one day post-procedure.,0.968,The patient will have a chest tube after the procedure.,1,,entailment
+59,The patient will be admitted for one night.,0.9738,The patient will be in the hospital for one night.,1,,entailment
+60,The patient will be discharged the following day.,0.9618,The patient will go home the next day.,1,,entailment
+61,The patient should continue to follow up with their rheumatologist.,0.9781,The doctor wants the patient to continue following up with their rheumatologist.,1,,entailment
+62,The patient should continue medication therapy for rheumatoid arthritis.,0.9476,The doctor wants the patient to continue their medication therapy as previously outlined.,0,fabrication,neutral
+63,The doctor will see the patient again in a few minutes.,0.9231,The patient will be in the hospital for one night.,0,fabrication,contradiction
+64,The follow-up is to review and sign the paperwork for the treatment process.,0.9129,The doctor wants the patient to continue following up with their rheumatologist.,0,fabrication,neutral

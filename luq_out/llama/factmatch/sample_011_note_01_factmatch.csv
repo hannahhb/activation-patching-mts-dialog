@@ -1,0 +1,72 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 45-year-old male.,1.0,The patient is a 45-year-old male.,1,,entailment
+1,The patient has a history of diabetes type two.,1.0,The patient has a history of diabetes type two.,1,,entailment
+2,The patient has a history of mild intermittent asthma.,1.0,The patient has a history of mild intermittent asthma.,1,,entailment
+3,The patient presents with right elbow pain.,0.9903,The patient is experiencing right elbow pain.,1,,entailment
+4,The right elbow pain started three weeks ago.,0.9639,The patient is experiencing right elbow pain.,1,,entailment
+5,The patient increased tennis activity before the onset of right elbow pain.,0.9757,The patient's elbow pain started after increasing tennis activity.,1,,entailment
+6,The patient describes the right elbow pain as sharp.,0.9572,The patient is experiencing right elbow pain.,1,,entailment
+7,The patient describes the right elbow pain as stabbing.,0.9561,"The patient describes the pain as sharp, stabbing, and aching.",1,,entailment
+8,The patient describes the right elbow pain as aching.,0.9733,The patient is experiencing right elbow pain.,1,,entailment
+9,The patient describes the right elbow pain as throbbing.,0.9569,The patient is experiencing right elbow pain.,1,,entailment
+10,The patient's right elbow pain severity is 8/10 when using the arm.,0.9726,The patient rates the pain as an 8 out of 10 when using the elbow.,1,,entailment
+11,The patient's right elbow pain severity is 3/10 when resting.,0.9543,The patient is experiencing right elbow pain.,1,,entailment
+12,The right elbow pain is localized to the outside part of the elbow.,0.9788,The pain is located on the outside part of the elbow.,1,,entailment
+13,The right elbow pain does not radiate to the arm.,0.949,The patient is experiencing right elbow pain.,0,fabrication,neutral
+14,The right elbow pain does not radiate to the shoulder.,0.9485,The patient is experiencing right elbow pain.,0,fabrication,neutral
+15,The patient has tried taking Tylenol.,0.9558,The patient has tried Tylenol and ibuprofen for pain relief.,1,,entailment
+16,The patient has tried taking ibuprofen.,0.9579,The patient has tried Tylenol and ibuprofen for pain relief.,1,,entailment
+17,Tylenol does not provide relief for the patient's right elbow pain.,0.9459,The patient has tried Tylenol and ibuprofen for pain relief.,0,fabrication,neutral
+18,Ibuprofen does not provide relief for the patient's right elbow pain.,0.9423,The patient is experiencing right elbow pain.,0,fabrication,neutral
+19,The patient is on metformin.,0.9909,The patient is taking metformin.,1,,entailment
+20,The metformin dose is 500mg.,0.9937,The metformin dose is 500 milligrams.,1,,entailment
+21,Metformin is taken twice a day.,1.0,Metformin is taken twice a day.,1,,entailment
+22,Metformin is prescribed for diabetes.,1.0,Metformin is prescribed for diabetes.,1,,entailment
+23,The patient is on flovent.,0.978,The patient is taking Flovent.,1,,entailment
+24,The flovent dose is not specified.,1.0,The Flovent dose is not specified.,1,,entailment
+25,Flovent is taken twice a day.,1.0,Flovent is taken twice a day.,1,,entailment
+26,Flovent is prescribed for asthma.,1.0,Flovent is prescribed for asthma.,1,,entailment
+27,The patient is on albuterol.,0.9909,The patient is taking albuterol.,1,,entailment
+28,The albuterol dose is not specified.,1.0,The albuterol dose is not specified.,1,,entailment
+29,Albuterol is taken as needed.,1.0,Albuterol is taken as needed.,1,,entailment
+30,Albuterol is prescribed for asthma.,1.0,Albuterol is prescribed for asthma.,1,,entailment
+31,The patient has a history of penicillin allergy.,0.9838,The patient has an allergy to penicillin.,1,,entailment
+32,The patient had his gallbladder removed.,0.9989,The patient had their gallbladder removed.,1,,entailment
+33,The patient's gallbladder was removed 10 years ago.,0.9971,The patient had their gallbladder removed about 10 years ago.,1,,entailment
+34,The patient does not mention any other symptoms related to his elbow pain.,0.9522,The patient is experiencing right elbow pain.,1,,entailment
+35,The patient has moderate lateral epicondylar tenderness of the right elbow.,0.9883,The patient's musculoskeletal exam showed moderate lateral epicondylar tenderness of the right elbow.,1,,entailment
+36,The patient has pain with passive range of motion of the right elbow.,0.9969,The patient has moderate pain with passive range of motion of the right elbow.,1,,entailment
+37,The patient has mild pain with resisted extension of the right wrist.,1.0,The patient has mild pain with resisted extension of the right wrist.,1,,entailment
+38,The physical exam is otherwise normal.,0.9535,The patient's cardiovascular exam was otherwise normal.,1,,entailment
+39,The right elbow x-ray shows no acute fracture.,0.9866,The patient's right elbow x-ray showed no acute fracture or bony abnormality.,1,,entailment
+40,The right elbow x-ray shows no other bony abnormality.,0.9836,The patient's right elbow x-ray showed no acute fracture or bony abnormality.,1,,entailment
+41,The patient has acute lateral epicondylitis of the right elbow.,0.986,The doctor diagnosed the patient with acute lateral epicondylitis of the right elbow.,1,,entailment
+42,The patient's acute lateral epicondylitis is also known as tennis elbow.,0.962,The doctor diagnosed the patient with acute lateral epicondylitis of the right elbow.,1,,entailment
+43,The patient's acute lateral epicondylitis is likely due to overuse of the elbow joint.,0.9603,The doctor diagnosed the patient with acute lateral epicondylitis of the right elbow.,1,,entailment
+44,The patient has active acute lateral epicondylitis of the right elbow.,0.9775,The doctor diagnosed the patient with acute lateral epicondylitis of the right elbow.,1,,entailment
+45,The patient has active diabetes type two.,0.9596,The patient has a history of diabetes type two.,1,,entailment
+46,The patient has active mild intermittent asthma.,0.9724,The patient has a history of mild intermittent asthma.,1,,entailment
+47,The doctor prescribed Ultram.,1.0,The doctor prescribed Ultram.,1,,entailment
+48,The Ultram dose is 50mg.,0.9887,The Ultram dose is 50 milligrams.,1,,entailment
+49,Ultram is taken once per day.,1.0,Ultram is taken once per day.,1,,entailment
+50,Ultram is prescribed for pain management of the right elbow.,0.9921,Ultram is prescribed for elbow pain.,1,,entailment
+51,The patient is recommended to rest his right arm as much as possible.,0.9631,The doctor prescribed rest for the patient's right arm.,1,,entailment
+52,The patient is recommended to avoid repetitive stress on the right arm.,0.9887,The doctor advised the patient to avoid repetitive stress on the right arm.,1,,entailment
+53,The patient is recommended to ice the right elbow for 20 minutes.,0.9837,"The doctor advised the patient to ice the right elbow for 20 minutes, three times a day.",1,,entailment
+54,The patient is recommended to ice the right elbow at least 3 times a day.,0.982,"The doctor advised the patient to ice the right elbow for 20 minutes, three times a day.",1,,entailment
+55,The doctor prescribed a brace for the right forearm.,0.9971,The doctor prescribed a brace for the patient's right forearm.,1,,entailment
+56,The brace is prescribed to help with discomfort.,0.9318,The doctor prescribed a brace for the patient's right forearm.,0,fabrication,neutral
+57,The patient's metformin dose was increased to 1000mg.,0.9883,The patient's metformin dose was increased to 1000 milligrams twice a day.,1,,entailment
+58,The metformin dose is 1000mg.,0.9875,The metformin dose is 500 milligrams.,1,,entailment
+59,Metformin is taken twice a day.,1.0,Metformin is taken twice a day.,1,,entailment
+60,Metformin is prescribed for diabetes.,1.0,Metformin is prescribed for diabetes.,1,,entailment
+61,The doctor ordered a hemoglobin A1c level.,1.0,The doctor ordered a hemoglobin A1c level.,1,,entailment
+62,The doctor ordered a CBC.,0.9856,The doctor ordered a CBC blood test.,1,,entailment
+63,The doctor ordered a chem-12 blood test.,1.0,The doctor ordered a chem-12 blood test.,1,,entailment
+64,The hemoglobin A1c level is to monitor diabetes.,0.9562,The doctor ordered a hemoglobin A1c level.,1,,entailment
+65,The CBC is to monitor diabetes.,0.9262,The doctor ordered a CBC blood test.,0,fabrication,neutral
+66,The chem-12 blood test is to monitor diabetes.,0.9586,The doctor ordered a chem-12 blood test.,1,,entailment
+67,The doctor wrote a prescription for a refill of albuterol.,0.9779,The doctor refilled the patient's albuterol prescription.,1,,entailment
+68,The patient is scheduled for follow-up in 4 weeks.,0.9802,The doctor scheduled a follow-up appointment in 4 weeks.,1,,entailment
+69,The follow-up is to reevaluate the patient's elbow.,0.9234,The patient's right elbow x-ray was otherwise normal.,0,fabrication,neutral
+70,The follow-up is to adjust treatment as needed.,0.9296,The doctor scheduled a follow-up appointment in 4 weeks.,0,fabrication,neutral

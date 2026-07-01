@@ -1,30 +1,30 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: Tyler, a 56-year-old male, presents with a 4-5 week history of difficulty swallowing, feeling like something is stuck in his throat, which is painful and occurs when he tries to eat solid foods.",0.9766
-2,"He denies coughing, vomiting, or blood in his stool.",0.4678
-3,He reports no weight loss or changes in his weight.,0.5241
-4,"Past medical history: Diabetes and high blood pressure, currently on metformin 500mg twice a day for diabetes and norvasc for blood pressure.",0.3324
-5,His last hemoglobin A1c was 7.4.,0.8376
-6,"Review of systems: Denies nausea, vomiting, diarrhea, or any other side effects from medications.",0.668
-7,"He reports that his blood sugars are within target range, checked about 80% of the time.",0.9994
-8,"Current medications: Metformin 500mg twice a day for diabetes, norvasc for high blood pressure.",0.5117
+1,"HPI: Tyler, a 56-year-old male, presents with a 4-5 week history of difficulty swallowing, feeling like something is stuck in his throat, which is painful and occurs when he tries to eat solid foods.",0.0654
+2,"He denies coughing, vomiting, or blood in his stool.",0.0516
+3,He reports no weight loss or changes in his weight.,0.072
+4,"Past medical history: Diabetes and high blood pressure, currently on metformin 500mg twice a day for diabetes and norvasc for blood pressure.",0.035
+5,His last hemoglobin A1c was 7.4.,0.1983
+6,"Review of systems: Denies nausea, vomiting, diarrhea, or any other side effects from medications.",0.0447
+7,"He reports that his blood sugars are within target range, checked about 80% of the time.",0.4279
+8,"Current medications: Metformin 500mg twice a day for diabetes, norvasc for high blood pressure.",0.0938
 9,Objective:,0.5
 10,"Vital signs: BP 120/80 mmHg, not mentioned for other vital signs.",0.9998
-11,"Physical exam: The neck is fine, no swelling or masses felt in the neck or thyroid.",0.1994
-12,"The throat looks okay, no masses or swelling, no redness, no carotid bruit.",0.9984
-13,"The lung exam is clear, heart exam is normal, no murmurs.",0.7526
-14,"The belly exam shows epigastric tenderness, but no masses or significant swelling.",0.3475
-15,"The back exam is normal, and the extremity and neurological exams are fine.",0.6905
+11,"Physical exam: The neck is fine, no swelling or masses felt in the neck or thyroid.",0.1316
+12,"The throat looks okay, no masses or swelling, no redness, no carotid bruit.",0.452
+13,"The lung exam is clear, heart exam is normal, no murmurs.",0.5636
+14,"The belly exam shows epigastric tenderness, but no masses or significant swelling.",0.3415
+15,"The back exam is normal, and the extremity and neurological exams are fine.",0.653
 16,Test Results: [NOT MENTIONED],0.5
 17,Assessment / Problem List:,0.5
-18,"Assessment: The patient has difficulty swallowing due to a suspected narrowing of the esophagus, possibly a stricture.",0.1142
-19,Problem list: Difficulty swallowing (suspected stricture); diabetes (well-controlled); high blood pressure (well-controlled).,0.6692
+18,"Assessment: The patient has difficulty swallowing due to a suspected narrowing of the esophagus, possibly a stricture.",0.0014
+19,Problem list: Difficulty swallowing (suspected stricture); diabetes (well-controlled); high blood pressure (well-controlled).,0.5337
 20,Plan:,0.5
-21,I will refer Tyler to gastroenterology for a scope to evaluate the esophagus.,0.9986
-22,I will start him on prilosec 20mg once a day for reflux.,0.0034
-23,"I will also recommend that he chew his foods frequently, especially hard foods like steak or meat, to prevent getting them stuck.",0.6686
-24,I will order another hemoglobin A1c and some blood work to check kidney function.,0.1256
-25,I will also give him an eye referral to ophthalmology to check for diabetic retinopathy.,0.3408
-26,I will continue the metformin and norvasc as is.,0.6683
-27,I will have him return in a month to review the results of the blood tests and adjust his treatment as needed.,0.6701
-28,Follow-up: I will have Tyler return in a month to review the results of the blood tests and adjust his treatment as needed.,0.9949
+21,I will refer Tyler to gastroenterology for a scope to evaluate the esophagus.,0.1759
+22,I will start him on prilosec 20mg once a day for reflux.,0.0008
+23,"I will also recommend that he chew his foods frequently, especially hard foods like steak or meat, to prevent getting them stuck.",0.3597
+24,I will order another hemoglobin A1c and some blood work to check kidney function.,0.1116
+25,I will also give him an eye referral to ophthalmology to check for diabetic retinopathy.,0.3253
+26,I will continue the metformin and norvasc as is.,0.6666
+27,I will have him return in a month to review the results of the blood tests and adjust his treatment as needed.,0.4004
+28,Follow-up: I will have Tyler return in a month to review the results of the blood tests and adjust his treatment as needed.,0.0127

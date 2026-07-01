@@ -1,0 +1,52 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Jacqueline.,1.0,The patient's name is Jacqueline.,1,,entailment
+1,The patient presented with anxiety.,0.9103,The patient is anxious about their recent blood work.,1,,entailment
+2,The patient's anxiety is about recent blood work results.,0.9811,The patient is anxious about their recent blood work.,1,,entailment
+3,The patient's recent blood work results indicate hepatitis C.,0.9665,The patient's initial labs are consistent with hepatitis C.,1,,entailment
+4,The patient feels fine despite being diagnosed with hepatitis C.,0.9416,The patient was diagnosed with hepatitis C.,0,fabrication,neutral
+5,The patient has a history of IV drug use.,1.0,The patient has a history of IV drug use.,1,,entailment
+6,The patient used IV drugs 15 years ago.,0.9964,The patient used IV drugs years ago.,1,,entailment
+7,The patient has been clean from IV drug use since then.,0.9502,The patient used IV drugs years ago.,1,,entailment
+8,The patient has a history of heavy alcohol use.,0.9603,The patient used to drink a lot of alcohol.,1,,entailment
+9,The patient has a history of smoking.,0.9518,The patient smokes cigarettes.,1,,entailment
+10,The patient has a family history of hypertension.,0.968,Hypertension runs in the patient's family.,1,,entailment
+11,The patient has a family history of diabetes.,0.9591,Diabetes runs in the patient's family.,1,,entailment
+12,The patient has a family history of depression.,0.9591,Depression runs in the patient's family.,1,,entailment
+13,The patient reported feeling tired at the end of the day.,0.9905,The patient feels tired at the end of the day.,1,,entailment
+14,The patient gets enough sleep.,0.9469,The patient works and gets enough sleep but still feels tired.,1,,entailment
+15,The patient appeared in no distress.,0.9932,The patient appears in no distress.,1,,entailment
+16,The patient has no jaundice on skin exam.,0.9524,The patient has no jaundice.,1,,entailment
+17,The patient's heart exam revealed a regular rate and rhythm.,0.9772,The patient has a regular heart rate and rhythm.,1,,entailment
+18,The patient has a 2/6 systolic murmur.,0.9836,The patient has a 2 out of 6 systolic murmur.,1,,entailment
+19,The patient's systolic murmur has not changed from last year.,0.9863,The patient's heart murmur has not changed from last year.,1,,entailment
+20,The patient's lungs were clear.,0.9952,The patient's lungs are clear.,1,,entailment
+21,The patient has no wheezes.,0.9507,"The patient has no wheezes, rales, or rhonchi.",1,,entailment
+22,The patient has no rales.,0.9319,"The patient has no wheezes, rales, or rhonchi.",1,,entailment
+23,The patient has no rhonchi.,0.9512,"The patient has no wheezes, rales, or rhonchi.",1,,entailment
+24,The patient's abdomen was soft.,0.9943,The patient's abdomen is soft.,1,,entailment
+25,The patient has no hepatosplenomegaly.,1.0,The patient has no hepatosplenomegaly.,1,,entailment
+26,The patient's bowel sounds were present.,0.9937,The patient's bowel sounds are present.,1,,entailment
+27,The patient's musculoskeletal exam was normal.,0.9436,The doctor checked the patient's musculoskeletal system.,0,fabrication,neutral
+28,The patient has no gait disturbance.,1.0,The patient has no gait disturbance.,1,,entailment
+29,The patient has no edema.,1.0,The patient has no edema.,1,,entailment
+30,The patient's recent blood work showed a positive HCV antibody test.,0.9792,The patient's HCV antibody test was positive.,1,,entailment
+31,The patient has an elevated AST of 39.,0.9824,The patient's liver panel showed an elevated AST at 39.,1,,entailment
+32,The patient's albumin level is normal.,0.9558,"The patient's ALT, albumin, and total bilirubin are within normal limits.",1,,entailment
+33,The patient's total bilirubin level is normal.,0.9614,"The patient's ALT, albumin, and total bilirubin are within normal limits.",1,,entailment
+34,The patient has been diagnosed with hepatitis C.,0.9949,The patient was diagnosed with hepatitis C.,1,,entailment
+35,Hepatitis C is a viral infection that affects the liver.,0.9828,The hepatitis C is a viral infection.,1,,entailment
+36,The patient's initial labs are consistent with the diagnosis of hepatitis C.,0.9968,The patient's initial labs are consistent with hepatitis C.,1,,entailment
+37,The patient has hepatitis C.,1.0,The patient has hepatitis C.,1,,entailment
+38,The patient's status of hepatitis C is confirmed.,0.9557,The patient was diagnosed with hepatitis C.,1,,entailment
+39,The patient has a family history of hypertension.,0.968,Hypertension runs in the patient's family.,1,,entailment
+40,The patient has a family history of diabetes.,0.9591,Diabetes runs in the patient's family.,1,,entailment
+41,The patient has a family history of depression.,0.9591,Depression runs in the patient's family.,1,,entailment
+42,The doctor will confirm the diagnosis with additional blood work.,0.9925,The doctor wants to confirm the diagnosis with additional blood work.,1,,entailment
+43,The additional blood work will include checking the HCV RNA.,0.9874,The additional blood work includes checking the HCV genotype.,1,,entailment
+44,The additional blood work will include checking the HCV genotype.,0.998,The additional blood work includes checking the HCV genotype.,1,,entailment
+45,The doctor will determine the severity of liver disease by checking for fibrosis of the liver with an ultrasound.,0.9716,The doctor will order a special ultrasound to check for fibrosis of the liver.,1,,entailment
+46,The doctor will schedule an ultrasound.,0.937,The doctor ordered a special ultrasound.,1,,entailment
+47,The doctor will schedule follow-up appointments for the patient's family members for screening.,0.9698,The patient's family doctor will perform the screening.,1,,entailment
+48,The doctor will see the patient in about three weeks.,1.0,The doctor will see the patient in about three weeks.,1,,entailment
+49,The doctor will review the results of the additional blood work and ultrasound in about three weeks.,0.9454,The doctor will see the patient in three weeks.,0,fabrication,neutral
+50,The doctor will determine the next steps in treatment in about three weeks.,0.958,The doctor will see the patient in three weeks.,1,,entailment

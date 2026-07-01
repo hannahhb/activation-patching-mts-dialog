@@ -1,23 +1,23 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, a 38-year-old male, presents with a 3-month history of intermittent cough, initially noticed during physical activity such as loading horses, which has persisted despite a recent cold.",0.7843
-2,"The patient has a history of bronchitis diagnosed by their primary care physician, but a chest X-ray and subsequent CT scan revealed a solitary 2-centimeter nodule in the right upper lobe, leading to a referral to our office.",0.5907
-3,"The patient is a non-smoker, having quit 7 years ago, and has a history of rheumatoid arthritis, for which they take methotrexate 7.5 mg weekly.",0.3873
-4,"Past medical history: The patient has a history of rheumatoid arthritis, for which they take methotrexate 7.5 mg weekly, and a history of smoking, having quit 7 years ago.",0.1429
-5,"Review of systems: The patient denies pain, shortness of breath, or any other symptoms.",0.3605
-6,Current medications: Methotrexate 7.5 mg weekly.,0.4696
+1,"HPI: The patient, a 38-year-old male, presents with a 3-month history of intermittent cough, initially noticed during physical activity such as loading horses, which has persisted despite a recent cold.",0.4802
+2,"The patient has a history of bronchitis diagnosed by their primary care physician, but a chest X-ray and subsequent CT scan revealed a solitary 2-centimeter nodule in the right upper lobe, leading to a referral to our office.",0.4873
+3,"The patient is a non-smoker, having quit 7 years ago, and has a history of rheumatoid arthritis, for which they take methotrexate 7.5 mg weekly.",0.278
+4,"Past medical history: The patient has a history of rheumatoid arthritis, for which they take methotrexate 7.5 mg weekly, and a history of smoking, having quit 7 years ago.",0.1163
+5,"Review of systems: The patient denies pain, shortness of breath, or any other symptoms.",0.0787
+6,Current medications: Methotrexate 7.5 mg weekly.,0.3601
 7,Objective:,0.5
-8,"Vital signs: The patient's blood pressure is 124/76, heart rate is 70, respiration rate is 16, oxygen saturation is 98% on room air, and the patient is afebrile.",0.5515
-9,"Physical exam: The lungs are clear and equal bilaterally, with no clicks, rubs, or murmurs on auscultation.",0.1008
-10,"The patient has a little bit of swelling on the knuckles of both hands, which is consistent with rheumatoid arthritis, but pulses are intact and capillary refill is brisk.",0.5604
-11,"Test Results: The patient had a chest CT scan showing a solitary 2-centimeter nodule in the right upper lobe, described as smooth in appearance, with no evidence of emphysematous disease.",0.1205
+8,"Vital signs: The patient's blood pressure is 124/76, heart rate is 70, respiration rate is 16, oxygen saturation is 98% on room air, and the patient is afebrile.",0.4104
+9,"Physical exam: The lungs are clear and equal bilaterally, with no clicks, rubs, or murmurs on auscultation.",0.0152
+10,"The patient has a little bit of swelling on the knuckles of both hands, which is consistent with rheumatoid arthritis, but pulses are intact and capillary refill is brisk.",0.0935
+11,"Test Results: The patient had a chest CT scan showing a solitary 2-centimeter nodule in the right upper lobe, described as smooth in appearance, with no evidence of emphysematous disease.",0.0063
 12,Assessment / Problem List:,0.5
-13,"Assessment: The patient has an incidentally found right upper lobe lung nodule, for which further evaluation is recommended.",0.2246
-14,Problem list: Lung nodule; Rheumatoid arthritis; [status: active].,0.9907
+13,"Assessment: The patient has an incidentally found right upper lobe lung nodule, for which further evaluation is recommended.",0.0488
+14,Problem list: Lung nodule; Rheumatoid arthritis; [status: active].,0.6943
 15,Plan:,0.5
-16,I will order a pulmonary function test (PFT) to establish a baseline for lung function.,0.1535
-17,I will also schedule a PET CT to determine if the nodule is metabolically active.,0.1264
-18,"The patient will undergo a video-assisted thoracoscopy to remove the nodule, which will involve three small incisions on the side of the right chest, general anesthesia, and a hospital stay of one night.",0.5523
-19,The patient will have a chest tube in place until the following day.,0.3344
-20,I will continue to follow up with their rheumatologist and continue their medication therapy as previously outlined.,0.6375
-21,Follow-up: The patient will be seen again in a few minutes to sign paperwork and begin the treatment process.,0.5368
+16,I will order a pulmonary function test (PFT) to establish a baseline for lung function.,0.0037
+17,I will also schedule a PET CT to determine if the nodule is metabolically active.,0.0249
+18,"The patient will undergo a video-assisted thoracoscopy to remove the nodule, which will involve three small incisions on the side of the right chest, general anesthesia, and a hospital stay of one night.",0.0698
+19,The patient will have a chest tube in place until the following day.,0.3098
+20,I will continue to follow up with their rheumatologist and continue their medication therapy as previously outlined.,0.6056
+21,Follow-up: The patient will be seen again in a few minutes to sign paperwork and begin the treatment process.,0.2198

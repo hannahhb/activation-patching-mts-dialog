@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 38-year-old male, presents with a 2-week history of right shoulder pain, initially attributed to a recent work project in the backyard.",Fabrication,a 38-year-old male
+1,"He reports soreness in the right shoulder, particularly on the outside, which persists despite Advil and icing.",Faithful,
+2,"He has a history of similar issues with the same shoulder, dating back to playing baseball in his youth.",Faithful,
+3,The pain is exacerbated by movement and is most pronounced on the outside of the shoulder.,Faithful,
+4,He denies any numbness in the arm or hands.,Faithful,
+5,"He has been experiencing some pain at night, particularly when sleeping on the affected side.",Faithful,
+6,"Past medical history: The patient has a history of playing baseball, which resulted in some previous issues with the right shoulder.",Faithful,
+7,Review of systems: The patient denies any numbness in the arm or hands.,Faithful,
+8,Current medications: Advil as needed for pain.,Faithful,
+9,"Vital signs: The patient's temperature is 97.8°F, heart rate is 62 beats per minute, respirations are 16 breaths per minute, blood pressure is 116/84 mmHg, and oxygen saturation is 99%.",Faithful,
+10,"Physical exam: The patient has limited active and passive range of motion in the right shoulder, with tenderness at the greater tuberosity of the humerus.",Faithful,
+11,There is no tenderness at the sternoclavicular or acromioclavicular joints.,Faithful,
+12,The patient has a good hand grip and intact sensation to touch in the right arm.,Faithful,
+13,Test Results: The patient's shoulder X-ray shows no fracture.,Faithful,
+14,Assessment: The patient's right shoulder pain is most likely due to rotator cuff tendinopathy.,Faithful,
+15,Problem list: Rotator cuff tendinopathy; status: confirmed.,Fabrication,status: confirmed
+16,I prescribed Tylenol for pain management.,Causality,I prescribed Tylenol
+17,I ordered an MRI to further evaluate the shoulder.,Faithful,
+18,I referred the patient to physical therapy for approximately 6-8 weeks.,Faithful,
+19,"If symptoms do not improve, we will consider a steroid injection for the shoulder.",Faithful,
+20,Follow-up: The patient will follow up with me in 2 weeks to assess the effectiveness of the treatment plan.,Fabrication,in 2 weeks

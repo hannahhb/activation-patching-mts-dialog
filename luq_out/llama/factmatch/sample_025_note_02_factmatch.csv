@@ -1,0 +1,60 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 4-year-old mother of twins.,0.9412,The patient has twins.,0,fabrication,neutral
+1,The patient injured her right knee while skiing in Vermont.,0.9679,The injury occurred while skiing in Vermont.,1,,entailment
+2,The patient's right knee was injured last weekend.,0.9474,The patient injured her right knee.,0,fabrication,neutral
+3,The patient caught her ski while coming off the lift and fell.,1.0,The patient caught her ski while coming off the lift and fell.,1,,entailment
+4,The patient's knee popped during the injury.,0.9745,The patient's knee popped during the fall.,1,,entailment
+5,The patient has persistent pain in her right knee.,0.9554,The patient's right knee is painful to palpation.,1,,entailment
+6,The patient was unable to bear weight after the injury.,1.0,The patient was unable to bear weight after the injury.,1,,entailment
+7,The patient had to be taken down by the ski patrol.,0.9668,The patient was taken down the hill by the ski patrol.,1,,entailment
+8,The patient reports pain on the outside of the right knee.,0.9643,The patient's knee hurts on the outside.,1,,entailment
+9,The patient feels like her right knee won't hold her weight.,0.981,The patient's knee feels like it won't hold her weight.,1,,entailment
+10,The patient has decreased flexion of the right knee.,0.9906,The patient's right knee has decreased flexion and extension.,1,,entailment
+11,The patient has decreased extension of the right knee.,0.9909,The patient's right knee has decreased flexion and extension.,1,,entailment
+12,The patient was initially able to bend her right knee immediately after the injury.,0.9912,The patient was able to bend her knee immediately after the injury.,1,,entailment
+13,The patient is no longer able to bend her right knee.,0.9797,The patient is not able to bend her knee now.,1,,entailment
+14,The patient experiences pain with straightening the right knee.,0.9688,The patient experiences pain when trying to straighten her knee all the way.,1,,entailment
+15,The patient denies numbness in her toes.,0.9678,The patient does not have numbing or tingling in her toes.,1,,entailment
+16,The patient denies tingling in her toes.,0.9626,The patient does not have numbing or tingling in her toes.,1,,entailment
+17,The patient is able to feel her toes.,0.9912,The patient can feel her toes.,1,,entailment
+18,The patient is generally healthy.,1.0,The patient is generally healthy.,1,,entailment
+19,The patient has no high blood pressure.,0.9931,The patient does not have high blood pressure.,1,,entailment
+20,The patient has no diabetes.,0.9908,The patient does not have diabetes.,1,,entailment
+21,The patient is taking ibuprofen for pain.,1.0,The patient is taking ibuprofen for pain.,1,,entailment
+22,The ibuprofen dose is not specified in the subjective section.,0.9137,The doctor prescribed ibuprofen.,0,fabrication,neutral
+23,Ibuprofen is somewhat effective for the patient's pain.,0.9799,Ibuprofen is helping the patient somewhat.,1,,entailment
+24,The patient has no significant past medical history.,0.9132,The patient does not have high blood pressure.,0,fabrication,neutral
+25,The patient denies any additional symptoms in other organs.,0.8997,The patient is generally healthy.,0,fabrication,neutral
+26,The doctor prescribed ibuprofen.,1.0,The doctor prescribed ibuprofen.,1,,entailment
+27,The ibuprofen dose is 600-800 mg.,0.9744,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+28,Ibuprofen is taken every 8 hours.,0.9802,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+29,Ibuprofen is taken as needed.,0.9566,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+30,Ibuprofen is prescribed for pain.,0.9785,The patient is taking ibuprofen for pain.,1,,entailment
+31,The patient has edema over the right knee.,0.9924,The patient's right knee has edema.,1,,entailment
+32,The patient has an effusion over the right knee.,0.9917,The patient's right knee has an effusion.,1,,entailment
+33,The patient has pain to palpation of the right lateral knee.,0.9751,The patient's right knee is painful to palpation.,1,,entailment
+34,The patient has decreased flexion of the right knee.,0.9906,The patient's right knee has decreased flexion and extension.,1,,entailment
+35,The patient has decreased extension of the right knee.,0.9909,The patient's right knee has decreased flexion and extension.,1,,entailment
+36,The patient has a positive Lachman sign.,0.9766,The patient's right knee has a positive Lachman sign.,1,,entailment
+37,The dorsalis pedis pulse is palpable.,0.9514,The patient's right knee has a palpable dorsalis pedis and posterior tibial pulse.,1,,entailment
+38,The posterior tibial pulse is palpable.,0.9532,The patient's right knee has a palpable dorsalis pedis and posterior tibial pulse.,1,,entailment
+39,There is no leg edema in the ankle.,0.9828,The patient does not have leg edema in the ankle.,1,,entailment
+40,The patient likely has a ruptured anterior cruciate ligament (ACL) in her right knee.,0.9578,The doctor suspects the patient may have ruptured her ACL.,1,,entailment
+41,The ACL is a major ligament that helps connect and stabilize the knee joint.,0.8974,The doctor prescribed a brace for the patient's knee.,0,fabrication,neutral
+42,The patient has an ACL injury.,0.9469,The doctor suspects the patient may have ruptured her ACL.,1,,entailment
+43,The patient has right knee pain.,0.9642,The patient's right knee has edema.,1,,entailment
+44,The patient has knee effusion.,0.9744,The patient's right knee has an effusion.,1,,entailment
+45,The patient has decreased flexion and extension of the right knee.,0.9973,The patient's right knee has decreased flexion and extension.,1,,entailment
+46,The doctor ordered a knee MRI.,1.0,The doctor ordered a knee MRI.,1,,entailment
+47,The knee MRI is to confirm the diagnosis.,0.9574,The doctor ordered a knee MRI.,1,,entailment
+48,The knee MRI is to rule out any other structures that may have been damaged in the accident.,0.9367,The doctor ordered a knee MRI.,0,fabrication,neutral
+49,The patient is to continue taking ibuprofen.,0.9692,The patient is taking ibuprofen for pain.,1,,entailment
+50,The ibuprofen dose is 600-800 mg.,0.9744,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+51,Ibuprofen is taken every 8 hours.,0.9802,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+52,Ibuprofen is taken as needed.,0.9566,Ibuprofen is to be taken 600 to 800 milligrams every 8 hours as needed.,1,,entailment
+53,Ibuprofen is prescribed for pain.,0.9785,The patient is taking ibuprofen for pain.,1,,entailment
+54,The patient is to wear a knee brace.,0.9666,The doctor prescribed a brace for the patient's knee.,1,,entailment
+55,The knee brace is to provide additional support.,0.9345,The doctor prescribed a brace for the patient's knee.,0,fabrication,neutral
+56,The doctor will see the patient again soon.,1.0,The doctor will see the patient again soon.,1,,entailment
+57,The doctor will discuss the MRI results with the patient.,0.9204,The doctor ordered a knee MRI.,0,fabrication,neutral
+58,The doctor will plan further treatment with the patient.,0.922,The doctor will see the patient again soon.,0,fabrication,neutral

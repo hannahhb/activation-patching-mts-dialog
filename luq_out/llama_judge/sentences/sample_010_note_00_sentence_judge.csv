@@ -1,0 +1,22 @@
+sentence_idx,sentence,label
+0,"HPI: The patient presents with right shoulder pain that has been ongoing for a few weeks, initially appearing after working on various projects in his backyard.",Faithful
+1,The pain is located on the outside of the shoulder and is tender to the touch when raising the arm.,Faithful
+2,He denies any numbness in the arm or hands.,Faithful
+3,The pain is worse with movement and is alleviated by rest and over-the-counter medication.,Faithful
+4,He has a history of similar pain in the same shoulder from a past injury playing baseball.,Faithful
+5,"Past medical history: The patient has a history of right shoulder pain from a past injury, which has always been a bit of an issue.",Faithful
+6,Review of systems: The patient denies any additional symptoms in other organs.,Fabrication
+7,Current medications: The patient has been taking Advil for pain relief and icing the affected area.,Faithful
+8,"Vital signs: The patient's temperature is 97.8°F, heart rate is 62, respirations are 16, blood pressure is 116/84, and oxygen saturation is 99%.",Faithful
+9,"Physical exam: The patient has limited active and passive range of motion in the right shoulder, with tenderness at the greater tuberosity of the humerus.",Faithful
+10,The patient has a good hand grip and intact sensation to touch in the right arm.,Faithful
+11,Test Results: The patient's shoulder X-ray shows no fracture.,Faithful
+12,"Assessment: The patient's symptoms are most likely due to rotator cuff tendinopathy, a condition in which the tendons of the muscles that help make the shoulder muscles are injured.",Faithful
+13,Problem list: Rotator cuff tendinopathy; Sore feet.,Faithful
+14,I plan to refer the patient to physical therapy for approximately six to eight weeks to address the rotator cuff tendinopathy.,Faithful
+15,I will also order an MRI to rule out any other conditions.,Faithful
+16,"During this time, the patient should continue taking Tylenol and icing the affected area.",Causality
+17,"If symptoms do not improve, we will consider a steroid injection into the shoulder for relief.",Faithful
+18,I also recommend that the patient tries soaking his feet in Epsom salts to alleviate soreness.,Faithful
+19,Follow-up: The patient will follow up with physical therapy and return for a follow-up appointment to reassess symptoms.,Fabrication
+20,Instructions:,Fabrication

@@ -1,0 +1,78 @@
+sentence_idx,atom_idx,atom,supported,uncertainty
+1,0,The patient is a male.,1,0
+1,1,The patient is 50 years old.,0,1
+1,2,The patient presents with low back pain.,1,0
+1,3,The patient has a tingling sensation in his right leg.,1,0
+1,4,The history of low back pain and tingling sensation is 2 hours long.,1,0
+2,0,The pain started after raking leaves in his yard yesterday.,1,0
+2,1,The pain started after an activity in his yard.,1,0
+2,2,The activity that triggered the pain was raking leaves.,1,0
+2,3,The event that triggered the pain occurred yesterday.,1,0
+2,4,The pain has not improved with rest.,0,1
+2,5,The pain has not improved with ice.,1,0
+2,6,The pain has not improved with over-the-counter pain medication.,1,0
+2,7,The pain has not improved despite attempts at treatment.,0,1
+3,0,The patient reports that the pain is worse when standing up.,0,1
+3,1,The patient reports that the pain is better when sitting.,1,0
+3,2,The patient reports that the pain is better when lying down.,0,1
+4,0,The patient has a partner.,1,0
+4,1,The partner made a report.,1,0
+4,2,The report is about the patient.,1,0
+4,3,The patient experiences pain.,1,0
+4,4,The pain occurs when the patient stands up.,1,0
+5,0,The patient has had a past medical history.,0,1
+5,1,The patient had an episode of back pain.,1,0
+5,2,The episode of back pain occurred 3 years ago.,1,0
+5,3,The episode of back pain was similar to the current episode.,0,1
+5,4,The episode of back pain resolved on its own.,0,1
+6,0,The patient underwent a review of systems.,0,1
+6,1,The review of systems was reported.,0,1
+6,2,The patient reported a tingling sensation.,1,0
+6,3,The tingling sensation was located in the patient's right leg.,1,0
+7,0,The sentence is about current medications.,0,1
+7,1,There are no current medications mentioned.,0,1
+9,0,The sentence is about vital signs.,0,1
+9,1,The vital signs are not mentioned.,1,0
+10,0,The patient has a physical exam.,1,0
+10,1,The patient has some pain.,1,0
+10,2,The pain is experienced on flexion.,1,0
+10,3,The pain is experienced on palpation.,1,0
+10,4,The pain is located around the L5 region.,1,0
+11,0,Dorsiflexion is normal.,1,0
+11,1,Pulses are equal in all extremities.,1,0
+12,0,There are test results available.,1,0
+12,1,The test results are for an X-ray.,1,0
+12,2,The X-ray is of the low back.,1,0
+12,3,The X-ray results show normal findings.,1,0
+14,0,The patient has undergone an assessment.,1,0
+14,1,The assessment is related to the patient's low back.,1,0
+14,2,The patient's low back is likely to be strained.,1,0
+14,3,The strain is probable rather than confirmed.,1,0
+15,0,There is a problem list.,0,1
+15,1,The problem list includes Low back strain.,1,0
+15,2,The problem list includes suspected nerve compression.,0,1
+15,3,There is an unknown problem on the list.,0,1
+17,0,I prescribed meloxicam.,1,0
+17,1,The dosage of meloxicam prescribed was 7.5 mg.,0,1
+17,2,Meloxicam was prescribed to be taken orally.,1,0
+17,3,Meloxicam was prescribed to be taken twice a day.,0,1
+17,4,The purpose of prescribing meloxicam was to treat pain.,1,0
+17,5,The purpose of prescribing meloxicam was to treat inflammation.,1,0
+18,0,I prescribed physical therapy to the patient.,1,0
+18,1,The physical therapy was intended to help with stretches.,1,0
+18,2,The physical therapy was intended to help with exercises.,1,0
+18,3,The goal of the physical therapy was to improve the patient's mobility.,1,0
+18,4,The goal of the physical therapy was to reduce the patient's pain.,0,1
+19,0,I instructed the patient to rest.,1,0
+19,1,I instructed the patient to avoid strenuous activities.,1,0
+19,2,The instruction was to follow this advice for the next two weeks.,1,0
+20,0,I will re-evaluate the patient in two weeks.,1,0
+20,1,The patient will be re-evaluated to assess improvement of symptoms.,1,0
+20,2,The symptoms are currently being monitored for improvement.,1,0
+20,3,I will consider ordering an MRI.,1,0
+20,4,The decision to order an MRI depends on the improvement of symptoms.,1,0
+21,0,The patient was instructed to follow up.,1,0
+21,1,The follow-up is to occur in two weeks.,1,0
+21,2,The purpose of the follow-up is to re-evaluate the patient's symptoms.,0,1
+21,3,Further imaging may be considered during the follow-up if necessary.,1,0
+21,4,The instruction to follow up was given by me.,1,0

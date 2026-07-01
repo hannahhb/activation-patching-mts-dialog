@@ -1,0 +1,46 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 65-year-old male.,0.9077,The patient has diabetes.,0,fabrication,neutral
+1,The patient has a nonhealing foot ulcer.,1.0,The patient has a nonhealing foot ulcer.,1,,entailment
+2,The foot ulcer is located on the dorsal aspect of the lateral right foot.,0.9494,There is a 1 by 2 inch circular wound on the dorsal aspect of the lateral right foot.,0,fabrication,neutral
+3,The foot ulcer has been present for approximately two months.,0.9912,The foot ulcer has lasted about two months.,1,,entailment
+4,The ulcer is red.,0.9609,The patient's foot ulcer looks red.,1,,entailment
+5,The ulcer is draining.,0.9716,The patient's foot ulcer is draining.,1,,entailment
+6,The ulcer has become more painful.,0.9135,The patient's foot ulcer has recently become red.,0,fabrication,neutral
+7,The patient experiences throbbing sensations in the foot.,0.9578,The patient's foot sometimes throbs.,1,,entailment
+8,The patient started having the ulcer after walking barefoot on the beach.,0.9755,The patient thinks they may have gotten the foot ulcer from walking barefoot on the beach.,1,,entailment
+9,The patient's primary care physician prescribed antibiotics.,0.9305,The PCP prescribed medication for the patient.,0,fabrication,neutral
+10,The patient has not picked up the antibiotics from the pharmacy.,0.966,The patient did not pick up the prescribed medication from the pharmacy.,1,,entailment
+11,The patient has diabetes.,1.0,The patient has diabetes.,1,,entailment
+12,The patient's diabetes is not well-controlled.,1.0,The patient's diabetes is not well-controlled.,1,,entailment
+13,The patient's A1c is approximately 10%.,0.9469,The patient's last A1c level was around 10.,1,,entailment
+14,The patient reports occasional throbbing pain in the foot.,0.9644,The patient's foot sometimes throbs.,1,,entailment
+15,The patient's vital signs are within normal limits.,0.987,The patient's vital signs are normal.,1,,entailment
+16,A 1x2 inch circular wound is present on the dorsal aspect of the lateral right foot.,0.9962,There is a 1 by 2 inch circular wound on the dorsal aspect of the lateral right foot.,1,,entailment
+17,The wound is proximal to the fifth MTP joint.,1.0,The wound is proximal to the fifth MTP joint.,1,,entailment
+18,The wound is red.,0.9729,There is redness around the wound.,1,,entailment
+19,The wound is draining.,0.9581,The patient's foot ulcer is draining.,1,,entailment
+20,The wound has edema around it.,0.9931,There is edema around the wound.,1,,entailment
+21,There is fluid present in the wound.,0.9697,There is fluid coming out of the wound.,1,,entailment
+22,There is no necrosis in the wound.,1.0,There is no necrosis in the wound.,1,,entailment
+23,There is no odor in the wound.,0.9967,There is no odor from the wound.,1,,entailment
+24,There is no bony exposure in the wound.,1.0,There is no bony exposure in the wound.,1,,entailment
+25,An x-ray of the right foot shows no evidence of osteomyelitis.,0.9795,The X-ray showed no evidence of osteomyelitis.,1,,entailment
+26,The patient has a diabetic foot ulcer.,0.9593,The patient is diabetic.,1,,entailment
+27,The patient has a suspected infection.,0.9253,The patient has an infection in the wound.,0,fabrication,neutral
+28,The suspected infection is likely caused by poor blood supply.,0.9055,The patient has an infection in the wound.,0,fabrication,neutral
+29,The poor blood supply is due to uncontrolled diabetes.,0.9132,The patient's diabetes is not well-controlled.,0,fabrication,neutral
+30,The doctor prescribed clindamycin.,1.0,The doctor prescribed clindamycin.,1,,entailment
+31,The clindamycin dose is 400mg.,0.9835,Clindamycin is 400 milligrams.,1,,entailment
+32,Clindamycin is taken twice daily.,0.9952,Clindamycin is taken twice a day.,1,,entailment
+33,Clindamycin is prescribed for 7 days.,0.9925,Clindamycin is taken for 7 days.,1,,entailment
+34,Clindamycin is prescribed to treat the suspected infection.,0.9885,Clindamycin is prescribed for the infection.,1,,entailment
+35,The doctor will perform a debridement.,0.9699,The doctor will perform a debridement to remove dead tissue.,1,,entailment
+36,The debridement is to remove dead tissue.,0.974,The doctor will perform a debridement to remove dead tissue.,1,,entailment
+37,The doctor will order an ABI.,0.9515,The doctor wants to order an ABI (ankle brachial index) to determine blood supply in the foot.,1,,entailment
+38,The ABI is to assess blood supply to the foot.,0.9741,The doctor wants to order an ABI (ankle brachial index) to determine blood supply in the foot.,1,,entailment
+39,The doctor will provide a surgical shoe.,0.979,The doctor will get the patient a surgical shoe.,1,,entailment
+40,The surgical shoe is to reduce pressure on the foot.,0.9314,The doctor will get the patient a surgical shoe.,0,fabrication,neutral
+41,The surgical shoe is to promote healing.,0.9282,The doctor will get the patient a surgical shoe.,0,fabrication,neutral
+42,The patient will be seen back in two weeks.,0.9884,The doctor will see the patient back in two weeks.,1,,entailment
+43,The patient will have a follow-up examination in two weeks.,0.9522,The doctor will see the patient back in two weeks.,1,,entailment
+44,The patient may have additional debridement in two weeks.,0.9841,The doctor may perform another debridement in two weeks.,1,,entailment

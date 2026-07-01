@@ -1,0 +1,59 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient presents with a history of headaches.,0.9653,The patient has been experiencing headaches.,1,,entailment
+1,The patient's headaches started in her teenage years.,0.9894,The headaches started when the patient was a teenager.,1,,entailment
+2,The patient's headaches were initially associated with menstrual periods.,0.9796,The headaches are related to the patient's menstrual periods.,1,,entailment
+3,The patient's headaches have become more frequent over time.,0.978,The patient's headaches have increased in frequency.,1,,entailment
+4,The patient's headaches have become more severe over time.,0.9835,The patient's headaches have increased in severity.,1,,entailment
+5,The patient reports a pulsing sensation behind her right eye.,0.9368,The headaches are described as a pulsing sensation.,0,fabrication,neutral
+6,The pulsing sensation behind the patient's right eye is particularly noticeable after exercise.,0.9159,The headaches are described as a pulsing sensation.,0,fabrication,neutral
+7,The patient experiences ringing in her ears.,0.978,The patient has been having a ringing in their ears.,1,,entailment
+8,The patient experiences blurred vision.,0.9918,The patient is experiencing blurred vision.,1,,entailment
+9,The blurred vision is particularly noticeable on one side.,0.9762,The blurred vision is on the side of the patient's vision.,1,,entailment
+10,The patient denies numbness in her hands.,0.9594,The patient does not experience numbness or tingling in their hands or feet.,1,,entailment
+11,The patient denies numbness in her feet.,0.9527,The patient does not experience numbness or tingling in their hands or feet.,1,,entailment
+12,The patient denies numbness in her face.,0.9573,The patient does not experience numbness or tingling in their face.,1,,entailment
+13,The patient denies tingling in her hands.,0.9495,The patient does not experience numbness or tingling in their hands or feet.,1,,entailment
+14,The patient denies tingling in her feet.,0.9473,The patient does not experience numbness or tingling in their hands or feet.,1,,entailment
+15,The patient denies tingling in her face.,0.9527,The patient does not experience numbness or tingling in their face.,1,,entailment
+16,The patient is a runner.,0.9416,The patient likes to run.,1,,entailment
+17,The patient uses Asics shoes.,0.9812,The patient is currently using Asics shoes.,1,,entailment
+18,The patient has a history of headaches.,0.972,The patient has been experiencing headaches.,1,,entailment
+19,The patient has no other relevant medical conditions.,0.9159,The patient is a doctor.,0,fabrication,neutral
+20,The patient has no allergies.,0.8852,The patient is female.,0,fabrication,neutral
+21,The patient reports headaches.,0.9732,The patient has been experiencing headaches.,1,,entailment
+22,The patient reports ringing in her ears.,0.9794,The patient has been having a ringing in their ears.,1,,entailment
+23,The patient reports blurred vision.,0.9831,The patient is experiencing blurred vision.,1,,entailment
+24,The patient's blood pressure is normal.,1.0,The patient's blood pressure is normal.,1,,entailment
+25,The patient's heart exam is normal.,0.97,The patient's heart exam shows a normal sinus rhythm.,1,,entailment
+26,The patient's heart exam shows no murmurs.,0.972,"The patient's heart exam shows no murmurs, rubs, or gallops.",1,,entailment
+27,The patient's heart exam shows no rubs.,0.9702,"The patient's heart exam shows no murmurs, rubs, or gallops.",1,,entailment
+28,The patient's heart exam shows no gallops.,0.9674,"The patient's heart exam shows no murmurs, rubs, or gallops.",1,,entailment
+29,The funduscopic exam shows papilledema.,0.9516,The patient has papilledema.,1,,entailment
+30,The papilledema indicates swelling behind the eye.,0.9946,Papilledema is swelling behind the eye.,1,,entailment
+31,The patient's neurological exam is normal.,0.9332,The patient's cranial reflex is normal.,1,,entailment
+32,The patient's cranial nerves are intact.,1.0,The patient's cranial nerves are intact.,1,,entailment
+33,The patient's cranial nerves one through twelve are normal.,0.9537,The patient's cranial nerves are intact.,1,,entailment
+34,The patient's cranial reflexes are normal.,0.9913,The patient's cranial reflex is normal.,1,,entailment
+35,The patient's musculoskeletal exam is normal.,0.9211,The patient's heart exam shows a normal sinus rhythm.,0,fabrication,contradiction
+36,The patient's gait is normal.,1.0,The patient's gait is normal.,1,,entailment
+37,The patient's symptoms are concerning for idiopathic intracranial hypertension.,1.0,The patient's symptoms are concerning for idiopathic intracranial hypertension.,1,,entailment
+38,Idiopathic intracranial hypertension is a condition with increased pressure in the brain.,0.9973,Idiopathic intracranial hypertension is a condition with increased pressure in the brain without a known cause.,1,,entailment
+39,Idiopathic intracranial hypertension has no known cause.,0.9739,Idiopathic intracranial hypertension is a condition with increased pressure in the brain without a known cause.,1,,entailment
+40,Idiopathic intracranial hypertension is characterized by headaches.,0.9688,Idiopathic intracranial hypertension is a condition with increased pressure in the brain without a known cause.,1,,entailment
+41,Idiopathic intracranial hypertension is characterized by worsening symptoms with activity.,0.964,The patient's symptoms are consistent with idiopathic intracranial hypertension.,1,,entailment
+42,Idiopathic intracranial hypertension is characterized by ringing in the ears.,0.9523,Idiopathic intracranial hypertension is a condition with increased pressure in the brain without a known cause.,1,,entailment
+43,Idiopathic intracranial hypertension is characterized by changes in vision.,0.9673,Idiopathic intracranial hypertension is a condition with increased pressure in the brain without a known cause.,1,,entailment
+44,The patient has idiopathic intracranial hypertension.,0.9735,The patient's symptoms are consistent with idiopathic intracranial hypertension.,1,,entailment
+45,The patient has papilledema.,1.0,The patient has papilledema.,1,,entailment
+46,The doctor prescribed an MRI.,0.9372,The doctor's team will help schedule the MRI once it is preapproved.,1,,entailment
+47,The MRI is to check for other conditions contributing to the patient's symptoms.,0.9682,The patient may need an MRI to confirm the diagnosis.,1,,entailment
+48,The doctor will perform a spinal tap.,0.9336,The patient may need a spinal tap to evaluate the pressure in their brain.,0,fabrication,neutral
+49,The spinal tap is to evaluate the pressure in the brain.,0.9795,The patient may need a spinal tap to evaluate the pressure in their brain.,1,,entailment
+50,The spinal tap is to potentially alleviate symptoms.,0.9293,The patient may need a spinal tap to evaluate the pressure in their brain.,0,fabrication,neutral
+51,The spinal tap is to decrease the pressure in the brain.,0.9584,The patient may need a spinal tap to evaluate the pressure in their brain.,1,,entailment
+52,The patient will be referred to a neuro-ophthalmologist.,0.9601,The patient may need to see a neuro-ophthalmologist for a complete eye exam.,1,,entailment
+53,The referral to a neuro-ophthalmologist is for a complete eye exam.,0.979,The patient may need to see a neuro-ophthalmologist for a complete eye exam.,1,,entailment
+54,The patient needs preapproval from her insurance company for the MRI.,0.9812,The doctor will work on getting preapproval from the patient's insurance company for the MRI.,1,,entailment
+55,The patient will be scheduled for an MRI.,0.9501,The patient will be called to schedule the MRI once it is preapproved.,1,,entailment
+56,The patient will be scheduled for a spinal tap.,0.9243,The patient may need a spinal tap to evaluate the pressure in their brain.,0,fabrication,neutral
+57,The patient will be referred to a neuro-ophthalmologist for a complete eye exam.,0.9849,The patient may need to see a neuro-ophthalmologist for a complete eye exam.,1,,entailment

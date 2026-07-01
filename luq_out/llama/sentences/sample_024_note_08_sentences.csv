@@ -1,29 +1,29 @@
 sentence_idx,sentence,uncertainty
 0,Subjective:,0.5
-1,"HPI: The patient, Gregory, presents with a non-healing foot ulcer on his right foot, which has been present for approximately two months.",0.4536
-2,"The ulcer has recently become red and is draining, causing concern for the patient.",0.3391
-3,The patient reports walking barefoot on the beach at Dewey Beach as the potential cause of the injury.,0.5099
-4,"He denies any specific pain, but reports occasional throbbing.",0.4394
-5,The patient's biggest concern is the ulcer's redness and drainage.,0.8713
-6,"He has not checked his blood sugar levels regularly and is unsure of his last A1C result, which he believes was around 10.",0.6094
-7,"Past medical history: The patient has diabetes, which is not well-controlled, as evidenced by his high A1C result.",0.3287
-8,"He has not had any recent treatment for his diabetes, and his PCP has not created a treatment plan for him.",0.8708
-9,"Review of systems: The patient does not report any other symptoms, but the doctor notes that the patient's diabetes is not well-controlled.",0.9925
+1,"HPI: The patient, Gregory, presents with a non-healing foot ulcer on his right foot, which has been present for approximately two months.",0.0291
+2,"The ulcer has recently become red and is draining, causing concern for the patient.",0.0043
+3,The patient reports walking barefoot on the beach at Dewey Beach as the potential cause of the injury.,0.0248
+4,"He denies any specific pain, but reports occasional throbbing.",0.0694
+5,The patient's biggest concern is the ulcer's redness and drainage.,0.0802
+6,"He has not checked his blood sugar levels regularly and is unsure of his last A1C result, which he believes was around 10.",0.0909
+7,"Past medical history: The patient has diabetes, which is not well-controlled, as evidenced by his high A1C result.",0.0054
+8,"He has not had any recent treatment for his diabetes, and his PCP has not created a treatment plan for him.",0.5196
+9,"Review of systems: The patient does not report any other symptoms, but the doctor notes that the patient's diabetes is not well-controlled.",0.2958
 10,Current medications: [NOT MENTIONED],0.5
 11,Objective:,0.5
-12,"Vital signs: The patient's vital signs are normal, with no fever.",0.7671
-13,"Physical exam: The patient has a one-by-two inch circular wound on the dorsal aspect of the lateral right foot, proximal to the fifth MTP joint.",0.7742
-14,"The wound is red, draining, and has some edema around it.",0.5889
-15,"There is no necrosis, odor, or bony exposure.",0.9945
-16,"The patient reports increased pressure when the wound is touched, but no distinct pain.",0.8666
-17,"Test Results: The patient had an X-ray of his right foot, which showed no evidence of osteomyelitis.",0.0034
+12,"Vital signs: The patient's vital signs are normal, with no fever.",0.286
+13,"Physical exam: The patient has a one-by-two inch circular wound on the dorsal aspect of the lateral right foot, proximal to the fifth MTP joint.",0.172
+14,"The wound is red, draining, and has some edema around it.",0.0681
+15,"There is no necrosis, odor, or bony exposure.",0.3863
+16,"The patient reports increased pressure when the wound is touched, but no distinct pain.",0.1103
+17,"Test Results: The patient had an X-ray of his right foot, which showed no evidence of osteomyelitis.",0.0001
 18,Assessment / Problem List:,0.5
-19,Assessment: The patient has a diabetic foot ulcer with an underlying infection.,0.0318
-20,Problem list: Diabetic foot ulcer; Infection; Poorly controlled diabetes.,0.5108
+19,Assessment: The patient has a diabetic foot ulcer with an underlying infection.,0.0089
+20,Problem list: Diabetic foot ulcer; Infection; Poorly controlled diabetes.,0.142
 21,Plan:,0.5
-22,"I prescribed clindamycin 400mg, taken twice a day for seven days, to treat the infection.",0.0023
-23,I will also perform a debridement to remove dead tissue.,0.417
-24,The patient will need to wear a surgical shoe to reduce pressure on the foot.,0.3335
-25,I will order an ABI (ankle-brachial index) to determine the blood supply to the foot.,0.4479
-26,The patient will follow up in two weeks for another debridement and to assess the wound's progress.,0.338
-27,Follow-up: The patient will be seen in two weeks for a follow-up appointment.,0.0042
+22,"I prescribed clindamycin 400mg, taken twice a day for seven days, to treat the infection.",0.0001
+23,I will also perform a debridement to remove dead tissue.,0.0399
+24,The patient will need to wear a surgical shoe to reduce pressure on the foot.,0.0122
+25,I will order an ABI (ankle-brachial index) to determine the blood supply to the foot.,0.1693
+26,The patient will follow up in two weeks for another debridement and to assess the wound's progress.,0.0119
+27,Follow-up: The patient will be seen in two weeks for a follow-up appointment.,0.0001

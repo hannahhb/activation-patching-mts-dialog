@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient reports noticing difficulty breathing, catching his breath a lot more than usual, and feeling short of breath, which started suddenly for no apparent reason.",Faithful,
+1,"He denies having any other symptoms such as fever, nausea, vomiting, rash, or lip/throat swelling.",Faithful,
+2,"He mentions having a history of heavy drinking and experiencing diarrhea afterwards, but does not consider this relevant to his current symptoms.",Faithful,
+3,"He also mentions having a dog and a cat, but denies any issues with allergies in the past.",Faithful,
+4,"Past medical history: The patient has a history of heavy drinking, which is associated with diarrhea.",Contextual,which is associated with diarrhea
+5,"He has a pet dog and a cat, but does not have any known allergies.",Faithful,
+6,Review of systems: The patient denies any symptoms in other organs that are relevant to his initial presentation.,Faithful,
+7,"Current medications: I prescribed albuterol inhaler for asthma, which he uses as needed.",Causality,I prescribed albuterol inhaler for asthma
+8,He was previously prescribed an inhaler by the urgent care for similar symptoms.,Faithful,
+9,"Vital signs: The patient's vital signs are within normal limits, with a normal pulse, pulse oximetry, and no signs of distress.",Faithful,
+10,"Physical exam: The physical exam revealed no rash, no angioedema, no audible stridor, and faint expiratory wheezing bilaterally in all lung fields.",Faithful,
+11,Test Results: The patient had a normal chest x-ray and pulmonary function test.,Faithful,
+12,Assessment: The patient has newly diagnosed allergic asthma.,Faithful,
+13,Problem list: Allergic asthma; Asthma symptoms; [Unknown].,Fabrication,[Unknown]
+14,"I want the patient to continue using the albuterol inhaler as needed, and I prescribed Singulair 10mg once daily to help decrease the occurrences of asthma.",Faithful,
+15,"I will proceed with allergy testing, starting with skin testing to identify potential triggers.",Faithful,
+16,"If skin testing is inconclusive, we will discuss further testing in the blood and immunotherapy.",Faithful,
+17,The patient will return next week to schedule the skin testing.,Faithful,
+18,Follow-up: The patient will return next week to schedule the skin testing.,Fabrication,Follow-up: The patient will return next week to schedule the skin testing
+19,Instructions:,Fabrication,Instructions:

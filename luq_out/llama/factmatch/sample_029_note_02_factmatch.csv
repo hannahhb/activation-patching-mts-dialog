@@ -1,0 +1,51 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient is a 54-year-old male.,1.0,The patient is a 54-year-old male.,1,,entailment
+1,"The patient presents with a history of stabbing, shooting pain in the right cheekbone area of his face.",0.9505,The facial pain is stabbing and shooting.,1,,entailment
+2,The patient's pain has been ongoing for approximately 2-3 months.,0.954,The facial pain has been present for a couple of months.,1,,entailment
+3,The pain is exacerbated by temperature changes.,0.9504,The patient's facial pain is triggered by certain temperatures.,1,,entailment
+4,The pain is exacerbated by cold wind.,0.9442,The patient's facial pain is triggered by cold temperatures.,0,fabrication,neutral
+5,The pain is often accompanied by numbness on the right side of his face.,0.9808,The patient has some numbness on the right side of their face.,1,,entailment
+6,The patient reports the pain is excruciating.,0.9095,The patient experiences episodes of facial pain.,0,fabrication,neutral
+7,The pain often lasts for a few minutes to an hour.,0.9695,The episodes of facial pain can last from a few minutes to an hour.,1,,entailment
+8,The patient describes the pain as a 10 out of 10 in severity.,0.9643,"The patient's facial pain is severe, rated as a 10 out of 10.",1,,entailment
+9,The patient denies any sensory loss in other areas of his face.,0.9215,The patient has some numbness on the right side of their face.,0,fabrication,neutral
+10,The patient denies weakness in other areas of his face.,0.9244,The patient has some numbness on the right side of their face.,0,fabrication,neutral
+11,"The patient denies numbness in other areas of his face, including the left side.",0.9823,The patient has some numbness on the right side of their face.,1,,entailment
+12,The patient's vision appears unchanged.,0.8726,The patient is a 54-year-old male.,0,fabrication,neutral
+13,The patient's smile appears unchanged.,0.8825,The patient's teeth are symmetric.,0,fabrication,neutral
+14,The patient has not experienced any weakness on the right side of his face.,0.9526,The patient has some numbness on the right side of their face.,1,,entailment
+15,The patient has tried ibuprofen.,0.9838,The patient has tried ibuprofen for pain relief.,1,,entailment
+16,The patient has tried Motrin.,0.9685,The patient has tried Motrin for pain relief.,1,,entailment
+17,The patient has tried Tiger Balm.,0.97,The patient has tried tiger balm for pain relief.,1,,entailment
+18,Ibuprofen has not provided relief for the patient.,0.9699,Ibuprofen has not helped the patient's facial pain.,1,,entailment
+19,Motrin has not provided relief for the patient.,0.9732,Motrin has not helped the patient's facial pain.,1,,entailment
+20,Tiger Balm has not provided relief for the patient.,0.9692,Tiger balm has not helped the patient's facial pain.,1,,entailment
+21,The patient has a history of occasional headaches.,0.9659,The patient occasionally experiences headaches.,1,,entailment
+22,The patient has no history of migraines.,0.996,The patient does not have a history of migraines.,1,,entailment
+23,The patient has no history of multiple sclerosis.,0.9966,The patient does not have a history of multiple sclerosis.,1,,entailment
+24,The patient has no history of brain tumors.,0.9964,The patient does not have a history of brain tumors.,1,,entailment
+25,The patient reports numbness on the right side of his face.,0.9941,The patient has some numbness on the right side of their face.,1,,entailment
+26,The patient denies any other symptoms.,0.9128,The patient occasionally experiences headaches.,0,fabrication,neutral
+27,The patient is taking Tylenol.,0.9491,The patient takes Tylenol for occasional headaches.,1,,entailment
+28,The Tylenol dose is not specified.,0.904,The patient takes Tylenol for occasional headaches.,0,fabrication,neutral
+29,Tylenol is taken for occasional headaches.,0.9873,The patient takes Tylenol for occasional headaches.,1,,entailment
+30,The patient was able to follow the doctor's finger in both directions.,0.9565,The patient can follow the doctor's finger with their eyes.,1,,entailment
+31,The patient showed symmetrical teeth.,0.9681,The patient's teeth are symmetric.,1,,entailment
+32,The patient felt a little bit numb on the right side of his face when the doctor rubbed his fingers next to his ear.,0.9661,The patient has some numbness on the right side of their face.,1,,entailment
+33,The doctor poked the patient's face with a needle.,0.944,The patient feels a sharp sensation on the left side of their face when poked with a needle.,0,fabrication,neutral
+34,The patient felt a dull sensation on the right side.,0.9535,The patient feels a little bit dull sensation on the right side of their face when poked with a needle.,1,,entailment
+35,The patient felt a sharp sensation on the left side.,0.957,The patient feels a sharp sensation on the left side of their face when poked with a needle.,1,,entailment
+36,The MRI results show a small blood vessel abutting the trigeminal nerve.,0.9815,The patient's MRI shows a small blood vessel abutting and possibly pinching the trigeminal nerve.,1,,entailment
+37,The MRI results show a small blood vessel perhaps pinching the trigeminal nerve.,0.9827,The patient's MRI shows a small blood vessel abutting and possibly pinching the trigeminal nerve.,1,,entailment
+38,The patient has symptoms consistent with trigeminal neuralgia.,0.9804,The patient may have trigeminal neuralgia.,1,,entailment
+39,Trigeminal neuralgia is a condition where nerve compression causes shooting electrical pain in the face.,0.9346,The patient may have trigeminal neuralgia.,0,fabrication,neutral
+40,The patient has trigeminal neuralgia.,0.9904,The patient may have trigeminal neuralgia.,1,,entailment
+41,The doctor prescribed Tegretol.,0.9947,The doctor prescribed Tegretol for the patient.,1,,entailment
+42,The Tegretol dose is not specified.,0.9326,The doctor prescribed Tegretol for the patient.,0,fabrication,neutral
+43,Tegretol is prescribed for trigeminal neuralgia.,0.9637,Tegretol is used to reduce the excitability of the nerve.,1,,entailment
+44,The patient will need to undergo genetic testing.,0.9325,The patient may need genetic testing before taking Tegretol.,0,fabrication,neutral
+45,Genetic testing is to ensure the medication is safe for the patient.,0.9302,The patient may need genetic testing before taking Tegretol.,0,fabrication,neutral
+46,The patient will discuss surgical options if the pain continues.,0.9066,The patient will consider surgical options if the Tegretol is not effective.,0,fabrication,neutral
+47,The patient will return in one month.,0.9529,The patient will follow up with the doctor in one month.,1,,entailment
+48,The patient will check the effectiveness of the medication in one month.,0.9537,The patient will follow up with the doctor in one month.,1,,entailment
+49,The patient will discuss further treatment options in one month if necessary.,0.9468,The patient will follow up with the doctor in one month.,0,fabrication,neutral

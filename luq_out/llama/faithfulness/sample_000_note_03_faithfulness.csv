@@ -1,0 +1,25 @@
+sentence_idx,sentence,faithfulness,uncertainty
+0,Here is the SOAP note:,0.6579,0.3421
+1,Subjective:,0.9999,0.0001
+2,"HPI: The patient presents with a history of shortness of breath that has been occurring for some time, with the patient feeling like they catch their breath more easily than before and experiencing sudden episodes of shortness of breath without a clear reason.",0.999,0.001
+3,"The patient reports that this has been ongoing for some time, and they have noticed it in various situations, including at home, outside, and near their cat.",0.973,0.027
+4,"The patient also reports that they have a history of eye watering, similar to their dog, but no other symptoms such as rash, nausea, vomiting, or lip/throat swelling.",0.3603,0.6397
+5,The patient denies any issues with allergies in the past.,0.7043,0.2957
+6,"The patient has been prescribed an albuterol inhaler for their symptoms, which has been helpful.",0.9926,0.0074
+7,"Past medical history: The patient moved to a new city two years ago and has a plot of land with deer, but no other relevant medical history is mentioned.",0.8964,0.1036
+8,Review of systems: The patient denies any other symptoms in other organs.,0.9127,0.0873
+9,Current medications: I prescribed albuterol inhaler as needed for asthma symptoms.,0.9017,0.0983
+10,Objective:,0.9984,0.0016
+11,"Vital signs: The patient's pulse is normal, and their pulse ox is within normal limits.",0.9997,0.0003
+12,The patient does not appear to be in any distress.,1.0,0.0
+13,"Physical exam: The patient does not have any rash, angioedema, or audible stridor.",0.9978,0.0022
+14,There is faint expiratory wheezing bilaterally in all lung fields.,0.9993,0.0007
+15,Test Results: The patient's chest X-ray and pulmonary function test were both normal.,0.9999,0.0001
+16,Assessment / Problem List:,0.9939,0.0061
+17,Assessment: The patient has newly diagnosed allergic asthma.,0.9999,0.0001
+18,Problem list: Asthma; Allergies; Unknown,0.7965,0.2035
+19,Plan:,0.9979,0.0021
+20,"I want the patient to continue taking their albuterol inhaler as soon as they start to feel any symptoms, and I prescribed Singulair 10mg once daily to help decrease the occurrences of asthma symptoms.",0.9997,0.0003
+21,"I also plan to proceed with allergy testing, starting with skin testing to identify potential triggers.",1.0,0.0
+22,The patient will return in one week for skin testing.,0.9993,0.0007
+23,Follow-up: The patient will return in one week to schedule the skin testing.,0.9997,0.0003

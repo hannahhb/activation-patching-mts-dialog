@@ -1,0 +1,44 @@
+fact_idx,fact,top_cos,top_trans_fact,supported,halluc_type,top_nli
+0,The patient's name is Jerry.,1.0,The patient's name is Jerry.,1,,entailment
+1,The patient is a 45-year-old male.,1.0,The patient is a 45-year-old male.,1,,entailment
+2,The patient presented with an ankle injury.,0.985,The patient has an ankle injury.,1,,entailment
+3,The ankle injury was sustained during a basketball game.,0.942,The patient has an ankle injury.,0,fabrication,neutral
+4,The patient was pushed by his son.,0.8775,The patient is a 45-year-old male.,0,fabrication,neutral
+5,The patient landed awkwardly.,0.9196,"The patient went up for a shot and landed awkwardly, rolling and twisting his ankle.",1,,entailment
+6,The patient twisted his ankle.,0.9291,"The patient went up for a shot and landed awkwardly, rolling and twisting his ankle.",1,,entailment
+7,The patient reported pain.,0.9056,The patient has some tenderness over the medial deltoid region.,1,,entailment
+8,The patient reported swelling.,0.9293,The patient's ankle is bruised and swollen.,1,,entailment
+9,The patient reported instability on the outside of the ankle.,0.9573,The patient's ankle is hurting on the outside.,1,,entailment
+10,The patient denied any previous ankle injuries.,0.9532,The patient has an ankle injury.,1,,entailment
+11,The patient denied chronic conditions.,0.8833,The patient is a coach.,0,fabrication,neutral
+12,The patient has been experiencing difficulty walking.,0.9884,The patient has been having trouble walking.,1,,entailment
+13,The patient feels the ankle is not stable.,0.9757,The patient's ankle does not feel solid or stable.,1,,entailment
+14,The patient recently started working out.,0.9732,The patient recently got back into working out.,1,,entailment
+15,The patient does not want to disrupt his routine.,0.9755,The patient does not want to disrupt his workout routine.,1,,entailment
+16,The examination revealed tenderness laterally.,0.9258,The patient has exquisite tenderness on the outside of his ankle.,1,,entailment
+17,The examination revealed tenderness over the medial deltoid region.,0.9867,The patient has some tenderness over the medial deltoid region.,1,,entailment
+18,There is swelling on the lateral side of the ankle.,0.9841,The patient's ankle is swollen on the lateral side.,1,,entailment
+19,The patient's skin is intact.,1.0,The patient's skin is intact.,1,,entailment
+20,The patient has brisk capillary refill.,1.0,The patient has brisk capillary refill.,1,,entailment
+21,There is no malalignment.,0.9188,The patient's ankle has no horrible malalignment.,0,fabrication,neutral
+22,The X-ray showed a displaced lateral malleolus fracture.,0.955,The x-ray shows a displaced lateral malleolus at the Weber C level.,1,,entailment
+23,The fracture is at the Weber C level.,0.9336,The x-ray shows a displaced lateral malleolus at the Weber C level.,0,fabrication,neutral
+24,There is no evidence of medial malleolar fractures.,0.9875,There is no evidence of medial or posterior malleolar fractures.,1,,entailment
+25,There is no evidence of posterior malleolar fractures.,0.9913,There is no evidence of medial or posterior malleolar fractures.,1,,entailment
+26,The patient has a displaced lateral malleolar fracture.,0.9605,The doctor diagnosed the patient with a lateral malleolar fracture.,1,,entailment
+27,The patient has ankle instability.,0.9647,The patient has an ankle injury.,1,,entailment
+28,The patient is diagnosed with lateral malleolar fracture.,0.9887,The doctor diagnosed the patient with a lateral malleolar fracture.,1,,entailment
+29,The patient is diagnosed with ankle instability.,0.954,The patient has an ankle injury.,1,,entailment
+30,The doctor prescribed meloxicam.,0.9947,The doctor prescribed meloxicam for the patient.,1,,entailment
+31,The meloxicam is prescribed for pain.,0.9636,The doctor prescribed meloxicam for the patient.,1,,entailment
+32,The meloxicam is prescribed for inflammation.,0.9588,The doctor prescribed meloxicam for the patient.,1,,entailment
+33,The doctor recommended icing the ankle.,0.9234,The doctor instructed the patient to ice his ankle.,1,,entailment
+34,The doctor recommended elevating the ankle regularly.,0.9581,The doctor instructed the patient to keep his ankle elevated.,1,,entailment
+35,The patient works from home.,1.0,The patient works from home.,1,,entailment
+36,The doctor provided crutches.,0.9397,The patient will get crutches.,0,fabrication,neutral
+37,The crutches are to assist with mobility.,0.9242,The patient will get crutches.,1,,entailment
+38,The patient was advised to continue coaching his son's basketball team.,0.9312,The doctor told the patient to continue coaching.,0,fabrication,neutral
+39,The patient was advised to avoid putting weight on the ankle.,0.9312,The doctor instructed the patient to keep his ankle elevated.,0,negation,contradiction
+40,The patient should avoid putting weight on the ankle for three months.,0.9249,The patient will be able to start exercising again within three months.,0,fabrication,neutral
+41,The patient will be seen again in three months.,0.9493,The patient will be able to start exercising again within three months.,1,,entailment
+42,The follow-up appointment is for reassessment of the patient's progress.,0.8977,The patient will be able to start exercising again within three months.,0,fabrication,neutral
