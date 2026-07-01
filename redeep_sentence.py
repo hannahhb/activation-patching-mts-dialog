@@ -354,15 +354,18 @@ def compute_ecs_pks_single_pass(
     device: str,
     top_k_frac: float = 0.10,
     copying_mask: Optional[np.ndarray] = None,
+    word_spans: Optional[np.ndarray] = None,   # (n_words, 2) int32 token spans in note coords
 ) -> Tuple[np.ndarray, np.ndarray, np.ndarray,
            np.ndarray, np.ndarray, np.ndarray]:
     """
     Single forward pass.
 
-    Returns (ecs_mean, ecs_copy, pks, ecs_tok_mean, ecs_tok_copy, pks_tok):
-      ecs_mean, ecs_copy, pks        — (n_layers, n_sents)  sentence-level
-      ecs_tok_mean, ecs_tok_copy,
-      pks_tok                        — (n_layers, n_note_tokens) token-level
+    Returns (ecs_mean, ecs_copy, pks, pks_tok, ecs_word, ecs_word_copy):
+      ecs_mean, ecs_copy, pks  — (n_layers, n_sents)        sentence-level
+      pks_tok                  — (n_layers, n_note_tokens)  token-level PKS
+      ecs_word, ecs_word_copy  — (n_layers, n_words)        word-level ECS
+                                 (all-heads mean / copying-heads mean; empty if
+                                 word_spans is None). Faithful to Eq 3 using x^L.
 
     ECS — faithful to ReDeEP Eq 3 at sentence (chunk) granularity:
       * For layer l, head h: chunk attention a^{l,h} = mean over the sentence's note
@@ -387,8 +390,9 @@ def compute_ecs_pks_single_pass(
     k_top    = max(1, int(T * top_k_frac))
     n_note   = tokens.shape[1] - T          # note token count (incl. EOS)
 
-    chunk_attn: List[Optional[List]] = [None] * n_layers
-    tok_attn_all: List[Optional[np.ndarray]] = [None] * n_layers  # (n_heads, n_note, k_top) int32 indices
+    n_words  = len(word_spans) if word_spans is not None else 0
+    chunk_attn:    List[Optional[List]]        = [None] * n_layers
+    word_attn_all: List[Optional[np.ndarray]]  = [None] * n_layers  # (n_heads, n_words, k_top) int32
     pks_all  = np.zeros((n_layers, n_sents), dtype=np.float64)
     pks_tok  = np.full((n_layers, n_note),   np.nan, dtype=np.float64)
     x_last   = [None]
@@ -396,10 +400,31 @@ def compute_ecs_pks_single_pass(
 
     def make_pattern_hook(l: int):
         def fn(value, hook):
-            attn    = value[0].to(torch.float32).cpu().numpy()
-            seq_len = attn.shape[-1]
-            # sentence-level (existing)
-            chunks  = []
+            attn_gpu = value[0].to(torch.float32)              # (n_heads, seq_len, seq_len) on GPU
+            seq_len  = attn_gpu.shape[-1]
+            ctx_end  = min(T, seq_len)
+
+            # ── Word-level: compute mean-pooled attention per word on GPU, ──
+            # then topk on GPU — move only (n_heads, n_words, k_top) indices to CPU.
+            if word_spans is not None and n_words > 0:
+                word_vecs = []
+                for w_start, w_end in word_spans:
+                    abs_s = T + int(w_start)
+                    abs_e = min(T + int(w_end), seq_len)
+                    if abs_s < abs_e:
+                        wv = attn_gpu[:, abs_s:abs_e, :ctx_end].mean(dim=1)  # (n_heads, T)
+                    else:
+                        wv = torch.zeros(n_heads, ctx_end,
+                                         device=attn_gpu.device, dtype=torch.float32)
+                    word_vecs.append(wv)
+                word_tensor = torch.stack(word_vecs, dim=1)   # (n_heads, n_words, T)
+                top_idx = torch.topk(word_tensor,
+                                     min(k_top, ctx_end), dim=-1).indices  # on GPU
+                word_attn_all[l] = top_idx.cpu().numpy().astype(np.int32)
+
+            # ── Sentence-level: existing logic (move full attn to CPU once) ──
+            attn = attn_gpu.cpu().numpy()
+            chunks = []
             for s_start, s_end in sent_spans:
                 abs_s = T + s_start
                 abs_e = min(T + s_end, seq_len)
@@ -409,16 +434,6 @@ def compute_ecs_pks_single_pass(
                     w = np.zeros((n_heads, T), dtype=np.float32)
                 chunks.append(w)
             chunk_attn[l] = chunks
-            # token-level: compute top-k indices immediately and store only those.
-            # Avoids holding (n_heads, n_note, T) float32 per layer in RAM —
-            # instead stores (n_heads, n_note', k_top) int32, ~10x smaller.
-            t_end = min(T + n_note, seq_len)
-            n_tok = t_end - T
-            if n_tok > 0:
-                tok_slice = attn[:, T:t_end, :T]               # (n_heads, n_tok, T)
-                tok_attn_all[l] = np.argpartition(
-                    tok_slice, -k_top, axis=-1
-                )[:, :, -k_top:].astype(np.int32)              # (n_heads, n_tok, k_top)
             return value
         return fn
 
@@ -515,43 +530,53 @@ def compute_ecs_pks_single_pass(
     else:
         ecs_copy = np.full((n_layers, n_sents), np.nan, dtype=np.float64)
 
-    # ── Token-level ECS post-pass ─────────────────────────────────────────────
-    # Per note token t: ECS^{l,h}(t) = cos(mean_pool(top-k final-layer context
-    # hidden states attended at layer l head h by token t), x_last[T+t]).
-    # Same definition as sentence-level but without mean-pooling across the chunk.
-    x_note   = x_arr[T:T + n_note]                            # (n_note, d_model)
-    norm_x   = np.linalg.norm(x_note, axis=-1)                # (n_note,)
+    # ── Word-level ECS post-pass (faithful to Eq 3, word granularity) ─────────
+    # For each word: word_vec = mean x^L over the word's note tokens;
+    # e^{l,h} = mean x^L over the top-k context tokens attended by the word
+    # (indices already computed on GPU in the hook). ECS = cos(e, word_vec).
+    # Uses LLM final-layer hidden states — no embedding model.
+    if n_words > 0:
+        word_vecs = np.full((n_words, x_arr.shape[1]), np.nan, dtype=np.float64)
+        word_norm = np.zeros(n_words, dtype=np.float64)
+        for wi, (w_start, w_end) in enumerate(word_spans):
+            abs_s = T + int(w_start)
+            abs_e = min(T + int(w_end), seq_len)
+            if abs_s < abs_e:
+                v = x_arr[abs_s:abs_e].mean(axis=0)
+                word_vecs[wi] = v
+                word_norm[wi] = np.linalg.norm(v)
 
-    ecs_tok_lh = np.full((n_layers, n_heads, n_note), np.nan, dtype=np.float64)
-    for l in range(n_layers):
-        if tok_attn_all[l] is None:
-            continue
-        top_indices = tok_attn_all[l]                         # (n_heads, n_tok, k_top) int32
-        n_tok = top_indices.shape[1]
-        for h in range(n_heads):
-            top_h  = top_indices[h]                           # (n_tok, k_top) — already computed
-            e_h    = x_trans[top_h].mean(axis=1)             # (n_tok, d_model)
-            num    = (e_h * x_note[:n_tok]).sum(axis=-1)     # (n_tok,)
-            ne     = np.linalg.norm(e_h, axis=-1)            # (n_tok,)
-            denom  = ne * norm_x[:n_tok]
-            ecs_tok_lh[l, h, :n_tok] = np.where(denom > 1e-8, num / denom, np.nan)
-
-    ecs_tok_mean = np.nanmean(ecs_tok_lh, axis=1)            # (n_layers, n_note)
-    if copying_mask is not None and copying_mask.any():
-        ecs_tok_copy = np.full((n_layers, n_note), np.nan, dtype=np.float64)
+        ecs_word_lh = np.full((n_layers, n_heads, n_words), np.nan, dtype=np.float64)
         for l in range(n_layers):
-            heads = np.where(copying_mask[l])[0]
-            if heads.size:
-                ecs_tok_copy[l] = np.nanmean(ecs_tok_lh[l, heads], axis=0)
-    else:
-        ecs_tok_copy = np.full((n_layers, n_note), np.nan, dtype=np.float64)
+            if word_attn_all[l] is None:
+                continue
+            idx_lh = word_attn_all[l]                          # (n_heads, n_words, k_top) int32
+            for h in range(n_heads):
+                e_h    = x_trans[idx_lh[h]].mean(axis=1)       # (n_words, d_model)
+                num    = (e_h * word_vecs).sum(axis=-1)        # (n_words,)
+                ne     = np.linalg.norm(e_h, axis=-1)
+                denom  = ne * word_norm
+                ecs_word_lh[l, h] = np.where(denom > 1e-8, num / denom, np.nan)
 
-    return (np.clip(ecs_mean,     -1.0, 1.0),
-            np.clip(ecs_copy,     -1.0, 1.0),
+        ecs_word = np.nanmean(ecs_word_lh, axis=1)             # (n_layers, n_words)
+        if copying_mask is not None and copying_mask.any():
+            ecs_word_copy = np.full((n_layers, n_words), np.nan, dtype=np.float64)
+            for l in range(n_layers):
+                heads = np.where(copying_mask[l])[0]
+                if heads.size:
+                    ecs_word_copy[l] = np.nanmean(ecs_word_lh[l, heads], axis=0)
+        else:
+            ecs_word_copy = np.full((n_layers, n_words), np.nan, dtype=np.float64)
+    else:
+        ecs_word      = np.zeros((n_layers, 0), dtype=np.float64)
+        ecs_word_copy = np.zeros((n_layers, 0), dtype=np.float64)
+
+    return (np.clip(ecs_mean,      -1.0, 1.0),
+            np.clip(ecs_copy,      -1.0, 1.0),
             pks_all,
-            np.clip(ecs_tok_mean, -1.0, 1.0),
-            np.clip(ecs_tok_copy, -1.0, 1.0),
-            pks_tok)
+            pks_tok,
+            np.clip(ecs_word,      -1.0, 1.0),
+            np.clip(ecs_word_copy, -1.0, 1.0))
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1202,6 +1227,32 @@ def main() -> None:
                       f"(>20%); spans unreliable")
                 continue
 
+            # ── Pre-compute note token strings and word spans (for tokens NPZ) ──
+            tokenizer      = model.tokenizer
+            note_token_ids = tokens[0, transcript_len:].tolist()
+
+            # Prefix-decode trick: handles multi-byte BPE tokens correctly.
+            tok_strs, _prev, _dec = [], 0, ""
+            for i in range(len(note_token_ids)):
+                _dec = tokenizer.decode(note_token_ids[:i + 1], skip_special_tokens=False)
+                tok_strs.append(_dec[_prev:])
+                _prev = len(_dec)
+
+            # Group note tokens into words: new word when token starts with ▁ or space.
+            word_spans_list: List[List[int]] = []
+            for i, tok in enumerate(tok_strs):
+                if i == 0 or tok.startswith("▁") or tok.startswith(" ") or tok == "\n":
+                    word_spans_list.append([i, i + 1])
+                else:
+                    if word_spans_list:
+                        word_spans_list[-1][1] = i + 1
+                    else:
+                        word_spans_list.append([i, i + 1])
+            word_spans_arr = np.array(word_spans_list, dtype=np.int32)  # (n_words, 2)
+            word_strs = [
+                "".join(tok_strs[ws:we]) for ws, we in word_spans_arr
+            ]
+
             # ── Load from disk cache if available ─────────────────────────────
             cache_npz  = cache_dir / f"{note_name}.npz"
             tokens_npz = act_dir   / f"sample_{si:03d}_gen_{k:02d}_tokens.npz"
@@ -1222,11 +1273,12 @@ def main() -> None:
                     print(f"ECS={np.nanmean(ecs_l):.3f}  PKS={pks_l.mean():.3f}  (cached)")
             if not cached_ok:
                 try:
-                    ecs_l, ecscopy_l, pks_l, ecs_tok_l, ecs_tok_copy_l, pks_tok_l = \
+                    ecs_l, ecscopy_l, pks_l, pks_tok_l, ecs_word_l, ecs_word_copy_l = \
                         compute_ecs_pks_single_pass(
                             model, tokens, transcript_len, spans,
                             device=args.device, top_k_frac=args.top_k_frac,
                             copying_mask=copying_mask,
+                            word_spans=word_spans_arr,
                         )
                 except Exception as exc:
                     print(f"forward ERROR: {exc}")
@@ -1238,27 +1290,28 @@ def main() -> None:
                                     ecs=ecs_l, ecs_copy=ecscopy_l, pks=pks_l,
                                     copying_sig=np.array(copying_sig))
 
-                # Token-level NPZ: full (n_layers, n_note_tokens) arrays.
-                # Use float32 to halve disk usage; NaN is preserved.
-                # Also save per-token decoded strings so downstream analysis
-                # (word-level plots) can align spans without reloading the model.
-                tokenizer      = model.tokenizer
-                note_token_ids = tokens[0, transcript_len:].tolist()
-                # Decode each token in isolation using prefix-decode trick to
-                # handle multi-byte BPE correctly (same approach as find_sent_spans).
-                tok_strs = []
-                prev_len = 0
-                full_dec = ""
-                for i, tid in enumerate(note_token_ids):
-                    full_dec = tokenizer.decode(note_token_ids[: i + 1],
-                                                skip_special_tokens=False)
-                    tok_strs.append(full_dec[prev_len:])
-                    prev_len = len(full_dec)
-                np.savez_compressed(str(tokens_npz),
-                                    ecs        = ecs_tok_l.astype(np.float32),
-                                    ecs_copy   = ecs_tok_copy_l.astype(np.float32),
-                                    pks        = pks_tok_l.astype(np.float32),
-                                    token_strs = np.array(tok_strs, dtype=object))
+                # Word-level PKS: SUM token PKS within each word (ReDeEP chunk-level
+                # PKS sums token scores, §4.2 — not mean).
+                if len(word_spans_arr):
+                    pks_word_l = np.stack([
+                        np.nansum(pks_tok_l[:, ws:we], axis=1)
+                        for ws, we in word_spans_arr
+                    ], axis=1)                                  # (n_layers, n_words)
+                else:
+                    pks_word_l = np.zeros((pks_tok_l.shape[0], 0), dtype=np.float32)
+
+                # Token/word-level NPZ. ECS + PKS are precomputed (faithful to Eq 3
+                # and chunk-level PKS); strings/spans kept for label alignment.
+                np.savez_compressed(
+                    str(tokens_npz),
+                    pks_tok       = pks_tok_l.astype(np.float32),       # (n_layers, n_note_tokens)
+                    pks_word      = pks_word_l.astype(np.float32),      # (n_layers, n_words) SUM
+                    ecs_word      = ecs_word_l.astype(np.float32),      # (n_layers, n_words)
+                    ecs_word_copy = ecs_word_copy_l.astype(np.float32), # (n_layers, n_words)
+                    token_strs    = np.array(tok_strs, dtype=object),
+                    word_spans    = word_spans_arr,
+                    word_strs     = np.array(word_strs, dtype=object),
+                )
 
                 n_valid = min(ecs_l.shape[1], len(luq_scores))
                 ecs_l, ecscopy_l, pks_l = (ecs_l[:, :n_valid],
