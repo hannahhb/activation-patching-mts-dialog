@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"The patient, Jacqueline Miller, reports being pretty good, with a chronic skin condition that has been improving.",Faithful,
+1,"She mentions a small residual rash, which has plateaued in improvement since switching from taking doxycycline twice a day to once a day.",Faithful,
+2,"She also expresses concern about using the Elidel cream, which she had previously researched and found concerning due to its association with cancer risk in high doses.",Faithful,
+3,She denies breastfeeding and confirms she has stopped using the Elidel cream.,Faithful,
+4,She has been using sulfacetamide wash twice a day and metro cream after washing her face.,Faithful,
+5,She has not been using any other lotions or cleansers.,Faithful,
+6,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+7,"Physical exam: The patient has Fitzpatrick skin type IV to V, with a few faint erythematous papules and redness on bilateral medial cheeks and around the nostrils.",Faithful,
+8,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+9,"Assessment: The patient has perioral dermatitis, rosacea, and ocular rosacea.",Faithful,
+10,Problem list: Perioral dermatitis; Rosacea; Ocular rosacea; Status: confirmed.,Faithful,
+11,"I instructed the patient to continue using the sulfacetamide wash once a day, continue with the metro cream, and increase the use of doxycycline to twice a day.",Causality,once a day
+12,"I recommended using the tacrolimus ointment (tacrolimus) twice a day until the rash is gone, then once a day for a week before stopping.",Faithful,
+13,I also recommended that she stop using the doxycycline after a week and continue with the wash and metro cream.,Negation,stop using the doxycycline after a week
+14,I instructed her to hold off on starting her old products until the follow-up appointment.,Faithful,
+15,I prescribed a refill of doxycycline and cancelled the Elidel cream.,Faithful,
+16,I also cancelled the clindamycin.,Faithful,
+17,I recommended vanicream or petroleum jelly as a moisturizer and provided samples.,Faithful,
+18,I instructed her to follow up in four weeks.,Faithful,
+19,I scheduled a follow-up appointment in four weeks to assess the patient's condition and provide further guidance on managing her rosacea and ocular rosacea.,Contextual,to assess the patient's condition and provide further guidance on managing her rosacea and ocular rosacea

@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 45-year-old female with a recent diagnosis of stage three nonsmall cell lung cancer, presents for follow-up on her neoadjuvant chemotherapy regimen.",Faithful,
+1,"She reports shortness of breath, which she attributes to her decreased physical activity since her diagnosis.",Faithful,
+2,"She normally walks her dog for a mile-long walk daily, but now she can only walk down to the end of the street without becoming short of breath.",Faithful,
+3,"She denies coughing or phlegm, but admits to a dry cough.",Faithful,
+4,"She also reports pain with swallowing, which she describes as a sharp pain in her chest that worsens when she swallows.",Causality,sharp pain in her chest that worsens when she swallows
+5,"She has been taking Ensure and other liquids, but has been having trouble taking her hydrocortisone liquids due to the pain.",Faithful,
+6,"She is on a combination of cisplatin and topotecan chemotherapy, which she started a few days ago.",Faithful,
+7,"Past medical history: The patient has a history of stage three nonsmall cell lung cancer, diagnosed recently.",Faithful,
+8,"Review of systems: The patient reports shortness of breath, dry cough, and painful swallowing.",Faithful,
+9,"Current medications: Cisplatin, topotecan, zofran, and hydrocortisone.",Faithful,
+10,"Vital signs: The patient's pulse, oxygen saturation, and temperature are within normal limits.",Faithful,
+11,"Physical exam: The patient's physical exam is notable for crackles in the lungs bilaterally, which could indicate fluid in the lungs, consistent with her lung cancer diagnosis.",Faithful,
+12,"The skin exam reveals erythema on the anterior aspect of the chest on the left side, which could be due to radiation burns.",Faithful,
+13,The extremity exam shows no lower extremity edema.,Faithful,
+14,"Test Results: The patient had a recent chest X-ray, which showed mild radiation pneumonitis, indicating inflammation of the lungs due to radiation.",Faithful,
+15,"Assessment: The patient has stage three nonsmall cell lung cancer and radiation pneumonitis, which is causing her symptoms of shortness of breath, dry cough, and painful swallowing.",Causality,"which is causing her symptoms of shortness of breath, dry cough, and painful swallowing"
+16,Problem list: Nonsmall cell lung cancer; radiation pneumonitis; painful swallowing.,Faithful,
+17,I prescribed prednisone 40 mg once daily for 5 days to reduce inflammation in the lungs and alleviate symptoms.,Faithful,
+18,"I also prescribed lidocaine spray to help alleviate painful swallowing, which can be used 4 times a day.",Faithful,
+19,I will have the patient take this medication after eating and drinking to help her stay hydrated.,Fabrication,after eating and drinking to help her stay hydrated
+20,Follow-up: We will see the patient back in two weeks to monitor her progress and adjust her treatment plan as needed.,Faithful,

@@ -1,0 +1,19 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 32-year-old female, presents with symptoms of irritable bowel syndrome (IBS) characterized by functional abdominal pain, nausea, and vomiting.",Faithful,
+1,"She has a history of flares of abdominal pain, which was previously diagnosed with IBS and treated with bentyl.",Faithful,
+2,"She reports experiencing worsening symptoms after consuming spicy foods, particularly shrimp, and has noticed that her symptoms are exacerbated by eating out and drinking alcohol.",Faithful,
+3,"She has been experiencing diarrhea and abdominal pain, with cramping and sharp pains, and has been avoiding heavy foods.",Faithful,
+4,"She reports that she has not been using the prescribed fiber supplement, citrucel, regularly.",Faithful,
+5,"Past medical history: The patient has a history of IBS, which was diagnosed in 2019.",Faithful,
+6,"Review of systems: The patient reports symptoms of diarrhea, nausea, and abdominal pain.",Faithful,
+7,Current medications: Bentyl 20 milligrams as needed for intestinal cramping; Zofran as needed for nausea.,Faithful,
+8,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+9,"Physical exam: The patient's abdomen is soft, non-tender, with no masses or organomegaly.",Faithful,
+10,Normal active bowel sounds.,Faithful,
+11,Assessment: Brittany Edwards is a pleasant female with IBS and functional abdominal pain.,Faithful,
+12,Problem list: IBS confirmed; abdominal pain suspected; diarrhea suspected; nausea suspected.,Contextual,suspected
+13,I prescribed citrucel 2 tablets daily for regularity and encouraged the patient to start taking it twice daily.,Faithful,
+14,"I instructed the patient to use bentyl 20 milligrams 30 to 45 minutes prior to eating out at a restaurant and to take a second tablet at the restaurant, and to repeat as needed.",Faithful,
+15,"I prescribed Zofran as needed for nausea, but encouraged the patient to reduce triggers such as greasy and fatty foods and alcohol consumption.",Faithful,
+16,"I also discussed starting a neuromodulator, elavil 25 milligrams, at bedtime for IBS.",Faithful,
+17,The patient will follow up in one month via email through mychart to discuss any side effects or issues with elavil or if adjustments are needed.,Faithful,

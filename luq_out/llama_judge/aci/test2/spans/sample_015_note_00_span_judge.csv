@@ -1,0 +1,25 @@
+sentence_idx,sentence,label,note_span
+0,"The patient, an 82-year-old male, presents for hospital follow-up after an acute on chronic congestive heart failure exacerbation.",Faithful,
+1,"He reports feeling well but notes that he had been trying to watch his diet, but experienced swelling in his ankles and shortness of breath.",Faithful,
+2,"He was hospitalized for 2 days and received treatment, including a medication that caused him to urinate frequently and a water pill given through his IV.",Faithful,
+3,He reports feeling much better now.,Faithful,
+4,He has been taking his medications as instructed since returning home and has been monitoring his blood pressure with a cuff he purchased.,Faithful,
+5,"He denies shortness of breath, chest pain, or problems sleeping.",Faithful,
+6,The patient has a significant past medical history of hypertension and stage three chronic kidney disease.,Faithful,
+7,The patient denies any symptoms in other organs that are relevant to his initial presentation.,Fabrication,The patient denies any symptoms in other organs that are relevant to his initial presentation
+8,I prescribed bumex 2 milligrams daily for congestive heart failure; cozaar 100 milligrams daily for hypertension; and norvasc 5 milligrams once daily for hypertension.,Causality,I prescribed
+9,"Vital signs: The patient's blood pressure today is 128/72, heart rate is 79, respiratory rate is 26, and oxygen saturation is 99%.",Faithful,
+10,Physical exam findings: The patient's neck exam is normal with no jugular venous distention.,Faithful,
+11,The heart exam reveals a stable 2/6 systolic ejection murmur.,Faithful,
+12,The lungs are clear bilaterally.,Faithful,
+13,The patient's lower extremities show a trace of edema.,Faithful,
+14,"The echocardiogram shows a preserved EF of 55%, abnormal diastolic filling, and mild to moderate mitral regurgitation.",Faithful,
+15,"Assessment: The patient has congestive heart failure caused by dietary indiscretion and uncontrolled hypertension, stage three chronic kidney disease, and hypertension.",Faithful,
+16,Problem list: Congestive heart failure; chronic kidney disease; hypertension; suspected secondary causes of hypertension; kidney disease.,Contextual,suspected secondary causes of hypertension
+17,I want the patient to continue on bumex 2 milligrams daily for congestive heart failure and to continue to watch his diet and avoid salty foods.,Faithful,
+18,I also want him to weigh himself daily and call me if he gains 3 pounds in 2 days.,Faithful,
+19,I will refer him to a nutritionist for education on healthy eating.,Faithful,
+20,I will continue him on cozaar 100 milligrams daily and norvasc 5 milligrams once daily for hypertension.,Faithful,
+21,I will order a renal artery ultrasound to rule out secondary causes of hypertension.,Faithful,
+22,I will also obtain additional labs to monitor his kidney disease.,Faithful,
+23,The patient will be seen again in 3 months.,Faithful,

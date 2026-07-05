@@ -1,0 +1,19 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Betty, presents with a 3-week history of left shoulder pain, which is described as constant and exacerbated by pressure, particularly when sleeping on the affected side.",Faithful,
+1,The pain is alleviated with Tylenol.,Faithful,
+2,"The patient denies any direct trauma to the shoulder, but mentions being active and recently renovating the basement, which may be contributing to the pain.",Faithful,
+3,The patient reports that the pain is a 7 out of 10 without Tylenol and 2-3 with Tylenol.,Faithful,
+4,"Past medical history: The patient has a history of occasional aches and pains, which are typically managed with Tylenol.",Faithful,
+5,Review of systems: The patient denies numbness or tingling in the arm or hand.,Faithful,
+6,Current medications: I prescribed Tylenol (2 tablets) every 6-8 hours for pain.,Fabrication,I prescribed Tylenol (2 tablets) every 6-8 hours for pain
+7,Vital signs: Not mentioned.,Faithful,
+8,"Physical exam: The patient has limited active and passive range of motion in the left shoulder, tenderness of the greater tuberosity of the humerus, and no tenderness at the sternoclavicular or clavicular joints.",Faithful,
+9,"The patient has good hand grip bilaterally, and neurovascular exam of the left arm shows brisk cap refill in less than 3 seconds and intact motor and sensation to light touch.",Faithful,
+10,Test Results: X-ray of the left shoulder shows no fracture or bony abnormality.,Faithful,
+11,"Assessment: The patient's symptoms are most likely due to rotator cuff tendinopathy, which is an injury to the tendons of the muscles of the left shoulder.",Faithful,
+12,Problem list: Rotator cuff tendinopathy; active; confirmed.,Fabrication,active; confirmed
+13,I ordered an MRI of the left shoulder to rule out any other conditions.,Faithful,
+14,I referred the patient for physical therapy for approximately 6-8 weeks.,Faithful,
+15,I instructed the patient to continue taking Tylenol as needed.,Faithful,
+16,"If symptoms do not improve, we may consider a steroid injection of the left shoulder.",Faithful,
+17,Follow-up: The patient will return in 2 weeks for a follow-up appointment.,Faithful,

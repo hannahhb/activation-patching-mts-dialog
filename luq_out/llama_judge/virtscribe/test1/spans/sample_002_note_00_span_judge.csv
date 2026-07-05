@@ -1,0 +1,26 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: Kayla Ward, a 7th-grade student, presents with a 2-year history of acne on her face, which is present most every day.",Faithful,
+1,"She has been using Persa-Gel and washing regularly, which is somewhat helpful.",Faithful,
+2,"There are no associated symptoms including itching, bleeding, or pain.",Faithful,
+3,No additional past medical history.,Faithful,
+4,"She lives with her parents and sister and has a dog, bird, and bunnies.",Faithful,
+5,She wears sunscreen in the summer with SPF 30.,Faithful,
+6,Past medical history: No additional past medical history.,Faithful,
+7,Review of systems: No additional symptoms in other organs.,Fabrication,No additional symptoms in other organs
+8,Current medications: Persa-Gel,Contextual,Current medications: Persa-Gel
+9,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+10,"Physical exam: Full exam is performed today, except for under the underwear and under the bra.",Faithful,
+11,Multiple benign nevi on the trunk and extremities.,Faithful,
+12,Scattered skin-colored papules.,Faithful,
+13,Open and closed comedones.,Faithful,
+14,"Erythematous papules on the face, primarily on the forehead and with also some on the central cheeks and chin.",Faithful,
+15,The chest and back are relatively spared.,Faithful,
+16,The remainder of the examination is normal.,Faithful,
+17,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+18,"Assessment: Mild to moderate acne, mostly comedonal with small inflammatory component.",Faithful,
+19,Problem list: Acne; Acne (status: active),Fabrication,Acne (status: active)
+20,"I prescribed adapalene 0.1% cream to be applied in a thin layer to the areas she generally gets acne, starting with a few nights a week and slowly working up to every night.",Faithful,
+21,"She will also use a mild cleanser and a non-comedogenic moisturizer with sunscreen SPF 30 or higher in the morning, and wash her face with the same cleanser and apply a non-comedogenic moisturizer at night.",Faithful,
+22,She will also use Clean and Clear Persa-Gel in a thin layer on the areas she generally gets acne.,Faithful,
+23,I advised her to wear sunscreen when outside due to potential sensitivity and dryness or irritation from the adapalene.,Faithful,
+24,I plan to see Kayla in six months to assess her progress.,Faithful,

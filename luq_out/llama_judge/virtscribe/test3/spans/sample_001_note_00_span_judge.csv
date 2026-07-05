@@ -1,0 +1,30 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 60-year-old right-handed male, presents with a 3-week history of numbness and tingling in both hands, which began after a car accident in December.",Causality,3-week history
+1,The symptoms have worsened over the last month.,Faithful,
+2,He also reports mild stiffness in his neck and has a history of a contusion to the head during the accident.,Faithful,
+3,"The numbness and tingling are more pronounced in the right hand, particularly in the area from the middle and ring finger to the forearm, and on the left hand from the pinky and ring finger.",Faithful,
+4,The symptoms are more noticeable at night and come and go throughout the day.,Faithful,
+5,"He reports some pain, soreness, and weakness in the hands, particularly when using them.",Faithful,
+6,The tingling is more pronounced when the hands hurt.,Faithful,
+7,He denies any loss of sensation in his hands or fingers.,Faithful,
+8,"He has been taking coreg for hypertension and lexapro for anxiety, and has a history of prediabetes, which was controlled through dietary changes.",Faithful,
+9,He denies any history of thyroid issues.,Faithful,
+10,"He reports fatigue, weight gain, excessive appetite, bloating, shortness of breath, leg swelling, always being hungry, nail bed changes, dryness, and itching.",Contextual,He reports
+11,"Past medical history: The patient has a history of hypertension, anxiety, and prediabetes, which was controlled through dietary changes.",Faithful,
+12,"He has also had a car accident in December, resulting in a contusion to the head and wrist fractures, for which he wears a splint.",Faithful,
+13,"Review of systems: Constitutional: fatigue and weight gain; GI: excessive appetite and bloating; Eyes: floaters; Cardiovascular: shortness of breath and leg swelling; Endocrine: always hungry; Skin: nail bed changes, dryness, itching; Musculoskeletal: gout and muscle pain.",Contextual,Review of systems:
+14,The remainder of the review of systems is negative.,Faithful,
+15,"Current medications: Coreg for hypertension, Lexapro for anxiety.",Faithful,
+16,Vital signs: [NOT MENTIONED],Fabrication,Vital signs:
+17,"The patient has sensation that is normal, except for diminished pin prick sensation in the third and fourth fingers on the right hand.",Faithful,
+18,"On the left hand, sensation is decreased in the fourth and fifth fingers.",Faithful,
+19,"Reflexes are 1+ and symmetric, with 2+ knees, and downgoing toes bilaterally.",Faithful,
+20,Tinel's sign is positive at both wrists and both elbows.,Faithful,
+21,Test Results: [NOT MENTIONED],Fabrication,Test Results:
+22,"Assessment: The patient has bilateral carpal tunnel syndrome, potentially exacerbated by his past trauma, causing pain and tingling in the hands.",Faithful,
+23,Problem list: Carpal tunnel syndrome; suspected cubital tunnel syndrome; past history of wrist fractures; hypertension; anxiety; prediabetes; gout; muscle pain; history of head contusion.,Faithful,
+24,"I prescribed a nerve test, which is an EMG test, to determine the exact location of the nerve irritation.",Faithful,
+25,I will schedule the patient for a follow-up visit after the tests are complete.,Faithful,
+26,"If the patient is still experiencing symptoms, we will consider a referral to the hand clinic for injections or carpal tunnel release surgery, or refer the patient to an orthopedist for the same treatment.",Faithful,
+27,The patient is to continue wearing his splints.,Faithful,
+28,Follow-up: The patient will return for a follow-up visit after the EMG test is complete.,Faithful,

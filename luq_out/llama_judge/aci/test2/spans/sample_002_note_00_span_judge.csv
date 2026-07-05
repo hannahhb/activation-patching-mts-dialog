@@ -1,0 +1,20 @@
+sentence_idx,sentence,label,note_span
+0,"The patient, Jeremy, a 38-year-old male, presented to the office with a complaint of lower back pain that started approximately four months ago after lifting heavy boxes during his son's college move-out.",Fabrication,a 38-year-old male
+1,He reports that the pain has persisted despite attempting physical therapy at his gym and taking over-the-counter pain medications such as Tylenol and ibuprofen.,Faithful,
+2,"He denies any fever, chills, or other systemic symptoms.",Faithful,
+3,He also reports a history of a total knee replacement in the spring of 2020.,Faithful,
+4,He is concerned about the persistent pain and numbness in his lower back and legs.,Causality,and numbness in his lower back and legs
+5,"The patient has a history of a total knee replacement in the spring of 2020, which he reports was successful and has had no issues since.",Faithful,
+6,"The patient denies any symptoms of bladder or bowel incontinence, fever, or chills.",Faithful,
+7,He also denies any weakness or numbness in his legs except for a brief episode of numbness in his toes after the initial injury.,Faithful,
+8,I prescribed ibuprofen for pain.,Negation,I prescribed ibuprofen for pain
+9,"Vital signs: The patient's vital signs are within normal limits, with a blood pressure of 117/56, heart rate of 68, and oxygen saturation of 95% on room air.",Faithful,
+10,The patient has bony protuberance of the C5-C6 vertebrae without pain to palpation.,Faithful,
+11,"The lumbar spine exam reveals decreased flexion and extension of the lower back, a positive straight leg raise, and spasm of the paraspinal muscles of the lumbar spine.",Faithful,
+12,The musculoskeletal exam shows equal strength in the lower extremities.,Faithful,
+13,Assessment: I suspect the patient has an acute disk herniation in the lumbar spine.,Faithful,
+14,Problem list: Lumbar spine disk herniation; active.,Fabrication,active
+15,I ordered a lumbar spine MRI to further evaluate the disk herniation.,Faithful,
+16,I referred the patient to a physical therapist through our health system for continued physical therapy.,Faithful,
+17,I prescribed meloxicam 15mg once a day to help with pain management.,Faithful,
+18,"I will see the patient again after the results of the lumbar spine MRI are available to discuss further treatment options, including potential steroid injections.",Faithful,

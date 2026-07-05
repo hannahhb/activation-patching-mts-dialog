@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Zachary, presents with right elbow pain, which he claims started since yesterday, but later corrects that it is actually his left arm that hurts.",Faithful,
+1,"He describes the pain as achiness and heaviness, which affects his entire left arm from the elbow to the neck.",Faithful,
+2,"He denies any specific incident that may have caused the pain, such as lifting heavy objects.",Faithful,
+3,"He has taken some Motrin for the pain, but it has not provided significant relief.",Faithful,
+4,"He also mentions that the pain is accompanied by chest pain, which he describes as coming and going, affecting his neck as well.",Faithful,
+5,He denies shortness of breath.,Faithful,
+6,"Past medical history: The patient has a history of hypertension, for which he is on 2.5mg of Norvasc, and diabetes, for which he is on 500mg of metformin.",Faithful,
+7,His A1C result from a previous visit was 7.2.,Faithful,
+8,Review of systems: The patient denies any other symptoms besides the elbow and chest pain.,Faithful,
+9,"Current medications: Norvasc 2.5mg daily for hypertension, Metformin 500mg daily for diabetes.",Faithful,
+10,"Vital signs: Blood pressure 150/90, which is slightly high.",Faithful,
+11,"Physical exam: The patient's physical exam reveals a slight murmur with his heart, which was not noted previously.",Faithful,
+12,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+13,Assessment: The patient presents with symptoms suggestive of a possible myocardial infarction (heart attack).,Faithful,
+14,Problem list: Hypertension; Diabetes; Suspected myocardial infarction; Chest pain; Elbow pain.,Faithful,
+15,I prescribed Aspirin and Nitroglycerin to help alleviate the chest pain.,Faithful,
+16,I will get an EKG to further evaluate the patient's heart.,Faithful,
+17,I will also perform a glucose test to assess the patient's blood sugar levels and adjust his medication as needed.,Faithful,
+18,The patient will be kept on 500mg of metformin for diabetes and 2.5mg of Norvasc for hypertension.,Faithful,
+19,The patient will be referred to the hospital for further evaluation and treatment of the suspected myocardial infarction.,Faithful,
+20,Follow-up: The patient will be admitted to the hospital for further evaluation and treatment.,Causality,The patient will be admitted to the hospital for further evaluation and treatment

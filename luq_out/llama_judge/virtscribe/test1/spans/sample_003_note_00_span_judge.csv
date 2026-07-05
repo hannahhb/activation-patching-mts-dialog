@@ -1,0 +1,28 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 25-year-old female, presents for evaluation of breast reduction.",Faithful,
+1,"She has been experiencing symptoms of macromastia, including back pain, neck pain, and bra strap indentations, for approximately 5-7 years.",Faithful,
+2,She has been considering breast reduction surgery for about 6-7 years and has attempted nonsurgical treatments with minimal relief.,Faithful,
+3,"She reports that her activities are limited due to the size of her breasts, particularly when performing exercises like working out, jumping, or running.",Faithful,
+4,She has a history of chiropractic care for back pain but does not take pain medication.,Faithful,
+5,She is currently a student studying psychology and consumes occasional wine.,Faithful,
+6,"She denies tobacco, drug, or alcohol use.",Causality,"denies tobacco, drug, or alcohol use"
+7,She is not interested in breastfeeding.,Contextual,She is not interested in breastfeeding
+8,"Past medical history: She has a family history of breast cancer, with her mother diagnosed at age 40.",Faithful,
+9,She has had mammograms recommended to start at age 30.,Faithful,
+10,"She has been healthy for the most part, having lost 10 pounds in the past few months and aiming to lose 20 more pounds.",Faithful,
+11,Review of systems: She experiences occasional numbness or tingling in her hands and sometimes has nipple pain.,Faithful,
+12,She does not have rashes underneath her breasts.,Faithful,
+13,Current medications: Propranolol for migraines.,Faithful,
+14,Objective: Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+15,"Physical exam: Physical exam findings reveal asymmetrical breasts with severe ptosis bilaterally, no nipple retraction or discharge, no breast tenderness, masses, or axillary lymphadenopathy is palpable.",Faithful,
+16,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+17,Assessment: The patient is an ideal candidate for bilateral reduction mammoplasty due to symptomatic macromastia and minimal relief from nonsurgical treatments.,Faithful,
+18,Problem list: Macromastia; Back pain; Neck pain; Bra strap indentations; Nipple pain; Occasional numbness or tingling in hands.,Faithful,
+19,I prescribed Propranolol as needed for migraines.,Contextual,I prescribed Propranolol as needed for migraines
+20,"I will document the patient's symptoms and measurements, which will be sent to the insurance company for approval.",Faithful,
+21,"Once the insurance company approves, we will schedule the patient for surgery.",Faithful,
+22,The surgery will involve removing excess tissue and lifting the breasts to alleviate back and neck pain.,Faithful,
+23,"The patient will have drains in place for about a week, and the incision will be covered with clear plastic tape to aid in healing.",Faithful,
+24,I will keep the patient overnight in the hospital for pain management and nausea control.,Faithful,
+25,"The patient will have activity restrictions for 6 weeks post-surgery, including no heavy lifting and no driving for 2-3 weeks.",Faithful,
+26,Follow-up: The patient will meet with the office again before surgery to review final instructions and answer any last-minute questions.,Faithful,

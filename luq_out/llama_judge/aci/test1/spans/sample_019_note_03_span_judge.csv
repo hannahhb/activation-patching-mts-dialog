@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 54-year-old male, presents with a 2-3 month history of stabbing, shooting pain in the right cheekbone area, which is exacerbated by cold temperatures and wind.",Faithful,
+1,The pain is described as excruciating and lasts from a few minutes to an hour.,Faithful,
+2,"The patient reports that he has tried ibuprofen, Motrin, and Tiger Balm without relief.",Faithful,
+3,He has had occasional headaches but no history of migraines or brain tumors.,Faithful,
+4,He rates the pain as a 10 on a scale of 1-10.,Faithful,
+5,"Past medical history: The patient has not mentioned any past medical conditions, treatments, or encounters.",Faithful,
+6,He denies any history of multiple sclerosis or brain tumors.,Faithful,
+7,"Review of systems: The patient reports no sensory loss, numbness, or tingling in the affected area.",Contextual,"no sensory loss, numbness, or tingling in the affected area"
+8,He denies weakness on the right side of his face and reports that his smile seems equal on both sides.,Faithful,
+9,He has no vision changes.,Faithful,
+10,Current medications: None mentioned.,Faithful,
+11,Vital signs: Not mentioned.,Faithful,
+12,"Physical exam: The patient's smile appears symmetric, and he can hear equally well on both sides of his face.",Faithful,
+13,The patient reports a little bit of numbness on the right side of his face when cotton tape is run along the side of his face.,Faithful,
+14,"When the doctor pokes the area with a needle, the patient reports a dull sensation on the right side and a sharp sensation on the left side.",Causality,dull sensation on the right side and a sharp sensation on the left side
+15,Test Results: The patient's MRI shows a small blood vessel abutting and pinching the trigeminal nerve.,Faithful,
+16,"Assessment: The patient has symptoms consistent with trigeminal neuralgia, a condition where nerve compression causes shooting electrical pain in the face.",Faithful,
+17,Problem list: Trigeminal neuralgia; active.,Faithful,
+18,I prescribed Tegretol 100mg twice a day for the patient's trigeminal neuralgia.,Fabrication,100mg twice a day
+19,I will schedule a follow-up appointment in one month to check on the patient's response to the medication.,Faithful,
+20,The patient will have genetic testing to ensure the medication is safe for them.,Faithful,
+21,Follow-up: The patient will return in one month to check on the medication's effectiveness and discuss further treatment options if necessary.,Faithful,

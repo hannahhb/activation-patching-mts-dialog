@@ -1,0 +1,150 @@
+{
+  "token_spans": [
+    {
+      "text": "a 38-year-old male, ",
+      "type": "num",
+      "severity": "3",
+      "char_start": 30,
+      "char_end": 50
+    },
+    {
+      "text": "albuterol ",
+      "type": "med",
+      "severity": "3",
+      "char_start": 1041,
+      "char_end": 1051
+    }
+  ],
+  "sentence_labels": {
+    "0": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "1": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "2": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "3": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "4": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "5": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "6": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "7": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "8": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "9": {
+      "faithful": "Not Faithful",
+      "type": "Fabrication"
+    },
+    "10": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "11": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "12": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "13": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "14": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "15": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "16": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "17": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "18": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "19": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "20": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "21": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "22": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "23": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "24": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "25": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    }
+  },
+  "note_html": "Subjective:\nHPI: The patient, <span class=\"hl-num\" data-hl-type=\"num\" data-hl-sev=\"3\" data-char-start=\"30\" data-char-end=\"50\" title=\"num \u00b7 severity 3 [30:50]\">a 38-year-old male, </span>presents with a 2-year history of living in the city and recently noticing shortness of breath, which he describes as catching his breath a lot more than usual, despite considering himself to be a healthy individual. He reports that this shortness of breath is sudden and without warning, and is not accompanied by other symptoms such as fever, rash, nausea, or vomiting. He mentions that he has a dog that suffers from eye issues, which he attributes to allergies. The patient has a history of heavy drinking, which is associated with diarrhea. He denies any issues with allergies in the past. He reports that his symptoms occur in various situations, including being in the house, near his cat, and outside.\n\nPast medical history: The patient has no history of allergies, no travel history, and no symptoms currently.\n\nReview of systems: The patient reports no symptoms in other organs that are relevant to his initial presentation.\n\nCurrent medications: The patient is currently using an <span class=\"hl-med\" data-hl-type=\"med\" data-hl-sev=\"3\" data-char-start=\"1041\" data-char-end=\"1051\" title=\"med \u00b7 severity 3 [1041:1051]\">albuterol </span>inhaler as prescribed by urgent care for his shortness of breath.\n\nObjective:\nVital signs: The patient's pulse is normal, and his pulse ox is normal.\n\nPhysical exam: The patient does not appear to be in distress, and there is no rash or angioedema. There is no audible stridor. The lungs exam reveals faint expiratory wheezing bilaterally in all lung fields.\n\nTest Results: The patient's chest x-ray and pulmonary function test results are normal.\n\nAssessment / Problem List:\nAssessment: The patient has newly diagnosed allergic asthma.\nProblem list: Asthma, active; Allergies, suspected.\n\nPlan:\nI prescribed albuterol inhaler as directed for the patient's shortness of breath. I also prescribed Singulair 10mg once daily to help decrease the occurrences of asthma symptoms. I plan to proceed with allergy testing, starting with skin testing, to identify the triggers of the patient's asthma. I will schedule the patient to return in one week for the skin testing. I advised the patient to continue using his albuterol inhaler as soon as he feels any symptoms coming on.\n\nFollow-up: The patient is scheduled to return in one week for skin testing."
+}

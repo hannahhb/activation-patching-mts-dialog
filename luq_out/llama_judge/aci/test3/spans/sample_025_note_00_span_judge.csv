@@ -1,0 +1,19 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 30-year-old male, presents with a 2-week history of intermittent flank pain radiating to the groin, which is exacerbated by fluid intake and physical activity.",Fabrication,a 30-year-old male
+1,"The pain is described as a 1-4/10, with periods of more intense pain.",Faithful,
+2,"The patient reports no fever, nausea, vomiting, or chills.",Faithful,
+3,"He has a history of passing kidney stones in the past, including a couple of instances requiring surgery, and has a family history of kidney stones.",Faithful,
+4,"Past medical history: The patient has a history of kidney stones, including self-passed stones and surgical interventions.",Faithful,
+5,He has a family history of kidney stones.,Faithful,
+6,"Review of systems: The patient reports no symptoms in other organs, including no abdominal tenderness, except for the flank pain and right-sided CVA tenderness.",Faithful,
+7,Current medications: I prescribed ibuprofen as needed for pain.,Contextual,I prescribed
+8,"Vital signs: Blood pressure is elevated, likely due to pain, but other vital signs are not mentioned.",Faithful,
+9,"Physical exam: The patient's abdomen is not tender to palpation, except for the right side, where there is CVA tenderness.",Faithful,
+10,"Test Results: A CT scan shows a 0.5 cm stone located on the proximal right ureter, with no hydronephrosis.",Faithful,
+11,"Assessment: The patient has a kidney stone, approximately 0.5 cm in size, located on the proximal right ureter, with intermittent flank pain and CVA tenderness.",Faithful,
+12,Problem list: Kidney stone; active; suspected.,Fabrication,active; suspected
+13,I will continue the patient on ibuprofen as needed for pain and prescribe tramadol 50mg as needed for breakthrough pain.,Contextual,I will continue
+14,"I will also order a BMP, urinalysis, and urine culture to rule out infection.",Contextual,I will also order
+15,The patient will continue to use a strainer when urinating to try to catch the stone.,Faithful,
+16,"I will see the patient again in 1-2 weeks to reassess symptoms and plan further treatment, including lithotripsy if necessary.",Contextual,I will see
+17,Follow-up: The patient will return in 1-2 weeks for a follow-up appointment.,Faithful,

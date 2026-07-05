@@ -1,0 +1,19 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 39-year-old female with a history of quadriplegia due to a prior spinal cord injury, presented with increasing concerns for spasms and lightheadedness, significant constipation, and reported diaphoresis.",Faithful,
+1,"She was evaluated in the emergency department and treated with IV antibiotic therapy for a suspected urinary tract infection, but she believes this was less likely and thinks her hospitalization was more likely due to her dysreflexia.",Faithful,
+2,"She takes miralax daily as a primary treatment for constipation and lactulose for severe constipation, but has not had a regular bowel movement in a while.",Faithful,
+3,She is hesitant to get the COVID-19 vaccine due to concerns about side effects.,Faithful,
+4,"Past medical history: Quadriplegia due to a prior spinal cord injury, history of constipation, and possibly dysreflexia.",Faithful,
+5,"Review of systems: The patient's symptoms of spasms, lightheadedness, and diaphoresis have resolved, but she is concerned about the potential for future urinary tract infections and COVID-19.",Causality,have resolved
+6,"Current medications: Miralax, lactulose.",Faithful,
+7,Objective:,Faithful,
+8,Vital signs: Not mentioned.,Faithful,
+9,"Physical exam: The patient's vital signs were not taken during the visit, but she did not report any pain or discomfort during the examination.",Faithful,
+10,Test Results: Not mentioned.,Faithful,
+11,Assessment / Problem List:,Faithful,
+12,"Assessment: The patient's symptoms of spasms, lightheadedness, and diaphoresis were likely due to her dysreflexia, which is a common complication of quadriplegia.",Causality,were likely due to her dysreflexia
+13,Problem list: Quadriplegia; Constipation; Dysreflexia; Leukocytosis (status: confirmed); COVID-19 vaccine status (status: unknown).,Faithful,
+14,Plan:,Faithful,
+15,"I recommended that the patient return in three to four weeks for updated fasting labs, including a CBC, to ensure her white blood cell count is normalizing.",Faithful,
+16,"I also discussed the importance of getting the COVID-19 vaccine with her, as I believe it is the best preventative measure against COVID-19, especially given her quadriplegia status.",Faithful,
+17,Follow-up: The patient will return in two to three weeks for a follow-up appointment to check her CBC and fasting labs.,Causality,two to three weeks

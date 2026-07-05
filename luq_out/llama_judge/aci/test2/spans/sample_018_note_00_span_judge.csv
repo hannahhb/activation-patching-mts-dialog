@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,HPI: Elizabeth is a 53-year-old female complaining of chest pain that started approximately three months ago.,Faithful,
+1,"The pain is described as a dull, pressure-like sensation that occurs mainly when she walks and has not been relieved by rest.",Faithful,
+2,She denies any chest pain at the moment.,Faithful,
+3,"She has a past medical history of diabetes and high blood pressure, although she was unaware of her high blood pressure until today.",Faithful,
+4,She is currently on metformin 500mg twice a day for her diabetes.,Faithful,
+5,Past medical history: Elizabeth has a history of diabetes and is currently on metformin 500mg twice a day.,Faithful,
+6,She also has a family history of heart disease.,Faithful,
+7,"She is a smoker, but the amount is not specified.",Fabrication,She is a smoker
+8,"Review of systems: Elizabeth denies any shortness of breath, sweats, clamminess, or nausea.",Faithful,
+9,Current medications: Metformin 500mg twice a day.,Faithful,
+10,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+11,"Physical exam: The physical exam was normal except for a 2/6 systolic ejection murmur, and 1+ nonpitting edema in the lower legs.",Faithful,
+12,"Test Results: EKG performed today was normal, showing no signs of a heart attack.",Faithful,
+13,"Assessment: The patient is a 53-year-old female with suspected unstable angina, diabetes, and high blood pressure.",Faithful,
+14,Problem list: Unstable angina; diabetes; high blood pressure; suspected heart disease.,Faithful,
+15,I prescribed aspirin 81mg once a day for chest pain management.,Faithful,
+16,I also prescribed nitroglycerin for the patient to take if the chest pain does not resolve after 1-2 pills.,Faithful,
+17,I referred the patient to cardiology for further evaluation and stress testing.,Faithful,
+18,I instructed the patient to return in two weeks for follow-up.,Faithful,
+19,I also instructed the patient to use a blood pressure cuff at home and enter the readings in EPIC.,Faithful,
+20,Follow-up: The patient is to return in two weeks for follow-up and to have a stress test.,Faithful,

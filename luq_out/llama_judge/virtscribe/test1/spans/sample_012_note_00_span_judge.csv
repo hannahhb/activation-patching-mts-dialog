@@ -1,0 +1,19 @@
+sentence_idx,sentence,label,note_span
+0,"The patient, a 2-year-old male, has been experiencing symptoms of a runny nose, stuffiness, cough, and pulling on his ears since last night.",Faithful,
+1,He also has been rubbing his nose excessively.,Faithful,
+2,"The patient has a low-grade fever of 100.3°F, and his appetite has been decreased, eating only 7 ounces of formula from a bottle this morning and refusing to eat cereal.",Faithful,
+3,"The patient's energy level is described as irritable, and he is having difficulty sleeping.",Faithful,
+4,"The patient's older sister has been sick, and the patient's family has been exposed to a nephew with a sinus infection.",Faithful,
+5,Current medications: I prescribed acetaminophen (Tylenol) for fever reduction.,Contextual,I prescribed
+6,Past medical history: The patient has a history of cradle cap.,Faithful,
+7,"Review of systems: The patient has been experiencing symptoms of a respiratory infection, including a runny nose, stuffiness, and cough.",Faithful,
+8,He also has been pulling on his ears and rubbing his nose excessively.,Faithful,
+9,Vital signs: The patient's rectal temperature was 100.3°F.,Faithful,
+10,Physical exam: The patient's ears looked okay during the examination.,Faithful,
+11,Test Results: [NOT MENTIONED],Fabrication,Test Results
+12,Assessment / Problem List: The patient has a viral upper respiratory infection; viral upper respiratory infection: active; cradle cap: active.,Faithful,
+13,Plan: I advised the patient's family to continue with fluids and rest.,Contextual,I advised
+14,"I recommended watching for a barky cough, which would necessitate giving the patient a half teaspoon of his sister's medicine.",Contextual,I recommended
+15,I also suggested using Zarbee's for the stuffy nose and a dose of Zarbee's for children under a year of age.,Contextual,I also suggested
+16,"The family was instructed to use the regular strength of Head and Shoulders, Selsun Blue, or Nizoral A.D. shampoo for the cradle cap, and to continue using the soft brush and baby oil to remove scales.",Contextual,The family was instructed
+17,Follow-up: The patient will be seen again in one week.,Faithful,

@@ -1,0 +1,26 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Philip, presented with a one-week history of right elbow pain that began after playing lacrosse with his children.",Faithful,
+1,"He reports that the pain is sharp and radiates down his forearm, worsening with movement of the elbow.",Faithful,
+2,"He denies any history of falling but mentions that his son was checking him several times during the game, which may have contributed to the injury.",Faithful,
+3,"He has tried taking Advil, which provided some relief.",Faithful,
+4,Past medical history: The patient has a past medical history of hypertension and diabetes.,Faithful,
+5,He is currently on 20mg of lisinopril for hypertension and 500mg of metformin for diabetes.,Faithful,
+6,"He reports following a Mediterranean diet, which is low in salt.",Faithful,
+7,Review of systems: [NOT MENTIONED],Fabrication,Review of systems: [NOT MENTIONED]
+8,Current medications:,Faithful,
+9,Lisinopril 20mg daily for hypertension,Faithful,
+10,Metformin 500mg daily for diabetes,Faithful,
+11,"Vital signs: The patient's blood pressure was 150/90, which is high.",Faithful,
+12,"[NOT MENTIONED for pulse rate, oxygen saturation, and temperature]",Fabrication,"[NOT MENTIONED for pulse rate, oxygen saturation, and temperature]"
+13,"Physical exam: The patient's lungs are clear bilaterally, and the heart exam reveals a grade 2/6 systolic ejection murmur, which has been present before.",Faithful,
+14,"The right elbow exam shows pain to palpation of the olecranon area of the posterior elbow, mild pain with flexion and extension, and normal range of motion.",Faithful,
+15,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+16,"Assessment: The patient has a right elbow contusion, likely caused by a lacrosse stick check from his son, resulting in pain and swelling.",Faithful,
+17,Problem list:,Faithful,
+18,Elbow contusion; Hypertension; Diabetes; Systolic ejection murmur (past/confirmed),Faithful,
+19,I prescribed 800mg of ibuprofen twice daily for the elbow contusion to help with pain and swelling.,Faithful,
+20,I instructed the patient to ice the elbow three times a day for 20 minutes each time.,Faithful,
+21,I advised the patient to avoid playing lacrosse with his son for the next couple of weeks to allow the elbow to heal.,Faithful,
+22,I will continue the patient on 20mg of lisinopril daily for hypertension and 500mg of metformin daily for diabetes.,Faithful,
+23,We will also obtain an A1c to check the patient's blood sugar levels and adjust the metformin dosage as needed.,Faithful,
+24,"Follow-up: We will see the patient next time, and the nurse will bring in the prescriptions.",Faithful,

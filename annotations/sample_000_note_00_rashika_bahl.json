@@ -13,19 +13,23 @@
     },
     "2": {
       "faithful": "Not Faithful",
-      "type": "Contextual"
+      "type": "Contextual",
+      "severity": "N/A"
     },
     "3": {
       "faithful": "Not Faithful",
-      "type": "Contextual"
+      "type": "Contextual",
+      "severity": "N/A"
     },
     "4": {
-      "faithful": "Not Faithful",
-      "type": "Fabrication"
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
     },
     "5": {
-      "faithful": "Not Faithful",
-      "type": "Contextual"
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
     },
     "6": {
       "faithful": "Faithful",
@@ -84,7 +88,8 @@
     },
     "17": {
       "faithful": "Not Faithful",
-      "type": "Contextual"
+      "type": "Negation",
+      "severity": "N/A"
     },
     "18": {
       "faithful": "Faithful",
@@ -93,7 +98,7 @@
     },
     "19": {
       "faithful": "Not Faithful",
-      "type": "Negation",
+      "type": "Contextual",
       "severity": "N/A"
     },
     "20": {
@@ -108,7 +113,8 @@
     },
     "22": {
       "faithful": "Not Faithful",
-      "type": "Negation"
+      "type": "Negation",
+      "severity": "N/A"
     },
     "23": {
       "faithful": "Faithful",

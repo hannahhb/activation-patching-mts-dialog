@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Gregory, presented with right ankle pain and swelling after falling on the ice.",Faithful,
+1,"He reports that he was being careful but slipped on an icy patch, and his friend helped him up.",Faithful,
+2,"He has been keeping the ankle elevated, icing it, and taking ibuprofen, which has provided some relief.",Faithful,
+3,He denies numbness in the foot.,Faithful,
+4,"He has a history of playing soccer, but does not recall injuring this ankle before.",Faithful,
+5,His children are also involved in soccer and his oldest son will soon be playing in a local league.,Faithful,
+6,"Past medical history: The patient has a history of playing soccer, which may indicate a risk for ankle injuries.",Fabrication,which may indicate a risk for ankle injuries
+7,Review of systems: The patient denies numbness in the foot.,Fabrication,Review of systems
+8,Current medications: The patient has been taking ibuprofen as needed for pain.,Faithful,
+9,"Vital signs: Blood pressure, pulse rate, oxygen saturation, and temperature were not mentioned.",Faithful,
+10,Physical exam: The patient has ecchymosis (bruising) on the skin over the lateral malleolus and associated swelling.,Faithful,
+11,"There is tenderness to palpation anterolaterally in the soft tissue, but no laxity on anterior drawer and inversion stress, and no bony tenderness on palpation of the foot.",Faithful,
+12,The neurovascular exam shows capillary refill less than three seconds with strong dorsalis pedis pulse and sensation intact to light touch.,Faithful,
+13,Test Results: The right ankle x-ray showed no fracture.,Faithful,
+14,Assessment: The patient's symptoms are consistent with a right ankle sprain.,Faithful,
+15,Problem list: Right ankle sprain; active.,Fabrication,Problem list
+16,I prescribed ibuprofen as needed for pain.,Faithful,
+17,I am ordering an aircast to help stabilize the ankle and crutches for the next one to two days.,Faithful,
+18,The patient will continue to ice the ankle and keep it elevated.,Faithful,
+19,The patient will be followed up in two weeks to assess progress and determine readiness to return to soccer.,Faithful,
+20,Follow-up: The patient will be seen in two weeks to assess progress and determine readiness to return to soccer.,Fabrication,Follow-up

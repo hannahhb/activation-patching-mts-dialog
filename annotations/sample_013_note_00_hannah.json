@@ -1,0 +1,201 @@
+{
+  "token_spans": [
+    {
+      "text": "30-year-old female",
+      "type": "incr",
+      "severity": "3",
+      "char_start": 32,
+      "char_end": 50
+    },
+    {
+      "text": "Flovent (fluticasone) 110 micrograms 1 puff twice per day for asthma",
+      "type": "med",
+      "severity": "3",
+      "char_start": 1124,
+      "char_end": 1192
+    }
+  ],
+  "sentence_labels": {
+    "0": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "1": {
+      "faithful": "Not Faithful",
+      "type": "Fabrication",
+      "severity": "N/A"
+    },
+    "2": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "3": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "4": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "5": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "6": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "7": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "8": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "9": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "10": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "11": {
+      "faithful": "Not Faithful",
+      "type": "Fabrication",
+      "severity": "N/A"
+    },
+    "12": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "13": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "14": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "15": {
+      "faithful": "Not Faithful",
+      "type": "Fabrication",
+      "severity": "N/A"
+    },
+    "16": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "17": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "18": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "19": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "20": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "21": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "22": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "23": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "24": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "25": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "27": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "28": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "29": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "30": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "31": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "32": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "33": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "34": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "35": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "36": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    }
+  },
+  "note_html": "Subjective:\nHPI: The patient, a <span class=\"hl-incr\" data-hl-type=\"incr\" data-hl-sev=\"3\" data-char-start=\"32\" data-char-end=\"50\" title=\"incr \u00b7 severity 3 [32:50]\">30-year-old female</span>, presents with a chronic history of asthma, experiencing frequent exacerbations, particularly when she gets sick with a cold, and occasionally when exposed to her aunt's cat. She reports using her albuterol inhaler daily, taking two puffs every 4-6 hours as needed, and also occasionally using steroids after urgent care visits. She has had several urgent care visits and one emergency department visit in the past year, with the most recent exacerbation occurring about a month ago. She denies smoking, vaping, or marijuana use and has no history of seasonal allergies. She enjoys hiking and outdoor activities but has to be careful due to her asthma symptoms.\n\nPast medical history: The patient has a history of asthma, with a past hospitalization at age 8 due to asthma symptoms. She has had multiple urgent care visits and one emergency department visit in the past year.\n\nReview of systems: The patient reports coughing and wheezing symptoms, but no other symptoms in other organs.\n\nCurrent medications: \nVentolin (albuterol) 2 puffs every 4-6 hours p.r.n. for asthma\n<span class=\"hl-med\" data-hl-type=\"med\" data-hl-sev=\"3\" data-char-start=\"1124\" data-char-end=\"1192\" title=\"med \u00b7 severity 3 [1124:1192]\">Flovent (fluticasone) 110 micrograms 1 puff twice per day for asthma</span>\n\nObjective:\nVital signs: \nBlood pressure: 128/82\nPulse rate: 16\nOxygen saturation: 99% on room air\nRespiratory rate: 16\n\nPhysical exam: \nDiminished lung sounds throughout with occasional slight expiratory wheeze bilaterally\nTrachea is midline\nNo lymphadenopathy\nNo carotid bruit\nStrong bilateral pulses\nNo clubbing on fingertips\nBrisk capillary refill\n\nTest Results: \nPulmonary function test results consistent with asthma\n\nAssessment / Problem List:\nAssessment: The patient has moderate intermittent asthma, which is confirmed by pulmonary function test results and clinical presentation.\n\nProblem list: Asthma (active); History of asthma hospitalization (past); History of asthma exacerbations (active)\n\nPlan:\nI prescribed Flovent (fluticasone) 110 micrograms 1 puff twice per day to help prevent daily symptoms and reduce the need for rescue inhaler use. I advised the patient to continue using Ventolin (albuterol) 2 puffs every 4-6 hours as needed for acute exacerbations. I will put together an asthma action plan to help manage symptoms and identify triggers. I will see the patient in 30 days to reassess symptoms and adjust treatment as needed.\n\nFollow-up: The patient will be seen in 30 days to reassess symptoms and adjust treatment as needed."
+}

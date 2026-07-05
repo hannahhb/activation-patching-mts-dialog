@@ -17,7 +17,7 @@ Sentence-level  (one label + severity per sentence, Asagri et al.):
 Saves character offsets (char_start, char_end) for every token span.
 
 Sources:
-  - generations:  luq_out/llama/generations/sample_NNN_generations.json
+  - generations:  luq_out/llama/generations/aci/test1/sample_NNN_generations.json
   - sentences:    luq_out/llama/sentences/sample_NNN_note_KK_sentences.csv
   - output:       annotations/sample_NNN_note_KK.json
 
@@ -35,10 +35,17 @@ from flask import Flask, render_template_string, request, jsonify
 
 # ── Paths ──────────────────────────────────────────────────────────────────
 BASE       = Path(__file__).parent
-GEN_DIR    = BASE / "luq_out" / "llama" / "generations"
+GEN_DIR    = BASE / "luq_out" / "llama" / "generations" / "aci" / "test1"
 SENT_DIR   = BASE / "luq_out" / "llama" / "sentences"
 ANNOT_DIR  = BASE / "annotations"
 ANNOT_DIR.mkdir(exist_ok=True)
+
+# The three human annotators whose sentence_labels get cross-checked for
+# disagreements. "consensus" is a fourth pseudo-annotator identity (reuses
+# the existing annot_path/save machinery) used to record the adjudicated
+# final label once a disagreement is resolved.
+ANNOTATORS = ["hannah", "rashika_bahl", "daniel"]
+CONSENSUS_NAME = "consensus"
 
 app = Flask(__name__)
 
@@ -116,6 +123,61 @@ def load_annotations(sid, nid, annotator="default"):
         data["sentence_labels"] = {k: _migrate(v) for k, v in sl.items()}
         return data
     return {"token_spans": [], "sentence_labels": {}, "note_html": ""}
+
+def annotated_sample_notes():
+    """(sid, nid) pairs that have a saved annotation file from >=1 of ANNOTATORS."""
+    combos = set()
+    for name in ANNOTATORS:
+        for p in ANNOT_DIR.glob(f"sample_*_note_*_{sanitize_name(name)}.json"):
+            m = re.match(r"sample_(\d+)_note_(\d+)_", p.stem)
+            if m:
+                combos.add((int(m.group(1)), int(m.group(2))))
+    return sorted(combos)
+
+def find_disagreements():
+    """For every (sample, note) with >=2 annotators, compare sentence_labels
+    per sentence index. A disagreement is: annotators don't all give the same
+    'faithful' verdict, OR (given they all say Not Faithful) they don't all
+    give the same error 'type'. Returns a list of dicts, one per disagreed
+    sentence, each with every annotator's response plus any existing
+    consensus decision."""
+    out = []
+    for sid, nid in annotated_sample_notes():
+        per_annotator = {}
+        for name in ANNOTATORS:
+            if annot_path(sid, nid, name).exists():
+                per_annotator[name] = load_annotations(sid, nid, name).get("sentence_labels", {})
+        if len(per_annotator) < 2:
+            continue
+
+        transcript, note, n_notes = load_generation(sid, nid)
+        if transcript is None:
+            continue
+        sentences = load_sentences(sid, nid, note)
+        consensus_labels = load_annotations(sid, nid, CONSENSUS_NAME).get("sentence_labels", {})
+
+        all_idxs = set()
+        for labels in per_annotator.values():
+            all_idxs.update(int(k) for k in labels.keys())
+
+        for idx in sorted(all_idxs):
+            key = str(idx)
+            responses = {name: per_annotator[name][key]
+                        for name in ANNOTATORS if name in per_annotator and key in per_annotator[name]}
+            if len(responses) < 2:
+                continue
+            faiths = {r.get("faithful") for r in responses.values()}
+            not_faithful_types = {r.get("type") for r in responses.values() if r.get("faithful") == "Not Faithful"}
+            disagree = len(faiths) > 1 or len(not_faithful_types) > 1
+            if not disagree:
+                continue
+            out.append({
+                "sid": sid, "nid": nid, "idx": idx,
+                "sentence": sentences[idx] if idx < len(sentences) else "<<sentence index out of range>>",
+                "responses": responses,
+                "consensus": consensus_labels.get(key),
+            })
+    return out
 
 # ── HTML Template ──────────────────────────────────────────────────────────
 TEMPLATE = r"""
@@ -341,6 +403,7 @@ TEMPLATE = r"""
     <button onclick="showNameModal()">Change</button>
   </div>
   <button class="btn-guide" onclick="toggleGuide()">📖 Guidelines</button>
+  <button class="btn-guide" onclick="window.location.href='/disagreements'">⚖️ Disagreements</button>
   <button onclick="saveAnnotations()">Save</button>
   <span class="saved-msg" id="saved-msg">✓ Saved</span>
 </header>
@@ -845,6 +908,115 @@ function closeGuide() {
 </html>
 """
 
+# ── Disagreements page template ─────────────────────────────────────────────
+DISAGREEMENTS_TEMPLATE = r"""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Disagreements — Annotator</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, sans-serif; font-size: 14px; background: #f1f5f9; }
+  header {
+    display: flex; align-items: center; gap: 14px;
+    padding: 9px 18px; background: #0f172a; color: #fff; position: sticky; top:0; z-index:100;
+  }
+  header h1 { font-size: 14px; font-weight: 600; flex: 1; }
+  header button {
+    padding: 3px 9px; border-radius: 4px; border: none; cursor: pointer; font-size: 12px;
+    background: #3b82f6; color: #fff; font-weight: 600;
+  }
+  header button:hover { background: #2563eb; }
+  header .count { color:#94a3b8; font-size: 12px; }
+
+  .content { padding: 16px; max-width: 1100px; margin: 0 auto; }
+  .empty { text-align:center; color:#64748b; padding: 60px 20px; font-size: 14px; }
+
+  .card {
+    background:#fff; border:1px solid #e2e8f0; border-radius:8px; margin-bottom: 14px; overflow:hidden;
+  }
+  .card-hdr {
+    display:flex; align-items:center; gap:10px;
+    padding: 8px 14px; background:#f8fafc; border-bottom:1px solid #e2e8f0;
+    font-size: 11px; color:#64748b; font-weight:700; text-transform:uppercase; letter-spacing:.05em;
+  }
+  .card-hdr .loc { flex:1; }
+  .card-hdr a {
+    background:#3b82f6; color:#fff; text-decoration:none; padding: 4px 10px; border-radius: 4px;
+    font-size: 11px; font-weight: 700; text-transform: none; letter-spacing: normal;
+  }
+  .card-hdr a:hover { background:#2563eb; }
+  .card-body { padding: 12px 14px; }
+  .sent-text { font-size: 13px; color:#334155; margin-bottom: 10px; line-height:1.6; padding: 8px 10px; background:#f8fafc; border-left:3px solid #cbd5e1; border-radius:0 4px 4px 0; }
+
+  table.resp-table { width:100%; border-collapse: collapse; font-size: 12px; }
+  table.resp-table th { text-align:left; padding: 5px 8px; color:#94a3b8; font-weight:700; text-transform:uppercase; font-size:10px; letter-spacing:.04em; border-bottom:1px solid #e2e8f0; }
+  table.resp-table td { padding: 6px 8px; border-bottom:1px solid #f1f5f9; }
+  .tag { display:inline-block; padding:1px 8px; border-radius:10px; font-size:11px; font-weight:700; color:#fff; }
+  .tag-faithful    { background:#16a34a; }
+  .tag-fabrication { background:#dc2626; }
+  .tag-negation    { background:#ea580c; }
+  .tag-causality   { background:#7c3aed; }
+  .tag-contextual  { background:#0891b2; }
+  .tag-none        { background:#94a3b8; }
+  .missing { color:#cbd5e1; font-style:italic; }
+  .consensus-row td { background:#eff6ff; font-weight:600; }
+  .consensus-empty { color:#94a3b8; font-style:italic; }
+</style>
+</head>
+<body>
+<header>
+  <h1>⚖️ Disagreements</h1>
+  <span class="count">{{ items|length }} disagreed sentence(s) across {{ n_samples }} sample/note pairs</span>
+  <button onclick="window.location.href='/'">← Back to Annotator</button>
+</header>
+<div class="content">
+{% if not items %}
+  <div class="empty">No disagreements found yet — needs at least 2 of {{ annotators|join(', ') }} to have annotated the same sample/note.</div>
+{% endif %}
+{% for it in items %}
+  <div class="card">
+    <div class="card-hdr">
+      <span class="loc">Sample {{ "%03d"|format(it.sid) }} · Note {{ "%02d"|format(it.nid) }} · Sentence {{ it.idx }}</span>
+      <a href="/?sample={{ it.sid }}&note={{ it.nid }}&annotator=consensus#sb-{{ it.idx }}">Re-annotate as consensus ▸</a>
+    </div>
+    <div class="card-body">
+      <div class="sent-text">{{ it.sentence }}</div>
+      <table class="resp-table">
+        <tr><th>Annotator</th><th>Faithful?</th><th>Type</th><th>Severity</th></tr>
+        {% for name in annotators %}
+        {% set r = it.responses.get(name) %}
+        <tr>
+          <td>{{ name }}</td>
+          {% if r %}
+          <td><span class="tag tag-{{ 'faithful' if r.faithful=='Faithful' else 'none' }}">{{ r.faithful or '—' }}</span></td>
+          <td>{% if r.type %}<span class="tag tag-{{ r.type|lower }}">{{ r.type }}</span>{% else %}—{% endif %}</td>
+          <td>{{ r.severity or '—' }}</td>
+          {% else %}
+          <td colspan="3" class="missing">not annotated</td>
+          {% endif %}
+        </tr>
+        {% endfor %}
+        <tr class="consensus-row">
+          <td>Consensus</td>
+          {% if it.consensus %}
+          <td><span class="tag tag-{{ 'faithful' if it.consensus.faithful=='Faithful' else 'none' }}">{{ it.consensus.faithful or '—' }}</span></td>
+          <td>{% if it.consensus.type %}<span class="tag tag-{{ it.consensus.type|lower }}">{{ it.consensus.type }}</span>{% else %}—{% endif %}</td>
+          <td>{{ it.consensus.severity or '—' }}</td>
+          {% else %}
+          <td colspan="3" class="consensus-empty">not decided yet — click "Re-annotate as consensus" above</td>
+          {% endif %}
+        </tr>
+      </table>
+    </div>
+  </div>
+{% endfor %}
+</div>
+</body>
+</html>
+"""
+
 # ── Server-side helpers ────────────────────────────────────────────────────
 def format_transcript(text):
     def replace_turn(m):
@@ -899,6 +1071,17 @@ def save():
     p = annot_path(sid, nid, annotator)
     p.write_text(json.dumps(annot, indent=2))
     return jsonify({"status": "ok", "path": str(p)})
+
+@app.route("/disagreements")
+def disagreements_page():
+    items = find_disagreements()
+    n_samples = len({(it["sid"], it["nid"]) for it in items})
+    return render_template_string(
+        DISAGREEMENTS_TEMPLATE,
+        items=items,
+        annotators=ANNOTATORS,
+        n_samples=n_samples,
+    )
 
 # ── CLI ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":

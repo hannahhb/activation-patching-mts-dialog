@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Jack, presented with neck pain that started approximately one week ago after a car accident where he hit the back of his car and his head and neck were thrown forward.",Faithful,
+1,"He describes the pain as a 7/10 severity, which is not constant but worsens with movement of his neck.",Faithful,
+2,"He has tried ibuprofen, which provided some relief, but it has not been effective.",Faithful,
+3,"He reports pain in the back of his neck, with some pain radiating to the front when he moves his neck.",Fabrication,with some pain radiating to the front when he moves his neck
+4,He denies any worsening of the pain over time.,Causality,over time
+5,"He has had occasional headaches and is able to turn his neck from side to side, but with pain.",Faithful,
+6,He denies any hearing or visual disturbances.,Faithful,
+7,"Past medical history: The patient has a history of playing football, but no previous issues with his neck.",Faithful,
+8,Review of systems: The patient denies any symptoms in other organs that are relevant to his initial presentation.,Faithful,
+9,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+10,Objective: Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+11,"Physical exam: The patient had positive pain to palpation of the soft tissues of the neck, with pain on flexion, extension, and rotation of the neck.",Faithful,
+12,He had no pain on pressing on his back or shoulders.,Faithful,
+13,Test Results: The results of the x-ray show no signs of fracture or bony abnormalities.,Faithful,
+14,Assessment: I believe the patient has neck strain from his car accident.,Faithful,
+15,Problem list: Neck strain; Suspected whiplash.,Faithful,
+16,I prescribed Motrin 600mg every 6-8 hours for pain management.,Faithful,
+17,I also prescribed Flexeril 10mg every 12 hours as needed for muscle relaxation.,Faithful,
+18,I advised the patient to be conservative with his neck movement and avoid straining it.,Faithful,
+19,I ordered an MRI to rule out any nerve impingement or other complications.,Faithful,
+20,I will refer the patient to either physical rehab or a chiropractor once the MRI results are available.,Faithful,
+21,Follow-up: I will follow up with the patient to discuss the results of the MRI and further management.,Fabrication,Follow-up: I will follow up with the patient to discuss the results of the MRI and further management

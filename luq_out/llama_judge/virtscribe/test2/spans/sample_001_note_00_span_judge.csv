@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,HPI: Mr. Roberts is a 49-year-old male with a history of hypertension and palpitations.,Faithful,
+1,"He presented to the emergency room in March with high blood pressure and palpitations, which he attributed to a panic attack triggered by caffeine consumption and lack of breakfast.",Faithful,
+2,He has a family history of hypertension and has been taking medication for it.,Faithful,
+3,He is currently on Benicar HCT (hydrochlorothiazide) and amlodipine.,Faithful,
+4,"His blood pressure has been running at 146-155 mmHg, despite taking his medications as prescribed.",Faithful,
+5,Past medical history: Mr. Roberts has a history of hypertension and a family history of the same condition.,Faithful,
+6,Review of systems: He denies any other symptoms.,Fabrication,He denies any other symptoms
+7,"Current medications: Amlodipine 10 milligrams daily, Benicar HCT (hydrochlorothiazide) 40-25 milligrams daily.",Faithful,
+8,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+9,Physical exam: The patient's heart and lungs sound good.,Faithful,
+10,No swelling in the ankles and feet.,Faithful,
+11,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+12,"Assessment: Mr. Roberts presents with resistant hypertension, despite being on maximum doses of three medications.",Causality,maximum doses of three medications
+13,Problem list: Hypertension; Resistant Hypertension; [NOT MENTIONED],Fabrication,[NOT MENTIONED]
+14,I have added spironolactone to his medication regimen to address potential aldosterone-driven hypertension.,Faithful,
+15,"I have discussed the potential risks and side effects of the medication, including electrolyte disturbances, dehydration, and gynecomastia.",Faithful,
+16,I have also instructed him to hydrate regularly and monitor his electrolyte levels.,Faithful,
+17,We will schedule a follow-up appointment in two weeks to check his blood pressure and electrolytes.,Faithful,
+18,"If the medication does not work, we will consider referring him to the resistant hypertension clinic for further evaluation and potential treatment, including the renal denervation procedure.",Faithful,
+19,Follow-up: We will see Mr. Roberts in two weeks to check his blood pressure and electrolytes.,Faithful,

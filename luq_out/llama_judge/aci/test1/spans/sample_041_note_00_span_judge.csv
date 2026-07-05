@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient presents with a 2-3 week history of right shoulder pain, which worsened after working on various projects in his backyard, including lifting heavy objects.",Faithful,
+1,"He describes the pain as sore and tender on the outside of the shoulder, particularly when raising his arm.",Faithful,
+2,"He has had some previous issues with this shoulder from playing baseball as a child, but this is a new and persistent problem.",Faithful,
+3,The pain is exacerbated by movement and improved with rest and Advil.,Faithful,
+4,"He also experiences some pain at night, likely due to sleeping on the affected side.",Faithful,
+5,"Past medical history: The patient has a history of playing baseball, which resulted in previous shoulder pain.",Faithful,
+6,Review of systems: The patient denies numbness in his arm or hands.,Faithful,
+7,Current medications: I prescribed Tylenol for pain management.,Fabrication,I prescribed Tylenol
+8,"Vital signs: Blood pressure 116/84, heart rate 62, respirations 16, temperature 97.8, oxygen saturation 99%.",Faithful,
+9,"Physical exam: The patient has limited active and passive range of motion in the right shoulder, with tenderness at the greater tuberosity of the humerus.",Faithful,
+10,There is no tenderness at the sternoclavicular or acromioclavicular joints.,Faithful,
+11,"The patient has a good hand grip, and on neurovascular exam of the right arm, capillary refill is less than 3 seconds and sensation to touch is intact.",Faithful,
+12,Test Results: The patient's shoulder X-ray shows no fracture.,Faithful,
+13,"Assessment: The patient's symptoms are most likely due to rotator cuff tendinopathy, which is an injury to the tendons of the muscles that help make the shoulder muscles.",Faithful,
+14,Problem list: Rotator cuff tendinopathy; active; confirmed.,Fabrication,active; confirmed
+15,I referred the patient to physical therapy for approximately 6-8 weeks to address the rotator cuff tendinopathy.,Faithful,
+16,I also ordered an MRI to further evaluate the condition.,Faithful,
+17,"During this time, I recommend the patient continue taking Tylenol for pain management.",Causality,continue taking Tylenol
+18,"If symptoms do not improve, we may consider a steroid injection for further relief.",Faithful,
+19,Follow-up: The patient will follow up with me after physical therapy to assess progress and adjust the treatment plan as needed.,Fabrication,The patient will follow up with me after physical therapy

@@ -1,0 +1,18 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 37-year-old male, presents with a 2-week history of flank pain radiating to the groin, which is intermittent and worsens with increased fluid intake and physical activity.",Fabrication,a 37-year-old male
+1,"The pain is described as a 4 out of 10, but has been as high as a 2 out of 10.",Causality,as high as a 2 out of 10
+2,"He denies nausea, vomiting, fever, and chills.",Faithful,
+3,"He reports a history of passing kidney stones in the past, including one that required surgery.",Faithful,
+4,"Past medical history: The patient has a family history of kidney stones and has had them himself in the past, including passing some on his own and undergoing surgery.",Faithful,
+5,Review of systems: No additional symptoms mentioned.,Faithful,
+6,Current medications: The patient is currently taking ibuprofen for pain.,Faithful,
+7,"Vital signs: Blood pressure is elevated, but this is likely due to pain.",Faithful,
+8,"Physical exam: The patient has CVA tenderness on the right side, consistent with the location of the kidney stone.",Faithful,
+9,Test Results: The patient had a CT scan that showed a 0.5 cm stone located on the proximal right ureter with no evidence of high flow nephrosis.,Faithful,
+10,"Assessment: The patient has a confirmed diagnosis of a kidney stone, measuring 0.5 cm in size, located on the proximal right ureter.",Faithful,
+11,Problem list: Kidney stone; active.,Fabrication,active
+12,"I prescribed ibuprofen as before for pain management, and I will also prescribe tramadol 50 mg as needed for breakthrough pain.",Faithful,
+13,The patient should continue to use a strainer when urinating to try to catch the stone.,Faithful,
+14,"I will order a BMP, urinalysis, and urine culture to rule out infection.",Faithful,
+15,"I will see the patient in 1-2 weeks to reassess symptoms and consider further treatment, including lithotripsy if necessary.",Faithful,
+16,Follow-up: The patient will follow up in 1-2 weeks to reassess symptoms and consider further treatment.,Contextual,The patient will follow up

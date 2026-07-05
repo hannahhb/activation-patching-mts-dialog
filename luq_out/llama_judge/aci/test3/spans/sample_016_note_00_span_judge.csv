@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,HPI: The patient presents with right shoulder pain that began approximately three weeks ago after a fall while painting a house.,Faithful,
+1,"The pain is described as intermittent, but always present, and is exacerbated by lifting overhead.",Faithful,
+2,"The patient has taken ibuprofen and acetaminophen (Tylenol) for pain relief, with a reported pain level of 4 out of 10 when taking medication.",Faithful,
+3,"Without medication, the pain level is 6 out of 10.",Faithful,
+4,"The patient reports numbness and tingling in the arm initially after the injury, but this symptom has resolved.",Faithful,
+5,Past medical history: The patient has no history of previous shoulder pain or injuries.,Faithful,
+6,Review of systems: The patient denies any other symptoms.,Faithful,
+7,Current medications: Ibuprofen as needed for pain; Acetaminophen (Tylenol) as needed for pain.,Faithful,
+8,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+9,"The patient has limited active and passive range of motion in the right shoulder, with tenderness to the greater tuberosity of the humerus.",Faithful,
+10,"The patient has good strong bilateral hand grips, brisk capillary refill of less than three seconds, and equal and bilateral response to sensation and touch.",Faithful,
+11,Test Results: The right shoulder x-ray reveals no fracture or bony abnormality.,Faithful,
+12,Assessment: The patient's symptoms are most likely due to rotator cuff tendinopathy.,Faithful,
+13,Problem list: Rotator cuff tendinopathy; [NOT MENTIONED],Fabrication,[NOT MENTIONED]
+14,I prescribed ibuprofen as needed for pain.,Contextual,I prescribed ibuprofen as needed for pain
+15,I ordered an MRI of the right shoulder to rule out any other conditions.,Faithful,
+16,I referred the patient to physical therapy for 6-8 weeks.,Faithful,
+17,I recommend the patient take Tylenol for pain relief if they can tolerate it.,Faithful,
+18,I will see the patient in two weeks to evaluate their progress and make additional treatment plans as needed.,Faithful,
+19,I will see the patient in two weeks.,Faithful,

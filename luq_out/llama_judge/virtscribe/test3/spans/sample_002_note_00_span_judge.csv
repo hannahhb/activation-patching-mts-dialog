@@ -1,0 +1,27 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 60-year-old right-handed female, presents with a 3-week history of bilateral hand numbness and tingling, which started after a car accident in December where she broke both wrists.",Causality,3-week history
+1,"She reports that the symptoms worsened over the last month, with the right wrist being worse than the left.",Faithful,
+2,She also mentions mild stiffness in her neck and a contusion to the head during the accident.,Faithful,
+3,"She denies any pain, but describes the numbness and tingling as sore and throbbing, especially when using her hands.",Faithful,
+4,She reports that the symptoms are more pronounced at night and can come and go throughout the day.,Faithful,
+5,"She denies any loss of sensation in her hands or fingers, but notes that they might be less sensitive than usual.",Faithful,
+6,"She has been experiencing fatigue, weight gain, excessive appetite, bloating, shortness of breath, leg swelling, and dryness, itching, and nail bed trenches on her skin.",Contextual,She has been experiencing
+7,"She has a history of chronic kidney disease, gout, hypertension, anxiety, GERD, and pre-diabetes, which she has managed with dietary changes.",Faithful,
+8,"She is currently taking carvedilol 25 milligrams twice a day for hypertension, lexapro 10 milligrams a day for anxiety, and has a known allergy to sulfa drugs.",Faithful,
+9,"Past medical history: The patient has a history of chronic kidney disease, gout, hypertension, anxiety, GERD, and pre-diabetes, which she has managed with dietary changes.",Faithful,
+10,"Review of systems: The patient reports fatigue, weight gain, excessive appetite, bloating, shortness of breath, leg swelling, dryness, itching, and nail bed trenches on her skin, parasthesia, bilateral hands, gout, muscle pain, and diabetes.",Contextual,The patient reports
+11,Current medications:,Faithful,
+12,- Carvedilol 25 milligrams twice a day for hypertension,Faithful,
+13,- Lexapro 10 milligrams a day for anxiety,Faithful,
+14,Objective: Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+15,Physical exam: The physical exam was notable for diminished pin prick sensation in the third and fourth fingers on the right and the fourth and fifth fingers on the left.,Faithful,
+16,"Reflexes were one plus and symmetric, with two plus knees, and down-going bilaterally.",Faithful,
+17,Tinel's sign was positive at both wrists and both elbows.,Faithful,
+18,Test Results:,Faithful,
+19,"- CT brain with and without contrast from 2/5/21: No metastatic disease, no acute intracranial abnormalities.",Faithful,
+20,Assessment / Problem List: Assessment: The patient is a 60-year-old right-handed female with bilateral carpal tunnel syndrome and possible bilateral cubital tunnel syndrome.,Faithful,
+21,Problem list: Carpal tunnel syndrome; Cubital tunnel syndrome; Chronic kidney disease; Gout; Hypertension; Anxiety; GERD; Pre-diabetes; Sulfa allergy.,Faithful,
+22,Plan: I discussed my impression with the patient and scheduled her for EMG and NCV.,Faithful,
+23,"If her symptoms do not resolve, we can consider hand clinic referral for possible symptomatic injections or carpal tunnel release surgery, although she can pursue these through her current orthopedist.",Faithful,
+24,I encouraged her to wear her splints and return for EMG and NCV.,Faithful,
+25,"Follow-up: The patient will return for EMG and NCV, and if necessary, further management will be discussed.",Fabrication,"Follow-up: The patient will return for EMG and NCV, and if necessary, further management will be discussed."

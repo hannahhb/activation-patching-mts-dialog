@@ -1,0 +1,18 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 30-year-old male, presented with a complaint of knee pain and swelling after a skiing accident on Saturday.",Fabrication,a 30-year-old male
+1,He described a cartwheel maneuver that resulted in a pop in his right knee and subsequent pain.,Faithful,
+2,"He has been taking Advil and applying ice, but the pain has been persistent.",Faithful,
+3,Past medical history: The patient has no prior knee injuries and no known medical conditions.,Faithful,
+4,"He does not have a history of smoking, alcohol or drug use, and his occupation and travel history are not relevant to the current presentation.",Fabrication,"He does not have a history of smoking, alcohol or drug use, and his occupation and travel history are not relevant to the current presentation"
+5,Review of systems: The patient has no additional symptoms in other organs that are relevant to the initial presentation.,Faithful,
+6,Current medications: I prescribed Advil as needed for pain.,Causality,I prescribed Advil
+7,"Vital signs: The patient's vital signs were within normal limits: temperature 97.9°F, heart rate 64, respirations 16, blood pressure 110/74, and oxygen saturation 98%.",Faithful,
+8,"Physical exam: The patient has edema and ecchymosis around the right knee, positive pain to palpation, and limited range of motion with flexion and extension.",Causality,limited range of motion
+9,"The patient reported pain with flexion and extension, but had a full range of motion.",Faithful,
+10,Test Results: X-ray of the right knee showed no fracture or bony abnormalities.,Faithful,
+11,Assessment: The patient has a knee contusion.,Faithful,
+12,Problem list: Knee contusion; [NOT MENTIONED],Fabrication,[NOT MENTIONED]
+13,"I instructed the patient to rest the knee, apply ice 2-3 times a day for 20 minutes, and take NSAIDs (ibuprofen) every 6-8 hours as needed.",Faithful,
+14,I also ordered an x-ray of the right shoulder to evaluate for potential injury.,Faithful,
+15,We will reassess the patient's condition and consider physical therapy if necessary.,Faithful,
+16,Follow-up: The patient will follow up in the office to reevaluate the knee and shoulder injuries.,Fabrication,to reevaluate the knee and shoulder injuries

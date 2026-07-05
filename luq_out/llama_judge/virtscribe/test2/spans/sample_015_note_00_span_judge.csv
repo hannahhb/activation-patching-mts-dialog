@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Mr. Nelson, a 73-year-old male, presents with ongoing management of rheumatoid arthritis.",Faithful,
+1,"He reports that his right knee has been swollen for approximately 2 months, with pain level ranging from 3 to 6 out of 10.",Faithful,
+2,"He has tried compression socks, which provide some relief but not complete resolution.",Faithful,
+3,"He experiences stiffness, particularly when getting up from a seated position, and requires a cane for support.",Faithful,
+4,"He has been taking Xeljanz (11 mg daily) and Celebrex (200 mg daily) for 2 months, with some improvement in symptoms before the recent increase in swelling.",Faithful,
+5,"Past medical history: The patient has a history of rheumatoid arthritis, for which he has been receiving treatment.",Faithful,
+6,Review of systems: The patient reports no other symptoms related to his rheumatoid arthritis.,Fabrication,The patient reports no other symptoms related to his rheumatoid arthritis
+7,Current medications: Xeljanz 11 mg daily Celebrex 200 mg daily,Faithful,
+8,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+9,"Physical exam: The patient's knee is swollen, with pitting around the knee and ankle.",Faithful,
+10,"The patient reports pain and stiffness, particularly when straightening the knee.",Faithful,
+11,Normal capillary refill in the toes.,Faithful,
+12,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+13,"Assessment: The patient has recurrent swelling and pain in his right knee, likely related to his rheumatoid arthritis.",Faithful,
+14,Problem list: Rheumatoid arthritis; swelling of the right knee; pain of the right knee; stiffness of the right knee.,Faithful,
+15,I prescribed a steroid injection (80 mg of triamcinolone and 1 ml of lidocaine) for the patient's right knee.,Faithful,
+16,I also ordered an x-ray of the knee to investigate the cause of the swelling.,Faithful,
+17,I will refer the patient to physical therapy to address his stiffness and mobility issues.,Faithful,
+18,"If the current treatment plan does not improve his symptoms, I will consider a surgery consult to discuss further management options.",Faithful,
+19,Follow-up: I will see the patient again in 2-3 months to reassess his symptoms and adjust his treatment plan as needed.,Fabrication,in 2-3 months
+20,"I also instructed the patient to follow up with his primary care physician for routine monitoring of his CMP levels, which are currently within normal limits.",Faithful,

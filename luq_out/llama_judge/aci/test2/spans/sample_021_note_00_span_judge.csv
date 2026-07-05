@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient presented with left knee pain that occurred when she was running with her 5-year-old niece, who is learning to ride a bike without training wheels.",Faithful,
+1,"The patient twisted her knee in a ""funky way"" and heard a pop, which started as a 4/10 pain but has worsened to a throbbing pain.",Faithful,
+2,"The pain is located on the medial aspect of the knee, more than the lateral aspect.",Faithful,
+3,"The patient has been limping and taking Tylenol as needed, but with limited relief.",Faithful,
+4,The patient has a history of ulcers and was advised against taking NSAIDs.,Faithful,
+5,Past medical history: [NOT MENTIONED],Faithful,
+6,Review of systems: [NOT MENTIONED],Faithful,
+7,Current medications: I prescribed Tylenol as needed for breakthrough pain.,Causality,I prescribed
+8,Vital signs: [NOT MENTIONED],Faithful,
+9,"The patient had moderate range of motion in the left knee, with pain on flexion and extension.",Faithful,
+10,The patient had edema and effusion in the knee.,Faithful,
+11,"The Lachman's test, valgus, and varus tests were negative, indicating no tears in the knee.",Faithful,
+12,"A x-ray of the left knee was normal, showing no fractures or bony abnormalities.",Faithful,
+13,X-ray of the left knee: normal.,Faithful,
+14,"Assessment: The patient has a medial collateral ligament (MCL) strain, likely sustained during a twisting injury while running with her niece.",Faithful,
+15,Problem list: MCL strain; status: confirmed.,Fabrication,status: confirmed
+16,I prescribed Tramadol 50mg twice a day for pain management.,Faithful,
+17,I recommended the patient wear a knee immobilizer for the next week to prevent further movement and reduce inflammation.,Faithful,
+18,I advised the patient to ice the knee 3-4 times a day for 20-30 minutes at a time.,Faithful,
+19,I instructed the patient to avoid running with her niece for the next 3 weeks to allow the knee to heal.,Faithful,
+20,I instructed the patient to follow up with me in a month to assess the progress of the knee and determine if further imaging or treatment is needed.,Faithful,

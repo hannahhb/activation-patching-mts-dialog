@@ -1,0 +1,19 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 30-year-old male, presents with a complaint of heel pain, specifically in the back of his heel, which radiates up into his calf.",Fabrication,a 30-year-old male
+1,He reports that this pain occurs after a workout or when he first gets up in the morning.,Faithful,
+2,"He is currently training for a triathlon and has been engaging in a rigorous training program, which includes running, biking, and swimming.",Faithful,
+3,"He reports that the pain is worse when he runs, and he experiences some pain when he first wakes up in the morning.",Faithful,
+4,Past medical history: [NOT MENTIONED],Faithful,
+5,"Review of systems: The patient denies any other symptoms in other organs, but reports that the pain in his heel and calf is exacerbated by activity and improves with rest.",Fabrication,The patient denies any other symptoms in other organs
+6,Current medications: [NOT MENTIONED],Faithful,
+7,Vital signs: [NOT MENTIONED],Faithful,
+8,"Physical exam: The patient has a negative Thompson test, which is a good finding.",Faithful,
+9,"The doctor also squeezes the patient's calf and heel, and the patient reports pain in the right heel and Achilles tendon.",Faithful,
+10,The doctor finds the right Achilles tendon to be tender.,Faithful,
+11,Test Results: [NOT MENTIONED],Faithful,
+12,"Assessment: The patient has achilles tendinitis, likely due to overuse from his aggressive training for a triathlon.",Faithful,
+13,Problem list: Achilles tendinitis; status: confirmed.,Fabrication,status: confirmed
+14,I prescribed ibuprofen 3 tablets every 6 hours for inflammation.,Faithful,
+15,"I ordered 2 physical therapy visits to improve strength and stretching knowledge, particularly in the lower extremities.",Faithful,
+16,I want the patient to return in 7-10 days to monitor his progress.,Faithful,
+17,Follow-up: I would like to see the patient in 7-10 days after his first physical therapy appointment.,Faithful,

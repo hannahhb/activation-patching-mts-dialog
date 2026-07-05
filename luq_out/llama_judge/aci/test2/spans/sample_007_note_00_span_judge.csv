@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"The patient, Gregory, a 35-year-old male, presents with a complaint of right knee pain and clicking sensation, which started approximately 2.5 weeks ago after twisting his ankle while stepping off a curb.",Faithful,
+1,He reports that the pain and clicking are most noticeable when he performs activities such as squats or stands on one foot for an extended period.,Faithful,
+2,He denies any pain at rest or when the knee is in a neutral position.,Faithful,
+3,"He has taken ibuprofen for pain, which provides some relief at night, but has not had significant impact on his symptoms during the day.",Faithful,
+4,"Past medical history: The patient has a history of three previous toe fractures, including a broken second toe on his right foot, which has resulted in persistent numbness and tingling in the foot, depending on the shoe he wears.",Faithful,
+5,"The patient reports no numbness or tingling in the foot, other than the previously mentioned condition, which is not related to the current knee injury.",Negation,no numbness or tingling in the foot
+6,"The patient has been taking ibuprofen, but the dose and frequency are not specified.",Faithful,
+7,Vital signs: [NOT MENTIONED],Fabrication,Vital signs
+8,The patient has a slight effusion and edema on the right knee.,Faithful,
+9,Palpation of the right lateral knee does not elicit pain.,Faithful,
+10,The patient has a positive varus test and a negative Lachman sign.,Faithful,
+11,The patient has a full range of motion in the knee.,Faithful,
+12,"The cardiovascular exam is normal, with palpable dorsalis pedis and posterior tibialis pulses.",Faithful,
+13,X-ray results of the knee are negative for acute fracture or bony abnormality.,Faithful,
+14,The patient has a lateral collateral ligament strain of the right knee.,Faithful,
+15,Problem list: Lateral collateral ligament strain; right knee; past fracture of right foot; numbness and tingling in right foot.,Faithful,
+16,I prescribed meloxicam 15 mg once a day for pain management.,Faithful,
+17,I referred the patient to physical therapy to strengthen the muscles around the injured area and prevent future injuries.,Faithful,
+18,"I advised the patient to continue icing the knee, which he has been doing at least 4 times a day.",Faithful,
+19,I instructed him to call me if his symptoms worsen.,Faithful,
+20,"The patient will follow up with me if his symptoms persist or worsen, or if he experiences any new symptoms.",Fabrication,"The patient will follow up with me if his symptoms persist or worsen, or if he experiences any new symptoms"

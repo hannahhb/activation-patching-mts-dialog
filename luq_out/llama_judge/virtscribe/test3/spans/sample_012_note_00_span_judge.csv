@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: Ashley James, a 14-year-old female, presents with a history of abdominal pain and vomiting, initially thought to be appendicitis, but later found to have an atrophic right kidney on ultrasound.",Faithful,
+1,"She has a history of recurrent infections as a child, with hospitalizations at 4 years old for 3-4 times, with symptoms of fever and vomiting, but no specific diagnosis made.",Faithful,
+2,She has been taking Pepcid 40mg daily for symptoms and Claritin for allergies.,Faithful,
+3,"Her family history includes renal disease, with her father having a kidney transplant, aunt with end-stage renal disease, and mother with breast cancer.",Faithful,
+4,Ashley's father died at 47 due to a massive heart attack while on dialysis.,Causality,while on dialysis
+5,"Past medical history: Ashley has a history of recurrent infections as a child, with hospitalizations at 4 years old for 3-4 times, with symptoms of fever and vomiting.",Faithful,
+6,Her father had a kidney transplant and died at 47 due to a massive heart attack while on dialysis.,Causality,while on dialysis
+7,"Her aunt has end-stage renal disease, chronic kidney disease, stage V, diabetes, and hypertension.",Faithful,
+8,Ashley's mother has breast cancer.,Faithful,
+9,"Review of systems: Ashley complains of abdominal pain, vomiting, and burning sensation when urinating, especially after consuming certain drinks like soda.",Faithful,
+10,"Current medications: Pepcid 40mg daily, Claritin for allergies.",Faithful,
+11,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+12,"Physical exam: Ashley is a well-appearing female, alert and oriented, with no acute distress.",Faithful,
+13,Her physical exam is within normal limits.,Faithful,
+14,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+15,"Assessment: Ashley has a history of recurrent infections and an atrophic right kidney, with a family history of renal disease.",Faithful,
+16,Problem list: Atrophic right kidney; Recurrent infections; End-stage renal disease; Chronic kidney disease; Stage V; Diabetes; Hypertension.,Contextual,End-stage renal disease; Chronic kidney disease; Stage V; Diabetes; Hypertension
+17,I recommended that Ashley undergo an annual ultrasound to monitor the size of her kidneys and their overall function.,Faithful,
+18,"I also suggested completing a urinalysis to ensure that protein and blood are not present in her urine, and a blood pressure check.",Faithful,
+19,I advised avoiding nonsteroidal anti-inflammatory medicines like ibuprofen and opting for Tylenol instead.,Faithful,
+20,"I also recommended that Ashley stay well-hydrated, drinking at least 2L of water per day, and maintain a healthy diet to support her kidney health.",Faithful,
+21,"Follow-up: Ashley can schedule an appointment with her primary care physician or an adult nephrologist closer to her home, rather than traveling to Atlanta.",Faithful,

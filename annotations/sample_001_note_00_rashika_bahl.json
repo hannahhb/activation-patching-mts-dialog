@@ -8,12 +8,12 @@
     },
     "1": {
       "faithful": "Not Faithful",
-      "type": "Contextual",
+      "type": "Fabrication",
       "severity": "N/A"
     },
     "2": {
       "faithful": "Not Faithful",
-      "type": "Contextual",
+      "type": "Negation",
       "severity": "N/A"
     },
     "3": {
@@ -23,7 +23,8 @@
     },
     "4": {
       "faithful": "Not Faithful",
-      "type": "Negation"
+      "type": "Contextual",
+      "severity": "N/A"
     },
     "5": {
       "faithful": "Faithful",
@@ -47,12 +48,13 @@
     },
     "9": {
       "faithful": "Not Faithful",
-      "type": "Contextual",
+      "type": "Negation",
       "severity": "N/A"
     },
     "10": {
-      "type": "Causality",
-      "faithful": "Not Faithful"
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
     },
     "11": {
       "faithful": "Faithful",
@@ -76,7 +78,8 @@
     },
     "15": {
       "faithful": "Not Faithful",
-      "type": "Causality"
+      "type": "Causality",
+      "severity": "N/A"
     },
     "16": {
       "faithful": "Faithful",
@@ -85,7 +88,8 @@
     },
     "17": {
       "faithful": "Not Faithful",
-      "type": "Causality"
+      "type": "Fabrication",
+      "severity": "N/A"
     },
     "18": {
       "faithful": "Faithful",
@@ -94,7 +98,8 @@
     },
     "19": {
       "faithful": "Not Faithful",
-      "type": "Causality"
+      "type": "Causality",
+      "severity": "N/A"
     },
     "20": {
       "faithful": "Faithful",

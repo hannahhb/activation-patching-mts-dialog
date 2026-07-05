@@ -29,6 +29,7 @@ import json
 import re
 import sys
 import time
+from collections import Counter
 from pathlib import Path
 from typing import Dict, List, Tuple
 
@@ -46,11 +47,11 @@ DEFAULT_DECOMP_K  = 3    # how many notes to decompose into atomic facts
 DEFAULT_GEN_DIR   = "luq_out/llama/generations"
 DEFAULT_OUT_DIR   = "luq_out/llama_atomic"
 
-# Sliding window over premise text to stay within NLI 512-token limit.
-# DeBERTa-v3: 512 tokens total; atomic facts ~20-30 tokens → ~479 tokens for premise.
-# At ~3 chars/token for clinical text: ~1400 chars safe window.
-WINDOW_CHARS  = 1400
-STRIDE_CHARS  = 700
+# If the same-section entailment probability falls below this, also check
+# the reference note's OTHER sections before concluding "unsupported" --
+# guards against LLM generations inconsistently filing the same fact under
+# different SOAP sections across resamples (see score_sample Step 3).
+SECTION_FALLBACK_THRESHOLD = 0.5
 
 # Section groupings — first match wins (checked against lowercased header lines)
 SECTION_PATTERNS: List[Tuple[str, str]] = [
@@ -98,21 +99,42 @@ def decompose_section(text: str) -> List[str]:
     return fm.filter_facts(raw)
 
 
+def dedupe_across_sections(note_decomp: Dict[str, List[str]]) -> Dict[str, List[str]]:
+    """Facts are decomposed per SOAP section independently (decompose_section
+    is called once per section with no visibility into the others), so the
+    same real-world fact commonly gets extracted twice under different
+    sections -- e.g. a medication mentioned during history-taking
+    (subjective: "The patient is on metformin.") and again when the plan
+    confirms/continues it (plan: "The patient is taking metformin.").
+    filter_facts() only removes malformed fragments within a single
+    section's output; it never sees facts from other sections, so this
+    cross-section duplication survives untouched today.
+
+    Fix: flatten every section's facts into one list, deduplicate by cosine
+    similarity (reusing factmatch_sentence.deduplicate_facts, threshold
+    0.92 -- already tuned/battle-tested there for the same kind of
+    paraphrase-duplicate problem), then reassign survivors back to
+    whichever section they first appeared in."""
+    flat_facts, flat_secs = [], []
+    for sec in SECTION_NAMES:
+        for f in note_decomp.get(sec, []):
+            flat_facts.append(f)
+            flat_secs.append(sec)
+    if len(flat_facts) < 2:
+        return note_decomp
+
+    survivors = fm.deduplicate_facts(flat_facts)  # first-occurrence-wins, in original order
+    survivor_counts = Counter(survivors)
+
+    out = {sec: [] for sec in SECTION_NAMES}
+    for f, sec in zip(flat_facts, flat_secs):
+        if survivor_counts[f] > 0:
+            out[sec].append(f)
+            survivor_counts[f] -= 1  # only re-attach as many copies as survived
+    return out
+
+
 # ── Sliding window NLI ────────────────────────────────────────────────────────
-
-def _section_windows(text: str, window: int = WINDOW_CHARS, stride: int = STRIDE_CHARS) -> List[str]:
-    """Split section text into overlapping windows safe for NLI premise length."""
-    if len(text) <= window:
-        return [text]
-    windows = []
-    start = 0
-    while start < len(text):
-        windows.append(text[start: start + window])
-        if start + window >= len(text):
-            break
-        start += stride
-    return windows
-
 
 def _max_entail_prob(nli, premise_windows: List[str], hypothesis: str, entail_idx: int) -> float:
     """Softmax entailment probability for a fact against a section, max over windows."""
@@ -155,14 +177,20 @@ def score_sample(sample_idx: int, notes: List[str], decomp_k: int,
     all_sections: List[Dict[str, str]] = [parse_sections(note) for note in notes]
 
     # ── Step 2: decompose first decomp_k notes into atomic facts (LLM, cached)
+    # Cache is a per-sample list covering however many notes were decomposed
+    # the LAST time this ran. If decomp_k grows between runs (e.g. someone
+    # reruns with a larger --atomic-decomp-k), only decompose the newly
+    # requested notes rather than trusting a shorter cached list as-is --
+    # that used to IndexError on the notes past the old cache's length.
     decomp_cache = out_dir / "facts" / f"sample_{sample_idx:03d}_decomp.json"
 
+    all_decomp = []
     if use_cache and decomp_cache.exists():
         all_decomp = json.loads(decomp_cache.read_text())
-        tqdm.write(f"  [cache] decomp sample {sample_idx}")
-    else:
-        all_decomp = []
-        for note_idx in range(decomp_k):
+        tqdm.write(f"  [cache] decomp sample {sample_idx}: {len(all_decomp)}/{decomp_k} notes cached")
+
+    if len(all_decomp) < decomp_k:
+        for note_idx in range(len(all_decomp), decomp_k):
             note_decomp = {}
             for sec in SECTION_NAMES:
                 text = all_sections[note_idx].get(sec, "")
@@ -170,6 +198,11 @@ def score_sample(sample_idx: int, notes: List[str], decomp_k: int,
                 note_decomp[sec] = facts
                 if facts:
                     tqdm.write(f"    note {note_idx} [{sec}]: {len(facts)} facts")
+            n_before = sum(len(v) for v in note_decomp.values())
+            note_decomp = dedupe_across_sections(note_decomp)
+            n_after = sum(len(v) for v in note_decomp.values())
+            if n_after < n_before:
+                tqdm.write(f"    note {note_idx}: cross-section dedup {n_before} -> {n_after} facts")
             all_decomp.append(note_decomp)
         decomp_cache.write_text(json.dumps(all_decomp, indent=2))
 
@@ -203,11 +236,35 @@ def score_sample(sample_idx: int, notes: List[str], decomp_k: int,
                 entail_probs = []
                 for ref_idx in ref_indices:
                     ref_text = all_sections[ref_idx].get(sec, "").strip()
-                    if not ref_text:
-                        continue
-                    windows = _section_windows(ref_text)
-                    p = _max_entail_prob(nli, windows, fact, entail_idx)
-                    entail_probs.append(p)
+                    p = 0.0
+                    checked_anything = False
+                    if ref_text:
+                        windows = luq.sentence_windows(ref_text, tokenizer=nli.tokenizer)
+                        p = _max_entail_prob(nli, windows, fact, entail_idx)
+                        checked_anything = True
+
+                    if p < SECTION_FALLBACK_THRESHOLD:
+                        # Same-section premise gave weak/no support. LLM note
+                        # generations don't consistently file a given fact
+                        # under the same SOAP section across resamples (e.g.
+                        # a background diagnosis restated in "assessment" in
+                        # one sample but only mentioned in "subjective" in
+                        # another) -- concluding "unsupported" from the
+                        # matching section alone conflates section-placement
+                        # variance with real factual inconsistency. Check the
+                        # reference note's other sections too before giving up.
+                        for other_sec in SECTION_NAMES:
+                            if other_sec == sec:
+                                continue
+                            other_text = all_sections[ref_idx].get(other_sec, "").strip()
+                            if not other_text:
+                                continue
+                            checked_anything = True
+                            other_windows = luq.sentence_windows(other_text, tokenizer=nli.tokenizer)
+                            p = max(p, _max_entail_prob(nli, other_windows, fact, entail_idx))
+
+                    if checked_anything:
+                        entail_probs.append(p)
 
                 if not entail_probs:
                     uncertainty = 1.0

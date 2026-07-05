@@ -1,0 +1,31 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Julia Jones, a 25-year-old female, presents for evaluation of breast reduction due to symptomatic macromastia.",Faithful,
+1,"She has been experiencing back pain, neck pain, and discomfort due to her breast size, which has been a concern for about 7 years.",Faithful,
+2,"She has tried nonsurgical treatments, including chiropractic care, with minimal relief.",Faithful,
+3,She is an ideal candidate for bilateral reduction mammoplasty.,Faithful,
+4,"She is currently a student, studying psychology, and has a family history of breast cancer, with her mother diagnosed at age 40.",Faithful,
+5,"She is otherwise healthy, having lost 10 pounds in the past few months and plans to lose an additional 20 pounds.",Faithful,
+6,"Past medical history: The patient has a family history of breast cancer, with her mother diagnosed at age 40.",Faithful,
+7,"She has not had any mammograms, but plans to start at age 30.",Faithful,
+8,She does not have any known allergies.,Fabrication,She does not have any known allergies
+9,"Review of systems: The patient reports back pain, neck pain, and discomfort due to her breast size, which improves with bra use.",Faithful,
+10,She experiences numbness and tingling in her hands and occasional nipple pain.,Faithful,
+11,She has not experienced any rashes or discharge.,Faithful,
+12,Current medications: She takes propranolol for migraines.,Faithful,
+13,Objective:,Faithful,
+14,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+15,Physical exam: Inspection reveals asymmetrical breasts with severe ptosis bilaterally.,Faithful,
+16,There is no nipple retraction or discharge bilaterally.,Faithful,
+17,"No breast tenderness, masses, or axillary lymphadenopathy is palpable.",Faithful,
+18,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+19,Assessment / Problem List:,Faithful,
+20,"Assessment: Julia Jones is a 25-year-old female with symptomatic macromastia, ideal candidate for bilateral reduction mammoplasty.",Faithful,
+21,Problem list: Macromastia; Active.,Fabrication,Problem list: Macromastia; Active
+22,Plan:,Faithful,
+23,I prescribed no medications.,Faithful,
+24,I will submit the documentation and photos to the insurance company for approval.,Faithful,
+25,"Once approved, we will schedule the surgery and meet again to discuss the procedure and answer any questions.",Faithful,
+26,"The patient will need to have a clear plastic tape over the incision, which may be red initially but will mature in about a year.",Faithful,
+27,"The patient will have drains in each breast for about a week and will need to avoid heavy lifting, driving, and strenuous activities for 2-3 weeks.",Faithful,
+28,There is a 30% chance of reduced nipple sensation or no sensation after the surgery.,Faithful,
+29,Follow-up: The patient will need to follow up with the office after the insurance approval and before the surgery to review the instructions and any last-minute questions.,Faithful,

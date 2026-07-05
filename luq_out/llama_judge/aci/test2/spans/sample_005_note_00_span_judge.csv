@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 40-year-old female, presents with a 4-day history of worsening right elbow pain, exacerbated by activities such as pottery and ceramics.",Fabrication,a 40-year-old female
+1,The pain is located on the inside of the elbow and radiates down the arm.,Faithful,
+2,She describes the pain as a 7 out of 10 and states it keeps her awake at night.,Faithful,
+3,"She has tried taking ibuprofen, but it has not provided significant relief.",Faithful,
+4,She also mentions a history of hypertension and diabetes.,Faithful,
+5,"Past medical history: The patient has a history of hypertension and diabetes, for which she is currently taking 10mg of lisinopril and 500mg of metformin twice a day, respectively.",Faithful,
+6,"Review of systems: The patient mentions a sweet tooth and a history of baking, particularly making cakes and cinnamon rolls.",Faithful,
+7,She has been trying to manage her diabetes but admits to sometimes forgetting to take her medication.,Faithful,
+8,"Current medications: Lisinopril 10mg, metformin 500mg twice a day.",Faithful,
+9,"Vital signs: Blood pressure 120/70, respiratory rate 18, temperature 97.9°F, oxygen saturation 100%.",Faithful,
+10,"Physical exam: Moderate tenderness at the medial epicondyle, pain with resisted pronation of the right forearm, and pain with flexion and bending of the wrist.",Faithful,
+11,"No rash, bruising, or swelling is noted.",Faithful,
+12,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+13,"Assessment: The patient has medial epicondylitis, a condition characterized by pain caused by overuse and damage to the tendons in the arm.",Faithful,
+14,Problem list: Medial epicondylitis (active); hypertension (stable); diabetes (stable).,Faithful,
+15,"I ordered a sling for the patient's right arm to be worn while awake, and instructed her to apply ice to the elbow for 20 minutes, three times a day.",Faithful,
+16,I also prescribed 600mg of ibuprofen every 6 hours with food for 1 week.,Faithful,
+17,I advised her to avoid pottery and ceramics for the next 2 weeks to allow the elbow to heal.,Faithful,
+18,"For her diabetes, I increased her metformin to 1000mg twice a day and ordered an A1c test.",Faithful,
+19,I also referred her to diabetic counseling to help manage her blood sugars.,Faithful,
+20,"For her hypertension, I continued her on lisinopril 10mg.",Faithful,
+21,Follow-up: I scheduled a follow-up appointment in 2 weeks to review the patient's progress and adjust her treatment plan as needed.,Faithful,

@@ -1,0 +1,19 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 46-year-old male, presents with neck pain following a car accident 1 week ago.",Fabrication,a 46-year-old male
+1,"He describes the pain as a 7 out of 10, not constant, but worsens with neck movement.",Faithful,
+2,The pain is located in the back of his neck and has not improved with ibuprofen.,Faithful,
+3,"He reports occasional headaches and pain with flexion, extension, rotation, and lateral bending of the neck.",Faithful,
+4,Past medical history: [NOT MENTIONED],Fabrication,Past medical history
+5,Review of systems: [NOT MENTIONED],Fabrication,Review of systems
+6,Current medications: [NOT MENTIONED],Fabrication,Current medications
+7,Vital signs: [NOT MENTIONED],Fabrication,Vital signs
+8,"The patient exhibits positive pain to palpation of the soft tissues of the neck, with pain on flexion, extension, rotation, and lateral bending of the neck.",Faithful,
+9,X-ray results show no signs of fracture or bony abnormalities.,Faithful,
+10,"Assessment: The patient has neck strain with pain, likely secondary to whiplash from the car accident.",Faithful,
+11,Problem list: Neck strain; Suspected whiplash; Active.,Fabrication,Problem list
+12,I prescribed Motrin 600mg every 6-8 hours for pain management.,Faithful,
+13,I also prescribed Flexeril 10mg every 12 hours as needed for muscle relaxation.,Faithful,
+14,I advised the patient to avoid straining his neck and to be conservative with neck movement.,Faithful,
+15,I ordered an MRI to rule out any potential nerve impingement.,Faithful,
+16,I will refer the patient to either physical rehab or a chiropractor once the MRI results are available.,Faithful,
+17,Follow-up: The patient will return for further evaluation and management after receiving the results of the MRI.,Fabrication,Follow-up

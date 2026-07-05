@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 17-year-old non-binary individual, presents for evaluation of newly diagnosed hypercholesterolemia.",Faithful,
+1,"They were informed of the elevated cholesterol level after a routine annual checkup, where a finger prick test revealed a cholesterol level of 210.",Faithful,
+2,They are worried about the finding and have been told to make lifestyle changes.,Faithful,
+3,"The patient is active, enjoys riding their bicycle, and tries to eat a relatively clean diet, but has a weakness for chocolate chip cookies.",Faithful,
+4,"Past medical history: The patient has no significant past medical history, but their grandparents reported that they did not have high cholesterol at a young age.",Faithful,
+5,The patient's grandmother mentioned that a cousin died of a heart attack at age 44 or 45.,Faithful,
+6,Review of systems: The patient reports feeling healthy and has not experienced any issues with growing pains or other symptoms.,Faithful,
+7,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+8,"Vital signs: The patient's blood pressure is within a normal range, but the specific values are not mentioned.",Faithful,
+9,"Physical exam: The patient's physical exam is unremarkable, with no murmurs, rubs, or gallops on the heart exam, clear lungs, no thyroid megalogy, and no hepatomegaly or splenomegaly on the abdominal exam.",Faithful,
+10,Test Results: The patient's cholesterol level was elevated at 210.,Faithful,
+11,"The doctor reviewed the results and plans to order further tests, including a full cholesterol panel, glucose, complete metabolic panel, thyroid studies, and liver panels, as well as genetic testing.",Faithful,
+12,"Assessment: The patient has elevated cholesterol, which is a risk factor for premature heart attacks.",Faithful,
+13,Problem list: Hypercholesterolemia; Suspected familial hypercholesterolemia.,Faithful,
+14,"I ordered a full cholesterol panel, glucose, complete metabolic panel, thyroid studies, and liver panels to investigate the cause of the elevated cholesterol.",Faithful,
+15,I also recommended genetic testing to determine if the problem is familial or secondary.,Faithful,
+16,"The patient will meet with a nutritionist to learn about a well-balanced diet, low in saturated fat and sugars.",Faithful,
+17,"They will continue to be active and exercise regularly, including bike riding.",Faithful,
+18,I will follow up with the patient in 3-6 months to check their cholesterol level after they have made dietary changes.,Faithful,
+19,Follow-up: The patient will be seen again in 3-6 months to check their cholesterol level after they have met with the nutritionist and made dietary changes.,Causality,after they have met with the nutritionist and made dietary changes

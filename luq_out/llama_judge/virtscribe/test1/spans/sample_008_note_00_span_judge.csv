@@ -1,0 +1,24 @@
+sentence_idx,sentence,label,note_span
+0,"The patient, Melissa Sanchez, is a 59-year-old female with a history of mitral regurgitation and atrial fibrillation, diabetes, asthma, and recurrent chest discomfort with a negative cardiac work-up for coronary artery disease.",Faithful,
+1,"She reports feeling better overall since her mitral valve repair surgery on 8/3/2020, but still experiences occasional chest pain and shallow breathing, particularly with exertion.",Faithful,
+2,She has been managing these symptoms by slowing down and taking medication as prescribed.,Faithful,
+3,"She has been taking Coumadin 4 mg, Lasix 4 mg daily, and Atenolol 50 mg daily.",Faithful,
+4,She has been experiencing some irritability initially with the Atenolol but reports that it has subsided.,Faithful,
+5,Vital signs:,Fabrication,Vital signs:
+6,- Blood pressure: [NOT MENTIONED],Fabrication,Blood pressure: [NOT MENTIONED]
+7,- Pulse rate: [NOT MENTIONED],Fabrication,Pulse rate: [NOT MENTIONED]
+8,- Oxygen saturation: [NOT MENTIONED],Fabrication,Oxygen saturation: [NOT MENTIONED]
+9,- Temperature: [NOT MENTIONED],Fabrication,Temperature: [NOT MENTIONED]
+10,- No JVD detected.,Faithful,
+11,"- Lungs: reduced breath sounds, but auscultation and percussion are clear.",Faithful,
+12,"- Heart: irregularly irregular rhythm, but no mass detected; S1 slightly accentuated, no S3; no pain on palpation.",Faithful,
+13,- Abdomen: no tenderness.,Faithful,
+14,- Extremities: trace peripheral edema.,Faithful,
+15,Test Results:,Faithful,
+16,"- ECG taken on 12/26/2020 shows atrial fibrillation with a controlled ventricular response, T wave inversion anteriorly.",Faithful,
+17,"Assessment: The patient's heart valves are working well and she is recovering from the mitral valve repair surgery, but she has ongoing atrial fibrillation that is being well controlled with medication.",Faithful,
+18,Problem list: Atrial fibrillation; mitral regurgitation; diabetes; asthma; recurrent chest discomfort; history of coronary artery disease (past).,Contextual,history of coronary artery disease (past)
+19,"I instructed the patient to continue taking her current medications, including Coumadin 4 mg, Lasix 4 mg daily, and Atenolol 50 mg daily.",Faithful,
+20,I advised her to continue to manage her symptoms by slowing down and avoiding overexertion.,Faithful,
+21,I recommended that she try to stay active and maintain a healthy lifestyle.,Faithful,
+22,Follow-up: I scheduled a follow-up appointment in 6-9 months to check on her cardiac status.,Faithful,

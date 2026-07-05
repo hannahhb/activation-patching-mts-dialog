@@ -1,0 +1,25 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 25-year-old male, presents with a 3-week history of severe, squeezing pain on the right-hand side of his belly, located underneath his ribs.",Fabrication,a 25-year-old male
+1,"He describes the pain as an 8 out of 10 in severity and notes that it comes and goes, often accompanied by nausea and vomiting.",Fabrication,and vomiting
+2,"The pain is exacerbated by eating, particularly fatty foods, which is a staple of his current keto diet.",Faithful,
+3,He has lost 25 pounds over the last 3 months since starting the diet and has seen improvement in his blood sugar control.,Faithful,
+4,"His past medical history is significant for type 2 diabetes, which he has managed with diet and exercise.",Faithful,
+5,"He has a family history of gallbladder disease, with both parents having had their gallbladders removed.",Faithful,
+6,"Review of systems: The patient reports occasional low-grade fevers and nausea, but no vomiting.",Faithful,
+7,He denies any fever at the time of the visit.,Faithful,
+8,Current medications: [NOT MENTIONED],Fabrication,Current medications
+9,"Vital signs: Blood pressure was 128/88, respiratory rate was 16, pulse rate was 68, and oxygen saturation on room air was 99%.",Faithful,
+10,"Physical exam: The patient has a regular heart rhythm and no murmurs, clicks, or rubs.",Faithful,
+11,The lungs are clear and equal bilaterally.,Faithful,
+12,"The abdomen is soft and nondistended, with positive bowel sounds.",Faithful,
+13,"There is slight guarding in the right upper quadrant, but no rebound tenderness.",Faithful,
+14,"The patient experiences pain when pressure is applied to the right-hand side of his abdomen, consistent with Murphy's sign.",Faithful,
+15,"Test Results: Abdominal ultrasound shows multiple gallstones in the gallbladder, with mild thickening of the gallbladder wall.",Faithful,
+16,The common bile duct size is within normal limits at 4.1 mm.,Faithful,
+17,"Assessment: The patient has mild cholecystitis with gallstones, with a possible obstruction not appreciated.",Causality,with a possible obstruction not appreciated
+18,Problem list: Cholecystitis; Gallstones; Type 2 diabetes (status: confirmed); Family history of gallbladder disease.,Faithful,
+19,I prescribed [NOT MENTIONED] for [NOT MENTIONED].,Fabrication,I prescribed [NOT MENTIONED] for [NOT MENTIONED]
+20,"I recommended a laparoscopic cholecystectomy to remove the gallbladder, with a surgery time of about an hour to an hour and a half.",Faithful,
+21,The patient will spend the night in the hospital for monitoring post-procedure and will be advised to avoid high-fat foods and eat high-fiber foods after surgery.,Faithful,
+22,The patient will be encouraged to get up and move around on solid ground within a day or two after surgery.,Faithful,
+23,"Follow-up: I will see the patient in a week to monitor his progress and release him to return to normal activities, including hiking and photography.",Faithful,

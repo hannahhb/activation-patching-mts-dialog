@@ -1,0 +1,24 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 4-year-old mother of twins, injured her right knee while skiing in Vermont last weekend.",Fabrication,a 4-year-old mother of twins
+1,"She caught her ski while coming off the lift and fell, causing her knee to pop and resulting in persistent pain.",Faithful,
+2,She was unable to bear weight and had to be taken down by the ski patrol.,Faithful,
+3,"She reports pain on the outside of the knee, which feels like it won't hold her weight, and has decreased flexion and extension.",Faithful,
+4,She was initially able to bend her knee immediately after the injury but not now.,Faithful,
+5,She also experiences pain with straightening the knee.,Faithful,
+6,She denies numbness or tingling in her toes and is able to feel her toes.,Faithful,
+7,"She is generally healthy, with no high blood pressure or diabetes.",Faithful,
+8,"She is taking ibuprofen for pain, which is somewhat effective.",Faithful,
+9,Past medical history: The patient has no significant past medical history mentioned.,Faithful,
+10,Review of systems: The patient denies any additional symptoms in other organs.,Faithful,
+11,Current medications: I prescribed ibuprofen 600-800 mg every 8 hours as needed for pain.,Causality,I prescribed
+12,Vital signs: [NOT MENTIONED],Fabrication,Vital signs
+13,"Physical exam: The patient has edema and an effusion over the right knee, with pain to palpation of the right lateral knee.",Faithful,
+14,"There is decreased flexion and extension of the right knee, and a positive Lachman sign.",Faithful,
+15,"The dorsalis pedis and posterior tibial pulses are palpable, and there is no leg edema in the ankle.",Faithful,
+16,Test Results: [NOT MENTIONED],Fabrication,Test Results
+17,"Assessment: The patient likely has a ruptured anterior cruciate ligament (ACL) in her right knee, which is a major ligament that helps connect and stabilize the knee joint.",Faithful,
+18,Problem list: ACL injury; right knee pain; knee effusion; decreased flexion and extension of the right knee.,Faithful,
+19,I ordered a knee MRI to confirm the diagnosis and rule out any other structures that may have been damaged in the accident.,Faithful,
+20,"I also recommended that the patient continue taking ibuprofen 600-800 mg every 8 hours as needed for pain, and wear a knee brace to provide additional support.",Faithful,
+21,I hope to have the MRI results in the next couple of days and will discuss further treatment options with the patient at that time.,Faithful,
+22,Follow-up: I will see the patient again soon to discuss the MRI results and plan further treatment.,Faithful,

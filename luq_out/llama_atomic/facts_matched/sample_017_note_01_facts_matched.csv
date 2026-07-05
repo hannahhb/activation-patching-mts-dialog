@@ -1,0 +1,73 @@
+fact_idx,section,fact,uncertainty,match_sent_idx,sentence_text,precision,matched_by,clean_match,entity_score,entity_effective,name_overlap,number_overlap,salient_precision,lemma_precision,lcs_precision,neg_match,score
+0,subjective,The patient's name is Tyler.,0.6683,1,"HPI: Tyler, a 56-year-old male, presents with a 4-5 week history of difficulty swallowing.",0.9,name,True,0.0,0.0,1,0,0.0,1.0,1.0,1,0.9
+1,subjective,The patient is a 56-year-old male.,0.0542,1,"HPI: Tyler, a 56-year-old male, presents with a 4-5 week history of difficulty swallowing.",0.88,number,True,0.0,0.0,0,1,0.0,1.0,1.0,1,0.88
+2,subjective,The patient has a 4-5 week history of difficulty swallowing.,0.0152,1,"HPI: Tyler, a 56-year-old male, presents with a 4-5 week history of difficulty swallowing.",0.88,number,True,0.0,0.0,0,1,1.0,1.0,1.0,1,0.88
+3,subjective,The patient reports feeling like something is stuck in his throat.,0.0091,2,"He reports that it feels like something is stuck in his throat, which is painful and interferes with swallowing solid foods, but not liquids.",0.93,entity,True,0.85,0.85,0,0,0.0,1.0,1.0,0,0.93
+4,subjective,The sensation of something stuck in the throat is painful.,0.4815,2,"He reports that it feels like something is stuck in his throat, which is painful and interferes with swallowing solid foods, but not liquids.",0.93,entity,True,0.85,0.637,0,0,0.0,0.75,0.75,0,0.93
+5,subjective,The difficulty swallowing interferes with solid foods.,0.5893,1,"HPI: Tyler, a 56-year-old male, presents with a 4-5 week history of difficulty swallowing.",0.086,,False,0.0,0.0,0,0,0.0,0.2,0.2,1,0.086
+6,subjective,The patient can swallow liquids.,0.8637,2,"He reports that it feels like something is stuck in his throat, which is painful and interferes with swallowing solid foods, but not liquids.",0.13,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,0,0.13
+7,subjective,The patient denied coughing.,0.1398,3,"He denies coughing, vomiting blood, or weight loss.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+8,subjective,The patient denied vomiting blood.,0.0372,3,"He denies coughing, vomiting blood, or weight loss.",0.93,entity,True,1.0,1.0,0,0,0.0,1.0,1.0,1,0.93
+9,subjective,The patient denied weight loss.,0.2319,3,"He denies coughing, vomiting blood, or weight loss.",0.93,entity,True,1.0,1.0,0,0,0.0,1.0,1.0,1,0.93
+10,subjective,The patient has diabetes.,0.0163,4,Past medical history: Diabetes and high blood pressure.,0.322,,False,0.85,0.85,0,0,0.0,0.0,0.0,1,0.322
+11,subjective,The patient has high blood pressure.,0.084,4,Past medical history: Diabetes and high blood pressure.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+12,subjective,The doctor prescribed metformin.,0.5655,5,He is currently taking metformin 500mg twice daily and norvasc.,0.93,entity,True,0.85,0.85,0,0,0.0,0.5,0.5,1,0.93
+13,subjective,The metformin dose is 500mg.,0.0872,5,He is currently taking metformin 500mg twice daily and norvasc.,0.93,entity,True,0.85,0.85,0,1,1.0,0.75,0.75,1,0.93
+14,subjective,Metformin is taken twice daily.,0.0131,5,He is currently taking metformin 500mg twice daily and norvasc.,0.93,entity,True,0.85,0.85,0,0,0.0,1.0,0.75,1,0.93
+15,subjective,Metformin is prescribed for diabetes.,0.0075,5,He is currently taking metformin 500mg twice daily and norvasc.,0.93,,False,0.85,0.85,0,0,0.0,0.333,0.333,1,0.93
+16,subjective,The doctor prescribed norvasc.,0.8633,5,He is currently taking metformin 500mg twice daily and norvasc.,0.14,lcs,True,0.0,0.0,0,0,0.0,0.5,0.5,1,0.14
+17,subjective,Norvasc is prescribed for high blood pressure.,0.0615,10,Norvasc (dosage and frequency not specified),0.93,,False,0.85,0.255,1,0,0.0,0.2,0.2,0,0.93
+18,subjective,The patient is compliant with his medications.,0.5616,6,"He has been compliant with his medications and has been checking his blood sugar levels 80% of the time, with numbers within target range.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+19,subjective,The patient checks his blood sugar levels 80% of the time.,0.8908,6,"He has been compliant with his medications and has been checking his blood sugar levels 80% of the time, with numbers within target range.",0.88,number,True,0.0,0.0,0,1,1.0,1.0,1.0,1,0.88
+20,subjective,The patient's blood sugar levels are within target range.,0.671,6,"He has been compliant with his medications and has been checking his blood sugar levels 80% of the time, with numbers within target range.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+21,subjective,The patient denied nausea.,0.2527,3,"He denies coughing, vomiting blood, or weight loss.",0.14,lcs,True,0.0,0.0,0,0,0.0,0.5,0.5,1,0.14
+22,subjective,The patient denied vomiting.,0.0947,3,"He denies coughing, vomiting blood, or weight loss.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+23,subjective,The patient denied diarrhea.,0.2956,7,"Review of systems: Denies nausea, vomiting, diarrhea, or any other side effects from medications.",0.284,lcs,True,0.45,0.45,0,0,0.0,0.5,0.5,1,0.284
+24,subjective,The patient denied other side effects from medications.,0.4582,3,"He denies coughing, vomiting blood, or weight loss.",0.14,lcs,True,0.0,0.0,0,0,0.0,0.5,0.5,1,0.14
+25,objective,The patient's neck is fine.,0.0348,18,"The back and extremity exams are normal, and the neurological exam is fine.",0.14,lcs,True,0.0,0.0,0,0,0.0,0.5,0.5,1,0.14
+26,objective,The patient's neck has no swelling.,0.0217,13,"Physical exam: The patient's neck is fine, with no swelling, and his thyroid feels normal.",0.374,lcs,True,0.45,0.45,0,0,0.0,1.0,1.0,1,0.374
+27,objective,The patient's thyroid feels normal.,0.0237,13,"Physical exam: The patient's neck is fine, with no swelling, and his thyroid feels normal.",0.13,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,0,0.13
+28,objective,No masses are palpable on the patient's neck.,0.0223,14,No masses or lymph nodes are palpable.,0.9,name,True,0.0,0.0,1,0,0.0,0.667,0.667,1,0.9
+29,objective,No lymph nodes are palpable on the patient's neck.,0.2755,14,No masses or lymph nodes are palpable.,0.9,name,True,0.0,0.0,1,0,0.0,0.75,0.75,1,0.9
+30,objective,The patient's throat examination is normal.,0.0421,15,"The throat examination is normal, with no masses or swelling.",0.93,entity,True,0.85,0.85,0,0,0.0,1.0,1.0,0,0.93
+31,objective,The patient's throat has no masses.,0.0198,15,"The throat examination is normal, with no masses or swelling.",0.93,entity,True,0.85,0.85,0,0,0.0,1.0,1.0,1,0.93
+32,objective,The patient's throat has no swelling.,0.0203,15,"The throat examination is normal, with no masses or swelling.",0.93,entity,True,0.85,0.85,0,0,0.0,1.0,1.0,1,0.93
+33,objective,The patient's lung exam is clear.,0.1393,16,"The lung and heart exams are clear, with no murmurs.",0.13,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,0,0.13
+34,objective,The patient's heart exam is clear.,0.7692,16,"The lung and heart exams are clear, with no murmurs.",0.13,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,0,0.13
+35,objective,The patient's heart has no murmurs.,0.4603,16,"The lung and heart exams are clear, with no murmurs.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+36,objective,The patient's belly exam reveals epigastric tenderness.,0.4444,17,"The belly exam reveals epigastric tenderness, but no masses or significant swelling.",0.93,entity,True,0.85,0.85,0,0,0.0,1.0,1.0,0,0.93
+37,objective,The patient's belly has no masses.,0.7629,17,"The belly exam reveals epigastric tenderness, but no masses or significant swelling.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+38,objective,The patient's belly has no significant swelling.,0.1575,17,"The belly exam reveals epigastric tenderness, but no masses or significant swelling.",0.374,lcs,True,0.45,0.45,0,0,0.0,1.0,1.0,1,0.374
+39,objective,The patient's back exam is normal.,0.3489,18,"The back and extremity exams are normal, and the neurological exam is fine.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+40,objective,The patient's extremity exam is normal.,0.5646,18,"The back and extremity exams are normal, and the neurological exam is fine.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+41,objective,The patient's neurological exam is fine.,0.1411,18,"The back and extremity exams are normal, and the neurological exam is fine.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+42,assessment,The patient presents with difficulty swallowing.,0.0014,21,"Assessment: The patient presents with difficulty swallowing, likely due to a possible narrowing of the esophagus, possibly a stricture.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+43,assessment,The patient has a possible narrowing of the esophagus.,0.0023,21,"Assessment: The patient presents with difficulty swallowing, likely due to a possible narrowing of the esophagus, possibly a stricture.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+44,assessment,The patient possibly has an esophageal stricture.,0.0027,22,Problem list: Dysphagia; Esophageal stricture suspected; Diabetes; Hypertension.,0.93,entity,True,1.0,1.0,0,0,0.0,0.667,0.667,1,0.93
+45,assessment,The patient has Dysphagia.,0.5567,22,Problem list: Dysphagia; Esophageal stricture suspected; Diabetes; Hypertension.,0.93,entity,True,0.85,0.85,1,0,0.0,1.0,1.0,1,0.93
+46,assessment,The patient has a suspected Esophageal stricture.,0.0025,22,Problem list: Dysphagia; Esophageal stricture suspected; Diabetes; Hypertension.,0.93,entity,True,1.0,1.0,1,0,0.0,1.0,0.667,1,0.93
+47,assessment,The patient has Diabetes.,0.7747,22,Problem list: Dysphagia; Esophageal stricture suspected; Diabetes; Hypertension.,0.93,entity,True,0.85,0.85,1,0,1.0,1.0,1.0,1,0.93
+48,assessment,The patient has Hypertension.,0.7804,22,Problem list: Dysphagia; Esophageal stricture suspected; Diabetes; Hypertension.,0.93,entity,True,0.85,0.85,1,0,0.0,1.0,1.0,1,0.93
+49,plan,The doctor recommended a referral to gastroenterology.,0.0048,24,I recommended a referral to gastroenterology for a scope to evaluate the esophagus.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+50,plan,The referral to gastroenterology is for a scope.,0.385,24,I recommended a referral to gastroenterology for a scope to evaluate the esophagus.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+51,plan,The scope is to evaluate the esophagus.,0.5807,24,I recommended a referral to gastroenterology for a scope to evaluate the esophagus.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+52,plan,The doctor prescribed Prilosec.,0.024,25,I also prescribed Prilosec 20mg once daily for possible reflux.,0.93,entity,True,0.85,0.85,1,0,0.0,1.0,1.0,1,0.93
+53,plan,The Prilosec dose is 20mg.,0.1134,25,I also prescribed Prilosec 20mg once daily for possible reflux.,0.957,entity,True,0.85,0.85,1,1,1.0,0.75,0.75,1,0.957
+54,plan,Prilosec is taken once daily.,0.1174,25,I also prescribed Prilosec 20mg once daily for possible reflux.,0.93,entity,True,0.85,0.85,1,0,0.0,0.667,0.667,1,0.93
+55,plan,Prilosec is prescribed for possible reflux.,0.039,25,I also prescribed Prilosec 20mg once daily for possible reflux.,0.93,entity,True,0.85,0.85,1,0,0.0,1.0,0.75,1,0.93
+56,plan,The doctor advised the patient to chew foods slowly.,0.7774,26,"I advised the patient to chew foods slowly and carefully, especially solid foods.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+57,plan,The doctor advised the patient to chew foods carefully.,0.0072,26,"I advised the patient to chew foods slowly and carefully, especially solid foods.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+58,plan,The patient should chew solid foods slowly and carefully.,0.6719,26,"I advised the patient to chew foods slowly and carefully, especially solid foods.",0.212,lcs,True,0.0,0.0,0,0,0.0,1.0,0.8,1,0.212
+59,plan,The doctor will order a hemoglobin A1c test.,0.0153,27,I will order another hemoglobin A1c and kidney function tests.,0.88,number,True,0.0,0.0,0,1,1.0,1.0,1.0,1,0.88
+60,plan,The doctor will order kidney function tests.,0.0069,27,I will order another hemoglobin A1c and kidney function tests.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+61,plan,The doctor will give the patient an eye referral.,0.0033,28,I will also give the patient an eye referral to ophthalmology to check for diabetic retinopathy.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+62,plan,The eye referral is to ophthalmology.,0.4585,28,I will also give the patient an eye referral to ophthalmology to check for diabetic retinopathy.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+63,plan,The eye referral is to check for diabetic retinopathy.,0.1467,28,I will also give the patient an eye referral to ophthalmology to check for diabetic retinopathy.,0.93,entity,True,1.0,1.0,0,0,0.0,1.0,1.0,1,0.93
+64,plan,The doctor will continue the patient on metformin.,0.3358,29,"I will continue the patient on metformin and norvasc, and schedule a follow-up appointment in a month to review the results of the blood tests.",0.93,entity,True,0.85,0.85,0,0,0.0,1.0,1.0,1,0.93
+65,plan,The doctor will continue the patient on norvasc.,0.2208,29,"I will continue the patient on metformin and norvasc, and schedule a follow-up appointment in a month to review the results of the blood tests.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+66,plan,The patient is scheduled for a follow-up appointment.,0.1323,29,"I will continue the patient on metformin and norvasc, and schedule a follow-up appointment in a month to review the results of the blood tests.",0.68,medical_token,True,0.0,0.0,0,0,1.0,1.0,1.0,1,0.68
+67,plan,The follow-up appointment is in a month.,0.2411,29,"I will continue the patient on metformin and norvasc, and schedule a follow-up appointment in a month to review the results of the blood tests.",0.68,medical_token,True,0.0,0.0,0,0,1.0,1.0,1.0,1,0.68
+68,plan,The purpose of the follow-up appointment is to review the results of the blood tests.,0.5968,29,"I will continue the patient on metformin and norvasc, and schedule a follow-up appointment in a month to review the results of the blood tests.",0.68,medical_token,True,0.0,0.0,0,0,1.0,0.75,0.75,1,0.68
+69,plan,The patient will return in a month for follow-up.,0.2483,29,"I will continue the patient on metformin and norvasc, and schedule a follow-up appointment in a month to review the results of the blood tests.",0.68,medical_token,True,0.0,0.0,0,0,1.0,0.667,0.333,1,0.68
+70,plan,The patient will return sooner if symptoms worsen.,0.9999,30,"Follow-up: The patient will return in a month for follow-up, or sooner if symptoms worsen or if there are any concerns.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+71,plan,The patient will return sooner if there are any concerns.,0.9999,30,"Follow-up: The patient will return in a month for follow-up, or sooner if symptoms worsen or if there are any concerns.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23

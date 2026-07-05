@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 32-year-old male, presents with a 2-week history of low back pain that started after lifting a box of books.",Fabrication,a 32-year-old male
+1,"He describes the pain as achy and sharp in his low back, with radiation down his left leg.",Faithful,
+2,"The pain has worsened over time, but he has not experienced numbness, tingling, or weakness in his legs.",Faithful,
+3,He denies loss of control of bladder or bowels.,Faithful,
+4,"He has tried taking ibuprofen and Tylenol, which sometimes helps.",Faithful,
+5,He has not discussed surgery with anyone previously.,Faithful,
+6,Past medical history: The patient's father has a history of back pain.,Faithful,
+7,"The patient has a history of playing soccer, but no other relevant medical history is mentioned.",Faithful,
+8,Review of systems: The patient denies any other symptoms.,Fabrication,Review of systems
+9,Current medications: The patient takes ibuprofen and Tylenol as needed.,Faithful,
+10,"Vital signs: Blood pressure 130/70, respiratory rate 18, regular heart rate and rhythm, clear lungs bilaterally, and normal temperature (not mentioned).",Causality,and normal temperature (not mentioned)
+11,Physical exam: The patient has midline tenderness at the L4-L5 disk space with right-sided lumbar paravertebral tenderness.,Faithful,
+12,"He has pain with lumbar flexion, and a positive straight leg raise test.",Faithful,
+13,"Test Results: MRI results show a disk desiccation, a disk bulge with paracentral disk herniation resulting in moderate right neuroforaminal stenosis, consistent with a herniated disk with nerve impingement.",Faithful,
+14,Assessment: The patient has lumbar back pain at the L4-L5 disk space due to a herniated disk with radiculopathy.,Faithful,
+15,Problem list: Lumbar back pain at the L4-L5 disk space; Herniated disk with nerve impingement; Lumbar radiculopathy.,Fabrication,Problem list
+16,I prescribed a spinal injection with a strong NSAID and a corticosteroid to be administered under fluoroscopy.,Faithful,
+17,I will schedule the procedure for today.,Faithful,
+18,The patient will receive paperwork with explanations of the risks and benefits of the procedure.,Faithful,
+19,I will answer any further questions the patient may have.,Faithful,
+20,Follow-up: The patient will be scheduled for the spinal injection procedure today.,Fabrication,Follow-up

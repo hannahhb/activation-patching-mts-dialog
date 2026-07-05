@@ -1,0 +1,26 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.5
+1,"HPI: The patient, a 50-year-old male, presents with a 3-week history of abdominal pain located on the right-hand side of the abdomen, underneath the ribs, described as a severe squeezing pain that comes and goes, accompanied by nausea and occasional low-grade fevers.",0.9996
+2,"The pain is exacerbated by eating, particularly high-fat foods, and has not improved with dietary modifications.",0.6044
+3,"The patient has a history of type 2 diabetes, managed with diet and exercise, and has lost 25 pounds over the past 3 months.",0.0075
+4,"He reports a family history of gallbladder disease, with both parents having undergone cholecystectomies.",0.0052
+5,"Past medical history: The patient has type 2 diabetes, managed with diet and exercise, and has lost 25 pounds over the past 3 months.",0.0056
+6,"He reports a family history of gallbladder disease, with both parents having undergone cholecystectomies.",0.0052
+7,"Review of systems: The patient reports occasional low-grade fevers, nausea, and vomiting, but denies fever.",0.1089
+8,Current medications: [NOT MENTIONED],0.5
+9,Objective:,0.5
+10,"Vital signs: Blood pressure was 128/88, respiratory rate was 16, pulse rate was 68, and oxygen saturation on room air was 99%.",0.2512
+11,"Physical exam: The patient has a soft, nondistended abdomen with positive bowel sounds.",0.2507
+12,"The patient is guarded in the right upper quadrant, with slight guarding and tenderness to palpation, but no rebound tenderness.",0.5553
+13,Murphy's sign is positive.,0.2509
+14,"Test Results: Abdominal ultrasound shows multiple gallstones present in the gallbladder, mild thickening of the gallbladder wall, and a normal common bile duct size of 4.1 mm.",0.2494
+15,Assessment / Problem List:,0.5
+16,"Assessment: The patient has mild cholecystitis with gallstones, likely caused by a gallbladder inflammation that has occurred over the past few weeks.",0.6611
+17,Problem list: Cholecystitis with gallstones; Suspected gallbladder disease; Type 2 diabetes; Family history of gallbladder disease.,0.0672
+18,Plan:,0.5
+19,I recommended a laparoscopic cholecystectomy to remove the gallbladder.,0.0001
+20,"The surgery is expected to take about an hour to an hour and a half, and the patient will likely spend the night in the hospital for monitoring.",0.1679
+21,The patient will need to avoid high-fat foods and eat high-fiber foods after surgery.,0.0001
+22,"The patient will be able to get up and walk around within a day or two, and will be seen again in about a week for follow-up.",0.6669
+23,Follow-up: The patient will be seen again in about a week for follow-up and to be discharged.,0.0102
+24,The patient will also need to follow up with their primary care provider to manage their type 2 diabetes.,0.7864

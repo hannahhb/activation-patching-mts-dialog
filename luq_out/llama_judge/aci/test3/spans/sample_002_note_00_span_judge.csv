@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Jacqueline, presented with a complaint of a painful right ankle after a mountain biking incident, where she fell and twisted her ankle outward.",Faithful,
+1,"She reports that the pain is located on the outer ankle and is accompanied by some tingling and numbness in her toes and heart, although I clarified that I am an orthopedic person and couldn't discuss the numbness in her heart.",Faithful,
+2,She reports that the pain is not relieved by Tylenol and that she heard a crack when the injury occurred.,Faithful,
+3,"She denies any fever, chills, or other systemic symptoms, but reports having a fever of 200 degrees Fahrenheit, which I clarified is not a fever.",Negation,denies any fever
+4,She has been mountain biking for three years and is not sure of her favorite location.,Faithful,
+5,Past medical history: [NOT MENTIONED],Fabrication,Past medical history
+6,Review of systems: [NOT MENTIONED],Fabrication,Review of systems
+7,Current medications: She took Tylenol for pain.,Faithful,
+8,"Vital signs: Her temperature is 98.6 degrees Fahrenheit, blood pressure is 118/77, and heart rate is 77 beats per minute.",Faithful,
+9,"Physical exam: On the right ankle exam, there is some edema and erythema on the lateral malleolus, associated ecchymosis, and a few excoriations.",Faithful,
+10,"There is pain to palpation of the right lateral malleolus, decreased flexion and extension of the right ankle, and internal and external rotation.",Faithful,
+11,There is no apparent injury to the knee or the foot.,Faithful,
+12,"Test Results: The right ankle x-ray shows no acute fracture or bony abnormality, only some soft tissue injury.",Faithful,
+13,Assessment: I believe the patient has an acute right ankle sprain.,Faithful,
+14,Problem list: Ankle sprain; suspected; confirmed; past; unknown.,Fabrication,suspected; confirmed; past; unknown
+15,I prescribed meloxicam 15 milligrams once a day for pain.,Faithful,
+16,"I advised her to ice the area for about 20 minutes, five times a day, and to weight-bear as tolerated.",Faithful,
+17,I recommended an air cast and provided crutches.,Faithful,
+18,"I anticipate her to start feeling better in the next couple of weeks and instructed her to return if she doesn't improve, at which point we will consider physical therapy or further imaging.",Faithful,
+19,Follow-up: I instructed her to follow up with me if she doesn't start feeling better.,Causality,if she doesn't start feeling better

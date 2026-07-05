@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient presents with a 1-week history of low back pain that began after twisting and possibly lifting something on the left side, which initially resolved but returned after a few hours.",Faithful,
+1,"The pain is located in the middle to lower back, with exacerbation when twisting suddenly to the left.",Faithful,
+2,"The patient reports that the pain is worse when pressing down on the low back, particularly in the center.",Faithful,
+3,Past medical history: The patient has a history of diabetes and is on metformin twice a day.,Faithful,
+4,"The patient has a family history of owning a bakery, and occasionally visits the bakery but tries to control their intake of sweets.",Faithful,
+5,"Review of systems: The patient reports occasional trouble with the left eye, but this is not related to the low back pain.",Causality,but this is not related to the low back pain
+6,Current medications: Metformin 2x/day.,Faithful,
+7,Vital signs: Not mentioned.,Faithful,
+8,"Physical exam: The patient's lungs are clear, heart rate and rhythm are regular, and there is no pain when pressing down on the upper back.",Faithful,
+9,"The patient experiences pain when pressing down on the low back, particularly in the center.",Faithful,
+10,The patient reports pain when lifting the right and left legs.,Faithful,
+11,Test Results: Not mentioned.,Faithful,
+12,Assessment: I believe the patient has a musculoskeletal low back strain.,Faithful,
+13,Problem list: Musculoskeletal low back strain; Diabetes; [Unknown],Fabrication,[Unknown]
+14,I ordered a low back x-ray to evaluate the joint spaces and possible disk issues.,Faithful,
+15,I also ordered physical therapy to help with pain and strengthen the muscles in the back.,Faithful,
+16,"I prescribed 400mg of ibuprofen to be taken occasionally with Tylenol for severe pain, up to 3 times a day, and one Flexeril per day in the evening.",Faithful,
+17,I instructed the patient to continue with their current diet and exercise routine and to continue taking metformin.,Faithful,
+18,Follow-up: The patient will return for a follow-up appointment to discuss the results of the x-ray and A1c test.,Faithful,
+19,The patient will also be referred to a pain doctor if the pain persists after the x-ray and physical therapy.,Faithful,

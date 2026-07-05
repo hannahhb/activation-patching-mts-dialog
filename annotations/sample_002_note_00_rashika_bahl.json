@@ -53,15 +53,18 @@
     },
     "10": {
       "faithful": "Not Faithful",
-      "type": "Negation"
+      "type": "Negation",
+      "severity": "N/A"
     },
     "11": {
       "faithful": "Not Faithful",
-      "type": "Causality"
+      "type": "Contextual",
+      "severity": "N/A"
     },
     "12": {
       "faithful": "Not Faithful",
-      "type": "Fabrication"
+      "type": "Fabrication",
+      "severity": "N/A"
     },
     "13": {
       "faithful": "Faithful",
@@ -104,12 +107,14 @@
       "severity": "N/A"
     },
     "21": {
+      "faithful": "Not Faithful",
       "type": "Causality",
-      "faithful": "Not Faithful"
+      "severity": "N/A"
     },
     "22": {
       "faithful": "Not Faithful",
-      "type": "Causality"
+      "type": "Causality",
+      "severity": "N/A"
     },
     "23": {
       "faithful": "Faithful",

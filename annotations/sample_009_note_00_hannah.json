@@ -24,20 +24,24 @@
   ],
   "sentence_labels": {
     "0": {
+      "faithful": "Not Faithful",
       "type": "Contextual",
-      "faithful": "Not Faithful"
+      "severity": "N/A"
     },
     "1": {
-      "faithful": "Faithful",
+      "faithful": "Not Faithful",
       "type": null,
       "severity": "N/A"
     },
     "2": {
-      "type": "Fabrication"
+      "faithful": "Not Faithful",
+      "type": "Fabrication",
+      "severity": "N/A"
     },
     "3": {
       "faithful": "Not Faithful",
-      "type": "Negation"
+      "type": "Negation",
+      "severity": "N/A"
     },
     "4": {
       "faithful": "Faithful",
@@ -66,11 +70,17 @@
     },
     "9": {
       "faithful": "Not Faithful",
-      "type": "Fabrication"
+      "type": "Fabrication",
+      "severity": "N/A"
+    },
+    "11": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
     },
     "12": {
-      "faithful": "Not Faithful",
-      "type": "Fabrication",
+      "faithful": "Faithful",
+      "type": null,
       "severity": "N/A"
     },
     "13": {
@@ -84,6 +94,11 @@
       "severity": "N/A"
     },
     "16": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "17": {
       "faithful": "Faithful",
       "type": null,
       "severity": "N/A"

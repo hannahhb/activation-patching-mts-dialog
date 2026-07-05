@@ -1,6 +1,11 @@
 {
   "token_spans": [],
   "sentence_labels": {
+    "0": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
     "1": {
       "faithful": "Faithful",
       "type": null,
@@ -17,8 +22,9 @@
       "severity": "N/A"
     },
     "4": {
+      "faithful": "Not Faithful",
       "type": "Negation",
-      "faithful": "Not Faithful"
+      "severity": "N/A"
     },
     "5": {
       "faithful": "Faithful",
@@ -77,7 +83,8 @@
     },
     "20": {
       "faithful": "Not Faithful",
-      "type": "Fabrication"
+      "type": "Fabrication",
+      "severity": "N/A"
     },
     "21": {
       "faithful": "Faithful",
@@ -91,7 +98,8 @@
     },
     "23": {
       "faithful": "Not Faithful",
-      "type": "Fabrication"
+      "type": "Fabrication",
+      "severity": "N/A"
     }
   },
   "note_html": "Subjective:\nHPI: The patient presents with right shoulder pain that has been ongoing for a few weeks, initially appearing after working on various projects in his backyard. The pain is located on the outside of the shoulder and is tender to the touch when raising the arm. He denies any numbness in the arm or hands. The pain is worse with movement and is alleviated by rest and over-the-counter medication. He has a history of similar pain in the same shoulder from a past injury playing baseball. Past medical history: The patient has a history of right shoulder pain from a past injury, which has always been a bit of an issue. Review of systems: The patient denies any additional symptoms in other organs. Current medications: The patient has been taking Advil for pain relief and icing the affected area.\n\nObjective:\nVital signs: The patient's temperature is 97.8\u00b0F, heart rate is 62, respirations are 16, blood pressure is 116/84, and oxygen saturation is 99%. Physical exam: The patient has limited active and passive range of motion in the right shoulder, with tenderness at the greater tuberosity of the humerus. The patient has a good hand grip and intact sensation to touch in the right arm. Test Results: The patient's shoulder X-ray shows no fracture.\n\nAssessment / Problem List:\nAssessment: The patient's symptoms are most likely due to rotator cuff tendinopathy, a condition in which the tendons of the muscles that help make the shoulder muscles are injured. Problem list: Rotator cuff tendinopathy; Sore feet.\n\nPlan:\nI plan to refer the patient to physical therapy for approximately six to eight weeks to address the rotator cuff tendinopathy. I will also order an MRI to rule out any other conditions. During this time, the patient should continue taking Tylenol and icing the affected area. If symptoms do not improve, we will consider a steroid injection into the shoulder for relief. I also recommend that the patient tries soaking his feet in Epsom salts to alleviate soreness.\n\nFollow-up: The patient will follow up with physical therapy and return for a follow-up appointment to reassess symptoms."

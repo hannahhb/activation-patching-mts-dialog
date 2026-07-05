@@ -1,0 +1,20 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Emily, presented with sudden visual distortions and blurring of her vision.",Faithful,
+1,"She reports difficulty adjusting to dim lighting, specifically when dining at restaurants.",Faithful,
+2,She denies any other symptoms.,Fabrication,She denies any other symptoms
+3,Past medical history: The patient has a history of macular degeneration.,Faithful,
+4,"She is a smoker, consuming one pack of cigarettes per day, and has been trying to quit but has not been successful.",Faithful,
+5,"She reports taking her blood pressure medication sporadically, but does not keep a regular log of her readings.",Faithful,
+6,Review of systems: The patient reports no other symptoms outside of her visual disturbances.,Fabrication,The patient reports no other symptoms outside of her visual disturbances
+7,"Current medications: I prescribed blood pressure medication, but the specific medication and dosing information was not provided.",Fabrication,I prescribed blood pressure medication
+8,Vital signs: Not mentioned.,Faithful,
+9,"Physical exam: The anterior segment examination revealed posterior chamber intraocular lenses in both eyes, clear corneas, and no MVI.",Faithful,
+10,The cup-to-disc ratio is 0.2 in the right eye and 0.3 in the left eye.,Faithful,
+11,"The fundus examination of the right eye showed the retina to be attached, with no tears or holes.",Faithful,
+12,"The posterior segment exam revealed drusen in the macula, thickening of the retina, subretinal fluid, and exudates accumulation, and positive for hemorrhage in the left eye.",Causality,in the left eye
+13,"Test Results: The diagnostic tests, including OCT and fluorescein angiography, revealed drusen deposit, subretinal fluid accumulation, choroidal neovascular membrane, and focal areas of leakage in the right eye consistent with neovascular age-related macular degeneration.",Faithful,
+14,"Assessment: The patient has neovascular age-related macular degeneration, a condition that typically leads to severe vision loss due to the growth of abnormal blood vessels beneath the retina, causing fluid and blood leakage.",Faithful,
+15,Problem list: Neovascular age-related macular degeneration; active.,Faithful,
+16,"I prescribed Lucentis, an injection to be administered once a month into the vitreous portion of the eye, to slow the rate of vision decline or stop further vision loss.",Faithful,
+17,Injections will be given regularly over a period of time.,Faithful,
+18,Follow-up: The patient will return for follow-up appointments as needed to monitor the progression of the disease and adjust treatment as necessary.,Fabrication,The patient will return for follow-up appointments as needed to monitor the progression of the disease and adjust treatment as necessary

@@ -1,0 +1,31 @@
+sentence_idx,sentence,label,note_span
+0,HPI: The patient presented with a history of a right knee injury sustained one week ago while engaging in trampolining at a trampoline park.,Faithful,
+1,"He reports hearing a snap and instant pain in the right knee, which he describes as pain on the outside of the knee.",Faithful,
+2,He has been managing his pain with Tylenol but reports it has not provided significant relief.,Faithful,
+3,He denies any other symptoms.,Fabrication,He denies any other symptoms
+4,"Past medical history: The patient has a history of hypertension, for which he is currently on lisinopril 20mg.",Faithful,
+5,"He also has diabetes, for which he is taking metformin 500mg.",Faithful,
+6,He reports inconsistent exercise and a diet that could be improved.,Faithful,
+7,Review of systems: [NOT MENTIONED],Fabrication,Review of systems: [NOT MENTIONED]
+8,Current medications:,Faithful,
+9,Lisinopril 20mg [INDICATION: hypertension],Faithful,
+10,Metformin 500mg [INDICATION: diabetes],Faithful,
+11,Vital signs:,Faithful,
+12,Blood pressure: 180/80,Faithful,
+13,Pulse rate: NOT MENTIONED,Fabrication,Pulse rate: NOT MENTIONED
+14,Oxygen saturation: NOT MENTIONED,Fabrication,Oxygen saturation: NOT MENTIONED
+15,Temperature: NOT MENTIONED,Fabrication,Temperature: NOT MENTIONED
+16,The patient's blood pressure is elevated at 180/80.,Faithful,
+17,The heart rate is regular and rhythmic.,Faithful,
+18,No murmur is appreciated.,Faithful,
+19,Lungs are clear bilaterally.,Faithful,
+20,"Examination of the right knee reveals ecchymosis and edema along the lateral aspect, but no effusion.",Faithful,
+21,Range of motion is present but limited by pain.,Faithful,
+22,Right knee x-ray: No evidence of fracture or bony abnormality.,Faithful,
+23,"Assessment: The patient presents with a lateral ligament strain of the right knee and hypertension that is not well-controlled, as well as poorly managed diabetes.",Faithful,
+24,Problem list: Right knee pain; hypertension; diabetes.,Faithful,
+25,I prescribed meloxicam 15mg daily for pain and swelling of the right knee.,Faithful,
+26,I referred the patient to physical therapy to help strengthen the muscles around the area and prevent further injury.,Faithful,
+27,I will continue the patient's lisinopril at 20mg and order an echocardiogram to assess cardiac function.,Faithful,
+28,I also ordered an A1c and lipid panel to evaluate the patient's diabetes management.,Faithful,
+29,Follow-up: The patient will return for a follow-up appointment to discuss the results of the imaging and laboratory tests.,Fabrication,The patient will return for a follow-up appointment to discuss the results of the imaging and laboratory tests

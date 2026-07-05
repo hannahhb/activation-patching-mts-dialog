@@ -1,0 +1,28 @@
+sentence_idx,sentence,label,note_span
+0,Subjective:,Faithful,
+1,"HPI: The patient, a 60-year-old right-handed female, presents with bilateral hand numbness and tingling since December 2020, which worsened over the last month.",Faithful,
+2,She reports the numbness and tingling is most pronounced in the middle and ring fingers of her right hand and the pinky and ring fingers of her left hand.,Faithful,
+3,"She also experiences mild stiffness in her neck, a contusion from a previous accident.",Faithful,
+4,"The patient reports soreness, a throb, and weakness in her hands, particularly at night.",Faithful,
+5,She denies any loss of sensation in her hands or fingers.,Faithful,
+6,"Past medical history: The patient has a history of chronic kidney disease, gout, hypertension, anxiety, GERD, and diabetes, which was previously prediabetes but is now under control with dietary changes.",Faithful,
+7,She is allergic to sulfa drugs.,Faithful,
+8,She is currently taking carvedilol 25 mg twice a day for hypertension and lexapro 10 mg a day for anxiety.,Faithful,
+9,"Review of systems: The patient reports fatigue, weight gain, excessive appetite, bloating, floaters, shortness of breath, and leg swelling.",Faithful,
+10,"She also reports positive symptoms of diabetes, such as always feeling hungry, skin nailbed changes, dryness, and itching.",Faithful,
+11,"Additionally, she reports musculoskeletal symptoms of gout and muscle pain, and neurological symptoms of paresthesia in her bilateral hands.",Faithful,
+12,"Current medications: I prescribed carvedilol 25 mg twice a day for hypertension, and lexapro 10 mg a day for anxiety.",Fabrication,I prescribed
+13,Objective:,Faithful,
+14,Vital signs: [NOT MENTIONED],Fabrication,Vital signs
+15,Physical exam: The physical exam was normal except for diminished pinprick sensation in the third and fourth fingers of the right hand and the fourth and fifth fingers of the left hand.,Faithful,
+16,"Reflexes are 1+ and symmetric, with downgoing toes bilaterally.",Faithful,
+17,Tinel's sign is positive at both wrists and both elbows.,Faithful,
+18,Test Results: [NOT MENTIONED],Fabrication,Test Results
+19,Assessment / Problem List:,Faithful,
+20,Assessment: The patient has bilateral carpal tunnel syndrome and a question of bilateral cubital tunnel syndrome.,Faithful,
+21,Problem list: Carpal tunnel syndrome; Cubital tunnel syndrome; Chronic kidney disease; Gout; Hypertension; Anxiety; GERD; Diabetes.,Faithful,
+22,Plan:,Faithful,
+23,I discussed my impression with the patient and scheduled her for EMG/NCV.,Faithful,
+24,"If her symptoms do not resolve, we can consider hand clinic referral for possible symptomatic injections or carpal tunnel release surgery.",Faithful,
+25,I encouraged her to wear her splints and return for EMG/NCV.,Faithful,
+26,Follow-up: I will schedule the patient for EMG/NCV.,Fabrication,Follow-up

@@ -1,0 +1,18 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Matthew Rogers, presents for an acne follow-up appointment.",Faithful,
+1,He reports that his acne is doing better since the last visit on 3/3/21.,Faithful,
+2,"He has been using the prescribed medications, including clindamycin lotion, tretinoin cream, 4-5% benzoyl peroxide wash for the face, and 5-10% benzoyl peroxide wash for the chest and back.",Faithful,
+3,"He has not experienced any redness, peeling, dryness, or irritation with the use of these medications.",Faithful,
+4,Past medical history: [NOT MENTIONED],Fabrication,Past medical history
+5,Review of systems: [NOT MENTIONED],Fabrication,Review of systems
+6,Current medications: Clindamycin lotion Tretinoin cream 4-5% Benzoyl peroxide wash 4-5% for the face Benzoyl peroxide wash 5-10% for the chest and back,Faithful,
+7,Vital signs: [NOT MENTIONED],Fabrication,Vital signs
+8,"Physical exam: Scattered inflammatory papules and pustules across the upper back and posterior shoulders, less than 5 inflammatory papules on the forehead, cheeks, and chin.",Faithful,
+9,"Acne vulgaris is improved and well-controlled on the face, but there is a mild flare on the back.",Faithful,
+10,Test Results: [NOT MENTIONED],Fabrication,Test Results
+11,"Assessment: The patient's acne vulgaris is improved and well-controlled on the face, but there is a mild flare on the back.",Faithful,
+12,Problem list: Acne vulgaris; Acne flare on the back,Fabrication,Problem list
+13,"I recommended continuing the current treatment plan for the face, which includes clindamycin lotion, tretinoin cream 4-5%, and 4-5% benzoyl peroxide wash.",Faithful,
+14,"I also initiated treatment with PanOxyl 10% foaming wash for the back, to be used daily in the shower.",Faithful,
+15,I prescribed PanOxyl 10% foaming wash to help control the mild flare on the back.,Faithful,
+16,I will see the patient in one year for a follow-up appointment to review his acne treatment plan and ensure that he has enough medication.,Faithful,

@@ -1,0 +1,16 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Mrs. Wood, presented with hematuria and a history of passing two small stones last week, with episodes of bright red urine for the past 6 weeks and constant urge to urinate and severe pain, rated an 8 out of 10.",Faithful,
+1,She has been taking Alavert 10 mg daily with no drug allergies.,Faithful,
+2,Past medical history: Not mentioned.,Faithful,
+3,Review of systems: [NOT MENTIONED],Faithful,
+4,Current medications: Alavert 10 mg daily.,Faithful,
+5,Vital signs: Not mentioned.,Faithful,
+6,"Physical exam: The patient's abdomen was normal, with no flank pain, and the GU exam was normal.",Faithful,
+7,"Test Results: The urine dipstick was negative for leukocytes, nitrates, protein, ketones, and bilirubin, with a pH of 5.5, specific gravity of 1.020, and urobilinogen of 0.2.",Faithful,
+8,"The renal ultrasound showed a 6 mm left renal stone, no stones, masses, or hydronephrosis in the right kidney, and a kidney length of 10 cm x 5 cm in the left kidney.",Causality,and a kidney length of 10 cm x 5 cm in the left kidney
+9,Assessment: The patient has hematuria due to a 6 mm nonobstructing left renal stone.,Faithful,
+10,Problem list: Hematuria; Chronic urolithiasis; [NOT MENTIONED],Faithful,
+11,"I advised the patient to drink 125 ounces of water per day and avoid sugary drinks like Mountain Dew, salty, processed foods high in sodium, and foods rich in oxalate, such as spinach, chocolate, beets, rhubarb, and soy products.",Faithful,
+12,"I also gave her a handout with dietary recommendations and instructed her to call the office if she experiences any more issues, and to go to the emergency room if she experiences severe pain or bright red blood in her urine.",Faithful,
+13,I prescribed no medication.,Faithful,
+14,"Follow-up: I instructed the patient to follow up in a year unless she experiences any more issues, and to call the office if she has any questions or concerns.",Faithful,

@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient is a woman in her [age not mentioned] who has been experiencing headaches for years, starting in her teenage years, initially related to her menstrual periods, but now occurring more frequently and severely, with a pulsing sensation behind her right eye.",Faithful,
+1,"She has also noticed worsening symptoms with exercise, particularly jogging.",Faithful,
+2,"Additionally, she reports a ringing in her ears and blurred vision, particularly on the side of her vision.",Faithful,
+3,She denies numbness or tingling in her hands or feet or face.,Faithful,
+4,Past medical history: [NOT MENTIONED],Fabrication,Past medical history: [NOT MENTIONED]
+5,"Review of systems: The patient reports a ringing in her ears and blurred vision, particularly on the side of her vision.",Contextual,Review of systems
+6,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+7,"Vital signs: The patient's blood pressure is within normal limits, although this is not explicitly stated as being measured in the transcript.",Faithful,
+8,"Physical exam: The patient's heart exam is normal with no murmurs, rubs, or gallops.",Faithful,
+9,"The funduscopic exam shows papilledema, which is swelling behind the eye.",Faithful,
+10,"The neurological exam is normal, with intact cranial nerves one through twelve and normal cranial reflexes.",Faithful,
+11,"The musculoskeletal exam is normal, with a normal gait.",Faithful,
+12,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+13,"Assessment: The patient has symptoms concerning for idiopathic intracranial hypertension, a condition characterized by increased pressure in the brain without a known cause.",Faithful,
+14,Problem list: Idiopathic intracranial hypertension; Blurred vision; Ringing in the ears,Faithful,
+15,I prescribed no medications at this time.,Faithful,
+16,I plan to order an MRI to confirm the diagnosis and to rule out other potential causes of the patient's symptoms.,Faithful,
+17,I will also order a spinal tap to evaluate the pressure in the brain and to help decrease the pressure if it is elevated.,Faithful,
+18,"Additionally, I will refer the patient to a neuro-ophthalmologist for a complete eye exam.",Faithful,
+19,"The patient's insurance company will need to preapprove the MRI, and once this is done, the patient will be called to schedule the test.",Faithful,
+20,Follow-up: The patient will follow up with me to discuss the results of the MRI and to determine the next steps in management.,Fabrication,Follow-up: The patient will follow up with me to discuss the results of the MRI and to determine the next steps in management.

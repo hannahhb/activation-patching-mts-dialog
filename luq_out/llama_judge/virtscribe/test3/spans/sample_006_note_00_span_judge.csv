@@ -1,0 +1,18 @@
+sentence_idx,sentence,label,note_span
+0,HPI: The patient is a 44-year-old female who presents six weeks status post right medial unicompartmental arthroplasty.,Faithful,
+1,"She reports no problems with her knee, except for numbness on the same side as the surgery, which she states will improve as the nerves heal.",Contextual,which she states will improve as the nerves heal
+2,She expresses satisfaction with the surgery and reports no pain.,Faithful,
+3,"She also mentions that her employer, UPS, is asking her to return to work with certain restrictions.",Faithful,
+4,Past medical history: [NOT MENTIONED],Fabrication,Past medical history: [NOT MENTIONED]
+5,Review of systems: [NOT MENTIONED],Fabrication,Review of systems: [NOT MENTIONED]
+6,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+7,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+8,"The patient's gait was antalgic with a slight limp and decreased velocity, without an assistive device.",Faithful,
+9,"The right knee exam revealed a healed surgical scar, mild swelling, and tenderness on the area of the incision.",Faithful,
+10,"Range of motion was 0 to 120 degrees, with everything else normal.",Faithful,
+11,"The patient is a 44-year-old female who is six weeks post-operative from right medial unicompartmental arthroplasty with a healed surgical scar, mild swelling, and tenderness on the area of the incision, and is recovering well.",Faithful,
+12,"I advised the patient to continue with physical therapy to work on strength, range of motion, and endurance.",Faithful,
+13,I also instructed her to avoid lifting greater than 5-10 pounds and to avoid standing or sitting for longer than 30 minutes.,Faithful,
+14,I will have my nurse Anna write a note to excuse her from work for another six weeks.,Faithful,
+15,I will check in with her via telemedicine in six weeks to discuss her progress and potential return to work.,Faithful,
+16,I will schedule a telemedicine visit in six weeks to check in with the patient and discuss her progress.,Causality,I will schedule a telemedicine visit in six weeks

@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 6th grader at one point, presents with a 6-month history of knee pain, which she describes as a deep, achy pain behind her kneecaps, with occasional creaking sounds.",Contextual,a 6th grader at one point
+1,"She reports that the pain worsens with activities such as getting up from a seated position, walking up and down stairs, and running.",Faithful,
+2,She states that rest typically alleviates the pain.,Faithful,
+3,"She has tried ice, Ace bandages, and ibuprofen or Aleve in the past but tries to avoid medication.",Faithful,
+4,"She reports a significant decrease in her running mileage, from 5-6 miles to less than half a mile, due to knee pain.",Faithful,
+5,She denies swelling or redness in her knees and has no history of knee injuries.,Faithful,
+6,Past medical history: The patient has a history of breaking her arm in sixth grade but denies any other injuries or conditions.,Faithful,
+7,Review of systems: The patient reports no other symptoms in other organs that are relevant to her initial presentation.,Fabrication,Review of systems: The patient reports no other symptoms in other organs that are relevant to her initial presentation
+8,Current medications: The patient takes ibuprofen or Aleve as needed for pain.,Faithful,
+9,Vital signs: Not mentioned.,Fabrication,Vital signs: Not mentioned
+10,"Physical exam: The patient has a normal gait, with normal strength in the lower extremities except for abduction, which is 3/5 bilaterally.",Faithful,
+11,"The knee exam reveals tenderness to palpation of the bilateral retinacular retinaculum, positive patellar grind test, and pain with squatting.",Faithful,
+12,"The Lachman, anterior and posterior drawer, and McMurray tests are all negative.",Faithful,
+13,The neuro exam is normal.,Faithful,
+14,Test Results: The patient's X-rays of both knees show no fractures or osteoarthritis.,Faithful,
+15,"Assessment: The patient's symptoms are consistent with patellofemoral pain syndrome, a common condition causing knee pain in active young people.",Faithful,
+16,Problem list: Patellofemoral pain syndrome; active.,Fabrication,Problem list: Patellofemoral pain syndrome; active
+17,"I recommended physical therapy to increase lower extremity strength, mobility, and correct any incorrect running mechanics.",Faithful,
+18,I advised the patient to continue taking ibuprofen or anti-inflammatory medication as needed for pain.,Faithful,
+19,I instructed the patient to take it easy from running for now and will continue to assess her progress with each visit.,Faithful,
+20,Follow-up: I will follow up with the patient soon to assess her progress and adjust the treatment plan as needed.,Faithful,

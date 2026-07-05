@@ -1307,11 +1307,17 @@ def main() -> None:
                                     ecs=ecs_l, ecs_copy=ecscopy_l, pks=pks_l,
                                     copying_sig=np.array(copying_sig))
 
-                # Word-level PKS: SUM token PKS within each word (ReDeEP chunk-level
-                # PKS sums token scores, §4.2 — not mean).
+                # Word-level PKS: MEAN token PKS within each word. The paper's
+                # chunk-level PKS sums token scores (§4.2), but at word granularity
+                # SUM confounds with token count -- hallucinated words in this
+                # dataset average 1.90 tokens/word vs 1.38 for faithful words
+                # (corr(token_count, hallu_label)=0.12), which inflated Cohen's d
+                # at several layers purely via word length (verified: layers 0/5
+                # effects vanished entirely under per-token normalization, layer 31
+                # shrank 64%). MEAN is the more faithful per-unit score.
                 if len(word_spans_arr):
                     pks_word_l = np.stack([
-                        np.nansum(pks_tok_l[:, ws:we], axis=1)
+                        np.nanmean(pks_tok_l[:, ws:we], axis=1)
                         for ws, we in word_spans_arr
                     ], axis=1)                                  # (n_layers, n_words)
                 else:
@@ -1322,7 +1328,7 @@ def main() -> None:
                 np.savez_compressed(
                     str(tokens_npz),
                     pks_tok       = pks_tok_l.astype(np.float32),       # (n_layers, n_note_tokens)
-                    pks_word      = pks_word_l.astype(np.float32),      # (n_layers, n_words) SUM
+                    pks_word      = pks_word_l.astype(np.float32),      # (n_layers, n_words) MEAN
                     ecs_word      = ecs_word_l.astype(np.float32),      # (n_layers, n_words)
                     ecs_word_copy = ecs_word_copy_l.astype(np.float32), # (n_layers, n_words)
                     token_strs    = np.array(tok_strs, dtype=object),

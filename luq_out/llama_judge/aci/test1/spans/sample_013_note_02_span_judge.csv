@@ -1,0 +1,25 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 30-year-old female, presents with symptoms of asthma, specifically experiencing frequent coughing and wheezing, which she attributes to her asthma.",Fabrication,a 30-year-old female
+1,"She reports that her symptoms worsen when she gets sick, particularly with a cold, and that exposure to her aunt's cat has triggered a flare-up in the past.",Faithful,
+2,"She has had multiple urgent care and primary care visits for these symptoms, with some resulting in steroid treatment.",Faithful,
+3,"She currently uses a blue inhaler (ventolin) daily, but notes that it only seems to provide relief for a short period.",Causality,only seems to provide relief for a short period
+4,"She reports using the inhaler almost daily, with occasional use at night and a couple of times a week.",Faithful,
+5,"Past medical history: The patient mentions a hospitalization for asthma at age 8, but notes that it has not happened since then.",Faithful,
+6,"Review of systems: The patient denies any other symptoms in other organs, but notes that she sometimes experiences breathing difficulties when exposed to cigarette smoke in bars.",Faithful,
+7,Current medications:,Faithful,
+8,Ventolin (albuterol) 2 puffs as needed,Faithful,
+9,Vital signs:,Faithful,
+10,Blood pressure: 128/82,Faithful,
+11,Respiratory rate: 16,Faithful,
+12,Oxygen saturation: 99% on room air,Faithful,
+13,"Physical exam: The patient's lung exam reveals diminished lung sounds with occasional slight expiratory wheeze, bilaterally.",Faithful,
+14,"The neck exam is supple, with a midline trachea and no lymphadenopathy.",Faithful,
+15,"The carotid bruit is not appreciated, and the patient has strong bilateral pulses, with no clubbing on her fingertips and brisk capillary refill.",Faithful,
+16,Test Results:,Faithful,
+17,Pulmonary function test results are consistent with asthma.,Faithful,
+18,Assessment / Problem List: Assessment: The patient has symptoms consistent with moderate intermittent asthma.,Faithful,
+19,Problem list: Asthma; Status: confirmed.,Fabrication,Status: confirmed
+20,"Plan: I started the patient on Flovent 110 micrograms, one puff twice a day, to help prevent daily symptoms and reduce the need for her rescue inhaler.",Faithful,
+21,"She can continue to use her Ventolin inhaler as needed, with 2 puffs every 4-6 hours.",Faithful,
+22,I will also create an asthma action plan to help manage her symptoms and identify triggers.,Faithful,
+23,"Follow-up: I would like to see the patient in a month, or sooner if her symptoms worsen.",Faithful,

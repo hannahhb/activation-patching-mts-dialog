@@ -1,0 +1,37 @@
+sentence_idx,sentence,label,note_span
+0,"The patient is a 73-year-old male, Mr. Nelson, who presents for ongoing management of rheumatoid arthritis.",Faithful,
+1,"He reports his knee has been swollen for approximately two months, with pain level of 6 on a normal day, but currently at 3.",Faithful,
+2,He denies improvement with compression socks.,Causality,denies improvement
+3,He reports difficulty getting up from a seated position due to stiffness and uses a cane for support.,Faithful,
+4,He has been taking Xeljanz 11 milligrams daily and Celebrex 200 milligrams daily for the past two months.,Faithful,
+5,He reports his pain level improves with medication but worsens with swelling.,Causality,improves with medication but worsens with swelling
+6,"Past medical history: Mr. Nelson has a history of rheumatoid arthritis, for which he is being managed with Xeljanz and Celebrex.",Faithful,
+7,"He also reports a history of previous steroid injections in the right knee, which provided temporary relief for a couple of weeks.",Faithful,
+8,"Review of systems: The patient reports pain and swelling in the right knee, with associated stiffness and difficulty getting up from a seated position.",Faithful,
+9,Current medications:,Faithful,
+10,- Xeljanz 11 milligrams daily for rheumatoid arthritis,Faithful,
+11,- Celebrex 200 milligrams daily for rheumatoid arthritis,Faithful,
+12,Objective:,Faithful,
+13,Vital signs:,Faithful,
+14,- Blood pressure: [NOT MENTIONED],Fabrication,Blood pressure
+15,- Pulse rate: [NOT MENTIONED],Fabrication,Pulse rate
+16,- Oxygen saturation: [NOT MENTIONED],Fabrication,Oxygen saturation
+17,- Temperature: [NOT MENTIONED],Fabrication,Temperature
+18,Physical exam:,Faithful,
+19,- Range of motion slightly diminished in the right knee,Faithful,
+20,- Pitting around the knee and ankle,Faithful,
+21,- Normal capillary refill in the toes,Faithful,
+22,"- Knee is hot, indicating inflammation",Faithful,
+23,Test Results:,Faithful,
+24,- [NO MENTION OF ANY LAB RESULTS OR IMAGING REPORTS],Fabrication,NO MENTION OF ANY LAB RESULTS OR IMAGING REPORTS
+25,Assessment / Problem List:,Faithful,
+26,"Assessment: The patient presents with ongoing rheumatoid arthritis, with a swollen and painful right knee, and decreased range of motion.",Faithful,
+27,Problem list: Rheumatoid arthritis; Suspected fluid accumulation in the right knee; Active inflammation in the right knee.,Faithful,
+28,Plan:,Faithful,
+29,I prescribed Celebrex 200 milligrams daily for rheumatoid arthritis.,Negation,I prescribed Celebrex 200 milligrams daily for rheumatoid arthritis
+30,"I administered a steroid injection to the right knee, consisting of 80 milligrams of triamcinolone and one milliliter of lidocaine.",Faithful,
+31,I also ordered an x-ray of the right knee to investigate the cause of the swelling.,Faithful,
+32,I recommended the patient wear compression socks and reduce salt intake to alleviate swelling.,Faithful,
+33,"I also advised the patient to prop their feet up, especially at night, to reduce swelling.",Faithful,
+34,I instructed the patient to follow up with their primary care physician and to schedule a blood work appointment to check their Xeljanz levels.,Faithful,
+35,Follow-up: The patient will follow up with me for further management and to assess the effectiveness of the treatment plan.,Contextual,with me

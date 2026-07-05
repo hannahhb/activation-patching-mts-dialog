@@ -1,0 +1,24 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Brandon, presents with neck pain, which began after a car crash in February of this year.",Faithful,
+1,"He reports experiencing multiple car crashes, with the most recent one being in February of this year.",Faithful,
+2,"He describes his pain as sharp and incapacitating, rating it a 12 out of 10.",Faithful,
+3,"He also reports experiencing headaches, dizziness, numbness in his left arm and right leg, and spasms throughout his body.",Faithful,
+4,He has been experiencing fatigue since the accident.,Faithful,
+5,He has been prescribed fentanyl in the past but has not received a new prescription in several weeks.,Faithful,
+6,"He has seen a therapist and a pain clinic, and his mother and a lawyer have advised him to seek medical attention.",Faithful,
+7,Past medical history: [NOT MENTIONED],Fabrication,Past medical history: [NOT MENTIONED]
+8,"The patient reports headaches, dizziness, numbness in his left arm and right leg, and spasms throughout his body.",Faithful,
+9,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+10,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+11,The patient's neck pain is exacerbated by palpation on the bony process and muscle.,Faithful,
+12,"He has a moderate range of movement in his neck, but it hurts to bend forward and backward.",Faithful,
+13,"There is no bruising, swelling, or laceration visible.",Faithful,
+14,"The patient had an x-ray prior to this visit, which did not show a fracture.",Faithful,
+15,The doctor plans to order an MRI to get a more thorough image of the area.,Faithful,
+16,Assessment: The patient has a neck sprain.,Faithful,
+17,Problem list: Neck sprain; suspected fracture (status: suspected).,Causality,suspected fracture (status: suspected)
+18,I prescribed Robaxin 1500 mg every 6-8 hours as needed for muscle relaxation and pain relief.,Faithful,
+19,"I also advised the patient to apply ice to the affected area, perform exercises to maintain range of motion, and referred him to physical therapy.",Faithful,
+20,The patient will be referred to pain medication and local injections if necessary.,Faithful,
+21,The patient will be given a note excusing him from work until the MRI results are available.,Faithful,
+22,Follow-up: The patient will return for an MRI and a follow-up appointment to discuss the results and further treatment.,Fabrication,Follow-up: The patient will return for an MRI and a follow-up appointment to discuss the results and further treatment.

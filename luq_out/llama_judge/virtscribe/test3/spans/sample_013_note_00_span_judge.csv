@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 60-year-old right-handed male, presents with a 2-week history of numbness and tingling in both hands, which started after a car accident in December where he broke both wrists.",Causality,2-week history
+1,"He reports worsening symptoms over the last month, with increased numbness and tingling, particularly at night, and occasional pain or throbbing sensations in his hands.",Faithful,
+2,He also experiences mild stiffness in his neck.,Faithful,
+3,"The patient denies any loss of sensation in his hands or fingers, but notes that they may be less sensitive than usual.",Faithful,
+4,"Past medical history: The patient has a history of hypertension, treated with Coreg, and anxiety, treated with Lexapro.",Faithful,
+5,"He has also had prediabetes, which he controlled through dietary changes.",Faithful,
+6,He denies any history of thyroid issues.,Faithful,
+7,"Review of systems: The patient reports fatigue, weight gain, excessive appetite, bloating, shortness of breath, leg swelling, hunger, nailbed changes, dryness, and itching.",Contextual,The patient reports
+8,He also has a history of gout and muscle pain.,Faithful,
+9,"Current medications: Coreg for hypertension, Lexapro for anxiety.",Faithful,
+10,Vital signs: [NOT MENTIONED],Fabrication,Vital signs
+11,"Physical exam: The patient's sensation is normal in the right hand, except for diminished pinprick sensation in the third and fourth fingers.",Negation,sensation is normal
+12,The sensation is decreased in the fourth and fifth fingers on the left.,Faithful,
+13,Reflexes are 1+ and symmetric.,Faithful,
+14,Tinel's sign is positive at both wrists and elbows.,Faithful,
+15,Test Results: [NOT MENTIONED],Fabrication,Test Results
+16,"Assessment: The patient has bilateral carpal tunnel syndrome, potentially caused by nerve irritation from past trauma.",Faithful,
+17,Problem list: Carpal tunnel syndrome; cubital tunnel syndrome; prediabetes; hypertension; anxiety; gout; muscle pain.,Faithful,
+18,"I prescribed a nerve test, an EMG, to determine the exact location of the nerve irritation.",Faithful,
+19,I instructed the patient to continue wearing his splints and to return for a follow-up visit after the tests are complete.,Faithful,
+20,"If symptoms persist, we will consider a referral to the hand clinic for injections or carpal tunnel release surgery, or to an orthopedist for further treatment.",Faithful,
+21,Follow-up: The patient will return for a follow-up visit after the EMG test results are available.,Faithful,

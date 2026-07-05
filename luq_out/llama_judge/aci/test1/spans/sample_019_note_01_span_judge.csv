@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,"The patient, Mr. Edwards, is a 54-year-old male presenting with a complaint of facial pain that started approximately 2-3 months ago, describing it as stabbing and shooting, localized to the right cheekbone area.",Faithful,
+1,"He reports that the pain is exacerbated by temperature changes, cold weather, and wind.",Faithful,
+2,"He has tried ibuprofen, Motrin, and tiger balm without relief.",Faithful,
+3,"He has not experienced any sensory loss, numbness, or tingling in the affected area, and his smile and vision are unaffected.",Negation,"He has not experienced any sensory loss, numbness, or tingling in the affected area"
+4,He denies a history of migraines or other headache-related conditions.,Faithful,
+5,"Past medical history: The patient has not mentioned any past medical conditions, treatments, or encounters.",Faithful,
+6,"He has not mentioned smoking, alcohol, or drug use, and his occupation and travel history are not mentioned.",Fabrication,"smoking, alcohol, or drug use, and his occupation and travel history"
+7,"The patient reports occasional headaches, which are not migraines, and takes Tylenol for relief.",Faithful,
+8,He denies any other symptoms in other organs that are relevant to his initial presentation.,Faithful,
+9,Current medications: I prescribed Tylenol for occasional headaches.,Fabrication,I prescribed Tylenol for occasional headaches
+10,Vital signs: The patient's vital signs were not mentioned.,Faithful,
+11,"The patient has symmetrical teeth, and he can follow my finger in both directions.",Faithful,
+12,He can hear a sound on both sides of his face when I rub my fingers next to his ear.,Faithful,
+13,He reports feeling a little bit numb on the right side of his face when I run cotton tape along the side of his face.,Causality,on the right side of his face
+14,"When I poke his face with a needle, he reports feeling it as dull on the left side and sharp on the right side.",Causality,dull on the left side and sharp on the right side
+15,The patient's MRI shows a small blood vessel abutting and pinching the trigeminal nerve.,Faithful,
+16,"The patient has trigeminal neuralgia, a condition where the compression of the trigeminal nerve by a blood vessel causes shooting electrical pain in the face.",Faithful,
+17,Problem list: Trigeminal neuralgia; active.,Faithful,
+18,"I prescribed Tegretol 100mg, one tablet three times a day for the treatment of trigeminal neuralgia.",Faithful,
+19,I recommended genetic testing to ensure the medication is safe for the patient.,Faithful,
+20,We will follow up in one month to assess the effectiveness of the medication and discuss surgical options if necessary.,Faithful,
+21,The patient will return in one month to follow up on the effectiveness of the medication.,Faithful,

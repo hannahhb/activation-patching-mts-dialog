@@ -1,0 +1,20 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a 36-year-old female, presents with a several-year history of gastroesophageal reflux disease (GERD), which has worsened over the past few years.",Faithful,
+1,"She reports experiencing burning sensation in her chest and throat, particularly after consuming spicy foods, carbonated beverages, citrus products, and tomato-based foods.",Faithful,
+2,"She has been taking omeprazole 40 milligrams twice daily for approximately a year, but her symptoms have not been adequately controlled.",Faithful,
+3,She also reports a family history of GERD and esophageal cancer on her mother's side.,Faithful,
+4,Past medical history: The patient has a history of anxiety and seasonal allergies.,Faithful,
+5,"She has undergone surgery as an infant for intestinal twisting, which resulted in abdominal surgical scars.",Faithful,
+6,"Review of systems: The patient denies abdominal pain, nausea, vomiting, changes in bowel movements, constipation, diarrhea, and rectal bleeding.",Faithful,
+7,Current medications: The patient is currently taking omeprazole 40 milligrams twice daily.,Faithful,
+8,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+9,"Physical exam: The patient's physical exam was normal, except for well-healed abdominal surgical scars noted, which were from surgery performed as an infant for intestinal twisting.",Faithful,
+10,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+11,Assessment: The patient likely has GERD with an underlying functional etiology.,Faithful,
+12,Problem list: GERD active; Anxiety unknown; Seasonal allergies unknown.,Contextual,Anxiety unknown; Seasonal allergies unknown
+13,I prescribed Nexium 40 milligrams twice daily to replace omeprazole.,Faithful,
+14,"I recommended that the patient change her diet to avoid trigger foods such as spicy foods, carbonated beverages, citrus products, and tomato-based foods.",Faithful,
+15,"I also suggested that she work on managing stress, which may exacerbate her symptoms.",Faithful,
+16,"I ordered an upper endoscopy (EGD) to look for potential causes of her GERD, including ulcers or precancerous or cancerous conditions.",Faithful,
+17,I will schedule the EGD procedure and have the patient follow up with me in the office to discuss the results and adjust her treatment plan as needed.,Faithful,
+18,The patient will follow up with me in the office for the EGD procedure and to discuss the results and adjust her treatment plan as needed.,Causality,and to discuss the results and adjust her treatment plan as needed

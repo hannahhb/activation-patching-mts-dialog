@@ -1,0 +1,23 @@
+sentence_idx,sentence,label,note_span
+0,The patient is a 35-year-old male who presented to the office with a right knee injury sustained during a soccer game three days ago.,Fabrication,35-year-old male
+1,"He reports a sudden pop in his knee and describes the sensation as feeling like his knee is not moving as well as it used to, with limited function.",Faithful,
+2,"The patient rates his pain as a 6-7 out of 10, which has decreased to 4-5 with the use of ibuprofen.",Faithful,
+3,He denies any fever.,Fabrication,He denies any fever
+4,Past medical history: [NOT MENTIONED],Faithful,
+5,Review of systems: [NOT MENTIONED],Faithful,
+6,Current medications: I prescribed ibuprofen for pain relief.,Causality,I prescribed ibuprofen for pain relief
+7,Vital signs: [NOT MENTIONED],Faithful,
+8,The patient has a marked limp on the right leg upon ambulation.,Faithful,
+9,There is significant effusion and a slight bit of ecchymosis in the right knee.,Faithful,
+10,Palpation of the medial joint line elicits pain.,Faithful,
+11,"The patient has difficulty with passive range of motion, with lacking a few degrees of terminal extension to 115 degrees and lacking about 20-30 degrees of terminal flexion due to pain.",Faithful,
+12,The Lachman exam is positive.,Faithful,
+13,Test Results: [NOT MENTIONED],Faithful,
+14,Assessment: The patient's right knee injury is suggestive of an anterior cruciate ligament (ACL) tear.,Faithful,
+15,Problem list: ACL tear; status: suspected.,Faithful,
+16,I ordered an MRI to evaluate the integrity of the ACL.,Faithful,
+17,I prescribed meloxicam 50mg a day for anti-inflammatory purposes.,Faithful,
+18,"I advised the patient to ice the knee if needed, moderate their activities, wear a knee immobilizer, and use crutches to reduce stress and strain on the knee.",Faithful,
+19,"I also instructed the patient to limit their activities, including work activities, and to avoid jogging until the results of the MRI are available.",Faithful,
+20,I will get back with the patient as soon as the results of the MRI are available.,Faithful,
+21,The patient will be scheduled for an MRI by the nurse.,Faithful,

@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, a soccer player, experienced a sudden ""pop"" in his right knee three days ago while trying to kick a ball during a pickup game.",Faithful,
+1,"He reports swelling, pain, and limited function in the knee, which has been managed with ibuprofen.",Faithful,
+2,"The pain is currently rated 4-5/10, and he has difficulty bending and straightening the knee, especially towards the end of the motion.",Faithful,
+3,"He can bear weight on the knee but feels it's ""loose"" and not normal.",Faithful,
+4,Past medical history: [NOT MENTIONED],Faithful,
+5,Review of systems: The patient reports no additional symptoms in other organs that are relevant to the initial presentation.,Fabrication,The patient reports no additional symptoms in other organs that are relevant to the initial presentation
+6,Current medications: I prescribed meloxicam 15 milligrams per day to reduce swelling and pain.,Contextual,I prescribed meloxicam 15 milligrams per day
+7,Vital signs: [NOT MENTIONED],Faithful,
+8,"Physical exam: The patient has a marked limp on the right leg upon ambulation, significant effusion, and slight ecchymosis in the right knee.",Faithful,
+9,Palpation of the medial joint line is painful.,Faithful,
+10,"Passive range of motion reveals difficulty and pain, with limited terminal extension to 115 degrees and limited terminal flexion of 20-30 degrees.",Faithful,
+11,The Lachman exam is positive.,Faithful,
+12,Test Results: [NOT MENTIONED],Faithful,
+13,Assessment: The patient's right knee injury is suggestive of an anterior cruciate ligament (ACL) tear.,Faithful,
+14,Problem list: ACL tear; suspected; knee effusion; knee pain.,Faithful,
+15,I ordered an MRI to evaluate the integrity of the ACL.,Faithful,
+16,I also prescribed meloxicam 15 milligrams per day to reduce swelling and pain.,Faithful,
+17,"I recommend the patient ice the knee if necessary, moderate their activities, and use a knee immobilizer and crutches when walking.",Faithful,
+18,"The patient should limit their activities, including work and jogging, until the MRI results are available.",Faithful,
+19,I will get back with the patient as soon as the results are in.,Faithful,
+20,Follow-up: I will schedule the patient for an MRI and will follow up with them once the results are available.,Fabrication,Follow-up: I will schedule the patient for an MRI and will follow up with them once the results are available

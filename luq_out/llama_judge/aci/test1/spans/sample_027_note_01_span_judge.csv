@@ -1,0 +1,27 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Kenneth, presented with a 5-day history of right knee pain following a skiing accident where he twisted his knee upon landing.",Faithful,
+1,"He reports no hearing of a pop or feeling of anything popping, but describes a sensation of stretching and subsequent swelling.",Faithful,
+2,"He has been taking over-the-counter Aleve twice daily and applying a cold pack, which has provided some relief.",Faithful,
+3,He denies any numbness or tingling in his foot.,Faithful,
+4,He reports being able to get out of the water after the incident but experienced pain with squatting or bending.,Faithful,
+5,He has no history of similar knee injuries.,Faithful,
+6,He is a frequent water skier and enjoys outdoor activities.,Faithful,
+7,"Past medical history: The patient has a history of hypertension for which he is currently taking lisinopril 20mg daily, and he reports managing his blood pressure well, with readings of 125/80 mmHg at home.",Faithful,
+8,He had his tonsils removed in the past.,Faithful,
+9,He denies any surgeries or medical conditions.,Negation,or medical conditions
+10,Review of systems: [NOT MENTIONED],Fabrication,Review of systems
+11,Current medications: Lisinopril 20mg daily.,Faithful,
+12,Vital signs: Blood pressure 120/77 mmHg.,Faithful,
+13,"Physical exam: On physical examination, the patient has ecchymosis, edema, and an effusion on the right knee.",Faithful,
+14,There is pain to palpation of the right medial knee.,Faithful,
+15,"The patient has decreased range of motion, a negative varus and valgus test, and a negative Lachman sign.",Faithful,
+16,"The dorsalis pedis and posterior tibial pulses are palpable, and there is no lower extremity edema.",Faithful,
+17,Assessment: The patient has a medial collateral ligament strain of the right knee.,Faithful,
+18,Problem list: Medial collateral ligament strain of the right knee; Hypertension; [Condition] [Status: active/suspected/confirmed/past/unknown] [NOT MENTIONED],Fabrication,[Condition] [Status: active/suspected/confirmed/past/unknown]
+19,I prescribed meloxicam 15mg once daily for pain and inflammation.,Faithful,
+20,I ordered an x-ray of the right knee to rule out any fractures.,Faithful,
+21,I referred the patient to physical therapy to strengthen the muscles around the knee.,Faithful,
+22,I will continue the patient on lisinopril 20mg daily for hypertension.,Faithful,
+23,I ordered a lipid panel to check for any potential effects of the hypertension medication.,Faithful,
+24,I administered a tetanus shot for health maintenance.,Faithful,
+25,Follow-up: I will follow up with the patient after the x-ray results are available and to assess the patient's progress with physical therapy.,Faithful,

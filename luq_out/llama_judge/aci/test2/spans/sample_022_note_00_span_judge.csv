@@ -1,0 +1,19 @@
+sentence_idx,sentence,label,note_span
+0,"The patient, a 57-year-old male, presents with a 2-week history of shortness of breath.",Faithful,
+1,"He reports waking up with shortness of breath, which persists upon exertion.",Faithful,
+2,"He has been coughing up blood for approximately 3 weeks, with a quantity of 3-4 cups per day.",Faithful,
+3,"He denies any fever, bruising, or bleeding from other sites.",Faithful,
+4,"He has a history of diabetes, high blood pressure, and asthma.",Faithful,
+5,"His blood sugar has been running high, with morning readings around 150 and post-meal readings over 200.",Faithful,
+6,"He is taking metformin and norvasc, but has been skipping doses due to low blood pressure.",Faithful,
+7,"He has a history of knee problems, but no swelling.",Faithful,
+8,He has not been to the hospital or emergency room for this episode.,Faithful,
+9,"Vital signs: Pulse 70, oxygen saturation 94%.",Causality,Pulse 70
+10,"Physical exam: No JVD, no carotid bruits, lung exam reveals rails and rhonchi on the right side, diminished breath sounds on the right side, 2/6 systolic ejection murmur, regular rate and rhythm, soft belly, 1+ nonpitting edema on both lower extremities, no calf tenderness, no negative Homan sign.",Faithful,
+11,"The patient has an acute respiratory infection, likely pneumonia, with coughing up blood, and poorly controlled diabetes, with hemoglobin A1c of 7.7.",Causality,likely pneumonia
+12,"The patient's blood pressure is also elevated, with a reading of 120/70.",Negation,elevated
+13,I prescribed a chest X-ray and referred the patient to the emergency department for further evaluation and blood testing.,Faithful,
+14,I also ordered a CAT scan of the chest to rule out a blood clot.,Faithful,
+15,I increased the patient's dose of metformin to 750 mg twice a day and instructed him to hold his norvasc for the time being.,Faithful,
+16,I will have him return in three weeks to discuss his diabetes treatment plan and reassess his blood pressure once the current episode is under control.,Faithful,
+17,I will have the patient return to the clinic in three weeks to discuss his diabetes treatment plan and reassess his blood pressure.,Fabrication,I will have the patient return to the clinic in three weeks

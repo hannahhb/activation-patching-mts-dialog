@@ -1,0 +1,18 @@
+sentence_idx,sentence,label,note_span
+0,HPI: The patient presents with sudden visual distortions and blurring of vision.,Faithful,
+1,"She reports that straight lines and door frames appear crooked to her and she has trouble adjusting to dim lights, particularly in restaurants.",Faithful,
+2,"She has a history of macular degeneration and is a smoker, consuming a pack of cigarettes per day.",Faithful,
+3,She reports difficulty stopping smoking and infrequently checks her blood pressure.,Faithful,
+4,Past medical history: The patient has a history of macular degeneration.,Faithful,
+5,Review of systems: The patient reports difficulty adjusting to dim lights in restaurants.,Faithful,
+6,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+7,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+8,"The anterior segment examination reveals posterior chamber intraocular lenses in both eyes, with clear corneas.",Faithful,
+9,The cup-to-disc ratio is 0.2 in the right eye and 0.3 in the left eye.,Faithful,
+10,"The fundus examination shows the retina to be attached 360 degrees without tears or holes in the right eye, and the posterior segment exam reveals drusen in the macula, thickening of the retina, presence of subretinal fluid, and exudates accumulation positive for hemorrhage in the left eye.",Causality,in the left eye
+11,"The OCT shows drusen deposit, subretinal fluid accumulation, choroidal neovascular membrane, and focal areas of leakage in the right eye consistent with neovascular age-related macular degeneration.",Faithful,
+12,"The patient has neovascular age-related macular degeneration, an advanced stage that typically leads to severe vision loss due to the growth of abnormal blood vessels beneath the retina, leaking fluid and blood and creating a large blind spot in the center of the visual field.",Faithful,
+13,Age-related macular degeneration; active.,Faithful,
+14,"I prescribed Lucentis injections once a month, injected into the vitreous portion of the eye after numbing, to be given regularly over a period of time to slow the rate of vision decline or stop further vision loss.",Faithful,
+15,The patient should continue to monitor their blood pressure regularly and consider keeping a log of their readings.,Faithful,
+16,I will see the patient again to monitor the effectiveness of the treatment and adjust the plan as needed.,Fabrication,I will see the patient again to monitor the effectiveness of the treatment and adjust the plan as needed

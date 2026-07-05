@@ -1,0 +1,18 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Judy Gomez, is a 62-year-old female who presents for ongoing management of psoriatic arthritis.",Faithful,
+1,"She reports that she has been doing well since her last visit, and her symptoms have improved with the current treatment regimen.",Faithful,
+2,"She mentions that she occasionally experiences increased pain in her feet when she has a day off from her desk job and is more active, but this is not frequent.",Faithful,
+3,"She denies taking methotrexate on the day of her COVID-19 vaccination, which she believes may have reduced the efficacy of the vaccine, and reports feeling unwell after the first dose but tolerating the second dose after consulting the hotline.",Faithful,
+4,"Past medical history: The patient has a history of psoriatic arthritis, for which she is currently being treated with methotrexate and prednisone.",Faithful,
+5,"She has had a recent COVID-19 vaccination, for which she did not take methotrexate on the day of the first dose.",Faithful,
+6,"Review of systems: The patient reports bruising, particularly on her skin, which she attributes to taking prednisone.",Causality,which she attributes to taking prednisone
+7,Current medications: I prescribed methotrexate for psoriatic arthritis.,Contextual,I prescribed methotrexate for psoriatic arthritis
+8,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+9,"Physical exam: The patient has a good range of motion in her toes and knees, but reports pain in her joint areas, particularly in her feet and knees.",Faithful,
+10,"She has ridges on her nails, which are consistent with psoriasis.",Faithful,
+11,Examination of the skin reveals bruising.,Faithful,
+12,"Assessment: The patient has psoriatic arthritis, which is being managed with methotrexate and prednisone, with plans to discontinue prednisone and continue with methotrexate.",Faithful,
+13,Problem list: Psoriatic arthritis; suspected bruising due to prednisone use.,Faithful,
+14,I discontinued the patient's prednisone and instructed her to continue with methotrexate.,Faithful,
+15,I also instructed her to schedule an appointment for blood work at the front desk and to return in three months.,Faithful,
+16,The patient is to return in three months for follow-up.,Faithful,

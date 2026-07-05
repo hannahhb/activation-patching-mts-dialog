@@ -1,0 +1,34 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Amanda Taylor, a 72-year-old woman, presents for follow-up for hypertension.",Faithful,
+1,She has a history of significant alcohol use disorder and mild hypercholesterolemia.,Faithful,
+2,"Her last visit was on April 16, with a blood pressure of 130/90.",Faithful,
+3,"She has been struggling with not drinking and has had a history of drinking 4 to 5 days a week, consuming hard alcohol.",Faithful,
+4,"She has tried to stop drinking, but has been experiencing withdrawal symptoms.",Fabrication,withdrawal symptoms
+5,She is currently taking lisinopril 10 mg daily and hydrochlorothiazide 12.5 mg daily.,Causality,lisinopril 10 mg daily
+6,Past medical history: The patient has a history of alcohol use disorder and mild hypercholesterolemia.,Faithful,
+7,She has received the coronavirus vaccine on February 9.,Faithful,
+8,"Review of systems: The patient denies fever, cough, shortness of breath, or sore throat.",Faithful,
+9,She has not had recent travel or contact with the coronavirus.,Faithful,
+10,Current medications:,Faithful,
+11,- Lisinopril 10 mg daily,Causality,10 mg daily
+12,- Hydrochlorothiazide 12.5 mg daily,Faithful,
+13,Vital signs: Not mentioned,Faithful,
+14,"Physical exam: The patient is alert, pleasant, and in no acute distress.",Faithful,
+15,Her skin is moist.,Faithful,
+16,She is not diabetic.,Faithful,
+17,There is no tremor.,Faithful,
+18,No CVA tenderness.,Faithful,
+19,Her chest is clear to percussion and auscultation.,Faithful,
+20,Her breathing is unlabored.,Faithful,
+21,Her cardiac rhythm is regular.,Faithful,
+22,No murmur or gallop.,Faithful,
+23,Her JVP is flat with a head at 90 degrees.,Faithful,
+24,"She does not appear anxious, agitated, or depressed.",Faithful,
+25,"Assessment: The patient has alcohol use disorder, which is confirmed by her history of drinking 4 to 5 days a week and her struggles with withdrawal symptoms.",Fabrication,struggles with withdrawal symptoms
+26,The patient would like to start naltrexone to help with alcohol cessation.,Faithful,
+27,Problem list: Alcohol use disorder; Hypertension; Hypercholesterolemia; None other.,Faithful,
+28,"I prescribed naltrexone, which will be administered via injection on May 17.",Faithful,
+29,"We reviewed the potential benefits and side effects of the medication, including nausea, headache, dizziness, anxiety, tiredness, and trouble sleeping.",Faithful,
+30,"I also recommended upgrading her influenza vaccination and Shingrix, which she deferred.",Faithful,
+31,"I will see her back on June 14 for a follow-up, which is likely around the time of her second naltrexone injection.",Faithful,
+32,"The patient will return on June 14 for a follow-up appointment, which is likely around the time of her second naltrexone injection.",Causality,second naltrexone injection

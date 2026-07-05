@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"The patient, Mr. James, is a 63-year-old male with a history of pain in his left shoulder and elbow, which began 5 months ago after a fall on icy stairs.",Faithful,
+1,"He reports constant pain, which worsens with lifting and has prevented him from continuing his regular exercise routine at the gym.",Faithful,
+2,He denies numbness or tingling in his arm.,Faithful,
+3,He has been trying to manage the pain with ice but has not taken any medication.,Faithful,
+4,The patient has a past medical history of a fall 5 months ago and a recent retirement from an office job.,Faithful,
+5,The patient denies any symptoms in other organs that are relevant to his initial presentation.,Faithful,
+6,Current medications: [NOT MENTIONED],Fabrication,Current medications
+7,Vital signs: [NOT MENTIONED],Fabrication,Vital signs
+8,"The left shoulder and elbow were tender to palpation, with a positive Neer's test and a positive kiss.",Faithful,
+9,"There was no warmth, erythema, or deformity.",Faithful,
+10,"The patient had normal proximal and distal upper extremity strength, intact median, radial, and ulnar sensation, and abduction to 90 degrees.",Faithful,
+11,The empty can test was normal.,Faithful,
+12,Test Results: [NOT MENTIONED],Fabrication,Test Results
+13,Assessment: The patient is experiencing impingement syndrome of the left shoulder.,Faithful,
+14,Problem list: Impingement syndrome of left shoulder; Active.,Fabrication,Problem list
+15,I prescribed Mr. James to continue icing his shoulder and rest as much as possible.,Faithful,
+16,"I ordered a referral for physical therapy with Dr. Martha Rivera, 2 days a week.",Faithful,
+17,I will have the physical therapy office contact Mr. James within the next day or two to schedule an appointment.,Faithful,
+18,I will also have Mr. James follow up with me if his symptoms worsen or do not improve with therapy.,Faithful,
+19,I will schedule a follow-up appointment with Mr. James in 2-3 weeks to assess the effectiveness of the physical therapy and to discuss further management if necessary.,Fabrication,I will schedule a follow-up appointment with Mr. James in 2-3 weeks

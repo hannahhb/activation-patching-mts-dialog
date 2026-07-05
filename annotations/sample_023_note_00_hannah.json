@@ -1,14 +1,23 @@
 {
-  "token_spans": [],
+  "token_spans": [
+    {
+      "text": "30-year-old male ",
+      "type": "num",
+      "severity": "3",
+      "char_start": 44,
+      "char_end": 61
+    }
+  ],
   "sentence_labels": {
     "0": {
-      "faithful": "Faithful",
-      "type": null,
+      "faithful": "Not Faithful",
+      "type": "Fabrication",
       "severity": "N/A"
     },
     "1": {
       "faithful": "Not Faithful",
-      "type": "Fabrication"
+      "type": "Fabrication",
+      "severity": "N/A"
     },
     "2": {
       "faithful": "Faithful",
@@ -27,15 +36,18 @@
     },
     "5": {
       "faithful": "Not Faithful",
-      "type": "Negation"
+      "type": "Negation",
+      "severity": "N/A"
     },
     "6": {
       "faithful": "Not Faithful",
-      "type": "Fabrication"
+      "type": "Fabrication",
+      "severity": "N/A"
     },
     "7": {
       "faithful": "Not Faithful",
-      "type": "Negation"
+      "type": "Negation",
+      "severity": "N/A"
     },
     "8": {
       "faithful": "Faithful",
@@ -44,11 +56,13 @@
     },
     "9": {
       "faithful": "Not Faithful",
-      "type": "Fabrication"
+      "type": "Fabrication",
+      "severity": "N/A"
     },
     "10": {
       "faithful": "Not Faithful",
-      "type": "Negation"
+      "type": "Negation",
+      "severity": "N/A"
     },
     "11": {
       "faithful": "Faithful",
@@ -76,8 +90,9 @@
       "severity": "N/A"
     },
     "16": {
-      "faithful": "Not Faithful",
-      "type": "Fabrication"
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
     },
     "17": {
       "faithful": "Faithful",
@@ -90,12 +105,14 @@
       "severity": "N/A"
     },
     "19": {
-      "faithful": "Not Faithful",
-      "type": "Causality"
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
     },
     "20": {
-      "faithful": "Not Faithful",
-      "type": "Fabrication"
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
     },
     "21": {
       "faithful": "Faithful",
@@ -103,12 +120,14 @@
       "severity": "N/A"
     },
     "22": {
-      "faithful": "Not Faithful",
-      "type": "Fabrication"
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
     },
     "23": {
-      "faithful": "Not Faithful",
-      "type": "Fabrication"
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
     },
     "24": {
       "faithful": "Faithful",
@@ -116,8 +135,9 @@
       "severity": "N/A"
     },
     "25": {
-      "faithful": "Not Faithful",
-      "type": "Fabrication"
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
     },
     "26": {
       "faithful": "Faithful",
@@ -126,8 +146,9 @@
     },
     "27": {
       "faithful": "Not Faithful",
-      "type": "Fabrication"
+      "type": "Fabrication",
+      "severity": "N/A"
     }
   },
-  "note_html": "Subjective:\nHPI: The patient, Brandon, is a 30-year-old male who presents with neck pain and stiffness, which started after a car crash in February of this year. He reports experiencing sharp, incapacitating pain that makes it difficult for him to move his neck and perform daily activities. He has a history of multiple car crashes, including one that required surgery, and has been to therapy. He has also been prescribed fentanyl for pain management, but has not received a prescription for several weeks. He denies any fever, headache, dizziness, visual disturbances, or numbness, but reports experiencing fatigue since the accident. He has been experiencing bruising and swelling in the area, but no laceration is present. He is currently taking no medications other than possibly fentanyl, which he has not received a prescription for in several weeks.\n\nPast medical history: The patient has a history of multiple car crashes, including one that required surgery, and has been to therapy. He has also been prescribed fentanyl for pain management.\n\nReview of systems: The patient denies any fever, headache, dizziness, visual disturbances, or numbness, but reports experiencing fatigue since the accident.\n\nCurrent medications: [NOT MENTIONED]\n\nObjective:\nVital signs: Not mentioned in the transcript.\n\nPhysical exam: The patient has pain on palpation of the neck, both on the bony process and the muscle. He has a moderate range of movement in his neck, but reports pain when bending forward and backwards. He denies any bruising or swelling on examination, but reports experiencing bruising and swelling in the area.\n\nTest Results: The patient had an x-ray before coming in, which showed no fracture.\n\nAssessment / Problem List:\nAssessment: The patient has a neck sprain, which is causing sharp, incapacitating pain and stiffness.\n\nProblem list: Neck sprain; suspected fracture (status: suspected); past medical history of multiple car crashes; history of fentanyl use (status: past).\n\nPlan:\nI prescribed robaxin 1500mg orally every 6-8 hours as needed for muscle relaxation and pain management. I referred the patient to physical therapy to evaluate additional steps for pain management. I also ordered an MRI to further evaluate the extent of the injury. I will refer the patient to pain medication if the robaxin is not effective in managing his pain. I will give the patient a note to take off work due to his condition.\n\nFollow-up: The patient will return for follow-up after the MRI results are available, which will be in 1-2 weeks."
+  "note_html": "Subjective:\nHPI: The patient, Brandon, is a <span class=\"hl-num\" data-hl-type=\"num\" data-hl-sev=\"3\" data-char-start=\"44\" data-char-end=\"61\" title=\"num \u00b7 severity 3 [44:61]\">30-year-old male </span>who presents with neck pain and stiffness, which started after a car crash in February of this year. He reports experiencing sharp, incapacitating pain that makes it difficult for him to move his neck and perform daily activities. He has a history of multiple car crashes, including one that required surgery, and has been to therapy. He has also been prescribed fentanyl for pain management, but has not received a prescription for several weeks. He denies any fever, headache, dizziness, visual disturbances, or numbness, but reports experiencing fatigue since the accident. He has been experiencing bruising and swelling in the area, but no laceration is present. He is currently taking no medications other than possibly fentanyl, which he has not received a prescription for in several weeks.\n\nPast medical history: The patient has a history of multiple car crashes, including one that required surgery, and has been to therapy. He has also been prescribed fentanyl for pain management.\n\nReview of systems: The patient denies any fever, headache, dizziness, visual disturbances, or numbness, but reports experiencing fatigue since the accident.\n\nCurrent medications: [NOT MENTIONED]\n\nObjective:\nVital signs: Not mentioned in the transcript.\n\nPhysical exam: The patient has pain on palpation of the neck, both on the bony process and the muscle. He has a moderate range of movement in his neck, but reports pain when bending forward and backwards. He denies any bruising or swelling on examination, but reports experiencing bruising and swelling in the area.\n\nTest Results: The patient had an x-ray before coming in, which showed no fracture.\n\nAssessment / Problem List:\nAssessment: The patient has a neck sprain, which is causing sharp, incapacitating pain and stiffness.\n\nProblem list: Neck sprain; suspected fracture (status: suspected); past medical history of multiple car crashes; history of fentanyl use (status: past).\n\nPlan:\nI prescribed robaxin 1500mg orally every 6-8 hours as needed for muscle relaxation and pain management. I referred the patient to physical therapy to evaluate additional steps for pain management. I also ordered an MRI to further evaluate the extent of the injury. I will refer the patient to pain medication if the robaxin is not effective in managing his pain. I will give the patient a note to take off work due to his condition.\n\nFollow-up: The patient will return for follow-up after the MRI results are available, which will be in 1-2 weeks."
 }

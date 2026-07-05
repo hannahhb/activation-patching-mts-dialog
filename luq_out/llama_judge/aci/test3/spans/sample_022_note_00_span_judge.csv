@@ -1,0 +1,22 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient is a young adult presenting with a history of recurrent strep throat episodes, with 4 occurrences in the last 5 months, and current complaints of left-sided back pain, which varies in intensity.",Faithful,
+1,The patient's primary care physician referred them to me for further evaluation.,Faithful,
+2,"The patient reports increased urine output, especially at night, and has been drinking more water.",Faithful,
+3,"They have a brother who smokes at home, and the patient has tried to discourage him from smoking.",Faithful,
+4,"Past medical history: The patient has a history of recurrent strep throat episodes, with 4 occurrences in the last 5 months.",Faithful,
+5,"Review of systems: The patient reports an increase in urine output, and has been drinking more water.",Faithful,
+6,They also report that their appetite is unchanged.,Faithful,
+7,Current medications: [NOT MENTIONED],Fabrication,Current medications: [NOT MENTIONED]
+8,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+9,"Physical exam: The physical exam is notable for the absence of erythema, swelling, or tenderness in the throat, neck, or abdomen.",Faithful,
+10,"The patient's tonsils are midline, and there is no cervical adenopathy or lymphadenopathy.",Faithful,
+11,"The lungs are clear, with no wheezes, rales, or rhonchi.",Faithful,
+12,"The heart sounds are normal, with no murmur, rub, or gallop.",Faithful,
+13,The back pain is not reproduced with palpation.,Faithful,
+14,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+15,"Assessment: The patient is at risk for developing glomerulonephritis due to recurrent strep throat episodes, which may lead to chronic kidney disease.",Faithful,
+16,Problem list: Glomerulonephritis; Suspected [Status: suspected],Faithful,
+17,"I prescribed a lipid panel, a urinalysis, a comprehensive metabolic panel, a complete blood count, a vitamin D test, and a thyroid-stimulating hormone test to evaluate the patient's kidney function, hormone levels, and nutritional status.",Faithful,
+18,"I referred the patient to an ear, nose, and throat specialist to consider tonsillectomy to alleviate recurrent strep throat episodes.",Faithful,
+19,I also referred the patient to a nephrologist for further evaluation of glomerulonephritis.,Fabrication,I also referred the patient to a nephrologist for further evaluation of glomerulonephritis.
+20,The patient is to return in a week for the results of the tests.,Faithful,

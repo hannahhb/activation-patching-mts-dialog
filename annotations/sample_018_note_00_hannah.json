@@ -1,0 +1,163 @@
+{
+  "token_spans": [
+    {
+      "text": "who is more aggressive than his peers",
+      "type": "word",
+      "severity": "3",
+      "char_start": 160,
+      "char_end": 197
+    },
+    {
+      "text": ".5 mg PO q12h",
+      "type": "med",
+      "severity": "3",
+      "char_start": 1491,
+      "char_end": 1504
+    },
+    {
+      "text": "The patient is to continue coaching his son's basketball team, as he is cleared to do so.",
+      "type": "word",
+      "severity": "3",
+      "char_start": 1664,
+      "char_end": 1753
+    }
+  ],
+  "sentence_labels": {
+    "0": {
+      "faithful": "Not Faithful",
+      "type": "Fabrication",
+      "severity": "N/A"
+    },
+    "1": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "2": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "3": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "4": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "5": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "6": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "7": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "8": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "9": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "10": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "11": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "12": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "13": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "14": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "15": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "16": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "17": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "18": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "19": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "20": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "21": {
+      "faithful": "Not Faithful",
+      "type": "Fabrication",
+      "severity": "N/A"
+    },
+    "22": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "23": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "24": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "25": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    },
+    "26": {
+      "faithful": "Faithful",
+      "type": null,
+      "severity": "N/A"
+    }
+  },
+  "note_html": "Subjective:\nHPI: Jerry, a 45-year-old male, presents with an ankle injury sustained while playing basketball with his 10-year-old son. He reports that his son, <span class=\"hl-word\" data-hl-type=\"word\" data-hl-sev=\"3\" data-char-start=\"160\" data-char-end=\"197\" title=\"word \u00b7 severity 3 [160:197]\">who is more aggressive than his peers</span>, collided with him while he was attempting to make a shot, causing him to land awkwardly and twist his ankle. He describes the pain as located on the outside of the ankle, which is swollen and bruised. He has been having trouble walking and feels the ankle is not stable. He recently returned to working out after a period of inactivity and is concerned about disrupting his progress.\n\nPast medical history: [NOT MENTIONED]\n\nReview of systems: [NOT MENTIONED]\n\nCurrent medications: [NOT MENTIONED]\n\nObjective:\nVital signs: [NOT MENTIONED]\n\nPhysical exam: The ankle is swollen on the lateral side, with exquisite tenderness on palpation. There is tenderness over the medial deltoid region. The skin is intact, and capillary refill is brisk. There is no malalignment. The patient is able to stand on the ankle but reports difficulty walking due to instability.\n\nTest Results: An X-ray of the right ankle shows a displaced lateral malleolus fracture at the Weber C level, with no evidence of medial or posterior malleolar fractures.\n\nAssessment / Problem List:\nAssessment: The patient has a displaced lateral malleolar fracture, which is unstable and requires surgical intervention.\n\nProblem list: Lateral malleolar fracture; Suspected instability; Past; [Unknown]\n\nPlan:\nI prescribed meloxicam 7<span class=\"hl-med\" data-hl-type=\"med\" data-hl-sev=\"3\" data-char-start=\"1491\" data-char-end=\"1504\" title=\"med \u00b7 severity 3 [1491:1504]\">.5 mg PO q12h</span> for pain and inflammation. I advised the patient to ice the ankle and elevate it regularly, as he works from home. I ordered crutches to assist with mobility. <span class=\"hl-word\" data-hl-type=\"word\" data-hl-sev=\"3\" data-char-start=\"1664\" data-char-end=\"1753\" title=\"word \u00b7 severity 3 [1664:1753]\">The patient is to continue coaching his son's basketball team, as he is cleared to do so.</span> He will be out for approximately three months, after which he will be able to resume exercise and return to playing basketball.\n\nFollow-up: The patient will follow up in three months to assess healing and progress."
+}

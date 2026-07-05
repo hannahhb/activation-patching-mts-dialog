@@ -1,0 +1,16 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient is a 39-year-old female with a history of quadriplegia due to a prior spinal cord injury, presenting with increasing concerns for spasms, lightheadedness, significant constipation, and diaphoresis.",Faithful,
+1,"She reports feeling better after a massive bowel movement at home, and believes her hospitalization was likely due to her autonomic dysreflexia, which can cause blood pressure fluctuations.",Faithful,
+2,She takes miralax regularly for constipation and lactulose for severe constipation.,Faithful,
+3,"Past medical history: Quadriplegia due to spinal cord injury, history of autonomic dysreflexia.",Faithful,
+4,Review of systems: None mentioned.,Faithful,
+5,"Current medications: Miralax, lactulose.",Faithful,
+6,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+7,The patient has a normal examination.,Causality,The patient has a normal examination
+8,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+9,Assessment: The patient has acute to chronic constipation.,Faithful,
+10,Problem list: Quadriplegia; Constipation; Elevated white blood cell count; COVID-19 vaccine status: unknown.,Contextual,COVID-19 vaccine status: unknown
+11,"I recommended that the patient return in 2-3 weeks for updated fasting labs, including a CBC to ensure her white blood cell count trends downward.",Faithful,
+12,"I also discussed the importance of getting vaccinated against COVID-19, citing the vaccine as the only true preventative mechanism against the virus.",Faithful,
+13,"I acknowledged her concerns about vaccine side effects, but expressed my concern that she is at high risk due to her quadriplegia status.",Faithful,
+14,Follow-up: The patient will return in 2-3 weeks for follow-up labs and to discuss her COVID-19 vaccine status.,Faithful,

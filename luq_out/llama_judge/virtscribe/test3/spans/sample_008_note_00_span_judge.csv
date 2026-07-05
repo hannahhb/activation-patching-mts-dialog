@@ -1,0 +1,14 @@
+sentence_idx,sentence,label,note_span
+0,"The patient reports that his acne is doing better, excellent, and he has been using the benzoyl peroxide wash, antibiotic lotion, tretinoin cream, and sunscreen moisture stuff as directed.",Faithful,
+1,"He has not experienced any redness, peeling, dryness, or irritation with the use of these medications.",Faithful,
+2,"He has been washing his face with the 4-5% benzoyl peroxide wash, applying the tretinoin cream at night, and using the sunscreen moisture stuff twice daily.",Contextual,twice daily
+3,"He mentions that washing his chest and back with a higher strength benzoyl peroxide wash is not a priority as it has not bothered him much, but may be something he is more interested in pursuing as he moves into the summer.",Faithful,
+4,He feels that the acne on his face is improving.,Faithful,
+5,Vital signs: [NOT MENTIONED],Fabrication,Vital signs
+6,"Physical exam: There are scattered inflammatory papules and pustules across the upper back and posterior shoulders, with less than five inflammatory papules on the forehead, cheeks, and chin.",Faithful,
+7,Assessment: The patient's acne vulgaris is improved and well-controlled on the face but has a mild flare on the back.,Faithful,
+8,Problem list: Acne vulgaris; Acne vulgaris (back) status: active; Acne vulgaris (face) status: active.,Fabrication,Problem list
+9,"I recommended continuing the current treatment plan for the face, which includes the benzoyl peroxide wash, antibiotic lotion, and tretinoin cream, and initiating treatment with Panoxyl 10% foaming wash on the back in the shower daily.",Faithful,
+10,"I also prescribed Panoxyl 10% to the patient, with instructions to use it daily.",Contextual,with instructions to use it daily
+11,I sent the patient home with samples and coupons for the Panoxyl 10% and refilled the patient's prescription for clindamycin with 11 refills and tretinoin cream with 3 refills.,Faithful,
+12,I instructed the patient to return in one year for a follow-up appointment to review his treatment plan and refill his prescriptions as needed.,Faithful,

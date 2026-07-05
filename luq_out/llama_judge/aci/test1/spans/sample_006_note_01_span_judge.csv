@@ -1,0 +1,21 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: The patient, Matthew, is a 30-year-old male who has been experiencing back pain for an extended period, with the pain worsening over the past month.",Fabrication,30-year-old male
+1,"He reports that the pain is located in the lower back, radiating down the left leg, and describes it as a ""electrical toothache"" that worsens with standing, walking, coughing, and sneezing.",Faithful,
+2,"He rates his pain as 6 out of 10 currently, but it can be as high as 13 out of 10.",Faithful,
+3,He mentions that laying down is the only position that brings relief.,Faithful,
+4,"Past medical history: The patient mentions a past injury from a fall off a roof 30 years ago, which may have resulted in a possible fracture.",Faithful,
+5,"However, no further information is provided about this incident.",Faithful,
+6,"Review of systems: The patient reports numbness and tingling in both lower extremities, with weakness in both legs.",Faithful,
+7,He also mentions that coughing and sneezing exacerbate his symptoms.,Faithful,
+8,Current medications: NOT MENTIONED,Fabrication,Current medications
+9,Vital signs: NOT MENTIONED,Fabrication,Vital signs
+10,"The patient has pain to palpation at the L4 vertebrae, and pain with flexion and extension of the back.",Faithful,
+11,"Strength in the left leg is 4 out of 5, and 5 out of 5 on the right.",Faithful,
+12,Reflexes are brisk and motor and sensory are intact in both lower extremities.,Faithful,
+13,"The MRI shows a disk herniation at the level of L4-L5 vertebrae, associated with some nerve root impingement.",Faithful,
+14,Assessment: The patient has acute disk herniation at L4-L5 with nerve root impingement causing lower back pain and leg pain.,Faithful,
+15,Problem list: Acute disk herniation at L4-L5 with nerve root impingement; lower back pain; leg pain; weakness in both legs.,Faithful,
+16,I recommended an epidural steroid injection to place anti-inflammatory medication at the site of inflammation.,Faithful,
+17,I referred the patient to physical therapy to strengthen the area.,Faithful,
+18,I want the patient to see physical therapy and return in about a month to reassess the effectiveness of the injection.,Faithful,
+19,Follow-up: I want the patient to see me again in about a month to reassess the effectiveness of the injection.,Causality,Follow-up

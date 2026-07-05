@@ -1,0 +1,19 @@
+sentence_idx,sentence,label,note_span
+0,"HPI: This 20-year-old female was seen today for a yearly follow-up for asthma, allergic rhinitis, and food allergy.",Faithful,
+1,"She reports that she has been tolerating her current medication regimen well, taking Wixela 250/50 twice a day and Zyrtec as needed for seasonal allergy symptoms.",Faithful,
+2,She has a known peanut allergy but tolerates almonds and cashews.,Faithful,
+3,"She has been trying to reduce her use of her albuterol inhaler, taking it only for strenuous activities.",Faithful,
+4,She has a history of vaping and smoking but is currently trying to quit.,Faithful,
+5,"Past medical history: Known peanut allergy, asthma, allergic rhinitis, seasonal allergies.",Faithful,
+6,Review of systems: [NOT MENTIONED],Fabrication,Review of systems: [NOT MENTIONED]
+7,"Current medications: - Wixela 250/50, twice a day - Zyrtec, as needed",Faithful,
+8,Vital signs: [NOT MENTIONED],Fabrication,Vital signs: [NOT MENTIONED]
+9,"Physical exam: The patient's ears had a little bit of wax on both sides, and her lungs sounded terrific.",Faithful,
+10,Her breathing test results are about the same as they were a couple of years ago and look a little bit better.,Faithful,
+11,Test Results: [NOT MENTIONED],Fabrication,Test Results: [NOT MENTIONED]
+12,"Assessment: The patient's asthma is well-controlled, and she is tolerating her current medication regimen well.",Faithful,
+13,Problem list: Asthma; Allergic rhinitis; Food allergy; Peanut allergy.,Faithful,
+14,"I will call in a new prescription for Alvesco 80 mcg, two puffs twice a day, and instruct the patient to continue using her albuterol inhaler as needed.",Faithful,
+15,I will also renew her epipen and Zyrtec prescription.,Contextual,Zyrtec prescription
+16,I will instruct the patient to continue to stay away from peanuts and tree nuts.,Faithful,
+17,The patient will return in four months for a follow-up appointment to repeat her breathing test and assess her asthma control.,Faithful,

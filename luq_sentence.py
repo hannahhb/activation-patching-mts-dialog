@@ -54,7 +54,7 @@ DATASET_SPLIT = "test1"
 DEFAULT_K = 10
 DEFAULT_TEMPERATURE = 0.7
 DEFAULT_MAX_TOKENS = 1024
-DEFAULT_OUT_DIR = "luq_out/llama"
+DEFAULT_OUT_DIR = "luq_out/llama/generations"
 
 PAIR_MAX_TOKENS = 512
 SPECIAL_TOKEN_RESERVE = 8
@@ -64,28 +64,36 @@ DEFAULT_PREMISE_WINDOW = 448
 WINDOW_BUCKET = 32
 
 
-def _cuda_available() -> bool:
+def _detect_device() -> str:
+    """cuda > mps > cpu. mps (Apple Silicon GPU) was previously undetected
+    here -- benchmarked at ~3.7x faster than cpu for this NLI model, so
+    running on an Apple Silicon Mac without this check silently left a
+    real GPU unused."""
     try:
         import torch
-        return bool(torch.cuda.is_available())
+        if torch.cuda.is_available():
+            return "cuda"
+        if torch.backends.mps.is_available():
+            return "mps"
     except Exception:
-        return False
+        pass
+    return "cpu"
 
 
-CUDA_AVAILABLE = _cuda_available()
-NLI_BATCH_SIZE = 16 if CUDA_AVAILABLE else 4
-MICRO_BATCH_PAIRS = 128 if CUDA_AVAILABLE else 16
-DEVICE_NAME = "cuda" if CUDA_AVAILABLE else "cpu"
+DEVICE_NAME = _detect_device()
+GPU_AVAILABLE = DEVICE_NAME != "cpu"
+NLI_BATCH_SIZE = 16 if GPU_AVAILABLE else 4
+MICRO_BATCH_PAIRS = 128 if GPU_AVAILABLE else 16
 
 
 # -----------------------------------------------------------------------------
 # Dataset and generation
 # -----------------------------------------------------------------------------
 
-def load_aci_bench(split: str = DATASET_SPLIT):
+def load_aci_bench(split: str = DATASET_SPLIT, config: str = DATASET_CONFIG):
     from datasets import load_dataset
-    print(f"[data] Loading {DATASET_REPO} config={DATASET_CONFIG} split={split}")
-    return load_dataset(DATASET_REPO, DATASET_CONFIG, split=split)
+    print(f"[data] Loading {DATASET_REPO} config={config} split={split}")
+    return load_dataset(DATASET_REPO, config, split=split)
 
 
 def get_transcript_and_gold(row: dict) -> Tuple[str, str]:
@@ -120,6 +128,24 @@ def get_bedrock_client():
         )
         print(f"[bedrock] Client initialised in {BEDROCK_REGION}")
     return _bedrock_client
+
+
+def dedupe_by_transcript(ds) -> List[int]:
+    """Row indices to keep: first occurrence of each unique dialogue text.
+
+    test1/test2/test3 each contain 22 encounters x 2 transcript_version rows
+    (asr / asrcorr); most pairs share a byte-identical dialogue, and only a
+    minority were genuinely ASR-corrected. A corrected pair is NOT an exact
+    duplicate (its transcript text differs) so both versions survive dedup.
+    """
+    seen = set()
+    keep = []
+    for i, row in enumerate(ds):
+        transcript, _ = get_transcript_and_gold(row)
+        if transcript not in seen:
+            seen.add(transcript)
+            keep.append(i)
+    return keep
 
 
 def generate_note(transcript: str) -> str:
@@ -266,8 +292,8 @@ def get_nli():
     if _nli is None:
         from sentence_transformers import CrossEncoder
 
-        print(f"[nli] Loading {NLI_MODEL_NAME}")
-        _nli = CrossEncoder(NLI_MODEL_NAME)
+        print(f"[nli] Loading {NLI_MODEL_NAME} on device={DEVICE_NAME}")
+        _nli = CrossEncoder(NLI_MODEL_NAME, device=DEVICE_NAME)
         _label_indices = infer_label_indices(_nli)
         print(f"[nli] Ready. entail={_label_indices[0]}, contradict={_label_indices[1]}")
     return _nli
@@ -301,13 +327,52 @@ def chunk_premise_ids(tokenizer, premise_ids: List[int], window_size: int) -> Li
     return chunks
 
 
-def bucketed_window_size(tokenizer, claim: str) -> int:
-    hyp_len = len(tokenizer.encode(claim, add_special_tokens=False))
-    available = PAIR_MAX_TOKENS - hyp_len - SPECIAL_TOKEN_RESERVE
-    available = max(MIN_PREMISE_WINDOW, available)
-    if available >= DEFAULT_PREMISE_WINDOW:
-        return DEFAULT_PREMISE_WINDOW
-    return max(MIN_PREMISE_WINDOW, (available // WINDOW_BUCKET) * WINDOW_BUCKET)
+SENTENCE_WINDOW_SIZE = 2  # consecutive sentences per NLI premise chunk
+SENTENCE_WINDOW_MAX_CHARS = 1800  # above this, fall back to token-based sub-chunking
+
+
+def sentence_windows(text: str, tokenizer=None,
+                     window_size: int = SENTENCE_WINDOW_SIZE) -> List[str]:
+    """Sliding window of `window_size` consecutive sentences (stride 1) used
+    as NLI premise chunks, instead of one large token-budget-maxed premise
+    covering a whole (often multi-topic) section.
+
+    Why: cross-encoder NLI models are trained on short, single-topic
+    premise/hypothesis pairs. Verified empirically that the exact same
+    supporting sentence scores ~0.99 entailment for a narrow claim when
+    passed alone, but ~0.01 for the identical claim when embedded in a full
+    multi-sentence section alongside unrelated content (e.g. a demographic
+    fact diluted by surrounding symptom/timeline sentences) -- the model
+    isn't finding the supporting clause, it's judging the whole passage's
+    gist. Small, localized windows (max-pooled over) avoid that dilution.
+
+    Independent of claim length (unlike the old bucketed_window_size), so
+    chunk lists can be cached per (premise note, section) alone and reused
+    across every claim that section is compared against.
+    """
+    sentences = split_sentences(text)
+    if not sentences:
+        return [""]
+    if len(sentences) <= window_size:
+        chunks = [" ".join(sentences)]
+    else:
+        chunks = [" ".join(sentences[i:i + window_size])
+                 for i in range(len(sentences) - window_size + 1)]
+
+    if tokenizer is None:
+        return chunks
+
+    # Safety net: an unusually long chunk (e.g. one run-on clinical sentence)
+    # that still overflows the NLI pair budget gets token-chunked via the
+    # existing machinery rather than silently truncated by the tokenizer.
+    out: List[str] = []
+    for c in chunks:
+        if len(c) <= SENTENCE_WINDOW_MAX_CHARS:
+            out.append(c)
+        else:
+            ids = tokenizer.encode(c, add_special_tokens=False)
+            out.extend(chunk_premise_ids(tokenizer, ids, DEFAULT_PREMISE_WINDOW))
+    return out
 
 
 def binary_luq_support(logits: np.ndarray, entail_idx: int, contradict_idx: int) -> float:
@@ -361,13 +426,11 @@ def build_reference_claims(notes: List[str], tokenizer):
       claims_by_ref[ref_idx]
       claim_to_sentence_by_ref[ref_idx]
       claim_sections_by_ref[ref_idx]
-      window_sizes_by_ref[ref_idx]
     """
     sentences_by_ref: List[List[str]] = []
     claims_by_ref: List[List[str]] = []
     claim_to_sentence_by_ref: List[List[int]] = []
     claim_sections_by_ref: List[List[str]] = []
-    window_sizes_by_ref: List[List[int]] = []
 
     for note in notes:
         sentences = split_sentences(note)
@@ -375,7 +438,6 @@ def build_reference_claims(notes: List[str], tokenizer):
         claims: List[str] = []
         claim_to_sentence: List[int] = []
         claim_sections: List[str] = []
-        window_sizes: List[int] = []
 
         for sent_idx, sentence in enumerate(sentences):
             section = sent_sections[sent_idx] if sent_idx < len(sent_sections) else "all"
@@ -383,20 +445,17 @@ def build_reference_claims(notes: List[str], tokenizer):
                 claims.append(claim)
                 claim_to_sentence.append(sent_idx)
                 claim_sections.append(section)
-                window_sizes.append(bucketed_window_size(tokenizer, claim))
 
         sentences_by_ref.append(sentences)
         claims_by_ref.append(claims)
         claim_to_sentence_by_ref.append(claim_to_sentence)
         claim_sections_by_ref.append(claim_sections)
-        window_sizes_by_ref.append(window_sizes)
 
     return (
         sentences_by_ref,
         claims_by_ref,
         claim_to_sentence_by_ref,
         claim_sections_by_ref,
-        window_sizes_by_ref,
     )
 
 
@@ -422,7 +481,6 @@ def compute_luq_all_references(notes: List[str]) -> List[Dict]:
         claims_by_ref,
         claim_to_sentence_by_ref,
         claim_sections_by_ref,
-        window_sizes_by_ref,
     ) = build_reference_claims(notes, tokenizer)
 
     support_sum_by_ref: List[np.ndarray] = [
@@ -430,19 +488,19 @@ def compute_luq_all_references(notes: List[str]) -> List[Dict]:
         for sentences in sentences_by_ref
     ]
 
-    # Premise-first: parse/tokenise each sampled note's sections once, then score
-    # every other reference against those section premises.
+    # Premise-first: parse each sampled note's sections once, then score every
+    # other reference's claims against those section premises.
     for premise_idx, sampled_note in enumerate(notes):
         section_text = parse_sections(sampled_note)
-        section_ids = {
-            sec: tokenizer.encode(text, add_special_tokens=False)
-            for sec, text in section_text.items()
-        }
-        if "all" not in section_ids:
-            section_ids["all"] = tokenizer.encode(sampled_note, add_special_tokens=False)
+        if "all" not in section_text:
+            section_text["all"] = sampled_note
 
-        # Cache chunk lists for this premise by (section, window_size).
-        chunk_cache: Dict[Tuple[str, int], List[str]] = {}
+        # Cache sentence-window chunk lists for this premise by section alone
+        # -- unlike the old token-budget windows, sentence windows don't
+        # depend on the claim being checked, so one chunk list per section
+        # (not per (section, window_size) pair) is reused across every claim
+        # that matches it, from every reference note.
+        chunk_cache: Dict[str, List[str]] = {}
 
         claim_max_by_ref: Dict[int, np.ndarray] = {
             ref_idx: np.full(len(claims_by_ref[ref_idx]), -np.inf, dtype=np.float64)
@@ -472,24 +530,19 @@ def compute_luq_all_references(notes: List[str]) -> List[Dict]:
 
             claims = claims_by_ref[ref_idx]
             sections = claim_sections_by_ref[ref_idx]
-            windows = window_sizes_by_ref[ref_idx]
             if not claims:
                 continue
 
             for claim_idx, claim in enumerate(claims):
                 requested_sec = sections[claim_idx]
-                premise_sec = requested_sec if requested_sec in section_ids else "all"
-                window_size = windows[claim_idx]
-                cache_key = (premise_sec, window_size)
+                premise_sec = requested_sec if requested_sec in section_text else "all"
 
-                if cache_key not in chunk_cache:
-                    chunk_cache[cache_key] = chunk_premise_ids(
-                        tokenizer,
-                        section_ids[premise_sec],
-                        window_size,
+                if premise_sec not in chunk_cache:
+                    chunk_cache[premise_sec] = sentence_windows(
+                        section_text[premise_sec], tokenizer=tokenizer,
                     )
 
-                for chunk in chunk_cache[cache_key]:
+                for chunk in chunk_cache[premise_sec]:
                     pair_buffer.append((chunk, claim))
                     pair_refs.append(ref_idx)
                     pair_claim_indices.append(claim_idx)
@@ -513,7 +566,7 @@ def compute_luq_all_references(notes: List[str]) -> List[Dict]:
 
             support_sum_by_ref[ref_idx] += sentence_support
 
-        section_names = ",".join(k for k in section_ids.keys() if k != "all") or "all"
+        section_names = ",".join(k for k in section_text.keys() if k != "all") or "all"
         print(
             f"  [luq] premise={premise_idx:02d}: scored against {K - 1} references; "
             f"sections={section_names}; chunk_sets={len(chunk_cache)}"
@@ -590,12 +643,24 @@ def score_generation_file(gen_path: Path, sent_dir: Path, use_cache: bool) -> Di
 # Stages
 # -----------------------------------------------------------------------------
 
-def stage_generate(start: int, end: int, k: int, out_dir: Path, use_cache: bool) -> None:
-    gen_dir = out_dir / "generations"
+def stage_generate(start: int, end: int, k: int, out_dir: Path, use_cache: bool,
+                   split: str = DATASET_SPLIT, config: str = DATASET_CONFIG,
+                   dedupe: bool = False) -> None:
+    """dedupe=True restricts to rows with a unique (byte-identical) transcript
+    -- meaningful for the "aci" config's test1/test2/test3 splits, where most
+    asr/asrcorr pairs are exact duplicates. The "virtassist"/"virtscribe"
+    configs pair humantrans/asr transcripts that are independently produced
+    and never byte-identical, so dedupe is a no-op there (all rows kept) --
+    that's expected, not a bug."""
+    gen_dir = out_dir 
     gen_dir.mkdir(parents=True, exist_ok=True)
 
-    ds = load_aci_bench()
-    end = min(end, len(ds))
+    ds = load_aci_bench(split=split, config=config)
+    row_idx = dedupe_by_transcript(ds) if dedupe else list(range(len(ds)))
+    if dedupe:
+        print(f"[{split}] {len(ds)} rows -> {len(row_idx)} unique-transcript rows kept "
+              f"({len(ds) - len(row_idx)} exact duplicates dropped)")
+    end = min(end, len(row_idx))
 
     for sample_idx in tqdm(range(start, end), desc="generate", unit="sample"):
         gen_path = gen_dir / f"sample_{sample_idx:03d}_generations.json"
@@ -603,7 +668,8 @@ def stage_generate(start: int, end: int, k: int, out_dir: Path, use_cache: bool)
             print(f"  [cache] sample {sample_idx}: generations exist")
             continue
 
-        transcript, gold = get_transcript_and_gold(ds[sample_idx])
+        row = ds[row_idx[sample_idx]]
+        transcript, gold = get_transcript_and_gold(row)
         notes = generate_notes(transcript, k)
         if not notes:
             print(f"  [generate] sample {sample_idx}: no successful generations")
@@ -611,6 +677,9 @@ def stage_generate(start: int, end: int, k: int, out_dir: Path, use_cache: bool)
 
         gen_path.write_text(json.dumps({
             "sample_idx": sample_idx,
+            "orig_row_idx": row_idx[sample_idx],
+            "encounter_id": row.get("encounter_id"),
+            "transcript_version": row.get("transcript_version"),
             "transcript": transcript,
             "gold_note": gold,
             "notes": notes,
@@ -622,10 +691,34 @@ def stage_generate(start: int, end: int, k: int, out_dir: Path, use_cache: bool)
 
 
 def stage_score(start: int, end: int, out_dir: Path, use_cache: bool,
-                gen_dir_override: Path = None) -> pd.DataFrame:
-    gen_dir = gen_dir_override if gen_dir_override else out_dir / "generations"
+                gen_dir_override: Path = None, atomic: bool = False,
+                atomic_out: str = None, atomic_decomp_k: int = None,
+                atomic_only: bool = False) -> pd.DataFrame:
+    """atomic=True additionally runs LUQ-ATOMIC (fact-level uncertainty, see
+    atomic_luq.py) for each sample alongside the normal sentence-level scoring.
+    atomic_only=True skips the (slower, all-against-all NLI) sentence-level
+    scoring entirely and only runs LUQ-ATOMIC -- implies atomic=True.
+    Kept as a lazy import here since atomic_luq.py itself imports this module
+    (luq_sentence) -- importing it at module level would be circular."""
+    atomic = atomic or atomic_only
+    gen_dir = gen_dir_override if gen_dir_override else out_dir
     sent_dir = out_dir / "sentences"
-    sent_dir.mkdir(parents=True, exist_ok=True)
+    if not atomic_only:
+        sent_dir.mkdir(parents=True, exist_ok=True)
+
+    atomic_mod = None
+    atomic_out_dir = None
+    if atomic:
+        import atomic_luq as atomic_mod
+        # atomic_luq.score_sample appends "/facts" itself, so passing out_dir
+        # directly lands facts at <out_dir>/facts -- a sibling of "sentences",
+        # nested under the same <config>/<split> combo dir by default (e.g.
+        # luq_out/llama/generations/aci/test1/facts), unless --atomic-out
+        # explicitly points somewhere else (e.g. the old shared
+        # luq_out/llama_atomic cache).
+        atomic_out_dir = Path(atomic_out).resolve() if atomic_out else out_dir
+        atomic_out_dir.mkdir(parents=True, exist_ok=True)
+        atomic_decomp_k = atomic_decomp_k or atomic_mod.DEFAULT_DECOMP_K
 
     rows: List[Dict] = []
     for sample_idx in tqdm(range(start, end), desc="score", unit="sample"):
@@ -635,11 +728,21 @@ def stage_score(start: int, end: int, out_dir: Path, use_cache: bool,
             continue
 
         print(f"\n[score] sample {sample_idx}")
-        rows.append(score_generation_file(gen_path, sent_dir, use_cache))
+        if not atomic_only:
+            rows.append(score_generation_file(gen_path, sent_dir, use_cache))
+
+        if atomic_mod is not None:
+            notes = json.loads(gen_path.read_text()).get("notes", [])
+            decomp_k = min(atomic_decomp_k, len(notes))
+            if len(notes) >= 2:
+                atomic_mod.score_sample(sample_idx, notes, decomp_k, atomic_out_dir, use_cache)
+            else:
+                print(f"  [atomic] sample {sample_idx}: fewer than 2 notes, skipped")
 
     df = pd.DataFrame(rows)
-    df.to_csv(out_dir / "luq_results.csv", index=False)
-    print(f"\n[score] wrote {out_dir / 'luq_results.csv'}")
+    if not atomic_only:
+        df.to_csv(out_dir / "luq_results.csv", index=False)
+        print(f"\n[score] wrote {out_dir / 'luq_results.csv'}")
     return df
 
 
@@ -659,14 +762,48 @@ def parse_args() -> argparse.Namespace:
                         help="Override NLI model (e.g. mrm8488/deberta-v3-large-finetuned-mnli)")
     parser.add_argument("--gen-dir", default=None,
                         help="Path to existing generations directory (skips generation stage)")
+    parser.add_argument("--split", nargs="+", default=[DATASET_SPLIT],
+                        choices=["train", "valid", "test1", "test2", "test3"],
+                        help="ACI-Bench split(s) to generate from (default test1). "
+                             "Pass multiple space-separated values (e.g. "
+                             "--split test1 test2 test3) to run all of them; "
+                             "each gets its own subdirectory under --out.")
+    parser.add_argument("--config", nargs="+", default=[DATASET_CONFIG],
+                        choices=["aci", "virtassist", "virtscribe"],
+                        help="ACI-Bench-MedARC config(s): conversation style "
+                             "(default aci; virtassist/virtscribe pair "
+                             "humantrans/asr transcripts instead of asr/asrcorr). "
+                             "Pass multiple values to run all of them.")
+    parser.add_argument("--dedupe-transcripts", action="store_true",
+                        help="Restrict to unique-transcript rows (drops exact "
+                             "asr/asrcorr duplicates; see dedupe_by_transcript. "
+                             "No-op for virtassist/virtscribe -- their "
+                             "humantrans/asr pairs are never byte-identical.)")
+    parser.add_argument("--atomic", action="store_true",
+                        help="During the score stage, also run LUQ-ATOMIC "
+                             "(fact-level uncertainty via atomic_luq.py) for "
+                             "each sample, alongside the normal sentence-level "
+                             "scoring.")
+    parser.add_argument("--atomic-out", default=None,
+                        help="Output dir for LUQ-ATOMIC facts (default: nested "
+                             "under this combo's own out_dir, e.g. "
+                             "luq_out/llama/generations/aci/test1/facts -- pass "
+                             "e.g. luq_out/llama_atomic to use the old shared "
+                             "cache location instead)")
+    parser.add_argument("--atomic-decomp-k", type=int, default=3,
+                        help="How many notes per sample to decompose into atomic "
+                             "facts (default: atomic_luq.py's own default, 3)")
+    parser.add_argument("--atomic-only", action="store_true",
+                        help="Skip the slower sentence-level (all-against-all "
+                             "NLI) scoring entirely and only run LUQ-ATOMIC. "
+                             "Implies --atomic.")
     return parser.parse_args()
 
 
 def main() -> None:
     global NLI_MODEL_NAME
     args = parse_args()
-    out_dir = Path(args.out).resolve()
-    out_dir.mkdir(parents=True, exist_ok=True)
+    out_root = Path(args.out).resolve()
     use_cache = not args.no_cache
 
     if args.nli_model:
@@ -674,9 +811,10 @@ def main() -> None:
 
     gen_dir_override = Path(args.gen_dir).resolve() if args.gen_dir else None
 
+    combos = [(config, split) for config in args.config for split in args.split]
+
     print(f"Stage: {args.stage}")
     print(f"Samples: {args.start} to {args.end - 1}")
-    print(f"Output: {out_dir}")
     print(f"K: {args.K}")
     print(f"Cache: {'on' if use_cache else 'off'}")
     print(f"NLI model: {NLI_MODEL_NAME}")
@@ -685,13 +823,25 @@ def main() -> None:
     print(f"Micro-batch pairs: {MICRO_BATCH_PAIRS}")
     if gen_dir_override:
         print(f"Generations from: {gen_dir_override}")
+    print(f"Config x split combinations: {combos}")
 
-    if args.stage in {"generate", "all"} and gen_dir_override is None:
-        stage_generate(args.start, args.end, args.K, out_dir, use_cache)
+    for config, split in combos:
+        # Always nest by <config>/<split>, e.g. luq_out/llama/generations/aci/test1 --
+        # every downstream tool (annotator.py, llm_hallucination_label.py, etc.)
+        # expects this layout even for the single-combo default case.
+        out_dir = out_root / f"{config}/{split}"
+        out_dir.mkdir(parents=True, exist_ok=True)
+        print(f"\n=== config={config} split={split} -> {out_dir} ===")
 
-    if args.stage in {"score", "all"}:
-        stage_score(args.start, args.end, out_dir, use_cache,
-                    gen_dir_override=gen_dir_override)
+        if args.stage in {"generate", "all"} and gen_dir_override is None:
+            stage_generate(args.start, args.end, args.K, out_dir, use_cache,
+                           split=split, config=config, dedupe=args.dedupe_transcripts)
+
+        if args.stage in {"score", "all"}:
+            stage_score(args.start, args.end, out_dir, use_cache,
+                       gen_dir_override=gen_dir_override, atomic=args.atomic,
+                       atomic_out=args.atomic_out, atomic_decomp_k=args.atomic_decomp_k,
+                       atomic_only=args.atomic_only)
 
 
 if __name__ == "__main__":
