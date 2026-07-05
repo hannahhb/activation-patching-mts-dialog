@@ -152,6 +152,40 @@ def _max_entail_prob(nli, premise_windows: List[str], hypothesis: str, entail_id
     return float(probs[:, entail_idx].max()) # max entailment prob across windows
 
 
+def _max_entail_probs_batch(
+    nli,
+    premise_windows: List[str],
+    hypotheses: List[str],
+    entail_idx: int,
+) -> np.ndarray:
+    """Max entailment probability for many facts against one section's windows.
+
+    This keeps the scoring logic identical to repeated _max_entail_prob calls,
+    but collapses thousands of tiny CrossEncoder.predict() invocations into
+    larger batched calls that actually use the GPU.
+    """
+    from scipy.special import softmax as sp_softmax
+
+    if not premise_windows or not hypotheses:
+        return np.zeros(len(hypotheses), dtype=np.float64)
+
+    n_w = len(premise_windows)
+    n_h = len(hypotheses)
+    pairs = [(w, h) for h in hypotheses for w in premise_windows]
+    raw = np.asarray(
+        nli.predict(
+            pairs,
+            batch_size=min(len(pairs), max(luq.MICRO_BATCH_PAIRS, luq.NLI_BATCH_SIZE)),
+            apply_softmax=False,
+            show_progress_bar=False,
+        )
+    )
+    if raw.ndim == 1:
+        raw = raw.reshape(1, -1)
+    probs = sp_softmax(raw, axis=1)[:, entail_idx].reshape(n_h, n_w)
+    return probs.max(axis=1).astype(np.float64)
+
+
 # ── Paths ──────────────────────────────────────────────────────────────────────
 
 def facts_csv_path(out_dir: Path, sample_idx: int, note_idx: int) -> Path:
@@ -214,6 +248,18 @@ def score_sample(sample_idx: int, notes: List[str], decomp_k: int,
     #   uncertainty = 1 - mean(score over K-1 reference notes)
     nli = luq.get_nli()
     entail_idx = luq._label_indices[0]
+    tokenizer = nli.tokenizer
+
+    # Precompute windowed premises once per note/section. This used to be
+    # recomputed inside the innermost fact loop, which dominated runtime even
+    # before NLI inference.
+    windows_cache: List[Dict[str, List[str]]] = []
+    for sec_map in all_sections:
+        sec_windows = {}
+        for sec in SECTION_NAMES:
+            text = sec_map.get(sec, "").strip()
+            sec_windows[sec] = luq.sentence_windows(text, tokenizer=tokenizer) if text else []
+        windows_cache.append(sec_windows)
 
     rows = []
     for note_idx in range(decomp_k):
@@ -232,44 +278,43 @@ def score_sample(sample_idx: int, notes: List[str], decomp_k: int,
             if not my_facts:
                 continue
 
-            for fact in my_facts:
-                entail_probs = []
-                for ref_idx in ref_indices:
-                    ref_text = all_sections[ref_idx].get(sec, "").strip()
-                    p = 0.0
-                    checked_anything = False
-                    if ref_text:
-                        windows = luq.sentence_windows(ref_text, tokenizer=nli.tokenizer)
-                        p = _max_entail_prob(nli, windows, fact, entail_idx)
-                        checked_anything = True
+            support_sum = np.zeros(len(my_facts), dtype=np.float64)
+            support_cnt = np.zeros(len(my_facts), dtype=np.int32)
 
-                    if p < SECTION_FALLBACK_THRESHOLD:
-                        # Same-section premise gave weak/no support. LLM note
-                        # generations don't consistently file a given fact
-                        # under the same SOAP section across resamples (e.g.
-                        # a background diagnosis restated in "assessment" in
-                        # one sample but only mentioned in "subjective" in
-                        # another) -- concluding "unsupported" from the
-                        # matching section alone conflates section-placement
-                        # variance with real factual inconsistency. Check the
-                        # reference note's other sections too before giving up.
-                        for other_sec in SECTION_NAMES:
-                            if other_sec == sec:
-                                continue
-                            other_text = all_sections[ref_idx].get(other_sec, "").strip()
-                            if not other_text:
-                                continue
-                            checked_anything = True
-                            other_windows = luq.sentence_windows(other_text, tokenizer=nli.tokenizer)
-                            p = max(p, _max_entail_prob(nli, other_windows, fact, entail_idx))
+            for ref_idx in ref_indices:
+                windows = windows_cache[ref_idx].get(sec, [])
+                if windows:
+                    probs = _max_entail_probs_batch(nli, windows, my_facts, entail_idx)
+                    checked = np.ones(len(my_facts), dtype=bool)
+                else:
+                    probs = np.zeros(len(my_facts), dtype=np.float64)
+                    checked = np.zeros(len(my_facts), dtype=bool)
 
-                    if checked_anything:
-                        entail_probs.append(p)
+                low_mask = probs < SECTION_FALLBACK_THRESHOLD
+                if low_mask.any():
+                    # Same-section support is weak. Only for those weak facts,
+                    # search the other sections of the same reference note.
+                    weak_facts = [my_facts[i] for i in np.where(low_mask)[0]]
+                    for other_sec in SECTION_NAMES:
+                        if other_sec == sec:
+                            continue
+                        other_windows = windows_cache[ref_idx].get(other_sec, [])
+                        if not other_windows:
+                            continue
+                        checked[low_mask] = True
+                        other_probs = _max_entail_probs_batch(
+                            nli, other_windows, weak_facts, entail_idx
+                        )
+                        probs[low_mask] = np.maximum(probs[low_mask], other_probs)
 
-                if not entail_probs:
+                support_sum += probs
+                support_cnt += checked.astype(np.int32)
+
+            for local_idx, fact in enumerate(my_facts):
+                if support_cnt[local_idx] == 0:
                     uncertainty = 1.0
                 else:
-                    uncertainty = 1.0 - float(np.mean(entail_probs))
+                    uncertainty = 1.0 - float(support_sum[local_idx] / support_cnt[local_idx])
 
                 note_rows.append({
                     "fact_idx":    len(note_rows),
