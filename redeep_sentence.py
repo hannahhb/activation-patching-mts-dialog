@@ -1181,38 +1181,44 @@ def main() -> None:
 
             note_name = f"sample_{si:03d}_note_{k:02d}"
             csv_path  = sent_dir / f"{note_name}_sentences.csv"
+            note      = notes[k]
 
-            if not csv_path.exists():
-                print(f"[{note_name}] No sentences CSV — skip")
-                continue
+            # Word-level ECS/PKS (the granularity actually evaluated, see
+            # sec:redeep's Evaluation paragraph) is computed directly from the
+            # note's own token stream and does NOT depend on sentence-level
+            # LUQ scoring. A missing/empty sentences CSV therefore only means
+            # "no sentence-level LUQ evaluation for this note" -- it must not
+            # skip the note outright, or word-level caching silently loses
+            # notes for a dependency it never uses (verified: only ~60% of
+            # notes have a sentences CSV across splits, so skipping here was
+            # dropping ~40% of notes from the word-level analysis).
+            sentences: List[str] = []
+            luq_scores = np.array([], dtype=np.float64)
+            sent_idx   = np.array([], dtype=np.int64)
 
-            sent_df = pd.read_csv(csv_path)
-            if sent_df.empty:
-                print(f"[{note_name}] Empty sentences CSV — skip")
-                continue
-
-            note       = notes[k]
-            sentences  = sent_df["sentence"].tolist()
-            col = args.label_col if args.label_col in sent_df.columns else "uncertainty"
-            if col not in sent_df.columns:
-                print(f"[{note_name}] column '{col}' not in sentences CSV — skip")
-                continue
-            luq_scores = sent_df[col].values.astype(np.float64)
-            sent_idx   = (sent_df["sentence_idx"].values
-                          if "sentence_idx" in sent_df.columns
-                          else np.arange(len(sentences)))
-
-            keep       = [not is_soap_header(s) for s in sentences]
-            sentences  = [s for s, m in zip(sentences, keep) if m]
-            luq_scores = luq_scores[keep]
-            sent_idx   = sent_idx[keep]
-
-            if not sentences:
-                print(f"[{note_name}] No content sentences after header filter — skip")
-                continue
+            if csv_path.exists():
+                sent_df = pd.read_csv(csv_path)
+                if not sent_df.empty:
+                    col = args.label_col if args.label_col in sent_df.columns else "uncertainty"
+                    if col not in sent_df.columns:
+                        print(f"[{note_name}] column '{col}' not in sentences CSV — skip")
+                        continue
+                    sentences_raw = sent_df["sentence"].tolist()
+                    luq_raw       = sent_df[col].values.astype(np.float64)
+                    idx_raw       = (sent_df["sentence_idx"].values
+                                     if "sentence_idx" in sent_df.columns
+                                     else np.arange(len(sentences_raw)))
+                    keep       = [not is_soap_header(s) for s in sentences_raw]
+                    sentences  = [s for s, m in zip(sentences_raw, keep) if m]
+                    luq_scores = luq_raw[keep]
+                    sent_idx   = idx_raw[keep]
 
             n_sents = len(sentences)
-            print(f"[{note_name}]  {n_sents} sentences …", end="  ", flush=True)
+            if n_sents:
+                print(f"[{note_name}]  {n_sents} sentences …", end="  ", flush=True)
+            else:
+                print(f"[{note_name}]  no sentence-level LUQ data, word-level only …",
+                      end="  ", flush=True)
 
             try:
                 tokens, transcript_len = tokenize_prompt_and_note(
@@ -1225,13 +1231,20 @@ def main() -> None:
             note_len = tokens.shape[1] - transcript_len
             print(f"T={transcript_len} N={note_len}", end="  ", flush=True)
 
-            try:
-                spans, n_fail, n_fuzzy = find_sentence_token_spans(
-                    model, tokens, transcript_len, sentences
-                )
-            except Exception as exc:
-                print(f"spans ERROR: {exc}")
-                continue
+            if sentences:
+                try:
+                    spans, n_fail, n_fuzzy = find_sentence_token_spans(
+                        model, tokens, transcript_len, sentences
+                    )
+                except Exception as exc:
+                    print(f"spans ERROR: {exc}")
+                    continue
+            else:
+                # No sentence-level LUQ data for this note -- skip the
+                # (otherwise unconditional) per-token cumulative-decode pass
+                # find_sentence_token_spans does, since there is nothing to
+                # locate. Word-level computation below is unaffected.
+                spans, n_fail, n_fuzzy = [], 0, 0
 
             # Token-accounting guard: a sentence that cannot be located gets a
             # degenerate 1-token span, so its ECS/PKS are meaningless. Warn on any
