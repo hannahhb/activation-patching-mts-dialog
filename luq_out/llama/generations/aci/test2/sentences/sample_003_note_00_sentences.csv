@@ -1,0 +1,23 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 57-year-old male, presents with a couple of weeks of shortness of breath, which occurs when he wakes up and persists throughout the day.",0.25
+2,"He reports coughing up a significant amount of blood, approximately 3-4 cups per day, for the past three weeks.",0.0
+3,"He has a history of diabetes, hypertension, and asthma.",0.0
+4,He has been taking metformin 500mg twice a day for his diabetes and Norvasc for his hypertension.,0.0
+5,"He has also been experiencing knee pain for an extended period, but it is not related to his current symptoms.",1.0
+6,"Review of systems: The patient reports coughing up blood, but denies any fever, bruising, bleeding, or swelling.",0.75
+7,"Current medications: Metformin 500mg twice a day for diabetes, Norvasc (dosage not specified) for hypertension.",0.0
+8,Objective:,0.0
+9,"Vital signs: Blood pressure 120/70, pulse 94% oxygen saturation.",0.75
+10,"Physical exam: No JVD, no carotid bruits, rails and rhonchi on the right lung, diminished breath sounds on the right side, 2/6 systolic ejection murmur, 1+ nonpitting edema on both lower extremities.",0.0
+11,Test Results: [NOT MENTIONED],0.0
+12,Assessment / Problem List:,0.0
+13,"Assessment: The patient presents with acute shortness of breath, coughing up significant amounts of blood, and a history of diabetes and hypertension.",1.0
+14,Problem list: Pneumonia suspected; Uncontrolled diabetes; Hypertension.,1.0
+15,Plan:,0.0
+16,"For the shortness of breath and coughing up blood, I will refer the patient to the emergency department for a chest x-ray, CT scan, and blood work to evaluate for a potential blood clot or other underlying cause.",0.5
+17,I will hold off on prescribing Norvasc for the hypertension until the acute episode is under control.,0.0
+18,I will also order a hemoglobin A1c to assess the patient's diabetes control.,0.25
+19,"For the diabetes, I will increase the patient's metformin dose to 750mg twice a day to improve glycemic control.",0.0
+20,I will schedule a follow-up appointment in three weeks to discuss the patient's diabetes treatment plan.,0.5
+21,Follow-up: The patient will follow up in three weeks to discuss diabetes treatment plan.,0.25

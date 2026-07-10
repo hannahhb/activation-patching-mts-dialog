@@ -1,0 +1,30 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 60-year-old right-handed male, presents with numbness and tingling in both hands, which started a few weeks after a car accident in December where he broke his wrists.",0.0
+2,He reports that the symptoms have worsened over the last month.,0.0
+3,He also experiences mild stiffness in his neck and has a history of a head contusion from the accident.,0.75
+4,"The patient describes the numbness and tingling as starting from the middle and ring finger on the right hand and from the pinky and ring finger on the left hand, extending up to the forearm.",0.75
+5,"He reports that the symptoms are mainly sore, with occasional throbbing and weakness, particularly when using his hands.",0.25
+6,"The tingling is more pronounced when his hands hurt, and he describes it as dull when it subsides.",1.0
+7,The symptoms are more noticeable at night and come and go throughout the day.,0.0
+8,"Past medical history: The patient has a history of hypertension, for which he is taking Coreg, and anxiety, for which he is taking Lexapro.",0.0
+9,"He had prediabetes, which he controlled by changing his diet.",0.0
+10,He has gout and muscle pain.,0.0
+11,He denies any history of thyroid issues.,0.25
+12,"Review of systems: The patient reports fatigue, weight gain, excessive appetite, bloating, shortness of breath, leg swelling, always feeling hungry, nailbed changes, dryness, itching, and muscle pain.",0.25
+13,The remainder of the review of systems is negative.,0.75
+14,"Current medications: I prescribed Coreg for hypertension, Lexapro for anxiety, and nerve pain medicine (dose and frequency not specified).",1.0
+15,Objective:,0.0
+16,Vital signs: [NOT MENTIONED],0.0
+17,Physical exam: The patient has diminished pinprick sensation in the third and fourth fingers on the right hand and in the fourth and fifth fingers on the left hand.,0.0
+18,Reflexes are 1+ and symmetric.,0.0
+19,Tinel's sign is positive at both wrists and elbows.,0.0
+20,Test Results: [NOT MENTIONED],0.0
+21,Assessment / Problem List:,0.0
+22,"Assessment: The patient has bilateral carpal tunnel syndrome, potentially caused by his past trauma.",0.5
+23,Problem list: Carpal tunnel syndrome; bilateral; Carpal tunnel syndrome; confirmed.,1.0
+24,Plan:,0.0
+25,I want to determine exactly where the nerve irritation is coming from by scheduling the patient for an EMG test.,0.0
+26,"After the tests are complete, the patient can return for a follow-up visit.",0.25
+27,"If symptoms persist, we may consider a referral to our hand clinic for injections or carpal tunnel release surgery or refer the patient to an orthopedist for the same treatment.",0.0
+28,Follow-up: The patient will return for a follow-up visit after the EMG test is complete.,0.0

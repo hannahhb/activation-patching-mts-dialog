@@ -1,29 +1,29 @@
 sentence_idx,sentence,uncertainty
-0,Subjective:,0.5
-1,"HPI: The patient, a 25-year-old male, presents with a 3-week history of severe, squeezing pain on the right-hand side of his belly, located underneath his ribs.",0.3846
-2,"He describes the pain as an 8 out of 10 in severity and notes that it comes and goes, often accompanied by nausea and vomiting.",0.0173
-3,"The pain is exacerbated by eating, particularly fatty foods, which is a staple of his current keto diet.",0.5695
-4,He has lost 25 pounds over the last 3 months since starting the diet and has seen improvement in his blood sugar control.,0.2166
-5,"His past medical history is significant for type 2 diabetes, which he has managed with diet and exercise.",0.0599
-6,"He has a family history of gallbladder disease, with both parents having had their gallbladders removed.",0.0049
-7,"Review of systems: The patient reports occasional low-grade fevers and nausea, but no vomiting.",0.2475
-8,He denies any fever at the time of the visit.,0.7673
-9,Current medications: [NOT MENTIONED],0.5
-10,Objective:,0.5
-11,"Vital signs: Blood pressure was 128/88, respiratory rate was 16, pulse rate was 68, and oxygen saturation on room air was 99%.",0.0029
-12,"Physical exam: The patient has a regular heart rhythm and no murmurs, clicks, or rubs.",0.7548
+0,Subjective:,0.0
+1,"HPI: The patient, a 25-year-old male, presents with a 3-week history of severe, squeezing pain on the right-hand side of his belly, located underneath his ribs.",0.25
+2,"He describes the pain as an 8 out of 10 in severity and notes that it comes and goes, often accompanied by nausea and vomiting.",0.5
+3,"The pain is exacerbated by eating, particularly fatty foods, which is a staple of his current keto diet.",0.5
+4,He has lost 25 pounds over the last 3 months since starting the diet and has seen improvement in his blood sugar control.,0.75
+5,"His past medical history is significant for type 2 diabetes, which he has managed with diet and exercise.",0.0
+6,"He has a family history of gallbladder disease, with both parents having had their gallbladders removed.",0.0
+7,"Review of systems: The patient reports occasional low-grade fevers and nausea, but no vomiting.",0.5
+8,He denies any fever at the time of the visit.,0.75
+9,Current medications: [NOT MENTIONED],0.0
+10,Objective:,0.0
+11,"Vital signs: Blood pressure was 128/88, respiratory rate was 16, pulse rate was 68, and oxygen saturation on room air was 99%.",0.0
+12,"Physical exam: The patient has a regular heart rhythm and no murmurs, clicks, or rubs.",1.0
 13,The lungs are clear and equal bilaterally.,0.75
-14,"The abdomen is soft and nondistended, with positive bowel sounds.",0.0008
-15,"There is slight guarding in the right upper quadrant, but no rebound tenderness.",0.2329
-16,"The patient experiences pain when pressure is applied to the right-hand side of his abdomen, consistent with Murphy's sign.",0.0996
-17,"Test Results: Abdominal ultrasound shows multiple gallstones in the gallbladder, with mild thickening of the gallbladder wall.",0.0012
-18,The common bile duct size is within normal limits at 4.1 mm.,0.0021
-19,Assessment / Problem List:,0.5
-20,"Assessment: The patient has mild cholecystitis with gallstones, with a possible obstruction not appreciated.",0.2664
-21,Problem list: Cholecystitis; Gallstones; Type 2 diabetes (status: confirmed); Family history of gallbladder disease.,0.4552
-22,Plan:,0.5
-23,I prescribed [NOT MENTIONED] for [NOT MENTIONED].,0.4278
-24,"I recommended a laparoscopic cholecystectomy to remove the gallbladder, with a surgery time of about an hour to an hour and a half.",0.1072
-25,The patient will spend the night in the hospital for monitoring post-procedure and will be advised to avoid high-fat foods and eat high-fiber foods after surgery.,0.072
-26,The patient will be encouraged to get up and move around on solid ground within a day or two after surgery.,0.7323
-27,"Follow-up: I will see the patient in a week to monitor his progress and release him to return to normal activities, including hiking and photography.",0.233
+14,"The abdomen is soft and nondistended, with positive bowel sounds.",0.0
+15,"There is slight guarding in the right upper quadrant, but no rebound tenderness.",0.25
+16,"The patient experiences pain when pressure is applied to the right-hand side of his abdomen, consistent with Murphy's sign.",0.0
+17,"Test Results: Abdominal ultrasound shows multiple gallstones in the gallbladder, with mild thickening of the gallbladder wall.",0.0
+18,The common bile duct size is within normal limits at 4.1 mm.,0.0
+19,Assessment / Problem List:,0.0
+20,"Assessment: The patient has mild cholecystitis with gallstones, with a possible obstruction not appreciated.",1.0
+21,Problem list: Cholecystitis; Gallstones; Type 2 diabetes (status: confirmed); Family history of gallbladder disease.,0.75
+22,Plan:,0.0
+23,I prescribed [NOT MENTIONED] for [NOT MENTIONED].,0.75
+24,"I recommended a laparoscopic cholecystectomy to remove the gallbladder, with a surgery time of about an hour to an hour and a half.",0.75
+25,The patient will spend the night in the hospital for monitoring post-procedure and will be advised to avoid high-fat foods and eat high-fiber foods after surgery.,0.25
+26,The patient will be encouraged to get up and move around on solid ground within a day or two after surgery.,0.75
+27,"Follow-up: I will see the patient in a week to monitor his progress and release him to return to normal activities, including hiking and photography.",0.75

@@ -1,0 +1,71 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Maria Martin, a 76-year-old female, presents for follow-up.",0.5
+2,"She reports being ""pretty good"" despite having poorly controlled sugars, as evidenced by an A1c of 9.9.",0.75
+3,"She has not increased her glimepiride dose as previously instructed, and her current dose is 2 mg twice a day.",0.25
+4,"She has been trying to eat healthier, but not successfully, as she still consumes wheat bread and occasionally has peanut butter sandwiches.",1.0
+5,She has not made any significant changes to her diet.,0.75
+6,"She reports being up to date on her eye exams, having recently obtained new glasses and undergoing cataract surgery.",0.75
+7,"Her high blood pressure has been stable, with a recent reading of 116/ unknown.",0.75
+8,"She is currently on a combination of medications, including metoprolol, lisinopril with hydrochlorothiazide, and amlodipine.",0.0
+9,"She reports tolerating atorvastatin, but experiencing peripheral neuropathy in her feet and legs, as well as pain in her hips and upper legs.",1.0
+10,She is a smoker and has not attempted to quit.,0.25
+11,"She denies headaches, dizziness, shortness of breath, or chest pains.",0.0
+12,She reports occasional difficulty urinating and occasional nocturia.,0.75
+13,Past medical history:,0.0
+14,Diabetes mellitus type 2,0.0
+15,Hypertension,0.0
+16,Hyperlipidemia,0.0
+17,Peripheral neuropathy,0.0
+18,Cataracts,0.0
+19,Vascular disease in the legs,0.0
+20,Review of systems:,0.0
+21,Denies headaches or dizziness,0.0
+22,Denies shortness of breath or coughing,0.0
+23,Denies chest pains or pressure or tightness,0.0
+24,Denies nausea or vomiting,0.25
+25,Denies GI symptoms,0.25
+26,Denies fever or chills,0.5
+27,Denies coughing,0.25
+28,Reports occasional difficulty urinating,0.25
+29,Reports occasional nocturia,0.75
+30,Current medications:,0.0
+31,Glimepiride 2 mg twice a day for diabetes,0.0
+32,Metformin (dose not specified) for diabetes,0.25
+33,Metoprolol 50 mg once a day for hypertension,0.0
+34,Lisinopril with hydrochlorothiazide 20/25 mg once a day for hypertension,0.0
+35,Amlodipine 10 mg once a day for hypertension,0.0
+36,Atorvastatin (dose not specified) for hyperlipidemia,0.0
+37,"Aspirin (not mentioned in the transcript, but commonly used for vascular disease)",1.0
+38,Objective:,0.0
+39,Vital signs:,0.0
+40,Blood pressure 140/60 mmHg,0.0
+41,Pulse rate (not specified),0.0
+42,Oxygen saturation (not specified),0.5
+43,Temperature (not specified),0.0
+44,Physical exam:,0.25
+45,Carotids are normal,0.0
+46,Pulses are normal,0.25
+47,"Heart exam: regular rhythm, normal rate, S1 and S2 are present, no murmurs",1.0
+48,Lungs are clear,0.25
+49,Extremities are without edema,0.0
+50,Pulses are palpable on the dorsalis pedis and posterior tibial,0.0
+51,Thickened nails,0.0
+52,"Mildly dry skin, no skin breakdown",0.0
+53,Mildly decreased sensation in the tips of the first and second toes,0.0
+54,Test Results:,0.0
+55,A1c 9.9 (from previous visit),1.0
+56,Blood pressure 116/ unknown (from previous visit),1.0
+57,Assessment / Problem List:,0.0
+58,"Assessment: The patient has poorly controlled diabetes, hypertension, and hyperlipidemia, with evidence of peripheral neuropathy and vascular disease in the legs.",0.0
+59,Problem list: Diabetes mellitus type 2; hypertension; hyperlipidemia; peripheral neuropathy; vascular disease in the legs; cataracts.,1.0
+60,Plan:,0.0
+61,I increased the patient's glimepiride dose to 4 mg twice a day and instructed her to take two of the 2 mg pills until she receives the new prescription.,0.25
+62,I also instructed her to continue metformin.,0.0
+63,"I advised her to watch for signs of low blood sugar, including weakness, shakiness, and sweating.",0.75
+64,"I wrote a new prescription for 4 mg glimepiride once a day, replacing the previous 2 mg dose.",1.0
+65,"I continued the patient on her current medications, including metoprolol, lisinopril with hydrochlorothiazide, and amlodipine.",1.0
+66,I also instructed her to continue atorvastatin.,0.25
+67,"I will recheck her blood work, including kidney function, and see her back in 4 months.",0.5
+68,Follow-up:,0.0
+69,The patient will be seen in 4 months to recheck her blood work and medications.,1.0

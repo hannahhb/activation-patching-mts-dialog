@@ -1,0 +1,71 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Mrs. King.,0.5
+1,subjective,The patient is a female.,0.0
+2,subjective,The patient is 37 years old.,1.0
+3,subjective,The patient's chief complaint is acid reflux.,0.0
+4,subjective,The patient has a history of gastroesophageal reflux disease (GERD).,0.0
+5,subjective,The patient experiences a burning sensation in her chest.,0.0
+6,subjective,The patient experiences a burning sensation in her throat.,0.25
+7,subjective,The patient's symptoms have worsened over the past few years.,0.0
+8,subjective,The patient has been taking omeprazole.,0.0
+9,subjective,The omeprazole dose is 40 mg.,0.0
+10,subjective,Omeprazole is taken twice daily.,0.0
+11,subjective,The patient has been taking omeprazole for approximately one year.,0.75
+12,subjective,The patient's symptoms are poorly controlled.,0.0
+13,subjective,The patient identifies spicy foods as trigger foods.,0.0
+14,subjective,The patient identifies carbonated beverages as trigger foods.,0.0
+15,subjective,The patient identifies citrus as trigger foods.,0.0
+16,subjective,The patient identifies tomato-based foods as trigger foods.,0.0
+17,subjective,The patient has not completely avoided trigger foods.,0.0
+18,subjective,The patient reports high stress levels.,0.5
+19,subjective,The patient reports anxiety.,0.0
+20,subjective,The patient believes stress exacerbates her symptoms.,0.5
+21,subjective,The patient believes anxiety exacerbates her symptoms.,0.5
+22,subjective,The patient has a history of anxiety.,0.0
+23,subjective,The patient has a history of seasonal allergies.,0.0
+24,subjective,The patient's grandmother had esophageal cancer.,0.75
+25,subjective,The patient's grandmother had esophageal cancer on her mother's side.,0.75
+26,subjective,The patient has not had an upper endoscopy in the past 10 years.,1.0
+27,subjective,The patient denied abdominal pain.,0.0
+28,subjective,The patient denied nausea.,0.0
+29,subjective,The patient denied vomiting.,0.0
+30,subjective,The patient denied changes in bowel movements.,0.0
+31,subjective,The patient denied constipation.,0.0
+32,subjective,The patient denied diarrhea.,0.0
+33,subjective,The patient denied rectal bleeding.,0.25
+34,subjective,The doctor prescribed omeprazole.,0.0
+35,subjective,The prescribed omeprazole dose is 40 mg.,0.0
+36,subjective,The prescribed omeprazole is taken twice daily.,0.0
+37,subjective,The prescribed omeprazole is for GERD.,0.0
+38,objective,The patient had a physical exam.,0.0
+39,objective,The physical exam was normal.,0.75
+40,objective,The patient has an abdominal surgical scar.,0.0
+41,objective,The abdominal surgical scar is well-healed.,0.0
+42,objective,The patient had surgery at one month old.,0.75
+43,objective,The patient's surgery was due to twisted intestines.,0.75
+44,objective,The surgery resulted in an abdominal scar.,0.0
+45,assessment,The patient has gastroesophageal reflux disease (GERD).,0.75
+46,assessment,The gastroesophageal reflux disease (GERD) has a functional etiology.,0.5
+47,assessment,The patient's diagnosis is likely.,0.0
+48,plan,The doctor prescribed Nexium.,0.0
+49,plan,The Nexium dose is 40 mg.,0.0
+50,plan,Nexium is taken twice daily.,0.0
+51,plan,Nexium is prescribed to replace omeprazole.,0.25
+52,plan,The patient is currently taking omeprazole.,0.75
+53,plan,The doctor recommends an esophagogastroduodenoscopy (EGD).,0.0
+54,plan,The EGD is to look for potential causes of GERD.,0.0
+55,plan,The EGD is to look for ulcers.,0.25
+56,plan,The EGD is to look for precancerous conditions.,0.0
+57,plan,The EGD is to look for cancerous conditions.,0.0
+58,plan,The patient has GERD.,0.0
+59,plan,The doctor will discuss the EGD results in a follow-up appointment.,0.0
+60,plan,The doctor will discuss the patient's response to dietary changes in a follow-up appointment.,0.25
+61,plan,The doctor will discuss the patient's response to stress changes in a follow-up appointment.,0.5
+62,plan,The doctor will discuss the patient's response to the medication switch in a follow-up appointment.,0.5
+63,plan,The doctor will consider a trial of Protonix.,0.75
+64,plan,The doctor will obtain a pH impedance study if symptoms persist.,0.75
+65,plan,The patient will undergo a trial of Nexium.,0.0
+66,plan,The EGD procedure will be scheduled today.,1.0
+67,plan,The patient will follow up with the doctor in the office.,0.0
+68,plan,The follow-up appointment is to discuss the EGD results.,0.0
+69,plan,The follow-up appointment is to discuss the patient's progress.,0.25

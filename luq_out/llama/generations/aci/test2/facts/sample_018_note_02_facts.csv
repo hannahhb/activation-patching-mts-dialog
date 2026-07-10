@@ -1,0 +1,72 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a female.,0.0
+1,subjective,The patient is 53 years old.,0.0
+2,subjective,The patient presents with chest pain.,0.0
+3,subjective,The chest pain has been present for 3 months.,0.0
+4,subjective,The chest pain occurs when walking.,0.0
+5,subjective,The chest pain resolves when resting.,0.5
+6,subjective,The patient describes the chest pain as dull.,0.0
+7,subjective,The patient describes the chest pain as pressure-like.,0.0
+8,subjective,The chest pain does not radiate.,0.75
+9,subjective,The chest pain is not exacerbated by specific activities.,0.75
+10,subjective,The patient denied shortness of breath.,0.0
+11,subjective,The patient denied sweating.,0.25
+12,subjective,The patient denied clamminess.,0.25
+13,subjective,The patient has a past medical history of diabetes.,0.0
+14,subjective,The patient has a past medical history of high blood pressure.,0.0
+15,subjective,The patient's previous hemoglobin A1c was 7.0%.,1.0
+16,subjective,The patient has a family history of heart disease.,0.25
+17,subjective,The patient is taking metformin.,0.0
+18,subjective,The metformin dose is 500mg.,0.0
+19,subjective,Metformin is taken twice daily.,0.0
+20,subjective,The patient is addicted to diet soda.,1.0
+21,subjective,The patient has been unable to exercise due to chest pain.,1.0
+22,subjective,The patient has an upcoming appointment with ophthalmology.,1.0
+23,subjective,The appointment with ophthalmology is in two weeks.,1.0
+24,subjective,The appointment with ophthalmology is for diabetic retinopathy.,1.0
+25,subjective,The patient denied nausea related to her diabetes or medications.,0.75
+26,subjective,The patient denied vomiting related to her diabetes or medications.,0.75
+27,subjective,The patient denied diarrhea related to her diabetes or medications.,0.75
+28,subjective,The patient has a trend of high blood pressure in her chart.,1.0
+29,subjective,The patient has not been diagnosed with high blood pressure.,1.0
+30,subjective,The patient has not been treated for high blood pressure.,0.5
+31,objective,The patient's lower legs have 1+ non-pitting edema.,0.0
+32,objective,The patient's ankles have 1+ non-pitting edema.,0.0
+33,objective,The heart exam reveals a 2/6 systolic ejection murmur.,0.25
+34,objective,The lung exam is normal.,0.5
+35,objective,The abdominal exam is normal.,0.5
+36,objective,The EKG is normal.,0.0
+37,objective,The EKG shows no signs of a heart attack.,0.0
+38,assessment,The chest pain has a 3-month history.,0.75
+39,assessment,The chest pain may be related to suspected high blood pressure.,0.25
+40,assessment,The chest pain may be related to diabetes.,0.25
+41,assessment,The patient has suspected high blood pressure.,0.25
+42,assessment,The patient has diabetes mellitus.,0.0
+43,assessment,The patient has unstable angina.,1.0
+44,assessment,The patient has a systolic ejection murmur.,1.0
+45,assessment,The patient has lower extremity edema.,0.75
+46,plan,The doctor prescribed aspirin.,0.0
+47,plan,The aspirin dose is 81mg.,0.0
+48,plan,Aspirin is taken daily.,0.0
+49,plan,Aspirin is prescribed for chest pain.,0.0
+50,plan,The doctor prescribed nitroglycerin.,0.0
+51,plan,The nitroglycerin dose is up to 3 pills.,0.5
+52,plan,Nitroglycerin is taken every 5 minutes.,0.5
+53,plan,Nitroglycerin is prescribed for chest pain.,0.0
+54,plan,The patient will be referred to cardiology.,0.0
+55,plan,The purpose of the cardiology referral is for further evaluation.,0.0
+56,plan,The purpose of the cardiology referral is for a stress test.,0.0
+57,plan,The doctor prescribed metformin.,0.25
+58,plan,A hemoglobin A1c test will be ordered.,0.25
+59,plan,The hemoglobin A1c test will be ordered in 2 weeks.,1.0
+60,plan,The doctor prescribed hydrochlorothiazide.,0.25
+61,plan,Hydrochlorothiazide is prescribed for high blood pressure.,0.25
+62,plan,The patient will use a blood pressure cuff at home.,0.0
+63,plan,The patient will enter her blood pressure readings in her chart.,0.0
+64,plan,The patient will be seen in 2 weeks.,0.0
+65,plan,The purpose of the follow-up visit is to monitor chest pain.,1.0
+66,plan,The purpose of the follow-up visit is to monitor diabetes.,0.75
+67,plan,The purpose of the follow-up visit is to monitor high blood pressure.,0.5
+68,plan,The patient has chest pain.,0.0
+69,plan,The patient has diabetes.,0.25
+70,plan,The patient has high blood pressure.,0.25

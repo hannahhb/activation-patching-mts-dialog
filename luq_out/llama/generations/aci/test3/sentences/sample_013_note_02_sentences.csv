@@ -1,0 +1,36 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 74-year-old teacher, presented with a cough that started approximately one week ago, with worsening symptoms over the last two days.",0.0
+2,The cough is productive of yellow sputum.,0.0
+3,The patient reports feeling warm but denies fever.,1.0
+4,He also reports some general achiness and a little bit of pressure in his sinuses.,0.75
+5,"He denies shortness of breath, runny nose, sore throat, or sinus pain.",0.5
+6,"He reports a fall down the stairs this morning, injuring his right knee.",1.0
+7,He has a history of hypertension and diabetes.,0.0
+8,Past medical history: The patient has a history of hypertension and diabetes.,0.0
+9,"He is currently taking lisinopril 20mg daily and metformin, but reports not taking his medications as directed.",0.75
+10,"He denies smoking, alcohol, or drug use.",1.0
+11,"Review of systems: The patient reports a cough, productive of yellow sputum, and some general achiness.",1.0
+12,"He denies fever, chills, shortness of breath, runny nose, sore throat, or sinus pain.",0.5
+13,"Current medications: Lisinopril 20mg daily; metformin (dose and frequency not specified, but patient reports taking it twice a day).",0.5
+14,Objective:,0.0
+15,"Vital signs: The patient's temperature is 98.4°F, blood pressure is 125/62, heart rate is in the 80s, and oxygen saturation is 97% on room air.",0.0
+16,Physical exam: The patient has pain to palpation of the bilateral maxillary sinuses on facial examination.,0.0
+17,The nasal exam reveals erythema and edema of the nasal turbinates bilaterally with associated yellow discharge.,0.0
+18,The throat exam shows a midline uvula with no erythema or edema or exudate in the peritonsillar space.,1.0
+19,The neck examination reveals bilateral cervical lymphadenopathy.,0.5
+20,The lung exam reveals coarse rhonchi present bilaterally that clears with cough.,0.0
+21,The heart exam shows a regular rate and rhythm with no murmur.,1.0
+22,"The right knee exam reveals pain to palpation, decreased flexion and extension, ecchymosis to the right medial knee, and no evidence of an effusion.",0.25
+23,Test Results: [NOT MENTIONED],0.0
+24,Assessment / Problem List:,0.0
+25,"Assessment: The patient has a viral syndrome with mild bronchitis, a right medial collateral ligament strain, hypertension, and uncontrolled diabetes.",0.25
+26,Problem list: Bronchitis; right medial collateral ligament strain; hypertension; diabetes; unknown.,0.25
+27,Plan:,0.0
+28,I prescribed guaifenesin 600mg twice daily to help cough up phlegm.,0.0
+29,I prescribed meloxicam 15mg once daily for the right medial collateral ligament strain.,1.0
+30,I ordered a right knee x-ray to rule out any bone injury.,0.0
+31,I ordered a lipid panel to ensure everything is okay with the patient's lipid profile.,0.25
+32,I ordered a hemoglobin A1c to ensure the patient's diabetes is under control.,0.0
+33,I recommended the patient monitor their sugar intake and report their blood sugars through the patient portal.,0.5
+34,Follow-up: I will be in touch with the patient with the results of the ordered tests.,0.5

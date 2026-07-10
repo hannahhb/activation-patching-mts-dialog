@@ -1,0 +1,23 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: Mr. Roberts is a 49-year-old male with a history of hypertension and palpitations, who was recently seen in the emergency room with high blood pressure and palpitations.",0.5
+2,"He attributes the episode to a panic attack, possibly triggered by consuming a few cups of coffee and not having breakfast.",0.25
+3,"He has a family history of hypertension and has been on a new medication, Benicar HCT (hydrochlorothiazide), for about a month, in addition to Amlodipine 10 mg daily.",0.25
+4,He reports checking his blood pressure daily and has been seeing readings of 146/155.,0.5
+5,He has been trying to reduce his salt intake and is doing some exercise by walking on a treadmill.,0.5
+6,He denies any pain or discomfort during the physical examination.,0.75
+7,Past medical history: He has hypertension and a family history of hypertension.,0.0
+8,Review of systems: [NOT MENTIONED],0.75
+9,Current medications: Benicar HCT (hydrochlorothiazide) [DOSE NOT MENTIONED] [FREQUENCY NOT MENTIONED] [INDICATION NOT MENTIONED] Amlodipine 10 mg daily.,0.0
+10,Objective:,0.0
+11,"Vital signs: Blood pressure 146/155 mmHg, pulse rate [NOT MENTIONED], oxygen saturation [NOT MENTIONED], temperature [NOT MENTIONED].",0.25
+12,"Physical exam: His heart and lungs sound good, no swelling in the ankles and feet, no pain or discomfort during the examination.",1.0
+13,"Test Results: Potassium level 4.0, last checked 1 week ago. [NO OTHER TEST RESULTS MENTIONED]",0.75
+14,Assessment / Problem List:,0.0
+15,"Assessment: Mr. Roberts has resistant hypertension, with a blood pressure that is not responding to maximum dose of three medications.",0.5
+16,Problem list: Hypertension; Resistant Hypertension; [NO OTHER PROBLEMS MENTIONED],0.75
+17,Plan:,0.0
+18,"I have added Spironolactone to his regimen to address the potential secondary cause of his hypertension, specifically hyperaldosterone.",1.0
+19,"I will monitor his potassium and sodium levels closely, and schedule a follow-up in 2 weeks for a basic metabolic panel and blood pressure check.",0.0
+20,"If the new medication does not work, the next step would be to refer him to the Resistant Hypertension Clinic for further evaluation and potential procedures, such as renal denervation.",0.5
+21,Follow-up: We will see Mr. Roberts in 2 weeks to check his blood pressure and electrolytes.,0.25

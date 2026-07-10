@@ -1,0 +1,73 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Stephanie Morales.,0.6667
+1,subjective,The patient is a 36-year-old female.,0.0
+2,subjective,The patient presents with a complaint of ankle pain.,0.0
+3,subjective,The patient slipped and twisted her left ankle two days ago.,0.0
+4,subjective,The patient fell on ice.,0.3333
+5,subjective,The patient required assistance to get up after falling.,0.6667
+6,subjective,The patient experienced significant soreness after the fall.,0.3333
+7,subjective,The patient experienced swelling after the fall.,0.0
+8,subjective,The patient experienced pain after the fall.,0.0
+9,subjective,The pain is localized to the outside of her ankle.,0.1111
+10,subjective,The patient denied pain in her calf.,0.1111
+11,subjective,The patient denied pain in her lower leg.,0.1111
+12,subjective,The patient denied pain in her knee.,0.1111
+13,subjective,The patient denied tenderness in her calf.,0.6667
+14,subjective,The patient denied tenderness in her lower leg.,0.5556
+15,subjective,The patient denied tenderness in her knee.,0.4444
+16,subjective,The patient has tried ibuprofen for pain relief.,0.0
+17,subjective,The patient has tried ice for pain relief.,0.0
+18,subjective,The patient has tried elevation for pain relief.,0.0
+19,subjective,"The patient experienced only a little relief from ibuprofen, ice, and elevation.",0.3333
+20,subjective,The patient has a history of diabetes.,0.0
+21,subjective,The patient has a history of high blood pressure.,0.0
+22,subjective,The patient is taking metformin.,0.0
+23,subjective,The metformin dose is not specified.,0.0
+24,subjective,The metformin frequency is not specified.,0.0
+25,subjective,Metformin is prescribed for diabetes.,0.0
+26,subjective,The patient is taking norvasc.,0.0
+27,subjective,The norvasc dose is not specified.,0.0
+28,subjective,The norvasc frequency is not specified.,0.0
+29,subjective,Norvasc is prescribed for high blood pressure.,0.0
+30,objective,The patient's neck exam is normal.,0.1111
+31,objective,The patient's lung exam is normal.,0.1111
+32,objective,The patient's heart exam is normal.,0.4444
+33,objective,The patient has a systolic ejection murmur.,0.1111
+34,objective,The systolic ejection murmur is 2/6.,0.1111
+35,objective,The systolic ejection murmur has been unchanged from previous exams.,0.2222
+36,objective,The patient's belly exam is normal.,0.1111
+37,objective,The patient has tenderness over the lateral malleolus.,0.0
+38,objective,The patient has tenderness over the fifth metatarsal.,0.0
+39,objective,There is swelling of the ankle.,0.0
+40,objective,There is redness of the ankle.,0.0
+41,objective,There is pain with valgus stressing of the ankle.,0.1111
+42,objective,The patient has normal sensation in her ankle.,0.2222
+43,objective,The patient has normal pulses in her ankle.,0.2222
+44,assessment,The patient has an ankle sprain.,0.0
+45,assessment,The patient may have a fracture of the fifth metatarsal.,1.0
+46,assessment,There is tenderness over the fifth metatarsal.,1.0
+47,assessment,An x-ray is ordered to confirm the diagnosis.,0.7778
+48,assessment,The patient has diabetes.,0.0
+49,assessment,The patient has high blood pressure.,0.0
+50,plan,The doctor will order an x-ray of the ankle.,0.0
+51,plan,The x-ray is to confirm the diagnosis.,0.125
+52,plan,The patient will be put in an air splint.,0.375
+53,plan,The patient will be provided with crutches.,0.125
+54,plan,The crutches are until the x-ray results are available.,0.125
+55,plan,The doctor prescribed naprosyn.,0.0
+56,plan,The naprosyn dose is 500mg.,0.0
+57,plan,Naprosyn is taken twice a day.,0.0
+58,plan,Naprosyn is prescribed for pain control.,0.0
+59,plan,The patient was instructed to keep her ankle elevated.,0.125
+60,plan,The patient was instructed to apply ice.,0.125
+61,plan,The patient was instructed to avoid weightbearing.,0.0
+62,plan,The doctor will refer the patient to orthopedics if the x-ray shows a fracture.,0.25
+63,plan,The x-ray will show a fracture.,1.0
+64,plan,The doctor will contact the patient once the x-ray results are available.,0.75
+65,plan,The doctor will discuss the next steps with the patient.,0.0
+66,plan,The patient has an existing appointment with the ophthalmologist.,0.375
+67,plan,The appointment with the ophthalmologist is for a diabetes checkup.,1.0
+68,plan,The doctor will refill norvasc.,0.25
+69,plan,The doctor will order another hemoglobin A1c.,0.875
+70,plan,The hemoglobin A1c is to check the patient's blood sugar levels.,0.25
+71,plan,The patient has diabetes.,0.25

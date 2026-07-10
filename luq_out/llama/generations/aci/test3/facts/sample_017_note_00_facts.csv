@@ -1,0 +1,60 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 60-year-old male.,1.0
+1,subjective,The patient has a 3-4 month history of difficulty adjusting to dark environments.,0.0
+2,subjective,The patient has difficulty reading in dimly lit places.,0.25
+3,subjective,The patient has difficulty perceiving straight lines as wavy.,0.0
+4,subjective,The patient's symptoms have been worsening over the past few months.,0.25
+5,subjective,The patient has trouble with his vision when looking at his office paneling.,0.25
+6,subjective,The office paneling has dark grooves that appear wavy to the patient.,1.0
+7,subjective,The patient denied fever.,0.5
+8,subjective,The patient denied other symptoms.,0.25
+9,subjective,The patient smokes a pack of cigarettes a day.,0.0
+10,subjective,The patient has a history of smoking.,0.0
+11,subjective,The patient has tried to quit smoking through hypnosis.,0.5
+12,subjective,The patient has tried to quit smoking through lozenges.,0.5
+13,subjective,The patient has tried to quit smoking through chewing gum.,0.5
+14,subjective,The patient has a history of high blood pressure.,0.0
+15,subjective,The patient is not taking his blood pressure medication as prescribed.,0.0
+16,subjective,The patient has been to a restaurant recently.,0.25
+17,subjective,The patient dines out frequently with his wife.,0.5
+18,objective,The patient has posterior chamber intraocular lenses in both eyes.,0.0
+19,objective,The cornea is clear in both eyes.,0.0
+20,objective,The peak hole cup to disc ratio is 0.2 in the right eye.,0.25
+21,objective,The peak hole cup to disc ratio is 0.3 in the left eye.,0.25
+22,objective,The retina in the right eye is attached 360 degrees.,0.25
+23,objective,No holes or tears are noted in the right eye.,0.0
+24,objective,RPE changes are present in the fovea of the right eye.,0.25
+25,objective,Drusen are present in the macula of the right eye.,0.0
+26,objective,Retinal thickening is present in the right eye.,0.0
+27,objective,Subretinal fluid is present in the right eye.,0.0
+28,objective,Exudate accumulation is present in the right eye.,0.0
+29,objective,A hemorrhage is present in the right eye.,0.0
+30,objective,The cornea is clear in the left eye.,0.25
+31,objective,The retina in the left eye is attached appropriately.,0.5
+32,objective,No hemorrhage is noted in the left eye.,0.0
+33,objective,No subretinal fluid is noted in the left eye.,0.0
+34,objective,The OCT exam shows drusen deposits under the RPE.,0.75
+35,objective,The OCT exam shows subretinal fluid accumulation.,0.25
+36,objective,The OCT exam shows a choroidal neovascular membrane.,0.5
+37,objective,The fluorescein angiography reveals a focal area of leakage in the right eye.,0.25
+38,objective,The patient has neovascular age-related macular degeneration in the right eye.,0.0
+39,assessment,The patient has neovascular age-related macular degeneration.,0.0
+40,assessment,Neovascular age-related macular degeneration is also known as wet macular degeneration.,0.25
+41,assessment,Neovascular age-related macular degeneration is an advanced stage.,0.5
+42,assessment,The advanced stage of neovascular age-related macular degeneration typically leads to more severe vision loss.,0.25
+43,assessment,The patient has age-related macular degeneration.,0.0
+44,assessment,Age-related macular degeneration is suspected.,0.25
+45,assessment,The patient has high blood pressure.,0.5
+46,assessment,The patient's high blood pressure is not controlled.,1.0
+47,assessment,The patient is an active smoker.,0.5
+48,plan,The doctor prescribed Lucentis injections.,0.0
+49,plan,Lucentis injections are administered once a month.,0.0
+50,plan,Lucentis injections slow the progression of the disease.,0.0
+51,plan,The patient will receive the first Lucentis injection today.,0.0
+52,plan,The patient takes blood pressure medication.,0.3333
+53,plan,The patient's blood pressure medication should be taken as prescribed.,0.0
+54,plan,The patient should check his blood pressures on a regular basis.,0.3333
+55,plan,The nurse will prepare the patient for the Lucentis injection.,0.6667
+56,plan,A follow-up appointment is scheduled.,0.3333
+57,plan,The follow-up appointment is to monitor the patient's response to the treatment.,0.6667
+58,plan,The follow-up appointment is to administer subsequent Lucentis injections as needed.,1.0

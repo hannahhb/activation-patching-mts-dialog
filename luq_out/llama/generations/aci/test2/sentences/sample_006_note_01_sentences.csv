@@ -1,0 +1,28 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 30-year-old male, presents with a one-week history of persistent low back pain, which started after a twisting motion on his left side.",1.0
+2,He reports that the pain initially went away but returned a few hours later.,0.5
+3,"The pain is located in the middle to lower back, with occasional radiation to the left side, and is exacerbated by sudden movements to the left.",0.5
+4,"He denies any fever, chills, or recent trauma.",1.0
+5,He has a history of diabetes and takes metformin twice a day.,0.0
+6,He has been exercising and trying to control his sugar levels.,0.5
+7,Past medical history: The patient has a history of diabetes.,0.0
+8,"Review of systems: The patient reports occasional trouble with his left eye, but it is not a primary concern at this visit.",0.25
+9,Current medications: Metformin 2 times a day.,0.0
+10,Objective:,0.0
+11,Vital signs: Not mentioned.,0.0
+12,"Physical exam: The patient's lungs are clear, and his heart rate and rhythm are regular.",0.0
+13,"The physical exam revealed tenderness in the middle to lower back, particularly in the left side, with some radiation to the left gluteal area.",0.75
+14,"The patient's lower extremities are without pain, numbness, or tingling.",0.75
+15,Test Results: Not mentioned.,0.0
+16,Assessment / Problem List:,0.0
+17,Assessment: I believe the patient has a musculoskeletal low back strain.,0.0
+18,Problem list: Low back strain; Diabetes; [NOT MENTIONED].,0.5
+19,Plan:,0.0
+20,I ordered a low back x-ray to evaluate the joint spaces and potential disk issues.,0.25
+21,I also ordered physical therapy to help with pain management and strengthen the back muscles.,0.0
+22,"I prescribed 400mg of ibuprofen as needed for pain, up to 3 times a day, and 1 tablet of flexeril 1 time a day in the evening for muscle relaxation.",0.25
+23,"I want the patient to continue with his current diabetes management, including diet, exercise, and metformin.",0.0
+24,I will order an A1c to evaluate his diabetes control.,0.25
+25,I will refer him to a pain doctor if the pain persists after the x-ray and physical therapy.,1.0
+26,"Follow-up: The patient will return for a follow-up appointment to discuss the results of the x-ray and A1c, and to reassess his diabetes management.",0.75

@@ -1,0 +1,67 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Matthew.,0.3333
+1,subjective,The patient has been experiencing lower back pain.,0.0
+2,subjective,The lower back pain has been experienced for an extended period.,0.1111
+3,subjective,The pain radiates down the patient's left leg.,0.0
+4,subjective,The patient's current pain level is 6 out of 10.,0.2222
+5,subjective,The patient's worst pain level is 13 out of 10.,0.1111
+6,subjective,Standing exacerbates the patient's pain.,0.0
+7,subjective,Walking exacerbates the patient's pain.,0.2222
+8,subjective,Coughing exacerbates the patient's pain.,0.0
+9,subjective,Sneezing exacerbates the patient's pain.,0.0
+10,subjective,Lying down alleviates the patient's pain.,0.0
+11,subjective,The patient has difficulty standing.,0.3333
+12,subjective,The patient has difficulty walking.,0.0
+13,subjective,The patient uses a cane for support.,0.3333
+14,subjective,The patient has numbness in his lower extremities.,0.4444
+15,subjective,The patient has tingling in his lower extremities.,0.4444
+16,subjective,The patient has weakness in his left leg.,0.4444
+17,subjective,The patient has weakness in his right leg.,0.3333
+18,subjective,The patient had a fall off a roof 30 years ago.,0.4444
+19,subjective,The fall may have resulted in a fracture.,0.2222
+20,subjective,The fall may have resulted in a disk injury.,0.5556
+21,subjective,The patient has been experiencing back pain for about a month.,0.5556
+22,subjective,The patient's symptoms are localized to his lower back.,1.0
+23,subjective,The patient's symptoms are localized to his left leg.,0.8889
+24,subjective,The patient denied other systemic symptoms.,0.7778
+25,objective,The patient's back exam revealed no bony abnormalities.,0.1111
+26,objective,The patient's back exam revealed no redness.,0.7778
+27,objective,The patient's back exam revealed no bruising.,0.7778
+28,objective,The patient was positive for pain to palpation at the L4 vertebrae.,0.0
+29,objective,The patient experienced pain with flexion of his back.,0.0
+30,objective,The patient experienced pain with extension of his back.,0.0
+31,objective,The patient's strength in the left leg was 4 out of 5.,0.0
+32,objective,The patient's strength in the right leg was 5 out of 5.,0.0
+33,objective,The patient's reflexes were brisk.,0.0
+34,objective,The patient's motor function was intact in both lower extremities.,0.4444
+35,objective,The patient's sensory function was intact in both lower extremities.,0.0
+36,objective,The MRI showed a disk herniation.,0.0
+37,objective,The disk herniation was at the level of L4-L5 vertebrae.,0.0
+38,objective,The disk herniation was associated with nerve root impingement.,0.0
+39,assessment,The patient has acute disk herniation.,0.0
+40,assessment,The acute disk herniation is located at L4-L5.,0.0
+41,assessment,The patient has nerve root impingement.,0.0
+42,assessment,The nerve root impingement is located at L4-L5.,0.0
+43,assessment,The patient has lower back pain.,0.0
+44,assessment,The patient has radiating pain.,0.1111
+45,assessment,The radiating pain is located in the left leg.,0.6667
+46,assessment,The patient has back pain.,0.0
+47,assessment,The patient has leg pain.,0.0
+48,assessment,The leg pain is located in the left leg.,0.6667
+49,assessment,The patient has weakness.,0.6667
+50,assessment,The weakness is located in both legs.,0.6667
+51,assessment,The patient's problem list includes back pain.,0.0
+52,assessment,The patient's problem list includes acute disk herniation at L4-L5 with nerve root impingement.,0.4444
+53,assessment,The patient's problem list includes lower back pain.,0.1111
+54,assessment,The patient's problem list includes leg pain.,0.0
+55,assessment,The patient's problem list includes weakness in both legs.,0.6667
+56,plan,The doctor recommended an epidural steroid injection.,0.0
+57,plan,The epidural steroid injection is to alleviate inflammation.,0.1111
+58,plan,The epidural steroid injection is to alleviate pain.,0.3333
+59,plan,The doctor will refer the patient to physical therapy.,0.0
+60,plan,Physical therapy is to strengthen the area.,0.0
+61,plan,The patient will see the doctor again in a month.,0.0
+62,plan,The follow-up appointment is to assess the effectiveness of the treatment.,0.1111
+63,plan,The follow-up appointment is to review the effectiveness of the treatment.,0.1111
+64,plan,The treatment may be adjusted as needed.,0.4444
+65,plan,The follow-up appointment is in a month.,0.0

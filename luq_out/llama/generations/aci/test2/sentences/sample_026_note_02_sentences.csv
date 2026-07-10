@@ -1,0 +1,22 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Alexis, presents with a 6-month history of numbness and tingling in her right hand, with symptoms becoming more persistent over the last month.",0.25
+2,"She reports experiencing pain, especially when typing on the keyboard and using a mouse.",0.0
+3,The pain is relieved by rest and ibuprofen.,0.0
+4,"She denies pain at night, and it is not affecting her sleep.",0.5
+5,Past medical history: [NOT MENTIONED],0.0
+6,Review of systems: [NOT MENTIONED],0.75
+7,Current medications: I prescribed ibuprofen 600 milligrams four times a day for pain.,0.0
+8,Objective:,0.0
+9,Vital signs: [NOT MENTIONED],0.0
+10,"Physical exam: The patient has pain on wrist extension and flexion, a positive Tinel's sign, and less grip strength on the right hand.",0.5
+11,"The numbness is most pronounced in the thumb, index finger, and middle finger.",1.0
+12,Test Results: [NOT MENTIONED],0.0
+13,Assessment / Problem List:,0.0
+14,Assessment: I suspect carpal tunnel syndrome based on the patient's symptoms and physical examination findings.,1.0
+15,Problem list: Carpal tunnel syndrome; active.,1.0
+16,Plan:,0.0
+17,"I recommended a wrist splint to be worn at night, and I want the patient to continue with ibuprofen 600 milligrams four times a day for pain.",0.0
+18,I ordered an EMG nerve conduction study to assess the nerve impingement in the wrist.,0.5
+19,"We will re-evaluate the patient based on the test results, and may consider physical therapy or surgery if necessary.",0.25
+20,Follow-up: The patient will return for a follow-up visit to discuss the EMG nerve conduction study results and determine the next course of treatment.,0.25

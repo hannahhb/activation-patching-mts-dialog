@@ -1,0 +1,35 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Matthew, presented with a complaint of right knee pain after playing basketball, stating that he felt a pop in his knee, which started swelling and he was unable to walk.",0.75
+2,He describes the pain as achy and rates it a 4 out of 10.,0.25
+3,"He has been taking Tylenol, which provided some relief.",0.0
+4,He also mentions that the swelling has decreased since the previous night.,0.25
+5,He denies taking any other pain medication.,1.0
+6,"He reports a history of hypertension and diabetes, taking Norvasc 5mg daily and metformin 500mg daily, but sometimes skips metformin due to stomach upset.",0.25
+7,His blood sugar readings are usually around 150 when taken.,0.75
+8,"He also has a history of hypertension, with a current blood pressure of 140/80.",0.25
+9,Past medical history: The patient has a history of hypertension and diabetes.,0.0
+10,He takes Norvasc 5mg daily and metformin 500mg daily.,0.0
+11,He has a history of a grade 2 systolic ejection murmur.,0.25
+12,Review of systems: [NOT MENTIONED],1.0
+13,Current medications:,0.0
+14,Norvasc 5mg daily for hypertension,0.0
+15,Metformin 500mg daily for diabetes,0.0
+16,Objective:,0.0
+17,Vital signs: [NOT MENTIONED],0.75
+18,"Physical exam: The patient has pain to palpation of the medial aspect of the right knee, with some edema, swelling, and ecchymosis.",0.0
+19,The varus and valgus test is negative.,0.0
+20,The knee examination shows some swelling and redness.,0.25
+21,"Test Results: The patient's x-ray of the right knee was normal, showing no fractures or bony abnormalities.",0.0
+22,Assessment / Problem List:,0.0
+23,"Assessment: The patient has a right MCL strain, which may be a tear, confirmed by an MRI pending.",1.0
+24,Problem list: Hypertension; diabetes; MCL strain; Grade 2 systolic ejection murmur; past.,0.25
+25,Plan:,0.0
+26,I prescribed Tylenol as needed for pain.,0.5
+27,I prescribed meloxicam 15mg for pain and swelling.,0.0
+28,I ordered a knee immobilizer for the patient to wear for the next couple of weeks.,0.25
+29,I ordered an MRI to confirm the MCL strain.,0.25
+30,I increased the patient's Norvasc 5mg daily for hypertension.,0.75
+31,I ordered a consult to nutrition to help improve the patient's diet.,0.0
+32,I advised the patient to start taking their blood sugars daily and to bring the results back to track their progress.,0.75
+33,Follow-up: The patient will return in two weeks for follow-up.,0.0

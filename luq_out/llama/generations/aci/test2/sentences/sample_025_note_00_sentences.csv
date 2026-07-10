@@ -1,0 +1,40 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"The patient is a 62-year-old male who presents with a history of coronary artery disease and a heart attack six months ago, for which he underwent a stent placement in his left anterior descending artery.",1.0
+2,"He reports being on a fair amount of medications, including aspirin, brilinta, and crestor.",0.25
+3,He expresses concern about the number of medications he is taking.,0.0
+4,"He also mentions that since the heart attack, he experiences dizziness when standing up quickly, which he attributes to either the heart attack or the medication.",0.5
+5,"He has a history of diabetes, for which he has not been following a diet.",1.0
+6,He mentions having a high hemoglobin A1c level of around 16.,0.25
+7,He also has stage three chronic kidney disease and has not seen his nephrologist in a year.,0.5
+8,"He reports having some puffiness in his legs, which he attributes to the medications.",1.0
+9,He also mentions being a fan of the San Francisco 49ers and having been lonely since the heart attack.,0.75
+10,Past medical history:,0.0
+11,"The patient has a history of coronary artery disease, for which he underwent a stent placement in his left anterior descending artery six months ago.",0.25
+12,He also has stage three chronic kidney disease and diabetes.,0.0
+13,Review of systems:,0.25
+14,"The patient reports experiencing dizziness when standing up quickly, which he attributes to either the heart attack or the medication.",0.5
+15,He also reports having some puffiness in his legs.,1.0
+16,Current medications:,0.25
+17,Aspirin [dosage not specified] [frequency not specified] [indication: cardiac health],0.25
+18,Brilinta [dosage not specified] [frequency not specified] [indication: cardiac health],0.5
+19,Crestor 40 mg once a day [indication: cholesterol],0.75
+20,Fish oil [dosage not specified] [frequency not specified] [indication: cardiac health],0.75
+21,Metoprolol 50 mg once a day [indication: cardiac health],0.5
+22,Objective:,0.0
+23,"Vital signs: blood pressure 127/80 mmHg, pulse rate not specified, oxygen saturation not specified, temperature not specified",0.0
+24,"Physical exam: jugular venous distention not appreciated, carotid bruits not appreciated, a slight 3/6 systolic ejection murmur heard at the left base, one plus nonpitting edema in the lower extremities",0.75
+25,Assessment / Problem List:,0.0
+26,"Assessment: The patient has coronary artery disease, stage three chronic kidney disease, and diabetes, for which he is being followed by his cardiologist and nephrologist.",1.0
+27,Problem list: Coronary artery disease; Stage three chronic kidney disease; Diabetes mellitus,0.0
+28,Plan:,0.0
+29,I referred the patient for cardiac rehabilitation to help him be more active and confident in exercising again.,0.0
+30,"I will also refill his metoprolol, crestor, and aspirin.",0.0
+31,I did not think it necessary to proceed with a stress test at this time.,0.75
+32,I will reach out to Dr. Miller to schedule an appointment for the patient to see his nephrologist.,0.25
+33,I will order another hemoglobin A1c and refer the patient to a dietitian for dietary education.,0.0
+34,I will also discuss his insulin regimen with his primary care physician.,0.25
+35,Follow-up:,0.0
+36,The patient will follow up with his cardiologist in six months to check on the stent and continue monitoring his cardiac health.,1.0
+37,He will also follow up with his nephrologist to monitor his kidney disease.,0.75
+38,The patient will also see a psychiatrist to discuss his feelings of sadness and loneliness since the heart attack.,1.0

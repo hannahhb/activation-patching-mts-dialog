@@ -1,0 +1,63 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is 17 years old.,0.0
+1,subjective,The patient is non-binary.,0.0
+2,subjective,The patient's cholesterol level is elevated.,0.0
+3,subjective,The patient's cholesterol level is 210.,0.5
+4,subjective,The elevated cholesterol level was detected during an annual checkup.,0.25
+5,subjective,The patient expresses concern about the elevated cholesterol level.,0.0
+6,subjective,The patient expresses confusion about the elevated cholesterol level.,0.75
+7,subjective,The patient's grandparents did not have similar cholesterol issues at a young age.,0.5
+8,subjective,The patient is active.,0.0
+9,subjective,The patient rides a bicycle frequently.,0.25
+10,subjective,The patient consumes a diet that includes high-fat foods.,1.0
+11,subjective,The patient consumes chocolate chip cookies.,0.0
+12,subjective,The patient has a good relationship with their grandparents.,0.5
+13,subjective,The patient's grandparents reported no family history of hypercholesterolemia.,0.25
+14,subjective,The patient lives on their own.,1.0
+15,subjective,The patient does not have smoking exposure at home.,0.75
+16,subjective,The patient does not have smoking exposure with friends.,0.75
+17,subjective,The patient had a borderline high cholesterol level last year.,0.75
+18,subjective,The borderline high cholesterol level last year was not considered a concern.,1.0
+19,subjective,The patient reports feeling healthy.,0.0
+20,subjective,The patient has been working on making health goals.,0.5
+21,subjective,The patient's health goal includes feeling more non-gendered.,1.0
+22,subjective,The patient has no significant past medical history.,0.0
+23,objective,The patient's blood pressure was normal.,0.0
+24,objective,The physical exam revealed no abnormalities.,0.0
+25,objective,There was no murmur on the heart exam.,0.0
+26,objective,There was no rub on the heart exam.,0.0
+27,objective,There was no gallop on the heart exam.,0.0
+28,objective,The patient's lungs were clear.,0.0
+29,objective,There was no thyroid enlargement.,0.5
+30,objective,There was no hepatomegaly.,0.0
+31,objective,There was no splenomegaly.,0.0
+32,objective,The patient's cholesterol level was elevated.,0.0
+33,assessment,The patient has elevated cholesterol.,0.0
+34,assessment,The patient's elevated cholesterol is likely due to genetic factors.,0.0
+35,assessment,The patient's elevated cholesterol is likely due to lifestyle factors.,1.0
+36,assessment,The patient's elevated cholesterol requires further investigation.,0.0
+37,assessment,The patient's elevated cholesterol requires management.,0.25
+38,assessment,The patient has hypercholesterolemia.,0.0
+39,assessment,The patient has suspected familial hypercholesterolemia.,0.0
+40,plan,The doctor ordered a full cholesterol panel.,0.0
+41,plan,The doctor ordered glucose testing.,0.0
+42,plan,The doctor ordered a complete metabolic panel.,0.0
+43,plan,The doctor ordered thyroid studies.,0.0
+44,plan,The doctor ordered liver panels.,0.0
+45,plan,The purpose of the tests is to investigate the cause of elevated cholesterol.,0.0
+46,plan,The doctor ordered genetic testing.,0.25
+47,plan,The purpose of genetic testing is to determine if high cholesterol is familial.,0.0
+48,plan,The doctor advised the patient to follow a well-balanced diet.,0.0
+49,plan,The diet should include foods lower in saturated fat.,0.0
+50,plan,The diet should include foods lower in sugars.,0.0
+51,plan,The patient is advised to meet with a nutritionist.,0.0
+52,plan,The purpose of meeting with a nutritionist is to discuss dietary changes.,0.0
+53,plan,The doctor instructed the patient to continue being active.,0.0
+54,plan,The doctor instructed the patient to continue exercising.,0.0
+55,plan,The patient is specifically advised to continue bike riding.,0.0
+56,plan,The patient is scheduled to follow up in 3-6 months.,0.0
+57,plan,The purpose of the follow-up is to check the patient's cholesterol level.,0.0
+58,plan,The follow-up is scheduled after the patient has met with the nutritionist.,0.25
+59,plan,The follow-up is scheduled after the patient has implemented dietary changes.,0.0
+60,plan,The doctor will follow up with the patient in 3-6 months.,0.25
+61,plan,The doctor will check the patient's cholesterol level at follow-up.,0.0

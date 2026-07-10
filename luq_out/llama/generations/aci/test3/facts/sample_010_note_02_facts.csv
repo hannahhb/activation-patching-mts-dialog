@@ -1,0 +1,74 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Mr. Thompson.,1.0
+1,subjective,The patient is a 67-year-old male.,0.0
+2,subjective,The patient has a history of essential hypertension.,0.0
+3,subjective,The patient has a history of hyperlipidemia.,0.0
+4,subjective,The patient has a history of osteoarthritis.,0.0
+5,subjective,The patient presents with fluctuating blood pressures.,0.0
+6,subjective,The patient presents with elevated blood pressures.,0.0
+7,subjective,The patient reports feeling lightheaded.,0.0
+8,subjective,The patient experiences slight headaches.,0.0
+9,subjective,The patient has upper blood pressure readings over 180.,0.0
+10,subjective,The patient denied fever.,0.0
+11,subjective,The patient denied nausea.,0.0
+12,subjective,The patient denied vomiting.,0.0
+13,subjective,The patient denied diarrhea.,0.0
+14,subjective,The patient denied palpitations.,0.25
+15,subjective,The patient denied passing out.,0.25
+16,subjective,The patient has a history of managing his blood pressure well for the past three to four weeks.,1.0
+17,subjective,The patient experienced periods of lightheadedness.,0.0
+18,subjective,The patient experienced high blood pressure readings.,0.0
+19,subjective,The patient reports a slight heaviness in his chest.,0.5
+20,subjective,The patient reports unsteadiness when experiencing dizziness.,0.75
+21,subjective,The doctor prescribed lisinopril.,0.0
+22,subjective,The lisinopril dose is 20mg.,0.0
+23,subjective,Lisinopril is taken twice daily.,0.25
+24,subjective,Lisinopril is prescribed for hypertension.,0.0
+25,subjective,The doctor prescribed atorvastatin.,0.0
+26,subjective,Atorvastatin is prescribed for hyperlipidemia.,0.0
+27,subjective,The patient reports mild bibasilar rales.,1.0
+28,subjective,The patient reports trace lower extremity edema.,1.0
+29,subjective,The patient has a grade three systolic ejection murmur.,1.0
+30,objective,The physical exam is mostly normal.,0.25
+31,objective,The physical exam is unremarkable.,0.5
+32,objective,The patient has a systolic ejection murmur.,0.0
+33,objective,The systolic ejection murmur is grade three out of six.,0.0
+34,objective,The patient has mild bibasilar rales.,0.0
+35,objective,The patient has trace lower extremity edema.,0.0
+36,objective,The lower extremity edema is located on the extremity exam.,0.0
+37,assessment,Mr. Thompson has elevated blood pressures.,0.0
+38,assessment,Mr. Thompson has fluctuating blood pressures.,0.5
+39,assessment,Mr. Thompson's blood pressures require medication adjustments.,0.25
+40,assessment,The patient has Hypertension.,0.0
+41,assessment,The Hypertension is confirmed.,0.5
+42,assessment,The patient has Hyperlipidemia.,0.0
+43,assessment,The Hyperlipidemia is confirmed.,0.0
+44,assessment,The patient has Osteoarthritis.,0.0
+45,assessment,The Osteoarthritis is stable.,1.0
+46,plan,The doctor increased Mr. Thompson's lisinopril.,0.25
+47,plan,The lisinopril dose is 60mg.,0.0
+48,plan,The doctor prescribed hydrochlorothiazide.,0.0
+49,plan,The hydrochlorothiazide dose is 25mg.,0.0
+50,plan,Hydrochlorothiazide is taken daily.,0.0
+51,plan,Hydrochlorothiazide is prescribed to help control blood pressure.,0.0
+52,plan,The doctor prescribed lisinopril to help control blood pressure.,0.0
+53,plan,The patient is to check his blood pressure twice a day.,0.25
+54,plan,The patient is to check his blood pressure for the next two weeks.,0.25
+55,plan,The doctor ordered a cholesterol panel.,0.0
+56,plan,The doctor ordered a CBC with differential.,0.0
+57,plan,The doctor ordered a comprehensive metabolic panel.,0.0
+58,plan,The doctor ordered a urinalysis.,0.0
+59,plan,The urinalysis is to assess kidney function.,0.0
+60,plan,The comprehensive metabolic panel is to assess kidney function.,0.0
+61,plan,The doctor advised the patient to continue taking atorvastatin.,0.0
+62,plan,The atorvastatin is prescribed for hyperlipidemia.,0.0
+63,plan,The patient has hyperlipidemia.,0.0
+64,plan,The patient has osteoarthritis.,0.0
+65,plan,The doctor advised the patient to continue with his current management plan for osteoarthritis.,0.5
+66,plan,The patient is to take Tylenol for mild pain.,0.25
+67,plan,Tylenol is taken for mild pain.,0.5
+68,plan,The patient is to modify his activity as needed for osteoarthritis.,0.5
+69,plan,A follow-up appointment is scheduled with Mr. Thompson.,0.0
+70,plan,The follow-up appointment is scheduled in two weeks.,0.0
+71,plan,The purpose of the follow-up appointment is to reassess blood pressure.,0.5
+72,plan,The doctor will adjust the medication regimen as needed at the follow-up appointment.,0.75

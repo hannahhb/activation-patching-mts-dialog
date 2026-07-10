@@ -1,0 +1,79 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 57-year-old male.,0.0
+1,subjective,The patient presents with shortness of breath.,0.0
+2,subjective,The patient's shortness of breath occurs at rest.,0.75
+3,subjective,The patient's shortness of breath occurs with exertion.,0.5
+4,subjective,The patient has a 2-week history of shortness of breath.,0.0
+5,subjective,The patient reports coughing up blood.,0.0
+6,subjective,The patient has a 3-week history of coughing up blood.,0.0
+7,subjective,The patient coughs up an estimated 3-4 cups of blood per day.,0.0
+8,subjective,The patient has a history of diabetes.,0.0
+9,subjective,The patient has a history of high blood pressure.,0.0
+10,subjective,The patient has a history of asthma.,0.0
+11,subjective,The patient has high blood sugar readings.,0.0
+12,subjective,The patient's blood sugar readings are over 200 after meals.,0.0
+13,subjective,The patient's blood sugar readings are around 150 in the morning.,0.0
+14,subjective,The patient wears a dexcom.,1.0
+15,subjective,The patient takes metformin.,0.0
+16,subjective,The metformin dose is 500mg.,0.25
+17,subjective,Metformin is taken twice a day.,0.25
+18,subjective,Metformin is prescribed for diabetes.,0.0
+19,subjective,The patient takes Norvasc.,0.25
+20,subjective,The patient is holding off on taking Norvasc.,0.5
+21,subjective,The reason for holding Norvasc is low blood pressure readings.,0.5
+22,subjective,Norvasc is prescribed for high blood pressure.,0.5
+23,subjective,The patient has a history of knee problems.,0.75
+24,subjective,The patient denied fever.,0.0
+25,subjective,The patient denied bruising.,0.0
+26,subjective,The patient denied bleeding from other areas.,0.5
+27,subjective,The patient denied swelling.,0.75
+28,objective,The patient's oxygen saturation is 94% on pulse oximetry.,0.0
+29,objective,The patient's blood pressure is 120/70 mmHg.,0.25
+30,objective,The lung exam reveals bilateral rails.,1.0
+31,objective,The lung exam reveals rhonchi on the right side.,0.0
+32,objective,The patient has diminished breath sounds on the right side.,0.0
+33,objective,The heart exam shows a 2/6 systolic ejection murmur.,0.25
+34,objective,The systolic ejection murmur is unchanged from before.,0.5
+35,objective,The belly exam is soft.,0.0
+36,objective,The belly exam is non-tender.,0.25
+37,objective,The extremity exam shows 1+ nonpitting edema.,0.0
+38,objective,The patient has 1+ nonpitting edema on both lower extremities.,0.0
+39,assessment,The patient has diabetes mellitus.,0.0
+40,assessment,The patient has hypertension.,0.5
+41,assessment,The patient has asthma.,1.0
+42,assessment,The patient has a cough.,0.0
+43,assessment,The patient has hemoptysis.,0.0
+44,assessment,The patient has shortness of breath.,0.5
+45,assessment,A pulmonary infection is suspected.,0.25
+46,assessment,A blood clot is suspected.,0.75
+47,assessment,Another underlying condition is suspected.,0.5
+48,assessment,The patient presents with coughing up blood.,0.0
+49,assessment,The patient's cough is associated with hemoptysis.,0.0
+50,assessment,The patient's shortness of breath may be caused by a pulmonary infection.,0.5
+51,assessment,The patient's shortness of breath may be caused by another underlying condition.,0.5
+52,assessment,The patient's coughing up blood may be caused by a pulmonary infection.,0.25
+53,assessment,The patient's coughing up blood may be caused by another underlying condition.,0.5
+54,assessment,The patient's coughing up blood may be caused by a blood clot.,0.75
+55,plan,The doctor ordered a chest x-ray.,0.0
+56,plan,The patient will be referred to the emergency department.,0.0
+57,plan,The purpose of the emergency department referral is for further evaluation.,0.0
+58,plan,The purpose of the emergency department referral is for blood testing.,0.0
+59,plan,The doctor ordered a CT scan of the chest.,0.0
+60,plan,The CT scan of the chest is to evaluate for a blood clot.,0.75
+61,plan,The CT scan of the chest is to evaluate for another underlying condition.,0.5
+62,plan,The doctor will hold off on the patient's Norvasc.,0.0
+63,plan,The Norvasc is prescribed for the patient.,0.5
+64,plan,The reason to hold off on Norvasc is until further evaluation of his blood pressure is complete.,1.0
+65,plan,The patient's blood pressure needs further evaluation.,0.0
+66,plan,The patient's treatment plan will be adjusted once he is stable.,0.25
+67,plan,The patient's blood pressure will be reassessed once he is stable.,0.75
+68,plan,The doctor ordered another hemoglobin A1c.,0.75
+69,plan,The hemoglobin A1c is to evaluate his diabetes control.,0.5
+70,plan,The patient has diabetes.,0.0
+71,plan,The doctor will have the patient return in 3 weeks.,0.0
+72,plan,The purpose of the follow-up visit is to discuss his diabetes treatment plan.,0.0
+73,plan,The patient's diabetes medication will be adjusted as needed.,0.0
+74,plan,The patient is taking Norvasc.,0.5
+75,plan,The Norvasc dose is not specified.,0.0
+76,plan,The Norvasc frequency is not specified.,0.0
+77,plan,The Norvasc is prescribed for blood pressure.,0.75

@@ -1,0 +1,64 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient presents with low back pain.,0.0
+1,subjective,The low back pain started 1 week ago.,0.0
+2,subjective,The low back pain began after twisting and possibly lifting something on the left side.,0.75
+3,subjective,The patient's low back pain initially resolved.,0.25
+4,subjective,The patient's low back pain returned after a few hours.,0.5
+5,subjective,The pain is located in the middle to lower back.,0.0
+6,subjective,The low back pain exacerbates when twisting suddenly to the left.,0.0
+7,subjective,The patient's low back pain worsens when pressing down on the low back.,1.0
+8,subjective,The low back pain is particularly bad in the center of the low back.,0.5
+9,subjective,The patient has a history of diabetes.,0.0
+10,subjective,The patient is on metformin.,0.0
+11,subjective,The metformin dose is not specified.,0.5
+12,subjective,Metformin is taken twice a day.,0.0
+13,subjective,Metformin is prescribed for diabetes.,0.0
+14,subjective,The patient has a family history of owning a bakery.,0.5
+15,subjective,The patient occasionally visits the bakery.,0.75
+16,subjective,The patient tries to control their intake of sweets.,0.5
+17,subjective,The patient reports occasional trouble with the left eye.,0.25
+18,subjective,The left eye trouble is not related to the low back pain.,1.0
+19,objective,The patient's lungs are clear.,0.0
+20,objective,The patient's heart rate is regular.,0.0
+21,objective,The patient's heart rhythm is regular.,0.0
+22,objective,There is no pain when pressing down on the patient's upper back.,0.5
+23,objective,The patient experiences pain when pressing down on the low back.,0.0
+24,objective,The pain in the low back is particularly in the center.,0.25
+25,objective,The patient reports pain when lifting the right leg.,0.75
+26,objective,The patient reports pain when lifting the left leg.,0.75
+27,assessment,The patient has a musculoskeletal low back strain.,0.0
+28,assessment,The patient has Diabetes.,0.0
+29,assessment,The patient has an unknown condition.,0.75
+30,assessment,The doctor assessed the patient.,0.0
+31,assessment,The assessment is musculoskeletal low back strain.,0.0
+32,plan,The doctor ordered a low back x-ray.,0.25
+33,plan,The low back x-ray is to evaluate the joint spaces.,0.25
+34,plan,The low back x-ray is to evaluate possible disk issues.,0.0
+35,plan,The doctor ordered physical therapy.,0.0
+36,plan,Physical therapy is to help with pain.,0.0
+37,plan,Physical therapy is to strengthen the muscles in the back.,0.25
+38,plan,The doctor prescribed ibuprofen.,0.0
+39,plan,The ibuprofen dose is 400mg.,0.0
+40,plan,Ibuprofen is taken occasionally.,0.0
+41,plan,Ibuprofen is taken with Tylenol.,0.5
+42,plan,Ibuprofen is prescribed for severe pain.,1.0
+43,plan,Ibuprofen is taken up to 3 times a day.,0.0
+44,plan,The doctor prescribed Tylenol.,1.0
+45,plan,Tylenol is taken occasionally.,1.0
+46,plan,Tylenol is taken with ibuprofen.,0.5
+47,plan,Tylenol is prescribed for severe pain.,1.0
+48,plan,The doctor prescribed Flexeril.,0.0
+49,plan,The Flexeril dose is one.,0.0
+50,plan,Flexeril is taken per day.,0.0
+51,plan,Flexeril is taken in the evening.,0.25
+52,plan,The patient is instructed to continue their current diet.,0.25
+53,plan,The patient is instructed to continue their current exercise routine.,0.0
+54,plan,The patient is taking metformin.,0.0
+55,plan,The doctor prescribed metformin.,0.75
+56,plan,The patient will return for a follow-up appointment.,0.0
+57,plan,The follow-up appointment is to discuss the results of the x-ray.,0.0
+58,plan,The follow-up appointment is to discuss the results of the A1c test.,0.0
+59,plan,The patient will be referred to a pain doctor.,1.0
+60,plan,The patient will be referred to a pain doctor if the pain persists.,0.75
+61,plan,The patient will be referred to a pain doctor after the x-ray.,1.0
+62,plan,The patient will be referred to a pain doctor after physical therapy.,1.0

@@ -1,0 +1,38 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"The patient is a 73-year-old male, Mr. Nelson, who presents for ongoing management of rheumatoid arthritis.",0.25
+2,"He reports his knee has been swollen for approximately two months, with pain level of 6 on a normal day, but currently at 3.",0.5
+3,He denies improvement with compression socks.,0.75
+4,He reports difficulty getting up from a seated position due to stiffness and uses a cane for support.,0.0
+5,He has been taking Xeljanz 11 milligrams daily and Celebrex 200 milligrams daily for the past two months.,0.5
+6,He reports his pain level improves with medication but worsens with swelling.,1.0
+7,"Past medical history: Mr. Nelson has a history of rheumatoid arthritis, for which he is being managed with Xeljanz and Celebrex.",0.0
+8,"He also reports a history of previous steroid injections in the right knee, which provided temporary relief for a couple of weeks.",1.0
+9,"Review of systems: The patient reports pain and swelling in the right knee, with associated stiffness and difficulty getting up from a seated position.",0.25
+10,Current medications:,0.0
+11,Xeljanz 11 milligrams daily for rheumatoid arthritis,0.0
+12,Celebrex 200 milligrams daily for rheumatoid arthritis,0.0
+13,Objective:,0.0
+14,Vital signs:,0.25
+15,Blood pressure: [NOT MENTIONED],0.0
+16,Pulse rate: [NOT MENTIONED],0.0
+17,Oxygen saturation: [NOT MENTIONED],0.0
+18,Temperature: [NOT MENTIONED],0.25
+19,Physical exam:,0.0
+20,Range of motion slightly diminished in the right knee,1.0
+21,Pitting around the knee and ankle,0.0
+22,Normal capillary refill in the toes,0.0
+23,"Knee is hot, indicating inflammation",0.25
+24,Test Results:,0.0
+25,[NO MENTION OF ANY LAB RESULTS OR IMAGING REPORTS],0.0
+26,Assessment / Problem List:,0.0
+27,"Assessment: The patient presents with ongoing rheumatoid arthritis, with a swollen and painful right knee, and decreased range of motion.",0.25
+28,Problem list: Rheumatoid arthritis; Suspected fluid accumulation in the right knee; Active inflammation in the right knee.,1.0
+29,Plan:,0.0
+30,I prescribed Celebrex 200 milligrams daily for rheumatoid arthritis.,0.25
+31,"I administered a steroid injection to the right knee, consisting of 80 milligrams of triamcinolone and one milliliter of lidocaine.",0.25
+32,I also ordered an x-ray of the right knee to investigate the cause of the swelling.,0.5
+33,I recommended the patient wear compression socks and reduce salt intake to alleviate swelling.,1.0
+34,"I also advised the patient to prop their feet up, especially at night, to reduce swelling.",0.5
+35,I instructed the patient to follow up with their primary care physician and to schedule a blood work appointment to check their Xeljanz levels.,1.0
+36,Follow-up: The patient will follow up with me for further management and to assess the effectiveness of the treatment plan.,1.0

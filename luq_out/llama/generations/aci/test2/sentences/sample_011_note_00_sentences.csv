@@ -1,0 +1,56 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"The patient, a 50-year-old male, reports being okay and feeling that his medications are helping.",1.0
+2,He mentions being concerned about the number of medications he is taking.,0.0
+3,He has a history of a heart attack six months ago and has been prescribed medications to manage his coronary artery disease.,0.0
+4,"He reports a complaint of dizziness when standing up quickly, which he attributes to the heart attack or his medication.",0.25
+5,He also mentions a preference for chocolate chip cookies and has a history of diabetes.,1.0
+6,He has not been following up with his nephrologist as recommended.,0.5
+7,He is a fan of the San Francisco 49ers and has not been taking medications that could harm his kidneys.,1.0
+8,He has been experiencing some puffiness in his legs.,0.75
+9,Past medical history:,0.0
+10,"The patient has a history of coronary artery disease, which led to a heart attack six months ago.",0.0
+11,"He has been prescribed medications to manage this condition, including aspirin, brilinta, and crestor.",0.0
+12,"He also has a history of diabetes, which contributed to his heart attack.",0.75
+13,"He has stage three chronic kidney disease, which requires him to follow up with a nephrologist.",0.75
+14,He has not been taking medications that could harm his kidneys.,0.25
+15,Review of systems:,0.0
+16,"The patient reports a complaint of dizziness when standing up quickly, which he attributes to his heart attack or medication.",0.25
+17,He also reports feeling down and lonely since his heart attack.,1.0
+18,Current medications:,0.0
+19,Aspirin 81mg daily for coronary artery disease,1.0
+20,Brilinta 90mg twice daily for coronary artery disease,1.0
+21,Crestor 40mg daily for high cholesterol,0.25
+22,Metoprolol 50mg daily for coronary artery disease,0.0
+23,Fish oil for coronary artery disease,0.5
+24,Objective:,0.0
+25,Vital signs:,0.0
+26,Blood pressure: 127/80,0.0
+27,Pulse rate: [NOT MENTIONED],0.0
+28,Oxygen saturation: [NOT MENTIONED],0.0
+29,Temperature: [NOT MENTIONED],0.0
+30,Physical exam:,0.25
+31,The patient's neck exam is unremarkable.,0.75
+32,The patient's heart exam reveals a slight 3/6 systolic ejection murmur at the left base.,0.0
+33,The patient's lower extremity exam reveals one plus nonpitting edema.,0.0
+34,Test Results:,0.0
+35,Kidney function test results show stable kidney function.,0.0
+36,Hemoglobin A1c was reported to be approximately 60%.,1.0
+37,Assessment / Problem List:,0.0
+38,"The patient has coronary artery disease, which is currently stable; chronic kidney disease, stage three; and diabetes.",1.0
+39,The patient is experiencing mild depression and loneliness following his heart attack.,1.0
+40,"Problem list: Coronary artery disease; chronic kidney disease, stage three; diabetes; mild depression.",0.0
+41,Plan:,0.0
+42,I prescribed the following medications:,0.25
+43,Metoprolol 50mg daily for coronary artery disease.,1.0
+44,Crestor 40mg daily for high cholesterol.,0.25
+45,Aspirin 81mg daily for coronary artery disease.,1.0
+46,I referred the patient to cardiac rehab to help him become more active and confident in exercising again.,0.25
+47,I also referred the patient to a dietitian for education on managing his diabetes.,0.25
+48,I will contact the patient's nephrologist to schedule an appointment.,0.25
+49,I will order another hemoglobin A1c test to monitor the patient's diabetes.,0.0
+50,I will talk to the patient's primary care physician about adjusting his insulin regimen.,0.25
+51,Follow-up:,0.0
+52,The patient will follow up with his cardiologist in six months to monitor his coronary artery disease.,1.0
+53,He will also follow up with his nephrologist to monitor his kidney disease.,0.25
+54,The patient will see a psychiatrist to discuss his depression and loneliness.,1.0

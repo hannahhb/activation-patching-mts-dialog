@@ -1,0 +1,21 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,The patient presents with sudden visual distortions and blurring of vision.,0.0
+2,She reports difficulty adjusting to dim lights in restaurants and has noticed that straight lines appear crooked to her.,0.0
+3,"She has a history of macular degeneration and is a smoker, consuming a pack of cigarettes per day.",0.0
+4,"She has not been consistent with her blood pressure medication, only taking it when she remembers.",0.75
+5,"She has a favorite restaurant, McDonald's, where she enjoys the eggplant parmesan.",1.0
+6,Objective:,0.0
+7,Vital signs: [NOT MENTIONED],0.0
+8,Physical exam: The anterior segment examination reveals posterior chamber intraocular lenses in both eyes.,0.0
+9,"The right eye's cornea is clear, with no MVI, and the cup-to-disc ratio is 0.2.",0.5
+10,"The fundus examination of the right eye shows the retina to be attached 360 degrees without any tears, holes, or pe changes in the fovea.",0.75
+11,"The posterior segment exam shows drusen in the macula, thickening of the retina, presence of subretinal fluid, and exudates, with a positive hemorrhage.",0.0
+12,"The left eye's cornea is clear, with no MVI, and the cup-to-disc ratio is 0.3, with no pe changes in the fovea, no hemorrhage, and the retina is attached.",1.0
+13,Assessment / Problem List:,0.0
+14,"The patient has neovascular age-related macular degeneration, which is an advanced stage of the disease that can lead to severe vision loss.",0.5
+15,Problem list: Age-related macular degeneration; suspected severe vision loss; smoking; hypertension; inconsistent blood pressure medication use.,1.0
+16,Plan:,0.0
+17,"I prescribed Lucentis injections once a month, injected into the vitreous portion of the eye, after numbing, to slow the rate of vision decline or stop further vision loss.",0.25
+18,"However, the disease may progress despite treatment.",0.75
+19,Follow-up: [NOT MENTIONED],1.0

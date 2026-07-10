@@ -1,0 +1,22 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Alexis, is a 30-year-old data entry specialist presenting with numbness and tingling in her right hand, which she has been experiencing on and off for approximately six months, but has been more persistent over the last month.",1.0
+2,"She reports some pain, which is exacerbated by typing on a keyboard and using a mouse, and is relieved by resting and taking ibuprofen.",0.0
+3,"The numbness and tingling are present all the time, but not affecting her sleep.",0.5
+4,Past medical history: [NOT MENTIONED],0.0
+5,Review of systems: [NOT MENTIONED],0.75
+6,Current medications: I prescribed ibuprofen 600 milligrams four times a day for pain management.,0.0
+7,Objective:,0.0
+8,Vital signs: [NOT MENTIONED],0.0
+9,"Physical exam: On examination, the patient has pain on extension and flexion of the wrist, and a positive Tinel's sign on the inside of the wrist and forearm, which indicates nerve compression.",1.0
+10,"The patient has decreased grip strength on the right hand, particularly in the thumb, index finger, and middle finger.",1.0
+11,Test Results: [NOT MENTIONED],0.0
+12,Assessment / Problem List:,0.0
+13,"Assessment: The patient has carpal tunnel syndrome, a condition characterized by nerve compression in the wrist.",0.75
+14,Problem list: Carpal tunnel syndrome; unknown.,0.75
+15,Plan:,0.0
+16,"I plan to put the patient in a wrist splint to wear at night, which will help alleviate the symptoms.",0.25
+17,I will also continue her ibuprofen regimen at 600 milligrams four times a day.,0.0
+18,"I will order an EMG test, also known as a nerve conduction study, to confirm the diagnosis.",0.0
+19,"If the test comes back positive, we will discuss further treatment options, which may include physical therapy or surgery to release the nerve compression.",0.25
+20,"Follow-up: The patient will follow up with me for further evaluation and to discuss the results of the EMG test, and to determine if physical therapy or surgery is necessary.",0.5

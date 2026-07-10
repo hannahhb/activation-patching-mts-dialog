@@ -1,0 +1,79 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 65-year-old woman.,1.0
+1,subjective,The patient has a history of stage three nonsmall cell lung cancer.,0.0
+2,subjective,The patient presented with shortness of breath.,0.0
+3,subjective,The patient's shortness of breath is a new symptom.,0.25
+4,subjective,The patient's shortness of breath started over the weekend.,0.25
+5,subjective,The patient is unable to walk her dog as far as she used to without feeling short of breath.,0.0
+6,subjective,The patient denied coughing.,1.0
+7,subjective,The patient denied phlegm.,0.25
+8,subjective,The patient denied fever.,0.25
+9,subjective,The patient denied body aches.,0.75
+10,subjective,The patient denied sore throat.,0.75
+11,subjective,The patient denied sinus pain.,1.0
+12,subjective,The patient reports a painful sensation in her chest when swallowing.,0.0
+13,subjective,The patient's painful sensation in her chest when swallowing is not associated with food getting stuck.,0.25
+14,subjective,The patient has been able to drink liquids.,0.0
+15,subjective,The patient drinks Ensure.,0.0
+16,subjective,The patient drinks milkshakes.,0.75
+17,subjective,The patient has been taking liquids less frequently due to pain.,0.75
+18,subjective,The patient is on cisplatin chemotherapy.,0.25
+19,subjective,The cisplatin dose is not specified.,0.0
+20,subjective,Cisplatin is taken with an unspecified frequency.,0.25
+21,subjective,Cisplatin is prescribed for stage three nonsmall cell lung cancer.,0.25
+22,subjective,The patient is on paclitaxel chemotherapy.,0.75
+23,subjective,The paclitaxel dose is not specified.,0.0
+24,subjective,Paclitaxel is taken with an unspecified frequency.,1.0
+25,subjective,Paclitaxel is prescribed for stage three nonsmall cell lung cancer.,1.0
+26,subjective,The patient started chemotherapy a few days ago.,0.75
+27,subjective,The patient is experiencing nausea.,0.5
+28,subjective,The patient is experiencing fatigue.,0.5
+29,subjective,The patient is on zofran.,0.25
+30,subjective,The zofran dose is not specified.,0.0
+31,subjective,Zofran is taken with an unspecified frequency.,0.0
+32,subjective,Zofran is prescribed for nausea and fatigue.,1.0
+33,subjective,The patient is on prednisone.,0.75
+34,subjective,The prednisone dose is 40mg.,0.75
+35,subjective,Prednisone is taken daily.,0.75
+36,subjective,Prednisone is taken for 5 days.,0.75
+37,subjective,The indication for prednisone is not specified.,0.25
+38,subjective,The patient is on lidocaine spray.,0.75
+39,subjective,The lidocaine spray dose is not specified.,0.0
+40,subjective,Lidocaine spray is taken with an unspecified frequency.,0.75
+41,subjective,Lidocaine spray is prescribed for swallowing pain.,0.75
+42,subjective,The patient has stage three nonsmall cell lung cancer.,0.0
+43,subjective,The patient is undergoing chemotherapy for stage three nonsmall cell lung cancer.,0.0
+44,subjective,The patient is undergoing radiation for stage three nonsmall cell lung cancer.,0.75
+45,subjective,The patient reports a dry cough.,0.0
+46,subjective,The patient reports shortness of breath.,0.0
+47,subjective,The patient reports painful swallowing.,0.0
+48,subjective,The patient denied other symptoms.,0.75
+49,objective,The patient's pulse is within normal limits.,0.25
+50,objective,The patient's blood pressure is within normal limits.,0.75
+51,objective,The patient's oxygen saturation is within normal limits.,0.25
+52,objective,The patient's temperature is within normal limits.,0.25
+53,objective,The patient has crackles in the lungs bilaterally.,0.0
+54,objective,The patient may have fluid in the lungs.,0.25
+55,objective,The patient has erythema on the anterior aspect of the chest on the left side.,0.0
+56,objective,The patient's erythema may be due to radiation.,0.0
+57,objective,The patient has no lower extremity edema.,0.0
+58,objective,The patient had a chest x-ray.,0.0
+59,objective,The chest x-ray showed mild radiation pneumonitis.,0.0
+60,objective,Radiation pneumonitis is inflammation of the lungs due to radiation.,0.25
+61,assessment,The patient has radiation pneumonitis.,0.0
+62,assessment,The patient has painful swallowing.,0.25
+63,assessment,The painful swallowing is due to radiation-induced inflammation of the esophagus.,0.75
+64,assessment,The esophagus has radiation-induced inflammation.,1.0
+65,plan,The patient is on a chemotherapy regimen.,0.5
+66,plan,The patient is on a radiation regimen.,0.5
+67,plan,The doctor prescribed prednisone.,0.0
+68,plan,The prednisone treatment duration is 5 days.,0.0
+69,plan,Prednisone is prescribed to reduce inflammation.,0.0
+70,plan,Prednisone is prescribed to improve breathing.,0.0
+71,plan,The inflammation is located in the lungs.,0.0
+72,plan,The doctor prescribed lidocaine spray.,0.0
+73,plan,Lidocaine spray is used for swallowing pain.,0.0
+74,plan,Lidocaine spray is taken 4 times a day.,0.5
+75,plan,The patient will be seen again in two weeks.,0.0
+76,plan,The purpose of the follow-up visit is to assess treatment effectiveness.,0.5
+77,plan,The purpose of the follow-up visit is to make necessary adjustments.,0.25

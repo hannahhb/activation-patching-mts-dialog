@@ -1,0 +1,32 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"The patient, Mr. Edwards, is a 54-year-old male presenting with a 2-3 month history of stabbing, shooting pain in the right cheekbone area of his face.",0.0
+2,"He describes the pain as excruciating, sometimes triggered by certain temperatures or wind.",0.3333
+3,"He has tried ibuprofen, Motrin, and tiger balm without relief.",0.1111
+4,"He reports no numbness or tingling in the affected area, and no weakness on the right side of his face.",0.3333
+5,"His pain episodes can last from a few minutes to an hour, with a severity of 10/10 when it occurs.",0.4444
+6,"He has a history of occasional headaches, but no migraines or history of brain tumors or multiple sclerosis.",0.2222
+7,He is concerned about the possibility of a brain tumor.,1.0
+8,Past medical history:,0.0
+9,"The patient has a history of headaches, but no migraines or history of brain tumors or multiple sclerosis.",0.2222
+10,Review of systems:,0.0
+11,"The patient reports no symptoms of numbness or tingling in the affected area, no weakness on the right side of his face, and no other symptoms of headache or neurological disorders.",1.0
+12,Current medications:,0.0
+13,The patient is currently taking Tylenol for occasional headaches.,0.3333
+14,Objective:,0.0
+15,Vital signs: [NOT MENTIONED],0.0
+16,Physical exam:,0.0
+17,The patient follows my finger in both directions with his eyes open and closed.,1.0
+18,He shows symmetric teeth and can hear with both ears.,0.5556
+19,He reports feeling numb on the right side of his face when I run cotton tape along the side of his face.,0.1111
+20,He reports feeling a dull sensation on the right side and a sharp sensation on the left side when I poke him with a needle.,0.1111
+21,Test Results:,0.8889
+22,The patient's MRI shows a small blood vessel abutting and possibly pinching the trigeminal nerve.,0.3333
+23,Assessment / Problem List:,0.0
+24,"The patient has a condition called trigeminal neuralgia, characterized by shooting electrical pain in the face due to nerve compression.",0.1111
+25,Problem list: Trigeminal neuralgia; active.,0.2222
+26,Plan:,0.0
+27,"I prescribed tegretol 100mg orally, twice a day for trigeminal neuralgia.",0.6667
+28,I will follow up with the patient in one month to assess the effectiveness of the medication.,0.1111
+29,"If the pain persists, we will discuss surgical options to decompress the nerve.",0.6667
+30,We will also perform genetic testing to ensure the medication is safe for the patient.,0.2222

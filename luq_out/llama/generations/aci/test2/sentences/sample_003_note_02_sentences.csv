@@ -1,0 +1,28 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 57-year-old male, presents with shortness of breath for approximately two weeks, worsening over time.",0.75
+2,"He reports waking up with shortness of breath, which persists upon exertion.",1.0
+3,"He has also been coughing up blood, approximately 3-4 cups per day, for three weeks.",0.0
+4,"He denies fever, leg swelling, or bruising.",0.5
+5,"He has a history of diabetes, high blood pressure, and asthma.",0.0
+6,"His blood sugar has been running high, with readings over 200 after meals and 150 in the morning, and his hemoglobin A1c was 7.7.",1.0
+7,"His blood pressure has been running low, with readings as low as 90/60.",1.0
+8,He has been taking metformin 500 mg twice a day and norvasc.,0.25
+9,"Past medical history: The patient has a history of diabetes, high blood pressure, and asthma.",0.0
+10,"Review of systems: The patient reports shortness of breath, coughing up blood, and high blood sugar.",0.5
+11,Current medications:,0.0
+12,Metformin 500 mg twice a day for diabetes,0.0
+13,Norvasc (dosage not specified) for high blood pressure,0.0
+14,Objective:,0.0
+15,"Vital signs: The patient's oxygen level is 94% on pulse oximetry, pulse is regular, and blood pressure is 120/70.",1.0
+16,"Physical exam: The patient has no jugular venous distension, no carotid bruits, rails and rhonchi on the right side of the lung exam, diminished breath sounds on the right side, a 2/6 systolic ejection murmur, 1+ non-pitting edema on both lower extremities, and no calf tenderness or Homan's sign.",0.5
+17,Test Results: [NOT MENTIONED],0.0
+18,Assessment / Problem List:,0.0
+19,"Assessment: The patient presents with shortness of breath and coughing up blood, likely due to a respiratory infection or another underlying condition.",0.0
+20,Problem list: Asthma; Diabetes; High blood pressure; Cough with hemoptysis; Shortness of breath; Possible blood clot or other pulmonary condition.,0.75
+21,Plan:,0.0
+22,"I referred the patient to the emergency department for further evaluation and treatment, including a chest X-ray, CT scan, and blood work.",0.25
+23,I also ordered a repeat hemoglobin A1c to assess his diabetes management.,0.75
+24,I increased the dose of metformin to 750 mg twice a day to improve blood sugar control.,0.0
+25,I instructed the patient to hold his norvasc for now and reassess his blood pressure once the episode of shortness of breath is under control.,0.75
+26,Follow-up: The patient will return in three weeks to discuss his diabetes management and treatment plan.,0.5

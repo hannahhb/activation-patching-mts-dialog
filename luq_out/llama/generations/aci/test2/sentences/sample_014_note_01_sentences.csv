@@ -1,0 +1,31 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,HPI: The patient presents with a one-week history of right elbow pain that started after playing lacrosse with his 13-year-old son.,0.5
+2,He describes the pain as sharp and radiating down the forearm.,0.0
+3,"He reports that his son was checking him several times with a lacrosse stick, which may have caused the injury.",0.0
+4,"He has tried taking Advil, which provided some relief.",0.0
+5,"He denies any fever, chest pain, or belly pain.",1.0
+6,Past medical history: The patient has a history of hypertension and diabetes.,0.0
+7,He is currently on lisinopril 20 mg daily and metformin 500 mg daily.,0.0
+8,He reports following a Mediterranean diet and trying to avoid adding salt to his food.,0.5
+9,He has not checked his blood sugar regularly but reports that it has been between 80 to 100 when checked.,1.0
+10,Review of systems: None mentioned.,0.25
+11,Current medications:,0.0
+12,Lisinopril 20 mg daily for hypertension,0.0
+13,Metformin 500 mg daily for diabetes,0.0
+14,Objective:,0.0
+15,"Vital signs: Blood pressure 150/90 mmHg, no other vital signs mentioned.",0.0
+16,"Physical exam: The patient has pain to palpation of the olecranon area of the posterior elbow, mild pain with flexion and extension, and normal range of motion.",0.0
+17,"The lungs are clear bilaterally, and the heart exam shows a grade 2 out of 6 systolic ejection murmur.",0.0
+18,The patient has a bruise on the elbow.,1.0
+19,"Test Results: Normal x-ray of the right elbow, no fracture or bony abnormality.",0.75
+20,Assessment / Problem List:,0.0
+21,"Assessment: The patient has an elbow contusion likely caused by a lacrosse stick injury from his son, with associated pain and swelling.",0.5
+22,Problem list: Elbow contusion; Hypertension; Diabetes.,0.0
+23,Plan:,0.0
+24,I prescribed ibuprofen 800 mg twice daily for pain and swelling.,0.0
+25,I advised the patient to ice the elbow three times a day for 20 minutes to help with swelling and pain.,0.0
+26,I also advised him to avoid playing lacrosse for the next couple of weeks to allow the elbow to heal.,0.0
+27,I will continue the patient on lisinopril 20 mg daily for hypertension and metformin 500 mg daily for diabetes.,0.25
+28,I will order a hemoglobin A1c to check the patient's blood sugar levels.,0.0
+29,"Follow-up: The patient will follow up with me at the next scheduled appointment, and my nurse will provide the patient with the prescribed medications.",0.5

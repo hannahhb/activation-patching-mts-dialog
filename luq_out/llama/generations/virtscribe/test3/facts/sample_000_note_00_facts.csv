@@ -1,0 +1,106 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Maria Martin.,0.0
+1,subjective,The patient is a 74-year-old female.,1.0
+2,subjective,The patient's A1C is 9.9.,0.5
+3,subjective,The patient is taking glimepiride.,0.0
+4,subjective,The glimepiride dose is 2mg.,0.25
+5,subjective,Glimepiride is taken once a day.,1.0
+6,subjective,The patient has not increased the glimepiride dose as previously instructed.,0.25
+7,subjective,The patient consumes wheat bread.,0.25
+8,subjective,The patient consumes peanut butter sandwiches occasionally.,0.5
+9,subjective,The patient drinks club soda.,0.25
+10,subjective,The patient drinks seltzer water.,0.25
+11,subjective,The patient does not drink regular water.,1.0
+12,subjective,The patient has had cataract surgery.,0.5
+13,subjective,The patient experiences peripheral neuropathy in her legs.,0.25
+14,subjective,The patient's peripheral neuropathy causes pain up to her hips.,0.75
+15,subjective,"The patient's feet feel like they are ""like hell.""",1.0
+16,subjective,The patient has a history of high blood pressure.,0.0
+17,subjective,The patient has a history of high cholesterol.,0.0
+18,subjective,The patient has a history of vascular disease in her legs.,0.25
+19,subjective,The patient is taking metoprolol.,0.0
+20,subjective,The metoprolol dose is 50mg.,0.0
+21,subjective,Metoprolol is taken once a day.,0.0
+22,subjective,The patient is taking lisinopril.,0.0
+23,subjective,The lisinopril dose is 20mg.,0.0
+24,subjective,Lisinopril is taken once a day.,0.0
+25,subjective,The patient is taking hydrochlorothiazide.,0.0
+26,subjective,The hydrochlorothiazide dose is 25mg.,0.0
+27,subjective,Hydrochlorothiazide is taken once a day.,0.0
+28,subjective,The patient is taking amlodipine.,0.0
+29,subjective,The amlodipine dose is 10mg.,0.0
+30,subjective,Amlodipine is taken once a day.,0.0
+31,subjective,The patient is taking atorvastatin.,0.0
+32,subjective,The patient has a history of smoking.,0.25
+33,subjective,The patient has not attempted to quit smoking.,0.75
+34,subjective,The patient has a history of cataracts.,0.0
+35,subjective,The patient has undergone cataract surgery.,0.5
+36,subjective,The patient has been prescribed glasses.,1.0
+37,subjective,The patient denies headaches.,0.0
+38,subjective,The patient denies dizziness.,0.0
+39,subjective,The patient denies shortness of breath.,0.25
+40,subjective,The patient denies chest pains.,0.5
+41,subjective,The patient experiences occasional coughing due to congestion.,0.25
+42,subjective,The patient does not have a fever.,0.75
+43,subjective,The patient does not have chills.,0.5
+44,subjective,The patient does not have nausea.,0.25
+45,subjective,The patient experiences urinary frequency.,0.5
+46,subjective,The patient has a slower stream.,0.25
+47,subjective,The patient's stream is stable.,0.5
+48,subjective,The patient urinates several times per day.,0.5
+49,objective,The patient's blood pressure is 140/60.,0.5
+50,objective,The patient's pulse rate is not mentioned.,0.5
+51,objective,The patient's oxygen saturation is not mentioned.,0.0
+52,objective,The patient's temperature is not mentioned.,0.0
+53,objective,The carotid exam is normal.,0.0
+54,objective,The heart exam is regular.,0.0
+55,objective,The heart rate is normal.,0.0
+56,objective,S1 is crisp.,0.5
+57,objective,S2 is crisp.,0.5
+58,objective,No murmurs are present.,0.0
+59,objective,The lungs are clear.,0.0
+60,objective,There are no rasps.,0.0
+61,objective,There is no wheezing.,0.0
+62,objective,The extremities are without edema.,0.0
+63,objective,The dorsalis pedis pulses are palpable.,0.0
+64,objective,The posterior tibial pulses are palpable.,0.0
+65,objective,The patient has thickened nails.,0.0
+66,objective,The patient has mildly dry skin.,0.0
+67,objective,There is no skin breakdown.,0.0
+68,objective,The patient has mildly decreased sensation.,0.25
+69,objective,The mildly decreased sensation is in the tips of the first toe.,0.25
+70,objective,The mildly decreased sensation is in the tips of the second toe.,0.25
+71,assessment,The patient has diabetes mellitus.,0.0
+72,assessment,The patient's diabetes mellitus is poorly controlled.,0.0
+73,assessment,The patient has high blood pressure.,0.0
+74,assessment,The patient has high cholesterol.,0.0
+75,assessment,The patient has peripheral neuropathy.,0.0
+76,assessment,The peripheral neuropathy is located in the patient's legs.,0.75
+77,assessment,The patient has vascular disease.,0.25
+78,assessment,The vascular disease is located in the patient's legs.,0.5
+79,assessment,Diabetes mellitus is a problem.,0.0
+80,assessment,High blood pressure is a problem.,0.0
+81,assessment,High cholesterol is a problem.,0.0
+82,assessment,Peripheral neuropathy is a problem.,0.0
+83,assessment,Vascular disease is a problem.,0.25
+84,plan,The doctor prescribed glimepiride.,0.0
+85,plan,The glimepiride dose is 4mg.,0.0
+86,plan,Glimepiride is taken twice a day.,0.0
+87,plan,Glimepiride is prescribed to improve blood sugar control.,0.0
+88,plan,The patient has pills at home.,0.0
+89,plan,The patient is instructed to take two pills at home twice a day.,0.75
+90,plan,The doctor will continue metformin.,0.5
+91,plan,Metformin is prescribed for the patient.,0.5
+92,plan,The doctor will continue the combination of medications for high blood pressure.,0.25
+93,plan,The doctor will continue the combination of medications for high cholesterol.,0.5
+94,plan,The combination of medications is prescribed for high blood pressure and high cholesterol.,0.5
+95,plan,The doctor advised the patient to quit smoking.,0.0
+96,plan,The patient is not ready to quit smoking.,0.75
+97,plan,The patient smokes.,0.0
+98,plan,The doctor will recheck the patient's blood pressure.,0.5
+99,plan,The doctor will recheck the patient's kidney function.,0.5
+100,plan,The doctor will recheck the patient's blood sugar.,0.25
+101,plan,The patient will follow up in four months.,0.0
+102,plan,The doctor will recheck the patient's blood sugar in four months.,0.75
+103,plan,The doctor will recheck the patient's blood pressure in four months.,0.75
+104,plan,The doctor will recheck the patient's kidney function in four months.,0.75

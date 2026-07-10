@@ -1,0 +1,26 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Melissa Sanchez, is a 59-year-old female presenting for a follow-up appointment after a mitral valve repair on 8/3/2020.",0.25
+2,"She reports feeling pretty good, stating she was having a rough time before surgery but is overall feeling better now.",1.0
+3,"She denies new symptoms, but mentions experiencing occasional chest pains and shallow breathing, which she attributes to exertion.",0.5
+4,She describes the chest pains as lasting a few minutes and disappearing for a couple of weeks before returning.,0.5
+5,"She is taking her medications regularly, including coumadin, lasix, and atenolol, and reports no significant side effects, except for initial irritability with atenolol, which has decreased over time.",0.5
+6,"Past medical history: The patient has a history of mitral regurgitation, atrial fibrillation, diabetes, and asthma.",0.0
+7,"Review of systems: The patient reports occasional chest pains and shallow breathing, which she attributes to exertion.",1.0
+8,"Current medications: I prescribed coumadin 4mg daily, lasix 4mg daily, and atenolol 50mg daily for her conditions.",0.0
+9,Objective:,0.0
+10,Vital signs: [NOT MENTIONED],0.0
+11,"Physical exam: The patient's head and neck exam is unremarkable, with no jugular venous distension (JVD) detected.",0.0
+12,"Lung exam shows reduced breath sounds, but auscultation and percussion are clear.",0.0
+13,"Heart exam reveals an irregularly irregular rhythm, which the patient describes as a ""funny"" statement, and is attributed to atrial fibrillation.",0.75
+14,"S1 is slightly accentuated, and S3 is absent.",0.0
+15,"Abdominal exam is unremarkable, with no tenderness.",0.25
+16,Peripheral edema is noted on extremities.,0.25
+17,"Test Results: The patient's ECG taken on 12/26/2020 reveals atrial fibrillation with a controlled ventricular response and T-wave inversion anteriorly, with no significant changes compared to the previous study.",0.75
+18,Assessment / Problem List:,0.0
+19,"Assessment: The patient's mitral valve repair is progressing well, and her atrial fibrillation is being well-controlled with medication.",0.75
+20,Problem list: Atrial fibrillation; Mitral regurgitation; Diabetes; Asthma,0.0
+21,Plan:,0.0
+22,"I will continue the patient on her current medications, including coumadin 4mg daily, lasix 4mg daily, and atenolol 50mg daily.",0.0
+23,"I advise the patient to continue her current lifestyle changes, including keeping active, as this will help her recovery.",0.25
+24,Follow-up: I recommend a follow-up appointment in 6-9 months to assess her cardiac status.,0.75

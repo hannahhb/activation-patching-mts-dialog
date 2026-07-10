@@ -1,0 +1,52 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Alexis.,0.0
+1,subjective,The patient is a woman.,1.0
+2,subjective,The patient is 30 years old.,1.0
+3,subjective,The patient presents with numbness in her right hand.,0.0
+4,subjective,The patient presents with tingling in her right hand.,0.0
+5,subjective,The numbness and tingling are particularly in her thumb.,0.75
+6,subjective,The numbness and tingling are particularly in her index finger.,1.0
+7,subjective,The numbness and tingling are particularly in her middle finger.,1.0
+8,subjective,The patient experiences pain when typing on a keyboard.,0.0
+9,subjective,The patient experiences pain when using a mouse.,0.0
+10,subjective,The symptoms have been present for 6 months.,0.0
+11,subjective,The symptoms have been more persistent over the last month.,0.0
+12,subjective,The patient takes ibuprofen for pain relief.,0.0
+13,subjective,The ibuprofen dose is 600 milligrams.,0.75
+14,subjective,Ibuprofen is taken four times a day.,0.75
+15,subjective,Ibuprofen is prescribed for pain management.,0.25
+16,subjective,The patient denied pain at night.,0.25
+17,subjective,The symptoms do not affect the patient's sleep.,0.25
+18,subjective,Rest helps alleviate the symptoms.,0.0
+19,subjective,Not typing on the keyboard helps alleviate the symptoms.,0.5
+20,objective,The patient has pain on extension of the wrist.,0.0
+21,objective,The patient has pain on flexion of the wrist.,0.0
+22,objective,The patient has a positive Tinel's sign on the inside of her wrist.,0.5
+23,objective,The patient has a positive Tinel's sign on her forearm.,0.5
+24,objective,The patient has decreased grip strength on the right hand.,0.0
+25,objective,The patient reports numbness in her thumb.,0.5
+26,objective,The patient reports numbness in her index finger.,0.5
+27,objective,The patient reports numbness in her middle finger.,0.5
+28,objective,The patient reports tingling in her thumb.,1.0
+29,objective,The patient reports tingling in her index finger.,1.0
+30,objective,The patient reports tingling in her middle finger.,1.0
+31,assessment,The patient has symptoms.,0.3333
+32,assessment,The patient underwent a physical examination.,1.0
+33,assessment,The physical examination findings are consistent with carpal tunnel syndrome.,1.0
+34,assessment,The doctor suspects carpal tunnel syndrome.,1.0
+35,assessment,The suspicion of carpal tunnel syndrome is based on the patient's symptoms.,1.0
+36,assessment,The suspicion of carpal tunnel syndrome is based on the physical examination findings.,1.0
+37,plan,The patient will wear a wrist splint at night.,0.0
+38,plan,The doctor prescribed a wrist splint.,0.25
+39,plan,The wrist splint is worn at night.,0.0
+40,plan,The doctor will monitor the patient's symptoms.,0.0
+41,plan,The doctor will consider ordering physical therapy.,0.25
+42,plan,The doctor will consider ordering surgery.,0.0
+43,plan,The consideration of physical therapy is pending the results of the nerve conduction studies.,0.25
+44,plan,The consideration of surgery is pending the results of the nerve conduction studies.,0.0
+45,plan,The doctor ordered an EMG.,0.0
+46,plan,The EMG is a nerve conduction study.,0.25
+47,plan,The EMG is to confirm the diagnosis.,0.0
+48,plan,The doctor will review the results of the EMG study.,0.0
+49,plan,The doctor will discuss further treatment options with the patient.,0.0
+50,plan,The discussion of further treatment options will occur at the patient's next visit.,0.25

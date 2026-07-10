@@ -1,0 +1,28 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 45-year-old female, presents with shortness of breath that started over the weekend, which has progressed to the point where she can only walk a short distance without experiencing shortness of breath.",0.5
+2,She reports that she was previously an active person who would walk her dog a mile long every day.,0.5
+3,"She denies coughing, phlegm, fever, body aches, sore throat, and sinus pain, but reports that swallowing is painful, particularly in her chest, and that she has not been taking her prescribed hydrocortisone liquids as much as instructed due to pain.",1.0
+4,The patient has a husband and daughter who provide support.,0.75
+5,"Past medical history: The patient has a recent diagnosis of stage three non-small cell lung cancer, for which she is undergoing neo-Adjuvant chemotherapy with cisplatin and etoposide.",0.25
+6,"She has been experiencing nausea and fatigue from the chemotherapy, but reports that zofran has helped alleviate her nausea.",0.5
+7,"Review of systems: The patient reports dry cough, no phlegm, no fever, and no body aches or sore throat, but does report painful swallowing when swallowing.",0.75
+8,"Current medications: I prescribed zofran to alleviate nausea, hydrocortisone liquids for hydration, and Ensure and milkshakes for nutrition.",1.0
+9,Objective:,0.0
+10,"Vital signs: The patient's pulse, blood pressure, and oxygen saturation are normal.",0.25
+11,Pulse ox is okay.,0.0
+12,"Physical exam: The patient's neck exam is unremarkable, with no cervical lymphadenopathy or subclavicular adenopathy.",0.25
+13,"Her heart exam is regular, with no murmur.",0.25
+14,"Her lung exam reveals crackles in both lungs, which could indicate fluid accumulation due to her lung cancer diagnosis.",0.25
+15,"The skin exam reveals erythema on the anterior aspect of her chest on the left side, which could be due to radiation.",0.0
+16,There is no lower extremity edema.,0.0
+17,"Test Results: The patient had a chest x-ray, which showed mild radiation pneumonitis, or inflammation of the lungs due to radiation.",0.0
+18,Assessment / Problem List:,0.0
+19,"Assessment: The patient has stage three non-small cell lung cancer, radiation pneumonitis, and odynophagia (painful swallowing) due to radiation.",0.5
+20,Problem list: Lung cancer; radiation pneumonitis; odynophagia; active; confirmed; suspected.,1.0
+21,Plan:,0.0
+22,I prescribed prednisone 40 milligrams one tablet a day for five days to reduce inflammation in the lungs and alleviate symptoms.,0.0
+23,"I also prescribed lidocaine spray for painful swallowing, to be taken four times a day.",0.25
+24,The patient should take this before eating and drinking to alleviate pain.,1.0
+25,I will get the patient these medications and see her back in two weeks.,1.0
+26,Follow-up: We will see the patient in two weeks to monitor her progress and adjust her treatment plan as necessary.,0.75

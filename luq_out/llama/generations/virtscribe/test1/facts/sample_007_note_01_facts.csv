@@ -1,0 +1,96 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Diana Scott.,0.0
+1,subjective,The patient is a 100-year-old woman.,0.0
+2,subjective,The patient has a new diagnosis of a heart murmur.,0.25
+3,subjective,The patient is unsure of the severity of the heart murmur.,1.0
+4,subjective,The patient is unsure of the type of heart murmur.,1.0
+5,subjective,The patient denied chest pain.,0.25
+6,subjective,The patient denied shortness of breath.,0.5
+7,subjective,The patient reports severe pain in her legs.,0.0
+8,subjective,The leg pain started about a month ago.,0.0
+9,subjective,The patient reports feeling tired.,0.25
+10,subjective,The patient takes medication for her legs.,0.75
+11,subjective,The patient denied fever.,0.5
+12,subjective,The patient denied chills.,0.5
+13,subjective,The patient denied other symptoms.,0.25
+14,subjective,The patient reports a 70-80% increase in symptoms over the past six months.,0.75
+15,subjective,The patient had no symptoms six months ago.,1.0
+16,subjective,The patient reports feeling lightheaded.,0.0
+17,subjective,The patient reports feeling dizzy.,0.0
+18,subjective,The patient takes medication for lightheadedness and dizziness.,0.25
+19,subjective,The patient denied passing out.,1.0
+20,subjective,The patient denied irregular heartbeats.,1.0
+21,subjective,The patient reports swelling in her ankles.,0.5
+22,subjective,The ankle swelling has been present for about six months.,0.75
+23,subjective,The patient has lost weight over the past year.,0.75
+24,subjective,The patient has a history of multiple surgeries.,0.5
+25,subjective,The patient's son had a heart attack.,0.25
+26,subjective,The patient's brother had a stroke.,0.25
+27,subjective,The patient's brother had sugar diabetes.,0.5
+28,subjective,The patient's eldest sister had a heart problem.,0.5
+29,subjective,The patient never smoked.,0.25
+30,subjective,The patient has no known allergies to medications.,0.5
+31,subjective,The patient reports severe leg pain.,0.0
+32,subjective,The patient reports fatigue.,0.25
+33,subjective,The patient reports lightheadedness.,0.0
+34,subjective,The patient reports dizziness.,0.0
+35,subjective,The doctor prescribed Amlodipine.,0.25
+36,subjective,The Amlodipine dose is 10 mg.,1.0
+37,subjective,Amlodipine is taken daily.,1.0
+38,subjective,Amlodipine is prescribed for hypertension.,1.0
+39,subjective,The doctor prescribed Lisinopril.,0.0
+40,subjective,The Lisinopril dose is 5 mg.,1.0
+41,subjective,Lisinopril is taken daily.,1.0
+42,subjective,Lisinopril is prescribed for hypertension.,1.0
+43,subjective,The doctor prescribed Simvastatin.,0.0
+44,subjective,The Simvastatin dose is 20 mg.,0.25
+45,subjective,Simvastatin is taken daily.,1.0
+46,subjective,Simvastatin is prescribed for hyperlipidemia.,0.75
+47,subjective,The doctor prescribed Levothyroxine.,0.25
+48,subjective,Levothyroxine is prescribed for hyperthyroidism.,1.0
+49,subjective,The doctor prescribed Meclizine.,0.5
+50,subjective,Meclizine is prescribed for lightheadedness and dizziness.,0.25
+51,subjective,Meclizine is prescribed for dizziness.,0.25
+52,objective,The patient is elderly.,0.5
+53,objective,The patient is constitutional.,0.25
+54,objective,The patient is not in acute distress.,0.25
+55,objective,The patient's S1 is normal.,0.75
+56,objective,The patient's S2 is normal.,0.75
+57,objective,The patient's heart rate is normal.,0.75
+58,objective,The patient's heart rhythm is regular.,0.75
+59,objective,The patient has a 4/6 systolic murmur.,0.0
+60,objective,The murmur is located at the right upper sternal border.,0.0
+61,objective,The murmur has mild radiation to the carotids.,0.0
+62,objective,The patient's gait is normal.,0.25
+63,objective,The patient's gait is normal for their age.,0.25
+64,assessment,The patient has a cardiac murmur.,0.0
+65,assessment,The cardiac murmur is 4/6 systolic.,0.5
+66,assessment,The cardiac murmur is located at the upper right sternal border.,0.5
+67,assessment,The cardiac murmur has mild radiation to the carotids.,0.5
+68,assessment,The patient is suspected to have aortic stenosis.,0.0
+69,assessment,Aortic stenosis is the likely cause of the cardiac murmur.,0.0
+70,assessment,The patient has pvcs.,0.0
+71,assessment,The patient has hypolipidemia.,0.0
+72,assessment,The patient has lightheadedness.,0.0
+73,assessment,The patient has dizziness.,0.0
+74,assessment,Lightheadedness and dizziness are related symptoms.,0.25
+75,assessment,The patient's problem list includes cardiac murmur.,0.0
+76,assessment,The patient's problem list includes suspected aortic stenosis.,0.0
+77,assessment,The patient's problem list includes pvcs.,0.0
+78,assessment,The patient's problem list includes hypolipidemia.,0.0
+79,assessment,The patient's problem list includes lightheadedness/dizziness.,0.0
+80,plan,The doctor prescribed amlodipine.,1.0
+81,plan,The amlodipine dose is 10 mg.,1.0
+82,plan,The doctor prescribed lisinopril.,0.5
+83,plan,The lisinopril dose is 5 mg.,1.0
+84,plan,The patient is taking simvastatin.,1.0
+85,plan,The patient has bilateral leg pain.,1.0
+86,plan,The doctor will consider stopping simvastatin.,0.5
+87,plan,The patient will have an echocardiogram.,0.0
+88,plan,The echocardiogram will assess cardiac structure and function.,0.0
+89,plan,The echocardiogram will include a valve view of the heart.,0.0
+90,plan,The doctor will send echocardiogram results to the patient's primary care physician.,0.25
+91,plan,The doctor will send recommendations to the patient's primary care physician.,0.25
+92,plan,The patient will follow up in three to four weeks.,0.0
+93,plan,The patient will discuss echocardiogram results with the doctor.,0.0
+94,plan,The patient will discuss next steps with the doctor.,0.0

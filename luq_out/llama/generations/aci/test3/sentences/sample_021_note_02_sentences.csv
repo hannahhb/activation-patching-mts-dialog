@@ -1,0 +1,27 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Frank, presents with a 1-week history of shortness of breath, which has worsened over the past few days.",0.75
+2,"He reports that this is a recurring issue, as he experienced similar symptoms 6 months ago and was treated with an increased dose of Lasix, which improved his symptoms.",0.0
+3,He denies any fever.,0.75
+4,"Past medical history: Frank has a history of coronary disease, including a heart attack in 2018 for which he underwent stenting of the right coronary artery.",0.0
+5,His ejection fraction was reported to be 35%.,0.0
+6,He has stage 3 chronic kidney disease and has been taking Lasix 40mg daily.,0.0
+7,He reports a history of knee pain and has been advised to avoid Motrin and Advil due to kidney concerns.,1.0
+8,"Review of systems: Frank reports swelling in his legs, nocturia (1-2 times per night), and occasional nocturnal shortness of breath.",1.0
+9,He also reports that his diet has been poor due to holiday gatherings.,0.75
+10,"Current medications: Lasix 40mg daily, unknown dose and frequency of other medications.",0.0
+11,Objective:,0.0
+12,"Vital signs: Blood pressure 135/80, unknown pulse rate, oxygen saturation unknown, temperature unknown.",0.0
+13,"Physical exam: Jugular venous distension 9cm, no carotid bruits, bibasilar crackles with occasional rhonchi, 3/6 systolic ejection murmur at the left base, 1-2+ pitting edema bilaterally.",0.5
+14,Test Results: Not mentioned.,0.0
+15,Assessment / Problem List:,0.0
+16,"Assessment: The patient is experiencing an acute heart failure exacerbation, likely secondary to fluid retention.",0.75
+17,Problem list: Heart failure exacerbation; Coronary artery disease; Stage 3 chronic kidney disease; Possible gout flare.,0.0
+18,Plan:,0.0
+19,"I prescribed Lasix 80mg daily, with instructions to take it in the morning and reassess in 2 days.",1.0
+20,I ordered a chest X-ray to rule out any other cardiac issues.,1.0
+21,I also ordered an echocardiogram to assess the heart murmur and ejection fraction.,0.25
+22,I referred Frank to a dietitian to help manage his diet and potassium levels.,1.0
+23,I instructed him to avoid Motrin and Advil and to use Tylenol for pain management instead.,0.0
+24,I ordered a complete metabolic panel to assess his kidney function.,0.0
+25,Follow-up: I will re-evaluate Frank in 2 days to assess his response to the increased Lasix dose and to reassess his fluid status.,1.0

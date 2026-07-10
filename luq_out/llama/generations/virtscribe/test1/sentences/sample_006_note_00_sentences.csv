@@ -1,0 +1,22 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Judy Gomez, is a 62-year-old female who presents for ongoing management of psoriatic arthritis.",0.75
+2,"She reports that she has been doing well since her last visit, and her symptoms have improved with the current treatment regimen.",0.25
+3,"She mentions that she occasionally experiences increased pain in her feet when she has a day off from her desk job and is more active, but this is not frequent.",0.5
+4,"She denies taking methotrexate on the day of her COVID-19 vaccination, which she believes may have reduced the efficacy of the vaccine, and reports feeling unwell after the first dose but tolerating the second dose after consulting the hotline.",1.0
+5,"Past medical history: The patient has a history of psoriatic arthritis, for which she is currently being treated with methotrexate and prednisone.",0.0
+6,"She has had a recent COVID-19 vaccination, for which she did not take methotrexate on the day of the first dose.",0.75
+7,"Review of systems: The patient reports bruising, particularly on her skin, which she attributes to taking prednisone.",0.5
+8,Current medications: I prescribed methotrexate for psoriatic arthritis.,1.0
+9,Objective:,0.0
+10,Vital signs: [NOT MENTIONED],0.0
+11,"Physical exam: The patient has a good range of motion in her toes and knees, but reports pain in her joint areas, particularly in her feet and knees.",1.0
+12,"She has ridges on her nails, which are consistent with psoriasis.",0.0
+13,Examination of the skin reveals bruising.,1.0
+14,Assessment / Problem List:,0.0
+15,"Assessment: The patient has psoriatic arthritis, which is being managed with methotrexate and prednisone, with plans to discontinue prednisone and continue with methotrexate.",1.0
+16,Problem list: Psoriatic arthritis; suspected bruising due to prednisone use.,0.75
+17,Plan:,0.0
+18,I discontinued the patient's prednisone and instructed her to continue with methotrexate.,0.75
+19,I also instructed her to schedule an appointment for blood work at the front desk and to return in three months.,0.5
+20,Follow-up: The patient is to return in three months for follow-up.,0.0

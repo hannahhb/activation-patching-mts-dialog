@@ -1,0 +1,21 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 39-year-old male, presents with a 3-month history of intermittent cough, initially noticed while loading horses, which was exacerbated by a cold and diagnosed as bronchitis by his primary care physician.",1.0
+2,"A chest X-ray showed a lung nodule, which was confirmed by a CT scan.",0.4444
+3,"He reports being a former smoker, quitting 7 years ago, and has a history of rheumatoid arthritis, well-controlled with methotrexate 7.5mg weekly.",0.0
+4,"Past medical history: The patient has a history of rheumatoid arthritis, well-controlled with methotrexate 7.5mg weekly, and a history of smoking, quitting 7 years ago.",0.1111
+5,"Review of systems: The patient denies pain, shortness of breath, or any other symptoms.",0.3333
+6,Current medications: Methotrexate 7.5mg weekly for rheumatoid arthritis.,0.0
+7,Objective:,0.0
+8,"Vital signs: Blood pressure 124/76, heart rate 70, respiration rate 16, O2 sat on room air 98%.",0.0
+9,"Physical exam: The lungs are clear and equal bilateral, the heart has a regular rate and rhythm with no clicks, rubs, or murmurs, and the extremities have intact pulses and brisk capillary refill.",0.5556
+10,"The skin is pink, warm, and dry with slight swelling in the knuckles, which is consistent with rheumatoid arthritis.",0.5556
+11,"Test Results: A chest CT scan shows a solitary 2cm nodule in the lateral aspect of the right upper lobe, smooth in appearance, with no evidence of emphysematous disease.",0.1111
+12,Assessment / Problem List:,0.0
+13,Assessment: The patient has an incidentally found right upper lobe lung nodule that warrants further evaluation.,0.2222
+14,Problem list: Lung nodule; Rheumatoid Arthritis; History of smoking.,0.1111
+15,"Plan: I will order a pulmonary function test (PFT) to assess lung function, and schedule a PET CT to determine if the nodule is metabolically active.",0.0
+16,I will also schedule a video-assisted thoracoscopy to remove the nodule.,0.8889
+17,"The patient will be under general anesthesia for approximately 1.5 hours, and will have a chest tube until the following day.",0.5556
+18,They will be admitted for 1 night and discharged the next day.,0.0
+19,"Follow-up: The patient will be discharged the day after the procedure, and will follow up with their rheumatologist for continued management of rheumatoid arthritis.",1.0

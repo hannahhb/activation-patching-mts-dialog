@@ -1,0 +1,31 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,HPI: The patient presents with a three-day history of a hacking cough that started with a gradual onset and has progressed to include coughing up green phlegm.,0.0
+2,"The cough is accompanied by a sore throat, nasal congestion, and no fever, shortness of breath, body aches, nausea, or vomiting.",0.0
+3,"The patient has a history of seasonal allergies, which are typically seasonal and present around spring time.",0.25
+4,"The patient has been managing their diabetes with metformin 500mg daily, which has been tolerated well, and has been checking their blood sugars with readings in the range of 120.",0.0
+5,"The patient has a history of hypertension and is currently on hydrochlorothiazide, which has been taken as prescribed.",0.0
+6,"The patient's diet has been a challenge, particularly with sugar intake.",1.0
+7,"Past medical history: The patient has a history of type 2 diabetes, hypertension, and seasonal allergies.",0.0
+8,"Review of systems: The patient denies fever, shortness of breath, body aches, nausea, or vomiting.",0.0
+9,Current medications:,0.0
+10,Metformin 500mg daily for diabetes,0.0
+11,Hydrochlorothiazide taken as prescribed for hypertension,0.0
+12,Objective:,0.0
+13,"Vital signs: Blood pressure is elevated at 144/72, otherwise vital signs are within normal limits.",0.25
+14,Physical exam: The patient's sinuses are tender to palpation bilaterally.,0.0
+15,The pharynx is erythematous and the tonsils are symmetrical without exudates.,0.25
+16,The patient has anterior cervical adenopathy.,0.0
+17,The lungs are clear to auscultation.,0.0
+18,The heart has a regular rate and rhythm with a 2/6 systolic ejection murmur at the left base.,0.75
+19,The lower extremities are without edema.,0.0
+20,Test Results: [NOT MENTIONED],0.0
+21,Assessment / Problem List:,0.0
+22,"Assessment: The patient has an upper respiratory infection, likely caused by a virus, given the sudden onset and the fact that they were exposed to someone with similar symptoms.",1.0
+23,Problem list: Upper respiratory infection; Type 2 diabetes; Hypertension; Seasonal allergies.,1.0
+24,Plan:,0.0
+25,I prescribed Coricidin HBP for the cough and advised the patient to continue drinking plenty of fluids and getting plenty of rest.,0.5
+26,I will check the patient for COVID-19 and will provide results.,0.0
+27,I increased the hydrochlorothiazide dose to 25mg once daily and advised the patient to take it in the morning.,0.75
+28,I also recommended that the patient continue to check their blood pressure at different times of the day.,0.75
+29,Follow-up: The patient will return for a follow-up visit to check their hemoglobin A1c and to reassess their blood pressure.,0.25

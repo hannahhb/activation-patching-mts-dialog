@@ -1,0 +1,34 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 57-year-old male, presents with a 2-week history of shortness of breath, which occurs both at rest and with exertion.",0.75
+2,"He reports coughing up blood for the past 3 weeks, with an estimated 3-4 cups of blood per day.",0.0
+3,"He has a history of diabetes, high blood pressure, and asthma.",0.0
+4,"The patient's blood sugar has been running high, with readings over 200 after meals and around 150 in the morning, despite wearing a dexcom and taking metformin 500mg twice a day.",1.0
+5,"He also takes Norvasc, but has been holding off on taking it due to low blood pressure readings.",0.5
+6,"The patient has a history of knee problems, but no swelling or bruising.",0.75
+7,"Past medical history: The patient has a history of diabetes, high blood pressure, and asthma.",0.0
+8,He has been taking metformin 500mg twice a day for diabetes and Norvasc for high blood pressure.,0.5
+9,"Review of systems: The patient reports coughing up blood, but denies any fever, bruising, or bleeding from other areas.",0.0
+10,Current medications:,0.0
+11,Metformin 500mg twice a day for diabetes,0.25
+12,Norvasc (hold for now),0.75
+13,Objective:,0.0
+14,"Vital signs: The patient's oxygen saturation is 94% on pulse oximetry, and his blood pressure is 120/70 mmHg.",0.25
+15,Physical exam:,0.25
+16,"Lung exam reveals bilateral rails and rhonchi on the right side, with diminished breath sounds on the right side.",1.0
+17,"Heart exam shows a 2/6 systolic ejection murmur, which is unchanged from before.",0.5
+18,Belly exam is soft and non-tender.,0.5
+19,Extremity exam shows 1+ nonpitting edema on both lower extremities.,0.0
+20,Test Results: [NOT MENTIONED],0.0
+21,Assessment / Problem List:,0.0
+22,Assessment: The patient presents with a possible pulmonary infection or another underlying condition causing his shortness of breath and coughing up blood.,0.25
+23,Problem list:,0.0
+24,Diabetes mellitus; Hypertension; Asthma; Cough with hemoptysis; Shortness of breath; Pulmonary infection suspected; Blood clot or another underlying condition suspected.,1.0
+25,Plan:,0.0
+26,I will order a chest x-ray and refer the patient to the emergency department for further evaluation and blood testing.,0.0
+27,I will also order a CT scan of the chest to evaluate for a blood clot or another underlying condition.,0.25
+28,I will hold off on the patient's Norvasc until further evaluation of his blood pressure is complete.,0.5
+29,"Once the patient is stable, we will reassess his blood pressure and adjust his treatment plan accordingly.",0.5
+30,I will also order another hemoglobin A1c to evaluate his diabetes control.,0.75
+31,Follow-up:,0.0
+32,I will have the patient return in 3 weeks to discuss his diabetes treatment plan and adjust his medication as needed.,1.0

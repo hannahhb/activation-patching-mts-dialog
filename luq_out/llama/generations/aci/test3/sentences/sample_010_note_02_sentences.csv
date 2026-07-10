@@ -1,0 +1,26 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: Mr. Thompson is a 67-year-old male with a history of essential hypertension, hyperlipidemia, and osteoarthritis, who presents with fluctuating and elevated blood pressures.",0.0
+2,"He reports feeling lightheaded and experiencing slight headaches, with occasional upper blood pressure readings over 180.",0.0
+3,"He denies fever, nausea, vomiting, diarrhea, palpitations, and passing out.",0.5
+4,He has a history of being able to manage his blood pressure well for the past three to four weeks but has experienced periods of lightheadedness and high blood pressure readings.,1.0
+5,He also mentions a slight heaviness in his chest and some unsteadiness when experiencing dizziness.,0.75
+6,He takes lisinopril 20mg twice daily for hypertension and atorvastatin for hyperlipidemia.,0.25
+7,"Past medical history: Mr. Thompson has a history of essential hypertension, hyperlipidemia, and osteoarthritis.",0.0
+8,"Review of systems: He reports mild bibasilar rales, trace lower extremity edema, and a grade three systolic ejection murmur.",1.0
+9,Current medications:,0.0
+10,Lisinopril 20mg twice daily for hypertension,0.25
+11,Atorvastatin for hyperlipidemia,0.0
+12,Objective:,0.0
+13,Vital signs: [NOT MENTIONED],0.25
+14,"Physical exam: The physical exam is mostly normal and unremarkable, with a grade three out of six systolic ejection murmur, mild bibasilar rales, and trace lower extremity edema on the extremity exam.",0.25
+15,Test Results: [NOT MENTIONED],0.0
+16,Assessment / Problem List:,0.0
+17,"Assessment: Mr. Thompson presents with elevated and fluctuating blood pressures, which require adjustments to his current medication regimen.",1.0
+18,Problem list: Hypertension confirmed; Hyperlipidemia confirmed; Osteoarthritis stable.,1.0
+19,Plan:,0.0
+20,I increased Mr. Thompson's lisinopril to 60mg twice daily and added 25mg of hydrochlorothiazide daily to help control his blood pressure.,0.0
+21,I also instructed him to check his blood pressure twice a day for the next two weeks.,0.25
+22,"I will send a cholesterol panel, CBC with differential, comprehensive metabolic panel, and urinalysis to assess his kidney function.",0.0
+23,"I advised him to continue taking atorvastatin for hyperlipidemia and to continue with his current management plan for osteoarthritis, including taking Tylenol for mild pain and modifying his activity as needed.",0.5
+24,Follow-up: I scheduled a follow-up appointment with Mr. Thompson in two weeks to reassess his blood pressure and adjust his medication regimen as needed.,1.0

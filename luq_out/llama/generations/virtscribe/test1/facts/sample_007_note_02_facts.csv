@@ -1,0 +1,84 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Diana Scott.,0.0
+1,subjective,The patient is a woman.,0.0
+2,subjective,The patient is 100 years old.,0.0
+3,subjective,The patient presented for a new patient visit on 7/9/2021.,0.75
+4,subjective,The patient's primary reason for visit is a worrisome heart murmur.,0.25
+5,subjective,The patient was diagnosed with a heart murmur by her previous doctor.,0.0
+6,subjective,The patient denied chest pain.,0.25
+7,subjective,The patient denied shortness of breath at rest.,0.25
+8,subjective,The patient experiences severe pains in her legs.,0.0
+9,subjective,The patient's leg pains have been ongoing for about a month.,0.0
+10,subjective,The patient feels overly tired.,0.25
+11,subjective,The patient's tiredness is due to taking medication.,0.75
+12,subjective,The patient gets short of breath if she walks too far.,0.75
+13,subjective,The patient gets short of breath if she drinks too much water.,1.0
+14,subjective,The patient experiences lightheadedness.,0.0
+15,subjective,The patient experiences dizziness.,0.0
+16,subjective,The patient manages lightheadedness and dizziness with meclizine.,0.25
+17,subjective,The patient has a history of surgeries.,0.25
+18,subjective,The patient's brother had a stroke.,0.25
+19,subjective,The patient's brother's stroke was due to diabetes.,0.5
+20,subjective,The patient's eldest sister has a heart problem.,0.5
+21,subjective,The patient has never smoked.,0.25
+22,subjective,The patient has no known allergies to medications.,0.5
+23,subjective,The patient experiences swelling in her ankles.,0.5
+24,subjective,The patient's ankle swelling has been ongoing for about six months.,0.75
+25,subjective,The patient's ankle swelling varies in severity.,1.0
+26,subjective,The patient has had a recent weight loss.,1.0
+27,subjective,The patient's weight loss is about 10 pounds.,1.0
+28,subjective,The patient's weight loss occurred over the past year.,0.75
+29,subjective,The doctor prescribed amlodipine.,0.0
+30,subjective,The amlodipine dose is not specified.,0.25
+31,subjective,Amlodipine is taken at a frequency not specified.,0.25
+32,subjective,The doctor prescribed lisinopril.,0.0
+33,subjective,The lisinopril dose is not specified.,0.25
+34,subjective,Lisinopril is taken at a frequency not specified.,0.25
+35,subjective,The doctor prescribed simvastatin.,0.0
+36,subjective,The simvastatin dose is 20mg.,0.25
+37,subjective,Simvastatin is taken at a frequency not specified.,0.25
+38,subjective,Simvastatin is prescribed for lipids.,0.75
+39,subjective,The patient will continue to take amlodipine.,0.5
+40,subjective,The patient will continue to take lisinopril.,0.25
+41,subjective,Simvastatin may be discontinued.,1.0
+42,subjective,Simvastatin discontinuation will be evaluated by the patient's PCP.,1.0
+43,subjective,Meclizine is taken by the patient.,0.25
+44,subjective,The meclizine dose is not specified.,0.0
+45,subjective,Meclizine is taken at a frequency not specified.,0.25
+46,subjective,Meclizine is taken for lightheadedness and dizziness.,0.25
+47,objective,The patient is elderly.,0.5
+48,objective,The patient is in no acute distress.,0.0
+49,objective,The patient has a 4/6 systolic murmur.,0.0
+50,objective,The murmur is located at the right upper sternal border.,0.0
+51,objective,The murmur has mild radiation to the carotids.,0.0
+52,objective,The patient has a normal gait for her age.,0.25
+53,objective,The patient's gait is assessed in relation to her age.,0.25
+54,assessment,The patient has a cardiac murmur.,0.0
+55,assessment,The cardiac murmur most likely represents aortic stenosis.,0.0
+56,assessment,The aortic stenosis may be severe.,0.25
+57,assessment,The patient's S2 is relatively preserved.,0.75
+58,assessment,The preserved S2 suggests moderate stenosis.,0.75
+59,assessment,The patient has suspected aortic stenosis.,0.0
+60,assessment,The patient has pvcs.,0.0
+61,assessment,The patient has hypolipidemia.,0.0
+62,assessment,The patient has lightheadedness.,0.0
+63,assessment,The patient has dizziness.,0.0
+64,plan,The doctor will order an echocardiogram.,0.0
+65,plan,The echocardiogram will assess the patient's cardiac structure.,0.0
+66,plan,The echocardiogram will assess the patient's cardiac function.,0.0
+67,plan,The echocardiogram will include the valve view of the aortic valve.,0.5
+68,plan,The patient may undergo further evaluation.,0.0
+69,plan,The further evaluation may include an ischemic evaluation.,0.75
+70,plan,The further evaluation may include a heart monitor.,0.75
+71,plan,The heart monitor will assess the burden of pvcs.,1.0
+72,plan,The doctor will send the results to the patient's PCP.,0.25
+73,plan,The doctor will send recommendations to the patient's PCP.,0.25
+74,plan,The recommendations will discuss the discontinuation of the patient's statin.,0.75
+75,plan,The patient is taking amlodipine.,0.25
+76,plan,Amlodipine is taken at a frequency that is not specified.,0.5
+77,plan,The patient is taking lisinopril.,0.25
+78,plan,Lisinopril is taken at a frequency that is not specified.,0.5
+79,plan,The patient will continue her current medications.,0.25
+80,plan,The patient will follow up in three to four weeks.,0.0
+81,plan,The follow-up will discuss the results of the echocardiogram.,0.0
+82,plan,The follow-up will discuss next steps.,0.0

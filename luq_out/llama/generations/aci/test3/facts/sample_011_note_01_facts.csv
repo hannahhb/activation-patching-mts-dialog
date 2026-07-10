@@ -1,0 +1,62 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 37-year-old female.,0.0
+1,subjective,The patient presents with a complaint of headache.,0.0
+2,subjective,The headache has been worsening over the past few weeks.,0.0
+3,subjective,The patient's blood pressure has been running high.,0.0
+4,subjective,The patient's blood pressure reading is 160/87.,0.0
+5,subjective,The patient's blood pressure reading is 175/92.,0.0
+6,subjective,The patient has a history of hypertension.,0.0
+7,subjective,The patient has a history of diabetes.,0.0
+8,subjective,The patient takes lisinopril.,0.0
+9,subjective,The patient sometimes forgets to take lisinopril.,0.0
+10,subjective,The patient forgets to take lisinopril particularly on weekends.,0.0
+11,subjective,The patient checks her blood sugar.,0.5
+12,subjective,The patient's blood sugar has been running at around 120.,0.5
+13,subjective,The patient's blood sugar has occasional readings as low as 100.,0.5
+14,subjective,The patient denies significant changes in urination.,0.0
+15,subjective,The patient denies other symptoms.,0.25
+16,subjective,The patient takes Tylenol.,0.0
+17,subjective,The patient takes Tylenol for headaches.,0.0
+18,subjective,Tylenol provides temporary relief for the patient's headaches.,0.0
+19,subjective,The patient's headaches return throughout the day.,1.0
+20,subjective,The patient rates her headaches as a 7 out of 10 initially.,0.25
+21,subjective,The patient's headache pain decreases to a 4 or 5 after taking Tylenol.,0.5
+22,subjective,The patient denies a history of similar headaches.,0.5
+23,subjective,The patient has experienced migraines in the past.,0.5
+24,subjective,The patient does not treat her migraines.,0.25
+25,subjective,The patient denies recent changes in urination.,0.0
+26,subjective,The patient denies recent cough.,0.25
+27,subjective,The patient denies recent runny nose.,0.25
+28,subjective,The patient denies recent congestion.,0.25
+29,subjective,The doctor prescribed lisinopril.,0.0
+30,subjective,The lisinopril dose is 20mg.,0.25
+31,subjective,Lisinopril is taken once daily.,0.0
+32,subjective,Lisinopril is prescribed for hypertension.,0.0
+33,objective,The patient's blood pressure is 160/87.,0.5
+34,objective,The patient's blood pressure is 175/92.,0.5
+35,objective,The patient's last recorded blood pressure was 124/82.,1.0
+36,objective,The patient has tenderness to percussion on the forehead.,0.5
+37,objective,The patient has tenderness to percussion on the cheekbones.,0.5
+38,objective,The patient does not have significant tenderness in the frontal sinuses.,0.5
+39,objective,The patient does not have significant tenderness in the maxillary sinuses.,0.25
+40,assessment,The patient presents with worsening headaches.,0.0
+41,assessment,The patient has elevated blood pressure.,0.0
+42,assessment,The patient's elevated blood pressure is likely related to non-adherence to her lisinopril regimen.,1.0
+43,assessment,The patient's elevated blood pressure is likely related to possible underlying hypertension.,0.0
+44,assessment,The patient is prescribed lisinopril.,1.0
+45,assessment,The patient has hypertension.,0.0
+46,assessment,The patient has diabetes.,0.75
+47,assessment,The patient has headaches.,0.0
+48,plan,The patient is taking lisinopril.,0.0
+49,plan,The lisinopril dose is 40mg.,0.0
+50,plan,The doctor ordered blood tests.,0.0
+51,plan,A hemoglobin A1c test was ordered.,0.0
+52,plan,Other laboratory tests were ordered.,0.0
+53,plan,The patient is taking Tylenol.,0.5
+54,plan,The Tylenol dose is not specified.,0.0
+55,plan,Tylenol is taken for headaches.,0.5
+56,plan,The patient is monitoring her blood pressure.,0.5
+57,plan,A follow-up appointment was scheduled.,0.0
+58,plan,The follow-up appointment is to review blood test results.,0.0
+59,plan,The follow-up appointment is to assess diabetes management.,0.0
+60,plan,The patient will receive diabetic education.,0.25

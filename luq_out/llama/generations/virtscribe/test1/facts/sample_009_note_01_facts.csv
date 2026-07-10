@@ -1,0 +1,78 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Diana Scott.,0.0
+1,subjective,The patient is a female.,0.0
+2,subjective,The patient is 100 years old.,0.0
+3,subjective,The patient presents to the office for a new patient visit.,1.0
+4,subjective,The patient was diagnosed with a heart murmur.,0.0
+5,subjective,The patient is unsure of the severity of the heart murmur.,0.75
+6,subjective,The patient reports no chest pain.,0.0
+7,subjective,The patient experiences severe pains in her legs.,0.0
+8,subjective,The patient's leg pains have been ongoing for about a month.,0.5
+9,subjective,The patient takes pain pills for her leg pains.,0.25
+10,subjective,The patient experiences shortness of breath when walking too far.,0.0
+11,subjective,The patient experiences shortness of breath when walking too fast.,0.5
+12,subjective,The patient experiences shortness of breath when drinking a full glass of water without stopping.,0.25
+13,subjective,The patient denies any fever.,0.0
+14,subjective,The patient denies any chills.,0.25
+15,subjective,The patient has a past medical history of multiple surgeries.,0.25
+16,subjective,The patient is unsure of the specifics of her past surgeries.,0.5
+17,subjective,The patient has a family history of heart problems.,0.0
+18,subjective,The patient's brother had a stroke due to sugar diabetes.,0.5
+19,subjective,The patient's sister has a heart problem.,0.25
+20,subjective,The patient reports severe pains in her legs.,0.0
+21,subjective,The patient reports shortness of breath when walking too far or too fast.,0.0
+22,subjective,The patient reports shortness of breath when drinking a full glass of water without stopping.,0.5
+23,subjective,The patient reports lightheadedness/dizziness.,0.5
+24,subjective,The patient denies any chest pain.,0.0
+25,subjective,The patient is taking Amlodipine.,0.0
+26,subjective,Amlodipine is one of the patient's current medications.,0.0
+27,subjective,The patient is taking Lisinopril.,0.0
+28,subjective,Lisinopril is one of the patient's current medications.,0.0
+29,subjective,The patient is taking Simvastatin.,0.0
+30,subjective,The Simvastatin dose is 20 mg.,0.0
+31,subjective,Simvastatin is one of the patient's current medications.,0.0
+32,subjective,The patient is taking Meclizine.,0.25
+33,subjective,Meclizine is one of the patient's current medications.,0.25
+34,subjective,The patient is taking Levothyroxine.,0.0
+35,subjective,Levothyroxine is one of the patient's current medications.,0.0
+36,objective,The patient is elderly.,0.5
+37,objective,The patient is in no acute distress.,0.5
+38,objective,The patient's cardiovascular exam is normal.,1.0
+39,objective,The patient's S1 is preserved.,0.5
+40,objective,The patient's S2 is preserved.,0.5
+41,objective,The patient's heart rate is normal.,0.5
+42,objective,The patient's heart rhythm is regular.,0.5
+43,objective,The patient has a systolic murmur.,0.0
+44,objective,The systolic murmur is 4 out of 6.,0.0
+45,objective,The systolic murmur is located at the right upper sternal border.,0.0
+46,objective,The systolic murmur has mild radiation to the carotids.,0.0
+47,objective,The patient's gait is normal for their age.,0.5
+48,objective,The patient's neurologic exam is normal.,0.5
+49,assessment,The patient has a cardiac murmur.,0.0
+50,assessment,The cardiac murmur is most likely representative of aortic stenosis.,0.0
+51,assessment,The patient has suspected aortic stenosis.,0.0
+52,assessment,The patient has PVCS.,0.0
+53,assessment,The patient has Hyperlipidemia.,0.0
+54,assessment,The patient has Lightheadedness.,0.0
+55,assessment,The patient has Dizziness.,0.0
+56,assessment,The patient has Hypothyroidism.,1.0
+57,assessment,The patient may need an ischemic evaluation.,0.75
+58,assessment,The patient may need further heart monitoring.,0.25
+59,plan,The patient will undergo an echocardiogram.,0.0
+60,plan,The echocardiogram is to assess overall cardiac structure.,0.0
+61,plan,The echocardiogram is to assess overall cardiac function.,0.0
+62,plan,The Amlodipine dose is not specified.,0.0
+63,plan,The Amlodipine frequency is not specified.,0.0
+64,plan,The Lisinopril dose is not specified.,0.0
+65,plan,The Lisinopril frequency is not specified.,0.0
+66,plan,The Simvastatin dose is not specified.,0.0
+67,plan,The Simvastatin frequency is not specified.,0.0
+68,plan,The patient has bilateral leg pain.,0.5
+69,plan,The patient's age may be a factor in stopping Simvastatin.,0.5
+70,plan,The doctor may stop the patient's Simvastatin.,0.25
+71,plan,The patient will be followed up in 3-4 weeks.,0.0
+72,plan,The follow-up is to discuss the echocardiogram results.,0.0
+73,plan,The follow-up is to discuss next steps.,0.0
+74,plan,The patient's primary care physician will be discussed with regarding Simvastatin.,0.0
+75,plan,Further evaluation may be necessary depending on the echocardiogram results.,0.0
+76,plan,A heart monitor may be necessary depending on the echocardiogram results.,0.5

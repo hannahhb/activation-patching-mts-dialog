@@ -1,0 +1,70 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient presents with a hacking cough.,0.0
+1,subjective,The cough has a gradual onset.,0.0
+2,subjective,The cough has progressed over three days.,0.0
+3,subjective,The patient coughs up green phlegm.,0.0
+4,subjective,The patient has a sore throat.,0.0
+5,subjective,The patient has nasal congestion.,0.0
+6,subjective,The patient denied fever.,0.0
+7,subjective,The patient denied shortness of breath.,0.0
+8,subjective,The patient denied body aches.,0.0
+9,subjective,The patient denied nausea.,0.0
+10,subjective,The patient denied vomiting.,0.0
+11,subjective,The patient has a history of seasonal allergies.,0.0
+12,subjective,Seasonal allergies are typically seasonal.,0.0
+13,subjective,Seasonal allergies present around spring time.,0.25
+14,subjective,The patient has diabetes.,0.0
+15,subjective,The patient is prescribed metformin.,0.0
+16,subjective,The metformin dose is 500mg.,0.0
+17,subjective,Metformin is taken daily.,0.0
+18,subjective,Metformin is prescribed for diabetes.,0.0
+19,subjective,The patient has been checking their blood sugars.,0.25
+20,subjective,Blood sugar readings are in the range of 120.,0.0
+21,subjective,The patient has hypertension.,0.0
+22,subjective,The patient is prescribed hydrochlorothiazide.,0.0
+23,subjective,Hydrochlorothiazide is taken as prescribed.,0.0
+24,subjective,Hydrochlorothiazide is prescribed for hypertension.,0.0
+25,subjective,The patient's diet has been a challenge.,1.0
+26,subjective,The patient has difficulty with sugar intake.,1.0
+27,subjective,The patient has a history of type 2 diabetes.,0.0
+28,subjective,The patient has a history of hypertension.,0.0
+29,objective,The patient's blood pressure is elevated.,0.0
+30,objective,The patient's blood pressure is 144/72.,0.0
+31,objective,The patient's vital signs are otherwise within normal limits.,0.25
+32,objective,The patient's sinuses are tender to palpation.,0.0
+33,objective,The patient's sinuses are tender to palpation bilaterally.,0.0
+34,objective,The patient's pharynx is erythematous.,0.0
+35,objective,The patient's tonsils are symmetrical.,0.25
+36,objective,The patient's tonsils are without exudates.,0.0
+37,objective,The patient has anterior cervical adenopathy.,0.0
+38,objective,The patient's lungs are clear to auscultation.,0.0
+39,objective,The patient's heart has a regular rate.,0.75
+40,objective,The patient's heart has a regular rhythm.,0.75
+41,objective,The patient has a systolic ejection murmur.,0.75
+42,objective,The systolic ejection murmur is 2/6.,0.75
+43,objective,The systolic ejection murmur is located at the left base.,0.75
+44,objective,The patient's lower extremities are without edema.,0.0
+45,assessment,The patient has an upper respiratory infection.,0.0
+46,assessment,The upper respiratory infection is likely caused by a virus.,0.0
+47,assessment,The patient had a sudden onset of symptoms.,1.0
+48,assessment,The patient was exposed to someone with similar symptoms.,0.75
+49,assessment,The patient has Type 2 diabetes.,0.0
+50,assessment,The patient has Hypertension.,0.0
+51,assessment,The patient has Seasonal allergies.,1.0
+52,plan,The doctor prescribed Coricidin HBP.,0.25
+53,plan,The Coricidin HBP dose is not specified.,0.0
+54,plan,Coricidin HBP is prescribed for cough.,0.25
+55,plan,The patient was advised to drink plenty of fluids.,0.25
+56,plan,The patient was advised to get plenty of rest.,0.25
+57,plan,The doctor will check the patient for COVID-19.,0.0
+58,plan,The doctor will provide COVID-19 results.,0.0
+59,plan,The doctor prescribed hydrochlorothiazide.,0.0
+60,plan,The hydrochlorothiazide dose is 25mg.,0.0
+61,plan,Hydrochlorothiazide is taken once daily.,0.0
+62,plan,Hydrochlorothiazide is taken in the morning.,0.75
+63,plan,Hydrochlorothiazide is prescribed for high blood pressure.,0.0
+64,plan,The patient was advised to check their blood pressure.,0.25
+65,plan,The patient was advised to check their blood pressure at different times of the day.,0.75
+66,plan,The patient will return for a follow-up visit.,0.0
+67,plan,The purpose of the follow-up visit is to check hemoglobin A1c.,0.25
+68,plan,The purpose of the follow-up visit is to reassess blood pressure.,0.0

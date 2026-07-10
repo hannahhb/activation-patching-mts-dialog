@@ -1,0 +1,30 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 30-year-old male, presents with a 2-week history of right knee pain following a fall from a tandem bike.",0.5
+2,"He reports that he hit his knee on the curb and took some ibuprofen, which provided temporary relief.",1.0
+3,"However, the pain has persisted and worsened with activities such as walking uphill.",0.5
+4,He denies any previous knee problems and has been taking ibuprofen as needed.,0.0
+5,Past medical history: The patient works as a baby rocker at a children's hospital and enjoys walking his dog.,0.5
+6,"He is physically active and has played sports in high school, but has not been involved in any athletic activities since then.",1.0
+7,"He denies any history of smoking, alcohol, or drug use.",1.0
+8,"Review of systems: The patient reports pain in the right knee, particularly with weight-bearing activities, but denies any other symptoms.",0.75
+9,Current medications: Ibuprofen as needed.,0.25
+10,Objective:,0.0
+11,Vital signs: Not mentioned.,0.0
+12,"Physical exam: The patient's knee was tender to palpation on the medial joint line, with a small abrasion on the medial patella.",0.0
+13,The patient had a slight laxity in the posterior drawer test and a positive one-plus posterior drawer sign.,0.5
+14,The lateral collateral ligament and medial collateral ligament were intact.,0.25
+15,"The patient had full extension and flexion in both knees, with no deformities or crepitus.",0.5
+16,"Test Results: X-rays of the knee were reviewed, which showed no obvious fractures or bone spurs, but the doctor suspects a possible injury to the posterior cruciate ligament (PCL).",0.75
+17,Assessment / Problem List:,0.0
+18,"Assessment: The patient has a suspected injury to the posterior cruciate ligament of the right knee, likely due to a fall from a tandem bike.",1.0
+19,Problem list: Knee pain; suspected posterior cruciate ligament injury; right knee instability; possible meniscus tear or chipped cartilage.,1.0
+20,Plan:,0.0
+21,I prescribed ibuprofen 400mg three times a day for pain management.,1.0
+22,I recommended ice packs a few times a day to reduce swelling.,1.0
+23,"I will send a prescription for a different medication that may be easier to take, which the patient can take twice a day.",0.5
+24,I will get the patient a referral to physical therapy to improve strength and motion.,0.25
+25,I will also get a brace fitted to the patient's knee for temporary support.,0.25
+26,I will re-evaluate the patient in 4-6 weeks to assess progress.,0.0
+27,Follow-up:,0.0
+28,"The patient will follow up in 4-6 weeks to re-evaluate the knee and assess for any need for further treatment, including possible surgery to repair the PCL.",1.0

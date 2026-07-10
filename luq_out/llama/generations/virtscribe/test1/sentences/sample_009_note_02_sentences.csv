@@ -1,0 +1,41 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Diana Scott, a 100-year-old woman, presented to the clinic with a new diagnosis of a heart murmur, described as a ""worrisome"" condition by her previous doctor.",0.25
+2,"She reports no symptoms of chest pain, but experiences severe leg pain, shortness of breath with exertion, and dizziness.",0.25
+3,"She also mentions that her legs swell, particularly her ankles, and has noticed a 10-pound weight loss over the past year.",1.0
+4,"She denies fever, chills, or other symptoms.",0.25
+5,"Past medical history: The patient has a history of multiple surgeries, which she is unable to recall, and a family history of heart problems, including a son's heart attack and an older sister's heart issue.",0.75
+6,She has never smoked and has no known allergies to medications.,0.5
+7,"Review of systems: The patient reports severe leg pain, shortness of breath with exertion, dizziness, and swelling in her ankles.",0.5
+8,She also mentions fatigue due to medication.,0.75
+9,Current medications:,0.0
+10,Amlodipine [dose not specified] [frequency not specified] for [indication not specified],0.25
+11,Lisinopril [dose not specified] [frequency not specified] for [indication not specified],0.0
+12,Simvastatin 20mg [frequency not specified] for [indication not specified],0.0
+13,Levothyroxine [dose not specified] [frequency not specified] for [indication not specified],0.0
+14,Meclizine [dose not specified] [frequency not specified] for [indication not specified],0.25
+15,Objective:,0.0
+16,Vital signs:,0.25
+17,Blood pressure: [not mentioned],0.0
+18,Pulse rate: [not mentioned],0.0
+19,Oxygen saturation: [not mentioned],0.0
+20,Temperature: [not mentioned],0.0
+21,Physical exam:,0.0
+22,"Constitutional: Elderly, otherwise no acute distress.",0.5
+23,Cardiovascular: Normal.,0.75
+24,S1 and S2 preserved with a normal rate and regular rhythm.,0.5
+25,A 4 out of 6 systolic murmur at the right upper sternal border with mild radiation to the carotids.,0.0
+26,Neurologic: Gait is normal for age.,0.5
+27,Test Results:,0.25
+28,ECG: Sinus rhythm with frequent PVCs and an anterior septum infarct pattern.,1.0
+29,Assessment / Problem List:,0.0
+30,"Assessment: The patient has a cardiac murmur, most likely representative of aortic stenosis, which could be severe and is causing her symptoms.",1.0
+31,Problem list:,0.0
+32,Aortic stenosis; suspected; Hyperlipidemia; managed by PCP; Lightheadedness/Dizziness; PVCS; Asymptomatic;,1.0
+33,Plan:,0.0
+34,"I ordered an echocardiogram to assess her overall cardiac structure and function, as well as the severity of her aortic stenosis.",0.75
+35,"Depending on the results, we may consider an ischemic evaluation or further testing, such as a heart monitor, to assess the burden of her PVCs.",0.75
+36,"I also deferred the decision to stop her statin to her PCP, given her bilateral leg pain and age.",0.75
+37,We will review the results of the echocardiogram in 3-4 weeks to discuss next steps.,0.0
+38,Follow-up:,0.0
+39,We will see the patient in 3-4 weeks to discuss the results of the echocardiogram and her next steps.,0.0

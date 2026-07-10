@@ -1,0 +1,72 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a male.,0.0
+1,subjective,The patient is 57 years old.,0.0
+2,subjective,The patient presents with shortness of breath.,0.0
+3,subjective,The shortness of breath has been present for 2 weeks.,0.0
+4,subjective,The patient experiences shortness of breath upon waking.,0.75
+5,subjective,The patient's shortness of breath persists upon exertion.,0.5
+6,subjective,The patient has been coughing up blood.,0.0
+7,subjective,The patient has been coughing up blood for approximately 3 weeks.,0.0
+8,subjective,The quantity of blood coughed up is 3-4 cups per day.,0.0
+9,subjective,The patient denied fever.,0.0
+10,subjective,The patient denied bruising.,0.0
+11,subjective,The patient denied bleeding from other sites.,0.25
+12,subjective,The patient has a history of diabetes.,0.0
+13,subjective,The patient has a history of high blood pressure.,0.0
+14,subjective,The patient has a history of asthma.,0.0
+15,subjective,The patient's blood sugar has been running high.,0.0
+16,subjective,The patient's morning blood sugar readings are around 150.,0.0
+17,subjective,The patient's post-meal blood sugar readings are over 200.,0.25
+18,subjective,The patient is taking metformin.,0.0
+19,subjective,The metformin dose is not specified.,1.0
+20,subjective,The metformin frequency is not specified.,1.0
+21,subjective,Metformin is prescribed for diabetes.,0.0
+22,subjective,The patient is taking norvasc.,0.25
+23,subjective,The norvasc dose is not specified.,0.0
+24,subjective,The norvasc frequency is not specified.,0.0
+25,subjective,Norvasc is prescribed for high blood pressure.,0.5
+26,subjective,The patient has been skipping metformin doses.,1.0
+27,subjective,The patient has been skipping norvasc doses.,0.5
+28,subjective,The reason for skipping doses is low blood pressure.,0.5
+29,subjective,The patient has a history of knee problems.,0.75
+30,subjective,The patient denied knee swelling.,0.75
+31,subjective,The patient has not been to the hospital for this episode.,0.75
+32,subjective,The patient has not been to the emergency room for this episode.,1.0
+33,objective,The patient's pulse is 70.,1.0
+34,objective,The patient's oxygen saturation is 94%.,0.0
+35,objective,The patient has no JVD.,0.25
+36,objective,The patient has no carotid bruits.,0.25
+37,objective,The patient has rails on the right side of the lung.,0.0
+38,objective,The patient has rhonchi on the right side of the lung.,0.0
+39,objective,The patient has diminished breath sounds on the right side.,0.0
+40,objective,The patient has a 2/6 systolic ejection murmur.,0.0
+41,objective,The patient has a regular heart rate.,0.75
+42,objective,The patient has a regular heart rhythm.,0.75
+43,objective,The patient has a soft belly.,0.0
+44,objective,The patient has 1+ nonpitting edema on both lower extremities.,0.0
+45,objective,The patient has no calf tenderness.,0.25
+46,objective,The patient has no negative Homan sign.,0.75
+47,assessment,The patient has an acute respiratory infection.,0.5
+48,assessment,The patient likely has pneumonia.,0.5
+49,assessment,The patient is coughing up blood.,0.0
+50,assessment,The patient has poorly controlled diabetes.,0.25
+51,assessment,The patient's hemoglobin A1c is 7.7.,1.0
+52,assessment,The patient's blood pressure is elevated.,0.25
+53,assessment,The patient's blood pressure reading is 120/70.,1.0
+54,plan,The patient was prescribed a chest X-ray.,0.25
+55,plan,The patient was referred to the emergency department.,0.0
+56,plan,The purpose of the emergency department referral is for further evaluation.,0.0
+57,plan,The purpose of the emergency department referral is for blood testing.,0.0
+58,plan,A CAT scan of the chest was ordered.,0.0
+59,plan,The purpose of the CAT scan is to rule out a blood clot.,0.75
+60,plan,The doctor prescribed metformin.,0.25
+61,plan,The metformin dose is 750 mg.,0.25
+62,plan,Metformin is taken twice a day.,0.25
+63,plan,The doctor prescribed norvasc.,1.0
+64,plan,The patient was instructed to hold norvasc.,0.0
+65,plan,The patient has diabetes.,0.0
+66,plan,The patient has high blood pressure.,0.75
+67,plan,The patient will return to the clinic in three weeks.,0.0
+68,plan,The purpose of the follow-up visit is to discuss the diabetes treatment plan.,0.0
+69,plan,The purpose of the follow-up visit is to reassess blood pressure.,0.5
+70,plan,The patient's current episode will be under control at the follow-up visit.,1.0

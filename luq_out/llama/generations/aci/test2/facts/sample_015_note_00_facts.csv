@@ -1,0 +1,76 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is an 82-year-old male.,0.0
+1,subjective,The patient presents for hospital follow-up.,0.0
+2,subjective,The patient had an acute on chronic congestive heart failure exacerbation.,0.0
+3,subjective,The patient reports feeling well.,0.25
+4,subjective,The patient experienced swelling in his ankles.,0.25
+5,subjective,The patient experienced shortness of breath.,0.25
+6,subjective,The patient was hospitalized for 2 days.,0.75
+7,subjective,The patient received treatment in the hospital.,0.0
+8,subjective,The patient received a medication that caused frequent urination.,0.5
+9,subjective,The patient received a water pill through his IV.,0.75
+10,subjective,The patient reports feeling much better now.,0.5
+11,subjective,The patient has been taking his medications as instructed.,0.75
+12,subjective,The patient monitors his blood pressure with a cuff.,0.5
+13,subjective,The patient purchased a blood pressure cuff.,0.5
+14,subjective,The patient denies shortness of breath.,0.0
+15,subjective,The patient denies chest pain.,0.0
+16,subjective,The patient denies problems sleeping.,0.0
+17,subjective,The patient has a past medical history of hypertension.,0.0
+18,subjective,The patient has stage three chronic kidney disease.,0.0
+19,subjective,The patient denies symptoms in other organs relevant to his initial presentation.,0.0
+20,subjective,The doctor prescribed bumex.,0.25
+21,subjective,The bumex dose is 2 milligrams.,0.25
+22,subjective,Bumex is taken daily.,0.25
+23,subjective,Bumex is prescribed for congestive heart failure.,0.25
+24,subjective,The doctor prescribed cozaar.,0.25
+25,subjective,The cozaar dose is 100 milligrams.,0.25
+26,subjective,Cozaar is taken daily.,0.25
+27,subjective,Cozaar is prescribed for hypertension.,0.25
+28,subjective,The doctor prescribed norvasc.,0.25
+29,subjective,The norvasc dose is 5 milligrams.,0.25
+30,subjective,Norvasc is taken once daily.,0.25
+31,subjective,Norvasc is prescribed for hypertension.,0.25
+32,objective,The patient's blood pressure is 128/72.,0.0
+33,objective,The patient's heart rate is 79.,0.0
+34,objective,The patient's respiratory rate is 26.,0.0
+35,objective,The patient's oxygen saturation is 99%.,0.0
+36,objective,The patient's neck exam is normal.,0.25
+37,objective,The patient has no jugular venous distention.,0.25
+38,objective,The patient has a 2/6 systolic ejection murmur.,0.0
+39,objective,The patient's heart exam reveals a stable murmur.,0.25
+40,objective,The patient's lungs are clear bilaterally.,0.0
+41,objective,The patient has a trace of edema in the lower extremities.,0.0
+42,objective,The patient's EF is 55%.,0.25
+43,objective,The patient's EF is preserved.,0.25
+44,objective,The patient has abnormal diastolic filling.,0.25
+45,objective,The patient has mild to moderate mitral regurgitation.,0.25
+46,objective,The echocardiogram shows abnormal diastolic filling.,0.25
+47,objective,The echocardiogram shows mild to moderate mitral regurgitation.,0.25
+48,objective,The echocardiogram shows a preserved EF of 55%.,0.25
+49,assessment,The patient has congestive heart failure.,0.0
+50,assessment,Congestive heart failure is caused by dietary indiscretion.,1.0
+51,assessment,Congestive heart failure is caused by uncontrolled hypertension.,1.0
+52,assessment,The patient has hypertension.,0.0
+53,assessment,Hypertension is uncontrolled.,0.5
+54,assessment,The patient has suspected secondary causes of hypertension.,1.0
+55,assessment,The patient has kidney disease.,0.0
+56,assessment,Congestive heart failure is a problem.,0.0
+57,assessment,Chronic kidney disease is a problem.,0.0
+58,assessment,Hypertension is a problem.,0.0
+59,assessment,Suspected secondary causes of hypertension is a problem.,1.0
+60,assessment,Kidney disease is a problem.,0.0
+61,plan,The patient is prescribed bumex.,0.0
+62,plan,The patient should watch his diet.,0.0
+63,plan,The patient should avoid salty foods.,0.0
+64,plan,The patient should weigh himself daily.,0.0
+65,plan,The patient should call the doctor if he gains 3 pounds in 2 days.,0.0
+66,plan,The doctor will refer the patient to a nutritionist.,0.0
+67,plan,The nutritionist will educate the patient on healthy eating.,0.0
+68,plan,The patient is prescribed cozaar.,0.25
+69,plan,The patient is prescribed norvasc.,0.25
+70,plan,The doctor will order a renal artery ultrasound.,0.0
+71,plan,The renal artery ultrasound is to rule out secondary causes of hypertension.,1.0
+72,plan,The doctor will obtain additional labs.,0.5
+73,plan,The additional labs are to monitor the patient's kidney disease.,0.5
+74,plan,The patient will be seen again in 3 months.,0.0

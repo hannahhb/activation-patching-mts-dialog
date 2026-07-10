@@ -1,0 +1,99 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is anxious about her recent blood work.,0.0
+1,subjective,The patient's blood work shows hepatitis C.,0.0
+2,subjective,The patient was not aware she had hepatitis C.,0.3333
+3,subjective,The patient does not have symptoms of hepatitis C.,0.1111
+4,subjective,The patient has a history of IV drug use.,0.0
+5,subjective,The patient has been clean from IV drug use for over 15 years.,0.0
+6,subjective,The patient has a history of alcohol use.,0.0
+7,subjective,The patient currently consumes about a beer a day.,0.2222
+8,subjective,The patient smokes one to two cigarettes a day.,0.1111
+9,subjective,The patient denies any other medical conditions except fatigue.,0.5556
+10,subjective,The patient feels tired at the end of the day after working.,0.6667
+11,subjective,The patient's family history is significant for hypertension.,0.0
+12,subjective,The patient's family history is significant for diabetes.,0.0
+13,subjective,The patient's family history is significant for depression.,0.0
+14,subjective,The patient reports being a workaholic.,1.0
+15,subjective,The patient is working on addressing her workaholism.,1.0
+16,subjective,The patient denies lip swelling is not mentioned.,0.8889
+17,subjective,"The patient denies throat swelling is not mentioned. 
+
+However, the above response does contain some redundant information and also some information that was not present in the prompt, a more accurate response would be:
+
+The patient is anxious about her recent blood work.",0.0
+18,subjective,The patient's blood work shows hepatitis C.,0.0
+19,subjective,The patient was not aware she had hepatitis C.,0.3333
+20,subjective,The patient does not have symptoms of hepatitis C.,0.1111
+21,subjective,The patient has a history of IV drug use.,0.0
+22,subjective,The patient has been clean from IV drug use for over 15 years.,0.1111
+23,subjective,The patient has a history of alcohol use.,0.0
+24,subjective,The patient currently consumes about a beer a day.,0.2222
+25,subjective,The patient smokes one to two cigarettes a day.,0.1111
+26,subjective,The patient denies any other medical conditions except fatigue.,0.5556
+27,subjective,The patient feels tired at the end of the day after working.,0.6667
+28,subjective,The patient's family history is significant for hypertension.,0.0
+29,subjective,The patient's family history is significant for diabetes.,0.0
+30,subjective,The patient's family history is significant for depression.,0.0
+31,subjective,The patient reports being a workaholic.,1.0
+32,subjective,"The patient is working on addressing her workaholism. 
+
+This can be further simplified to:
+
+The patient is anxious about her recent blood work.",0.1111
+33,subjective,The patient's blood work shows hepatitis C.,0.0
+34,subjective,The patient was not aware she had hepatitis C.,0.3333
+35,subjective,The patient does not have symptoms of hepatitis C.,0.1111
+36,subjective,The patient has a history of IV drug use.,0.0
+37,subjective,The patient has been clean from IV drug use for over 15 years.,0.0
+38,subjective,The patient has a history of alcohol use.,0.0
+39,subjective,The patient currently consumes about a beer a day.,0.2222
+40,subjective,The patient smokes one to two cigarettes a day.,0.1111
+41,subjective,The patient feels tired at the end of the day after working.,0.6667
+42,subjective,The patient's family history is significant for hypertension.,0.0
+43,subjective,The patient's family history is significant for diabetes.,0.0
+44,subjective,The patient's family history is significant for depression.,0.0
+45,subjective,The patient reports being a workaholic.,1.0
+46,subjective,The patient is working on addressing her workaholism.,1.0
+47,subjective,The patient denies other medical conditions.,0.4444
+48,objective,The patient appears in no distress.,0.0
+49,objective,The patient has no jaundice on skin exam.,0.0
+50,objective,The patient's heart rate is regular.,0.0
+51,objective,The patient's heart rhythm is regular.,0.0
+52,objective,The patient has a 2/6 systolic murmur.,0.0
+53,objective,The patient's systolic murmur has not changed from last year.,0.0
+54,objective,The patient's lungs are clear.,0.0
+55,objective,The patient has no wheezes.,0.0
+56,objective,The patient has no rales.,0.0
+57,objective,The patient has no rhonchi.,0.0
+58,objective,The patient's abdomen is soft.,0.0
+59,objective,The patient has no hepatosplenomegaly.,0.0
+60,objective,The patient's musculoskeletal exam is unremarkable.,0.0
+61,objective,The patient's HCV antibody test was positive.,0.0
+62,objective,The patient's liver panel showed an elevated AST.,0.0
+63,objective,The patient's AST is 39.,0.0
+64,objective,The patient's ALT is within normal limits.,0.7778
+65,objective,The patient's albumin is within normal limits.,0.2222
+66,objective,The patient's total bilirubin is within normal limits.,0.0
+67,assessment,The patient is diagnosed with hepatitis C.,0.0
+68,assessment,Hepatitis C is a viral infection.,0.0
+69,assessment,Hepatitis C affects the liver.,0.1111
+70,assessment,The patient has had hepatitis C for years.,0.4444
+71,assessment,The patient has hepatitis C.,0.0
+72,assessment,The patient has suspected liver disease.,0.0
+73,assessment,The patient has suspected fibrosis of the liver.,0.5556
+74,assessment,The patient has suspected hypertension.,1.0
+75,assessment,The patient has suspected diabetes.,1.0
+76,assessment,The patient has suspected depression.,0.7778
+77,plan,The patient has a diagnosis of hepatitis C.,1.0
+78,plan,The doctor will order additional blood work.,0.0
+79,plan,The additional blood work will include HCV RNA.,0.0
+80,plan,The additional blood work will include HCV genotype.,0.125
+81,plan,The doctor will order a special ultrasound.,0.125
+82,plan,The special ultrasound is to determine the severity of liver disease.,0.0
+83,plan,The patient's wife will undergo screening for hepatitis C.,0.5
+84,plan,The patient's children will undergo screening for hepatitis C.,0.75
+85,plan,The nurse will schedule follow-up appointments.,0.75
+86,plan,The doctor will see the patient in three weeks.,0.0
+87,plan,The purpose of the follow-up appointment is to review the results of the additional blood work.,0.125
+88,plan,The purpose of the follow-up appointment is to review the results of the ultrasound.,0.375
+89,plan,The purpose of the follow-up appointment is to determine the next steps in treatment.,0.125

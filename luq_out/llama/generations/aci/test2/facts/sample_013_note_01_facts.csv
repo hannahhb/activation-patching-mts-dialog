@@ -1,0 +1,48 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Alexis.,0.0
+1,subjective,The patient presents with numbness in her right hand.,0.0
+2,subjective,The patient presents with tingling in her right hand.,0.0
+3,subjective,The numbness and tingling in the patient's right hand have been ongoing for approximately six months.,0.0
+4,subjective,The numbness and tingling in the patient's right hand have increased in persistence over the last month.,0.0
+5,subjective,The patient experiences numbness and tingling all the time.,0.5
+6,subjective,The patient experiences pain in her right hand.,0.0
+7,subjective,The pain in the patient's right hand is particularly present when typing on a keyboard.,0.0
+8,subjective,The pain in the patient's right hand is particularly present when using a mouse.,0.0
+9,subjective,Rest helps alleviate the patient's pain.,0.0
+10,subjective,Ibuprofen helps alleviate the patient's pain.,0.25
+11,subjective,Avoiding typing on the keyboard helps alleviate the patient's pain.,0.5
+12,subjective,Avoiding using a mouse helps alleviate the patient's pain.,1.0
+13,subjective,The patient denied waking up at night due to pain.,0.25
+14,subjective,The patient denied waking up at night due to tingling.,0.25
+15,subjective,The doctor prescribed ibuprofen.,0.5
+16,subjective,The ibuprofen dose is not specified.,0.5
+17,subjective,Ibuprofen is taken as needed.,0.75
+18,subjective,Ibuprofen is prescribed for pain.,0.25
+19,objective,The patient has pain on extension of the wrist.,0.0
+20,objective,The patient has pain on flexion of the wrist.,0.0
+21,objective,The patient has a positive Tinel's sign.,0.0
+22,objective,The patient's Tinel's sign indicates nerve compression.,0.0
+23,objective,The patient has reduced grip strength on the right hand.,0.0
+24,objective,The patient's thumb is experiencing numbness.,0.5
+25,objective,The patient's index finger is experiencing numbness.,0.5
+26,objective,The patient's middle finger is experiencing numbness.,0.5
+27,objective,The patient's reduced grip strength is particularly in the thumb.,0.75
+28,objective,The patient's reduced grip strength is particularly in the index finger.,0.75
+29,objective,The patient's reduced grip strength is particularly in the middle finger.,0.75
+30,assessment,The patient has carpal tunnel syndrome.,0.3333
+31,assessment,Carpal tunnel syndrome is likely due to repetitive strain.,0.6667
+32,assessment,Repetitive strain is from typing.,0.6667
+33,assessment,Repetitive strain is from mouse use.,1.0
+34,assessment,The patient's problem list includes carpal tunnel syndrome.,0.3333
+35,plan,The patient will wear a wrist splint at night.,0.25
+36,plan,The ibuprofen dose is 600mg.,0.25
+37,plan,Ibuprofen is taken four times a day.,0.25
+38,plan,The doctor ordered an EMG nerve conduction study.,0.25
+39,plan,The EMG nerve conduction study is to confirm the diagnosis.,0.0
+40,plan,The patient may need conservative treatment.,0.0
+41,plan,The patient may need surgery.,0.0
+42,plan,Surgery is to release the impingement on the nerves.,0.75
+43,plan,The doctor will review the results of the EMG nerve conduction study.,0.0
+44,plan,The doctor will decide on further treatment after reviewing the EMG results.,0.0
+45,plan,Further treatment may include physical therapy.,0.25
+46,plan,Further treatment may include surgery.,0.0

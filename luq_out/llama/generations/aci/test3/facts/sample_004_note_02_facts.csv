@@ -1,0 +1,54 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 30-year-old male.,0.5
+1,subjective,The patient presented with a 2-week history of right knee pain.,0.25
+2,subjective,The patient's right knee pain followed a fall from a tandem bike.,0.25
+3,subjective,The patient hit his right knee on the curb.,0.75
+4,subjective,The patient took ibuprofen after the incident.,0.0
+5,subjective,The patient's right knee pain persists.,0.25
+6,subjective,The patient has taken ibuprofen for more than 2 weeks.,1.0
+7,subjective,The patient acknowledges that taking ibuprofen for more than 2 weeks is not recommended.,1.0
+8,subjective,The patient denied any pre-existing knee problems.,0.0
+9,subjective,The patient's knee was normal before the incident.,0.0
+10,subjective,The patient works in a children's hospital.,0.0
+11,subjective,The patient's job is a baby rocker.,0.0
+12,subjective,The patient spends most of his free time walking his dog.,1.0
+13,subjective,The patient does not engage in athletic activities.,0.75
+14,subjective,The patient occasionally swims.,0.25
+15,subjective,The patient's knee hurts when walking up hills.,0.5
+16,subjective,The patient denied any weakness in the knee.,0.5
+17,subjective,The patient has been taking ibuprofen.,0.0
+18,subjective,The ibuprofen is taken as needed.,0.25
+19,subjective,Ibuprofen is prescribed for pain.,0.25
+20,objective,The patient's right knee has medial joint line tenderness.,0.5
+21,objective,The patient's right knee has a dime-sized abrasion over the medial patella.,1.0
+22,objective,The patient's right knee has a little laxity in the posterior drawer.,0.75
+23,objective,The patient's left knee is normal.,0.75
+24,objective,The patient has full extension in both knees.,0.5
+25,objective,The patient has full flexion in both knees.,0.25
+26,objective,The patient's knees have no deformities.,0.0
+27,objective,The patient's knees have no crepitus.,0.5
+28,objective,The patient had x-rays taken.,0.0
+29,objective,The patient's x-rays showed no obvious abnormalities.,0.0
+30,objective,The doctor suspects a possible injury to the posterior cruciate ligament (PCL).,0.25
+31,objective,The suspected injury is to the posterior cruciate ligament (PCL) in the right knee.,0.25
+32,assessment,The patient has a PCL injury.,0.75
+33,assessment,The patient possibly has internal knee damage.,0.0
+34,assessment,The patient possibly has a meniscus tear.,0.0
+35,assessment,The patient possibly has cartilage damage.,0.0
+36,assessment,The patient has knee instability.,0.25
+37,assessment,PCL injury is a problem.,0.0
+38,assessment,Possible meniscus tear is a problem.,0.0
+39,assessment,Possible cartilage damage is a problem.,0.0
+40,assessment,Knee instability is a problem.,0.25
+41,plan,The doctor prescribed ibuprofen.,0.25
+42,plan,The ibuprofen dose is not specified.,0.5
+43,plan,Ibuprofen is taken up to 3 times a day.,0.5
+44,plan,Ibuprofen is prescribed for pain management.,0.25
+45,plan,The doctor will prescribe a different medication.,0.25
+46,plan,The different medication may be easier to take.,0.5
+47,plan,The different medication is less frequent.,0.75
+48,plan,The doctor referred the patient to physical therapy.,0.0
+49,plan,The doctor ordered a brace.,0.0
+50,plan,The brace is for temporary support.,0.0
+51,plan,The patient will return in 4-6 weeks for a follow-up appointment.,0.0
+52,plan,The follow-up appointment is to reassess the patient's progress.,0.0

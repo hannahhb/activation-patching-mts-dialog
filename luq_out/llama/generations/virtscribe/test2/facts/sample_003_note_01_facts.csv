@@ -1,0 +1,90 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Mr. Watson.,0.25
+1,subjective,The patient is an 86-year-old male.,0.0
+2,subjective,The patient has a history of adult hydrocephalus.,0.0
+3,subjective,The patient has a history of progressive gait impairment.,0.25
+4,subjective,The patient has a history of cognitive impairment.,0.0
+5,subjective,The patient has a history of decreased bladder control.,0.0
+6,subjective,The patient's gait impairment has been progressive over 8-10 years.,0.25
+7,subjective,The patient's cognitive impairment has been progressive over 8-10 years.,0.25
+8,subjective,The patient's decreased bladder control has been progressive over 8-10 years.,0.25
+9,subjective,"The patient underwent shunt surgery on August 1st, 2020.",0.0
+10,subjective,The patient has a Medtronic Strata programmable shunt.,0.0
+11,subjective,The Medtronic Strata programmable shunt is in the ventricular peritoneal configuration.,0.0
+12,subjective,The Medtronic Strata programmable shunt is set at level 2.0.,0.25
+13,subjective,The patient's symptoms have improved since surgery.,0.0
+14,subjective,The patient's walking ability has increased since surgery.,0.0
+15,subjective,The patient is able to walk to the dining room without assistance.,0.75
+16,subjective,The patient requires help with walking at times.,0.0
+17,subjective,The patient's bladder control has improved since surgery.,0.25
+18,subjective,The patient wears diapers.,0.0
+19,subjective,The patient's cognitive function has improved since surgery.,0.75
+20,subjective,The patient reports feeling less lost when conversing with others.,0.75
+21,subjective,The patient denied headaches.,0.25
+22,subjective,The patient denied pain.,0.5
+23,subjective,The patient denied sores from wearing a diaper.,0.25
+24,subjective,The patient has a past medical history of adult hydrocephalus.,0.0
+25,subjective,The patient has a spino catheter protocol established in June 2020.,0.75
+26,subjective,"The patient had shunt surgery on August 1st, 2020.",0.0
+27,subjective,The patient experiences gait impairment.,0.0
+28,subjective,The patient experiences urinary incontinence.,0.0
+29,subjective,The patient experiences urinary urgency.,1.0
+30,subjective,The patient experiences cognitive impairment.,0.0
+31,subjective,The patient requires assistance with walking.,0.0
+32,subjective,The patient requires assistance with bladder control.,0.25
+33,subjective,The patient has not had any recent hospitalizations.,0.75
+34,subjective,The patient's daughter is Theresa.,1.0
+35,subjective,Theresa reports that the patient has been doing much better since surgery.,0.75
+36,subjective,Theresa reports that the patient has improved walking ability since surgery.,0.5
+37,subjective,Theresa reports that the patient has improved bladder control since surgery.,0.5
+38,subjective,The patient is concerned about driving again.,1.0
+39,subjective,The doctor informs the patient that it is unlikely that his movement speed will improve to the level needed to pass a driver safety evaluation.,1.0
+40,subjective,The patient's movement speed may improve over a 9-12 month range.,1.0
+41,objective,The patient's blood pressure is 124/80.,0.0
+42,objective,The patient's heart rate is 64.,0.0
+43,objective,The patient's respirations are 18.,0.0
+44,objective,The patient's weight is 174 pounds.,0.0
+45,objective,The patient's pain level is 0 out of 10.,0.0
+46,objective,The shunt site is clean.,0.0
+47,objective,The shunt site is dry.,0.0
+48,objective,The shunt site is intact.,0.0
+49,objective,The shunt setting is 2.0.,0.0
+50,objective,The patient was able to converse easily.,0.5
+51,objective,The patient was cooperative during the exam.,0.25
+52,objective,The patient's gait testing score is 18-20 out of 28.,0.25
+53,objective,The patient's gait testing score showed slight improvement.,0.5
+54,objective,The Tinetti assessment tool was used for gait testing.,0.25
+55,objective,The patient's cranial nerves are intact.,0.5
+56,objective,The patient's pupils are intact.,0.5
+57,objective,The patient's eoms are intact.,0.5
+58,objective,The patient denied disarchria.,0.75
+59,objective,The patient denied motor abnormalities.,1.0
+60,objective,A CT scan was performed on 10/15/2020.,0.0
+61,objective,The frontal horn span at the level of foramen of Monro is 4.6 cm.,0.0
+62,objective,The third ventricular contour is flat.,0.0
+63,objective,The third ventricular span is 10 mm.,0.0
+64,objective,There is a tiny amount of blood in the right frontal region.,0.0
+65,objective,There is a tiny subdermal collection in the right frontal region.,0.25
+66,objective,The radiologist did not notice the subdermal collection.,0.5
+67,assessment,Mr. Watson is a man.,0.75
+68,assessment,Mr. Watson is pleasant.,0.75
+69,assessment,Mr. Watson is cooperative.,0.75
+70,assessment,The patient has adult hydrocephalus.,0.0
+71,assessment,The patient has gait impairment.,0.0
+72,assessment,The patient has urinary incontinence.,0.0
+73,assessment,The patient has urinary urgency.,0.0
+74,assessment,The patient has cognitive impairment.,0.0
+75,assessment,Adult hydrocephalus is active.,0.0
+76,assessment,Gait impairment is active.,0.0
+77,assessment,Urinary incontinence is active.,0.0
+78,assessment,Urinary urgency is active.,0.0
+79,assessment,Cognitive impairment is active.,0.0
+80,assessment,The patient's symptoms of adult hydrocephalus are improving.,0.5
+81,assessment,The patient's symptoms of gait impairment are improving.,0.5
+82,assessment,The patient's symptoms of urinary incontinence and urgency are improving.,0.75
+83,assessment,The patient's symptoms of cognitive impairment are improving.,0.75
+84,plan,The doctor will continue to monitor the patient's progress.,0.0
+85,plan,The patient will be re-evaluated in 3 months.,0.0
+86,plan,The doctor recommended a driver safety program for the patient.,0.5
+87,plan,The driver safety program is to assess the patient's ability to drive.,0.75
+88,plan,The patient will return in 3 months for re-evaluation.,0.0

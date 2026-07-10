@@ -1,0 +1,75 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient presents with a 5-day history of right knee pain.,0.0
+1,subjective,The patient's right knee pain started after a skiing accident.,0.1111
+2,subjective,The patient twisted his knee while landing from a jump.,0.1111
+3,subjective,The patient reports swelling in his right knee.,0.2222
+4,subjective,The patient reports pain in his right knee.,0.0
+5,subjective,The patient reports difficulty climbing stairs.,0.8889
+6,subjective,The patient reports difficulty bending due to soreness.,0.6667
+7,subjective,The patient denied hearing a pop during the incident.,0.4444
+8,subjective,The patient denied feeling anything pop during the incident.,0.4444
+9,subjective,The patient has not had any similar injuries to this knee before.,0.4444
+10,subjective,The patient had his tonsils out.,0.0
+11,subjective,The patient has no other surgeries noted in his record.,0.8889
+12,subjective,The patient has a history of hypertension.,0.0
+13,subjective,The doctor prescribed lisinopril.,0.2222
+14,subjective,The lisinopril dose is 20 mg.,0.0
+15,subjective,Lisinopril is taken daily.,0.0
+16,subjective,Lisinopril is prescribed for hypertension.,0.0
+17,subjective,The patient checks his blood pressure at home.,0.3333
+18,subjective,The patient's blood pressure has been around 125/80 most days.,0.3333
+19,subjective,The patient denies numbness in his foot.,0.0
+20,subjective,The patient denies tingling in his foot.,0.0
+21,subjective,The patient reports swelling in his right knee.,0.2222
+22,subjective,The patient reports pain in his right knee.,0.0
+23,objective,The patient's blood pressure is 120/77.,0.2222
+24,objective,The patient has ecchymosis on his right knee.,0.0
+25,objective,The patient has edema on his right knee.,0.0
+26,objective,The patient has an effusion on his right knee.,0.0
+27,objective,The patient has pain to palpation of the right medial knee.,0.0
+28,objective,The patient has decreased range of motion.,0.0
+29,objective,The varus test is negative.,0.0
+30,objective,The valgus test is negative.,0.0
+31,objective,The Lachman sign is negative.,0.1111
+32,objective,The patient has a palpable dorsalis pedis pulse.,0.1111
+33,objective,The patient has a palpable posterior tibial pulse.,0.1111
+34,assessment,The patient has a medial collateral ligament strain.,0.0
+35,assessment,The medial collateral ligament strain is located in the right knee.,0.0
+36,assessment,The patient has Hypertension.,0.0
+37,assessment,The patient has a past medical history of tonsillectomy.,0.4444
+38,assessment,The patient's tonsillectomy is a past medical history.,0.4444
+39,assessment,The medial collateral ligament strain is in the right knee.,0.0
+40,assessment,Medial collateral ligament strain is a problem.,0.0
+41,assessment,Hypertension is a problem.,0.0
+42,assessment,"Tonsillectomy is a past medical history problem. 
+
+Revised to remove redundant and rephrased facts:
+The patient has a medial collateral ligament strain.",0.4444
+43,assessment,The medial collateral ligament strain is located in the right knee.,0.0
+44,assessment,The patient has Hypertension.,0.0
+45,assessment,The patient has a past medical history of tonsillectomy.,0.4444
+46,assessment,Medial collateral ligament strain is a problem.,0.0
+47,assessment,Hypertension is a problem.,0.0
+48,plan,The doctor prescribed meloxicam.,0.0
+49,plan,The meloxicam dose is 15 mg.,0.0
+50,plan,Meloxicam is taken once daily.,0.0
+51,plan,Meloxicam is prescribed to reduce swelling.,0.0
+52,plan,Meloxicam is prescribed to reduce pain.,0.0
+53,plan,The pain is located in the right knee.,0.2222
+54,plan,The swelling is located in the right knee.,0.5556
+55,plan,The doctor ordered an x-ray of the right knee.,0.0
+56,plan,The x-ray is to rule out broken bones.,0.0
+57,plan,The doctor referred the patient to physical therapy.,0.0
+58,plan,Physical therapy is to strengthen the muscles.,0.0
+59,plan,The muscles are around the knee.,0.0
+60,plan,The doctor continued lisinopril.,0.2222
+61,plan,The lisinopril dose is 20 mg.,0.2222
+62,plan,Lisinopril is taken daily.,0.2222
+63,plan,Lisinopril is prescribed for hypertension.,0.2222
+64,plan,The doctor ordered a lipid panel.,0.0
+65,plan,The lipid panel is to check lipid levels.,0.0
+66,plan,The doctor administered a tetanus shot.,0.1111
+67,plan,The tetanus shot is for health maintenance.,0.0
+68,plan,The patient will return for follow-up.,0.0
+69,plan,The follow-up is after the x-ray results are available.,0.1111
+70,plan,The patient's treatment will be reassessed at follow-up.,0.0

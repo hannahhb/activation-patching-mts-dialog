@@ -1,0 +1,64 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Melissa Sanchez.,0.25
+1,subjective,The patient is a female.,0.0
+2,subjective,The patient is 59 years old.,0.0
+3,subjective,The patient has a history of mitral regurgitation.,0.0
+4,subjective,The patient has a history of atrial fibrillation.,0.0
+5,subjective,The patient has a history of diabetes.,0.0
+6,subjective,The patient has a history of asthma.,0.0
+7,subjective,The patient has a history of recurrent chest discomfort.,0.0
+8,subjective,The patient had a negative cardiac work-up for coronary artery disease.,0.25
+9,subjective,The patient had mitral valve repair surgery on 8/3/2020.,0.0
+10,subjective,The patient reports feeling better overall since her mitral valve repair surgery.,0.0
+11,subjective,The patient experiences occasional chest pain.,0.0
+12,subjective,The patient experiences shallow breathing.,0.0
+13,subjective,The patient's chest pain and shallow breathing occur particularly with exertion.,0.0
+14,subjective,The patient manages her symptoms by slowing down.,0.5
+15,subjective,The patient manages her symptoms by taking medication as prescribed.,0.0
+16,subjective,The doctor prescribed Coumadin.,0.25
+17,subjective,The Coumadin dose is 4 mg.,0.0
+18,subjective,Coumadin is taken daily.,0.25
+19,subjective,The doctor prescribed Lasix.,0.0
+20,subjective,"The Lasix dose is 40 mg is incorrect, it is 4 mg daily, so: The Lasix dose is 4 mg.",0.0
+21,subjective,Lasix is taken daily.,0.0
+22,subjective,The doctor prescribed Atenolol.,0.0
+23,subjective,The Atenolol dose is 50 mg.,0.0
+24,subjective,Atenolol is taken daily.,0.0
+25,subjective,The patient experienced irritability with Atenolol.,0.25
+26,subjective,The patient's irritability with Atenolol has subsided.,0.25
+27,objective,The patient has no JVD detected.,0.0
+28,objective,The patient's lungs have reduced breath sounds.,0.0
+29,objective,The patient's lungs have clear auscultation.,0.0
+30,objective,The patient's lungs have clear percussion.,0.0
+31,objective,The patient's heart has an irregularly irregular rhythm.,0.0
+32,objective,The patient's heart has no mass detected.,1.0
+33,objective,The patient's S1 is slightly accentuated.,0.0
+34,objective,The patient has no S3.,0.0
+35,objective,The patient has no pain on heart palpation.,1.0
+36,objective,The patient's abdomen has no tenderness.,0.25
+37,objective,The patient has trace peripheral edema.,0.0
+38,objective,An ECG was taken on 12/26/2020.,0.25
+39,objective,The ECG shows atrial fibrillation.,0.0
+40,objective,The ECG shows a controlled ventricular response.,0.25
+41,objective,The ECG shows T wave inversion anteriorly.,0.5
+42,assessment,The patient's heart valves are working well.,1.0
+43,assessment,The patient is recovering from mitral valve repair surgery.,0.5
+44,assessment,The patient has ongoing atrial fibrillation.,0.0
+45,assessment,The patient's atrial fibrillation is being well controlled with medication.,0.25
+46,assessment,The patient has atrial fibrillation.,0.0
+47,assessment,The patient has mitral regurgitation.,0.25
+48,assessment,The patient has diabetes.,0.0
+49,assessment,The patient has asthma.,0.0
+50,assessment,The patient has recurrent chest discomfort.,0.5
+51,assessment,The patient has a history of coronary artery disease.,0.25
+52,plan,The patient is taking Coumadin.,0.0
+53,plan,The patient is taking Lasix.,0.0
+54,plan,The Lasix dose is 4 mg.,0.0
+55,plan,The patient is taking Atenolol.,0.0
+56,plan,The patient was advised to slow down.,1.0
+57,plan,The patient was advised to avoid overexertion.,1.0
+58,plan,The patient was recommended to stay active.,0.25
+59,plan,The patient was recommended to maintain a healthy lifestyle.,0.0
+60,plan,A follow-up appointment is scheduled.,0.0
+61,plan,The follow-up appointment is in 6-9 months.,0.0
+62,plan,The purpose of the follow-up appointment is to check on her cardiac status.,0.5

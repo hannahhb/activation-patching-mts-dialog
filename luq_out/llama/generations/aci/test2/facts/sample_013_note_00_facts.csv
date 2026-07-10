@@ -1,0 +1,57 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Alexis.,0.0
+1,subjective,The patient has a 6-month history of intermittent numbness.,0.5
+2,subjective,The patient has a 6-month history of intermittent tingling.,0.5
+3,subjective,The numbness is in her right hand.,0.0
+4,subjective,The tingling is in her right hand.,0.0
+5,subjective,The numbness has become more persistent over the last month.,0.0
+6,subjective,The tingling has become more persistent over the last month.,0.0
+7,subjective,The patient reports some pain.,0.0
+8,subjective,The pain is primarily when typing on the keyboard.,0.75
+9,subjective,The patient experiences pain when moving her mouse.,0.0
+10,subjective,Ibuprofen helps alleviate the symptoms.,0.25
+11,subjective,Rest helps alleviate the symptoms.,0.0
+12,subjective,The patient denies any pain at night.,0.25
+13,subjective,The patient denies any numbness at night.,0.75
+14,subjective,The symptoms are not affecting her sleep.,0.25
+15,subjective,The patient uses ibuprofen for pain management.,0.0
+16,subjective,The patient has numbness in her thumb.,0.5
+17,subjective,The patient has numbness in her index finger.,0.5
+18,subjective,The patient has numbness in her middle finger.,0.5
+19,subjective,The patient's ring finger feels normal.,1.0
+20,subjective,The patient's little finger feels normal.,1.0
+21,subjective,The patient has less grip strength on the right hand.,0.75
+22,subjective,A positive Tinel's sign is present.,1.0
+23,subjective,The positive Tinel's sign is in her right hand.,1.0
+24,objective,The patient has pain on extension of the wrist.,0.0
+25,objective,The patient has pain on flexion of the wrist.,0.0
+26,objective,The patient has numbness in the thumb.,0.5
+27,objective,The patient has numbness in the index finger.,0.5
+28,objective,The patient has numbness in the middle finger.,0.5
+29,objective,The patient has normal sensation in the ring finger.,1.0
+30,objective,The patient has normal sensation in the little finger.,1.0
+31,objective,The patient has a positive Tinel's sign.,0.0
+32,objective,Grip strength is less in the right hand.,0.0
+33,objective,The right hand has decreased grip strength.,0.0
+34,assessment,The patient has carpal tunnel syndrome.,0.3333
+35,assessment,Carpal tunnel syndrome is likely due to repetitive strain.,0.6667
+36,assessment,The repetitive strain is from data entry.,1.0
+37,assessment,The patient's carpal tunnel syndrome is active.,0.6667
+38,assessment,The patient has suspected nerve compression.,0.0
+39,assessment,The suspected nerve compression is in the wrist.,0.0
+40,assessment,Carpal tunnel syndrome is a problem for the patient.,0.0
+41,assessment,Suspected nerve compression in the wrist is a problem for the patient.,0.0
+42,plan,The doctor prescribed ibuprofen.,0.25
+43,plan,The ibuprofen dose is 600 mg.,0.25
+44,plan,Ibuprofen is taken four times a day.,0.25
+45,plan,Ibuprofen is prescribed for pain management.,0.25
+46,plan,The doctor ordered an EMG.,0.25
+47,plan,The doctor ordered a nerve conduction study.,0.25
+48,plan,The purpose of the EMG and nerve conduction study is to confirm the diagnosis.,0.0
+49,plan,The patient will wear a wrist splint at night.,0.25
+50,plan,The wrist splint is to help alleviate symptoms.,0.5
+51,plan,The doctor will discuss further treatment options if the test results are positive.,0.25
+52,plan,Physical therapy is a possible further treatment option.,0.25
+53,plan,Surgery is a possible further treatment option.,0.0
+54,plan,The doctor will schedule a follow-up appointment.,0.0
+55,plan,The purpose of the follow-up appointment is to review the EMG and nerve conduction study results.,0.0

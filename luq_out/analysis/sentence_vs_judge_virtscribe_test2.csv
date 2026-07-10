@@ -1,0 +1,328 @@
+sample_idx,note_idx,sentence,label,uncertainty,nonfaithful
+0,0,"HPI: This 20-year-old female was seen today for a yearly follow-up for asthma, allergic rhinitis, and food allergy.",Faithful,0.0,0
+0,0,"She reports that she has been tolerating her current medication regimen well, taking Wixela 250/50 twice a day and Zyrtec as needed for seasonal allergy symptoms.",Faithful,0.5,0
+0,0,She has a known peanut allergy but tolerates almonds and cashews.,Faithful,0.0,0
+0,0,"She has been trying to reduce her use of her albuterol inhaler, taking it only for strenuous activities.",Faithful,0.5,0
+0,0,She has a history of vaping and smoking but is currently trying to quit.,Faithful,0.5,0
+0,0,"Past medical history: Known peanut allergy, asthma, allergic rhinitis, seasonal allergies.",Faithful,0.0,0
+0,0,Review of systems: [NOT MENTIONED],Fabrication,0.75,1
+0,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+0,0,"Physical exam: The patient's ears had a little bit of wax on both sides, and her lungs sounded terrific.",Faithful,0.25,0
+0,0,Her breathing test results are about the same as they were a couple of years ago and look a little bit better.,Faithful,0.75,0
+0,0,Test Results: [NOT MENTIONED],Fabrication,0.0,1
+0,0,"Assessment: The patient's asthma is well-controlled, and she is tolerating her current medication regimen well.",Faithful,0.75,0
+0,0,Problem list: Asthma; Allergic rhinitis; Food allergy; Peanut allergy.,Faithful,1.0,0
+0,0,"I will call in a new prescription for Alvesco 80 mcg, two puffs twice a day, and instruct the patient to continue using her albuterol inhaler as needed.",Faithful,0.75,0
+0,0,I will also renew her epipen and Zyrtec prescription.,Contextual,1.0,1
+0,0,I will instruct the patient to continue to stay away from peanuts and tree nuts.,Faithful,0.0,0
+1,0,HPI: Mr. Roberts is a 49-year-old male with a history of hypertension and palpitations.,Faithful,0.0,0
+1,0,"He presented to the emergency room in March with high blood pressure and palpitations, which he attributed to a panic attack triggered by caffeine consumption and lack of breakfast.",Faithful,0.75,0
+1,0,He has a family history of hypertension and has been taking medication for it.,Faithful,0.0,0
+1,0,He is currently on Benicar HCT (hydrochlorothiazide) and amlodipine.,Faithful,0.0,0
+1,0,"His blood pressure has been running at 146-155 mmHg, despite taking his medications as prescribed.",Faithful,0.25,0
+1,0,Past medical history: Mr. Roberts has a history of hypertension and a family history of the same condition.,Faithful,0.0,0
+1,0,Review of systems: He denies any other symptoms.,Fabrication,0.25,1
+1,0,"Current medications: Amlodipine 10 milligrams daily, Benicar HCT (hydrochlorothiazide) 40-25 milligrams daily.",Faithful,0.25,0
+1,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+1,0,Physical exam: The patient's heart and lungs sound good.,Faithful,0.0,0
+1,0,No swelling in the ankles and feet.,Faithful,0.25,0
+1,0,Test Results: [NOT MENTIONED],Fabrication,0.25,1
+1,0,"Assessment: Mr. Roberts presents with resistant hypertension, despite being on maximum doses of three medications.",Causality,1.0,1
+1,0,Problem list: Hypertension; Resistant Hypertension; [NOT MENTIONED],Fabrication,0.75,1
+1,0,I have added spironolactone to his medication regimen to address potential aldosterone-driven hypertension.,Faithful,1.0,0
+1,0,"I have discussed the potential risks and side effects of the medication, including electrolyte disturbances, dehydration, and gynecomastia.",Faithful,0.75,0
+1,0,I have also instructed him to hydrate regularly and monitor his electrolyte levels.,Faithful,0.5,0
+1,0,We will schedule a follow-up appointment in two weeks to check his blood pressure and electrolytes.,Faithful,0.0,0
+1,0,"If the medication does not work, we will consider referring him to the resistant hypertension clinic for further evaluation and potential treatment, including the renal denervation procedure.",Faithful,0.75,0
+1,0,Follow-up: We will see Mr. Roberts in two weeks to check his blood pressure and electrolytes.,Faithful,0.25,0
+2,0,"HPI: The patient, a 32-year-old female, presents with symptoms of irritable bowel syndrome (IBS) characterized by functional abdominal pain, nausea, and vomiting.",Faithful,0.0,0
+2,0,"She has a history of flares of abdominal pain, which was previously diagnosed with IBS and treated with bentyl.",Faithful,0.0,0
+2,0,"She reports experiencing worsening symptoms after consuming spicy foods, particularly shrimp, and has noticed that her symptoms are exacerbated by eating out and drinking alcohol.",Faithful,0.5,0
+2,0,"She has been experiencing diarrhea and abdominal pain, with cramping and sharp pains, and has been avoiding heavy foods.",Faithful,0.75,0
+2,0,"She reports that she has not been using the prescribed fiber supplement, citrucel, regularly.",Faithful,0.25,0
+2,0,"Past medical history: The patient has a history of IBS, which was diagnosed in 2019.",Faithful,0.5,0
+2,0,"Review of systems: The patient reports symptoms of diarrhea, nausea, and abdominal pain.",Faithful,0.0,0
+2,0,Current medications: Bentyl 20 milligrams as needed for intestinal cramping; Zofran as needed for nausea.,Faithful,0.25,0
+2,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+2,0,"Physical exam: The patient's abdomen is soft, non-tender, with no masses or organomegaly.",Faithful,0.75,0
+2,0,Normal active bowel sounds.,Faithful,0.0,0
+2,0,Assessment: Brittany Edwards is a pleasant female with IBS and functional abdominal pain.,Faithful,0.75,0
+2,0,Problem list: IBS confirmed; abdominal pain suspected; diarrhea suspected; nausea suspected.,Contextual,1.0,1
+2,0,I prescribed citrucel 2 tablets daily for regularity and encouraged the patient to start taking it twice daily.,Faithful,0.5,0
+2,0,"I instructed the patient to use bentyl 20 milligrams 30 to 45 minutes prior to eating out at a restaurant and to take a second tablet at the restaurant, and to repeat as needed.",Faithful,1.0,0
+2,0,"I prescribed Zofran as needed for nausea, but encouraged the patient to reduce triggers such as greasy and fatty foods and alcohol consumption.",Faithful,0.25,0
+2,0,"I also discussed starting a neuromodulator, elavil 25 milligrams, at bedtime for IBS.",Faithful,0.25,0
+2,0,The patient will follow up in one month via email through mychart to discuss any side effects or issues with elavil or if adjustments are needed.,Faithful,0.5,0
+3,0,"HPI: Christopher Watson, an 86-year-old male, returns in follow-up for adult hydrocephalus.",Faithful,0.75,0
+3,0,"He presents with a history of progressive gait impairment, cognitive impairment, and decreased bladder control for 8-10 years.",Faithful,0.25,0
+3,0,"He underwent shunt surgery on August 1st, 2020, with a Medtronic Strata programmable shunt in the ventricular peritoneal configuration set at a level 2.0.",Faithful,0.25,0
+3,0,"Since surgery, he has experienced some improvements in gait and bladder control, but still requires assistance with walking and has urinary incontinence.",Faithful,0.0,0
+3,0,"He denies headaches, fever, or unintentional weight loss.",Faithful,0.5,0
+3,0,Past medical history: Not mentioned.,Faithful,1.0,0
+3,0,"Review of systems: Gait impairment, cognitive impairment, urinary incontinence, and wearing a diaper.",Faithful,0.0,0
+3,0,"No fever, unintentional weight loss, genital sores, decreased or painful urination, headaches, recent falls, or hallucinations.",Faithful,0.5,0
+3,0,Current medications: Not mentioned.,Faithful,0.0,0
+3,0,"Vital signs: Blood pressure 124/80, heart rate 64, respirations 18, weight 174 pounds, and pain 0 out of 10.",Faithful,0.0,0
+3,0,Gait testing using the Tinetti assessment tool showed a score of 6-8 out of 12 and a balance score of 12 out of 16 for a total score of 18-20 out of 28.,Faithful,0.5,0
+3,0,"Cranial nerves, pupils, and eoms were intact.",Faithful,0.5,0
+3,0,Face was symmetric.,Faithful,0.75,0
+3,0,"Motor was normal for bulk and strength, but coordination was slow from finger to nose.",Faithful,0.75,0
+3,0,CT scan from 10/15/2020 showed a frontal horn span at the level of foramen of Monro of 4.6 centimeters with a third ventricular contour that is flat with a span of 10 millimeters.,Faithful,0.0,0
+3,0,"There was a tiny amount of blood in the right front region with a tiny subdermal collection, and substantial small vessel ischemic change.",Faithful,0.5,0
+3,0,I will leave the shunt set for another 2-3 months to monitor for any changes.,Faithful,0.25,0
+3,0,The patient will return in 3 months for follow-up.,Faithful,0.0,0
+3,0,"I will also discuss the possibility of driver's safety program with the patient, and he can enroll in it without my recommendation.",Causality,0.75,1
+3,0,The patient will return in 3 months for follow-up.,Faithful,0.0,0
+4,0,The patient is a 72-year-old woman who presents for follow-up for hypertension.,Faithful,0.0,0
+4,0,She reports struggling with not drinking and has been drinking four to five times a week.,Faithful,0.25,0
+4,0,"She has been taking half the dose of lisinopril due to side effects, but has not experienced any symptoms on the full dose of hydrochlorothiazide.",Faithful,0.75,0
+4,0,"She denies chest tightness, shortness of breath, or any other symptoms.",Faithful,0.5,0
+4,0,"She is taking her blood pressure medications as prescribed, but is taking them in the morning instead of the evening.",Faithful,0.5,0
+4,0,She has seen lower blood pressure readings in the morning compared to the evening.,Faithful,0.25,0
+4,0,She has been vaccinated against the coronavirus.,Faithful,0.25,0
+4,0,"Vital signs: The patient's blood pressure was not measured during the visit, but she reports seeing readings of 130-145 over 95-100 in the morning and 150 over 100 in the evening.",Faithful,1.0,0
+4,0,She has a regular cardiac rhythm and no murmur or gallop.,Faithful,0.0,0
+4,0,Her skin is moist and good.,Faithful,0.25,0
+4,0,Her head is at 90 degrees with a flat JVP.,Faithful,0.25,0
+4,0,CMP and CBC were essentially unremarkable at her last visit.,Faithful,0.0,0
+4,0,"Assessment: The patient has alcohol use disorder, which is contributing to her hypertension.",Faithful,0.75,0
+4,0,Problem list: Alcohol use disorder; Hypertension; Active; Active; Past: Mild hypercholesterolemia.,Faithful,1.0,0
+4,0,I prescribed naltrexone as an injectable form to be administered once a month to help with alcohol cessation.,Faithful,0.75,0
+4,0,The potential benefits of alcohol cessation include improved blood pressure control.,Faithful,0.75,0
+4,0,"I will see her back in the week of June 14th, which is likely around the time of her second naltrexone injection.",Faithful,0.25,0
+4,0,"I recommend upgrading her influenza vaccination and Shingrix vaccination, which she has deferred.",Faithful,0.25,0
+4,0,I will see the patient again in the week of June 14th to follow up on her progress with naltrexone and to check her blood pressure.,Causality,1.0,1
+5,0,"HPI: Ms. Ross presents with symptoms of discomfort, a change in discharge, and odor in her vaginal region, particularly on the right side, which has become painful.",Faithful,0.0,0
+5,0,She denies any fevers or chills.,Faithful,0.0,0
+5,0,"She reports that her partner has been having sexual encounters with other people, and she wants to be evaluated for all STDs.",Faithful,0.75,0
+5,0,She mentions that she recently learned of her partner's infidelity and is worried about contracting an STD.,Faithful,0.0,0
+5,0,"She reports that she has been experiencing abnormal discharge, which smells differently and has a different consistency than usual, and that it has been accompanied by right-sided vaginal pain that has not resolved.",Faithful,0.25,0
+5,0,"Past medical history: She had an irregular Pap smear at age 20, which was not followed up with further testing until her last Pap smear six months ago, which came back normal.",Faithful,0.0,0
+5,0,Review of systems: None mentioned.,Faithful,0.0,0
+5,0,Current medications: [NOT MENTIONED],Faithful,0.0,0
+5,0,Vital signs: [NOT MENTIONED],Faithful,0.0,0
+5,0,"The cervix is normal, the vaginal wall is normal, no cervical motion tenderness, and no adnexal tenderness or masses were noted.",Faithful,0.0,0
+5,0,Test Results: [NOT MENTIONED],Faithful,0.0,0
+5,0,Assessment: The patient is at risk for STDs due to her partner's history of infidelity and her own history of an abnormal Pap smear.,Faithful,0.0,0
+5,0,"I discussed the plan with the patient, which includes STD testing for gonorrhea, chlamydia, trichomoniasis, and blood tests for syphilis, HIV, and hepatitis C.",Faithful,0.25,0
+5,0,I informed her that some of these tests may take longer than others and that we will contact her if any abnormalities are found.,Faithful,0.75,0
+5,0,I also added that she is at high risk due to her past abnormal Pap smear and her partner's history of infidelity.,Faithful,0.0,0
+6,0,"The patient is a 73-year-old male, Mr. Nelson, who presents for ongoing management of rheumatoid arthritis.",Faithful,0.25,0
+6,0,"He reports his knee has been swollen for approximately two months, with pain level of 6 on a normal day, but currently at 3.",Faithful,0.5,0
+6,0,He denies improvement with compression socks.,Causality,0.75,1
+6,0,He reports difficulty getting up from a seated position due to stiffness and uses a cane for support.,Faithful,0.0,0
+6,0,He has been taking Xeljanz 11 milligrams daily and Celebrex 200 milligrams daily for the past two months.,Faithful,0.5,0
+6,0,He reports his pain level improves with medication but worsens with swelling.,Causality,1.0,1
+6,0,"Past medical history: Mr. Nelson has a history of rheumatoid arthritis, for which he is being managed with Xeljanz and Celebrex.",Faithful,0.0,0
+6,0,"He also reports a history of previous steroid injections in the right knee, which provided temporary relief for a couple of weeks.",Faithful,1.0,0
+6,0,"Review of systems: The patient reports pain and swelling in the right knee, with associated stiffness and difficulty getting up from a seated position.",Faithful,0.25,0
+6,0,Current medications:,Faithful,0.0,0
+6,0,Objective:,Faithful,0.0,0
+6,0,Vital signs:,Faithful,0.25,0
+6,0,Physical exam:,Faithful,0.0,0
+6,0,Test Results:,Faithful,0.0,0
+6,0,Assessment / Problem List:,Faithful,0.0,0
+6,0,"Assessment: The patient presents with ongoing rheumatoid arthritis, with a swollen and painful right knee, and decreased range of motion.",Faithful,0.25,0
+6,0,Problem list: Rheumatoid arthritis; Suspected fluid accumulation in the right knee; Active inflammation in the right knee.,Faithful,1.0,0
+6,0,Plan:,Faithful,0.0,0
+6,0,I prescribed Celebrex 200 milligrams daily for rheumatoid arthritis.,Negation,0.25,1
+6,0,"I administered a steroid injection to the right knee, consisting of 80 milligrams of triamcinolone and one milliliter of lidocaine.",Faithful,0.25,0
+6,0,I also ordered an x-ray of the right knee to investigate the cause of the swelling.,Faithful,0.5,0
+6,0,I recommended the patient wear compression socks and reduce salt intake to alleviate swelling.,Faithful,1.0,0
+6,0,"I also advised the patient to prop their feet up, especially at night, to reduce swelling.",Faithful,0.5,0
+6,0,I instructed the patient to follow up with their primary care physician and to schedule a blood work appointment to check their Xeljanz levels.,Faithful,1.0,0
+6,0,Follow-up: The patient will follow up with me for further management and to assess the effectiveness of the treatment plan.,Contextual,1.0,1
+7,0,"The patient, Jacqueline Miller, reports being pretty good, with a chronic skin condition that has been improving.",Faithful,1.0,0
+7,0,"She mentions a small residual rash, which has plateaued in improvement since switching from taking doxycycline twice a day to once a day.",Faithful,0.5,0
+7,0,"She also expresses concern about using the Elidel cream, which she had previously researched and found concerning due to its association with cancer risk in high doses.",Faithful,1.0,0
+7,0,She denies breastfeeding and confirms she has stopped using the Elidel cream.,Faithful,1.0,0
+7,0,She has been using sulfacetamide wash twice a day and metro cream after washing her face.,Faithful,0.75,0
+7,0,She has not been using any other lotions or cleansers.,Faithful,1.0,0
+7,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+7,0,"Physical exam: The patient has Fitzpatrick skin type IV to V, with a few faint erythematous papules and redness on bilateral medial cheeks and around the nostrils.",Faithful,0.25,0
+7,0,Test Results: [NOT MENTIONED],Fabrication,0.0,1
+7,0,"Assessment: The patient has perioral dermatitis, rosacea, and ocular rosacea.",Faithful,0.0,0
+7,0,Problem list: Perioral dermatitis; Rosacea; Ocular rosacea; Status: confirmed.,Faithful,0.5,0
+7,0,"I instructed the patient to continue using the sulfacetamide wash once a day, continue with the metro cream, and increase the use of doxycycline to twice a day.",Causality,0.75,1
+7,0,"I recommended using the tacrolimus ointment (tacrolimus) twice a day until the rash is gone, then once a day for a week before stopping.",Faithful,0.0,0
+7,0,I also recommended that she stop using the doxycycline after a week and continue with the wash and metro cream.,Negation,0.75,1
+7,0,I instructed her to hold off on starting her old products until the follow-up appointment.,Faithful,0.75,0
+7,0,I prescribed a refill of doxycycline and cancelled the Elidel cream.,Faithful,1.0,0
+7,0,I also cancelled the clindamycin.,Faithful,0.75,0
+7,0,I recommended vanicream or petroleum jelly as a moisturizer and provided samples.,Faithful,0.5,0
+7,0,I instructed her to follow up in four weeks.,Faithful,0.75,0
+7,0,I scheduled a follow-up appointment in four weeks to assess the patient's condition and provide further guidance on managing her rosacea and ocular rosacea.,Contextual,1.0,1
+8,0,"The patient, Jordan Roberts, is a 49-year-old male with a history of hypertension and palpitations.",Faithful,0.25,0
+8,0,"He presents with resistant hypertension, despite being on three medications at maximum dose.",Faithful,1.0,0
+8,0,"He reports having a few cups of coffee and no breakfast on the day of his previous emergency room visit, which he attributes to a panic attack.",Faithful,0.25,0
+8,0,"His girlfriend and he discussed it, and he believes it was not related to his blood pressure.",Faithful,1.0,0
+8,0,"He mentions a family history of high blood pressure and reports that his new primary doctor started him on a new medication, Benicar HCT (hydrochlorothiazide), one month ago.",Faithful,0.75,0
+8,0,He is also taking Amlodipine 10 mg daily.,Faithful,0.0,0
+8,0,"He denies any issues with his salt intake, stating he is doing well with it.",Faithful,0.75,0
+8,0,He reports trying to walk on a treadmill when he can.,Faithful,0.25,0
+8,0,"He has a potassium level of 4.0 from one week ago, but it has not been rechecked recently.",Faithful,1.0,0
+8,0,"Vital signs: The patient's blood pressure has been running at 146-155 lately, not yet in the 120s.",Faithful,0.25,0
+8,0,His potassium level is 4.0.,Faithful,0.5,0
+8,0,Physical exam: His heart and lungs sound good.,Faithful,0.0,0
+8,0,There is no tenderness or swelling in his ankles or feet.,Faithful,0.75,0
+8,0,Test Results: Not mentioned.,Faithful,0.5,0
+8,0,"Assessment: The patient has resistant hypertension, despite being on three medications at maximum dose, and is a candidate for further evaluation and treatment.",Faithful,1.0,0
+8,0,Problem list: Hypertension; Suspected resistant hypertension; Hypokalemia; Hyperaldosteronism; Potential for electrolyte imbalance; Potential for dehydration; Potential for gynecomastia.,Fabrication,1.0,1
+8,0,I added Spironolactone to his regimen to help lower his blood pressure.,Faithful,0.0,0
+8,0,I will monitor his potassium and sodium levels in 2 weeks.,Faithful,0.0,0
+8,0,He will have a basic metabolic panel and blood pressure check in 2 weeks.,Faithful,0.0,0
+8,0,"If he is not controlled on Spironolactone, I will refer him to the resistant hypertension clinic for further evaluation and potential treatment, including renal denervation.",Faithful,0.5,0
+8,0,I will see him in 2 weeks to check his blood pressure and electrolytes.,Faithful,0.25,0
+9,0,"HPI: The patient, Jacqueline Miller, presents with a rash on her face, which she describes as a small bit left over.",Faithful,0.25,0
+9,0,"She reports that she had been taking doxycycline twice a day for the first two weeks, but then reduced the dose to once a day, which she believes has resulted in a plateau in her improvement.",Faithful,1.0,0
+9,0,She denies any fever.,Fabrication,0.75,1
+9,0,The patient is not breast-feeding.,Faithful,0.25,0
+9,0,Past medical history is not mentioned.,Faithful,0.25,0
+9,0,Review of systems is not mentioned.,Faithful,0.25,0
+9,0,"Current medications include doxycycline, sulfacetamide wash, and metrocream.",Faithful,0.25,0
+9,0,Vital signs: [NOT MENTIONED],Faithful,0.0,0
+9,0,"Physical exam: The patient's Fitzpatrick skin type is IV, indicating she will not burn and will suntan easily.",Faithful,0.75,0
+9,0,There are a few faint erythematous papules and redness on her bilateral medial cheeks and around her nostrils.,Faithful,0.0,0
+9,0,Test Results: [NOT MENTIONED],Faithful,0.0,0
+9,0,"Assessment: The patient has perioral dermatitis, rosacea, including ocular rosacea.",Faithful,0.0,0
+9,0,Problem list: Perioral dermatitis; rosacea; ocular rosacea; unknown status on all three.,Fabrication,0.75,1
+9,0,I prescribed doxycycline 100mg twice a day for the rash.,Faithful,1.0,0
+9,0,I instructed the patient to continue using the sulfacetamide wash and metrocream.,Faithful,0.25,0
+9,0,"I recommended that she apply tacrolimus ointment to the rash area twice a day until it is resolved, and then once a day for a week before stopping.",Faithful,0.5,0
+9,0,"I instructed her to continue doxycycline for another week after the rash is gone, and then stop it.",Faithful,0.5,0
+9,0,I told her to continue using the wash and metrocream after stopping doxycycline.,Faithful,0.5,0
+9,0,I instructed her to hold off on using her old products until her next follow-up appointment.,Faithful,1.0,0
+9,0,I provided her with a follow-up appointment in 4 weeks.,Faithful,0.5,0
+9,0,"I recommended that she use a basic moisturizer like vanicream or petroleum jelly, and provided her with samples.",Faithful,0.75,0
+9,0,I instructed her to stay away from anti-aging products and plant-based products.,Faithful,1.0,0
+9,0,The patient is scheduled for a follow-up appointment in 4 weeks.,Faithful,0.0,0
+10,0,"HPI: Miss Ross is a 25-year-old female presenting with symptoms of discomfort, change in discharge, and odor in her vaginal region.",Faithful,0.5,0
+10,0,She reports that the right side of her vagina has become painful.,Faithful,0.0,0
+10,0,She denies any fevers or chills.,Faithful,0.0,0
+10,0,"She recently learned that her partner has been in sexual encounters with other people, prompting her to seek evaluation for all STDs.",Faithful,0.0,0
+10,0,"Past medical history: The patient has a past abnormal pap smear at age 20, but has not had a pap smear since then.",Contextual,0.75,1
+10,0,She is currently 25 years old.,Faithful,0.5,0
+10,0,Review of systems: [NOT MENTIONED],Fabrication,0.75,1
+10,0,Current medications: [NOT MENTIONED],Fabrication,0.0,1
+10,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+10,0,"The cervix is normal, vaginal wall is normal, no cervical motion tenderness, and no adnexal tenderness or masses noted.",Faithful,0.0,0
+10,0,Test Results: [NOT MENTIONED],Fabrication,0.0,1
+10,0,Assessment: The patient is at high risk for STDs due to an abnormal past pap smear and her partner's history of multiple sexual partners.,Faithful,0.25,0
+10,0,Problem list: STD risk; abnormal past pap smear; high risk for STDs.,Fabrication,0.25,1
+10,0,I prescribed [ NOT MENTIONED ],Fabrication,0.75,1
+10,0,"I ordered STD testing for gonorrhea, chlamydia, trichomonas, and blood tests for syphilis, HIV, and hepatitis C.",Faithful,0.25,0
+10,0,"I instructed the patient to call the office in 3 days for results, or earlier if she receives a call from the office.",Faithful,0.75,0
+11,0,"HPI: The patient, Amanda Taylor, a 72-year-old woman, presents for follow-up for hypertension.",Faithful,0.5,0
+11,0,She has a history of significant alcohol use disorder and mild hypercholesterolemia.,Faithful,0.0,0
+11,0,"Her last visit was on April 16, with a blood pressure of 130/90.",Faithful,0.75,0
+11,0,"She has been struggling with not drinking and has had a history of drinking 4 to 5 days a week, consuming hard alcohol.",Faithful,0.25,0
+11,0,"She has tried to stop drinking, but has been experiencing withdrawal symptoms.",Fabrication,1.0,1
+11,0,She is currently taking lisinopril 10 mg daily and hydrochlorothiazide 12.5 mg daily.,Causality,0.25,1
+11,0,Past medical history: The patient has a history of alcohol use disorder and mild hypercholesterolemia.,Faithful,0.0,0
+11,0,She has received the coronavirus vaccine on February 9.,Faithful,0.5,0
+11,0,"Review of systems: The patient denies fever, cough, shortness of breath, or sore throat.",Faithful,0.0,0
+11,0,She has not had recent travel or contact with the coronavirus.,Faithful,0.25,0
+11,0,Current medications:,Faithful,0.0,0
+11,0,Vital signs: Not mentioned,Faithful,0.5,0
+11,0,"Physical exam: The patient is alert, pleasant, and in no acute distress.",Faithful,0.0,0
+11,0,Her skin is moist.,Faithful,0.25,0
+11,0,She is not diabetic.,Faithful,0.75,0
+11,0,There is no tremor.,Faithful,0.25,0
+11,0,No CVA tenderness.,Faithful,0.25,0
+11,0,Her chest is clear to percussion and auscultation.,Faithful,0.25,0
+11,0,Her breathing is unlabored.,Faithful,0.0,0
+11,0,Her cardiac rhythm is regular.,Faithful,0.0,0
+11,0,No murmur or gallop.,Faithful,0.0,0
+11,0,Her JVP is flat with a head at 90 degrees.,Faithful,0.0,0
+11,0,"She does not appear anxious, agitated, or depressed.",Faithful,0.0,0
+11,0,"Assessment: The patient has alcohol use disorder, which is confirmed by her history of drinking 4 to 5 days a week and her struggles with withdrawal symptoms.",Fabrication,1.0,1
+11,0,The patient would like to start naltrexone to help with alcohol cessation.,Faithful,1.0,0
+11,0,Problem list: Alcohol use disorder; Hypertension; Hypercholesterolemia; None other.,Faithful,0.75,0
+11,0,"I prescribed naltrexone, which will be administered via injection on May 17.",Faithful,0.25,0
+11,0,"We reviewed the potential benefits and side effects of the medication, including nausea, headache, dizziness, anxiety, tiredness, and trouble sleeping.",Faithful,1.0,0
+11,0,"I also recommended upgrading her influenza vaccination and Shingrix, which she deferred.",Faithful,0.25,0
+11,0,"I will see her back on June 14 for a follow-up, which is likely around the time of her second naltrexone injection.",Faithful,0.75,0
+12,0,"The patient, Brittany Edwards, is a 32-year-old female who was last seen in August 2019 with flares of abdominal pain and was diagnosed with irritable bowel syndrome (IBS).",Faithful,0.75,0
+12,0,"She has a history of taking bentyl for intestinal cramping and reglan for nausea, but has stopped using reglan and is now using zofran as needed.",Faithful,0.0,0
+12,0,"She has also been taking a low-dose fiber supplement, citrucel, daily.",Faithful,0.0,0
+12,0,"She reports having IBS symptoms of diarrhea, nausea, and abdominal pain, exacerbated by eating spicy foods, fatty foods, and alcohol.",Faithful,0.25,0
+12,0,"She mentions that she has been eating out on Friday and Saturday nights, consuming spicy foods and drinking alcohol, which seems to trigger her symptoms.",Faithful,0.75,0
+12,0,"She has been experiencing abdominal pain, cramping, and diarrhea, but has noticed an improvement when drinking water instead of soda.",Faithful,0.5,0
+12,0,"The patient has a history of IBS, for which she was previously treated with bentyl and reglan.",Faithful,0.0,0
+12,0,"She has also been instructed to start a low-dose fiber supplement, citrucel, daily.",Faithful,0.25,0
+12,0,"The patient reports symptoms of diarrhea, nausea, and abdominal pain, which are exacerbated by eating spicy foods, fatty foods, and alcohol.",Faithful,0.25,0
+12,0,Citrucel (low-dose fiber supplement) daily; bentyl 20 mg as needed 30-45 minutes prior to eating out at a restaurant; zofran as needed for nausea; elavil 25 mg at bedtime for IBS.,Faithful,1.0,0
+12,0,"The patient's abdomen is soft, nontender, with no masses or organomegaly, and normal active bowel sounds.",Faithful,0.0,0
+12,0,"Brittany Edwards is a pleasant female with IBS and functional abdominal pain, aggravated by high stress, poor eating habits, and poor sleeping habits.",Causality,1.0,1
+12,0,Problem list: IBS; Functional abdominal pain; Diarrhea; Nausea,Faithful,0.5,0
+12,0,I prescribed elavil 25 mg at bedtime for IBS.,Faithful,0.25,0
+12,0,"I encouraged dietary and lifestyle modifications, including reducing greasy and fatty foods and alcohol consumption.",Faithful,0.0,0
+12,0,"I also instructed her to use bentyl 20 mg as needed 30-45 minutes prior to eating out at a restaurant, and zofran if needed.",Faithful,0.5,0
+12,0,I asked her to follow up in 1 month via email through mychart to report any side effects or issues with elavil or if adjustments are needed.,Faithful,0.75,0
+12,0,The patient will follow up in 1 month via email through mychart to report any side effects or issues with elavil or if adjustments are needed.,Faithful,0.25,0
+13,0,"HPI: Emily Hernandez, a 20-year-old female, presents for her yearly follow-up for asthma, allergic rhinitis, and food allergy.",Faithful,0.75,0
+13,0,"She has been using Wixela 250/50 dose, one puff in the morning and one puff at night, for approximately 3-4 days a week, with the remaining days taking one puff.",Faithful,0.75,0
+13,0,"She uses her albuterol inhaler rarely, only for exertional activities.",Faithful,0.75,0
+13,0,"She has a known peanut allergy, but tolerates almonds and cashews.",Faithful,0.0,0
+13,0,"She has been using Zyrtec as needed, particularly during the spring and fall, for seasonal allergy symptoms.",Faithful,0.0,0
+13,0,"She has a history of vaping and smoking, but has been trying to cut back.",Faithful,0.5,0
+13,0,She has an Epipen for emergencies.,Faithful,0.25,0
+13,0,"Past medical history: Emily has a history of asthma, allergic rhinitis, and food allergy.",Faithful,0.0,0
+13,0,She was switched from Symbicort to Wixela due to insurance changes in April 2020.,Faithful,0.25,0
+13,0,She has been using Zyrtec for seasonal allergy symptoms.,Faithful,0.0,0
+13,0,Review of systems: Emily has not had any urgent care or ER visits for breathing issues in the past year.,Faithful,0.25,0
+13,0,"Current medications: Wixela 250/50 dose, one puff in the morning and one puff at night, 3-4 days a week; albuterol inhaler as needed; Zyrtec as needed for seasonal allergy symptoms; Epipen for emergencies.",Faithful,1.0,0
+13,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+13,0,The doctor listened to her lungs and they sounded terrific.,Faithful,0.0,0
+13,0,"The doctor also listened to her heart and noted that her breathing test results were similar to those from 2 years ago, but slightly better.",Faithful,0.75,0
+13,0,Test Results: [NOT MENTIONED],Fabrication,0.75,1
+13,0,"Assessment: The patient's asthma appears to be well-controlled, with minimal symptoms and no urgent care or ER visits in the past year.",Faithful,1.0,0
+13,0,"Problem list: Asthma, active; Allergic rhinitis, active; Food allergy, active.",Faithful,0.75,0
+13,0,"I prescribed Alvesco 80 mcg, two puffs twice a day, to be used as a step-down therapy.",Faithful,1.0,0
+13,0,The patient will continue to use her albuterol inhaler as needed and Zyrtec as needed for seasonal allergy symptoms.,Faithful,0.0,0
+13,0,She will also continue to avoid peanuts and tree nuts.,Contextual,0.25,1
+13,0,I will refill her Epipen and albuterol inhaler.,Faithful,0.0,0
+13,0,Follow-up: The patient will return in 4 months for a repeat breathing test and to assess her response to the Alvesco therapy.,Faithful,1.0,0
+14,0,"HPI: Mr. Watson, an 86-year-old male, returns for follow-up after undergoing shunt surgery on August 1, 2020, for adult hydrocephalus.",Faithful,0.0,0
+14,0,"He initially presented with 8-10 years of progressive gait impairment, cognitive impairment, and decreased bladder control.",Faithful,0.0,0
+14,0,"Since surgery, he has experienced improvement in his symptoms, with his walking now improved to the point where he can walk to the dining room without assistance, although he still requires occasional help.",Faithful,0.25,0
+14,0,"His bladder control has also improved, but he now wears diapers.",Faithful,1.0,0
+14,0,He reports no issues with sores or painful urination.,Faithful,0.25,0
+14,0,"He also reports improved cognitive function, stating he no longer feels lost when conversing with others.",Faithful,0.25,0
+14,0,"His daughter, Theresa, corroborates this improvement.",Faithful,1.0,0
+14,0,"Past medical history: Adult hydrocephalus with spinal catheter protocol since June 2020, shunt surgery on August 1, 2020.",Faithful,0.75,0
+14,0,"Review of systems: Negative for headaches, pain, fever, unintentional weight loss, recent falls, hallucinations, depression, excessive worrying, or mood swings.",Faithful,1.0,0
+14,0,"Positive for impaired ability to carry out daily functions, urinary incontinence, and wearing a diaper.",Faithful,0.25,0
+14,0,Current medications: [NOT MENTIONED],Fabrication,0.0,1
+14,0,"Vital signs: Blood pressure 124/80, heart rate 64, respirations 18, weight 174 pounds, and pain 0 out of 10.",Faithful,0.0,0
+14,0,"Physical exam: The shunt site was clean, dry, and intact with a confirmed setting of 2.0.",Faithful,0.0,0
+14,0,"Mr. Watson is a pleasant and cooperative man who is able to converse easily, although his daughter adds some details.",Faithful,0.75,0
+14,0,"Cranial nerves, pupils are equal, eoms are intact, face symmetric, no dysarthria, motor normal for bulk and strength, coordination slow from finger-to-nose.",Faithful,0.25,0
+14,0,"Test Results: The MMSE score was 26 out of 30 on the spelling test and 25 out of 30 on the calculation test, with slight improvement from his initial score.",Faithful,0.75,0
+14,0,"Gait tested using the Tinetti assessment tool resulted in a score of 6-8 out of 12 for gait and 12 out of 16 for balance, for a total score of 18-20 out of 28, which is slightly improved from his initial score.",Faithful,0.75,0
+14,0,"The CT scan from 10/15/2020 shows a frontal hornstan at the level of firm and of menroma of 4.6 cm with a third ventricular contour that is flat with a span of 10 mm, with a tiny amount of blood in the right frontal region and a tiny subdermal collection.",Faithful,0.0,0
+14,0,"Assessment: Mr. Watson is a 86-year-old male with adult hydrocephalus who has experienced significant improvement in his symptoms since shunt surgery, with improved gait and cognitive function, although he still requires occasional assistance and wears diapers for bladder control.",Faithful,1.0,0
+14,0,Problem list: Adult hydrocephalus; Gait impairment; Urinary incontinence; Cognitive impairment.,Faithful,0.0,0
+14,0,I plan to continue monitoring Mr. Watson's condition and schedule a follow-up appointment in 3 months to reassess his progress.,Faithful,0.25,0
+14,0,I will also recommend that he enroll in a driver's safety program to assess his ability to drive safely.,Faithful,0.5,0
+14,0,Follow-up: Schedule a follow-up appointment in 3 months to reassess Mr. Watson's progress and discuss the possibility of him driving again.,Faithful,0.75,0
+15,0,"HPI: The patient, Mr. Nelson, a 73-year-old male, presents with ongoing management of rheumatoid arthritis.",Faithful,0.75,0
+15,0,"He reports that his right knee has been swollen for approximately 2 months, with pain level ranging from 3 to 6 out of 10.",Faithful,0.75,0
+15,0,"He has tried compression socks, which provide some relief but not complete resolution.",Faithful,0.5,0
+15,0,"He experiences stiffness, particularly when getting up from a seated position, and requires a cane for support.",Faithful,0.0,0
+15,0,"He has been taking Xeljanz (11 mg daily) and Celebrex (200 mg daily) for 2 months, with some improvement in symptoms before the recent increase in swelling.",Faithful,1.0,0
+15,0,"Past medical history: The patient has a history of rheumatoid arthritis, for which he has been receiving treatment.",Faithful,0.0,0
+15,0,Review of systems: The patient reports no other symptoms related to his rheumatoid arthritis.,Fabrication,0.75,1
+15,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+15,0,"Physical exam: The patient's knee is swollen, with pitting around the knee and ankle.",Faithful,0.25,0
+15,0,"The patient reports pain and stiffness, particularly when straightening the knee.",Faithful,0.75,0
+15,0,Normal capillary refill in the toes.,Faithful,0.25,0
+15,0,Test Results: [NOT MENTIONED],Fabrication,0.0,1
+15,0,"Assessment: The patient has recurrent swelling and pain in his right knee, likely related to his rheumatoid arthritis.",Faithful,0.75,0
+15,0,Problem list: Rheumatoid arthritis; swelling of the right knee; pain of the right knee; stiffness of the right knee.,Faithful,1.0,0
+15,0,I prescribed a steroid injection (80 mg of triamcinolone and 1 ml of lidocaine) for the patient's right knee.,Faithful,0.5,0
+15,0,I also ordered an x-ray of the knee to investigate the cause of the swelling.,Faithful,0.25,0
+15,0,I will refer the patient to physical therapy to address his stiffness and mobility issues.,Faithful,1.0,0
+15,0,"If the current treatment plan does not improve his symptoms, I will consider a surgery consult to discuss further management options.",Faithful,0.75,0
+15,0,Follow-up: I will see the patient again in 2-3 months to reassess his symptoms and adjust his treatment plan as needed.,Fabrication,0.75,1
+15,0,"I also instructed the patient to follow up with his primary care physician for routine monitoring of his CMP levels, which are currently within normal limits.",Faithful,1.0,0

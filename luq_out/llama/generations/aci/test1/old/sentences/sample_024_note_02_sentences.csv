@@ -1,0 +1,30 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 62-year-old male, presents with a nonhealing foot ulcer on the dorsal aspect of the lateral right foot, which has been present for approximately two months.",1.0
+2,"The ulcer has recently become red and is draining, causing the patient concern about its healing.",0.0
+3,The patient reports walking barefoot on the beach as a possible cause of the injury.,0.1111
+4,He denies any trauma to the foot.,0.8889
+5,The patient has not picked up antibiotics prescribed by his primary care physician (PCP) yet and does not recall the name of the medication.,0.7778
+6,He reports occasional throbbing pain and redness around the ulcer.,0.1111
+7,"The patient has a history of diabetes, which he believes is not well-controlled, with a reported A1c of around 10%.",0.1111
+8,He takes medication for diabetes but does not regularly check his blood sugar levels.,0.5556
+9,Past medical history: Diabetes.,0.0
+10,Review of systems: The patient reports occasional throbbing pain in the foot.,0.1111
+11,Current medications: [NOT MENTIONED],0.0
+12,Objective:,0.0
+13,"Vital signs: Normal temperature, no fever.",0.0
+14,"Physical exam: A one by two inch circular wound on the dorsal aspect of the lateral right foot, proximal to the fifth MTP joint, with redness, drainage, edema, and fluid present.",0.2222
+15,"No necrosis, odor, or bony exposure is appreciated.",0.2222
+16,"The patient reports increased pressure when the wound is touched, but no distinct pain.",0.5556
+17,Test Results: No evidence of osteomyelitis on an x-ray of the right foot.,0.0
+18,Assessment / Problem List:,0.0
+19,"Assessment: The patient has a diabetic foot ulcer with signs of infection, including redness, drainage, and edema.",1.0
+20,Problem list: Diabetic foot ulcer; Infection; Diabetes mellitus (active).,0.2222
+21,Plan:,0.0
+22,I ordered an ABI (ankle-brachial index) to determine the blood supply to the foot and assess the ability to heal the ulcer.,1.0
+23,I performed a debridement to remove dead tissue from the wound.,1.0
+24,I prescribed clindamycin 400mg twice daily for 7 days to treat the infection.,0.0
+25,I also arranged for a surgical shoe to be provided to the patient to reduce pressure on the foot and promote healing.,0.0
+26,The patient will return in two weeks for another debridement and assessment of the wound's progress.,0.1111
+27,Follow-up: The patient will return in two weeks for follow-up and possible debridement.,0.6667
+28,The patient is advised to contact the office if any issues arise before the scheduled appointment.,0.7778

@@ -1,0 +1,34 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a female with a history of coronary artery disease, hypertension, and diabetes, presented for follow-up after an interior STEMI where a stent was placed.",0.25
+2,"She reported experiencing similar symptoms to her previous heart attack, including chest pain that did not resolve on its own.",0.25
+3,She denied experiencing chest pain or shortness of breath since her last visit six months ago and reported being able to exercise by walking her dog daily.,0.0
+4,She mentioned noticing lower leg swelling since being discharged from the hospital and stated she has been taking her medications as prescribed.,0.25
+5,"Past medical history: The patient has a history of coronary artery disease, hypertension, and diabetes.",0.0
+6,She has been prescribed metformin for her diabetes and is taking it as directed.,0.25
+7,Review of systems: The patient reported no symptoms of chest pain or shortness of breath but did mention lower leg swelling.,0.0
+8,Current medications:,0.0
+9,Aspirin 81mg daily,0.0
+10,Brilinta 90mg twice daily,0.0
+11,Lipitor 80mg daily,0.0
+12,Toprol 50mg daily,0.0
+13,Metformin (dose not specified),0.0
+14,Lisinopril 20mg daily,0.5
+15,Objective:,0.0
+16,"Vital signs: The patient's vital signs were not specifically mentioned, so [NOT MENTIONED].",0.5
+17,Physical exam: The doctor performed a physical exam and found no jugular venous distention or carotid bruits.,0.0
+18,A 3/6 systolic ejection murmur was heard at the left base.,0.0
+19,"The patient's lungs were clear, but the doctor noted lower limb edema with pitting 1+ on the right radial artery.",0.0
+20,"The cath site was clean, dry, and intact without hematoma, and the patient's right radial artery pulses were palpable.",0.5
+21,"Test Results: The patient's EKG showed a normal sinus rhythm and good R wave progression, with evolutionary changes expected after a STEMI.",0.25
+22,The echo revealed a reduced ejection fraction of 35%.,0.0
+23,Assessment / Problem List:,0.0
+24,"Assessment: The patient has coronary artery disease, newly diagnosed reduced left ventricular dysfunction and moderate mitral regurgitation, and acute heart failure.",1.0
+25,Problem list: Coronary artery disease; reduced left ventricular dysfunction; moderate mitral regurgitation; acute heart failure; hypertension.,0.75
+26,Plan:,0.0
+27,I prescribed Lasix 40mg daily for fluid retention.,0.25
+28,I added Aldactone 12.5mg daily.,0.0
+29,I will refer the patient to cardiac rehab for education and exercise guidance.,0.0
+30,"I will continue the patient on Aspirin 81mg daily, Brilinta 90mg twice daily, Lipitor 80mg daily, Toprol 50mg daily, and Lisinopril 20mg daily.",0.75
+31,I will repeat an echo in two months.,0.25
+32,Follow-up: The patient will be seen again in two months to follow up on the echo results and to monitor her condition.,0.5

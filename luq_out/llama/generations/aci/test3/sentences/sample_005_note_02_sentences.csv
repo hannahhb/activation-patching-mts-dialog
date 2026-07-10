@@ -1,0 +1,28 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,HPI: The patient presents with right elbow pain that began yesterday and has been present since waking up.,1.0
+2,"However, the patient corrects the doctor that the pain is actually in the left arm, from the elbow up to the neck.",0.0
+3,The patient describes the pain as aching and heavy.,0.0
+4,"The patient has taken some Motrin for the pain, but it has not provided significant relief.",0.0
+5,"The patient also reports chest pain, which is intermittent and occurs with the elbow pain, and sometimes radiates to the neck.",0.75
+6,"The patient has had chest pain for one day, and it is not constant, occurring a few times a day.",0.75
+7,The patient denies shortness of breath.,0.0
+8,Past medical history: The patient has a history of hypertension and diabetes.,0.0
+9,"The patient's blood pressure is currently 150/90, and the patient is taking 2.5mg of Norvasc.",1.0
+10,"The patient's A1c result was 7.2, and the patient is taking 500mg of metformin.",0.5
+11,Review of systems: The patient denies any other symptoms outside of the elbow pain and chest pain.,0.5
+12,Current medications: Norvasc 2.5mg daily for hypertension; metformin 500mg daily for diabetes.,0.25
+13,Objective:,0.0
+14,Vital signs: The patient's blood pressure is 150/90.,0.25
+15,"Physical exam: The patient's physical exam revealed a slight murmur with the heart, which was not previously noted.",0.5
+16,Test Results: [NOT MENTIONED],0.25
+17,Assessment / Problem List:,0.0
+18,"Assessment: The patient is experiencing chest pain that may be indicative of a mild heart attack, and an EKG is needed to confirm this diagnosis.",1.0
+19,Problem list: Hypertension; diabetes; chest pain; suspected heart attack.,0.25
+20,Plan:,0.0
+21,I prescribed aspirin and nitroglycerin to help alleviate the patient's chest pain.,0.25
+22,I ordered an EKG to confirm the suspected heart attack.,0.75
+23,I also ordered a glucose test to check the patient's blood sugar levels.,0.0
+24,The patient will be kept on 500mg of metformin for diabetes.,0.0
+25,The patient will be kept on 2.5mg of Norvasc for hypertension.,0.0
+26,Follow-up: The patient will be admitted to the hospital for further evaluation and treatment.,0.75

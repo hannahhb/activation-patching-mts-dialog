@@ -1,0 +1,24 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"The patient, Melissa Sanchez, is a 59-year-old female with a history of mitral regurgitation, atrial fibrillation, diabetes, and asthma.",0.0
+2,"She underwent mitral valve repair on 8/3/2020 and was previously seen in follow-up on 9/17, at which time she was doing well and continued on her current medications.",1.0
+3,"She reports feeling better since the surgery, but still experiences occasional chest pain and shallow breathing when exerting herself.",0.0
+4,"She has been taking her medications regularly, including coumadin 4 mg, lasix 4 mg daily, and atenolol 50 mg daily.",0.0
+5,Objective:,0.0
+6,Vital signs: [NOT MENTIONED],0.0
+7,"Physical exam: The patient's head and neck examination was normal, with no jugular venous distension detected.",0.5
+8,"Her lungs were reduced in breath, but auscultation and percussion were clear.",0.0
+9,"The heart rhythm was irregularly irregular, consistent with atrial fibrillation.",0.0
+10,"The S1 heart sound was slightly accentuated, and there was no S3 heart sound.",0.0
+11,"The patient's abdomen and extremities were normal, with no tenderness or swelling noted.",1.0
+12,There was trace peripheral edema on the extremities.,0.0
+13,"Test Results: ECG taken on 12/26/2020 revealed atrial fibrillation with a controlled ventricular response, with no significant changes compared to the previous study.",0.75
+14,Assessment / Problem List:,0.0
+15,"Assessment: The patient is recovering well from mitral valve repair surgery, with controlled atrial fibrillation.",0.5
+16,Problem list: Mitral regurgitation; Atrial fibrillation; Diabetes; Asthma; History of chest discomfort; History of coronary artery disease (status: unknown); Trace peripheral edema (status: suspected).,1.0
+17,Plan:,0.0
+18,"I instructed the patient to continue on her current medications, including coumadin 4 mg, lasix 4 mg daily, and atenolol 50 mg daily.",0.0
+19,"I advised her to try to maintain an active lifestyle, as this will help with her recovery.",0.25
+20,I told her to follow up in 6-9 months.,0.25
+21,Follow-up:,0.0
+22,I scheduled a follow-up appointment in 6-9 months to check on the patient's progress.,0.75

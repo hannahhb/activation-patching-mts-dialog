@@ -1,0 +1,41 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"The patient, a 57-year-old male, presents with a complaint of shortness of breath for approximately two weeks.",0.0
+2,"He reports waking up with shortness of breath, which persists throughout the day, even after resting.",0.5
+3,"He mentions coughing up blood, approximately three to four cups per day, which has been ongoing for three weeks.",0.0
+4,"He denies any fever, bruising, or bleeding from other areas.",0.5
+5,"He has a history of diabetes, high blood pressure, and asthma.",0.0
+6,"His diabetes has been running high, with blood sugar levels spiking over 200 after meals and ranging from 150 to 200 in the morning.",1.0
+7,"His blood pressure has been low at times, ranging from the lower 90s.",0.5
+8,Past medical history:,0.0
+9,"The patient has a history of diabetes, high blood pressure, and asthma.",0.0
+10,Review of systems:,0.0
+11,"The patient reports coughing up blood, shortness of breath, and high blood sugar levels.",0.5
+12,Current medications:,0.0
+13,The patient is taking metformin 500 mg twice daily for diabetes and norvasc for high blood pressure.,0.0
+14,Objective:,0.0
+15,Vital signs:,0.0
+16,"The patient's oxygen saturation is 94% on pulse oximetry, and his pulse is regular.",0.5
+17,Physical exam:,0.25
+18,"The patient has no jugular venous distension, no carotid bruits, and no swelling in the neck.",0.5
+19,"The lung exam reveals bilateral rales and rhonchi, with diminished breath sounds on the right side.",1.0
+20,"The heart exam shows a 2/6 systolic ejection murmur, unchanged from previous exams.",0.75
+21,"The belly exam is soft, and the extremity exam reveals 1+ non-pitting edema on both lower extremities, with no calf tenderness or Homan's sign.",0.75
+22,Test Results:,0.0
+23,[NOT MENTIONED],0.75
+24,Assessment / Problem List:,0.0
+25,"The patient has a possible pulmonary infection or other lung condition, as evidenced by coughing up blood and shortness of breath, which is causing his primary complaint.",0.0
+26,"The patient also has poorly controlled diabetes, with high blood sugar levels.",0.75
+27,"Additionally, the patient has high blood pressure.",0.0
+28,Problem list:,0.0
+29,Pulmonary infection or other lung condition; Poorly controlled diabetes; High blood pressure.,0.75
+30,Plan:,0.0
+31,I prescribed metformin 750 mg twice daily to increase the dose for diabetes management.,0.0
+32,I will order a hemoglobin A1c to assess the patient's diabetes control.,0.25
+33,I will have the patient return in three weeks to discuss his diabetes treatment plan.,0.5
+34,I referred the patient to the emergency department for further evaluation and treatment of the shortness of breath and coughing up blood.,0.75
+35,"The patient will undergo a chest X-ray, CT scan of the chest, and blood work to rule out a blood clot or other conditions.",0.0
+36,I instructed the patient to hold taking norvasc until his blood pressure is under better control.,0.5
+37,Follow-up:,0.0
+38,The patient will return to the emergency department for further evaluation and treatment.,0.75
+39,The patient will return in three weeks to discuss his diabetes treatment plan.,0.25

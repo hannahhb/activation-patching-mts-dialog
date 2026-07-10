@@ -1,0 +1,79 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a follow-up visit for 6 months.,0.75
+1,subjective,The patient had a heart attack 6 months ago.,0.0
+2,subjective,The patient underwent stenting of the left anterior descending artery.,0.25
+3,subjective,The patient reports that the medications are helping.,0.5
+4,subjective,The patient is doing okay.,0.5
+5,subjective,The patient is concerned about the number of medications they are taking.,0.0
+6,subjective,The patient experiences dizziness when standing up quickly.,0.0
+7,subjective,The patient attributes dizziness to either the heart attack or the medication.,0.0
+8,subjective,The patient has not been following up with the dietitian for their diabetes.,1.0
+9,subjective,The patient has a high A1c level of 60%.,0.5
+10,subjective,The patient has a history of kidney disease.,0.0
+11,subjective,The patient has stage 3 CKD.,0.0
+12,subjective,The patient is concerned about the potential effects of medications on their kidneys.,1.0
+13,subjective,The patient is experiencing edema in their legs.,0.75
+14,subjective,The patient has a history of heart attack.,0.0
+15,subjective,The patient has a history of coronary artery disease.,0.0
+16,subjective,The patient has been prescribed aspirin.,0.0
+17,subjective,The aspirin dose is not specified.,0.25
+18,subjective,Aspirin is taken with an unspecified frequency.,0.25
+19,subjective,The indication for aspirin is not specified.,0.25
+20,subjective,The patient has been prescribed brilinta.,0.0
+21,subjective,The brilinta dose is not specified.,0.25
+22,subjective,Brilinta is taken with an unspecified frequency.,0.25
+23,subjective,The indication for brilinta is not specified.,0.0
+24,subjective,The patient has been prescribed metoprolol.,0.0
+25,subjective,The metoprolol dose is 50mg.,0.0
+26,subjective,Metoprolol is taken once a day.,0.0
+27,subjective,The indication for metoprolol is not specified.,0.25
+28,subjective,The patient has been prescribed crestor.,0.0
+29,subjective,The crestor dose is 40mg.,0.0
+30,subjective,Crestor is taken once a day.,0.0
+31,subjective,The indication for crestor is not specified.,0.5
+32,subjective,The patient has been prescribed fish oil.,0.0
+33,subjective,The fish oil dose is not specified.,0.0
+34,subjective,Fish oil is taken with an unspecified frequency.,0.0
+35,subjective,The indication for fish oil is not specified.,0.25
+36,subjective,The patient denied other symptoms besides dizziness.,0.5
+37,subjective,The patient denied other symptoms besides edema.,1.0
+38,subjective,The patient denied other symptoms besides dizziness when standing up quickly.,0.5
+39,subjective,The patient denied other symptoms besides high A1c level.,0.75
+40,subjective,The patient denied other symptoms besides concern about medications.,0.75
+41,subjective,The patient denied other symptoms besides concern about kidney disease.,1.0
+42,objective,The patient's blood pressure is 127/80.,0.0
+43,objective,The patient's blood pressure is within a normal range.,0.75
+44,objective,The patient has a systolic ejection murmur.,0.0
+45,objective,The systolic ejection murmur is 3/6.,0.0
+46,objective,The systolic ejection murmur is located at the left base.,0.0
+47,objective,The patient has nonpitting edema.,0.0
+48,objective,The nonpitting edema is 1+.,0.0
+49,objective,The nonpitting edema is located in their legs.,0.0
+50,objective,The patient's kidney function is stable.,0.0
+51,objective,The patient's creatinine level is within normal limits.,1.0
+52,assessment,The patient has coronary artery disease.,0.0
+53,assessment,The patient has diabetes.,0.0
+54,assessment,The patient has mild depression.,0.25
+55,plan,The patient will be referred to cardiac rehab.,0.0
+56,plan,The purpose of cardiac rehab is to help the patient become more active.,0.0
+57,plan,The purpose of cardiac rehab is to help the patient become more confident in exercising again.,0.0
+58,plan,The doctor prescribed metoprolol.,0.5
+59,plan,The metoprolol dose is not specified.,0.5
+60,plan,The metoprolol frequency is not specified.,0.5
+61,plan,The doctor prescribed crestor.,0.0
+62,plan,The crestor dose is not specified.,1.0
+63,plan,The crestor frequency is not specified.,1.0
+64,plan,The doctor prescribed aspirin.,0.0
+65,plan,The aspirin frequency is not specified.,0.25
+66,plan,The patient will follow up with their nephrologist.,0.25
+67,plan,The doctor will reach out to Dr. Miller.,0.5
+68,plan,The purpose of reaching out to Dr. Miller is to schedule an appointment with the nephrologist.,0.25
+69,plan,The doctor ordered a hemoglobin A1c test.,0.0
+70,plan,The patient will be referred to a dietitian.,0.0
+71,plan,The purpose of the dietitian referral is for dietary education.,0.0
+72,plan,The patient will be referred to psychiatry.,0.0
+73,plan,The reason for the psychiatry referral is difficulty adjusting after their heart attack.,0.5
+74,plan,The reason for the psychiatry referral is possible mild depression.,0.0
+75,plan,The patient will follow up with the dietitian as scheduled.,0.75
+76,plan,The patient will follow up with the nephrologist as scheduled.,0.25
+77,plan,The patient will follow up with the psychiatrist as scheduled.,0.75

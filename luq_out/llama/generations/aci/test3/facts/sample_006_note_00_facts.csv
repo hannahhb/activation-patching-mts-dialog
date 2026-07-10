@@ -1,0 +1,85 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a female.,0.0
+1,subjective,The patient is 34 years old.,0.0
+2,subjective,The patient has a history of chronic migraines.,0.0
+3,subjective,The patient has a history of hypertension.,0.0
+4,subjective,The patient presents with abdominal pain.,0.0
+5,subjective,The abdominal pain started 10 days ago.,0.0
+6,subjective,The abdominal pain began with mild discomfort on her right side.,0.0
+7,subjective,The abdominal pain has worsened over the last couple of days.,0.0
+8,subjective,The patient's abdominal pain severity is 4 or 5 out of 10.,0.0
+9,subjective,The patient's abdominal pain can reach up to 7 or 8 out of 10.,0.5
+10,subjective,The abdominal pain worsens after meals.,0.0
+11,subjective,The abdominal pain is localized to the right side.,0.0
+12,subjective,The abdominal pain radiates slightly to the left.,0.25
+13,subjective,The patient experiences nausea.,0.0
+14,subjective,The patient experiences heartburn.,0.0
+15,subjective,The patient experiences fatigue.,0.0
+16,subjective,The patient denied fever.,0.0
+17,subjective,The patient denied urinary symptoms.,0.0
+18,subjective,The patient denied diarrhea.,0.0
+19,subjective,The patient denied blood in her stool.,0.0
+20,subjective,The patient has not had any unusual travel.,0.5
+21,subjective,The patient has not had any unusual exposures.,0.5
+22,subjective,The patient's migraines have been rare.,0.5
+23,subjective,The patient's migraines are responsive to Excedrin.,0.5
+24,subjective,The patient takes Excedrin as needed for migraines.,0.0
+25,subjective,Excedrin is taken as needed.,0.25
+26,subjective,Excedrin is used for migraines.,0.0
+27,subjective,The patient takes sumatriptan as needed for breakthrough migraines.,0.0
+28,subjective,Sumatriptan is taken as needed.,0.0
+29,subjective,Sumatriptan is used for breakthrough migraines.,0.0
+30,subjective,The patient has been taking lisinopril.,0.0
+31,subjective,The lisinopril dose is 20 milligrams.,0.0
+32,subjective,Lisinopril is taken per day.,0.0
+33,subjective,Lisinopril is used for hypertension.,0.0
+34,objective,The patient's blood pressure is elevated.,0.25
+35,objective,The patient has a systolic ejection murmur.,0.0
+36,objective,The systolic ejection murmur is grade 3 out of 6.,0.0
+37,objective,The systolic ejection murmur is unchanged from prior exams.,0.5
+38,objective,The cardiovascular exam is otherwise normal.,0.75
+39,objective,The patient has abdominal tenderness.,0.0
+40,objective,The abdominal tenderness is in the right upper quadrant.,0.0
+41,objective,The abdominal tenderness is mild to moderate.,0.0
+42,objective,The patient has an equivocal Murphy's sign.,0.0
+43,assessment,The patient has acute abdominal pain.,0.0
+44,assessment,The patient has right upper quadrant tenderness.,0.0
+45,assessment,The patient's abdominal pain is possibly due to gallstones.,0.0
+46,assessment,The patient's abdominal pain is possibly due to an infection in the gallbladder.,0.0
+47,assessment,The patient's migraines are well-managed with Excedrin.,1.0
+48,assessment,Excedrin is prescribed for migraines.,1.0
+49,assessment,The Excedrin dose is not specified.,0.0
+50,assessment,Excedrin frequency is not specified.,0.0
+51,assessment,The patient's migraines are well-managed with sumatriptan.,1.0
+52,assessment,Sumatriptan is prescribed for migraines.,1.0
+53,assessment,The sumatriptan dose is not specified.,0.0
+54,assessment,Sumatriptan frequency is not specified.,0.0
+55,assessment,The patient has hypertension.,0.25
+56,assessment,The patient's hypertension is under adequate control.,1.0
+57,assessment,The patient is taking lisinopril.,1.0
+58,assessment,Lisinopril is prescribed for hypertension.,1.0
+59,assessment,The lisinopril dose is not specified.,0.0
+60,assessment,Lisinopril frequency is not specified.,0.0
+61,assessment,Acute abdominal pain is a problem.,0.0
+62,assessment,Chronic migraines are a problem.,0.25
+63,assessment,Hypertension is a problem.,0.25
+64,plan,The doctor ordered a CBC.,0.0
+65,plan,The doctor ordered a chem 12.,0.0
+66,plan,The doctor ordered a urinalysis.,0.0
+67,plan,The doctor ordered a pregnancy test.,0.0
+68,plan,The doctor ordered an ultrasound of the right upper quadrant.,0.0
+69,plan,The ultrasound is of the right upper quadrant.,0.0
+70,plan,The purpose of the tests is to investigate the cause of the patient's abdominal pain.,0.0
+71,plan,The patient has abdominal pain.,0.0
+72,plan,The doctor prescribed lisinopril.,0.0
+73,plan,The doctor prescribed sumatriptan.,0.0
+74,plan,The patient has migraines.,0.0
+75,plan,The doctor instructed the patient not to eat.,0.25
+76,plan,The instruction not to eat is until the results of the tests are available.,1.0
+77,plan,The doctor will follow up on the results of the tests.,0.0
+78,plan,The doctor will follow up on the results of the tests today.,0.25
+79,plan,The doctor will check on the patient's condition.,0.0
+80,plan,The doctor will check on the patient's condition today.,0.25
+81,plan,The doctor will see the patient in about four weeks.,0.0
+82,plan,The purpose of the follow-up visit is to reassess the patient's condition.,0.0
+83,plan,The patient is female.,0.0

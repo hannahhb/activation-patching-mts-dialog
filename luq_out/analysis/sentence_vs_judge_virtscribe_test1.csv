@@ -1,0 +1,312 @@
+sample_idx,note_idx,sentence,label,uncertainty,nonfaithful
+0,0,"HPI: Mr. James is a 64-year-old male presenting with a 5-month history of constant pain in his left shoulder and elbow, which started after a fall 5 months ago while going up stairs.",Faithful,0.5,0
+0,0,"The pain is worse with lifting, particularly when lifting more than 15-20 pounds, and has been exacerbated by his weightlifting routine at the gym.",Faithful,0.5,0
+0,0,"He has not taken any pain medication but has tried icing and stopping exercise, which has provided some relief.",Faithful,0.75,0
+0,0,He denies numbness or tingling in the affected area.,Faithful,0.5,0
+0,0,Past medical history: Not mentioned.,Faithful,0.0,0
+0,0,Review of systems: Not mentioned.,Faithful,0.25,0
+0,0,Current medications: Not mentioned.,Faithful,0.0,0
+0,0,Vital signs: Not mentioned.,Faithful,0.0,0
+0,0,The Hawkins-Kennedy and Neer's tests were positive.,Faithful,0.0,0
+0,0,"The proximal and distal upper extremity strength were normal, and the median, radial, and ulnar sensation were intact.",Faithful,0.0,0
+0,0,The patient had abduction to 90 degrees and a normal empty can test.,Faithful,0.5,0
+0,0,Test Results: Not mentioned.,Faithful,0.0,0
+0,0,Assessment: The patient is experiencing impingement syndrome of the left shoulder.,Faithful,0.0,0
+0,0,Problem list: Shoulder impingement syndrome; Elbow pain; Status: active.,Faithful,1.0,0
+0,0,I prescribed physical therapy with Dr. Martha Rivera two days per week.,Faithful,0.5,0
+0,0,I recommended that the patient continue to ice the shoulder and rest as much as possible.,Faithful,0.0,0
+0,0,"I will obtain a referral for physical therapy, and the patient will be contacted within the next day or two to schedule an appointment.",Faithful,1.0,0
+1,0,"HPI: The patient, Randy Gutierrez, a 2-year-old male, presented with symptoms of a runny nose, stuffiness, and a cough that is not barky, starting around supper time last night.",Faithful,0.5,0
+1,0,His mother reported that he has been pulling on his ears and rubbing his nose.,Faithful,0.0,0
+1,0,The patient has a low-grade fever of 100.3°F.,Faithful,0.0,0
+1,0,"He ate his supper and breakfast, but only consumed a small amount of food.",Faithful,0.5,0
+1,0,He has been irritable and has difficulty sleeping.,Faithful,0.0,0
+1,0,"His mother also reported that his older sister has been sick, and they had a playdate with a nephew who had a sinus infection.",Faithful,0.0,0
+1,0,Past medical history: [NOT MENTIONED],Faithful,0.0,0
+1,0,"Review of systems: The patient has a runny nose, stuffy nose, cough, pulling on his ears, and rubbing his nose.",Faithful,0.5,0
+1,0,He has a low-grade fever.,Faithful,0.0,0
+1,0,"Current medications: The patient is currently taking Tylenol for fever and has used saline mist, baby Vicks, and a humidifier.",Faithful,0.5,0
+1,0,The mother has been using Aveno shampoo on his scalp.,Faithful,1.0,0
+1,0,Objective:,Faithful,0.0,0
+1,0,"Vital signs: Temperature 100.3°F (rectal), pulse rate not mentioned, blood pressure not mentioned, oxygen saturation not mentioned, and respiratory rate not mentioned.",Faithful,0.5,0
+1,0,"Physical exam: The patient's ears appear okay, and his mucous is clear.",Faithful,0.5,0
+1,0,Test Results: [NOT MENTIONED],Faithful,0.0,0
+1,0,Assessment / Problem List:,Faithful,0.0,0
+1,0,Assessment: The patient has a viral upper respiratory infection.,Faithful,0.0,0
+1,0,Problem list: Upper respiratory infection; suspected viral upper respiratory infection.,Faithful,0.5,0
+1,0,Plan:,Faithful,0.0,0
+1,0,"I prescribed the same medication as his sister, which is a half a teaspoon of medication for a barky cough, to be given if the patient develops a barky cough.",Faithful,0.25,0
+1,0,I also recommended Zarbee's for his stuffy nose.,Faithful,0.0,0
+1,0,"The mother should continue to use saline mist, baby Vicks, and a humidifier.",Faithful,1.0,0
+1,0,"For his cradle cap, I recommended using a shampoo such as Head & Shoulders, Selsun Blue, or Nizoral AD, and to use a soft brush and baby oil to remove the scales.",Faithful,0.25,0
+1,0,Past medical history: [NOT MENTIONED],Fabrication,0.0,1
+2,0,"HPI: Kayla Ward, a 7th-grade student, presents with a 2-year history of acne on her face, which is present most every day.",Faithful,0.25,0
+2,0,"She has been using Persa-Gel and washing regularly, which is somewhat helpful.",Faithful,0.0,0
+2,0,"There are no associated symptoms including itching, bleeding, or pain.",Faithful,0.0,0
+2,0,No additional past medical history.,Faithful,0.0,0
+2,0,"She lives with her parents and sister and has a dog, bird, and bunnies.",Faithful,0.5,0
+2,0,She wears sunscreen in the summer with SPF 30.,Faithful,0.25,0
+2,0,Past medical history: No additional past medical history.,Faithful,0.0,0
+2,0,Review of systems: No additional symptoms in other organs.,Fabrication,0.25,1
+2,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+2,0,"Physical exam: Full exam is performed today, except for under the underwear and under the bra.",Faithful,0.75,0
+2,0,Multiple benign nevi on the trunk and extremities.,Faithful,0.0,0
+2,0,Scattered skin-colored papules.,Faithful,0.0,0
+2,0,Open and closed comedones.,Faithful,0.0,0
+2,0,"Erythematous papules on the face, primarily on the forehead and with also some on the central cheeks and chin.",Faithful,0.0,0
+2,0,The chest and back are relatively spared.,Faithful,0.0,0
+2,0,The remainder of the examination is normal.,Faithful,0.0,0
+2,0,Test Results: [NOT MENTIONED],Fabrication,0.0,1
+2,0,"Assessment: Mild to moderate acne, mostly comedonal with small inflammatory component.",Faithful,0.0,0
+2,0,Problem list: Acne; Acne (status: active),Fabrication,0.75,1
+2,0,"I prescribed adapalene 0.1% cream to be applied in a thin layer to the areas she generally gets acne, starting with a few nights a week and slowly working up to every night.",Faithful,0.0,0
+2,0,"She will also use a mild cleanser and a non-comedogenic moisturizer with sunscreen SPF 30 or higher in the morning, and wash her face with the same cleanser and apply a non-comedogenic moisturizer at night.",Faithful,0.5,0
+2,0,She will also use Clean and Clear Persa-Gel in a thin layer on the areas she generally gets acne.,Faithful,0.5,0
+2,0,I advised her to wear sunscreen when outside due to potential sensitivity and dryness or irritation from the adapalene.,Faithful,0.5,0
+3,0,"HPI: The patient, a 25-year-old female, presents for evaluation of breast reduction.",Faithful,0.0,0
+3,0,"She has been experiencing symptoms of macromastia, including back pain, neck pain, and bra strap indentations, for approximately 5-7 years.",Faithful,0.0,0
+3,0,She has been considering breast reduction surgery for about 6-7 years and has attempted nonsurgical treatments with minimal relief.,Faithful,0.5,0
+3,0,"She reports that her activities are limited due to the size of her breasts, particularly when performing exercises like working out, jumping, or running.",Faithful,1.0,0
+3,0,She has a history of chiropractic care for back pain but does not take pain medication.,Faithful,0.75,0
+3,0,She is currently a student studying psychology and consumes occasional wine.,Faithful,0.5,0
+3,0,"She denies tobacco, drug, or alcohol use.",Causality,1.0,1
+3,0,She is not interested in breastfeeding.,Contextual,1.0,1
+3,0,"Past medical history: She has a family history of breast cancer, with her mother diagnosed at age 40.",Faithful,0.0,0
+3,0,She has had mammograms recommended to start at age 30.,Faithful,1.0,0
+3,0,"She has been healthy for the most part, having lost 10 pounds in the past few months and aiming to lose 20 more pounds.",Faithful,0.75,0
+3,0,Review of systems: She experiences occasional numbness or tingling in her hands and sometimes has nipple pain.,Faithful,0.0,0
+3,0,She does not have rashes underneath her breasts.,Faithful,0.25,0
+3,0,Current medications: Propranolol for migraines.,Faithful,0.0,0
+3,0,"Physical exam: Physical exam findings reveal asymmetrical breasts with severe ptosis bilaterally, no nipple retraction or discharge, no breast tenderness, masses, or axillary lymphadenopathy is palpable.",Faithful,0.0,0
+3,0,Test Results: [NOT MENTIONED],Fabrication,0.0,1
+3,0,Assessment: The patient is an ideal candidate for bilateral reduction mammoplasty due to symptomatic macromastia and minimal relief from nonsurgical treatments.,Faithful,1.0,0
+3,0,Problem list: Macromastia; Back pain; Neck pain; Bra strap indentations; Nipple pain; Occasional numbness or tingling in hands.,Faithful,1.0,0
+3,0,I prescribed Propranolol as needed for migraines.,Contextual,1.0,1
+3,0,"I will document the patient's symptoms and measurements, which will be sent to the insurance company for approval.",Faithful,0.5,0
+3,0,"Once the insurance company approves, we will schedule the patient for surgery.",Faithful,1.0,0
+3,0,The surgery will involve removing excess tissue and lifting the breasts to alleviate back and neck pain.,Faithful,1.0,0
+3,0,"The patient will have drains in place for about a week, and the incision will be covered with clear plastic tape to aid in healing.",Faithful,0.5,0
+3,0,I will keep the patient overnight in the hospital for pain management and nausea control.,Faithful,1.0,0
+3,0,"The patient will have activity restrictions for 6 weeks post-surgery, including no heavy lifting and no driving for 2-3 weeks.",Faithful,0.5,0
+3,0,Follow-up: The patient will meet with the office again before surgery to review final instructions and answer any last-minute questions.,Faithful,0.75,0
+4,0,"The patient, Mrs. Kelly Wood, a 43-year-old female, presented with hematuria, specifically bright red urine resembling cherry Kool-Aid, for the past six weeks, with episodes of frequent urination and severe pain rated an 8/10.",Faithful,0.75,0
+4,0,"She had previously passed two small stones last week, and the blood in her urine has nearly subsided.",Faithful,1.0,0
+4,0,The patient has no drug allergies and is taking Alavert 10mg daily.,Faithful,0.0,0
+4,0,"She acknowledges a history of dehydration, consumes a significant amount of sugary drinks like Mountain Dew, and has a family history of kidney stones.",Fabrication,0.75,1
+4,0,"Past medical history: The patient has a history of passing kidney stones, with the current stone being a 6mm non-obstructing stone in the left kidney.",Faithful,1.0,0
+4,0,"Review of systems: The patient reports episodes of bright red urine, frequent urination, and severe pain in the past six weeks, but is currently pain-free.",Faithful,0.75,0
+4,0,Current medications: Alavert 10mg daily.,Faithful,0.0,0
+4,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+4,0,"Physical exam: The patient's abdomen and anti-gu are normal, and the vaginal exam is normal.",Faithful,0.5,0
+4,0,"Test Results: The urine dipstick was negative for leukocytes, nitrates, protein, ketone, bilirubin, and glucose, with a yellow and clear color, urobilinogen 0.2, pH 5.5, and specific gravity 1.020.",Faithful,0.0,0
+4,0,"The renal ultrasound revealed a 6mm non-obstructing stone in the left kidney, with the right kidney being 10cm in length and 5cm wide, and the left kidney being 10.8cm in length and 5cm wide.",Faithful,0.0,0
+4,0,Assessment: The patient has a confirmed diagnosis of hematuria and chronic urolithiasis due to a 6mm non-obstructing stone in the left kidney.,Faithful,0.75,0
+4,0,Problem list: Hematuria; Chronic urolithiasis; [NOT MENTIONED],Fabrication,0.5,1
+4,0,"I prescribed no surgical intervention at this time, as the stone is not obstructing or causing pain.",Faithful,0.5,0
+4,0,"I recommended that the patient increase her water intake to 125 ounces per day, aiming to consume less than 1,000mg of sodium daily, and reduce her consumption of salty, processed foods, animal protein, and foods high in oxalate, such as spinach, chocolate, beets, rhubarb, and soy products.",Faithful,1.0,0
+4,0,I provided the patient with a handout outlining the dietary recommendations.,Faithful,0.0,0
+4,0,"She is advised to call the office sooner if she has any concerns, and to seek emergency care if she experiences severe pain or bright red blood in her urine.",Faithful,0.75,0
+5,0,"HPI: The patient, Melissa Sanchez, is a 59-year-old female who is being seen for a follow-up appointment for status post mitral valve repair done on 8/3/2020.",Faithful,0.0,0
+5,0,"She reports feeling ""pretty good"" and ""definitely feeling better"" since the surgery, with some residual chest discomfort and shallow breathing.",Faithful,0.25,0
+5,0,"She experiences chest pains and shallow breathing, but notes that these episodes are intermittent and last only a few minutes.",Faithful,0.0,0
+5,0,She has been learning to manage these symptoms by slowing down when she feels them and taking medication as prescribed.,Faithful,0.5,0
+5,0,"The patient has a history of mitral regurgitation, atrial fibrillation, diabetes, and asthma, and has had negative cardiac workup for coronary artery disease.",Faithful,0.5,0
+5,0,"She is currently taking coumadin 4mg, lasix 4mg/day, and atenolol 50mg/day.",Faithful,0.0,0
+5,0,"Past medical history: The patient has a history of mitral regurgitation, atrial fibrillation, diabetes, and asthma, and has had negative cardiac workup for coronary artery disease.",Faithful,0.5,0
+5,0,"Review of systems: The patient reports intermittent chest pains and shallow breathing, but notes that these symptoms are not constant and are manageable with lifestyle changes.",Faithful,0.5,0
+5,0,"Current medications: Coumadin 4mg, Lasix 4mg/day, Atenolol 50mg/day.",Faithful,0.0,0
+5,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+5,0,"The lungs have reduced breath sounds, but auscultation and percussion are clear.",Faithful,0.0,0
+5,0,"The patient's heart rhythm is irregularly irregular, which is consistent with atrial fibrillation.",Faithful,0.0,0
+5,0,"The S1 is slightly accentuated, and there is no S3.",Faithful,0.0,0
+5,0,The patient reports no abdominal pain and no pain upon palpation of the extremities.,Faithful,0.5,0
+5,0,There is trace peripheral edema on the extremities.,Faithful,0.5,0
+5,0,"Assessment: The patient is a 59-year-old female with a history of mitral regurgitation, atrial fibrillation, diabetes, and asthma, who is recovering well from mitral valve repair surgery and is being managed with coumadin, lasix, and atenolol.",Faithful,1.0,0
+5,0,Problem list: Atrial fibrillation; Mitral regurgitation; Diabetes; Asthma,Faithful,0.0,0
+5,0,"I will continue the patient's current medications, including coumadin 4mg, lasix 4mg/day, and atenolol 50mg/day.",Faithful,0.0,0
+5,0,I will advise the patient to continue to manage her symptoms with lifestyle changes and to remain active.,Faithful,0.25,0
+5,0,Follow-up: I will schedule a follow-up appointment in 6-9 months to check on the patient's progress.,Faithful,0.25,0
+6,0,"HPI: The patient, Judy Gomez, is a 62-year-old female who presents for ongoing management of psoriatic arthritis.",Faithful,0.75,0
+6,0,"She reports that she has been doing well since her last visit, and her symptoms have improved with the current treatment regimen.",Faithful,0.25,0
+6,0,"She mentions that she occasionally experiences increased pain in her feet when she has a day off from her desk job and is more active, but this is not frequent.",Faithful,0.5,0
+6,0,"She denies taking methotrexate on the day of her COVID-19 vaccination, which she believes may have reduced the efficacy of the vaccine, and reports feeling unwell after the first dose but tolerating the second dose after consulting the hotline.",Faithful,1.0,0
+6,0,"Past medical history: The patient has a history of psoriatic arthritis, for which she is currently being treated with methotrexate and prednisone.",Faithful,0.0,0
+6,0,"She has had a recent COVID-19 vaccination, for which she did not take methotrexate on the day of the first dose.",Faithful,0.75,0
+6,0,"Review of systems: The patient reports bruising, particularly on her skin, which she attributes to taking prednisone.",Causality,0.5,1
+6,0,Current medications: I prescribed methotrexate for psoriatic arthritis.,Contextual,1.0,1
+6,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+6,0,"Physical exam: The patient has a good range of motion in her toes and knees, but reports pain in her joint areas, particularly in her feet and knees.",Faithful,1.0,0
+6,0,"She has ridges on her nails, which are consistent with psoriasis.",Faithful,0.0,0
+6,0,Examination of the skin reveals bruising.,Faithful,1.0,0
+6,0,"Assessment: The patient has psoriatic arthritis, which is being managed with methotrexate and prednisone, with plans to discontinue prednisone and continue with methotrexate.",Faithful,1.0,0
+6,0,Problem list: Psoriatic arthritis; suspected bruising due to prednisone use.,Faithful,0.75,0
+6,0,I discontinued the patient's prednisone and instructed her to continue with methotrexate.,Faithful,0.75,0
+6,0,I also instructed her to schedule an appointment for blood work at the front desk and to return in three months.,Faithful,0.5,0
+7,0,"HPI: The patient, Diana Scott, a 100-year-old female, presented for a new patient consultation on 7/9/2021, primarily due to a recently diagnosed heart murmur.",Faithful,0.75,0
+7,0,"She was referred by her previous doctor, who mentioned a new worrisome heart murmur.",Faithful,1.0,0
+7,0,She is concerned about her symptoms and is seeking further evaluation.,Faithful,0.5,0
+7,0,"She reports severe leg pain for about a month, for which she is taking pain pills, and experiences shortness of breath when walking too fast or too long, or after drinking a full glass of water.",Faithful,1.0,0
+7,0,"She also reports lightheadedness and dizziness, for which she takes meclizine.",Faithful,0.25,0
+7,0,"Her symptoms have worsened over the past six months, with an estimated 70-80% increase in severity compared to six months ago.",Faithful,0.75,0
+7,0,"Past medical history: The patient has a family history of heart problems, with her son having had a heart attack, her brother having had a stroke due to diabetes, and her eldest sister having had a heart problem.",Faithful,0.75,0
+7,0,"She does not have a history of smoking, and there are no known allergies to medications.",Faithful,0.5,0
+7,0,"Review of systems: The patient reports severe leg pain, shortness of breath, lightheadedness, and dizziness.",Faithful,0.75,0
+7,0,"She denies fever, chills, or any other symptoms.",Faithful,0.5,0
+7,0,"Current medications: Amlodipine, lisinopril, simvastatin (20mg), levothyroxine, and meclizine.",Faithful,0.5,0
+7,0,Vital signs: Not mentioned.,Faithful,0.0,0
+7,0,"Physical exam: The patient's physical exam revealed a normal cardiovascular examination, with a 4/6 systolic murmur at the right upper sternal border with mild radiation to the carotids.",Faithful,0.5,0
+7,0,Neurologic exam was normal for age.,Faithful,0.25,0
+7,0,Test Results: Not mentioned.,Faithful,0.0,0
+7,0,"Assessment: The patient has a 4/6 systolic murmur at the upper right sternal border with mild radiation to the carotids, likely representative of aortic stenosis, which may be moderate.",Faithful,0.75,0
+7,0,Problem list: Cardiac murmur; suspected aortic stenosis; pvcs; hypolipidemia; lightheadedness/dizziness.,Faithful,0.25,0
+7,0,"The patient will undergo an echocardiogram to assess her cardiac structure and function, as well as the severity of her aortic stenosis.",Faithful,0.75,0
+7,0,"Depending on the results, further evaluation, including an ischemic evaluation or a heart monitor, may be necessary.",Faithful,0.75,0
+7,0,"She will continue to take her current medications, including amlodipine, lisinopril, and levothyroxine, and may be considered for a transcatheter aortic valve replacement (TAVR) or surgical aortic valve replacement (SAVR), but this will depend on her overall medical history and the results of the echocardiogram.",Faithful,1.0,0
+7,0,Follow-up: The patient will be seen in three to four weeks to discuss the results of the echocardiogram and next steps.,Faithful,0.25,0
+8,0,"The patient, Melissa Sanchez, is a 59-year-old female with a history of mitral regurgitation and atrial fibrillation, diabetes, asthma, and recurrent chest discomfort with a negative cardiac work-up for coronary artery disease.",Faithful,0.25,0
+8,0,"She reports feeling better overall since her mitral valve repair surgery on 8/3/2020, but still experiences occasional chest pain and shallow breathing, particularly with exertion.",Faithful,0.0,0
+8,0,She has been managing these symptoms by slowing down and taking medication as prescribed.,Faithful,0.5,0
+8,0,"She has been taking Coumadin 4 mg, Lasix 4 mg daily, and Atenolol 50 mg daily.",Faithful,0.0,0
+8,0,She has been experiencing some irritability initially with the Atenolol but reports that it has subsided.,Faithful,0.25,0
+8,0,Vital signs:,Fabrication,0.25,1
+8,0,Test Results:,Faithful,0.25,0
+8,0,"Assessment: The patient's heart valves are working well and she is recovering from the mitral valve repair surgery, but she has ongoing atrial fibrillation that is being well controlled with medication.",Faithful,0.5,0
+8,0,Problem list: Atrial fibrillation; mitral regurgitation; diabetes; asthma; recurrent chest discomfort; history of coronary artery disease (past).,Contextual,0.75,1
+8,0,"I instructed the patient to continue taking her current medications, including Coumadin 4 mg, Lasix 4 mg daily, and Atenolol 50 mg daily.",Faithful,0.0,0
+8,0,I advised her to continue to manage her symptoms by slowing down and avoiding overexertion.,Faithful,0.75,0
+8,0,I recommended that she try to stay active and maintain a healthy lifestyle.,Faithful,0.25,0
+8,0,Follow-up: I scheduled a follow-up appointment in 6-9 months to check on her cardiac status.,Faithful,0.75,0
+9,0,"HPI: The patient, Diana Scott, is a 100-year-old woman who presents with a new diagnosis of a heart murmur, which her previous doctor described as a ""worrisome"" condition.",Faithful,0.25,0
+9,0,She reports severe pains in her legs and has been taking pain pills for this issue.,Faithful,0.25,0
+9,0,"She also mentions that she gets short of breath when walking too fast or too long, or when drinking a full glass of water without stopping.",Faithful,0.25,0
+9,0,She reports using a walker due to fatigue and has a history of surgeries.,Faithful,1.0,0
+9,0,She denies chest pain and has not noticed irregular heartbeats.,Faithful,0.75,0
+9,0,"She mentions swelling in her ankles, which has been going on for 6 months.",Faithful,0.75,0
+9,0,"She has lost weight gradually over the past year and denies fevers, chills, or other symptoms.",Faithful,0.75,0
+9,0,"Past medical history: The patient has a history of surgeries and a family history of heart problems, including a son who had a heart attack and a brother who had a stroke due to diabetes.",Faithful,0.75,0
+9,0,She has never smoked and has no known allergies to medications.,Faithful,0.5,0
+9,0,Review of systems: The patient reports being overly tired due to medication and has difficulty walking due to leg pain.,Faithful,1.0,0
+9,0,Vital signs: Blood pressure not mentioned.,Faithful,0.0,0
+9,0,Physical exam: The patient has a 4 out of 6 systolic murmur at the right upper sternal border with mild radiation to the carotids.,Faithful,0.0,0
+9,0,Test Results: Not mentioned.,Faithful,0.25,0
+9,0,"Assessment: The patient is a 100-year-old woman with a cardiac murmur, likely representing aortic stenosis, and symptoms possibly due to severe aortic stenosis, but with a relatively preserved S2, more consistent with moderate stenosis.",Faithful,1.0,0
+9,0,Problem list: Aortic stenosis; possible severe aortic stenosis; PVCS; tachycardia; hyperlipidemia; lightheadedness/dizziness.,Faithful,1.0,0
+9,0,I prescribed the patient to undergo an echocardiogram to assess her overall cardiac structure and function.,Faithful,0.0,0
+9,0,I will also consider an ischemic evaluation or further assessment with a heart monitor depending on the results of the echocardiogram.,Faithful,0.5,0
+9,0,I will send the results and recommendations to her primary care physician (PCP) to discuss the possibility of stopping her statin medication.,Faithful,0.75,0
+9,0,I will also recommend that she continue taking her current medications as prescribed.,Faithful,0.5,0
+9,0,I will follow up with her in 3-4 weeks to discuss the results and next steps.,Faithful,0.0,0
+9,0,I will see the patient in 3-4 weeks to discuss the results of the echocardiogram and determine the next course of action.,Causality,0.0,1
+10,0,"HPI: Kayla Ward, a 14-year-old female, presents with a 2-year history of acne on her face, which is present most days.",Faithful,0.25,0
+10,0,"The acne is not associated with itching, bleeding, or pain.",Faithful,0.0,0
+10,0,"She has been using over-the-counter products, including washes and a gel, which have provided some relief.",Faithful,0.0,0
+10,0,"She has a regular menstrual cycle, which started about 2 years ago.",Faithful,0.5,0
+10,0,She plays sports and uses sunscreen with SPF 30 in the summer.,Faithful,0.5,0
+10,0,"Past medical history: No additional medical history, no family history.",Faithful,0.75,0
+10,0,Review of systems: No additional symptoms.,Faithful,0.0,0
+10,0,Current medications: [NOT MENTIONED],Fabrication,0.0,1
+10,0,Objective:,Faithful,0.0,0
+10,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+10,0,"Physical exam: The examination revealed multiple benign moles on the trunk and extremities, scattered skin-colored papules, open and closed comedones, and erythematous papules on the face, primarily on the forehead and central cheeks and chin.",Faithful,0.0,0
+10,0,"The chest and back were relatively spared, and the remainder of the examination was normal.",Faithful,0.0,0
+10,0,Test Results: [NOT MENTIONED],Fabrication,0.0,1
+10,0,Assessment / Problem List:,Faithful,0.0,0
+10,0,"Assessment: The patient has mild to moderate acne, mostly comedonal with a small inflammatory component.",Faithful,0.0,0
+10,0,Problem list: Acne; [NOT MENTIONED],Fabrication,1.0,1
+10,0,"I prescribed a topical therapy regimen, which includes washing the face with a mild cleanser every morning, applying a non-comedogenic moisturizer with sunscreen, SPF 30 or higher, washing the face with the same cleanser at night, and applying adapalene 0.1% cream in a thin layer to the areas where she generally gets acne.",Faithful,0.25,0
+10,0,I instructed her to start with a few nights a week and gradually increase to every night.,Faithful,0.0,0
+10,0,"If the adapalene cream is expensive or not covered by insurance, she can try differin gel over the counter.",Faithful,0.0,0
+10,0,I also recommended following with clean and clear bursa gel and a non-comedogenic moisturizer.,Faithful,0.25,0
+10,0,She will need to wear sunscreen when outside and may experience dryness or irritation.,Faithful,0.25,0
+11,0,"The patient, Mr. James, is a 63-year-old male with a history of pain in his left shoulder and elbow, which began 5 months ago after a fall on icy stairs.",Faithful,1.0,0
+11,0,"He reports constant pain, which worsens with lifting and has prevented him from continuing his regular exercise routine at the gym.",Faithful,0.5,0
+11,0,He denies numbness or tingling in his arm.,Faithful,0.0,0
+11,0,He has been trying to manage the pain with ice but has not taken any medication.,Faithful,0.5,0
+11,0,The patient has a past medical history of a fall 5 months ago and a recent retirement from an office job.,Faithful,0.75,0
+11,0,The patient denies any symptoms in other organs that are relevant to his initial presentation.,Faithful,0.75,0
+11,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+11,0,"The left shoulder and elbow were tender to palpation, with a positive Neer's test and a positive kiss.",Faithful,0.5,0
+11,0,"There was no warmth, erythema, or deformity.",Faithful,0.25,0
+11,0,"The patient had normal proximal and distal upper extremity strength, intact median, radial, and ulnar sensation, and abduction to 90 degrees.",Faithful,0.0,0
+11,0,The empty can test was normal.,Faithful,0.0,0
+11,0,Assessment: The patient is experiencing impingement syndrome of the left shoulder.,Faithful,0.0,0
+11,0,Problem list: Impingement syndrome of left shoulder; Active.,Fabrication,0.75,1
+11,0,I prescribed Mr. James to continue icing his shoulder and rest as much as possible.,Faithful,0.0,0
+11,0,"I ordered a referral for physical therapy with Dr. Martha Rivera, 2 days a week.",Faithful,0.0,0
+11,0,I will have the physical therapy office contact Mr. James within the next day or two to schedule an appointment.,Faithful,1.0,0
+11,0,I will also have Mr. James follow up with me if his symptoms worsen or do not improve with therapy.,Faithful,0.5,0
+11,0,I will schedule a follow-up appointment with Mr. James in 2-3 weeks to assess the effectiveness of the physical therapy and to discuss further management if necessary.,Fabrication,1.0,1
+12,0,"The patient, a 2-year-old male, has been experiencing symptoms of a runny nose, stuffiness, cough, and pulling on his ears since last night.",Faithful,0.75,0
+12,0,He also has been rubbing his nose excessively.,Faithful,0.0,0
+12,0,"The patient has a low-grade fever of 100.3°F, and his appetite has been decreased, eating only 7 ounces of formula from a bottle this morning and refusing to eat cereal.",Faithful,0.5,0
+12,0,"The patient's energy level is described as irritable, and he is having difficulty sleeping.",Faithful,1.0,0
+12,0,"The patient's older sister has been sick, and the patient's family has been exposed to a nephew with a sinus infection.",Faithful,0.25,0
+12,0,He also has been pulling on his ears and rubbing his nose excessively.,Faithful,0.0,0
+12,0,"I recommended watching for a barky cough, which would necessitate giving the patient a half teaspoon of his sister's medicine.",Contextual,0.25,1
+12,0,I also suggested using Zarbee's for the stuffy nose and a dose of Zarbee's for children under a year of age.,Contextual,0.25,1
+12,0,"The family was instructed to use the regular strength of Head and Shoulders, Selsun Blue, or Nizoral A.D. shampoo for the cradle cap, and to continue using the soft brush and baby oil to remove scales.",Contextual,1.0,1
+13,0,"HPI: The patient, Julia Jones, a 25-year-old female, presents for evaluation of breast reduction due to symptomatic macromastia.",Faithful,0.0,0
+13,0,"She has been experiencing back pain, neck pain, and discomfort due to her breast size, which has been a concern for about 7 years.",Faithful,0.5,0
+13,0,"She has tried nonsurgical treatments, including chiropractic care, with minimal relief.",Faithful,0.25,0
+13,0,She is an ideal candidate for bilateral reduction mammoplasty.,Faithful,0.0,0
+13,0,"She is currently a student, studying psychology, and has a family history of breast cancer, with her mother diagnosed at age 40.",Faithful,0.5,0
+13,0,"She is otherwise healthy, having lost 10 pounds in the past few months and plans to lose an additional 20 pounds.",Faithful,0.5,0
+13,0,"Past medical history: The patient has a family history of breast cancer, with her mother diagnosed at age 40.",Faithful,0.0,0
+13,0,"She has not had any mammograms, but plans to start at age 30.",Faithful,0.5,0
+13,0,She does not have any known allergies.,Fabrication,1.0,1
+13,0,"Review of systems: The patient reports back pain, neck pain, and discomfort due to her breast size, which improves with bra use.",Faithful,1.0,0
+13,0,She experiences numbness and tingling in her hands and occasional nipple pain.,Faithful,0.25,0
+13,0,She has not experienced any rashes or discharge.,Faithful,1.0,0
+13,0,Current medications: She takes propranolol for migraines.,Faithful,0.0,0
+13,0,Objective:,Faithful,0.0,0
+13,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+13,0,Physical exam: Inspection reveals asymmetrical breasts with severe ptosis bilaterally.,Faithful,0.0,0
+13,0,There is no nipple retraction or discharge bilaterally.,Faithful,0.0,0
+13,0,"No breast tenderness, masses, or axillary lymphadenopathy is palpable.",Faithful,0.0,0
+13,0,Test Results: [NOT MENTIONED],Fabrication,0.0,1
+13,0,Assessment / Problem List:,Faithful,0.0,0
+13,0,"Assessment: Julia Jones is a 25-year-old female with symptomatic macromastia, ideal candidate for bilateral reduction mammoplasty.",Faithful,0.75,0
+13,0,Problem list: Macromastia; Active.,Fabrication,0.25,1
+13,0,Plan:,Faithful,0.0,0
+13,0,I prescribed no medications.,Faithful,1.0,0
+13,0,I will submit the documentation and photos to the insurance company for approval.,Faithful,0.25,0
+13,0,"Once approved, we will schedule the surgery and meet again to discuss the procedure and answer any questions.",Faithful,0.25,0
+13,0,"The patient will need to have a clear plastic tape over the incision, which may be red initially but will mature in about a year.",Faithful,1.0,0
+13,0,"The patient will have drains in each breast for about a week and will need to avoid heavy lifting, driving, and strenuous activities for 2-3 weeks.",Faithful,1.0,0
+13,0,There is a 30% chance of reduced nipple sensation or no sensation after the surgery.,Faithful,1.0,0
+13,0,Follow-up: The patient will need to follow up with the office after the insurance approval and before the surgery to review the instructions and any last-minute questions.,Faithful,0.75,0
+14,0,"HPI: The patient, Judy Gomez, is a 61-year-old woman with ongoing management of psoriatic arthritis.",Faithful,0.25,0
+14,0,"She reports being on a decreased dose of prednisone and has been experiencing occasional pain in her feet, particularly after days off from work where she is moving around more.",Faithful,0.75,0
+14,0,She mentions taking an extra dose of prednisone once a week due to increased pain.,Faithful,0.25,0
+14,0,"She also reports feeling horrible after taking methotrexate with the COVID-19 vaccine, but noted an improvement after taking it again a week later.",Causality,1.0,1
+14,0,"She expresses concern about bruising on her skin, particularly after minor bumps.",Faithful,0.25,0
+14,0,She has been experiencing bruising on her skin without feeling pain.,Faithful,1.0,0
+14,0,"She has a history of psoriasis, which is causing ridges and nail changes.",Faithful,1.0,0
+14,0,"Past medical history: The patient has a history of psoriatic arthritis, and is currently on prednisone and methotrexate.",Faithful,0.25,0
+14,0,"Review of systems: The patient reports occasional pain in her feet and joints, but notes an improvement after increasing the methotrexate dose.",Faithful,1.0,0
+14,0,Current medications:,Faithful,0.0,0
+14,0,Vital signs:,Faithful,0.25,0
+14,0,Physical exam: The patient has good range of motion in her toes.,Faithful,0.0,0
+14,0,She has ridges and nail changes due to psoriasis.,Faithful,0.0,0
+14,0,Test Results:,Faithful,0.0,0
+14,0,"Assessment: The patient is a 61-year-old woman with psoriatic arthritis, who is on a decreased dose of prednisone and experiencing occasional pain in her feet, particularly after increased activity.",Faithful,1.0,0
+14,0,Problem list: Psoriatic arthritis; Active; Methotrexate interaction with COVID-19 vaccine; Suspected; Bruising due to prednisone; Active;,Faithful,1.0,0
+14,0,Plan: I will discontinue the patient's prednisone and continue with the methotrexate.,Faithful,0.5,0
+14,0,I will instruct the patient to schedule an appointment for blood work.,Faithful,0.0,0
+14,0,I will see the patient in 3 months for follow-up.,Faithful,0.0,0
+14,0,Follow-up: I will see the patient in 3 months for follow-up.,Fabrication,0.0,1
+15,0,"HPI: The patient, Mrs. Wood, presented with hematuria and a history of passing two small stones last week, with episodes of bright red urine for the past 6 weeks and constant urge to urinate and severe pain, rated an 8 out of 10.",Faithful,0.25,0
+15,0,She has been taking Alavert 10 mg daily with no drug allergies.,Faithful,0.5,0
+15,0,Past medical history: Not mentioned.,Faithful,0.5,0
+15,0,Review of systems: [NOT MENTIONED],Faithful,0.75,0
+15,0,Current medications: Alavert 10 mg daily.,Faithful,0.0,0
+15,0,Vital signs: Not mentioned.,Faithful,0.0,0
+15,0,"Physical exam: The patient's abdomen was normal, with no flank pain, and the GU exam was normal.",Faithful,0.5,0
+15,0,"Test Results: The urine dipstick was negative for leukocytes, nitrates, protein, ketones, and bilirubin, with a pH of 5.5, specific gravity of 1.020, and urobilinogen of 0.2.",Faithful,0.0,0
+15,0,"The renal ultrasound showed a 6 mm left renal stone, no stones, masses, or hydronephrosis in the right kidney, and a kidney length of 10 cm x 5 cm in the left kidney.",Causality,1.0,1
+15,0,Assessment: The patient has hematuria due to a 6 mm nonobstructing left renal stone.,Faithful,0.75,0
+15,0,Problem list: Hematuria; Chronic urolithiasis; [NOT MENTIONED],Faithful,0.25,0
+15,0,"I advised the patient to drink 125 ounces of water per day and avoid sugary drinks like Mountain Dew, salty, processed foods high in sodium, and foods rich in oxalate, such as spinach, chocolate, beets, rhubarb, and soy products.",Faithful,0.75,0
+15,0,"I also gave her a handout with dietary recommendations and instructed her to call the office if she experiences any more issues, and to go to the emergency room if she experiences severe pain or bright red blood in her urine.",Faithful,0.75,0
+15,0,I prescribed no medication.,Faithful,0.0,0
+15,0,"Follow-up: I instructed the patient to follow up in a year unless she experiences any more issues, and to call the office if she has any questions or concerns.",Faithful,1.0,0

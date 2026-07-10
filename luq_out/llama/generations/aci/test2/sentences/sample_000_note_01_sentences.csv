@@ -1,28 +1,28 @@
 sentence_idx,sentence,uncertainty
-0,Subjective:,0.5
-1,"HPI: The patient is a 25-year-old male with a 3-week history of right upper quadrant abdominal pain, described as a severe squeezing pain that worsens with eating, especially fatty foods.",0.254
-2,The pain is located beneath the right ribcage and is accompanied by nausea and occasional low-grade fever.,0.002
-3,The patient reports that the pain is an 8 out of 10 in severity.,0.0752
-4,"The pain is exacerbated by eating, particularly fatty foods, and the patient has noticed some improvement when avoiding these foods.",0.328
-5,"The patient has a history of type 2 diabetes, which he has managed with diet and exercise, and has lost 25 pounds in the past 3 months.",0.0103
-6,"He reports that his blood sugars have improved, but the abdominal pain persists.",0.2519
-7,"Past medical history: The patient has type 2 diabetes, for which he has managed with diet and exercise.",0.0007
-8,"He also has a family history of gallbladder disease, as both his parents had their gallbladders removed.",0.1432
-9,"Review of systems: The patient reports occasional low-grade fever and nausea, but no vomiting.",0.2461
-10,He denies any other symptoms.,0.8888
-11,Current medications: Not mentioned.,0.2621
-12,Objective:,0.5
-13,"Vital signs: The patient's blood pressure is 128/88, respiratory rate is 16, pulse rate is 68, and oxygen saturation is 99% on room air.",0.2569
-14,The patient is afebrile.,0.8131
-15,"Physical exam: The patient has positive bowel sounds, a soft and nondistended abdomen, and slight guarding to the right upper quadrant.",0.2516
-16,"Murphy's sign is positive, but no peritoneal signs are appreciated.",0.0979
-17,"Test Results: The abdominal ultrasound shows multiple gallstones in the gallbladder, mild thickening of the gallbladder wall, and a normal common bile duct size of 4.1 mm.",0.2496
-18,Assessment / Problem List:,0.5
-19,Assessment: The patient has mild cholecystitis with gallstones.,0.0001
-20,Problem list: Cholecystitis with gallstones; Gallstones; Type 2 diabetes (active).,0.4138
-21,Plan:,0.5
-22,"I prescribed pain management as needed, and I recommended a laparoscopic cholecystectomy to remove the gallbladder.",0.0383
-23,"I will perform the surgery in the next week, and the patient will spend the night in the hospital for post-procedure monitoring.",0.6987
-24,The patient should avoid high-fat foods and eat foods high in fiber after surgery.,0.239
-25,I also advised the patient to follow up with his primary care provider to monitor his type 2 diabetes.,0.9427
-26,"Follow-up: The patient will follow up with me in a week for post-operative care, and then will be released to resume normal activities, including hiking and nature photography.",0.3303
+0,Subjective:,0.0
+1,"HPI: The patient is a 25-year-old male with a 3-week history of right upper quadrant abdominal pain, described as a severe squeezing pain that worsens with eating, especially fatty foods.",0.25
+2,The pain is located beneath the right ribcage and is accompanied by nausea and occasional low-grade fever.,0.0
+3,The patient reports that the pain is an 8 out of 10 in severity.,0.25
+4,"The pain is exacerbated by eating, particularly fatty foods, and the patient has noticed some improvement when avoiding these foods.",1.0
+5,"The patient has a history of type 2 diabetes, which he has managed with diet and exercise, and has lost 25 pounds in the past 3 months.",0.0
+6,"He reports that his blood sugars have improved, but the abdominal pain persists.",0.75
+7,"Past medical history: The patient has type 2 diabetes, for which he has managed with diet and exercise.",0.0
+8,"He also has a family history of gallbladder disease, as both his parents had their gallbladders removed.",0.0
+9,"Review of systems: The patient reports occasional low-grade fever and nausea, but no vomiting.",0.25
+10,He denies any other symptoms.,1.0
+11,Current medications: Not mentioned.,0.0
+12,Objective:,0.0
+13,"Vital signs: The patient's blood pressure is 128/88, respiratory rate is 16, pulse rate is 68, and oxygen saturation is 99% on room air.",0.0
+14,The patient is afebrile.,1.0
+15,"Physical exam: The patient has positive bowel sounds, a soft and nondistended abdomen, and slight guarding to the right upper quadrant.",0.0
+16,"Murphy's sign is positive, but no peritoneal signs are appreciated.",0.75
+17,"Test Results: The abdominal ultrasound shows multiple gallstones in the gallbladder, mild thickening of the gallbladder wall, and a normal common bile duct size of 4.1 mm.",0.0
+18,Assessment / Problem List:,0.0
+19,Assessment: The patient has mild cholecystitis with gallstones.,0.0
+20,Problem list: Cholecystitis with gallstones; Gallstones; Type 2 diabetes (active).,0.75
+21,Plan:,0.0
+22,"I prescribed pain management as needed, and I recommended a laparoscopic cholecystectomy to remove the gallbladder.",1.0
+23,"I will perform the surgery in the next week, and the patient will spend the night in the hospital for post-procedure monitoring.",1.0
+24,The patient should avoid high-fat foods and eat foods high in fiber after surgery.,0.0
+25,I also advised the patient to follow up with his primary care provider to monitor his type 2 diabetes.,1.0
+26,"Follow-up: The patient will follow up with me in a week for post-operative care, and then will be released to resume normal activities, including hiking and nature photography.",0.75

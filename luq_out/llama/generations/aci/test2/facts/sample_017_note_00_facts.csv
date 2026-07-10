@@ -1,0 +1,59 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is 17 years old.,0.0
+1,subjective,The patient is non-binary.,0.0
+2,subjective,The patient was diagnosed with hypercholesterolemia.,0.0
+3,subjective,The patient's cholesterol level is 210.,0.5
+4,subjective,The cholesterol level was measured through a finger prick test.,0.75
+5,subjective,The patient is active.,0.0
+6,subjective,The patient enjoys riding their bicycle.,0.0
+7,subjective,The patient tries to eat a relatively clean diet.,0.5
+8,subjective,The patient has a weakness for chocolate chip cookies.,0.5
+9,subjective,The patient has no significant past medical history.,0.0
+10,subjective,The patient's grandparents did not have high cholesterol at a young age.,0.75
+11,subjective,The patient has a cousin who died of a heart attack.,0.25
+12,subjective,The cousin died at age 44 or 45.,0.25
+13,subjective,The patient feels healthy.,0.0
+14,subjective,The patient has not experienced growing pains.,0.25
+15,subjective,The patient has not experienced other symptoms.,0.0
+16,subjective,The patient was told to make lifestyle changes.,1.0
+17,subjective,The patient is worried about their elevated cholesterol level.,0.0
+18,objective,The patient's blood pressure is within a normal range.,0.0
+19,objective,The patient's physical exam is unremarkable.,0.0
+20,objective,The patient has no murmurs.,0.0
+21,objective,The patient has no rubs.,0.0
+22,objective,The patient has no gallops on the heart exam.,0.0
+23,objective,The patient has clear lungs.,0.0
+24,objective,The patient has no thyroid megalogy.,0.75
+25,objective,The patient has no hepatomegaly.,0.0
+26,objective,The patient has no splenomegaly.,0.0
+27,objective,The patient's cholesterol level is elevated.,0.0
+28,objective,The doctor plans to order a full cholesterol panel.,1.0
+29,objective,The doctor plans to order glucose testing.,1.0
+30,objective,The doctor plans to order a complete metabolic panel.,1.0
+31,objective,The doctor plans to order thyroid studies.,1.0
+32,objective,The doctor plans to order liver panels.,1.0
+33,objective,The doctor plans to order genetic testing.,1.0
+34,assessment,The patient has elevated cholesterol.,0.0
+35,assessment,Elevated cholesterol is a risk factor for premature heart attacks.,0.75
+36,assessment,The patient has hypercholesterolemia.,0.0
+37,assessment,The patient has suspected familial hypercholesterolemia.,0.0
+38,plan,The doctor ordered a full cholesterol panel.,0.0
+39,plan,The doctor ordered glucose testing.,0.0
+40,plan,The doctor ordered a complete metabolic panel.,0.0
+41,plan,The doctor ordered thyroid studies.,0.0
+42,plan,The doctor ordered liver panels.,0.0
+43,plan,The purpose of the tests is to investigate the cause of elevated cholesterol.,0.0
+44,plan,The doctor recommended genetic testing.,0.25
+45,plan,Genetic testing is to determine if the problem is familial.,0.0
+46,plan,Genetic testing is to determine if the problem is secondary.,0.75
+47,plan,The patient will meet with a nutritionist.,0.0
+48,plan,The purpose of meeting with the nutritionist is to learn about a well-balanced diet.,0.25
+49,plan,The diet should be low in saturated fat.,0.0
+50,plan,The diet should be low in sugars.,0.0
+51,plan,The patient will continue to exercise regularly.,0.0
+52,plan,The patient's exercise includes bike riding.,0.0
+53,plan,The doctor will follow up with the patient in 3-6 months.,0.25
+54,plan,The purpose of the follow-up is to check the patient's cholesterol level.,0.0
+55,plan,The patient will make dietary changes.,0.75
+56,plan,The follow-up will be after the patient has made dietary changes.,0.0
+57,plan,The follow-up will be after the patient has met with the nutritionist.,0.25

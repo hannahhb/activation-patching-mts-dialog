@@ -1,0 +1,27 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 38-year-old female, presents with a several-year history of acid reflux symptoms, which have worsened over the past few years.",1.0
+2,"She reports feeling burning in her chest and throat, particularly after eating certain trigger foods such as spicy, citrus, and tomato-based products.",0.0
+3,"She has been taking omeprazole 40 milligrams twice daily for approximately one year, but her symptoms are poorly controlled.",0.75
+4,"She also reports difficulty managing stress, which exacerbates her symptoms.",1.0
+5,She has a history of anxiety and seasonal allergies.,0.0
+6,Past medical history: The patient has a history of anxiety and seasonal allergies.,0.0
+7,"Her grandmother had esophageal cancer, and her mother had acid reflux.",0.25
+8,She had a surgical scar on her abdomen from a twisted intestine repair at one month old.,0.75
+9,"Review of systems: The patient denies any difficulty swallowing, abdominal pain, nausea, vomiting, constipation, diarrhea, or rectal bleeding.",0.75
+10,Current medications: She is currently taking omeprazole 40 milligrams twice daily.,0.0
+11,Objective:,0.0
+12,Vital signs: [NOT MENTIONED],0.0
+13,"Physical exam: A normal physical exam was noted, except for well-healed abdominal surgical scars.",0.0
+14,Test Results: [NOT MENTIONED],0.0
+15,Assessment / Problem List:,0.0
+16,Assessment: The patient likely has gastroesophageal reflux disease (GERD) with underlying functional etiology.,0.25
+17,Problem list: GERD; suspected; confirmed; past; unknown,1.0
+18,Plan:,0.0
+19,I prescribed Nexium 40 milligrams twice daily for her GERD.,0.0
+20,"I recommended that she make dietary changes to avoid trigger foods such as spicy, citrus, and tomato-based products.",0.25
+21,I also advised her to work on managing stress to alleviate her symptoms.,0.0
+22,I ordered an upper endoscopy (EGD) to evaluate for potential causes of her GERD.,0.5
+23,I will send a prescription for Nexium to her pharmacy on file.,0.25
+24,I will have her schedule the EGD at the checkout desk and follow up with me in the office to discuss the results and review her progress.,0.75
+25,"Follow-up: I will see the patient in the office for follow-up and to discuss the results of the EGD, as well as her response to the dietary and stress management changes and Nexium therapy.",1.0

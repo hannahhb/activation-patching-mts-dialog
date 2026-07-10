@@ -39,7 +39,6 @@ import argparse
 import json
 import re
 import sys
-import time
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -47,7 +46,7 @@ import pandas as pd
 from tqdm import tqdm
 
 sys.path.insert(0, str(Path(__file__).parent))
-from factmatch_sentence import get_bedrock_client
+from llm_client import get_llm
 from luq_sentence import DATASET_CONFIG, DATASET_SPLIT
 
 # ── Constants ─────────────────────────────────────────────────────────────────
@@ -55,8 +54,6 @@ BEDROCK_MODEL    = "us.meta.llama3-3-70b-instruct-v1:0"
 DEFAULT_GEN_DIR  = "luq_out/llama/generations"
 DEFAULT_FACTS_DIR = "luq_out/llama_atomic/facts"
 DEFAULT_OUT_DIR  = "luq_out/llama_judge"
-MAX_RETRIES      = 3
-RETRY_SLEEP      = 4
 LABELS           = {"Faithful", "Fabrication", "Negation", "Causality", "Contextual"}
 
 # ── Prompts ───────────────────────────────────────────────────────────────────
@@ -181,22 +178,15 @@ Respond with a JSON object on a single line:
 # ── LLM helpers ───────────────────────────────────────────────────────────────
 
 def _call_llm(prompt: str, max_tokens: int = 4096) -> Optional[str]:
-    client = get_bedrock_client()
-    for attempt in range(MAX_RETRIES):
-        try:
-            resp = client.converse(
-                modelId=BEDROCK_MODEL,
-                messages=[{"role": "user", "content": [{"text": prompt}]}],
-                inferenceConfig={"maxTokens": max_tokens, "temperature": 0.0},
-            )
-            return resp["output"]["message"]["content"][0]["text"].strip()
-        except Exception as exc:
-            if attempt < MAX_RETRIES - 1:
-                tqdm.write(f"  [llm] error (attempt {attempt+1}): {exc}")
-                time.sleep(RETRY_SLEEP * (attempt + 1))
-            else:
-                tqdm.write(f"  [llm] failed: {exc}")
-                return None
+    try:
+        resp = get_llm().converse(
+            stage="judge", model_id=BEDROCK_MODEL,
+            messages=[{"role": "user", "content": [{"text": prompt}]}],
+            inference_config={"maxTokens": max_tokens, "temperature": 0.0},
+        )
+    except Exception:
+        return None
+    return resp["output"]["message"]["content"][0]["text"].strip()
 
 
 def _parse_label(text: str) -> Dict[str, str]:

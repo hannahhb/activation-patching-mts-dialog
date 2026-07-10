@@ -1,0 +1,63 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 39-year-old male.,1.0
+1,subjective,The patient has a 3-month history of intermittent cough.,0.2222
+2,subjective,The cough was initially noticed while loading horses.,0.2222
+3,subjective,The cough was exacerbated by a cold.,0.6667
+4,subjective,The patient was diagnosed with bronchitis by his primary care physician.,0.3333
+5,subjective,A chest X-ray showed a lung nodule.,0.3333
+6,subjective,A CT scan confirmed the lung nodule.,0.4444
+7,subjective,The patient is a former smoker.,0.0
+8,subjective,The patient quit smoking 7 years ago.,0.0
+9,subjective,The patient has a history of rheumatoid arthritis.,0.0
+10,subjective,The patient's rheumatoid arthritis is well-controlled.,0.1111
+11,subjective,The patient is taking methotrexate.,0.0
+12,subjective,The methotrexate dose is 7.5mg.,0.0
+13,subjective,Methotrexate is taken weekly.,0.0
+14,subjective,Methotrexate is prescribed for rheumatoid arthritis.,0.0
+15,subjective,The patient denies pain.,0.0
+16,subjective,The patient denies shortness of breath.,0.0
+17,subjective,The patient denies other symptoms.,0.3333
+18,objective,The patient's blood pressure is 124/76.,0.0
+19,objective,The patient's heart rate is 70.,0.0
+20,objective,The patient's respiration rate is 16.,0.0
+21,objective,The patient's O2 saturation on room air is 98%.,0.0
+22,objective,The lungs are clear.,0.0
+23,objective,The lungs are equal bilateral.,0.0
+24,objective,The heart has a regular rate.,0.1111
+25,objective,The heart has a regular rhythm.,0.1111
+26,objective,The patient denied heart clicks.,0.4444
+27,objective,The patient denied heart rubs.,0.7778
+28,objective,The patient denied heart murmurs.,0.5556
+29,objective,The extremities have intact pulses.,0.4444
+30,objective,The extremities have brisk capillary refill.,0.4444
+31,objective,The skin is pink.,0.4444
+32,objective,The skin is warm.,0.4444
+33,objective,The skin is dry.,0.4444
+34,objective,There is slight swelling in the knuckles.,0.1111
+35,objective,The patient has rheumatoid arthritis.,0.2222
+36,objective,A chest CT scan was performed.,0.0
+37,objective,The chest CT scan shows a solitary nodule.,0.0
+38,objective,The nodule is 2cm in size.,0.0
+39,objective,The nodule is located in the lateral aspect of the right upper lobe.,0.1111
+40,objective,The nodule is smooth in appearance.,0.0
+41,objective,The patient denied emphysematous disease.,1.0
+42,assessment,The patient has a lung nodule.,0.0
+43,assessment,The lung nodule is located in the right upper lobe.,0.0
+44,assessment,The lung nodule was found incidentally.,0.0
+45,assessment,The patient has Rheumatoid Arthritis.,0.0
+46,assessment,The patient has a history of smoking.,0.125
+47,assessment,The doctor ordered a pulmonary function test (PFT).,0.75
+48,assessment,The PFT is to assess lung function.,0.75
+49,assessment,The doctor scheduled a PET CT.,0.75
+50,assessment,The PET CT is to determine if the nodule is metabolically active.,0.75
+51,assessment,The doctor scheduled a video-assisted thoracoscopy.,0.875
+52,assessment,The video-assisted thoracoscopy is to remove the nodule.,0.875
+53,assessment,The patient will be under general anesthesia.,0.875
+54,assessment,The general anesthesia will last approximately 1.5 hours.,0.875
+55,assessment,The patient will have a chest tube.,0.875
+56,assessment,The chest tube will be in place until the following day.,0.875
+57,assessment,The patient will be admitted for 1 night.,0.875
+58,assessment,The patient will be discharged the next day.,0.875
+59,assessment,The patient will follow up with their rheumatologist.,1.0
+60,assessment,The follow-up with the rheumatologist is for continued management of rheumatoid arthritis.,0.875
+61,assessment,The patient will be discharged the day after the procedure.,0.875

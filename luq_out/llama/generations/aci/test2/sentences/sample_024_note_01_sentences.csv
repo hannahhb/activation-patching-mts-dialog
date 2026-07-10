@@ -1,0 +1,27 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient presented with a history of a right knee injury sustained 3 days ago during a soccer game, where he felt a pop in his knee while trying to kick the ball.",0.5
+2,"He reported swelling, pain, and limited function of the knee, which has not improved with anti-inflammatory medication.",1.0
+3,"He has noticed a marked limp on his right leg and has difficulty bending and straightening his knee, especially at the end of the motion.",0.75
+4,Past medical history: [NOT MENTIONED],0.0
+5,Review of systems: [NOT MENTIONED],0.25
+6,Current medications: I prescribed ibuprofen for pain relief.,0.5
+7,Objective:,0.0
+8,Vital signs: [NOT MENTIONED],0.0
+9,Physical exam: The patient had a marked limp on his right leg upon ambulation.,0.5
+10,There was significant effusion in the right knee with slight ecchymosis.,0.0
+11,Palpation of the medial joint line caused pain.,0.0
+12,Passive range of motion revealed difficulty with terminal extension to 115 degrees and terminal flexion to 70 degrees due to pain.,1.0
+13,The Lachman exam was positive.,0.0
+14,"Muscle strength was 5/5 in both lower extremities, and neurovascularly, the bilateral lower extremities were intact.",0.25
+15,Test Results: [NOT MENTIONED],0.0
+16,Assessment / Problem List:,0.0
+17,Assessment: The patient's right knee injury is suggestive of an anterior cruciate ligament (ACL) tear.,0.0
+18,Problem list: Anterior cruciate ligament tear; suspected; confirmed.,1.0
+19,Plan:,0.0
+20,I ordered an MRI to evaluate the integrity of the ACL.,0.0
+21,I prescribed meloxicam 15 milligrams daily for pain and swelling.,0.0
+22,I advised the patient to ice the knee if necessary and to use a knee immobilizer and crutches to reduce stress and strain on the knee.,0.0
+23,"I instructed the patient to limit activities, including work activities, and to avoid jogging until the results of the MRI are available.",0.0
+24,I recommended moderate activities to avoid locking of the knee.,0.5
+25,"Follow-up: The patient will be scheduled for an MRI, and I will review the results with him to determine the next course of action.",0.5

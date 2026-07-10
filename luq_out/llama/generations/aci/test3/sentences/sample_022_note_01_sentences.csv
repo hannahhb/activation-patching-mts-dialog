@@ -1,0 +1,30 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient presents with left-sided back pain that is sometimes sharp and sometimes not, and has been ongoing.",0.5
+2,The pain is mostly on the left side.,0.0
+3,"The patient reports that their appetite and water consumption are unchanged, but they have been experiencing increased urine output.",0.75
+4,"The patient has been riding a bike regularly and has been doing well in school, but has a brother who smokes at home.",0.75
+5,"The patient has a history of recurrent strep infections, with four episodes in the last five months.",0.0
+6,"The patient is not sure what BFS is, but thinks they have strep.",1.0
+7,The patient denies any recent fatigue.,0.75
+8,Past medical history: The patient has a history of recurrent strep infections.,0.0
+9,"Review of systems: The patient reports increased urine output and denies any recent fatigue, fever, or other symptoms.",1.0
+10,Current medications: [NOT MENTIONED],0.0
+11,Objective:,0.0
+12,Vital signs: [NOT MENTIONED],0.0
+13,"Physical exam: The patient's throat is not erythematous or swollen, and the tonsils are midline.",0.25
+14,"The neck examination is unremarkable, with no lymphadenopathy or cervical adenopathy.",0.0
+15,"The lungs are clear, with no wheezes, rales, or rhonchi.",0.0
+16,"The heart sounds are normal, with no murmur, rub, or gallop.",0.0
+17,"The patient's back is non-tender on palpation, and the abdomen is non-tender with no rebound or guarding.",0.25
+18,Test Results: [NOT MENTIONED],0.0
+19,Assessment / Problem List:,0.0
+20,"Assessment: The patient presents with symptoms and signs suggestive of potential glomerulonephritis, which may be related to recurrent strep infections.",0.75
+21,Problem list: Glomerulonephritis; Suspected; confirmed; unknown.,1.0
+22,Plan:,0.0
+23,"I ordered several lab tests, including a lipid panel, UA, CMP, CBC, vitamin D, and TSH, to further evaluate the patient's symptoms and potential underlying conditions.",0.0
+24,I referred the patient to an ENT specialist to consider tonsillectomy for recurrent strep infections.,0.25
+25,"I also provided the patient with a note for school and work, as they are changing jobs and will need to attend classes and work while waiting for test results.",0.75
+26,"I informed the patient that their mom is paying for the tests, and they will be free.",1.0
+27,"The patient will need to have the tests done as soon as possible, including fasting for some of the tests.",1.0
+28,"Follow-up: The patient will return in one week for test results, unless the results are normal and can be discussed over the phone.",0.5

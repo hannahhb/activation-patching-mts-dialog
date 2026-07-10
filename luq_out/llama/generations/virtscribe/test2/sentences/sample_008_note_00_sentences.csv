@@ -1,0 +1,27 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"The patient, Jordan Roberts, is a 49-year-old male with a history of hypertension and palpitations.",0.25
+2,"He presents with resistant hypertension, despite being on three medications at maximum dose.",1.0
+3,"He reports having a few cups of coffee and no breakfast on the day of his previous emergency room visit, which he attributes to a panic attack.",0.25
+4,"His girlfriend and he discussed it, and he believes it was not related to his blood pressure.",1.0
+5,"He mentions a family history of high blood pressure and reports that his new primary doctor started him on a new medication, Benicar HCT (hydrochlorothiazide), one month ago.",0.75
+6,He is also taking Amlodipine 10 mg daily.,0.0
+7,"He denies any issues with his salt intake, stating he is doing well with it.",0.75
+8,He reports trying to walk on a treadmill when he can.,0.25
+9,"He has a potassium level of 4.0 from one week ago, but it has not been rechecked recently.",1.0
+10,Objective:,0.0
+11,"Vital signs: The patient's blood pressure has been running at 146-155 lately, not yet in the 120s.",0.25
+12,His potassium level is 4.0.,0.5
+13,Physical exam: His heart and lungs sound good.,0.0
+14,There is no tenderness or swelling in his ankles or feet.,0.75
+15,Test Results: Not mentioned.,0.5
+16,Assessment / Problem List:,0.0
+17,"Assessment: The patient has resistant hypertension, despite being on three medications at maximum dose, and is a candidate for further evaluation and treatment.",1.0
+18,Problem list: Hypertension; Suspected resistant hypertension; Hypokalemia; Hyperaldosteronism; Potential for electrolyte imbalance; Potential for dehydration; Potential for gynecomastia.,1.0
+19,Plan:,0.0
+20,I added Spironolactone to his regimen to help lower his blood pressure.,0.0
+21,I will monitor his potassium and sodium levels in 2 weeks.,0.0
+22,He will have a basic metabolic panel and blood pressure check in 2 weeks.,0.0
+23,"If he is not controlled on Spironolactone, I will refer him to the resistant hypertension clinic for further evaluation and potential treatment, including renal denervation.",0.5
+24,Follow-up:,0.0
+25,I will see him in 2 weeks to check his blood pressure and electrolytes.,0.25

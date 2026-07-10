@@ -1,0 +1,544 @@
+sample_idx,note_idx,sentence,label,uncertainty,nonfaithful
+0,0,He mentions that stretching helps alleviate the pain.,Faithful,0.0,0
+0,0,"He has a history of back surgery in November 2020, which involved a microdiscectomy.",Faithful,0.0,0
+0,0,"He was prescribed gabapentin, which he had difficulty withdrawing from when he stopped taking it suddenly.",Faithful,0.0,0
+0,0,He currently takes ibuprofen 800mg daily for pain management.,Faithful,0.5,0
+0,0,Vital signs: Not mentioned.,Faithful,0.0,0
+0,0,"Physical exam: The patient had no pain with flexion or extension, but did experience pain with weight-bearing and palpation to the left side around the L5.",Faithful,0.0,0
+0,0,Dorsiflexion was normal with a normal range of motion.,Faithful,0.0,0
+0,0,Test Results: X-ray results showed no fractures or abnormalities on the spinal bone.,Faithful,0.0,0
+0,0,"Assessment: The patient has chronic left-sided lower back pain, likely due to a muscle pull from a misalignment in his spine.",Faithful,1.0,0
+0,0,Problem list: Chronic lower back pain; musculoskeletal strain of the lumbar region; history of back surgery.,Fabrication,1.0,1
+0,0,I prescribed meloxicam for pain management.,Faithful,0.0,0
+0,0,I also referred the patient to pain management for further evaluation and to discuss alternative pain management options.,Faithful,0.25,0
+0,0,I referred the patient to physical therapy to help with the muscle pull.,Faithful,0.75,0
+0,0,I prescribed demerol.,Faithful,0.0,0
+0,0,Follow-up: The patient will follow up with the physical therapist and the pain management specialist.,Fabrication,0.5,1
+1,0,HPI: The patient presents with sudden visual distortions and blurring of vision.,Faithful,0.0,0
+1,0,"She reports that straight lines and door frames appear crooked to her and she has trouble adjusting to dim lights, particularly in restaurants.",Faithful,0.0,0
+1,0,"She has a history of macular degeneration and is a smoker, consuming a pack of cigarettes per day.",Faithful,0.0,0
+1,0,She reports difficulty stopping smoking and infrequently checks her blood pressure.,Faithful,0.75,0
+1,0,Past medical history: The patient has a history of macular degeneration.,Faithful,0.0,0
+1,0,Review of systems: The patient reports difficulty adjusting to dim lights in restaurants.,Faithful,0.25,0
+1,0,Current medications: [NOT MENTIONED],Fabrication,0.25,1
+1,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+1,0,The cup-to-disc ratio is 0.2 in the right eye and 0.3 in the left eye.,Faithful,0.25,0
+1,0,"The fundus examination shows the retina to be attached 360 degrees without tears or holes in the right eye, and the posterior segment exam reveals drusen in the macula, thickening of the retina, presence of subretinal fluid, and exudates accumulation positive for hemorrhage in the left eye.",Causality,0.75,1
+1,0,The patient should continue to monitor their blood pressure regularly and consider keeping a log of their readings.,Faithful,0.5,0
+2,0,"HPI: The patient, Jacqueline, presented with a complaint of a painful right ankle after a mountain biking incident, where she fell and twisted her ankle outward.",Faithful,0.0,0
+2,0,"She reports that the pain is located on the outer ankle and is accompanied by some tingling and numbness in her toes and heart, although I clarified that I am an orthopedic person and couldn't discuss the numbness in her heart.",Faithful,0.5,0
+2,0,She reports that the pain is not relieved by Tylenol and that she heard a crack when the injury occurred.,Faithful,0.75,0
+2,0,"She denies any fever, chills, or other systemic symptoms, but reports having a fever of 200 degrees Fahrenheit, which I clarified is not a fever.",Negation,0.75,1
+2,0,She has been mountain biking for three years and is not sure of her favorite location.,Faithful,0.75,0
+2,0,Past medical history: [NOT MENTIONED],Fabrication,0.25,1
+2,0,Review of systems: [NOT MENTIONED],Fabrication,0.75,1
+2,0,Current medications: She took Tylenol for pain.,Faithful,0.25,0
+2,0,"Vital signs: Her temperature is 98.6 degrees Fahrenheit, blood pressure is 118/77, and heart rate is 77 beats per minute.",Faithful,0.0,0
+2,0,"Physical exam: On the right ankle exam, there is some edema and erythema on the lateral malleolus, associated ecchymosis, and a few excoriations.",Faithful,0.0,0
+2,0,"There is pain to palpation of the right lateral malleolus, decreased flexion and extension of the right ankle, and internal and external rotation.",Faithful,0.0,0
+2,0,There is no apparent injury to the knee or the foot.,Faithful,0.5,0
+2,0,"Test Results: The right ankle x-ray shows no acute fracture or bony abnormality, only some soft tissue injury.",Faithful,0.0,0
+2,0,Assessment: I believe the patient has an acute right ankle sprain.,Faithful,0.0,0
+2,0,Problem list: Ankle sprain; suspected; confirmed; past; unknown.,Fabrication,1.0,1
+2,0,I prescribed meloxicam 15 milligrams once a day for pain.,Faithful,0.0,0
+2,0,"I advised her to ice the area for about 20 minutes, five times a day, and to weight-bear as tolerated.",Faithful,0.0,0
+2,0,I recommended an air cast and provided crutches.,Faithful,0.5,0
+2,0,"I anticipate her to start feeling better in the next couple of weeks and instructed her to return if she doesn't improve, at which point we will consider physical therapy or further imaging.",Faithful,0.5,0
+2,0,Follow-up: I instructed her to follow up with me if she doesn't start feeling better.,Causality,0.25,1
+3,0,"HPI: The patient, a 48-year-old female, presents with a history of a recent myocardial infarction for which she underwent a cardiac catheterization and stent placement in the right coronary artery 2 weeks ago.",Faithful,0.5,0
+3,0,She reports feeling thankful to be alive but struggling with the aftermath of the event.,Faithful,0.0,0
+3,0,"She has been taking it easy and doing light work, taking her medications as prescribed.",Faithful,0.0,0
+3,0,She denies chest pain since the stent placement but reports occasional shortness of breath when walking up and down stairs.,Faithful,0.0,0
+3,0,She has been taking brilinta 90mg twice a day and baby aspirin at night.,Faithful,1.0,0
+3,0,She has eaten pizza a few times a week but is trying to watch her salt intake and diet.,Faithful,0.75,0
+3,0,Past medical history: The patient has a history of a recent myocardial infarction and stent placement in the right coronary artery.,Faithful,0.0,0
+3,0,Review of systems: The patient reports occasional shortness of breath when walking up and down stairs.,Faithful,0.0,0
+3,0,Vital signs: Blood pressure 127/60.,Faithful,0.0,0
+3,0,Physical exam: The patient's blood pressure is within normal limits.,Faithful,0.0,0
+3,0,"The neck exam is unremarkable, with no jugular venous distention or carotid bruits.",Faithful,0.25,0
+3,0,The heart exam reveals a slight 3/6 systolic ejection murmur at the left base.,Faithful,0.25,0
+3,0,The lung exam is clear to auscultation bilaterally.,Faithful,0.0,0
+3,0,"The musculoskeletal exam reveals a clean, dry, and intact right radial artery cardiac cath site with a palpable radial pulse.",Faithful,0.25,0
+3,0,Test Results: [NOT MENTIONED],Fabrication,0.25,1
+3,0,"Assessment: The patient is a 48-year-old female with a history of a recent myocardial infarction and stent placement in the right coronary artery, with a slight systolic ejection murmur and mild mitral regurgitation.",Faithful,1.0,0
+3,0,Problem list: Myocardial infarction; Mitral regurgitation; Hypertension (status: unknown); Hyperlipidemia (status: unknown); Cardiac catheterization site complication (status: unknown).,Fabrication,1.0,1
+3,0,I continued the patient on aspirin once a day and brilinta 90mg twice a day for at least one year.,Faithful,0.5,0
+3,0,I prescribed crestor 40mg once a day.,Faithful,0.25,0
+3,0,I ordered an echocardiogram in six months.,Faithful,0.0,0
+3,0,I enrolled the patient in cardiac rehab for dietary education and counseling.,Faithful,0.5,0
+3,0,I ordered liver function studies and a lipid panel to follow up in six weeks.,Faithful,1.0,0
+3,0,I advised the patient to resume swimming with caution and to take toprol 50mg once a day.,Faithful,0.75,0
+4,0,"HPI: The patient, a 30-year-old male, presents with a 2-week history of right knee pain following a fall from a tandem bike.",Fabrication,0.5,1
+4,0,"He reports that he hit his knee on the curb and took some ibuprofen, which provided temporary relief.",Faithful,1.0,0
+4,0,"However, the pain has persisted and worsened with activities such as walking uphill.",Faithful,0.5,0
+4,0,He denies any previous knee problems and has been taking ibuprofen as needed.,Faithful,0.0,0
+4,0,Past medical history: The patient works as a baby rocker at a children's hospital and enjoys walking his dog.,Faithful,0.5,0
+4,0,"He is physically active and has played sports in high school, but has not been involved in any athletic activities since then.",Faithful,1.0,0
+4,0,"He denies any history of smoking, alcohol, or drug use.",Fabrication,1.0,1
+4,0,"Review of systems: The patient reports pain in the right knee, particularly with weight-bearing activities, but denies any other symptoms.",Faithful,0.75,0
+4,0,Current medications: Ibuprofen as needed.,Faithful,0.25,0
+4,0,Vital signs: Not mentioned.,Faithful,0.0,0
+4,0,"Physical exam: The patient's knee was tender to palpation on the medial joint line, with a small abrasion on the medial patella.",Faithful,0.0,0
+4,0,The patient had a slight laxity in the posterior drawer test and a positive one-plus posterior drawer sign.,Faithful,0.5,0
+4,0,The lateral collateral ligament and medial collateral ligament were intact.,Faithful,0.25,0
+4,0,"The patient had full extension and flexion in both knees, with no deformities or crepitus.",Faithful,0.5,0
+4,0,"Test Results: X-rays of the knee were reviewed, which showed no obvious fractures or bone spurs, but the doctor suspects a possible injury to the posterior cruciate ligament (PCL).",Faithful,0.75,0
+4,0,"Assessment: The patient has a suspected injury to the posterior cruciate ligament of the right knee, likely due to a fall from a tandem bike.",Faithful,1.0,0
+4,0,Problem list: Knee pain; suspected posterior cruciate ligament injury; right knee instability; possible meniscus tear or chipped cartilage.,Faithful,1.0,0
+4,0,I prescribed ibuprofen 400mg three times a day for pain management.,Faithful,1.0,0
+4,0,I recommended ice packs a few times a day to reduce swelling.,Faithful,1.0,0
+4,0,"I will send a prescription for a different medication that may be easier to take, which the patient can take twice a day.",Faithful,0.5,0
+4,0,I will get the patient a referral to physical therapy to improve strength and motion.,Faithful,0.25,0
+4,0,I will also get a brace fitted to the patient's knee for temporary support.,Faithful,0.25,0
+4,0,I will re-evaluate the patient in 4-6 weeks to assess progress.,Faithful,0.0,0
+4,0,"The patient will follow up in 4-6 weeks to re-evaluate the knee and assess for any need for further treatment, including possible surgery to repair the PCL.",Faithful,1.0,0
+5,0,"HPI: The patient, Zachary, presents with right elbow pain, which he claims started since yesterday, but later corrects that it is actually his left arm that hurts.",Faithful,1.0,0
+5,0,"He describes the pain as achiness and heaviness, which affects his entire left arm from the elbow to the neck.",Faithful,0.0,0
+5,0,"He denies any specific incident that may have caused the pain, such as lifting heavy objects.",Faithful,0.25,0
+5,0,"He has taken some Motrin for the pain, but it has not provided significant relief.",Faithful,0.0,0
+5,0,"He also mentions that the pain is accompanied by chest pain, which he describes as coming and going, affecting his neck as well.",Faithful,0.25,0
+5,0,He denies shortness of breath.,Faithful,0.0,0
+5,0,"Past medical history: The patient has a history of hypertension, for which he is on 2.5mg of Norvasc, and diabetes, for which he is on 500mg of metformin.",Faithful,0.0,0
+5,0,His A1C result from a previous visit was 7.2.,Faithful,0.5,0
+5,0,Review of systems: The patient denies any other symptoms besides the elbow and chest pain.,Faithful,0.25,0
+5,0,"Current medications: Norvasc 2.5mg daily for hypertension, Metformin 500mg daily for diabetes.",Faithful,0.25,0
+5,0,"Vital signs: Blood pressure 150/90, which is slightly high.",Faithful,0.75,0
+5,0,"Physical exam: The patient's physical exam reveals a slight murmur with his heart, which was not noted previously.",Faithful,0.5,0
+5,0,Test Results: [NOT MENTIONED],Fabrication,0.0,1
+5,0,Assessment: The patient presents with symptoms suggestive of a possible myocardial infarction (heart attack).,Faithful,0.0,0
+5,0,Problem list: Hypertension; Diabetes; Suspected myocardial infarction; Chest pain; Elbow pain.,Faithful,0.75,0
+5,0,I prescribed Aspirin and Nitroglycerin to help alleviate the chest pain.,Faithful,0.25,0
+5,0,I will get an EKG to further evaluate the patient's heart.,Faithful,0.0,0
+5,0,I will also perform a glucose test to assess the patient's blood sugar levels and adjust his medication as needed.,Faithful,1.0,0
+5,0,The patient will be kept on 500mg of metformin for diabetes and 2.5mg of Norvasc for hypertension.,Faithful,0.0,0
+5,0,The patient will be referred to the hospital for further evaluation and treatment of the suspected myocardial infarction.,Faithful,0.75,0
+5,0,Follow-up: The patient will be admitted to the hospital for further evaluation and treatment.,Causality,0.75,1
+6,0,"The patient is a 34-year-old female with a history of chronic migraines and hypertension who presents with abdominal pain that started 10 days ago with mild discomfort on her right side, which has worsened over the last couple of days.",Faithful,0.0,0
+6,0,"The pain is a 4 or 5 out of 10 in severity, but can reach up to 7 or 8.",Faithful,0.5,0
+6,0,"The patient reports that the pain worsens after meals, is localized to the right side, and radiates slightly to the left.",Faithful,0.25,0
+6,0,"She also experiences nausea, heartburn, and fatigue.",Faithful,0.0,0
+6,0,"The patient denies fever, urinary symptoms, diarrhea, or blood in her stool.",Faithful,0.0,0
+6,0,She has not had any unusual travel or exposures.,Faithful,0.5,0
+6,0,"The patient's migraines have been rare and responsive to Excedrin, but she occasionally takes sumatriptan for breakthrough migraines.",Faithful,0.5,0
+6,0,The patient has a history of chronic migraines and hypertension.,Faithful,0.0,0
+6,0,She has been taking lisinopril 20 milligrams per day for hypertension.,Faithful,0.0,0
+6,0,"The patient reports nausea, heartburn, and fatigue.",Faithful,0.0,0
+6,0,The cardiovascular exam is otherwise normal.,Faithful,0.75,0
+6,0,"The abdominal exam reveals mild to moderate tenderness in the right upper quadrant, with an equivocal Murphy's sign.",Faithful,0.0,0
+6,0,"The patient has acute abdominal pain with right upper quadrant tenderness, possibly due to gallstones or an infection in the gallbladder.",Faithful,0.0,0
+6,0,"The patient has a history of chronic migraines, and her migraines are well-managed with Excedrin and sumatriptan.",Faithful,1.0,0
+6,0,The patient's hypertension is under adequate control on lisinopril.,Faithful,1.0,0
+6,0,"I will order blood tests (CBC, chem 12, urinalysis, pregnancy test) and an ultrasound of the right upper quadrant to investigate the cause of the patient's abdominal pain.",Faithful,0.0,0
+6,0,I will also prescribe a refill of lisinopril 20 milligrams per day for hypertension.,Faithful,0.5,0
+6,0,I will write a prescription for sumatriptan for the patient's migraines.,Faithful,0.0,0
+6,0,I will instruct the patient not to eat anything until the results of the tests are available.,Faithful,1.0,0
+6,0,I will follow up on the results of the tests today and check on the patient's condition.,Faithful,0.75,0
+6,0,I will see the patient in about four weeks to reassess her condition.,Faithful,0.0,0
+7,0,HPI: The patient presents with a three-day history of a hacking cough that started with a gradual onset and has progressed to include coughing up green phlegm.,Faithful,0.0,0
+7,0,"The cough is accompanied by a sore throat, nasal congestion, and no fever, shortness of breath, body aches, nausea, or vomiting.",Faithful,0.0,0
+7,0,"The patient has a history of seasonal allergies, which are typically seasonal and present around spring time.",Faithful,0.25,0
+7,0,"The patient has been managing their diabetes with metformin 500mg daily, which has been tolerated well, and has been checking their blood sugars with readings in the range of 120.",Faithful,0.0,0
+7,0,"The patient has a history of hypertension and is currently on hydrochlorothiazide, which has been taken as prescribed.",Faithful,0.0,0
+7,0,"The patient's diet has been a challenge, particularly with sugar intake.",Faithful,1.0,0
+7,0,"Past medical history: The patient has a history of type 2 diabetes, hypertension, and seasonal allergies.",Faithful,0.0,0
+7,0,"Review of systems: The patient denies fever, shortness of breath, body aches, nausea, or vomiting.",Faithful,0.0,0
+7,0,"Vital signs: Blood pressure is elevated at 144/72, otherwise vital signs are within normal limits.",Faithful,0.25,0
+7,0,Physical exam: The patient's sinuses are tender to palpation bilaterally.,Faithful,0.0,0
+7,0,The pharynx is erythematous and the tonsils are symmetrical without exudates.,Faithful,0.25,0
+7,0,The patient has anterior cervical adenopathy.,Faithful,0.0,0
+7,0,The lungs are clear to auscultation.,Faithful,0.0,0
+7,0,The heart has a regular rate and rhythm with a 2/6 systolic ejection murmur at the left base.,Faithful,0.75,0
+7,0,The lower extremities are without edema.,Faithful,0.0,0
+7,0,Test Results: [NOT MENTIONED],Fabrication,0.0,1
+7,0,"Assessment: The patient has an upper respiratory infection, likely caused by a virus, given the sudden onset and the fact that they were exposed to someone with similar symptoms.",Faithful,1.0,0
+7,0,Problem list: Upper respiratory infection; Type 2 diabetes; Hypertension; Seasonal allergies.,Faithful,1.0,0
+7,0,I prescribed Coricidin HBP for the cough and advised the patient to continue drinking plenty of fluids and getting plenty of rest.,Faithful,0.5,0
+7,0,I will check the patient for COVID-19 and will provide results.,Faithful,0.0,0
+7,0,I increased the hydrochlorothiazide dose to 25mg once daily and advised the patient to take it in the morning.,Faithful,0.75,0
+7,0,I also recommended that the patient continue to check their blood pressure at different times of the day.,Faithful,0.75,0
+7,0,Follow-up: The patient will return for a follow-up visit to check their hemoglobin A1c and to reassess their blood pressure.,Faithful,0.25,0
+8,0,"HPI: The patient, Betty, presents with a 3-week history of left shoulder pain, which is described as constant and exacerbated by pressure, particularly when sleeping on the affected side.",Faithful,1.0,0
+8,0,The pain is alleviated with Tylenol.,Faithful,0.0,0
+8,0,"The patient denies any direct trauma to the shoulder, but mentions being active and recently renovating the basement, which may be contributing to the pain.",Faithful,0.5,0
+8,0,The patient reports that the pain is a 7 out of 10 without Tylenol and 2-3 with Tylenol.,Faithful,0.5,0
+8,0,"Past medical history: The patient has a history of occasional aches and pains, which are typically managed with Tylenol.",Faithful,0.25,0
+8,0,Review of systems: The patient denies numbness or tingling in the arm or hand.,Faithful,0.0,0
+8,0,Current medications: I prescribed Tylenol (2 tablets) every 6-8 hours for pain.,Fabrication,0.25,1
+8,0,Vital signs: Not mentioned.,Faithful,0.0,0
+8,0,"Physical exam: The patient has limited active and passive range of motion in the left shoulder, tenderness of the greater tuberosity of the humerus, and no tenderness at the sternoclavicular or clavicular joints.",Faithful,0.0,0
+8,0,"The patient has good hand grip bilaterally, and neurovascular exam of the left arm shows brisk cap refill in less than 3 seconds and intact motor and sensation to light touch.",Faithful,0.5,0
+8,0,Test Results: X-ray of the left shoulder shows no fracture or bony abnormality.,Faithful,0.0,0
+8,0,"Assessment: The patient's symptoms are most likely due to rotator cuff tendinopathy, which is an injury to the tendons of the muscles of the left shoulder.",Faithful,0.0,0
+8,0,Problem list: Rotator cuff tendinopathy; active; confirmed.,Fabrication,1.0,1
+8,0,I ordered an MRI of the left shoulder to rule out any other conditions.,Faithful,0.5,0
+8,0,I referred the patient for physical therapy for approximately 6-8 weeks.,Faithful,0.0,0
+8,0,I instructed the patient to continue taking Tylenol as needed.,Faithful,0.0,0
+8,0,"If symptoms do not improve, we may consider a steroid injection of the left shoulder.",Faithful,0.0,0
+8,0,Follow-up: The patient will return in 2 weeks for a follow-up appointment.,Faithful,0.0,0
+9,0,"HPI: The patient, Matthew, presented with right knee pain that started after playing basketball when he landed awkwardly and felt his knee pop, leading to swelling and difficulty walking.",Faithful,1.0,0
+9,0,"He reports the pain is achy and has been present since the injury, with some improvement overnight.",Faithful,0.75,0
+9,0,He has taken Tylenol with some relief.,Faithful,0.0,0
+9,0,He rates his pain level at 4/10.,Faithful,0.25,0
+9,0,"His past medical history includes hypertension and diabetes, with an A1c of 7.2.",Faithful,0.5,0
+9,0,"He is currently taking 5mg of Norvasc daily for hypertension and 500mg of metformin daily for diabetes, but has been inconsistent with taking his medications.",Faithful,0.0,0
+9,0,"He has a history of a grade 2 systolic ejection murmur, which he has had for a couple of years.",Faithful,0.75,0
+9,0,"Review of systems: The patient has a history of hypertension and diabetes, and his blood pressure is currently elevated at 140/80.",Faithful,0.25,0
+9,0,Current medications: Norvasc 5mg daily for hypertension; Metformin 500mg daily for diabetes; Tylenol (dose not specified) for pain.,Faithful,0.0,0
+9,0,Vital signs: Blood pressure 140/80.,Faithful,0.5,0
+9,0,"Physical exam: The patient has pain to palpation of the medial aspect of the right knee, with some edema, swelling, and ecchymosis.",Faithful,0.0,0
+9,0,The varus and valgus tests were negative.,Faithful,0.0,0
+9,0,The knee exam also showed some swelling and redness.,Faithful,0.25,0
+9,0,"Test Results: X-ray of the right knee was normal, showing no fractures or bony abnormalities.",Faithful,0.0,0
+9,0,"Assessment: The patient has an MCL strain or possible tear, which will require an MRI to confirm.",Faithful,0.0,0
+9,0,Problem list: Hypertension; Diabetes; MCL strain/suspected tear; Grade 2 systolic ejection murmur (past).,Faithful,0.25,0
+9,0,"I prescribed Meloxicam 15mg daily for pain and swelling, and a knee immobilizer to be worn for the next couple of weeks.",Faithful,0.75,0
+9,0,The patient will continue to take Tylenol as needed.,Faithful,0.25,0
+9,0,"I will also prescribe a log book for the patient to track their daily blood sugars, and will get a consult with nutrition to improve their diet.",Faithful,0.75,0
+9,0,I will up the patient's Norvasc medication to 10mg daily to help lower their blood pressure.,Faithful,0.75,0
+9,0,I will see the patient back in two weeks for follow-up.,Faithful,0.5,0
+9,0,Follow-up: The patient will be seen in two weeks for a follow-up appointment.,Fabrication,0.0,1
+10,0,"The patient, a 67-year-old male, presents with a history of essential hypertension, hyperlipidemia, and osteoarthritis.",Faithful,0.0,0
+10,0,"He has been experiencing elevated and fluctuating blood pressures, with upper numbers occasionally over 180.",Faithful,0.0,0
+10,0,"He reports feeling lightheaded and experiencing slight headaches, and has checked his blood pressure during these episodes, which have been high.",Faithful,0.5,0
+10,0,"He denies any recent fever, nausea, vomiting, or diarrhea.",Faithful,0.0,0
+10,0,He reports some chest heaviness but no sustained chest pain or respiratory difficulty.,Faithful,0.5,0
+10,0,"He experiences unsteadiness and slight headaches when his blood pressure is higher, and feels lightheaded but not like he might pass out.",Faithful,0.5,0
+10,0,"He is taking lisinopril 20mg twice daily for hypertension, and atorvastatin for hyperlipidemia.",Faithful,0.25,0
+10,0,"He uses a pillbox and a new app to track his medication schedule, which he reports is mostly accurate.",Faithful,1.0,0
+10,0,He has a grandson who helped him set up the app and is a great help.,Faithful,1.0,0
+10,0,"His grandson's softball team recently had a good tournament, and he is currently able to golf and walk the full course, with some modifications due to weather changes.",Faithful,1.0,0
+10,0,He takes Tylenol for mild pain and adjusts his activity level as needed.,Faithful,1.0,0
+10,0,Vital signs: Not mentioned,Faithful,0.25,0
+10,0,"Physical exam: The patient has a grade 3/6 systolic ejection murmur, mild bibasilar rales, and trace lower extremity edema bilaterally.",Faithful,0.25,0
+10,0,Test Results: Not mentioned,Faithful,0.0,0
+10,0,"The patient has elevated blood pressure, hyperlipidemia, and osteoarthritis.",Faithful,0.0,0
+10,0,Elevated blood pressure; Hyperlipidemia; Osteoarthritis; Active.,Faithful,0.5,0
+10,0,I increased the patient's lisinopril to 60mg twice daily and added 25mg of hydrochlorothiazide daily to help control his blood pressure.,Faithful,0.0,0
+10,0,I instructed him to check his blood pressure twice daily for the next two weeks.,Faithful,0.25,0
+10,0,"I also sent blood tests including a cholesterol panel, CBC with differential, comprehensive metabolic panel, and urinalysis to check his kidney function.",Faithful,0.0,0
+10,0,I continued the current management plan for his hyperlipidemia with atorvastatin.,Faithful,0.0,0
+10,0,"For his osteoarthritis, I advised him to continue to stay active, avoid overdoing it, and take Tylenol for mild pain.",Faithful,0.75,0
+10,0,I instructed him to see me back in two weeks.,Faithful,0.5,0
+10,0,The patient will see me in two weeks for a follow-up appointment.,Faithful,0.0,0
+11,0,"The patient, a 37-year-old female, presents with a complaint of worsening headaches over the past few weeks.",Faithful,0.0,0
+11,0,"She reports her blood pressure has been running high, with readings of 160/87 and 175/92 in the past three weeks.",Faithful,0.0,0
+11,0,"She has a history of hypertension and diabetes, and has been taking lisinopril 20mg once a day, but admits to sometimes forgetting to take it, particularly on weekends.",Faithful,0.0,0
+11,0,"She has also been experiencing occasional headaches, which she rates as a 7 out of 10 in intensity, and has been managing them with Tylenol.",Faithful,0.5,0
+11,0,She denies any recent changes in urination or other symptoms.,Faithful,0.0,0
+11,0,"She reports a family history of migraines, but not similar headaches like the ones she is currently experiencing.",Fabrication,1.0,1
+11,0,The patient has a history of hypertension and diabetes.,Faithful,0.0,0
+11,0,She has been prescribed lisinopril 20mg once a day for hypertension.,Faithful,0.0,0
+11,0,"The patient denies any recent changes in urination, cough, runny nose, or congestion.",Faithful,0.25,0
+11,0,Lisinopril 20mg once a day for hypertension.,Faithful,0.0,0
+11,0,"Vital signs: Blood pressure 160/87 and 175/92, but previously was 124/82.",Faithful,0.5,0
+11,0,"The patient has tenderness to palpation over the frontal sinuses, but no tenderness over the maxillary sinuses or lymphadenopathy.",Negation,1.0,1
+11,0,Assessment: The patient presents with worsening headaches and uncontrolled hypertension.,Faithful,0.25,0
+11,0,Problem list: Hypertension; Diabetes; Headache.,Faithful,0.0,0
+11,0,I prescribed lisinopril 40mg once a day for hypertension.,Faithful,0.0,0
+11,0,"I ordered blood tests, including hemoglobin A1c and other laboratory tests, to monitor her diabetes and hypertension.",Faithful,0.75,0
+11,0,I referred her to see Doctor Ruth for further evaluation and education on managing her diabetes.,Faithful,1.0,0
+11,0,I advised her to continue taking Tylenol for her headaches and to keep checking her blood pressure.,Faithful,0.75,0
+11,0,I instructed the patient to return for follow-up after her blood tests are complete and to review the results with me or Doctor Ruth.,Faithful,1.0,0
+12,0,"HPI: The patient presents with a history of left-sided back pain, which is intermittent and sometimes sharp, sometimes dull.",Faithful,0.75,0
+12,0,The pain is mostly on the left side.,Faithful,0.0,0
+12,0,"The patient has been experiencing an increase in urine output and has been drinking more water, resulting in nocturnal awakenings to use the restroom.",Faithful,0.75,0
+12,0,"The patient has a history of recurrent strep throat, with four episodes in the last five months.",Faithful,0.0,0
+12,0,"The patient's brother is a smoker, but the patient does not smoke.",Faithful,0.75,0
+12,0,"The patient is a student, rides a bike occasionally, and has been getting good grades in school.",Faithful,0.25,0
+12,0,"Past medical history: The patient has a history of recurrent strep throat, which has resulted in four episodes in the last five months.",Faithful,0.0,0
+12,0,The patient has a brother who smokes.,Faithful,0.0,0
+12,0,Review of systems: The patient reports an increase in urine output and nocturnal awakenings to use the restroom.,Faithful,0.75,0
+12,0,"The patient denies fatigue, decreased appetite, or fever.",Faithful,0.5,0
+12,0,Current medications: NOT MENTIONED,Faithful,0.0,0
+12,0,Vital signs: NOT MENTIONED,Faithful,0.0,0
+12,0,"Physical exam: The patient's throat is not erythematous, and the tonsils are midline.",Faithful,0.0,0
+12,0,There is no cervical adenopathy or lymphadenopathy.,Faithful,0.0,0
+12,0,"The lungs are clear, and the heart sounds are normal.",Faithful,0.0,0
+12,0,"The patient does not have tenderness to palpation on the left side of the back, and there is no rebound or guarding.",Faithful,0.75,0
+12,0,Test Results: NOT MENTIONED,Faithful,0.0,0
+12,0,"Assessment: The patient has a history of recurrent strep throat, which may be indicative of glomerular nephritis, a condition that could lead to chronic kidney disease.",Faithful,0.5,0
+12,0,Problem list: Glomerulonephritis; Recurrent strep throat; [Condition] [Status: unknown],Fabrication,0.75,1
+12,0,"I ordered a lipid panel, UA, CMP, CBC, vitamin D, and TSH to further evaluate the patient's condition.",Faithful,0.0,0
+12,0,I referred the patient to an ENT specialist for further evaluation and consideration of tonsillectomy to address the recurrent strep throat.,Faithful,0.0,0
+12,0,I also referred the patient to a specialist for the glomerulonephritis.,Fabrication,0.5,1
+12,0,I will write a note to excuse the patient's absence from class and work to accommodate the testing.,Faithful,0.5,0
+12,0,I will schedule a follow-up appointment with the patient in one week to discuss the results.,Faithful,1.0,0
+13,0,"HPI: The patient, a 74-year-old teacher, presented with a cough that started about a week ago, which has worsened over the last two days.",Faithful,0.0,0
+13,0,The cough is productive of yellow sputum.,Faithful,0.0,0
+13,0,"The patient denies fever, chills, shortness of breath, runny nose, sore throat, and sinus pain.",Faithful,0.5,0
+13,0,The patient reports a little bit of pressure in the sinuses and a little bit of a congested feeling in the throat.,Faithful,0.5,0
+13,0,The patient recently fell down the stairs while coughing and injured their right knee.,Faithful,0.25,0
+13,0,"The patient has a history of hypertension, which they have been struggling with for the past year, and are currently taking lisinopril 20mg/day.",Faithful,1.0,0
+13,0,"The patient also has diabetes and is taking metformin, but reports not monitoring their blood sugars or diet.",Faithful,0.5,0
+13,0,"Past medical history: The patient has a history of hypertension, diabetes, and a recent fall down the stairs.",Faithful,0.0,0
+13,0,Review of systems: The patient denies any other symptoms.,Faithful,0.75,0
+13,0,Current medications:,Faithful,0.0,0
+13,0,"Vital signs: The patient's temperature is 98.4°F, blood pressure is 125/62, heart rate is in the 80s, and oxygen saturation is 97% on room air.",Faithful,0.0,0
+13,0,"Physical exam: The patient has pain to palpation of the bilateral maxillary sinuses, erythema and edema of the nasal turbinates bilaterally with associated yellow discharge, and coarse rhonchi present bilaterally that clears with cough.",Faithful,0.0,0
+13,0,The patient has bilateral cervical lymphadenopathy.,Faithful,0.5,0
+13,0,"The patient has pain to palpation on the right knee, decreased flexion and extension of the right knee, associated ecchymosis to the right medial knee, and no evidence of an effusion.",Faithful,0.25,0
+13,0,"Assessment: The patient has a viral syndrome with mild bronchitis, a right medial collateral ligament strain from a recent fall, hypertension, and uncontrolled diabetes.",Faithful,0.75,0
+13,0,Problem list: Bronchitis; Medial collateral ligament strain right knee; Hypertension; Diabetes; Uncontrolled diabetes.,Faithful,1.0,0
+13,0,I prescribed guaifenesin 600mg twice a day to help cough up phlegm.,Faithful,0.0,0
+13,0,I prescribed meloxicam 15mg once a day for the right knee pain.,Faithful,0.75,0
+13,0,I ordered a right knee x-ray to ensure no bone injury.,Faithful,0.0,0
+13,0,I ordered a lipid panel to check the patient's lipid levels.,Faithful,0.0,0
+13,0,I ordered a hemoglobin A1c to check the patient's blood sugar control.,Faithful,0.0,0
+13,0,I referred the patient to physical therapy to help strengthen the muscles around the right knee.,Faithful,0.25,0
+13,0,Follow-up: The patient will follow up with me for the results of the ordered tests.,Faithful,0.75,0
+14,0,"The patient, Theresa, is a 50-year-old female who presents with a complaint of headaches, particularly a throbbing sensation at the top of her head, which have been ongoing for approximately a month.",Faithful,1.0,0
+14,0,She reports that her headaches are accompanied by dizziness and blurry vision.,Faithful,0.25,0
+14,0,"She also mentions that she has been experiencing high blood pressure, which has been managed with chlorthalidone, but she has not been adherent to the medication regimen due to gastrointestinal side effects.",Faithful,0.0,0
+14,0,"She admits to eating a lot of fast food, particularly McDonald's, and consuming Easter candy over the weekend, which she believes may have contributed to her high blood sugar.",Faithful,0.75,0
+14,0,"The patient has a history of hypertension and diabetes, for which she is currently taking metformin.",Faithful,0.0,0
+14,0,"She has a family history of obesity and a history of occasional forgetfulness, which has led to non-adherence to her medication regimen.",Fabrication,1.0,1
+14,0,The patient reports dizziness and blurry vision with her headaches.,Faithful,0.25,0
+14,0,"The patient has a history of hypertension and diabetes, for which she is currently taking metformin.",Faithful,0.0,0
+14,0,Vital signs:,Faithful,0.0,0
+14,0,Physical exam:,Faithful,0.25,0
+14,0,"Assessment: The patient is experiencing uncontrolled hypertension and elevated blood sugar levels, likely due to non-adherence to medication regimen and dietary factors.",Faithful,0.75,0
+14,0,Problem list: Hypertension; Suspected; Elevated blood sugar; Active.,Causality,1.0,1
+14,0,"I want to continue the patient's current medication regimen, including chlorthalidone and metformin, and encourage her to take her medication daily.",Faithful,0.25,0
+14,0,I recommend that she use a blood pressure monitor at home to track her blood pressure three times a week.,Faithful,0.25,0
+14,0,I also want to refer her to a nutritionist to discuss dietary changes to reduce sodium intake.,Faithful,0.0,0
+14,0,"For her diabetes, I will increase her metformin to 1500 mg and ask her to continue monitoring her blood sugars.",Faithful,0.75,0
+14,0,The patient will be scheduled for a one-month follow-up appointment to reassess her blood pressure and blood sugar levels.,Faithful,0.75,0
+15,0,"HPI: The patient presents with a 2-year history of chronic low back pain, which started after a fall while playing basketball.",Faithful,0.25,0
+15,0,"The pain is sharp and throbbing, radiating down the left leg, and is exacerbated by standing and relieved by lying on the side.",Faithful,1.0,0
+15,0,"The patient has experienced numbness in the left leg and has had one episode of incontinence, which was not a consistent issue.",Causality,0.0,1
+15,0,"The patient has tried injections and physical therapy, but with limited success.",Faithful,0.0,0
+15,0,"Past medical history: The patient has a history of smoking, but is currently not smoking.",Faithful,0.0,0
+15,0,The patient's father's fourth cousin has scoliosis.,Negation,1.0,1
+15,0,The patient has gained 80 pounds in the past year.,Faithful,0.0,0
+15,0,"Review of systems: The patient denies fever, chills, or other symptoms.",Fabrication,0.75,1
+15,0,Current medications: [NOT MENTIONED],Fabrication,0.25,1
+15,0,"Vital signs: Blood pressure, pulse rate, oxygen saturation, and temperature were not mentioned.",Faithful,0.0,0
+15,0,Physical exam: The patient had midline tenderness on the L4-L5 disk space with right-sided lumbar paravertebral tenderness.,Faithful,0.0,0
+15,0,The patient experienced pain with lumbar flexion and extension.,Faithful,0.75,0
+15,0,The straight leg test was positive.,Faithful,0.25,0
+15,0,"The patient had decreased sensation to light touch at the L4 dermatome, patella, and Achilles reflexes were symmetrical.",Faithful,0.0,0
+15,0,"Test Results: MRI results showed a disk desiccation, disk bulge with paracentral disk herniation resulting in moderate right foraminal stenosis.",Faithful,0.0,0
+15,0,Assessment: The patient has a herniated disk at L4-L5 with radiculopathy.,Faithful,0.0,0
+15,0,Problem list: Lumbar back pain; Herniated disk at L4-L5 with radiculopathy; Moderate right foraminal stenosis.,Faithful,0.75,0
+15,0,I recommended a spinal injection with a corticosteroid to help reduce inflammation and target the bulge.,Faithful,0.25,0
+15,0,The patient will take a prescription for a medication to help with anxiety before the procedure.,Faithful,0.25,0
+15,0,"I will write a prescription for pain medication, but only if the patient still experiences pain after the injection.",Causality,0.25,1
+15,0,"Follow-up: The patient will schedule the injection procedure at the front desk, which should take about an hour.",Faithful,0.5,0
+15,0,The patient may need to repeat the procedure up to 4 times a year if the first one is successful.,Faithful,0.75,0
+16,0,HPI: The patient presents with right shoulder pain that began approximately three weeks ago after a fall while painting a house.,Faithful,0.0,0
+16,0,"The pain is described as intermittent, but always present, and is exacerbated by lifting overhead.",Faithful,1.0,0
+16,0,"The patient has taken ibuprofen and acetaminophen (Tylenol) for pain relief, with a reported pain level of 4 out of 10 when taking medication.",Faithful,0.25,0
+16,0,"Without medication, the pain level is 6 out of 10.",Faithful,0.0,0
+16,0,"The patient reports numbness and tingling in the arm initially after the injury, but this symptom has resolved.",Faithful,0.5,0
+16,0,Past medical history: The patient has no history of previous shoulder pain or injuries.,Faithful,0.5,0
+16,0,Review of systems: The patient denies any other symptoms.,Faithful,1.0,0
+16,0,Current medications: Ibuprofen as needed for pain; Acetaminophen (Tylenol) as needed for pain.,Faithful,0.25,0
+16,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+16,0,"The patient has good strong bilateral hand grips, brisk capillary refill of less than three seconds, and equal and bilateral response to sensation and touch.",Faithful,0.0,0
+16,0,Test Results: The right shoulder x-ray reveals no fracture or bony abnormality.,Faithful,0.0,0
+16,0,Assessment: The patient's symptoms are most likely due to rotator cuff tendinopathy.,Faithful,0.0,0
+16,0,Problem list: Rotator cuff tendinopathy; [NOT MENTIONED],Fabrication,1.0,1
+16,0,I prescribed ibuprofen as needed for pain.,Contextual,0.5,1
+16,0,I ordered an MRI of the right shoulder to rule out any other conditions.,Faithful,0.0,0
+16,0,I referred the patient to physical therapy for 6-8 weeks.,Faithful,0.0,0
+16,0,I recommend the patient take Tylenol for pain relief if they can tolerate it.,Faithful,0.0,0
+16,0,I will see the patient in two weeks to evaluate their progress and make additional treatment plans as needed.,Faithful,0.5,0
+16,0,I will see the patient in two weeks.,Faithful,0.0,0
+17,0,"The patient, a 60-year-old male, presents with a 3-4 month history of difficulty adjusting to dark environments, specifically when reading in dimly lit places, and difficulty perceiving straight lines as wavy.",Faithful,1.0,0
+17,0,He reports that this has been worsening over the past few months.,Faithful,0.25,0
+17,0,"The patient also mentions that he has trouble with his vision when looking at his office paneling, which has dark grooves that appear wavy to him.",Faithful,1.0,0
+17,0,He denies any fever or other symptoms.,Fabrication,0.25,1
+17,0,The patient has a history of high blood pressure and admits to not taking his blood pressure medication as prescribed.,Faithful,0.0,0
+17,0,The patient has a history of high blood pressure and is a smoker.,Faithful,0.0,0
+17,0,He has tried to quit smoking through various methods but has been unsuccessful.,Faithful,0.5,0
+17,0,The patient denies any other symptoms.,Fabrication,0.25,1
+17,0,The patient is not currently taking his blood pressure medication as prescribed.,Faithful,0.0,0
+17,0,Vital signs:,Faithful,0.0,0
+17,0,The anterior segment examination reveals posterior chamber intraocular lenses in both eyes.,Faithful,0.0,0
+17,0,The cornea is clear in both eyes.,Faithful,0.25,0
+17,0,The peak hole cup to disc ratio is 0.2 in the right eye and 0.3 in the left eye.,Faithful,0.25,0
+17,0,The fundus examination of the right eye shows the retina to be attached 360 degrees with no holes or tears noted.,Faithful,0.75,0
+17,0,RPE changes are present in the fovea.,Faithful,0.25,0
+17,0,"The posterior segment exam shows drusen in the macula, retinal thickening, and presence of subretinal fluid and exudate accumulation, and a hemorrhage in the right eye.",Faithful,0.0,0
+17,0,"The cornea is clear in the left eye, and the retina is attached appropriately with no hemorrhage or subretinal fluid noted.",Faithful,0.75,0
+17,0,"The OCT exam shows drusen deposits under the RPE, subretinal fluid accumulation, and choroidal neovascular membrane.",Faithful,0.5,0
+17,0,The fluorescein angiography reveals a focal area of leakage in the right eye consistent with neovascular age-related macular degeneration.,Faithful,0.25,0
+17,0,I prescribed Lucentis injections to be administered once a month to slow the progression of the disease.,Faithful,0.0,0
+17,0,The patient will receive the first injection today.,Faithful,0.75,0
+17,0,I will also instruct the patient to take his blood pressure medication as prescribed and to check his blood pressures on a regular basis.,Faithful,0.5,0
+17,0,I will have the nurse prepare the patient for the injection.,Faithful,0.75,0
+17,0,I will schedule a follow-up appointment to monitor the patient's response to the treatment and to administer subsequent injections as needed.,Faithful,0.75,0
+18,0,"HPI: The patient, a 30-year-old male, presented with a complaint of knee pain and swelling after a skiing accident on Saturday.",Fabrication,0.75,1
+18,0,He described a cartwheel maneuver that resulted in a pop in his right knee and subsequent pain.,Faithful,0.5,0
+18,0,"He has been taking Advil and applying ice, but the pain has been persistent.",Faithful,0.0,0
+18,0,Past medical history: The patient has no prior knee injuries and no known medical conditions.,Faithful,0.75,0
+18,0,"He does not have a history of smoking, alcohol or drug use, and his occupation and travel history are not relevant to the current presentation.",Fabrication,1.0,1
+18,0,Review of systems: The patient has no additional symptoms in other organs that are relevant to the initial presentation.,Faithful,0.5,0
+18,0,Current medications: I prescribed Advil as needed for pain.,Causality,0.75,1
+18,0,"Vital signs: The patient's vital signs were within normal limits: temperature 97.9°F, heart rate 64, respirations 16, blood pressure 110/74, and oxygen saturation 98%.",Faithful,0.0,0
+18,0,"Physical exam: The patient has edema and ecchymosis around the right knee, positive pain to palpation, and limited range of motion with flexion and extension.",Causality,1.0,1
+18,0,"The patient reported pain with flexion and extension, but had a full range of motion.",Faithful,0.0,0
+18,0,Test Results: X-ray of the right knee showed no fracture or bony abnormalities.,Faithful,0.25,0
+18,0,Assessment: The patient has a knee contusion.,Faithful,0.0,0
+18,0,Problem list: Knee contusion; [NOT MENTIONED],Fabrication,1.0,1
+18,0,"I instructed the patient to rest the knee, apply ice 2-3 times a day for 20 minutes, and take NSAIDs (ibuprofen) every 6-8 hours as needed.",Faithful,0.25,0
+18,0,I also ordered an x-ray of the right shoulder to evaluate for potential injury.,Faithful,0.5,0
+18,0,We will reassess the patient's condition and consider physical therapy if necessary.,Faithful,0.5,0
+18,0,Follow-up: The patient will follow up in the office to reevaluate the knee and shoulder injuries.,Fabrication,0.0,1
+19,0,"HPI: The patient, a 45-year-old female with a recent diagnosis of stage three nonsmall cell lung cancer, presents for follow-up on her neoadjuvant chemotherapy regimen.",Faithful,1.0,0
+19,0,"She reports shortness of breath, which she attributes to her decreased physical activity since her diagnosis.",Faithful,0.75,0
+19,0,"She normally walks her dog for a mile-long walk daily, but now she can only walk down to the end of the street without becoming short of breath.",Faithful,0.75,0
+19,0,"She denies coughing or phlegm, but admits to a dry cough.",Faithful,0.5,0
+19,0,"She also reports pain with swallowing, which she describes as a sharp pain in her chest that worsens when she swallows.",Causality,0.75,1
+19,0,"She has been taking Ensure and other liquids, but has been having trouble taking her hydrocortisone liquids due to the pain.",Faithful,1.0,0
+19,0,"She is on a combination of cisplatin and topotecan chemotherapy, which she started a few days ago.",Faithful,1.0,0
+19,0,"Past medical history: The patient has a history of stage three nonsmall cell lung cancer, diagnosed recently.",Faithful,0.25,0
+19,0,"Review of systems: The patient reports shortness of breath, dry cough, and painful swallowing.",Faithful,0.25,0
+19,0,"Current medications: Cisplatin, topotecan, zofran, and hydrocortisone.",Faithful,1.0,0
+19,0,"Vital signs: The patient's pulse, oxygen saturation, and temperature are within normal limits.",Faithful,0.5,0
+19,0,"Physical exam: The patient's physical exam is notable for crackles in the lungs bilaterally, which could indicate fluid in the lungs, consistent with her lung cancer diagnosis.",Faithful,0.75,0
+19,0,"The skin exam reveals erythema on the anterior aspect of the chest on the left side, which could be due to radiation burns.",Faithful,0.0,0
+19,0,The extremity exam shows no lower extremity edema.,Faithful,0.0,0
+19,0,"Test Results: The patient had a recent chest X-ray, which showed mild radiation pneumonitis, indicating inflammation of the lungs due to radiation.",Faithful,0.0,0
+19,0,"Assessment: The patient has stage three nonsmall cell lung cancer and radiation pneumonitis, which is causing her symptoms of shortness of breath, dry cough, and painful swallowing.",Causality,1.0,1
+19,0,Problem list: Nonsmall cell lung cancer; radiation pneumonitis; painful swallowing.,Faithful,0.25,0
+19,0,I prescribed prednisone 40 mg once daily for 5 days to reduce inflammation in the lungs and alleviate symptoms.,Faithful,0.0,0
+19,0,"I also prescribed lidocaine spray to help alleviate painful swallowing, which can be used 4 times a day.",Faithful,0.5,0
+19,0,I will have the patient take this medication after eating and drinking to help her stay hydrated.,Fabrication,1.0,1
+19,0,Follow-up: We will see the patient back in two weeks to monitor her progress and adjust her treatment plan as needed.,Faithful,0.5,0
+20,0,"HPI: The patient, a 37-year-old male, presents with a 2-week history of flank pain radiating to the groin, which is intermittent and worsens with increased fluid intake and physical activity.",Fabrication,0.75,1
+20,0,"The pain is described as a 4 out of 10, but has been as high as a 2 out of 10.",Causality,1.0,1
+20,0,"He denies nausea, vomiting, fever, and chills.",Faithful,0.5,0
+20,0,"He reports a history of passing kidney stones in the past, including one that required surgery.",Faithful,0.0,0
+20,0,"Past medical history: The patient has a family history of kidney stones and has had them himself in the past, including passing some on his own and undergoing surgery.",Faithful,0.0,0
+20,0,Review of systems: No additional symptoms mentioned.,Faithful,0.5,0
+20,0,Current medications: The patient is currently taking ibuprofen for pain.,Faithful,0.25,0
+20,0,"Vital signs: Blood pressure is elevated, but this is likely due to pain.",Faithful,0.0,0
+20,0,"Physical exam: The patient has CVA tenderness on the right side, consistent with the location of the kidney stone.",Faithful,0.0,0
+20,0,Test Results: The patient had a CT scan that showed a 0.5 cm stone located on the proximal right ureter with no evidence of high flow nephrosis.,Faithful,0.25,0
+20,0,"Assessment: The patient has a confirmed diagnosis of a kidney stone, measuring 0.5 cm in size, located on the proximal right ureter.",Faithful,0.0,0
+20,0,Problem list: Kidney stone; active.,Fabrication,0.5,1
+20,0,"I prescribed ibuprofen as before for pain management, and I will also prescribe tramadol 50 mg as needed for breakthrough pain.",Faithful,1.0,0
+20,0,The patient should continue to use a strainer when urinating to try to catch the stone.,Faithful,0.0,0
+20,0,"I will order a BMP, urinalysis, and urine culture to rule out infection.",Faithful,0.0,0
+20,0,"I will see the patient in 1-2 weeks to reassess symptoms and consider further treatment, including lithotripsy if necessary.",Faithful,0.0,0
+20,0,Follow-up: The patient will follow up in 1-2 weeks to reassess symptoms and consider further treatment.,Contextual,0.0,1
+21,0,"The patient, a 65-year-old male, presents with a complaint of shortness of breath for approximately one week.",Faithful,0.5,0
+21,0,"He reports that this is a recurrence of symptoms he experienced six months ago, which improved with an increase in his Lasix dose.",Faithful,0.0,0
+21,0,"He has a history of coronary disease, including a heart attack in 2018 and a stent placement in his right coronary artery.",Faithful,0.0,0
+21,0,His ejection fraction was reported to be 35%.,Faithful,0.0,0
+21,0,He has stage 3 chronic kidney disease and has been taking Lasix 40mg once daily.,Faithful,0.0,0
+21,0,"He reports swelling in his legs and nocturia, but denies changes in urination frequency.",Faithful,0.75,0
+21,0,"He has been taking Motrin for occasional pain, but has been advised to avoid it due to his kidney function.",Faithful,0.75,0
+21,0,"He is also experiencing foot pain, which he attributes to a recent episode of pain in both feet, lasting 4-5 days.",Causality,1.0,1
+21,0,Past medical history:,Faithful,0.0,0
+21,0,"The patient has a history of coronary disease, including a heart attack in 2018, and stage 3 chronic kidney disease.",Faithful,0.0,0
+21,0,He has been advised to avoid Motrin and Advil due to his kidney function.,Faithful,0.75,0
+21,0,Review of systems:,Faithful,0.0,0
+21,0,"The patient reports shortness of breath, particularly with walking or stairs, and nocturia.",Faithful,0.75,0
+21,0,He also reports swelling in his legs.,Faithful,0.0,0
+21,0,Current medications:,Faithful,0.25,0
+21,0,Lasix 40mg once daily,Faithful,0.0,0
+21,0,Objective:,Faithful,0.0,0
+21,0,Vital signs:,Faithful,0.0,0
+21,0,Blood pressure: 135/80,Faithful,0.0,0
+21,0,Physical exam:,Faithful,0.0,0
+21,0,Jugular venous distention up to 9cm,Faithful,0.0,0
+21,0,Bibasilar crackles with occasional rhonchi on lung exam,Faithful,0.0,0
+21,0,3/6 systolic ejection murmur at the left base on heart exam,Faithful,0.0,0
+21,0,1-2+ pitting edema bilaterally on lower extremity exam,Faithful,0.0,0
+21,0,Test Results:,Faithful,0.5,0
+21,0,[NOT MENTIONED],Fabrication,0.5,1
+21,0,Assessment / Problem List:,Faithful,0.0,0
+21,0,"Assessment: The patient has an acute heart failure exacerbation, likely due to fluid retention, and stage 3 chronic kidney disease.",Faithful,0.75,0
+21,0,Problem list: Heart failure exacerbation; stage 3 chronic kidney disease; possible gout flare; coronary artery disease; possible kidney dysfunction.,Faithful,1.0,0
+21,0,Plan:,Faithful,0.0,0
+21,0,"I increased the patient's Lasix dose to 80mg once daily, to be taken in the morning, with a possible second dose in the afternoon.",Faithful,0.25,0
+21,0,I also ordered a chest x-ray and an echocardiogram to assess the heart murmur and ejection fraction.,Faithful,0.75,0
+21,0,I referred the patient to a dietitian to discuss dietary changes to manage his salt intake.,Faithful,0.5,0
+21,0,I advised him to avoid Motrin and Advil and stick to Tylenol for pain management.,Faithful,0.0,0
+21,0,I also ordered a complete metabolic panel to assess his kidney function.,Faithful,0.0,0
+21,0,Follow-up:,Faithful,0.0,0
+21,0,The patient will call me in 2 days to report on his weight and any changes in symptoms.,Faithful,1.0,0
+21,0,"He will also be seen by his nephrologist, Dr. White, for further management of his kidney disease.",Faithful,1.0,0
+22,0,"HPI: The patient is a young adult presenting with a history of recurrent strep throat episodes, with 4 occurrences in the last 5 months, and current complaints of left-sided back pain, which varies in intensity.",Faithful,0.5,0
+22,0,The patient's primary care physician referred them to me for further evaluation.,Faithful,1.0,0
+22,0,"The patient reports increased urine output, especially at night, and has been drinking more water.",Faithful,0.75,0
+22,0,"They have a brother who smokes at home, and the patient has tried to discourage him from smoking.",Faithful,1.0,0
+22,0,"Past medical history: The patient has a history of recurrent strep throat episodes, with 4 occurrences in the last 5 months.",Faithful,0.0,0
+22,0,"Review of systems: The patient reports an increase in urine output, and has been drinking more water.",Faithful,1.0,0
+22,0,They also report that their appetite is unchanged.,Faithful,0.0,0
+22,0,Current medications: [NOT MENTIONED],Fabrication,0.0,1
+22,0,Vital signs: [NOT MENTIONED],Fabrication,0.0,1
+22,0,"Physical exam: The physical exam is notable for the absence of erythema, swelling, or tenderness in the throat, neck, or abdomen.",Faithful,0.5,0
+22,0,"The patient's tonsils are midline, and there is no cervical adenopathy or lymphadenopathy.",Faithful,0.0,0
+22,0,"The lungs are clear, with no wheezes, rales, or rhonchi.",Faithful,0.0,0
+22,0,"The heart sounds are normal, with no murmur, rub, or gallop.",Faithful,0.0,0
+22,0,The back pain is not reproduced with palpation.,Faithful,0.0,0
+22,0,Test Results: [NOT MENTIONED],Fabrication,0.0,1
+22,0,"Assessment: The patient is at risk for developing glomerulonephritis due to recurrent strep throat episodes, which may lead to chronic kidney disease.",Faithful,0.5,0
+22,0,Problem list: Glomerulonephritis; Suspected [Status: suspected],Faithful,0.5,0
+22,0,"I prescribed a lipid panel, a urinalysis, a comprehensive metabolic panel, a complete blood count, a vitamin D test, and a thyroid-stimulating hormone test to evaluate the patient's kidney function, hormone levels, and nutritional status.",Faithful,1.0,0
+22,0,"I referred the patient to an ear, nose, and throat specialist to consider tonsillectomy to alleviate recurrent strep throat episodes.",Faithful,0.25,0
+22,0,I also referred the patient to a nephrologist for further evaluation of glomerulonephritis.,Fabrication,1.0,1
+22,0,The patient is to return in a week for the results of the tests.,Faithful,0.0,0
+23,0,"HPI: The patient, a 45-year-old female, presents with shortness of breath that started over the weekend, which has progressed to the point where she can only walk a short distance without experiencing shortness of breath.",Faithful,0.5,0
+23,0,She reports that she was previously an active person who would walk her dog a mile long every day.,Faithful,0.5,0
+23,0,"She denies coughing, phlegm, fever, body aches, sore throat, and sinus pain, but reports that swallowing is painful, particularly in her chest, and that she has not been taking her prescribed hydrocortisone liquids as much as instructed due to pain.",Faithful,1.0,0
+23,0,The patient has a husband and daughter who provide support.,Faithful,0.75,0
+23,0,"Past medical history: The patient has a recent diagnosis of stage three non-small cell lung cancer, for which she is undergoing neo-Adjuvant chemotherapy with cisplatin and etoposide.",Faithful,0.25,0
+23,0,"She has been experiencing nausea and fatigue from the chemotherapy, but reports that zofran has helped alleviate her nausea.",Faithful,0.5,0
+23,0,"Review of systems: The patient reports dry cough, no phlegm, no fever, and no body aches or sore throat, but does report painful swallowing when swallowing.",Faithful,0.75,0
+23,0,"Current medications: I prescribed zofran to alleviate nausea, hydrocortisone liquids for hydration, and Ensure and milkshakes for nutrition.",Contextual,1.0,1
+23,0,"Vital signs: The patient's pulse, blood pressure, and oxygen saturation are normal.",Causality,0.25,1
+23,0,Pulse ox is okay.,Faithful,0.0,0
+23,0,"Physical exam: The patient's neck exam is unremarkable, with no cervical lymphadenopathy or subclavicular adenopathy.",Faithful,0.25,0
+23,0,"Her heart exam is regular, with no murmur.",Faithful,0.25,0
+23,0,"Her lung exam reveals crackles in both lungs, which could indicate fluid accumulation due to her lung cancer diagnosis.",Faithful,0.25,0
+23,0,"The skin exam reveals erythema on the anterior aspect of her chest on the left side, which could be due to radiation.",Faithful,0.0,0
+23,0,There is no lower extremity edema.,Faithful,0.0,0
+23,0,"Test Results: The patient had a chest x-ray, which showed mild radiation pneumonitis, or inflammation of the lungs due to radiation.",Faithful,0.0,0
+23,0,"Assessment: The patient has stage three non-small cell lung cancer, radiation pneumonitis, and odynophagia (painful swallowing) due to radiation.",Faithful,0.5,0
+23,0,Problem list: Lung cancer; radiation pneumonitis; odynophagia; active; confirmed; suspected.,Fabrication,1.0,1
+23,0,I prescribed prednisone 40 milligrams one tablet a day for five days to reduce inflammation in the lungs and alleviate symptoms.,Contextual,0.0,1
+23,0,"I also prescribed lidocaine spray for painful swallowing, to be taken four times a day.",Contextual,0.25,1
+23,0,The patient should take this before eating and drinking to alleviate pain.,Faithful,1.0,0
+23,0,I will get the patient these medications and see her back in two weeks.,Contextual,1.0,1
+23,0,Follow-up: We will see the patient in two weeks to monitor her progress and adjust her treatment plan as necessary.,Faithful,0.75,0
+24,0,"HPI: The patient, Emily, presented with sudden visual distortions and blurring of her vision.",Faithful,0.25,0
+24,0,"She reports difficulty adjusting to dim lighting, specifically when dining at restaurants.",Faithful,0.0,0
+24,0,She denies any other symptoms.,Fabrication,0.5,1
+24,0,Past medical history: The patient has a history of macular degeneration.,Faithful,0.0,0
+24,0,"She is a smoker, consuming one pack of cigarettes per day, and has been trying to quit but has not been successful.",Faithful,0.25,0
+24,0,"She reports taking her blood pressure medication sporadically, but does not keep a regular log of her readings.",Faithful,1.0,0
+24,0,Review of systems: The patient reports no other symptoms outside of her visual disturbances.,Fabrication,0.25,1
+24,0,"Current medications: I prescribed blood pressure medication, but the specific medication and dosing information was not provided.",Fabrication,0.75,1
+24,0,Vital signs: Not mentioned.,Faithful,0.0,0
+24,0,"Physical exam: The anterior segment examination revealed posterior chamber intraocular lenses in both eyes, clear corneas, and no MVI.",Faithful,0.25,0
+24,0,The cup-to-disc ratio is 0.2 in the right eye and 0.3 in the left eye.,Faithful,0.0,0
+24,0,"The fundus examination of the right eye showed the retina to be attached, with no tears or holes.",Faithful,0.0,0
+24,0,"The posterior segment exam revealed drusen in the macula, thickening of the retina, subretinal fluid, and exudates accumulation, and positive for hemorrhage in the left eye.",Causality,0.75,1
+24,0,"Test Results: The diagnostic tests, including OCT and fluorescein angiography, revealed drusen deposit, subretinal fluid accumulation, choroidal neovascular membrane, and focal areas of leakage in the right eye consistent with neovascular age-related macular degeneration.",Faithful,0.5,0
+24,0,"Assessment: The patient has neovascular age-related macular degeneration, a condition that typically leads to severe vision loss due to the growth of abnormal blood vessels beneath the retina, causing fluid and blood leakage.",Faithful,1.0,0
+24,0,Problem list: Neovascular age-related macular degeneration; active.,Faithful,0.5,0
+24,0,"I prescribed Lucentis, an injection to be administered once a month into the vitreous portion of the eye, to slow the rate of vision decline or stop further vision loss.",Faithful,0.25,0
+24,0,Injections will be given regularly over a period of time.,Faithful,0.0,0
+24,0,Follow-up: The patient will return for follow-up appointments as needed to monitor the progression of the disease and adjust treatment as necessary.,Fabrication,0.75,1
+25,0,"HPI: The patient, a 30-year-old male, presents with a 2-week history of intermittent flank pain radiating to the groin, which is exacerbated by fluid intake and physical activity.",Fabrication,0.25,1
+25,0,"The pain is described as a 1-4/10, with periods of more intense pain.",Faithful,0.5,0
+25,0,"The patient reports no fever, nausea, vomiting, or chills.",Faithful,0.5,0
+25,0,"He has a history of passing kidney stones in the past, including a couple of instances requiring surgery, and has a family history of kidney stones.",Faithful,0.25,0
+25,0,"Past medical history: The patient has a history of kidney stones, including self-passed stones and surgical interventions.",Faithful,0.0,0
+25,0,He has a family history of kidney stones.,Faithful,0.0,0
+25,0,"Review of systems: The patient reports no symptoms in other organs, including no abdominal tenderness, except for the flank pain and right-sided CVA tenderness.",Faithful,1.0,0
+25,0,Current medications: I prescribed ibuprofen as needed for pain.,Contextual,0.0,1
+25,0,"Vital signs: Blood pressure is elevated, likely due to pain, but other vital signs are not mentioned.",Faithful,0.25,0
+25,0,"Physical exam: The patient's abdomen is not tender to palpation, except for the right side, where there is CVA tenderness.",Faithful,0.5,0
+25,0,"Test Results: A CT scan shows a 0.5 cm stone located on the proximal right ureter, with no hydronephrosis.",Faithful,0.0,0
+25,0,"Assessment: The patient has a kidney stone, approximately 0.5 cm in size, located on the proximal right ureter, with intermittent flank pain and CVA tenderness.",Faithful,1.0,0
+25,0,Problem list: Kidney stone; active; suspected.,Fabrication,1.0,1
+25,0,I will continue the patient on ibuprofen as needed for pain and prescribe tramadol 50mg as needed for breakthrough pain.,Contextual,0.25,1
+25,0,"I will also order a BMP, urinalysis, and urine culture to rule out infection.",Contextual,0.0,1
+25,0,The patient will continue to use a strainer when urinating to try to catch the stone.,Faithful,0.25,0
+25,0,"I will see the patient again in 1-2 weeks to reassess symptoms and plan further treatment, including lithotripsy if necessary.",Contextual,0.0,1
+25,0,Follow-up: The patient will return in 1-2 weeks for a follow-up appointment.,Faithful,0.0,0

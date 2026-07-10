@@ -1,0 +1,72 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 31-year-old female.,0.0
+1,subjective,The patient has been experiencing abdominal pain for the past week.,0.0
+2,subjective,The abdominal pain has been gradually increasing in severity.,0.0
+3,subjective,The patient has a history of diabetes type two.,0.0
+4,subjective,The patient has a history of asthma.,0.0
+5,subjective,The patient reports nausea.,0.0
+6,subjective,The patient reports vomiting.,0.0
+7,subjective,The patient experienced nausea approximately three times in the past week.,0.0
+8,subjective,The patient vomited a couple of times.,0.0
+9,subjective,The patient believes increased coffee consumption may have contributed to the abdominal pain.,0.0
+10,subjective,The patient consumed a lot of coffee in the past week.,0.0
+11,subjective,The patient consumed venti-sized nitro cold brew from Starbucks in the past week.,0.5
+12,subjective,The abdominal pain is located in both sides of her upper abdomen.,0.25
+13,subjective,The pain worsens with exercise.,0.0
+14,subjective,The patient experiences pain when jogging.,0.0
+15,subjective,The patient experiences pain when running.,0.0
+16,subjective,The patient has not had any fever with the pain.,0.0
+17,subjective,The patient is taking metformin.,0.0
+18,subjective,The metformin dose is 500 milligrams.,0.75
+19,subjective,Metformin is taken twice daily.,0.0
+20,subjective,Metformin is prescribed for diabetes.,0.0
+21,subjective,The patient's blood sugar has been under control.,0.5
+22,subjective,"The patient's blood sugar is around 80 (likely a typo, but as per the note, it says 800, which seems incorrect for a controlled blood sugar level, but I've included it as is).",1.0
+23,subjective,The patient is taking flovent.,0.0
+24,subjective,The flovent dose is not specified.,1.0
+25,subjective,Flovent is taken twice daily.,0.0
+26,subjective,Flovent is prescribed for asthma.,0.0
+27,subjective,The patient is taking albuterol.,0.0
+28,subjective,The albuterol dose is not specified.,0.0
+29,subjective,Albuterol is taken as needed.,0.0
+30,subjective,Albuterol is prescribed for asthma.,0.0
+31,objective,The patient's physical exam is mostly unremarkable.,0.25
+32,objective,The patient has mild tenderness in the epigastrium of her abdomen.,0.0
+33,objective,The patient has a systolic ejection murmur.,0.0
+34,objective,The systolic ejection murmur is grade three out of six.,0.0
+35,objective,The patient has mild end-expiratory wheezes.,0.0
+36,objective,The patient's lung exam is otherwise normal.,0.25
+37,assessment,The patient has acute gastritis.,0.0
+38,assessment,Acute gastritis is likely related to caffeine intake.,0.0
+39,assessment,Acute gastritis is possibly exacerbated by alcohol use.,0.0
+40,assessment,The patient has a history of alcohol use.,0.25
+41,assessment,The patient has Diabetes type two.,0.0
+42,assessment,The patient has Asthma.,0.0
+43,assessment,The patient has a Systolic ejection murmur.,1.0
+44,assessment,Gastritis is a diagnosed problem.,0.0
+45,assessment,Diabetes type two is a diagnosed problem.,0.0
+46,assessment,Asthma is a diagnosed problem.,0.0
+47,assessment,Systolic ejection murmur is a diagnosed problem.,1.0
+48,plan,The doctor prescribed Zantac.,0.0
+49,plan,The Zantac dose is 150 milligrams.,0.0
+50,plan,Zantac is taken twice daily.,0.0
+51,plan,Zantac is prescribed for gastritis.,0.75
+52,plan,The doctor prescribed metformin.,0.25
+53,plan,The metformin dose is 1000 milligrams in the morning.,0.25
+54,plan,The metformin dose is 500 milligrams in the evening.,0.25
+55,plan,Metformin is taken in the morning and evening.,0.25
+56,plan,The patient was advised to cut back on caffeine.,0.25
+57,plan,The patient was advised to cut back on alcohol.,0.5
+58,plan,The patient was advised to limit coffee consumption.,0.25
+59,plan,The patient's alcohol intake should be less than two drinks per week.,1.0
+60,plan,The patient's alcohol intake should be less than three drinks per week.,0.5
+61,plan,The patient was advised to decrease spicy food intake.,0.25
+62,plan,A urinalysis was ordered.,0.25
+63,plan,A urine pregnancy test was ordered.,0.25
+64,plan,A CBC was ordered.,0.25
+65,plan,A comprehensive metabolic panel was ordered.,0.25
+66,plan,The doctor prescribed flovent.,0.75
+67,plan,The doctor prescribed albuterol.,0.75
+68,plan,A follow-up appointment is scheduled in four weeks.,0.0
+69,plan,The follow-up appointment is to monitor gastritis.,1.0
+70,plan,The follow-up appointment is to monitor diabetes.,1.0

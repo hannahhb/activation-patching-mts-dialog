@@ -1,0 +1,77 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 36-year-old female.,0.0
+1,subjective,The patient presents with ankle pain.,0.0
+2,subjective,The ankle pain occurred two days ago.,0.0
+3,subjective,The patient slipped and twisted her left ankle.,0.0
+4,subjective,The patient fell on the outside of her left ankle.,0.6667
+5,subjective,The patient reports swelling.,0.0
+6,subjective,The patient reports pain.,0.0
+7,subjective,The patient reports difficulty walking.,0.1111
+8,subjective,The patient has tried ibuprofen.,0.0
+9,subjective,The patient has tried ice.,0.0
+10,subjective,The patient has tried elevation.,0.0
+11,subjective,"Ibuprofen, ice, and elevation have provided some relief.",0.1111
+12,subjective,The pain is localized to the outside of her ankle.,0.1111
+13,subjective,The patient denies radiation of pain to her calf.,0.1111
+14,subjective,The patient denies radiation of pain to her lower leg.,0.1111
+15,subjective,The patient denies radiation of pain to her knee.,0.1111
+16,subjective,The patient denies bleeding.,0.3333
+17,subjective,The patient has a history of diabetes.,0.0
+18,subjective,The patient has a history of high blood pressure.,0.0
+19,subjective,The patient takes metformin.,0.0
+20,subjective,Metformin is prescribed for diabetes.,0.1111
+21,subjective,The patient takes Norvasc.,0.0
+22,subjective,Norvasc is prescribed for high blood pressure.,0.0
+23,subjective,The patient's hemoglobin A1c is 6.8.,0.3333
+24,subjective,The patient's diabetes is well-controlled.,0.2222
+25,subjective,The patient is due for an eye exam.,0.3333
+26,subjective,The patient has an appointment scheduled for an eye exam in the next couple of weeks.,0.6667
+27,objective,The patient's neck exam is normal.,0.1111
+28,objective,The patient has no bruits.,0.3333
+29,objective,The patient's lungs are clear.,0.1111
+30,objective,The patient's heart exam is normal.,0.3333
+31,objective,The patient has a 2/6 systolic ejection murmur.,0.1111
+32,objective,The patient's systolic ejection murmur is unchanged from previous exams.,0.2222
+33,objective,The patient's belly exam is normal.,0.1111
+34,objective,The patient has tenderness over the lateral malleolus.,0.0
+35,objective,The patient has tenderness over the fifth metatarsal.,0.0
+36,objective,The patient has swelling over the lateral malleolus.,0.1111
+37,objective,The patient has swelling over the fifth metatarsal.,0.1111
+38,objective,The patient has redness over the lateral malleolus.,0.0
+39,objective,The patient has redness over the fifth metatarsal.,0.1111
+40,objective,The patient has pain with valgus stressing of the ankle.,0.1111
+41,objective,The patient has normal sensation in her lower extremities.,0.1111
+42,objective,The patient has normal pulses in her lower extremities.,0.1111
+43,assessment,The patient has an ankle sprain.,0.0
+44,assessment,The patient has a possible fracture.,0.1111
+45,assessment,The patient is being treated with an air splint.,1.0
+46,assessment,The patient is being treated with crutches.,0.8889
+47,assessment,The patient is to avoid weightbearing.,0.8889
+48,assessment,An x-ray is to be obtained.,0.0
+49,assessment,The patient has diabetes.,0.0
+50,assessment,The patient has high blood pressure.,0.0
+51,assessment,Ankle sprain is a problem.,0.0
+52,assessment,Suspected fracture is a problem.,0.4444
+53,assessment,Diabetes is a problem.,0.0
+54,assessment,High blood pressure is a problem.,0.0
+55,plan,The doctor ordered an x-ray of the patient's ankle.,0.0
+56,plan,The x-ray is to rule out a fracture.,0.0
+57,plan,The patient was put in an air splint.,0.5
+58,plan,The patient was given crutches.,0.125
+59,plan,The patient was instructed to avoid weightbearing.,0.0
+60,plan,The patient was instructed to avoid weightbearing until the x-ray results are available.,0.0
+61,plan,The doctor prescribed Naprosyn.,0.0
+62,plan,The Naprosyn dose is 500mg.,0.0
+63,plan,Naprosyn is taken twice a day.,0.0
+64,plan,Naprosyn is prescribed for pain control.,0.0
+65,plan,The patient was instructed to keep the ankle elevated.,0.125
+66,plan,The patient was instructed to apply ice.,0.125
+67,plan,The patient is currently taking metformin.,0.625
+68,plan,The patient is currently taking Norvasc.,0.25
+69,plan,The doctor ordered baseline labs.,0.375
+70,plan,The baseline labs include a hemoglobin A1c.,0.375
+71,plan,The hemoglobin A1c is to monitor diabetes control.,0.25
+72,plan,The patient has diabetes.,0.25
+73,plan,The patient will follow up with the doctor.,0.125
+74,plan,The follow-up is after the x-ray results are available.,0.0
+75,plan,The follow-up is to determine the next course of treatment.,0.125

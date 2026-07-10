@@ -1,0 +1,84 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 50-year-old male.,1.0
+1,subjective,The patient had a heart attack approximately 3-4 months ago.,0.5
+2,subjective,A stent was placed in the patient's left anterior descending artery.,0.25
+3,subjective,The patient's medications are helping.,0.5
+4,subjective,The patient is concerned about the number of medications he is taking.,0.0
+5,subjective,The patient feels dizzy when standing up quickly.,0.0
+6,subjective,The patient attributes his dizziness to either the heart attack or his medications.,0.5
+7,subjective,The patient has not been taking his Crestor.,1.0
+8,subjective,The patient has concerns about muscle aches due to Crestor.,0.75
+9,subjective,The patient has a history of diabetes.,0.0
+10,subjective,The patient's diabetes contributed to his heart attack.,0.75
+11,subjective,The patient is managing his blood sugar levels with diet.,1.0
+12,subjective,The patient is managing his blood sugar levels with medication.,1.0
+13,subjective,The patient has a history of coronary artery disease.,0.0
+14,subjective,The patient had a heart attack 6 months ago.,0.25
+15,subjective,The patient underwent stent placement 6 months ago.,0.25
+16,subjective,The patient has stage 3 chronic kidney disease.,0.0
+17,subjective,The patient reports no other symptoms beyond his dizziness.,1.0
+18,subjective,The patient reports no other symptoms beyond his concerns about his medications.,1.0
+19,subjective,The doctor prescribed Aspirin.,0.25
+20,subjective,The Aspirin dose is 81mg.,0.75
+21,subjective,Aspirin is taken daily.,0.5
+22,subjective,The doctor prescribed Brilinta.,0.25
+23,subjective,The Brilinta dose is 90mg.,0.75
+24,subjective,Brilinta is taken twice daily.,0.75
+25,subjective,The doctor prescribed Crestor.,0.25
+26,subjective,The Crestor dose is 20mg.,1.0
+27,subjective,Crestor is taken daily.,0.25
+28,subjective,Crestor was refilled.,1.0
+29,subjective,The doctor prescribed Metoprolol.,0.25
+30,subjective,The Metoprolol dose is 50mg.,0.25
+31,subjective,Metoprolol is taken daily.,0.25
+32,subjective,The doctor prescribed Fish oil.,0.25
+33,subjective,The patient denied other symptoms.,0.75
+34,subjective,"The patient denied lip swelling is not mentioned in the note, however the patient denied other symptoms is mentioned, which can be split into: The patient denied other symptoms beyond dizziness and concerns about medications.",0.75
+35,subjective,The patient's diabetes is managed.,1.0
+36,subjective,The patient's blood sugar levels are managed with diet and medication.,1.0
+37,objective,The patient's blood pressure is 127/80.,0.25
+38,objective,The patient's pulse rate is not mentioned.,0.0
+39,objective,The patient's oxygen saturation is not mentioned.,0.0
+40,objective,The patient's temperature is not mentioned.,0.0
+41,objective,The patient's vital signs are within normal limits.,0.75
+42,objective,The patient has a systolic ejection murmur.,0.0
+43,objective,The systolic ejection murmur is located at the left base.,0.0
+44,objective,The systolic ejection murmur is 3/6.,0.0
+45,objective,The patient has nonpitting edema.,0.0
+46,objective,The nonpitting edema is located in the lower extremities.,0.0
+47,objective,The nonpitting edema is 1+.,0.0
+48,objective,The patient's kidney function is stable.,0.25
+49,objective,The patient's creatinine level is stable.,0.5
+50,assessment,The patient is a male.,0.5
+51,assessment,The patient is 50 years old.,1.0
+52,assessment,The patient has coronary artery disease.,0.0
+53,assessment,The patient has diabetes.,0.0
+54,assessment,The patient is suspected to have depression.,0.5
+55,assessment,The patient's current medications are managing his condition.,1.0
+56,assessment,The patient requires further management to optimize his condition.,1.0
+57,assessment,Coronary artery disease is a problem for the patient.,0.0
+58,assessment,Stage 3 chronic kidney disease is a problem for the patient.,0.0
+59,assessment,Diabetes is a problem for the patient.,0.0
+60,assessment,Depression is a suspected problem for the patient.,0.75
+61,plan,The patient will be referred to cardiac rehab.,0.0
+62,plan,The purpose of cardiac rehab is to increase the patient's activity level.,0.0
+63,plan,The purpose of cardiac rehab is to increase the patient's confidence in exercising.,0.0
+64,plan,The doctor will refill the patient's medications.,0.0
+65,plan,The patient's medication includes metoprolol.,0.0
+66,plan,The metoprolol dose is 50mg.,0.5
+67,plan,The patient's medication includes Crestor.,0.0
+68,plan,The patient's medication includes aspirin.,0.0
+69,plan,The aspirin dose is 81mg.,0.75
+70,plan,The patient will be referred to a dietitian.,0.0
+71,plan,The purpose of the dietitian referral is for education on managing diabetes.,1.0
+72,plan,The doctor will order a hemoglobin A1c test.,0.0
+73,plan,The purpose of the hemoglobin A1c test is to monitor the patient's blood sugar levels.,1.0
+74,plan,The doctor will contact Dr. Miller.,0.0
+75,plan,The purpose of contacting Dr. Miller is to schedule an appointment with the patient's nephrologist.,0.0
+76,plan,The patient will be referred to psychiatry.,0.0
+77,plan,The reason for the psychiatry referral is the patient's difficulty adjusting to his heart attack.,0.0
+78,plan,The reason for the psychiatry referral is possible mild depression.,0.0
+79,plan,The patient will follow up with his cardiologist.,0.75
+80,plan,The follow-up interval with the cardiologist is 3-6 months.,0.75
+81,plan,The purpose of the follow-up with the cardiologist is to monitor the patient's condition.,0.75
+82,plan,The purpose of the follow-up with the cardiologist is to adjust the patient's treatment plan as needed.,1.0

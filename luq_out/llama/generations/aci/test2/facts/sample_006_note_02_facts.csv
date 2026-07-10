@@ -1,0 +1,70 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Noah.,1.0
+1,subjective,The patient presents with a 1-week history of back pain.,0.0
+2,subjective,The back pain started after a twisting injury to the left side.,0.25
+3,subjective,The patient reports back pain located in the middle of the back.,0.0
+4,subjective,The patient reports back pain located in the lower side.,0.0
+5,subjective,The patient reports back pain radiates to the left side.,0.5
+6,subjective,The back pain radiates with sudden movements to the left.,1.0
+7,subjective,The pain is exacerbated by twisting.,0.5
+8,subjective,The patient reports back pain located in the center of the back.,0.25
+9,subjective,The back pain extends to the lower back.,0.0
+10,subjective,The back pain extends to the left side.,0.5
+11,subjective,The patient denied any other symptoms.,1.0
+12,subjective,The patient has a history of diabetes.,0.0
+13,subjective,The patient is taking metformin.,0.0
+14,subjective,The metformin dose is not specified.,0.5
+15,subjective,Metformin is taken twice a day.,0.0
+16,subjective,Metformin is prescribed for diabetes.,0.0
+17,subjective,The patient's blood sugar levels have been higher than usual.,1.0
+18,subjective,The patient tries to exercise.,0.25
+19,subjective,The patient tries to control his diet.,0.5
+20,subjective,The patient has a family history of owning a bakery.,0.5
+21,subjective,The patient frequents the bakery.,1.0
+22,subjective,The patient consumes sweet treats.,0.5
+23,subjective,The patient denied smoking.,1.0
+24,subjective,The patient denied alcohol use.,1.0
+25,subjective,The patient denied drug use.,1.0
+26,objective,The patient's lungs were clear.,0.0
+27,objective,The patient's heart had a regular rate.,0.0
+28,objective,The patient's heart had a regular rhythm.,0.0
+29,objective,The doctor performed a physical exam.,0.0
+30,objective,The physical exam included pressing down on the patient's back.,0.25
+31,objective,The patient reported back pain.,0.0
+32,objective,The patient reported pain in the center of the back.,0.25
+33,objective,The patient reported pain on the lower side of the back.,0.0
+34,objective,The patient reported pain on the left side of the back.,0.75
+35,objective,The patient did not report pain on the right side of the back.,0.5
+36,objective,The doctor examined the patient's lower extremities.,0.25
+37,objective,The patient's feet had no pain.,0.25
+38,objective,The patient's feet had no numbness.,0.25
+39,objective,The patient's feet had no tingling.,0.5
+40,assessment,The patient has a musculoskeletal low back strain.,0.0
+41,assessment,The patient has low back strain.,0.0
+42,assessment,The patient has Diabetes mellitus.,0.0
+43,plan,The doctor prescribed ibuprofen.,0.0
+44,plan,The ibuprofen dose is 400mg.,0.0
+45,plan,Ibuprofen is taken as needed.,0.0
+46,plan,Ibuprofen is taken up to 3 times a day.,0.0
+47,plan,Ibuprofen is prescribed for pain relief.,0.0
+48,plan,The patient was instructed to take ibuprofen with Tylenol.,0.5
+49,plan,The doctor prescribed Flexeril.,0.0
+50,plan,The Flexeril dose is 1 tablet.,0.0
+51,plan,Flexeril is taken daily.,0.0
+52,plan,Flexeril is prescribed for muscle relaxation.,0.25
+53,plan,The patient was cautioned against strenuous activities after taking Flexeril.,0.75
+54,plan,The doctor ordered an x-ray.,0.0
+55,plan,The x-ray is to evaluate the joint spaces.,0.0
+56,plan,The x-ray is to evaluate potential disk issues.,0.0
+57,plan,The doctor ordered physical therapy.,0.0
+58,plan,Physical therapy is to help with pain relief.,0.0
+59,plan,Physical therapy is to help with muscle strengthening.,0.0
+60,plan,The patient was instructed to continue taking metformin.,0.0
+61,plan,Metformin is taken for diabetes control.,0.25
+62,plan,The patient was instructed to continue controlling his diet.,0.25
+63,plan,The patient was instructed to continue his exercise routine.,0.0
+64,plan,The doctor ordered an A1c test.,0.0
+65,plan,The A1c test is to evaluate diabetes control.,0.0
+66,plan,The patient was instructed to return for a follow-up appointment.,0.0
+67,plan,The follow-up appointment is to discuss the results of the x-ray.,0.0
+68,plan,The follow-up appointment is to discuss the results of the A1c test.,0.0

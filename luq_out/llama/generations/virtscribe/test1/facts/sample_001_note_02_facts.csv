@@ -1,0 +1,63 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Randy.,0.0
+1,subjective,The patient started feeling unwell around supper time last night.,0.25
+2,subjective,The patient had a runny nose.,0.0
+3,subjective,The patient's runny nose is currently clear.,1.0
+4,subjective,The patient has a cough.,0.0
+5,subjective,The patient's cough is not barky.,0.0
+6,subjective,The patient has been pulling on his ears.,0.0
+7,subjective,The patient has been rubbing his nose.,0.0
+8,subjective,The patient has a low-grade fever.,0.0
+9,subjective,The patient's rectal temperature is 100.3 degrees.,0.5
+10,subjective,The patient's appetite has been variable.,0.5
+11,subjective,The patient has been eating sometimes.,0.0
+12,subjective,The patient has not been eating sometimes.,0.5
+13,subjective,The patient has been irritable.,0.0
+14,subjective,The patient has been having trouble sleeping.,0.0
+15,subjective,The patient was exposed to his older sister who has been sick.,0.75
+16,subjective,The patient was exposed to a nephew who had a sinus infection.,0.0
+17,subjective,The patient's mother used saline mist.,0.25
+18,subjective,The patient's mother used Tylenol.,0.75
+19,subjective,The patient's mother used baby Vicks.,0.25
+20,subjective,The patient's mother used a humidifier.,0.25
+21,subjective,The doctor prescribed Tylenol.,0.75
+22,subjective,Tylenol is taken as needed.,1.0
+23,subjective,Tylenol is prescribed for fever.,0.0
+24,subjective,The doctor prescribed saline mist.,0.75
+25,subjective,Saline mist is taken as needed.,1.0
+26,subjective,Saline mist is prescribed for congestion.,0.5
+27,subjective,The doctor prescribed baby Vicks.,0.75
+28,subjective,Baby Vicks is taken as needed.,1.0
+29,subjective,Baby Vicks is prescribed for congestion.,0.75
+30,objective,The patient's temperature is 100.3 degrees.,0.0
+31,objective,The patient's temperature was taken rectally.,0.5
+32,objective,The patient's ears are normal.,0.0
+33,objective,The patient's nose has clear mucous.,0.75
+34,objective,The patient's cough is non-barky.,1.0
+35,assessment,Randy has a viral upper respiratory tract infection.,0.75
+36,assessment,Randy has a low-grade fever.,0.75
+37,assessment,Randy has a non-barky cough.,1.0
+38,assessment,The patient's problem list includes upper respiratory tract infection.,0.0
+39,assessment,The patient's problem list includes viral infection.,0.25
+40,assessment,The patient's problem list includes fever.,0.75
+41,assessment,The patient's problem list includes cough.,0.75
+42,assessment,The patient's problem list includes cradle cap.,0.25
+43,plan,The doctor prescribed Zarbee's.,0.5
+44,plan,Zarbee's is prescribed for a stuffy nose.,0.5
+45,plan,The doctor ordered a medication for cough.,0.0
+46,plan,The medication for cough is given only if the patient develops a barky cough.,0.25
+47,plan,The medication dose is half a teaspoon.,0.0
+48,plan,The medication is taken for five days.,0.75
+49,plan,The doctor recommended head & shoulders shampoo.,0.0
+50,plan,Head & shoulders shampoo is for cradle cap.,0.0
+51,plan,The doctor recommended selsun blue shampoo.,0.0
+52,plan,Selsun blue shampoo is for cradle cap.,0.0
+53,plan,The doctor recommended nizoral ad shampoo.,0.0
+54,plan,Nizoral ad shampoo is for cradle cap.,0.0
+55,plan,Head & shoulders shampoo is used two times per week.,0.5
+56,plan,Selsun blue shampoo is used two times per week.,0.5
+57,plan,Nizoral ad shampoo is used two times per week.,0.5
+58,plan,The doctor recommended using a soft brush for cradle cap.,0.25
+59,plan,The doctor recommended using baby oil for cradle cap.,0.25
+60,plan,The patient is scheduled for follow-up in one week.,0.0
+61,plan,The patient's sister is scheduled for follow-up in one week.,1.0

@@ -1,0 +1,74 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a young adult.,1.0
+1,subjective,The patient has a history of recurrent strep throat episodes.,0.0
+2,subjective,The patient had 4 strep throat episodes in the last 5 months.,0.0
+3,subjective,The patient presents with left-sided back pain.,0.0
+4,subjective,The patient's back pain varies in intensity.,0.0
+5,subjective,The patient's primary care physician referred them for further evaluation.,1.0
+6,subjective,The patient reports increased urine output.,0.25
+7,subjective,The patient's increased urine output occurs especially at night.,0.5
+8,subjective,The patient has been drinking more water.,0.75
+9,subjective,The patient has a brother who smokes at home.,0.75
+10,subjective,The patient has tried to discourage their brother from smoking.,1.0
+11,subjective,The patient's appetite is unchanged.,0.0
+12,subjective,The patient was referred to the doctor for further evaluation.,1.0
+13,objective,The physical exam revealed no erythema in the throat.,0.0
+14,objective,The physical exam revealed no erythema in the neck.,0.5
+15,objective,The physical exam revealed no erythema in the abdomen.,1.0
+16,objective,The physical exam revealed no swelling in the throat.,0.0
+17,objective,The physical exam revealed no swelling in the neck.,0.0
+18,objective,The physical exam revealed no swelling in the abdomen.,0.75
+19,objective,The physical exam revealed no tenderness in the throat.,1.0
+20,objective,The physical exam revealed no tenderness in the neck.,0.75
+21,objective,The physical exam revealed no tenderness in the abdomen.,0.0
+22,objective,The patient's tonsils are midline.,0.0
+23,objective,There is no cervical adenopathy.,0.0
+24,objective,There is no lymphadenopathy.,0.0
+25,objective,The lungs are clear.,0.0
+26,objective,There are no wheezes in the lungs.,0.0
+27,objective,There are no rales in the lungs.,0.0
+28,objective,There are no rhonchi in the lungs.,0.0
+29,objective,The heart sounds are normal.,0.0
+30,objective,There is no murmur.,0.0
+31,objective,There is no rub.,0.0
+32,objective,There is no gallop.,0.0
+33,objective,The back pain is not reproduced with palpation.,0.0
+34,assessment,The patient is at risk for developing glomerulonephritis.,0.25
+35,assessment,The patient had recurrent strep throat episodes.,0.0
+36,assessment,Recurrent strep throat episodes may lead to glomerulonephritis.,0.25
+37,assessment,Glomerulonephritis may lead to chronic kidney disease.,0.25
+38,assessment,The patient has a suspected diagnosis of glomerulonephritis.,0.0
+39,assessment,The status of glomerulonephritis is suspected.,0.25
+40,plan,The doctor prescribed a lipid panel.,0.0
+41,plan,The doctor prescribed a urinalysis.,0.0
+42,plan,The doctor prescribed a comprehensive metabolic panel.,0.0
+43,plan,The doctor prescribed a complete blood count.,0.0
+44,plan,The doctor prescribed a vitamin D test.,0.0
+45,plan,The doctor prescribed a thyroid-stimulating hormone test.,0.0
+46,plan,The lipid panel is to evaluate the patient's kidney function.,1.0
+47,plan,The lipid panel is to evaluate the patient's hormone levels.,1.0
+48,plan,The lipid panel is to evaluate the patient's nutritional status.,0.75
+49,plan,The urinalysis is to evaluate the patient's kidney function.,1.0
+50,plan,The urinalysis is to evaluate the patient's hormone levels.,0.75
+51,plan,The urinalysis is to evaluate the patient's nutritional status.,0.75
+52,plan,The comprehensive metabolic panel is to evaluate the patient's kidney function.,0.5
+53,plan,The comprehensive metabolic panel is to evaluate the patient's hormone levels.,1.0
+54,plan,The comprehensive metabolic panel is to evaluate the patient's nutritional status.,0.75
+55,plan,The complete blood count is to evaluate the patient's kidney function.,1.0
+56,plan,The complete blood count is to evaluate the patient's hormone levels.,0.75
+57,plan,The complete blood count is to evaluate the patient's nutritional status.,0.75
+58,plan,The vitamin D test is to evaluate the patient's kidney function.,1.0
+59,plan,The vitamin D test is to evaluate the patient's hormone levels.,0.75
+60,plan,The vitamin D test is to evaluate the patient's nutritional status.,0.75
+61,plan,The thyroid-stimulating hormone test is to evaluate the patient's kidney function.,1.0
+62,plan,The thyroid-stimulating hormone test is to evaluate the patient's hormone levels.,0.0
+63,plan,The thyroid-stimulating hormone test is to evaluate the patient's nutritional status.,1.0
+64,plan,"The patient was referred to an ear, nose, and throat specialist.",0.0
+65,plan,"The referral to the ear, nose, and throat specialist is to consider tonsillectomy.",0.0
+66,plan,Tonsillectomy is to alleviate recurrent strep throat episodes.,0.25
+67,plan,The patient was referred to a nephrologist.,1.0
+68,plan,The referral to the nephrologist is for further evaluation of glomerulonephritis.,1.0
+69,plan,The patient has glomerulonephritis.,1.0
+70,plan,The patient has recurrent strep throat episodes.,0.25
+71,plan,The patient is to return in a week.,0.0
+72,plan,The patient is to return in a week for the results of the tests.,0.0

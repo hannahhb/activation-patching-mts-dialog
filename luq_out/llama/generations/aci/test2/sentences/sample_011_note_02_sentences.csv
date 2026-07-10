@@ -1,0 +1,32 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,HPI: The patient is a 6-month follow-up visit for a patient who had a heart attack 6 months ago and underwent stenting of the left anterior descending artery.,0.75
+2,"The patient reports that the medications are helping and they are doing okay, but they are concerned about the number of medications they are taking.",0.5
+3,"They mention that they have been experiencing dizziness when standing up quickly, which they attribute to either the heart attack or the medication.",0.25
+4,The patient also mentions that they have not been following up with the dietitian for their diabetes and have a high A1c level of 60%.,1.0
+5,"They have a history of kidney disease, stage 3 CKD, and are concerned about the potential effects of medications on their kidneys.",0.5
+6,The patient is also experiencing some edema in their legs.,0.75
+7,"Past medical history: The patient has a history of heart attack, coronary artery disease, and stage 3 CKD.",0.0
+8,"They have been prescribed multiple medications, including aspirin, brilinta, metoprolol, crestor, and fish oil.",0.0
+9,"Review of systems: The patient reports dizziness when standing up quickly, but no other symptoms.",0.25
+10,Current medications:,0.0
+11,Aspirin,0.0
+12,Brilinta,0.0
+13,Metoprolol 50mg once a day,0.0
+14,Crestor 40mg once a day,0.0
+15,Fish oil,0.0
+16,Objective:,0.0
+17,"Vital signs: The patient's blood pressure is 127/80, which is within a normal range.",0.5
+18,Physical exam: The patient has a slight 3/6 systolic ejection murmur at the left base and some 1+ nonpitting edema in their legs.,0.0
+19,"Test Results: The patient's kidney function is stable, and they have a creatinine level that is within normal limits.",1.0
+20,Assessment / Problem List:,0.0
+21,"Assessment: The patient has coronary artery disease, stage 3 CKD, and diabetes.",0.0
+22,Problem list:,0.0
+23,Coronary artery disease; Stage 3 CKD; Diabetes; Mild depression.,0.0
+24,Plan:,0.0
+25,I will refer the patient to cardiac rehab to help them become more active and confident in exercising again.,0.0
+26,"I will also refill their metoprolol, crestor, and aspirin.",1.0
+27,I will reach out to Dr. Miller to schedule an appointment for the patient to follow up with their nephrologist.,0.5
+28,I will order another hemoglobin A1c and refer the patient to a dietitian for dietary education.,0.25
+29,I will also refer the patient to psychiatry for difficulty adjusting after their heart attack and possible mild depression.,0.5
+30,"Follow-up: The patient will follow up with the dietitian, nephrologist, and psychiatrist as scheduled.",1.0

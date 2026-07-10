@@ -1,0 +1,80 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Diana Scott.,0.0
+1,subjective,The patient is a 100-year-old woman.,0.0
+2,subjective,The patient has a new diagnosis of a heart murmur.,0.0
+3,subjective,"The heart murmur is described as a ""worrisome"" condition.",0.25
+4,subjective,The patient reports severe pains in her legs.,0.0
+5,subjective,The patient takes pain pills for leg pain.,0.25
+6,subjective,The patient gets short of breath when walking too fast.,0.25
+7,subjective,The patient gets short of breath when walking too long.,0.0
+8,subjective,The patient gets short of breath when drinking a full glass of water without stopping.,0.5
+9,subjective,The patient uses a walker due to fatigue.,1.0
+10,subjective,The patient has a history of surgeries.,0.0
+11,subjective,The patient denies chest pain.,0.0
+12,subjective,The patient has not noticed irregular heartbeats.,0.5
+13,subjective,The patient reports swelling in her ankles.,0.5
+14,subjective,The ankle swelling has been going on for 6 months.,0.75
+15,subjective,The patient has lost weight gradually over the past year.,1.0
+16,subjective,The patient denies fevers.,0.0
+17,subjective,The patient denies chills.,0.25
+18,subjective,The patient denies other symptoms.,0.25
+19,subjective,The patient has a family history of heart problems.,0.0
+20,subjective,The patient's son had a heart attack.,0.25
+21,subjective,The patient's brother had a stroke due to diabetes.,0.5
+22,subjective,The patient has never smoked.,0.25
+23,subjective,The patient has no known allergies to medications.,0.25
+24,subjective,The patient is overly tired due to medication.,0.75
+25,subjective,The patient has difficulty walking due to leg pain.,0.5
+26,subjective,The doctor prescribed Amlodipine.,0.25
+27,subjective,The Amlodipine dose is not specified.,0.25
+28,subjective,Amlodipine is taken at a frequency not specified.,0.25
+29,subjective,The doctor prescribed lisinopril.,0.0
+30,subjective,The lisinopril dose is not specified.,0.25
+31,subjective,lisinopril is taken at a frequency not specified.,0.25
+32,subjective,The doctor prescribed simvastatin.,0.0
+33,subjective,The simvastatin dose is 20mg.,0.0
+34,subjective,simvastatin is taken at a frequency not specified.,0.25
+35,subjective,simvastatin is prescribed for lipids.,0.75
+36,subjective,The doctor prescribed meclizine.,0.25
+37,subjective,The meclizine dose is not specified.,0.0
+38,subjective,meclizine is taken at a frequency not specified.,0.25
+39,subjective,meclizine is prescribed for lightheadedness and dizziness.,0.75
+40,subjective,The doctor prescribed levothyroxine.,0.0
+41,subjective,The levothyroxine dose is not specified.,0.25
+42,subjective,levothyroxine is taken at a frequency not specified.,0.25
+43,subjective,levothyroxine is prescribed for hypothyroidism.,0.75
+44,objective,The patient has a systolic murmur.,0.0
+45,objective,The systolic murmur is located at the right upper sternal border.,0.0
+46,objective,The systolic murmur has mild radiation to the carotids.,0.0
+47,objective,The systolic murmur is 4 out of 6.,0.0
+48,assessment,The patient is a woman.,0.75
+49,assessment,The patient is 100 years old.,1.0
+50,assessment,The patient has a cardiac murmur.,0.0
+51,assessment,The cardiac murmur likely represents aortic stenosis.,0.0
+52,assessment,The patient has symptoms possibly due to severe aortic stenosis.,0.75
+53,assessment,The patient has a relatively preserved S2.,1.0
+54,assessment,The relatively preserved S2 is more consistent with moderate stenosis.,1.0
+55,assessment,The patient has aortic stenosis.,0.5
+56,assessment,The patient has possible severe aortic stenosis.,0.75
+57,assessment,The patient has PVCS.,0.0
+58,assessment,The patient has tachycardia.,1.0
+59,assessment,The patient has hyperlipidemia.,0.0
+60,assessment,The patient has lightheadedness.,0.0
+61,assessment,The patient has dizziness.,0.0
+62,plan,The patient is prescribed to undergo an echocardiogram.,0.0
+63,plan,The echocardiogram is to assess overall cardiac structure.,0.0
+64,plan,The echocardiogram is to assess overall cardiac function.,0.0
+65,plan,The doctor will consider an ischemic evaluation.,0.75
+66,plan,The doctor will consider further assessment with a heart monitor.,0.5
+67,plan,The results of the echocardiogram will determine the next course of action.,0.0
+68,plan,The doctor will send the results to the patient's primary care physician (PCP).,0.75
+69,plan,The doctor will send recommendations to the patient's primary care physician (PCP).,1.0
+70,plan,The primary care physician (PCP) will discuss the possibility of stopping the patient's statin medication.,0.0
+71,plan,The patient is taking statin medication.,0.0
+72,plan,The statin medication dose is not specified.,0.0
+73,plan,The statin medication frequency is not specified.,0.0
+74,plan,The patient is prescribed to continue taking her current medications.,0.5
+75,plan,The patient is prescribed to continue taking her current medications as prescribed.,0.5
+76,plan,The doctor will follow up with the patient in 3-4 weeks.,0.0
+77,plan,The follow-up appointment is to discuss the results of the echocardiogram.,0.0
+78,plan,The follow-up appointment is to determine the next course of action.,0.0

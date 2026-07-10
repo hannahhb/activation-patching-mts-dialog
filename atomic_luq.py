@@ -28,8 +28,7 @@ import argparse
 import json
 import re
 import sys
-import time
-from collections import Counter
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Dict, List, Tuple
 
@@ -40,6 +39,7 @@ from tqdm import tqdm
 sys.path.insert(0, str(Path(__file__).parent))
 import factmatch_sentence as fm
 import luq_sentence as luq
+from llm_client import gptoss_yesno, GPTOSS_MAX_WORKERS, tracker as llm_tracker
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 DEFAULT_K         = 10   # total notes in the NLI reference pool
@@ -102,19 +102,22 @@ def decompose_section(text: str) -> List[str]:
 def dedupe_across_sections(note_decomp: Dict[str, List[str]]) -> Dict[str, List[str]]:
     """Facts are decomposed per SOAP section independently (decompose_section
     is called once per section with no visibility into the others), so the
-    same real-world fact commonly gets extracted twice under different
-    sections -- e.g. a medication mentioned during history-taking
-    (subjective: "The patient is on metformin.") and again when the plan
-    confirms/continues it (plan: "The patient is taking metformin.").
-    filter_facts() only removes malformed fragments within a single
-    section's output; it never sees facts from other sections, so this
-    cross-section duplication survives untouched today.
+    same real-world fact occasionally gets extracted VERBATIM in two
+    sections -- e.g. "The patient has diabetes." appearing both in the
+    assessment problem list and again in the plan's opening line.
 
-    Fix: flatten every section's facts into one list, deduplicate by cosine
-    similarity (reusing factmatch_sentence.deduplicate_facts, threshold
-    0.92 -- already tuned/battle-tested there for the same kind of
-    paraphrase-duplicate problem), then reassign survivors back to
-    whichever section they first appeared in."""
+    Dedup by EXACT string match only, not embedding cosine similarity.
+    Cosine dedup (via factmatch_sentence.deduplicate_facts, threshold 0.92)
+    was tried and reverted: pritamdeka/S-PubMedBert-MS-MARCO scores
+    same-topic-but-different-content clinical sentences in the same
+    0.89-0.94 range as genuine paraphrase duplicates -- confirmed on a real
+    note, "The patient presents with a 4-day history of worsening right
+    elbow pain." scored 0.9358 against "The patient's right elbow pain is
+    exacerbated by activities such as pottery and ceramics.", above the
+    0.92 cutoff, despite being two entirely distinct facts (duration vs.
+    aggravating trigger) -- the trigger fact was silently dropped with no
+    surviving equivalent. Exact-match can only remove true verbatim
+    repeats, so it can't produce that kind of false merge."""
     flat_facts, flat_secs = [], []
     for sec in SECTION_NAMES:
         for f in note_decomp.get(sec, []):
@@ -123,14 +126,14 @@ def dedupe_across_sections(note_decomp: Dict[str, List[str]]) -> Dict[str, List[
     if len(flat_facts) < 2:
         return note_decomp
 
-    survivors = fm.deduplicate_facts(flat_facts)  # first-occurrence-wins, in original order
-    survivor_counts = Counter(survivors)
-
+    seen: set = set()
     out = {sec: [] for sec in SECTION_NAMES}
     for f, sec in zip(flat_facts, flat_secs):
-        if survivor_counts[f] > 0:
-            out[sec].append(f)
-            survivor_counts[f] -= 1  # only re-attach as many copies as survived
+        key = f.strip()
+        if key in seen:
+            continue
+        seen.add(key)
+        out[sec].append(f)
     return out
 
 
@@ -194,15 +197,12 @@ def facts_csv_path(out_dir: Path, sample_idx: int, note_idx: int) -> Path:
 
 # ── Scoring ────────────────────────────────────────────────────────────────────
 
-def score_sample(sample_idx: int, notes: List[str], decomp_k: int,
-                 out_dir: Path, use_cache: bool) -> List[dict]:
-    """
-    notes     : all K notes (default 10) — used as NLI reference pool.
-    decomp_k  : first decomp_k notes are decomposed; their facts are scored
-                against the raw section text of every other note (K-1 refs).
-    uncertainty = 1 - mean(softmax entailment prob over K-1 reference notes)
-    """
-    K = len(notes)
+def _prepare_decomp(sample_idx: int, notes: List[str], decomp_k: int,
+                    out_dir: Path, use_cache: bool
+                    ) -> Tuple[List[Dict[str, str]], List[Dict[str, List[str]]]]:
+    """Steps 1-2 shared by every scoring backend: parse raw sections for all
+    K notes, then decompose the first decomp_k of them into atomic facts
+    (LLM, cached to disk)."""
     facts_dir = out_dir / "facts"
     facts_dir.mkdir(parents=True, exist_ok=True)
 
@@ -239,6 +239,20 @@ def score_sample(sample_idx: int, notes: List[str], decomp_k: int,
                 tqdm.write(f"    note {note_idx}: cross-section dedup {n_before} -> {n_after} facts")
             all_decomp.append(note_decomp)
         decomp_cache.write_text(json.dumps(all_decomp, indent=2))
+
+    return all_sections, all_decomp
+
+
+def score_sample(sample_idx: int, notes: List[str], decomp_k: int,
+                 out_dir: Path, use_cache: bool) -> List[dict]:
+    """
+    notes     : all K notes (default 10) — used as NLI reference pool.
+    decomp_k  : first decomp_k notes are decomposed; their facts are scored
+                against the raw section text of every other note (K-1 refs).
+    uncertainty = 1 - mean(softmax entailment prob over K-1 reference notes)
+    """
+    K = len(notes)
+    all_sections, all_decomp = _prepare_decomp(sample_idx, notes, decomp_k, out_dir, use_cache)
 
     # ── Step 3: NLI scoring ──────────────────────────────────────────────────
     # For each fact in a decomposed note:
@@ -334,6 +348,95 @@ def score_sample(sample_idx: int, notes: List[str], decomp_k: int,
     return rows
 
 
+# ── gpt-oss-20b yes/no scoring ───────────────────────────────────────────────
+# Alternative to the cross-encoder NLI backend above. An LLM with a 128K
+# context window doesn't need sliding windows or the same-section fallback --
+# it just reads the whole matching section directly. Demoed in
+# demo_gptoss_nli.py first to check the raw Converse response shape (gpt-oss
+# is a Harmony/reasoning model: content[0] is a `reasoningContent` block,
+# the actual "Yes"/"No" is the LAST block, under the `text` key).
+#
+# build_yesno_prompt/gptoss_yesno/GPTOSS_MAX_WORKERS live in llm_client.py,
+# not here, so luq_sentence.py's sentence-level gpt-oss scoring can reuse the
+# exact same primitive without importing atomic_luq (which would be
+# circular -- atomic_luq already imports luq_sentence at module level).
+
+
+def score_sample_gptoss(sample_idx: int, notes: List[str], decomp_k: int,
+                        out_dir: Path, use_cache: bool,
+                        reasoning_effort: str = "low",
+                        max_workers: int = GPTOSS_MAX_WORKERS) -> List[dict]:
+    """Same fact decomposition as score_sample; NLI is replaced by a
+    gpt-oss-20b yes/no call per (fact, reference note) pair, premise = the
+    full matching section of that reference note.
+    uncertainty = 1 - mean(yes/no over K-1 reference notes)
+
+    Every (fact, reference note) pair for a given note is independent, so
+    they're all submitted to one thread pool up front instead of looping
+    ref_idx serially per fact -- that serial version capped concurrency at
+    K-1 (=4) in-flight calls at a time; flattening across every fact in the
+    note keeps `max_workers` calls in flight continuously.
+    """
+    K = len(notes)
+    all_sections, all_decomp = _prepare_decomp(sample_idx, notes, decomp_k, out_dir, use_cache)
+
+    rows = []
+    for note_idx in range(decomp_k):
+        csv_p = facts_csv_path(out_dir, sample_idx, note_idx)
+        if use_cache and csv_p.exists():
+            df = pd.read_csv(csv_p)
+            tqdm.write(f"  [cache] scores sample {sample_idx} note {note_idx}")
+            rows.extend(df.to_dict("records"))
+            continue
+
+        ref_indices = [j for j in range(K) if j != note_idx]
+
+        # Flatten every (section, fact) this note decomposed to, in the same
+        # order score_sample uses, so fact_idx/output ordering is unchanged.
+        sec_fact_list: List[Tuple[str, str]] = [
+            (sec, fact)
+            for sec in SECTION_NAMES
+            for fact in all_decomp[note_idx].get(sec, [])
+        ]
+        votes_by_item: Dict[int, List[float]] = {i: [] for i in range(len(sec_fact_list))}
+
+        with ThreadPoolExecutor(max_workers=max_workers) as pool:
+            future_to_item = {}
+            for item_idx, (sec, fact) in enumerate(sec_fact_list):
+                for ref_idx in ref_indices:
+                    ref_text = all_sections[ref_idx].get(sec, "").strip()
+                    if not ref_text:
+                        continue
+                    fut = pool.submit(gptoss_yesno, ref_text, fact, reasoning_effort)
+                    future_to_item[fut] = item_idx
+
+            for fut in tqdm(as_completed(future_to_item), total=len(future_to_item),
+                            desc=f"  sample {sample_idx} note {note_idx} [gptoss]",
+                            unit="call", leave=False):
+                votes_by_item[future_to_item[fut]].append(fut.result())
+
+        note_rows = []
+        for item_idx, (sec, fact) in enumerate(sec_fact_list):
+            votes = votes_by_item[item_idx]
+            uncertainty = 1.0 if not votes else 1.0 - float(np.mean(votes))
+            note_rows.append({
+                "fact_idx":    item_idx,
+                "section":     sec,
+                "fact":        fact,
+                "uncertainty": round(uncertainty, 4),
+            })
+
+        df = pd.DataFrame(note_rows) if note_rows else pd.DataFrame(
+            columns=["fact_idx", "section", "fact", "uncertainty"])
+        df.to_csv(csv_p, index=False)
+        mean_u = df["uncertainty"].mean() if len(df) else float("nan")
+        tqdm.write(f"  [saved] sample {sample_idx} note {note_idx}: "
+                   f"{len(df)} facts, mean_u={mean_u:.3f}")
+        rows.extend(df.to_dict("records"))
+
+    return rows
+
+
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 def parse_args():
@@ -348,6 +451,15 @@ def parse_args():
     p.add_argument("--gen-dir",  default=DEFAULT_GEN_DIR)
     p.add_argument("--out",      default=DEFAULT_OUT_DIR)
     p.add_argument("--no-cache", action="store_true")
+    p.add_argument("--backend", choices=["cross-encoder", "gptoss"], default="cross-encoder",
+                   help="NLI backend for Step 3 scoring: the local "
+                        "cross-encoder (default) or gpt-oss-20b yes/no via "
+                        "Bedrock Converse.")
+    p.add_argument("--reasoning-effort", choices=["low", "medium", "high"], default="low",
+                   help="gpt-oss reasoning_effort (only used with --backend gptoss)")
+    p.add_argument("--gptoss-workers", type=int, default=GPTOSS_MAX_WORKERS,
+                   help="Concurrent Bedrock calls for --backend gptoss "
+                        f"(default {GPTOSS_MAX_WORKERS})")
     return p.parse_args()
 
 
@@ -365,8 +477,11 @@ def main():
     print(f"Decomp K : {args.decomp_k}")
     print(f"Sections : {SECTION_NAMES}")
     print(f"Cache    : {'on' if use_cache else 'off'}")
+    print(f"Backend  : {args.backend}"
+          + (f" (reasoning_effort={args.reasoning_effort})" if args.backend == "gptoss" else ""))
 
     summary_rows = []
+    n_processed = 0
     for sample_idx in tqdm(range(args.start, args.end), desc="samples", unit="sample"):
         gen_path = gen_dir / f"sample_{sample_idx:03d}_generations.json"
         if not gen_path.exists():
@@ -379,7 +494,19 @@ def main():
 
         decomp_k = min(args.decomp_k, len(notes))
         print(f"\n[sample {sample_idx}] {len(notes)} notes, decomposing first {decomp_k}")
-        rows = score_sample(sample_idx, notes, decomp_k, out_dir, use_cache)
+        if args.backend == "gptoss":
+            rows = score_sample_gptoss(sample_idx, notes, decomp_k, out_dir, use_cache,
+                                       reasoning_effort=args.reasoning_effort,
+                                       max_workers=args.gptoss_workers)
+        else:
+            rows = score_sample(sample_idx, notes, decomp_k, out_dir, use_cache)
+
+        # Decomposition (stage="decomp") runs for every sample regardless of
+        # backend; NLI scoring only shows up here as stage="nli" when
+        # --backend gptoss (the cross-encoder is local/free, not tracked).
+        n_processed += 1
+        if n_processed % 5 == 0:
+            print(f"  [cost] after {n_processed} samples:\n{llm_tracker.summary()}")
 
         if rows:
             df = pd.DataFrame(rows)
@@ -389,6 +516,8 @@ def main():
                 "mean_u":      round(float(df["uncertainty"].mean()), 4),
                 "high_u_frac": round(float((df["uncertainty"] > 0.5).mean()), 4),
             })
+
+    print(f"\n[cost] final:\n{llm_tracker.summary()}")
 
     if summary_rows:
         summary = pd.DataFrame(summary_rows)

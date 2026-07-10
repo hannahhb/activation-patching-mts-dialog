@@ -1,0 +1,24 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,HPI: The patient presents with sudden visual distortions and blurring of vision.,0.0
+2,"She reports that straight lines and door frames appear crooked to her, and she has trouble adjusting to dim lights, particularly in restaurants.",0.25
+3,She mentions that she smokes a pack of cigarettes a day and has difficulty stopping.,0.25
+4,"Her blood pressure is not well-controlled, as she only takes her medication when she remembers.",0.5
+5,"Past medical history: The patient has a history of macular degeneration, which is relevant to her current presentation.",0.5
+6,"She does not mention any other past medical conditions, social history, or travel history.",1.0
+7,Review of systems: The patient denies any other symptoms in other organs that are relevant to her initial presentation.,0.25
+8,"Current medications: The patient is not specified to be taking any medications other than her blood pressure medication, which she takes sporadically.",0.25
+9,Objective:,0.0
+10,Vital signs: [NOT MENTIONED],0.0
+11,"Physical exam: The anterior segment examination reveals posterior chamber intraocular lenses in both eyes, clear cornea in both eyes, cup to disc ratio of 0.2 in the right eye and 0.3 in the left eye.",0.0
+12,"The fundus examination of the right eye shows the retina to be attached 360 degrees without tears or holes, RPE changes in the fovea.",0.75
+13,"The posterior segment exam shows drusen in the macula, thickening of the retina, presence of subretinal fluid, and exudates accumulation positive for hemorrhage in the left eye.",0.75
+14,"Test Results: The OCT shows drusen deposit, retinal pigment epithelium subretinal fluid accumulation, choroidal neovascular membrane, and fluorescein angiography reveals focal areas of leakage in the right eye consistent with neovascular age-related macular degeneration.",0.5
+15,Assessment / Problem List:,0.0
+16,Assessment: The patient has advanced neovascular age-related macular degeneration.,0.25
+17,Problem list: Neovascular age-related macular degeneration; active; Macular degeneration; past; Hypertension; unknown; Smoking; unknown.,1.0
+18,Plan:,0.0
+19,"I prescribed Lucentis once a month, which will be injected into the vitreous portion of the eye after it has been numbed.",0.75
+20,The injections will be given regularly over a period of time to slow the rate of vision decline or stop further vision loss.,0.0
+21,"However, the disease may also progress despite treatment.",1.0
+22,Follow-up: I plan to see the patient again to monitor the effectiveness of the treatment and to address any further questions or concerns she may have.,1.0

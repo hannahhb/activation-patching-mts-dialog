@@ -27,7 +27,9 @@ import gc
 import json
 import os
 import re
+import sys
 import warnings
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Dict, List, Tuple
 
@@ -38,6 +40,14 @@ from tqdm import tqdm
 from prompts import build_prompt as build_user_message
 
 warnings.filterwarnings("ignore")
+
+# When this file is executed directly, its module name is "__main__". Other
+# files (notably atomic_luq.py) import it as "luq_sentence". Without this
+# alias, Python creates a second module instance on import, so globals like
+# the cached CrossEncoder singleton (_nli) are duplicated and the NLI model
+# gets loaded twice in one run.
+if __name__ == "__main__":
+    sys.modules.setdefault("luq_sentence", sys.modules[__name__])
 
 # -----------------------------------------------------------------------------
 # Constants
@@ -149,11 +159,12 @@ def dedupe_by_transcript(ds) -> List[int]:
 
 
 def generate_note(transcript: str) -> str:
-    client = get_bedrock_client()
-    response = client.converse(
-        modelId=BEDROCK_GEN_MODEL,
+    from llm_client import get_llm
+    response = get_llm().converse(
+        stage="generation",
+        model_id=BEDROCK_GEN_MODEL,
         messages=[{"role": "user", "content": [{"text": build_user_message(transcript)}]}],
-        inferenceConfig={
+        inference_config={
             "maxTokens": DEFAULT_MAX_TOKENS,
             "temperature": DEFAULT_TEMPERATURE,
         },
@@ -590,7 +601,113 @@ def compute_luq_all_references(notes: List[str]) -> List[Dict]:
     return results
 
 
-def score_generation_file(gen_path: Path, sent_dir: Path, use_cache: bool) -> Dict:
+DEFAULT_SENTENCE_GPTOSS_SCORE_K = 3  # how many notes to score (matches
+                                     # atomic_luq's DEFAULT_DECOMP_K
+                                     # convention) -- with K=5 notes and
+                                     # ~20-28 sentences/note, scoring all K
+                                     # would be 5x20x4=~400 calls/sample;
+                                     # scoring only 3 gives 3x20x4=~240.
+
+
+def compute_luq_all_references_gptoss(notes: List[str], reasoning_effort: str = "low",
+                                       max_workers: int = None,
+                                       score_k: int = None) -> List[Dict]:
+    """gpt-oss equivalent of compute_luq_all_references: ONE yes/no call per
+    (whole sentence, other note) pair -- no sub-claim splitting (gpt-oss
+    doesn't need the cross-encoder's granularity workaround) and no
+    sentence-window sub-chunking of the premise (premise = the full matching
+    section of the other note directly, 128K context handles it).
+
+    Only the first `score_k` notes are scored (default
+    DEFAULT_SENTENCE_GPTOSS_SCORE_K), each checked against all K-1 OTHER
+    notes -- mirrors atomic_luq's decomp_k, to keep call volume bounded
+    regardless of how many notes were generated.
+
+    Same output shape as compute_luq_all_references (list of dicts with
+    sentences/uncertainty/mean_u/K_actual/ref_idx) so score_generation_file
+    can write identical CSVs regardless of backend.
+    """
+    from llm_client import gptoss_yesno, GPTOSS_MAX_WORKERS
+
+    K = len(notes)
+    if K < 2:
+        return []
+    max_workers = max_workers or GPTOSS_MAX_WORKERS
+    score_k = min(score_k or DEFAULT_SENTENCE_GPTOSS_SCORE_K, K)
+
+    section_text_by_note: List[Dict[str, str]] = []
+    sentences_by_note: List[List[str]] = []
+    sentence_sections_by_note: List[List[str]] = []
+    for note in notes:
+        st = parse_sections(note)
+        if "all" not in st:
+            st["all"] = note
+        section_text_by_note.append(st)
+
+        sentences = split_sentences(note)
+        sentences_by_note.append(sentences)
+        sentence_sections_by_note.append(assign_sentence_sections(note, sentences))
+
+    # Flatten every (ref_idx, sent_idx, other_idx) job up front instead of
+    # nesting per-note batches -- keeps max_workers calls continuously in
+    # flight across the whole sample rather than draining/refilling per note.
+    jobs: List[Tuple[int, int, int]] = [
+        (ref_idx, sent_idx, other_idx)
+        for ref_idx in range(score_k)
+        for sent_idx in range(len(sentences_by_note[ref_idx]))
+        for other_idx in range(K)
+        if other_idx != ref_idx
+    ]
+
+    vote_sum: Dict[int, np.ndarray] = {
+        ref_idx: np.zeros(len(sentences_by_note[ref_idx]), dtype=np.float64) for ref_idx in range(score_k)
+    }
+    vote_count: Dict[int, np.ndarray] = {
+        ref_idx: np.zeros(len(sentences_by_note[ref_idx]), dtype=np.int32) for ref_idx in range(score_k)
+    }
+
+    def run_job(ref_idx: int, sent_idx: int, other_idx: int):
+        sentence = sentences_by_note[ref_idx][sent_idx]
+        requested_sec = sentence_sections_by_note[ref_idx][sent_idx]
+        section_text = section_text_by_note[other_idx]
+        premise_sec = requested_sec if requested_sec in section_text else "all"
+        premise = section_text[premise_sec].strip()
+        if not premise:
+            return ref_idx, sent_idx, None
+        return ref_idx, sent_idx, gptoss_yesno(premise, sentence, reasoning_effort)
+
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        futures = [pool.submit(run_job, *job) for job in jobs]
+        for fut in tqdm(as_completed(futures), total=len(futures),
+                        desc="  [gptoss] sentence scoring", unit="call", leave=False):
+            ref_idx, sent_idx, vote = fut.result()
+            if vote is not None:
+                vote_sum[ref_idx][sent_idx] += vote
+                vote_count[ref_idx][sent_idx] += 1
+
+    results: List[Dict] = []
+    for ref_idx in range(score_k):
+        sentences = sentences_by_note[ref_idx]
+        if not sentences:
+            continue
+        counts = vote_count[ref_idx]
+        sums = vote_sum[ref_idx]
+        support = np.where(counts > 0, sums / np.maximum(counts, 1), 0.5)
+        uncertainty = 1.0 - support
+        results.append({
+            "sentences": sentences,
+            "uncertainty": uncertainty,
+            "mean_u": float(uncertainty.mean()),
+            "K_actual": K,
+            "ref_idx": ref_idx,
+        })
+
+    return results
+
+
+def score_generation_file(gen_path: Path, sent_dir: Path, use_cache: bool,
+                          backend: str = "cross-encoder", reasoning_effort: str = "low",
+                          gptoss_workers: int = None, gptoss_score_k: int = None) -> Dict:
     saved = json.loads(gen_path.read_text())
     sample_idx = int(saved["sample_idx"])
     notes = saved["notes"]
@@ -598,7 +715,12 @@ def score_generation_file(gen_path: Path, sent_dir: Path, use_cache: bool) -> Di
     if len(notes) < 2:
         return {"sample_idx": sample_idx, "status": "insufficient_generations", "K_actual": len(notes)}
 
-    expected_csvs = [sent_dir / f"sample_{sample_idx:03d}_note_{i:02d}_sentences.csv" for i in range(len(notes))]
+    # gpt-oss only scores the first `score_k` notes (see
+    # compute_luq_all_references_gptoss), so only that many CSVs ever get
+    # written -- checking for all K would always miss cache.
+    n_expected = (min(gptoss_score_k or DEFAULT_SENTENCE_GPTOSS_SCORE_K, len(notes))
+                 if backend == "gptoss" else len(notes))
+    expected_csvs = [sent_dir / f"sample_{sample_idx:03d}_note_{i:02d}_sentences.csv" for i in range(n_expected)]
     if use_cache and all(path.exists() for path in expected_csvs):
         print(f"  [cache] sample {sample_idx}: all {len(expected_csvs)} note CSVs exist")
         results = []
@@ -611,8 +733,15 @@ def score_generation_file(gen_path: Path, sent_dir: Path, use_cache: bool) -> Di
                 "sentences": df["sentence"].tolist(),
             })
     else:
-        print(f"  [luq] scoring all {len(notes) * (len(notes) - 1)} comparisons with section-wise batching")
-        results = compute_luq_all_references(notes)
+        if backend == "gptoss":
+            print(f"  [luq] scoring {n_expected} of {len(notes)} notes x {len(notes) - 1} "
+                 f"references (gpt-oss)")
+            results = compute_luq_all_references_gptoss(notes, reasoning_effort=reasoning_effort,
+                                                         max_workers=gptoss_workers,
+                                                         score_k=gptoss_score_k)
+        else:
+            print(f"  [luq] scoring all {len(notes) * (len(notes) - 1)} comparisons (cross-encoder)")
+            results = compute_luq_all_references(notes)
         for result in results:
             ref_idx = int(result["ref_idx"])
             pd.DataFrame({
@@ -635,7 +764,7 @@ def score_generation_file(gen_path: Path, sent_dir: Path, use_cache: bool) -> Di
         "K_actual": len(notes),
         "notes_scored": len(results),
         "n_sentences_first_ref": len(results[0]["sentences"]),
-        "comparisons": len(notes) * (len(notes) - 1),
+        "comparisons": len(results) * (len(notes) - 1),
     }
 
 
@@ -662,6 +791,8 @@ def stage_generate(start: int, end: int, k: int, out_dir: Path, use_cache: bool,
               f"({len(ds) - len(row_idx)} exact duplicates dropped)")
     end = min(end, len(row_idx))
 
+    from llm_client import tracker as llm_tracker
+    n_processed = 0
     for sample_idx in tqdm(range(start, end), desc="generate", unit="sample"):
         gen_path = gen_dir / f"sample_{sample_idx:03d}_generations.json"
         if use_cache and gen_path.exists():
@@ -689,11 +820,20 @@ def stage_generate(start: int, end: int, k: int, out_dir: Path, use_cache: bool,
         }, indent=2), encoding="utf-8")
         print(f"  [generate] sample {sample_idx}: saved {len(notes)} notes")
 
+        n_processed += 1
+        if n_processed % 5 == 0:
+            print(f"  [cost] after {n_processed} samples:\n{llm_tracker.summary()}")
+
+    print(f"\n[cost] final:\n{llm_tracker.summary()}")
+
 
 def stage_score(start: int, end: int, out_dir: Path, use_cache: bool,
                 gen_dir_override: Path = None, atomic: bool = False,
                 atomic_out: str = None, atomic_decomp_k: int = None,
-                atomic_only: bool = False) -> pd.DataFrame:
+                atomic_only: bool = False, atomic_backend: str = "gptoss",
+                atomic_reasoning_effort: str = "low", atomic_gptoss_workers: int = None,
+                sentence_backend: str = "cross-encoder", sentence_reasoning_effort: str = "low",
+                sentence_gptoss_workers: int = None, sentence_gptoss_score_k: int = None) -> pd.DataFrame:
     """atomic=True additionally runs LUQ-ATOMIC (fact-level uncertainty, see
     atomic_luq.py) for each sample alongside the normal sentence-level scoring.
     atomic_only=True skips the (slower, all-against-all NLI) sentence-level
@@ -720,7 +860,10 @@ def stage_score(start: int, end: int, out_dir: Path, use_cache: bool,
         atomic_out_dir.mkdir(parents=True, exist_ok=True)
         atomic_decomp_k = atomic_decomp_k or atomic_mod.DEFAULT_DECOMP_K
 
+    from llm_client import tracker as llm_tracker
+
     rows: List[Dict] = []
+    n_processed = 0
     for sample_idx in tqdm(range(start, end), desc="score", unit="sample"):
         gen_path = gen_dir / f"sample_{sample_idx:03d}_generations.json"
         if not gen_path.exists():
@@ -729,15 +872,36 @@ def stage_score(start: int, end: int, out_dir: Path, use_cache: bool,
 
         print(f"\n[score] sample {sample_idx}")
         if not atomic_only:
-            rows.append(score_generation_file(gen_path, sent_dir, use_cache))
+            rows.append(score_generation_file(gen_path, sent_dir, use_cache,
+                                              backend=sentence_backend,
+                                              reasoning_effort=sentence_reasoning_effort,
+                                              gptoss_workers=sentence_gptoss_workers,
+                                              gptoss_score_k=sentence_gptoss_score_k))
 
         if atomic_mod is not None:
             notes = json.loads(gen_path.read_text()).get("notes", [])
             decomp_k = min(atomic_decomp_k, len(notes))
             if len(notes) >= 2:
-                atomic_mod.score_sample(sample_idx, notes, decomp_k, atomic_out_dir, use_cache)
+                if atomic_backend == "gptoss":
+                    workers = atomic_gptoss_workers or atomic_mod.GPTOSS_MAX_WORKERS
+                    atomic_mod.score_sample_gptoss(sample_idx, notes, decomp_k, atomic_out_dir,
+                                                   use_cache, reasoning_effort=atomic_reasoning_effort,
+                                                   max_workers=workers)
+                else:
+                    atomic_mod.score_sample(sample_idx, notes, decomp_k, atomic_out_dir, use_cache)
             else:
                 print(f"  [atomic] sample {sample_idx}: fewer than 2 notes, skipped")
+
+        # Decomposition (stage="decomp") runs for every atomic sample; NLI
+        # shows up as stage="nli" whenever either backend is gptoss (the
+        # cross-encoder is local/free, never tracked here).
+        if atomic_mod is not None or sentence_backend == "gptoss":
+            n_processed += 1
+            if n_processed % 5 == 0:
+                print(f"  [cost] after {n_processed} samples:\n{llm_tracker.summary()}")
+
+    if atomic_mod is not None or sentence_backend == "gptoss":
+        print(f"\n[cost] final:\n{llm_tracker.summary()}")
 
     df = pd.DataFrame(rows)
     if not atomic_only:
@@ -797,6 +961,36 @@ def parse_args() -> argparse.Namespace:
                         help="Skip the slower sentence-level (all-against-all "
                              "NLI) scoring entirely and only run LUQ-ATOMIC. "
                              "Implies --atomic.")
+    parser.add_argument("--atomic-backend", choices=["cross-encoder", "gptoss"],
+                        default="gptoss",
+                        help="LUQ-ATOMIC Step-3 scoring backend: the local "
+                             "cross-encoder (default) or gpt-oss-20b yes/no "
+                             "via Bedrock Converse (premise = full matching "
+                             "section, no windowing needed at 128K context).")
+    parser.add_argument("--atomic-reasoning-effort", choices=["low", "medium", "high"],
+                        default="low",
+                        help="gpt-oss reasoning_effort (only used with "
+                             "--atomic-backend gptoss)")
+    parser.add_argument("--atomic-gptoss-workers", type=int, default=None,
+                        help="Concurrent Bedrock calls for --atomic-backend "
+                             "gptoss (default: atomic_luq.py's own default)")
+    parser.add_argument("--sentence-backend", choices=["cross-encoder", "gptoss"],
+                        default="gptoss",
+                        help="Sentence-level LUQ scoring backend: the local "
+                             "cross-encoder (default) or gpt-oss-20b yes/no "
+                             "via Bedrock Converse (premise = full matching "
+                             "section, no windowing needed at 128K context).")
+    parser.add_argument("--sentence-reasoning-effort", choices=["low", "medium", "high"],
+                        default="low",
+                        help="gpt-oss reasoning_effort (only used with "
+                             "--sentence-backend gptoss)")
+    parser.add_argument("--sentence-gptoss-workers", type=int, default=None,
+                        help="Concurrent Bedrock calls for --sentence-backend "
+                             "gptoss (default: llm_client.py's GPTOSS_MAX_WORKERS)")
+    parser.add_argument("--sentence-gptoss-score-k", type=int, default=None,
+                        help="How many notes per sample to sentence-score with "
+                             "--sentence-backend gptoss (default: 3, matching "
+                             "atomic_luq's decomp_k convention)")
     return parser.parse_args()
 
 
@@ -841,7 +1035,13 @@ def main() -> None:
             stage_score(args.start, args.end, out_dir, use_cache,
                        gen_dir_override=gen_dir_override, atomic=args.atomic,
                        atomic_out=args.atomic_out, atomic_decomp_k=args.atomic_decomp_k,
-                       atomic_only=args.atomic_only)
+                       atomic_only=args.atomic_only, atomic_backend=args.atomic_backend,
+                       atomic_reasoning_effort=args.atomic_reasoning_effort,
+                       atomic_gptoss_workers=args.atomic_gptoss_workers,
+                       sentence_backend=args.sentence_backend,
+                       sentence_reasoning_effort=args.sentence_reasoning_effort,
+                       sentence_gptoss_workers=args.sentence_gptoss_workers,
+                       sentence_gptoss_score_k=args.sentence_gptoss_score_k)
 
 
 if __name__ == "__main__":

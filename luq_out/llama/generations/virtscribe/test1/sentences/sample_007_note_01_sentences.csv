@@ -1,0 +1,38 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Diana Scott, is a 100-year-old woman who presents with a new diagnosis of a heart murmur.",0.25
+2,"She reports that her doctor told her she has a worrisome heart murmur, but she is unsure of the severity or type.",1.0
+3,"She denies any symptoms of chest pain or shortness of breath, but reports severe pain in her legs, which started about a month ago.",0.25
+4,She also reports feeling tired and taking medication for her legs.,0.75
+5,"She denies any fever, chills, or other symptoms.",0.5
+6,"She reports a 70-80% increase in symptoms over the past six months, with no symptoms six months ago.",1.0
+7,"She reports feeling lightheaded and dizzy, but takes medication for it.",0.25
+8,She denies any passing out or irregular heartbeats.,1.0
+9,"She reports swelling in her ankles, which has been present for about six months, and has lost weight over the past year.",0.75
+10,"Past medical history: The patient has a history of multiple surgeries, and her son had a heart attack.",0.5
+11,"Her brother had a stroke due to sugar diabetes, and her eldest sister had a heart problem.",0.5
+12,Social history: The patient never smoked and has no known allergies to medications.,0.5
+13,"Review of systems: The patient reports severe leg pain, fatigue, lightheadedness, and dizziness.",0.5
+14,Current medications:,0.0
+15,Amlodipine 10 mg daily for hypertension,1.0
+16,Lisinopril 5 mg daily for hypertension,1.0
+17,Simvastatin 20 mg daily for hyperlipidemia,0.75
+18,Levothyroxine for hyperthyroidism,1.0
+19,Meclizine for lightheadedness and dizziness,0.25
+20,Objective:,0.0
+21,Vital signs: [NOT MENTIONED],0.0
+22,"Physical exam: The patient's physical exam is as follows: Constitutional elderly, otherwise no acute distress.",0.5
+23,Cardiovascular: Normal S1 and S2 with a normal rate and regular rhythm.,0.75
+24,A 4/6 systolic murmur at the right upper sternal border with mild radiation to the carotids.,0.0
+25,Neurologic: Gait is normal for age.,0.0
+26,Test Results: [NOT MENTIONED],0.0
+27,Assessment / Problem List:,0.0
+28,"Assessment: The patient has a cardiac murmur with a 4/6 systolic murmur at the upper right sternal border with mild radiation to the carotids, which is most likely representative of aortic stenosis.",0.5
+29,Problem list: Cardiac murmur; suspected aortic stenosis; pvcs; hypolipidemia; lightheadedness/dizziness.,0.25
+30,Plan:,0.0
+31,I prescribed amlodipine 10 mg daily for hypertension and lisinopril 5 mg daily for hypertension to continue as currently prescribed.,1.0
+32,"I will defer to the patient's primary care physician regarding her simvastatin for hyperlipidemia, but consider stopping it due to bilateral leg pain.",0.75
+33,I will send the results of the echocardiogram and my recommendations to the patient's primary care physician.,0.25
+34,"I will schedule the patient for an echocardiogram to assess her cardiac structure and function, as well as the valve view of her heart.",0.0
+35,I will discuss the results and next steps with the patient in three to four weeks.,0.5
+36,Follow-up: The patient will follow up in three to four weeks to discuss the results of the echocardiogram and next steps.,0.25

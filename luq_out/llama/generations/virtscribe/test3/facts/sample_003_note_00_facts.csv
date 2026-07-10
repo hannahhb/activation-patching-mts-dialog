@@ -1,0 +1,62 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 36-year-old female.,0.25
+1,subjective,The patient has a history of gastroesophageal reflux disease (GERD).,0.0
+2,subjective,The patient's GERD has worsened over the past few years.,0.0
+3,subjective,The patient experiences a burning sensation in her chest.,0.0
+4,subjective,The patient experiences a burning sensation in her throat.,0.25
+5,subjective,The burning sensation occurs after consuming spicy foods.,0.0
+6,subjective,The burning sensation occurs after consuming carbonated beverages.,0.5
+7,subjective,The burning sensation occurs after consuming citrus products.,0.5
+8,subjective,The burning sensation occurs after consuming tomato-based foods.,0.25
+9,subjective,The patient is taking omeprazole.,0.0
+10,subjective,The omeprazole dose is 40 milligrams.,0.0
+11,subjective,Omeprazole is taken twice daily.,0.0
+12,subjective,Omeprazole is prescribed for GERD.,0.0
+13,subjective,The patient's GERD symptoms have not been adequately controlled.,0.0
+14,subjective,The patient has a family history of GERD.,0.0
+15,subjective,The patient has a family history of esophageal cancer.,0.0
+16,subjective,The patient's family history of GERD and esophageal cancer is on her mother's side.,0.25
+17,subjective,The patient has a history of anxiety.,0.0
+18,subjective,The patient has a history of seasonal allergies.,0.0
+19,subjective,The patient underwent surgery as an infant.,0.75
+20,subjective,The patient's surgery was for intestinal twisting.,0.75
+21,subjective,The patient has abdominal surgical scars.,0.75
+22,subjective,The patient denies abdominal pain.,0.0
+23,subjective,The patient denies nausea.,0.0
+24,subjective,The patient denies vomiting.,0.0
+25,subjective,The patient denies changes in bowel movements.,0.0
+26,subjective,The patient denies constipation.,0.0
+27,subjective,The patient denies diarrhea.,0.0
+28,subjective,The patient denies rectal bleeding.,0.25
+29,objective,The patient had a physical exam.,0.0
+30,objective,The patient's physical exam was normal.,0.25
+31,objective,The abdominal surgical scars are well-healed.,0.0
+32,objective,The patient had surgery as an infant.,0.25
+33,objective,The surgery was for intestinal twisting.,0.25
+34,objective,The surgery resulted in abdominal scars.,0.0
+35,assessment,The patient has GERD.,0.0
+36,assessment,GERD is active.,0.25
+37,assessment,The patient likely has a functional etiology for GERD.,0.25
+38,assessment,The patient has Anxiety.,0.75
+39,assessment,Anxiety is unknown.,1.0
+40,assessment,The patient has Seasonal allergies.,1.0
+41,assessment,Seasonal allergies are unknown.,1.0
+42,plan,The doctor prescribed Nexium.,0.0
+43,plan,The Nexium dose is 40 milligrams.,0.0
+44,plan,Nexium is taken twice daily.,0.0
+45,plan,Nexium is prescribed to replace omeprazole.,0.75
+46,plan,The patient should avoid spicy foods.,0.25
+47,plan,The patient should avoid carbonated beverages.,0.5
+48,plan,The patient should avoid citrus products.,0.25
+49,plan,The patient should avoid tomato-based foods.,0.25
+50,plan,The patient was advised to manage stress.,0.0
+51,plan,Stress may exacerbate the patient's symptoms.,0.0
+52,plan,The doctor ordered an upper endoscopy.,0.5
+53,plan,The upper endoscopy is to look for potential causes of GERD.,0.0
+54,plan,The upper endoscopy is to look for ulcers.,1.0
+55,plan,The upper endoscopy is to look for precancerous conditions.,1.0
+56,plan,The upper endoscopy is to look for cancerous conditions.,1.0
+57,plan,The doctor will schedule the EGD procedure.,0.5
+58,plan,The patient will follow up with the doctor in the office.,0.0
+59,plan,The follow-up is to discuss the EGD results.,0.0
+60,plan,The follow-up is to adjust the treatment plan as needed.,0.25

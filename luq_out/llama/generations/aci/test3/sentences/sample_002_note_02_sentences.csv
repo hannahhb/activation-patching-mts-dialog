@@ -1,0 +1,25 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Jacqueline, a 3-year mountain biker, fell and twisted her right ankle outward during a mountain biking lesson, resulting in pain, swelling, and bruising on the outer ankle.",1.0
+2,"She reports numbness and tingling in her toes, particularly in her heart, but this is not a concern for me as an orthopedic specialist.",0.5
+3,She has been taking Tylenol for pain but has not found relief.,0.0
+4,"She has a fever, which she reports as 200 degrees Fahrenheit, but I have measured her temperature at 98.6 degrees Fahrenheit.",0.75
+5,She is limping and has difficulty moving her ankle.,0.5
+6,Past medical history: [NOT MENTIONED],0.25
+7,"Review of systems: The patient reports numbness and tingling in her toes, particularly in her heart, but this is not a concern for me as an orthopedic specialist.",0.75
+8,Current medications: I prescribed Tylenol for pain.,1.0
+9,Objective:,0.0
+10,"Vital signs: Blood pressure is 118/77, heart rate is 77 beats per minute, and temperature is 98.6 degrees Fahrenheit.",0.0
+11,There is no fever.,0.0
+12,"Physical exam: On the right ankle, there is edema and erythema on the lateral malleolus, associated ecchymosis, and a few excoriations.",0.0
+13,"There is pain to palpation of the right lateral malleolus, decreased flexion and extension of the right ankle, and internal and external rotation.",0.0
+14,There is no apparent injury to the knee or the foot.,0.5
+15,"Test Results: The right ankle x-ray shows no acute fracture or bony abnormality, but there is some soft tissue injury.",0.0
+16,Assessment / Problem List:,0.0
+17,Assessment: I believe the patient has an acute right ankle sprain.,0.0
+18,Problem list: Ankle sprain; status: confirmed.,0.75
+19,Plan:,0.0
+20,"I am going to put the patient in an air cast, give her crutches, and prescribe meloxicam 15 milligrams once a day for pain.",0.5
+21,"I recommend icing the area for 20 minutes, 5 times a day, and weight-bearing as tolerated.",0.0
+22,I anticipate the patient to start feeling better in the next couple of weeks and will consider physical therapy or further imaging if she does not improve.,0.25
+23,Follow-up: The patient will return in 2 weeks to re-evaluate her condition.,1.0

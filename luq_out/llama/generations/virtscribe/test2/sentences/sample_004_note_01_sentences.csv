@@ -1,0 +1,27 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,The patient is a 72-year-old woman who comes for follow-up for hypertension.,0.0
+2,Her history includes significant alcohol use disorder and mild hypercholesterolemia.,0.25
+3,"At her last visit on April 16th, her blood pressure was 130/90.",1.0
+4,She reports that she has been struggling with not drinking and wants to discuss a shot mentioned in her previous visit.,0.75
+5,"She last drank on Monday and has been taking her medications as prescribed, except for taking half the dose of lisinopril due to side effects.",0.5
+6,"She reports no chest tightness, shortness of breath, or other symptoms.",0.5
+7,"She is taking her blood pressure medications as prescribed, but taking them in the morning instead of evening.",0.5
+8,She is doing home blood pressure checks and reports numbers ranging from 130-145/95-100.,1.0
+9,Objective:,0.0
+10,"Vital signs: Blood pressure 150/100 at presentation, which decreases after sitting for a while.",1.0
+11,"Pulse rate, oxygen saturation, and temperature are not mentioned.",0.0
+12,"Physical exam: The patient is alert, pleasant, and in no acute distress.",0.25
+13,"She is not diabetic, has no tremor, no CVA tenderness, chest clear to percussion and auscultation, unlabored breathing, cardiac rhythm regular, no murmur, no gallop, JVP flat, and no anxiety, agitation, or depression.",0.5
+14,The skin is moist and good trigger.,0.25
+15,Test Results: CMP and CBC were essentially unremarkable.,0.0
+16,Assessment / Problem List:,0.0
+17,"Assessment: The patient has an alcohol use disorder, which is the primary issue affecting her hypertension.",1.0
+18,"Problem list: Alcohol use disorder; Hypertension; Mild hypercholesterolemia; Unknown status for Past medical history, Review of systems, and Current medications.",1.0
+19,Plan:,0.0
+20,"I discussed the potential benefits of naltrexone for her alcohol use disorder, which she agreed to start on May 17th.",0.75
+21,"I will schedule a follow-up appointment for June 14th, which is likely around the time of her second naltrexone injection.",0.25
+22,"I recommended upgrading her influenza vaccination and Shingrix, which she previously deferred.",0.25
+23,"I will also have her continue taking her current medications as prescribed, including lisinopril 10 milligrams daily and hydrochlorothiazide 12.5 milligrams daily.",1.0
+24,Follow-up:,0.0
+25,I will see the patient back on June 14th for a follow-up appointment.,0.5

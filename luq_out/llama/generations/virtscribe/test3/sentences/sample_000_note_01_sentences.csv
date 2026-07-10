@@ -1,0 +1,45 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Maria Martin, is a 76-year-old female who presents for a follow-up appointment.",0.5
+2,"She reports feeling ""pretty good"" but mentions that her sugars are not well-controlled.",0.5
+3,"She states that she has not been trying to eat healthier, citing a preference for wheat bread and peanut butter sandwiches.",1.0
+4,She also reports drinking club soda and seltzer water.,0.25
+5,"The patient has a history of cataracts, which were treated with iodine, and has undergone cataract surgery.",1.0
+6,"She also has high blood pressure, for which she is on a combination of medications, and high cholesterol.",0.0
+7,"She reports experiencing peripheral neuropathy in her feet and legs, which causes pain and difficulty walking.",1.0
+8,She is a smoker and admits to not being ready to quit.,0.75
+9,"Past medical history: The patient has a history of cataracts, high blood pressure, high cholesterol, and peripheral neuropathy.",0.0
+10,"She is currently on a combination of medications, including metoprolol, lisinopril with hydrochlorothiazide, and amlodipine.",0.0
+11,"Review of systems: The patient denies headaches, dizziness, shortness of breath, chest pains, pressure or tightness, nausea, vomiting, and GI symptoms.",1.0
+12,"She reports coughing due to congestion, but it is relatively clear.",0.75
+13,"She also reports slower urination, but stable.",0.5
+14,Current medications:,0.0
+15,Metoprolol 50 milligrams once a day for high blood pressure,0.25
+16,Lisinopril with hydrochlorothiazide 20 with 25 milligrams once a day for high blood pressure,0.0
+17,Amlodipine 10 milligrams once a day for high blood pressure,0.0
+18,Atorvastatin (lipitor) for high cholesterol,0.0
+19,Glimepiride 2 milligrams twice a day for diabetes (increased to 4 milligrams twice a day),0.75
+20,Metformin (no dose mentioned),0.5
+21,Objective:,0.0
+22,Vital signs:,0.0
+23,Blood pressure: 140/60,0.5
+24,Pulse rate: Not mentioned,0.25
+25,Oxygen saturation: Not mentioned,0.0
+26,Temperature: Not mentioned,0.0
+27,Physical exam:,0.0
+28,Carotids are normal,0.0
+29,Pulse is normal,0.25
+30,"Heart exam: rhythm is regular, normal rate, S1 and S2 are crisp, no murmurs",0.5
+31,Lungs are clear,0.0
+32,"Extremities are without edema, pulses are palpable on the dorsalis pedis posterior tibial, thickened nails, mildly dry skin, no skin breakdown, mildly decreased sensation in the tips of the first and second toes",0.25
+33,Test Results:,0.0
+34,Not mentioned,0.25
+35,Assessment / Problem List:,0.0
+36,"Assessment: The patient has poorly controlled diabetes, hypertension, high cholesterol, and peripheral neuropathy.",0.0
+37,Problem list: Diabetes mellitus; Hypertension; Hypercholesterolemia; Peripheral neuropathy; Active; Confirmed; Confirmed; Active,1.0
+38,Plan:,0.0
+39,I prescribed Glimepiride 4 milligrams twice a day for diabetes.,0.25
+40,"I want the patient to monitor for low sugars, weakness, shakiness, and sweating.",0.75
+41,I will recheck blood work today and continue the combination of medications for high blood pressure and high cholesterol.,0.75
+42,"I also want the patient to quit smoking, but we have had this conversation before.",1.0
+43,Follow-up: The patient will be seen back in four months.,0.0

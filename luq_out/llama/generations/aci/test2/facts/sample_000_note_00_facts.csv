@@ -1,74 +1,73 @@
 fact_idx,section,fact,uncertainty
-0,subjective,The patient is a 25-year-old male.,0.2524
-1,subjective,The patient has a 3-week history of abdominal pain.,0.5008
-2,subjective,The abdominal pain is severe.,0.9828
-3,subjective,The abdominal pain is squeezing in nature.,0.0239
-4,subjective,The abdominal pain is located on the right-hand side of his belly.,0.2986
-5,subjective,The abdominal pain is located underneath his ribs.,0.2653
-6,subjective,The patient rates the abdominal pain as 8 out of 10 in severity.,0.2544
-7,subjective,The abdominal pain comes and goes.,0.2395
-8,subjective,The patient experiences nausea.,0.0016
-9,subjective,The patient experiences vomiting.,0.2362
-10,subjective,The abdominal pain is exacerbated by eating.,0.2576
-11,subjective,The abdominal pain is exacerbated by fatty foods.,0.2622
-12,subjective,The patient is on a keto diet.,0.5149
-13,subjective,The patient has lost 25 pounds over the last 3 months.,0.003
-14,subjective,The patient has seen improvement in his blood sugar control.,0.5911
-15,subjective,The patient has type 2 diabetes.,0.002
-16,subjective,The patient manages his type 2 diabetes with diet.,0.0021
-17,subjective,The patient manages his type 2 diabetes with exercise.,0.0026
-18,subjective,The patient's parents have a history of gallbladder disease.,0.0025
-19,subjective,The patient's parents have had their gallbladders removed.,0.0014
-20,subjective,The patient reports occasional low-grade fevers.,0.0049
-21,subjective,The patient reports nausea.,0.0018
-22,subjective,The patient denies vomiting at the time of the visit.,0.2528
-23,subjective,The patient denies fever at the time of the visit.,0.9947
-24,objective,The patient's blood pressure is 128/88.,0.0044
-25,objective,The patient's respiratory rate is 16.,0.0046
-26,objective,The patient's pulse rate is 68.,0.0071
-27,objective,The patient's oxygen saturation on room air is 99%.,0.0096
-28,objective,The patient has a regular heart rhythm.,0.4941
-29,objective,The patient has no murmurs.,0.9994
-30,objective,The patient has no clicks.,0.9981
-31,objective,The patient has no rubs.,0.9828
-32,objective,The patient's lungs are clear.,0.7458
-33,objective,The patient's lungs are equal bilaterally.,0.7003
-34,objective,The patient's abdomen is soft.,0.0027
-35,objective,The patient's abdomen is nondistended.,0.0157
-36,objective,The patient has positive bowel sounds.,0.0033
-37,objective,There is slight guarding in the patient's right upper quadrant.,0.004
-38,objective,The patient has no rebound tenderness.,0.7489
-39,objective,The patient experiences pain when pressure is applied to the right-hand side of his abdomen.,0.2561
-40,objective,The patient's abdominal pain is consistent with Murphy's sign.,0.7497
-41,objective,The patient has multiple gallstones in the gallbladder.,0.0017
-42,objective,The patient has mild thickening of the gallbladder wall.,0.0264
-43,objective,The patient's common bile duct size is 4.1 mm.,0.0082
-44,objective,The patient's common bile duct size is within normal limits.,0.0114
-45,assessment,The patient has mild cholecystitis.,0.0038
-46,assessment,The patient has gallstones.,0.0022
-47,assessment,The patient has a possible obstruction.,0.2394
-48,assessment,The patient's cholecystitis is mild.,0.0017
-49,assessment,The patient has Type 2 diabetes.,0.0203
-50,assessment,The Type 2 diabetes is confirmed.,0.2564
-51,assessment,The patient has a family history of gallbladder disease.,0.002
-52,assessment,Cholecystitis is a problem.,0.0067
-53,assessment,Gallstones are a problem.,0.0028
-54,assessment,Type 2 diabetes is a problem.,0.0123
-55,plan,The doctor prescribed a medication.,0.744
-56,plan,The medication dose is not mentioned.,0.999
-57,plan,The medication frequency is not mentioned.,0.9573
-58,plan,The medication is prescribed for a condition that is not mentioned.,0.9904
-59,plan,The doctor recommended a laparoscopic cholecystectomy.,0.0015
-60,plan,A laparoscopic cholecystectomy is done to remove the gallbladder.,0.0019
-61,plan,The surgery time for the laparoscopic cholecystectomy is about an hour.,0.5
-62,plan,The surgery time for the laparoscopic cholecystectomy is about an hour and a half.,0.7409
-63,plan,The patient will spend the night in the hospital for monitoring post-procedure.,0.2515
-64,plan,The patient is advised to avoid high-fat foods after surgery.,0.0012
-65,plan,The patient is advised to eat high-fiber foods after surgery.,0.0013
-66,plan,The patient will be encouraged to get up and move around on solid ground within a day after surgery.,0.9056
-67,plan,The patient will be encouraged to get up and move around on solid ground within two days after surgery.,0.9736
-68,plan,The doctor will see the patient in a week.,0.008
-69,plan,The purpose of the follow-up is to monitor the patient's progress.,0.5078
-70,plan,The patient will be released to return to normal activities at follow-up.,0.2522
-71,plan,The patient will be released to go hiking at follow-up.,0.7506
-72,plan,The patient will be released to go photography at follow-up.,0.7507
+0,subjective,The patient is a 25-year-old male.,0.25
+1,subjective,The patient has a 3-week history of abdominal pain.,0.5
+2,subjective,The abdominal pain is severe.,0.0
+3,subjective,The abdominal pain is squeezing in nature.,0.0
+4,subjective,The abdominal pain is located on the right-hand side of his belly.,0.0
+5,subjective,The abdominal pain is located underneath his ribs.,0.0
+6,subjective,The patient rates the abdominal pain as 8 out of 10 in severity.,0.25
+7,subjective,The abdominal pain comes and goes.,0.25
+8,subjective,The patient experiences nausea.,0.0
+9,subjective,The patient experiences vomiting.,0.5
+10,subjective,The abdominal pain is exacerbated by eating.,0.0
+11,subjective,The abdominal pain is exacerbated by fatty foods.,0.0
+12,subjective,The patient is on a keto diet.,0.5
+13,subjective,The patient has lost 25 pounds over the last 3 months.,0.0
+14,subjective,The patient started the keto diet 3 months ago.,0.5
+15,subjective,The patient has seen improvement in his blood sugar control.,0.75
+16,subjective,The patient has type 2 diabetes.,0.0
+17,subjective,The patient manages his type 2 diabetes with diet.,0.0
+18,subjective,The patient manages his type 2 diabetes with exercise.,0.0
+19,subjective,The patient's parents have a history of gallbladder disease.,0.0
+20,subjective,The patient's parents have had their gallbladders removed.,0.0
+21,subjective,The patient reports occasional low-grade fevers.,0.0
+22,subjective,The patient reports nausea.,0.0
+23,subjective,The patient denies vomiting at the time of the visit.,0.75
+24,subjective,The patient denies fever at the time of the visit.,0.75
+25,objective,The patient's blood pressure is 128/88.,0.0
+26,objective,The patient's respiratory rate is 16.,0.0
+27,objective,The patient's pulse rate is 68.,0.0
+28,objective,The patient's oxygen saturation on room air is 99%.,0.0
+29,objective,The patient has a regular heart rhythm.,1.0
+30,objective,The patient has no murmurs.,1.0
+31,objective,The patient has no clicks.,1.0
+32,objective,The patient has no rubs.,1.0
+33,objective,The patient's lungs are clear.,0.75
+34,objective,The patient's lungs are equal bilaterally.,0.75
+35,objective,The patient's abdomen is soft.,0.0
+36,objective,The patient's abdomen is nondistended.,0.0
+37,objective,The patient has positive bowel sounds.,0.0
+38,objective,There is slight guarding in the patient's right upper quadrant.,0.0
+39,objective,The patient has no rebound tenderness.,0.25
+40,objective,The patient experiences pain when pressure is applied to the right-hand side of his abdomen.,0.0
+41,objective,The patient's abdominal pain is consistent with Murphy's sign.,0.0
+42,objective,The patient has multiple gallstones in the gallbladder.,0.0
+43,objective,The patient has mild thickening of the gallbladder wall.,0.0
+44,objective,The patient's common bile duct size is 4.1 mm.,0.0
+45,objective,The patient's common bile duct size is within normal limits.,0.0
+46,assessment,The patient has mild cholecystitis.,0.0
+47,assessment,The patient has gallstones.,0.0
+48,assessment,The patient may have a possible obstruction.,1.0
+49,assessment,The patient has cholecystitis.,0.0
+50,assessment,The patient has Type 2 diabetes.,0.0
+51,assessment,The Type 2 diabetes is confirmed.,0.0
+52,assessment,The patient has a family history of gallbladder disease.,0.75
+53,plan,The doctor prescribed a medication.,0.75
+54,plan,The medication dose is not mentioned.,0.0
+55,plan,The medication frequency is not mentioned.,0.25
+56,plan,The medication is prescribed for a condition not mentioned.,0.75
+57,plan,The doctor recommended a laparoscopic cholecystectomy.,0.0
+58,plan,A laparoscopic cholecystectomy is done to remove the gallbladder.,0.0
+59,plan,The surgery time for a laparoscopic cholecystectomy is about an hour.,0.75
+60,plan,The surgery time for a laparoscopic cholecystectomy is about an hour and a half.,0.5
+61,plan,The patient will spend the night in the hospital after surgery.,0.25
+62,plan,The patient will be monitored post-procedure.,0.0
+63,plan,The patient is advised to avoid high-fat foods after surgery.,0.0
+64,plan,The patient is advised to eat high-fiber foods after surgery.,0.0
+65,plan,The patient will be encouraged to get up and move around within a day after surgery.,0.75
+66,plan,The patient will be encouraged to get up and move around within two days after surgery.,0.75
+67,plan,The patient will be seen by the doctor in a week.,0.0
+68,plan,The purpose of the follow-up is to monitor the patient's progress.,0.5
+69,plan,The patient will be released to return to normal activities after the follow-up.,0.5
+70,plan,The patient's normal activities include hiking.,0.75
+71,plan,The patient's normal activities include photography.,0.75

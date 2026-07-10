@@ -1,0 +1,30 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 74-year-old teacher, presented with a cough that started about a week ago, which has worsened over the last two days.",0.0
+2,The cough is productive of yellow sputum.,0.0
+3,"The patient denies fever, chills, shortness of breath, runny nose, sore throat, and sinus pain.",0.5
+4,The patient reports a little bit of pressure in the sinuses and a little bit of a congested feeling in the throat.,0.5
+5,The patient recently fell down the stairs while coughing and injured their right knee.,0.25
+6,"The patient has a history of hypertension, which they have been struggling with for the past year, and are currently taking lisinopril 20mg/day.",1.0
+7,"The patient also has diabetes and is taking metformin, but reports not monitoring their blood sugars or diet.",0.5
+8,"Past medical history: The patient has a history of hypertension, diabetes, and a recent fall down the stairs.",0.0
+9,Review of systems: The patient denies any other symptoms.,0.75
+10,Current medications:,0.0
+11,Lisinopril 20mg/day for hypertension,0.0
+12,Metformin (dose not specified) for diabetes,0.0
+13,Objective:,0.0
+14,"Vital signs: The patient's temperature is 98.4°F, blood pressure is 125/62, heart rate is in the 80s, and oxygen saturation is 97% on room air.",0.0
+15,"Physical exam: The patient has pain to palpation of the bilateral maxillary sinuses, erythema and edema of the nasal turbinates bilaterally with associated yellow discharge, and coarse rhonchi present bilaterally that clears with cough.",0.0
+16,The patient has bilateral cervical lymphadenopathy.,0.5
+17,"The patient has pain to palpation on the right knee, decreased flexion and extension of the right knee, associated ecchymosis to the right medial knee, and no evidence of an effusion.",0.25
+18,Assessment / Problem List:,0.0
+19,"Assessment: The patient has a viral syndrome with mild bronchitis, a right medial collateral ligament strain from a recent fall, hypertension, and uncontrolled diabetes.",0.75
+20,Problem list: Bronchitis; Medial collateral ligament strain right knee; Hypertension; Diabetes; Uncontrolled diabetes.,1.0
+21,Plan:,0.0
+22,I prescribed guaifenesin 600mg twice a day to help cough up phlegm.,0.0
+23,I prescribed meloxicam 15mg once a day for the right knee pain.,0.75
+24,I ordered a right knee x-ray to ensure no bone injury.,0.0
+25,I ordered a lipid panel to check the patient's lipid levels.,0.0
+26,I ordered a hemoglobin A1c to check the patient's blood sugar control.,0.0
+27,I referred the patient to physical therapy to help strengthen the muscles around the right knee.,0.25
+28,Follow-up: The patient will follow up with me for the results of the ordered tests.,0.75

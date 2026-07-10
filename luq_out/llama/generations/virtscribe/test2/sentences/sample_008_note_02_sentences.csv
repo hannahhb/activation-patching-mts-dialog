@@ -1,0 +1,35 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"The patient, Mr. Roberts, is a 49-year-old male with a history of hypertension and palpitations.",0.0
+2,"He reports that his blood pressure has been high since a recent episode in the emergency room in March, which he attributes to a panic attack caused by a few cups of coffee and no breakfast.",1.0
+3,"He has a family history of high blood pressure and has been taking a new medication, Benicar HCT, which contains hydrochlorothiazide, for about a month.",0.25
+4,He is also taking amlodipine 10 mg daily.,0.0
+5,He checks his blood pressure at home every morning and has been seeing readings of 146-155 mmHg.,1.0
+6,He reports that he has been following a low-sodium diet and trying to exercise regularly by walking on a treadmill.,0.25
+7,Past medical history:,0.0
+8,The patient has a family history of hypertension.,0.0
+9,Review of systems:,0.25
+10,No additional symptoms in other organs were mentioned.,0.0
+11,Current medications:,0.0
+12,Benicar HCT (hydrochlorothiazide) and amlodipine 10 mg daily.,0.0
+13,Objective:,0.0
+14,Vital signs:,0.25
+15,Blood pressure: 146-155 mmHg,0.25
+16,Pulse rate: [NOT MENTIONED],0.0
+17,Oxygen saturation: [NOT MENTIONED],0.0
+18,Temperature: [NOT MENTIONED],0.0
+19,Physical exam:,0.0
+20,Heart and lungs sound good,0.0
+21,No swelling in the ankles and feet,0.25
+22,Test Results:,0.25
+23,"Potassium level: 4.0 (from 1 week ago, no recent results mentioned)",0.5
+24,Assessment / Problem List:,0.0
+25,"Assessment: The patient has resistant hypertension, which is not responding to maximum doses of three medications.",0.25
+26,Problem list: Hypertension; Resistant Hypertension; High blood pressure; Palpitations.,1.0
+27,Plan:,0.0
+28,I added spironolactone to his regimen to try to lower his blood pressure.,0.0
+29,I will monitor his potassium and sodium levels in 2 weeks.,0.0
+30,I will also check his blood pressure and perform a basic metabolic panel in 2 weeks.,0.0
+31,"If spironolactone is not effective, the next step would be to send him to the resistant hypertension clinic for further evaluation and potential treatment, including renal denervation.",0.5
+32,Follow-up:,0.0
+33,The patient will return in 2 weeks for follow-up and monitoring of his blood pressure and electrolyte levels.,0.0

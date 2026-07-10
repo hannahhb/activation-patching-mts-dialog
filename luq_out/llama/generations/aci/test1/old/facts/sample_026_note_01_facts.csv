@@ -1,0 +1,77 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 38-year-old male.,1.0
+1,subjective,The patient presented to the office with a complaint of right knee pain.,0.0
+2,subjective,The patient experienced a recent incident at a trampoline park.,0.1111
+3,subjective,"The patient heard a ""snap"" at the time of the incident.",0.0
+4,subjective,The patient experienced instant pain after the incident.,0.0
+5,subjective,This is the first time the patient has engaged in trampoline activity.,0.8889
+6,subjective,The patient does not regularly exercise.,0.5556
+7,subjective,The patient has been trying to elevate the knee.,0.3333
+8,subjective,The patient has taken Tylenol for the pain.,0.0
+9,subjective,Tylenol has not provided significant relief for the pain.,0.1111
+10,subjective,The patient has a history of hypertension.,0.0
+11,subjective,The patient is taking lisinopril for hypertension.,0.0
+12,subjective,The lisinopril dose is 20 milligrams.,0.0
+13,subjective,Lisinopril is taken for hypertension.,0.0
+14,subjective,The patient has a history of diabetes.,0.0
+15,subjective,The patient is taking metformin for diabetes.,0.0
+16,subjective,The metformin dose is 500 milligrams.,0.1111
+17,subjective,Metformin is taken for diabetes.,0.0
+18,subjective,The patient's blood sugars have been a bit better lately.,0.6667
+19,subjective,The patient has not been checking his blood sugars as frequently as recommended.,0.2222
+20,subjective,The patient has not been monitoring his blood pressure.,0.2222
+21,subjective,The patient has not been taking his medication as directed.,0.4444
+22,subjective,The doctor prescribed lisinopril.,0.0
+23,subjective,The prescribed lisinopril dose is 20 milligrams.,0.0
+24,subjective,Lisinopril is prescribed daily.,0.1111
+25,subjective,Lisinopril is prescribed for hypertension.,0.0
+26,subjective,The doctor prescribed metformin.,0.1111
+27,subjective,The prescribed metformin dose is 500 milligrams.,0.1111
+28,subjective,Metformin is prescribed daily.,0.2222
+29,subjective,Metformin is prescribed for diabetes.,0.0
+30,subjective,The patient denied other symptoms or complaints.,0.4444
+31,objective,The patient's blood pressure is 180/80 mmHg.,0.2222
+32,objective,The patient has a slight limp when walking.,0.0
+33,objective,There is ecchymosis along the lateral aspect of the knee.,0.0
+34,objective,There is edema along the lateral aspect of the knee.,0.0
+35,objective,The patient has a decent range of motion.,0.4444
+36,objective,The patient experiences pain with some movement.,0.1111
+37,objective,The knee x-ray showed no evidence of fracture.,0.2222
+38,objective,The knee x-ray showed no evidence of bony abnormality.,0.2222
+39,objective,The right knee x-ray showed no evidence of fracture.,0.2222
+40,objective,The right knee x-ray showed no evidence of bony abnormality.,0.2222
+41,assessment,The patient has a lateral ligament strain.,0.0
+42,assessment,The lateral ligament strain is in the right knee.,0.0
+43,assessment,The patient has right knee pain.,0.3333
+44,assessment,The patient has hypertension.,0.0
+45,assessment,The patient has diabetes.,0.0
+46,assessment,The patient has a suspected blood pressure issue.,0.3333
+47,assessment,The patient has an unknown condition.,0.8889
+48,plan,The doctor prescribed meloxicam.,0.0
+49,plan,The meloxicam dose is 15 milligrams.,0.0
+50,plan,Meloxicam is taken daily.,0.0
+51,plan,Meloxicam is prescribed for pain.,0.0
+52,plan,Meloxicam is prescribed for swelling.,0.1111
+53,plan,The patient has a lateral ligament strain.,0.6667
+54,plan,The lateral ligament strain is in the right knee.,0.8889
+55,plan,The doctor referred the patient to physical therapy.,0.0
+56,plan,Physical therapy is to strengthen the muscles.,0.0
+57,plan,Physical therapy is to prevent further injury.,0.0
+58,plan,The doctor prescribed lisinopril.,0.0
+59,plan,The lisinopril dose is 20 milligrams.,0.0
+60,plan,Lisinopril is taken daily.,0.1111
+61,plan,Lisinopril is prescribed for hypertension.,0.3333
+62,plan,The doctor ordered an echo.,0.0
+63,plan,The echo is to assess cardiac function.,0.3333
+64,plan,The echo is to determine if medication modification is necessary.,0.6667
+65,plan,The doctor ordered an A1c.,0.0
+66,plan,The doctor ordered a lipid panel.,0.0
+67,plan,The A1c is to evaluate diabetes management.,0.0
+68,plan,The lipid panel is to evaluate diabetes management.,0.3333
+69,plan,The patient has diabetes.,0.4444
+70,plan,The patient has hypertension.,0.0
+71,plan,The patient will return for a follow-up appointment.,0.1111
+72,plan,The follow-up appointment is to discuss echo results.,0.4444
+73,plan,The follow-up appointment is to discuss A1c results.,0.4444
+74,plan,The follow-up appointment is to discuss lipid panel results.,0.4444
+75,plan,The follow-up appointment is to assess the progress of the lateral ligament strain.,0.8889

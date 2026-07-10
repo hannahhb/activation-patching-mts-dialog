@@ -1,0 +1,26 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient presents with a 2-week history of low back pain that began after lifting a box of books, describing the pain as achy and sharp, initially localized to the low back but now radiating down the left leg.",0.0
+2,"The patient denies numbness, tingling, loss of sensation, or weakness in the affected area.",0.0
+3,"The patient has tried ibuprofen and Tylenol with some relief, but the pain has worsened over time.",0.25
+4,"The patient's activity level has decreased due to the pain, and it has not affected their job but has affected their ability to exercise as previously.",1.0
+5,The patient has a family history of back pain in their father.,0.0
+6,The patient has a history of playing soccer and is a fan of the Tottenham Hotspur team.,1.0
+7,The patient denies smoking.,0.5
+8,Past medical history: The patient has no known medical history or social history mentioned.,0.75
+9,Review of systems: The patient denies any symptoms in other organs or systems.,0.25
+10,Current medications: The patient has taken ibuprofen and Tylenol as needed for pain relief.,0.25
+11,Objective:,0.0
+12,"Vital signs: Blood pressure is 130/70, respiratory rate is 18, and the patient's heart sounds are regular with no murmurs, rubs, or gallops.",1.0
+13,Physical exam: The patient has midline tenderness at the L4-L5 disk space with right-sided lumbar paravertebral tenderness.,0.0
+14,The patient experiences pain with lumbar flexion.,0.25
+15,The patient has a positive straight leg raise test.,0.25
+16,The patient's patella and Achilles reflexes are symmetrical.,0.5
+17,"Test Results: MRI results show a disk desiccation, a disk bulge with paracentral disk herniation resulting in moderate right neuroforaminal stenosis, which is consistent with a herniated disk with nerve impingement.",0.25
+18,Assessment / Problem List:,0.0
+19,Assessment: The patient has lumbar back pain at the L4-L5 disk space due to a herniated disk with radiculopathy.,0.0
+20,Problem list: Lumbar back pain at the L4-L5 disk space due to a herniated disk with radiculopathy; suspected disk herniation; suspected nerve impingement.,1.0
+21,Plan:,0.0
+22,I plan to recommend a spinal injection with a strong NSAID and corticosteroid into the lumbar spine under fluoroscopy to help with the inflammation causing the patient's pain.,0.5
+23,I will discuss the risks and benefits of the procedure and obtain the patient's consent.,1.0
+24,"Follow-up: The patient will be scheduled for the procedure today, and the office staff will provide additional information and answer any questions the patient may have.",0.75

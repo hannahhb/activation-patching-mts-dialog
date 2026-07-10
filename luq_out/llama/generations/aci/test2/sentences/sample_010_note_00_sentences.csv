@@ -1,0 +1,37 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,HPI: The patient is a follow-up visit after an interior ST-elevation myocardial infarction (STEMI) with the placement of another stent.,0.0
+2,"The patient reports similar symptoms to their previous heart attack, including chest pain and shortness of breath.",1.0
+3,"The patient has a history of coronary artery disease, hypertension, and diabetes.",0.0
+4,The patient has been experiencing leg swelling since discharge from the hospital.,0.0
+5,The patient has been taking their medications as prescribed and has good insurance coverage.,0.75
+6,"The patient has been less strict with their diet since the last heart attack, consuming high-sodium foods like pizza and pepperoni.",1.0
+7,The patient has been managing their diabetes with metformin and walking their dog daily.,0.0
+8,Review of systems: The patient denies any chest pain or shortness of breath.,0.0
+9,Current medications:,0.0
+10,Aspirin 81 milligrams daily,0.0
+11,Brilinta 90 milligrams twice daily,0.0
+12,Lipitor 80 milligrams daily,0.0
+13,Toprol 50 milligrams daily,0.0
+14,Metformin (for diabetes),0.0
+15,Lisinopril 20 milligrams daily,0.5
+16,Objective:,0.0
+17,"Vital signs: The patient's vital signs are good, but the blood pressure is not specifically mentioned.",0.75
+18,Physical exam: The patient's neck exam is unremarkable with no jugular venous distention or carotid bruits.,0.0
+19,The heart exam reveals a 3/6 systolic ejection murmur at the left base.,0.0
+20,The lungs are clear.,0.0
+21,"The patient has lower limb edema with pitting edema on the right radial artery, 1+ on the right radial artery.",0.0
+22,"The cath site is clean, dry, and intact without hematoma, and the right radial artery pulses are palpable.",0.5
+23,"Test Results: The patient's EKG shows a normal sinus rhythm, good R wave progression, and expected changes after a STEMI.",0.25
+24,The echo reveals a reduced ejection fraction of 35%.,0.0
+25,Assessment / Problem List:,0.0
+26,"Assessment: The patient has coronary artery disease, newly reduced left ventricular dysfunction, and moderate mitral regurgitation, and acute heart failure.",0.5
+27,Problem list: Coronary artery disease; reduced left ventricular dysfunction; moderate mitral regurgitation; acute heart failure.,0.0
+28,Plan:,0.0
+29,I prescribed Lasix 40 milligrams once daily for fluid retention.,0.25
+30,I added Aldactone 12.5 milligrams daily for the same reason.,1.0
+31,I referred the patient to cardiac rehab for education and exercise counseling.,0.0
+32,"I want the patient to continue their current medications, including aspirin, Brilinta, Lipitor, Toprol, and Metformin.",0.75
+33,I will repeat an echo in about two months.,0.25
+34,"I also recommend nutrition counseling to discuss diet options, including cutting out preserved meat and finding alternatives.",0.75
+35,"Follow-up: The patient will be monitored over time, and another echo will be repeated in two months.",0.5

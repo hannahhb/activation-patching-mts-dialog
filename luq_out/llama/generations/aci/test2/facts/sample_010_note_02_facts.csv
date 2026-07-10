@@ -1,0 +1,94 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 65-year-old female.,0.75
+1,subjective,The patient has a history of coronary artery disease.,0.0
+2,subjective,The patient has a history of hypertension.,0.0
+3,subjective,The patient has a history of diabetes.,0.0
+4,subjective,The patient had an interior ST-elevation myocardial infarction (STEMI).,0.0
+5,subjective,Another stent was placed in the patient.,0.25
+6,subjective,The patient reports experiencing similar symptoms to her previous heart attack.,0.0
+7,subjective,The patient reports experiencing chest pain that did not resolve.,0.25
+8,subjective,The patient denied chest pain.,0.25
+9,subjective,The patient denied shortness of breath.,0.0
+10,subjective,The patient exercises by walking her dog daily.,0.0
+11,subjective,The patient walks approximately 1.5 to 2 miles daily.,0.75
+12,subjective,The patient has a history of leg swelling since hospital discharge.,0.0
+13,subjective,The patient affirms taking her prescribed medications.,0.5
+14,subjective,The patient has good insurance coverage.,0.75
+15,subjective,The patient does not strictly adhere to her salt-restricted diet.,0.75
+16,subjective,The patient has a fondness for pizza.,0.75
+17,subjective,The patient has a fondness for sausage.,0.75
+18,subjective,The patient denies any additional symptoms in other organs.,1.0
+19,subjective,The doctor prescribed Aspirin.,0.0
+20,subjective,The Aspirin dose is 81mg.,0.0
+21,subjective,Aspirin is taken daily.,0.0
+22,subjective,The doctor prescribed Brilinta.,0.0
+23,subjective,The Brilinta dose is 90mg.,0.0
+24,subjective,Brilinta is taken twice daily.,0.0
+25,subjective,The doctor prescribed Lipitor.,0.0
+26,subjective,The Lipitor dose is 80mg.,0.0
+27,subjective,Lipitor is taken daily.,0.0
+28,subjective,The doctor prescribed To-prol.,0.0
+29,subjective,The To-prol dose is 50mg.,0.0
+30,subjective,To-prol is taken daily.,0.0
+31,subjective,The doctor prescribed Metformin.,0.0
+32,subjective,Metformin is prescribed for diabetes.,0.0
+33,subjective,The doctor prescribed Lisinopril.,0.5
+34,subjective,The Lisinopril dose is 20mg.,0.5
+35,subjective,Lisinopril is taken daily.,0.5
+36,objective,The patient's neck exam is unremarkable for jugular venous distention.,0.0
+37,objective,The patient's neck exam is unremarkable for carotid bruits.,0.0
+38,objective,The heart exam reveals a 3/6 systolic ejection murmur.,0.0
+39,objective,The 3/6 systolic ejection murmur is located at the left base.,0.0
+40,objective,The lungs are clear.,0.0
+41,objective,The patient has lower extremity edema.,0.0
+42,objective,The patient has 1+ pitting edema.,0.0
+43,objective,The 1+ pitting edema is on the right.,0.0
+44,objective,The cath site is clean.,0.5
+45,objective,The cath site is dry.,0.5
+46,objective,The cath site is intact.,0.5
+47,objective,The cath site has no hematoma.,0.5
+48,objective,The right radial artery pulses are palpable.,0.5
+49,objective,The EKG shows normal sinus rhythm.,0.0
+50,objective,The EKG shows good R wave progression.,0.0
+51,objective,The EKG shows evolutionary changes.,0.25
+52,objective,The evolutionary changes are expected after a STEMI.,0.25
+53,objective,The echo shows reduced ejection fraction.,0.0
+54,objective,The ejection fraction is 35%.,0.0
+55,assessment,The patient has coronary artery disease.,0.0
+56,assessment,The patient has newly reduced left ventricular dysfunction.,0.25
+57,assessment,The patient has moderate mitral regurgitation.,0.25
+58,assessment,The patient has acute heart failure.,0.0
+59,assessment,Coronary artery disease is active.,0.25
+60,assessment,Reduced left ventricular dysfunction is suspected.,0.75
+61,assessment,Mitral regurgitation is moderate.,0.25
+62,assessment,Acute heart failure is active.,0.0
+63,plan,The patient is taking Aspirin.,0.25
+64,plan,The Aspirin dose is 81mg.,0.5
+65,plan,Aspirin is taken daily.,0.5
+66,plan,The patient is taking Brilinta.,0.25
+67,plan,The Brilinta dose is 90mg.,0.5
+68,plan,Brilinta is taken twice daily.,0.5
+69,plan,The patient is taking Lipitor.,0.25
+70,plan,The Lipitor dose is 80mg.,0.5
+71,plan,Lipitor is taken daily.,0.5
+72,plan,The patient is taking To-prol.,0.25
+73,plan,The To-prol dose is 50mg.,0.5
+74,plan,To-prol is taken daily.,0.5
+75,plan,The patient is taking Lisinopril.,0.75
+76,plan,The Lisinopril dose is 20mg.,0.75
+77,plan,Lisinopril is taken daily.,0.75
+78,plan,The patient will be referred to cardiac rehab.,0.0
+79,plan,The patient will receive education in cardiac rehab.,0.0
+80,plan,The patient will receive exercise guidance in cardiac rehab.,0.0
+81,plan,The doctor prescribed Lasix.,0.0
+82,plan,The Lasix dose is 40mg.,0.0
+83,plan,Lasix is taken daily.,0.0
+84,plan,The doctor prescribed Lasix for heart failure management.,0.25
+85,plan,The doctor prescribed Aldactone.,0.0
+86,plan,The Aldactone dose is 12.5mg.,0.0
+87,plan,Aldactone is taken daily.,0.0
+88,plan,The doctor prescribed Aldactone for heart failure management.,0.5
+89,plan,The patient will have an echo in 2 months.,0.0
+90,plan,The patient will be seen again in 2 months.,0.0
+91,plan,The purpose of the follow-up visit is to monitor progress.,0.0
+92,plan,The purpose of the follow-up visit is to adjust the treatment plan as necessary.,0.75

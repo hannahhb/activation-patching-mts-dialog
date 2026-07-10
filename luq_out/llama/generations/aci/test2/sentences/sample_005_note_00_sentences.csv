@@ -1,0 +1,27 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 40-year-old female, presents with a 4-day history of worsening right elbow pain, exacerbated by activities such as pottery and ceramics.",1.0
+2,The pain is located on the inside of the elbow and radiates down the arm.,0.0
+3,She describes the pain as a 7 out of 10 and states it keeps her awake at night.,0.5
+4,"She has tried taking ibuprofen, but it has not provided significant relief.",0.25
+5,She also mentions a history of hypertension and diabetes.,0.0
+6,"Past medical history: The patient has a history of hypertension and diabetes, for which she is currently taking 10mg of lisinopril and 500mg of metformin twice a day, respectively.",0.0
+7,"Review of systems: The patient mentions a sweet tooth and a history of baking, particularly making cakes and cinnamon rolls.",1.0
+8,She has been trying to manage her diabetes but admits to sometimes forgetting to take her medication.,0.25
+9,"Current medications: Lisinopril 10mg, metformin 500mg twice a day.",0.0
+10,Objective:,0.0
+11,"Vital signs: Blood pressure 120/70, respiratory rate 18, temperature 97.9°F, oxygen saturation 100%.",0.25
+12,"Physical exam: Moderate tenderness at the medial epicondyle, pain with resisted pronation of the right forearm, and pain with flexion and bending of the wrist.",0.25
+13,"No rash, bruising, or swelling is noted.",0.0
+14,Test Results: [NOT MENTIONED],0.5
+15,Assessment / Problem List:,0.0
+16,"Assessment: The patient has medial epicondylitis, a condition characterized by pain caused by overuse and damage to the tendons in the arm.",0.25
+17,Problem list: Medial epicondylitis (active); hypertension (stable); diabetes (stable).,1.0
+18,Plan:,0.0
+19,"I ordered a sling for the patient's right arm to be worn while awake, and instructed her to apply ice to the elbow for 20 minutes, three times a day.",0.0
+20,I also prescribed 600mg of ibuprofen every 6 hours with food for 1 week.,0.5
+21,I advised her to avoid pottery and ceramics for the next 2 weeks to allow the elbow to heal.,1.0
+22,"For her diabetes, I increased her metformin to 1000mg twice a day and ordered an A1c test.",1.0
+23,I also referred her to diabetic counseling to help manage her blood sugars.,0.5
+24,"For her hypertension, I continued her on lisinopril 10mg.",0.0
+25,Follow-up: I scheduled a follow-up appointment in 2 weeks to review the patient's progress and adjust her treatment plan as needed.,0.25

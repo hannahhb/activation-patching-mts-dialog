@@ -1,0 +1,34 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"The patient, a 60-year-old right-handed male, presents with numbness and tingling in both hands, which he attributes to a car wreck in December when he broke both wrists.",0.0
+2,"He reports that the symptoms have worsened over the last month, with the right wrist being worse.",1.0
+3,"He also mentions mild stiffness in his neck, which he attributes to a contusion from the accident.",1.0
+4,"He describes the numbness and tingling as starting from the middle and ring fingers on the right hand and extending up the forearm, and from the pinky and ring finger on the left hand.",0.75
+5,He reports that the symptoms are more pronounced at night and come and go throughout the day.,0.25
+6,"He also reports some soreness, throbbing, and weakness in his hands, particularly when using them.",0.25
+7,"He denies loss of sensation in his hands or fingers, but mentions that they may be less sensitive than usual.",0.5
+8,Past medical history:,0.0
+9,"The patient has a history of hypertension, for which he is taking Coreg, and anxiety, for which he is taking Lexapro.",0.0
+10,"He also has prediabetes, which he has controlled through dietary changes.",0.0
+11,He denies any history of thyroid issues.,0.25
+12,Review of systems:,0.0
+13,"The patient reports fatigue, weight gain, excessive appetite, bloating, shortness of breath, leg swelling, always being hungry, nailbed changes, dryness, itching, gout, and muscle pain.",0.0
+14,The remainder of the review of systems is negative.,0.75
+15,Current medications:,0.0
+16,"Coreg for hypertension, Lexapro for anxiety",0.0
+17,Objective:,0.0
+18,Vital signs: [NOT MENTIONED],0.0
+19,Physical exam:,0.0
+20,The patient has diminished pinprick sensation in the third and fourth fingers on the right hand and the fourth and fifth fingers on the left hand.,0.0
+21,"Reflexes are 1+ and symmetric, with 2+ knees and downgoing toes bilaterally.",1.0
+22,Tinel's sign is positive at both wrists and elbows.,0.0
+23,Test Results: [NOT MENTIONED],0.0
+24,Assessment / Problem List:,0.0
+25,"Assessment: The patient has bilateral carpal tunnel syndrome, potentially exacerbated by past trauma to the wrists.",0.5
+26,Problem list: Carpal tunnel syndrome; Cubital tunnel syndrome; Hypertension; Anxiety; Prediabetes,0.25
+27,Plan:,0.0
+28,I prescribed the patient to continue wearing splints on both wrists.,0.5
+29,I will schedule the patient for an EMG test to determine the exact location of the nerve irritation.,0.25
+30,"If the symptoms persist after the test, I will consider a referral to the hand clinic for injections or carpal tunnel release surgery, or to an orthopedist for the same treatment.",0.0
+31,Follow-up:,0.0
+32,I will see the patient after the EMG test results are complete.,0.25

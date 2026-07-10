@@ -1,0 +1,26 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,HPI: Elizabeth is a 53-year-old female complaining of chest pain that started approximately three months ago.,0.0
+2,"The pain is described as a dull, pressure-like sensation that occurs mainly when she walks and has not been relieved by rest.",1.0
+3,She denies any chest pain at the moment.,0.5
+4,"She has a past medical history of diabetes and high blood pressure, although she was unaware of her high blood pressure until today.",1.0
+5,She is currently on metformin 500mg twice a day for her diabetes.,0.0
+6,Past medical history: Elizabeth has a history of diabetes and is currently on metformin 500mg twice a day.,0.0
+7,She also has a family history of heart disease.,0.25
+8,"She is a smoker, but the amount is not specified.",1.0
+9,"Review of systems: Elizabeth denies any shortness of breath, sweats, clamminess, or nausea.",0.75
+10,Current medications: Metformin 500mg twice a day.,0.0
+11,Objective:,0.0
+12,Vital signs: [NOT MENTIONED],0.0
+13,"Physical exam: The physical exam was normal except for a 2/6 systolic ejection murmur, and 1+ nonpitting edema in the lower legs.",0.25
+14,"Test Results: EKG performed today was normal, showing no signs of a heart attack.",0.0
+15,Assessment / Problem List:,0.0
+16,"Assessment: The patient is a 53-year-old female with suspected unstable angina, diabetes, and high blood pressure.",1.0
+17,Problem list: Unstable angina; diabetes; high blood pressure; suspected heart disease.,1.0
+18,Plan:,0.0
+19,I prescribed aspirin 81mg once a day for chest pain management.,0.0
+20,I also prescribed nitroglycerin for the patient to take if the chest pain does not resolve after 1-2 pills.,1.0
+21,I referred the patient to cardiology for further evaluation and stress testing.,0.0
+22,I instructed the patient to return in two weeks for follow-up.,0.5
+23,I also instructed the patient to use a blood pressure cuff at home and enter the readings in EPIC.,0.25
+24,Follow-up: The patient is to return in two weeks for follow-up and to have a stress test.,1.0

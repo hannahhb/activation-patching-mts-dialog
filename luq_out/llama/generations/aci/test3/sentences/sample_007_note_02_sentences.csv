@@ -1,0 +1,32 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient presents with a 3-day history of a hacking cough, which started 3 days ago after being around her sister who has similar symptoms.",0.5
+2,"The cough has been gradually worsening, with the production of green phlegm.",0.75
+3,"The patient also reports a sore throat, nasal congestion, and no fever, shortness of breath, body aches, nausea, or vomiting.",0.0
+4,"The patient has a history of seasonal allergies, specifically sneezing and runny nose in the spring.",0.75
+5,"She has been managing her diabetes with metformin 500mg daily, with good blood sugar control (range of 120).",0.0
+6,"The patient has been experiencing elevated blood pressure, with readings of 144/72, and is taking hydrochlorothiazide 25mg daily.",1.0
+7,"Past medical history: The patient has type 2 diabetes, for which she is taking metformin 500mg daily.",0.25
+8,"She has a history of seasonal allergies, and her blood pressure has been elevated.",0.5
+9,"Review of systems: The patient denies fever, shortness of breath, body aches, nausea, or vomiting.",0.0
+10,"She reports a sore throat, nasal congestion, and a cough.",0.0
+11,"Current medications: Metformin 500mg daily, hydrochlorothiazide 25mg daily.",1.0
+12,Objective:,0.0
+13,Vital signs: The patient's blood pressure is elevated at 144/72.,0.0
+14,The rest of her vitals are within normal limits.,0.25
+15,"Physical exam: The patient has no frontal sinus tenderness, but has bilateral maxillary sinus tenderness.",0.75
+16,"The pharynx is erythematous, and the tonsils are symmetrical without exudates.",0.25
+17,The patient has anterior cervical adenopathy.,0.0
+18,"The lungs are clear, and the heart exam reveals a regular rate and rhythm with a 2/6 systolic ejection murmur at the left base.",0.75
+19,The lower extremities show no edema.,0.0
+20,Test Results: [NOT MENTIONED],0.0
+21,Assessment / Problem List:,0.0
+22,"Assessment: The patient has an upper respiratory infection, likely viral in nature, causing her symptoms.",0.0
+23,Problem list: Upper respiratory infection (suspected); type 2 diabetes (active); hypertension (active); suspected COVID-19.,1.0
+24,Plan:,0.0
+25,"I will continue the patient on her current medications, including metformin 500mg daily and hydrochlorothiazide 25mg daily.",0.75
+26,I will also recommend that she drink plenty of fluids and get plenty of rest to help alleviate her symptoms.,0.25
+27,I will prescribe Coricidin HBP to help with her cough.,1.0
+28,I will check her for COVID-19 and provide her with the results.,0.0
+29,I will also increase her hydrochlorothiazide to 25mg daily and recommend that she continue to check her blood pressure at home several times a week.,0.25
+30,Follow-up: The patient will be seen again at her next scheduled appointment for a hemoglobin A1c check and to review her blood pressure control.,0.25

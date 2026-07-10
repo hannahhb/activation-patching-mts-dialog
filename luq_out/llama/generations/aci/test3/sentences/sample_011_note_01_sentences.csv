@@ -1,0 +1,38 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"The patient, a 37-year-old female, presents with a complaint of headache, which has been worsening over the past few weeks.",0.0
+2,"She reports that her blood pressure has been running high, with readings of 160/87 and 175/92.",0.0
+3,She has a history of hypertension and diabetes.,0.0
+4,"The patient reports that she has been taking her lisinopril as prescribed, but admits to sometimes forgetting to take it, particularly on weekends.",0.0
+5,"She has been checking her blood sugar and reports that it has been running at around 120, with occasional readings as low as 100.",0.5
+6,The patient denies any significant changes in urination or other symptoms.,0.5
+7,"She takes Tylenol for her headaches, which provide temporary relief, but the headaches return throughout the day.",1.0
+8,"The patient rates her headaches as a 7 out of 10 initially, with the pain decreasing to a 4 or 5 after taking Tylenol.",0.5
+9,"She denies any history of similar headaches, but has experienced migraines in the past, which she does not treat.",1.0
+10,Past medical history:,0.0
+11,The patient has a history of hypertension and diabetes.,0.0
+12,Review of systems:,0.0
+13,"The patient denies any recent changes in urination, cough, runny nose, or congestion.",0.25
+14,Current medications:,0.0
+15,I prescribed lisinopril 20mg once daily for hypertension.,0.0
+16,Objective:,0.0
+17,Vital signs:,0.0
+18,Blood pressure: 160/87 and 175/92,0.5
+19,Blood pressure last recorded: 124/82,0.75
+20,Oxygen saturation: [NOT MENTIONED],0.0
+21,Temperature: [NOT MENTIONED],0.0
+22,Pulse rate: [NOT MENTIONED],0.0
+23,Physical exam:,0.25
+24,"Tenderness to percussion on the patient's forehead and cheekbones, but no significant tenderness in the frontal sinuses or maxillary sinuses.",0.5
+25,Test Results:,0.0
+26,[NOT MENTIONED],0.25
+27,Assessment / Problem List:,0.0
+28,"Assessment: The patient presents with worsening headaches and elevated blood pressure, likely related to non-adherence to her lisinopril regimen and possible underlying hypertension.",1.0
+29,Problem list: Hypertension; Diabetes; Headache; [NOT MENTIONED],0.5
+30,Plan:,0.0
+31,I increased the patient's lisinopril to 40mg once daily to improve control of her hypertension.,0.25
+32,"I also ordered blood tests, including a hemoglobin A1c and other laboratory tests, to evaluate her diabetes management.",0.0
+33,I advised the patient to continue taking Tylenol for her headaches and to keep monitoring her blood pressure.,0.75
+34,I scheduled a follow-up appointment for the patient to review the blood test results and assess her diabetes management.,0.5
+35,Follow-up:,0.0
+36,The patient will return for a follow-up appointment after receiving the blood test results and completing diabetic education.,0.75

@@ -1,0 +1,28 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: Barbara, a 31-year-old female, presents with a one-week history of increasing abdominal pain, which is worse on both sides of her upper abdomen.",0.25
+2,"She reports nausea and vomiting, with approximately three episodes of nausea and a couple of episodes of vomiting in the past week.",0.25
+3,"She attributes her symptoms to excessive coffee consumption, particularly from Starbucks, and has reduced her coffee intake this week.",1.0
+4,"She also reports that her abdominal pain worsens with exercise, such as jogging or running.",0.0
+5,She denies fever.,0.0
+6,"Her medical history includes diabetes type 2, asthma, and a history of gastritis.",1.0
+7,"Past medical history: Barbara has a history of diabetes type 2, asthma, and gastritis.",1.0
+8,She is taking metformin 1000mg in the morning and 500mg in the evening for diabetes.,0.5
+9,She also takes flovent twice a day and albuterol as needed for asthma.,0.0
+10,"She has a history of alcohol use, but has not specified the amount.",1.0
+11,She also mentions eating a lot of spicy food lately.,1.0
+12,"Review of systems: Nausea, vomiting, and abdominal pain.",0.75
+13,Current medications: Metformin 1000mg in the morning and 500mg in the evening; Flovent twice a day; Albuterol as needed.,0.5
+14,Objective:,0.0
+15,Vital signs: [NOT MENTIONED],0.0
+16,"Physical exam: The patient's physical exam is largely unremarkable, except for mild tenderness in the epigastrium of her abdomen, a grade 3/6 systolic ejection murmur, and mild end-expiratory wheezes.",0.0
+17,Test Results: [NOT MENTIONED],0.0
+18,Assessment / Problem List:,0.0
+19,"Assessment: I diagnose Barbara with acute gastritis, likely related to excessive coffee consumption and a history of alcohol use.",0.75
+20,Problem list: Acute gastritis; Diabetes type 2; Asthma.,0.25
+21,Plan:,0.0
+22,I prescribed Zantac 150mg twice a day to help with acid in her stomach and pain.,0.0
+23,"I will also check a urinalysis, urine pregnancy test, CBC, and comprehensive metabolic panel to rule out other underlying conditions.",0.25
+24,"For her diabetes, I will adjust her metformin dose to 1000mg in the morning and 500mg in the evening.",0.25
+25,I will continue her on flovent and albuterol as needed for her asthma.,0.5
+26,Follow-up: I will see Barbara back in four weeks to check on her symptoms and adjust her treatment plan as needed.,1.0

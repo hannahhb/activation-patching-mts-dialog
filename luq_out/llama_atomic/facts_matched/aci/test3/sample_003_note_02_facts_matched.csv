@@ -1,0 +1,71 @@
+fact_idx,section,fact,uncertainty,match_sent_idx,sentence_text,precision,matched_by,clean_match,entity_score,entity_effective,name_overlap,number_overlap,salient_precision,lemma_precision,lcs_precision,neg_match,score
+0,subjective,The patient is a 48-year-old female.,0.0,1,HPI: The patient is a 48-year-old female who had a heart attack 2 weeks ago and underwent a cardiac catheterization with stent placement in her right coronary artery.,0.88,number,True,0.0,0.0,0,1,0.0,1.0,1.0,1,0.88
+1,subjective,The patient had a heart attack 2 weeks ago.,0.75,1,HPI: The patient is a 48-year-old female who had a heart attack 2 weeks ago and underwent a cardiac catheterization with stent placement in her right coronary artery.,0.88,number,True,0.0,0.0,0,1,1.0,1.0,1.0,1,0.88
+2,subjective,The patient underwent a cardiac catheterization.,0.0,1,HPI: The patient is a 48-year-old female who had a heart attack 2 weeks ago and underwent a cardiac catheterization with stent placement in her right coronary artery.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+3,subjective,The patient had a stent placement in her right coronary artery.,0.0,1,HPI: The patient is a 48-year-old female who had a heart attack 2 weeks ago and underwent a cardiac catheterization with stent placement in her right coronary artery.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+4,subjective,The patient reports shortness of breath when walking up and downstairs.,0.0,4,"She reports a little shortness of breath when walking up and downstairs, but no chest pain since the stent was placed.",0.93,entity,True,1.0,1.0,0,0,0.0,1.0,1.0,0,0.93
+5,subjective,The patient denied chest pain since the stent was placed.,0.0,4,"She reports a little shortness of breath when walking up and downstairs, but no chest pain since the stent was placed.",0.93,entity,True,1.0,0.8,0,0,0.0,0.8,0.8,1,0.93
+6,subjective,The patient's wrist is healing well.,0.25,5,"Her wrist, where the catheterization was performed, is healing well with no signs of infection.",0.13,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,0,0.13
+7,subjective,The patient's wrist has no signs of infection.,0.5,5,"Her wrist, where the catheterization was performed, is healing well with no signs of infection.",0.374,lcs,True,0.45,0.45,0,0,0.0,1.0,1.0,1,0.374
+8,subjective,The patient is right-handed.,0.75,6,She is right-handed and has been taking her medications as directed.,0.68,medical_token,True,0.0,0.0,0,0,1.0,1.0,1.0,1,0.68
+9,subjective,The doctor prescribed Aspirin.,0.0,11,Aspirin 81 mg once a day,0.93,entity,True,0.85,0.85,1,0,0.0,0.5,0.5,1,0.93
+10,subjective,The Aspirin dose is 81 mg.,0.75,11,Aspirin 81 mg once a day,0.957,entity,True,0.85,0.85,1,1,1.0,0.75,0.75,1,0.957
+11,subjective,Aspirin is taken once a day.,0.0,11,Aspirin 81 mg once a day,0.93,entity,True,0.85,0.85,1,0,0.0,0.667,0.667,1,0.93
+12,subjective,The doctor prescribed Brilinta.,0.0,12,Brilinta 90 mg twice a day,0.93,entity,True,0.85,0.85,1,0,0.0,0.5,0.5,1,0.93
+13,subjective,The Brilinta dose is 90 mg.,0.25,12,Brilinta 90 mg twice a day,0.957,entity,True,0.85,0.85,1,1,1.0,0.75,0.75,1,0.957
+14,subjective,Brilinta is taken twice a day.,0.0,12,Brilinta 90 mg twice a day,0.93,entity,True,0.85,0.637,1,0,0.0,0.75,0.75,1,0.93
+15,subjective,The doctor prescribed Crestor.,0.5,13,Crestor 40 mg once a day,0.93,entity,True,0.85,0.85,1,0,0.0,0.5,0.5,1,0.93
+16,subjective,The Crestor dose is 40 mg.,0.5,13,Crestor 40 mg once a day,0.957,entity,True,0.85,0.85,1,1,1.0,0.75,0.75,1,0.957
+17,subjective,Crestor is taken once a day.,0.5,13,Crestor 40 mg once a day,0.93,entity,True,0.85,0.85,1,0,0.0,0.667,0.667,1,0.93
+18,subjective,The doctor prescribed Toqual.,1.0,14,Toqual (presumably ToPro) 50 mg once a day,0.9,name,True,0.0,0.0,1,0,0.0,0.5,0.5,1,0.9
+19,subjective,The Toqual dose is 50 mg.,1.0,14,Toqual (presumably ToPro) 50 mg once a day,0.88,name,True,0.0,0.0,1,1,1.0,0.75,0.75,1,0.88
+20,subjective,Toqual is taken once a day.,1.0,14,Toqual (presumably ToPro) 50 mg once a day,0.9,name,True,0.0,0.0,1,0,0.0,0.667,0.667,1,0.9
+21,subjective,The patient has been taking her medications as prescribed.,0.0,3,She has been taking her medications as prescribed and has been advised to take it easy.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+22,subjective,The patient has been advised to take it easy.,0.25,3,She has been taking her medications as prescribed and has been advised to take it easy.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+23,subjective,The patient has been trying to eat well.,0.5,7,"She has had a few pizzas, but has been trying to eat well and watch her salt intake.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+24,subjective,The patient has been trying to watch her salt intake.,0.5,7,"She has had a few pizzas, but has been trying to eat well and watch her salt intake.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+25,objective,The patient's blood pressure is 127/60.,0.5,17,Blood pressure: 127/60,0.88,number,True,0.0,0.0,0,1,1.0,1.0,1.0,1,0.88
+26,objective,The patient's blood pressure is within normal limits.,0.0,19,The patient's blood pressure is within normal limits.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+27,objective,There is no jugular venous distention.,0.25,20,"There is no jugular venous distention, no carotid bruits, and no signs of cardiac tamponade.",0.93,entity,True,1.0,1.0,1,0,0.0,1.0,1.0,1,0.93
+28,objective,There are no carotid bruits.,0.25,20,"There is no jugular venous distention, no carotid bruits, and no signs of cardiac tamponade.",0.9,name,True,0.0,0.0,1,0,0.0,1.0,1.0,1,0.9
+29,objective,There are no signs of cardiac tamponade.,0.0,20,"There is no jugular venous distention, no carotid bruits, and no signs of cardiac tamponade.",0.93,entity,True,1.0,1.0,1,0,0.0,1.0,1.0,1,0.93
+30,objective,A systolic ejection murmur is present.,0.0,21,A slight 3/6 systolic ejection murmur is heard at the left base.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+31,objective,The systolic ejection murmur is 3/6.,0.25,21,A slight 3/6 systolic ejection murmur is heard at the left base.,0.88,number,True,0.0,0.0,0,1,1.0,1.0,0.75,1,0.88
+32,objective,The systolic ejection murmur is heard at the left base.,0.0,21,A slight 3/6 systolic ejection murmur is heard at the left base.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+33,objective,The lungs are clear to auscultation.,0.0,22,The lungs are clear to auscultation bilaterally.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+34,objective,The lungs are clear to auscultation bilaterally.,0.0,22,The lungs are clear to auscultation bilaterally.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+35,objective,The right radial artery cardiac cath site is clean.,0.25,23,"The right radial artery cardiac cath site is clean, dry, and intact with a palpable radial pulse.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+36,objective,The right radial artery cardiac cath site is dry.,0.25,23,"The right radial artery cardiac cath site is clean, dry, and intact with a palpable radial pulse.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+37,objective,The right radial artery cardiac cath site is intact.,0.25,23,"The right radial artery cardiac cath site is clean, dry, and intact with a palpable radial pulse.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+38,objective,There is a palpable radial pulse.,0.0,23,"The right radial artery cardiac cath site is clean, dry, and intact with a palpable radial pulse.",0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+39,objective,The radial pulse is palpable on the right side.,0.25,23,"The right radial artery cardiac cath site is clean, dry, and intact with a palpable radial pulse.",0.185,lcs,True,0.0,0.0,0,0,0.0,1.0,0.5,1,0.185
+40,assessment,The patient is a female.,0.0,27,Assessment: The patient is a 48-year-old female with a history of inferior myocardial infarction and mild mitral regurgitation.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+41,assessment,The patient is 48 years old.,0.0,27,Assessment: The patient is a 48-year-old female with a history of inferior myocardial infarction and mild mitral regurgitation.,0.21,,False,0.0,0.0,0,1,0.0,0.0,0.0,1,0.21
+42,assessment,The patient has a history of inferior myocardial infarction.,0.0,27,Assessment: The patient is a 48-year-old female with a history of inferior myocardial infarction and mild mitral regurgitation.,0.93,entity,True,1.0,1.0,0,0,0.0,1.0,1.0,1,0.93
+43,assessment,The patient has mild mitral regurgitation.,0.25,27,Assessment: The patient is a 48-year-old female with a history of inferior myocardial infarction and mild mitral regurgitation.,0.93,entity,True,1.0,1.0,0,0,0.0,1.0,1.0,1,0.93
+44,assessment,The patient's problem list includes inferior myocardial infarction.,0.25,27,Assessment: The patient is a 48-year-old female with a history of inferior myocardial infarction and mild mitral regurgitation.,0.93,entity,True,1.0,0.75,0,0,0.0,0.75,0.75,1,0.93
+45,assessment,The patient's problem list includes mitral regurgitation.,0.0,27,Assessment: The patient is a 48-year-old female with a history of inferior myocardial infarction and mild mitral regurgitation.,0.93,entity,True,1.0,1.0,0,0,0.0,0.667,0.667,1,0.93
+46,assessment,Mitral regurgitation is suspected.,1.0,27,Assessment: The patient is a 48-year-old female with a history of inferior myocardial infarction and mild mitral regurgitation.,0.93,entity,True,1.0,1.0,0,0,0.0,0.667,0.667,1,0.93
+47,plan,Brilinta is prescribed for at least one year.,0.25,30,I prescribed Brilinta 90 mg twice a day for at least one year to prevent stent thrombosis.,0.93,entity,True,0.85,0.85,1,0,1.0,1.0,0.667,1,0.93
+48,plan,Brilinta is prescribed to prevent stent thrombosis.,0.75,30,I prescribed Brilinta 90 mg twice a day for at least one year to prevent stent thrombosis.,0.93,entity,True,0.85,0.85,1,0,0.0,1.0,0.8,1,0.93
+49,plan,The doctor prescribed aspirin.,0.0,31,I advised her to continue taking aspirin 81 mg once a day lifelong.,0.93,entity,True,0.85,0.85,0,0,0.0,0.5,0.5,1,0.93
+50,plan,The aspirin dose is 81 mg.,0.75,31,I advised her to continue taking aspirin 81 mg once a day lifelong.,0.93,entity,True,0.85,0.85,0,1,1.0,0.75,0.75,1,0.93
+51,plan,Aspirin is prescribed lifelong.,0.75,31,I advised her to continue taking aspirin 81 mg once a day lifelong.,0.93,entity,True,0.85,0.85,0,0,0.0,0.667,0.667,1,0.93
+52,plan,Crestor is prescribed for cholesterol management.,0.0,32,I prescribed Crestor 40 mg once a day for cholesterol management.,0.93,entity,True,0.85,0.85,1,0,0.0,1.0,0.75,1,0.93
+53,plan,The doctor advised the patient to continue taking ToPro.,0.25,34,I advised her to continue with ToPro 50 mg once a day.,0.9,name,True,0.0,0.0,1,0,0.0,0.75,0.75,1,0.9
+54,plan,The ToPro dose is 50 mg.,0.0,34,I advised her to continue with ToPro 50 mg once a day.,0.88,name,True,0.0,0.0,1,1,1.0,0.75,0.75,1,0.88
+55,plan,ToPro is taken once a day.,0.0,34,I advised her to continue with ToPro 50 mg once a day.,0.9,name,True,0.0,0.0,1,0,0.0,0.667,0.667,1,0.9
+56,plan,The doctor ordered an echocardiogram.,0.0,33,I ordered an echocardiogram in 6 months to assess for any changes in cardiac function.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+57,plan,The echocardiogram is scheduled in 6 months.,0.0,33,I ordered an echocardiogram in 6 months to assess for any changes in cardiac function.,0.88,number,True,0.0,0.0,0,1,1.0,0.75,0.75,1,0.88
+58,plan,The echocardiogram is to assess for changes in cardiac function.,1.0,33,I ordered an echocardiogram in 6 months to assess for any changes in cardiac function.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+59,plan,The doctor ordered liver function studies.,0.0,35,I also ordered liver function studies and a lipid panel to be performed at the next visit.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+60,plan,The doctor ordered a lipid panel.,0.0,35,I also ordered liver function studies and a lipid panel to be performed at the next visit.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+61,plan,Liver function studies and a lipid panel are to be performed at the next visit.,0.0,35,I also ordered liver function studies and a lipid panel to be performed at the next visit.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+62,plan,The doctor enrolled the patient in cardiac rehab.,0.25,36,I enrolled her in cardiac rehab for dietary education and counseling.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+63,plan,Cardiac rehab is for dietary education.,0.0,36,I enrolled her in cardiac rehab for dietary education and counseling.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+64,plan,Cardiac rehab is for counseling.,0.0,36,I enrolled her in cardiac rehab for dietary education and counseling.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+65,plan,The doctor advised the patient to resume swimming.,0.75,37,I advised her to resume swimming with caution and start with short laps.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+66,plan,The patient should resume swimming with caution.,0.75,37,I advised her to resume swimming with caution and start with short laps.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+67,plan,The patient should start swimming with short laps.,1.0,37,I advised her to resume swimming with caution and start with short laps.,0.185,lcs,True,0.0,0.0,0,0,0.0,0.75,0.75,1,0.185
+68,plan,The doctor wants to see the patient again.,0.0,38,Follow-up: I want to see the patient again in 6 weeks.,0.23,lcs,True,0.0,0.0,0,0,0.0,1.0,1.0,1,0.23
+69,plan,The patient follow-up is scheduled in 6 weeks.,0.25,33,I ordered an echocardiogram in 6 months to assess for any changes in cardiac function.,0.88,number,True,0.0,0.0,0,1,0.5,0.25,0.25,1,0.88

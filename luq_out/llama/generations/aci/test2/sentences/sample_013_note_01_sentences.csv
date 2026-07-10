@@ -1,0 +1,22 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Alexis, presents with numbness and tingling in her right hand, which has been ongoing for approximately six months, with increased persistence over the last month.",0.25
+2,"The numbness and tingling are present all the time, and she experiences some pain, particularly when typing on a keyboard or using a mouse.",0.5
+3,"The pain is described as some pain, and rest, ibuprofen, and avoiding typing on the keyboard or using a mouse help alleviate it.",0.25
+4,The patient denies waking up at night due to pain or tingling.,0.25
+5,Past medical history: [NOT MENTIONED].,0.0
+6,Review of systems: [NOT MENTIONED].,0.0
+7,Current medications: I prescribed ibuprofen for pain.,0.5
+8,Objective:,0.0
+9,Vital signs: [NOT MENTIONED].,0.0
+10,"Physical exam: The patient has pain on extension and flexion of the wrist, and a positive Tinel's sign, indicating nerve compression.",0.25
+11,"The patient has a reduced grip strength on the right hand, particularly in the thumb, index, and middle fingers, which are also experiencing numbness.",1.0
+12,Test Results: [NOT MENTIONED].,0.0
+13,Assessment / Problem List:,0.0
+14,"Assessment: The patient has carpal tunnel syndrome, likely due to repetitive strain from typing and mouse use.",0.75
+15,Problem list: Carpal tunnel syndrome; [NOT MENTIONED].,1.0
+16,Plan:,0.0
+17,"I would like to put the patient in a wrist splint to wear at night, and increase her ibuprofen dosage to 600mg four times a day.",0.5
+18,I will order an EMG nerve conduction study to confirm the diagnosis.,0.0
+19,"If the test is positive, we will consider conservative treatment, but may need to consider surgery to release the impingement on the nerves.",0.0
+20,"Follow-up: I will review the results of the EMG nerve conduction study and decide on further treatment, which may include physical therapy or surgery.",0.75

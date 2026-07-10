@@ -1,0 +1,76 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Michelle King.,1.0
+1,subjective,The patient is a female.,0.0
+2,subjective,The patient is 36 years old.,0.5
+3,subjective,The patient has a 24-year history of acid reflux.,0.75
+4,subjective,The patient's acid reflux has worsened over the past few years.,0.0
+5,subjective,The patient takes omeprazole.,0.0
+6,subjective,The omeprazole dose is 40 mg.,0.0
+7,subjective,Omeprazole is taken twice daily.,0.0
+8,subjective,The patient's symptoms persist despite taking omeprazole.,0.0
+9,subjective,The patient experiences a burning sensation in her chest.,0.0
+10,subjective,The patient experiences a burning sensation in her throat.,0.25
+11,subjective,The burning sensation occurs after consuming certain foods and beverages.,0.0
+12,subjective,The patient experiences symptoms after consuming spicy foods.,0.0
+13,subjective,The patient experiences symptoms after consuming carbonated drinks.,0.0
+14,subjective,The patient experiences symptoms after consuming citrus products.,0.0
+15,subjective,The patient experiences symptoms after consuming tomato-based products.,0.0
+16,subjective,The patient denied difficulty swallowing.,0.25
+17,subjective,The patient denied abdominal pain.,0.0
+18,subjective,The patient denied nausea.,0.0
+19,subjective,The patient denied vomiting.,0.0
+20,subjective,The patient denied changes in bowel movements.,0.0
+21,subjective,The patient denied constipation.,0.0
+22,subjective,The patient denied diarrhea.,0.0
+23,subjective,The patient denied rectal bleeding.,0.25
+24,subjective,The patient has a history of anxiety.,0.0
+25,subjective,The patient has a history of seasonal allergies.,0.0
+26,subjective,The patient's weight is stable.,1.0
+27,subjective,The patient has had a decreased appetite for the past 2 months.,1.0
+28,subjective,The patient's decreased appetite is due to work-related stress.,1.0
+29,objective,The patient has an abdominal surgical scar.,0.0
+30,objective,The abdominal surgical scar is well-healed.,0.0
+31,objective,The patient had surgery at 1 month old.,0.75
+32,objective,The surgery was for intestinal twisting.,0.75
+33,objective,The patient underwent abdominal surgery.,0.0
+34,assessment,The patient has gastroesophageal reflux disease (GERD).,0.25
+35,assessment,The gastroesophageal reflux disease (GERD) is suspected.,0.25
+36,assessment,The gastroesophageal reflux disease (GERD) has a functional etiology.,0.25
+37,assessment,The patient's gastroesophageal reflux disease (GERD) is listed as a problem.,0.0
+38,assessment,The patient's gastroesophageal reflux disease (GERD) is suspected in the problem list.,0.25
+39,assessment,The patient's gastroesophageal reflux disease (GERD) is confirmed in the problem list.,0.5
+40,plan,The doctor prescribed Nexium.,0.0
+41,plan,The Nexium dose is 40 mg.,0.0
+42,plan,Nexium is taken twice daily.,0.0
+43,plan,Nexium is prescribed to replace omeprazole.,0.25
+44,plan,The patient should avoid spicy foods.,0.25
+45,plan,The patient should avoid carbonated beverages.,0.5
+46,plan,The patient should avoid citrus products.,0.5
+47,plan,The patient should avoid tomato-based products.,0.5
+48,plan,The patient should manage stress.,0.0
+49,plan,The patient should manage anxiety.,0.5
+50,plan,The doctor recommends an upper endoscopy.,0.0
+51,plan,The upper endoscopy is to investigate potential causes of GERD.,0.0
+52,plan,The upper endoscopy will investigate ulcers.,0.0
+53,plan,The upper endoscopy will investigate precancerous conditions.,0.0
+54,plan,The upper endoscopy will investigate cancerous conditions.,0.0
+55,plan,The upper endoscopy will involve sedation.,0.25
+56,plan,The upper endoscopy will involve a small camera.,0.25
+57,plan,The small camera will be passed through the patient's mouth.,0.0
+58,plan,The upper endoscopy will examine the esophagus.,0.0
+59,plan,The upper endoscopy will examine the stomach.,0.0
+60,plan,The upper endoscopy will examine the small intestines.,0.25
+61,plan,The doctor will send a prescription for Nexium to the patient's pharmacy.,0.0
+62,plan,The EGD will be scheduled at the checkout desk.,0.5
+63,plan,The patient will have a follow-up appointment after the EGD.,0.0
+64,plan,The follow-up appointment will discuss the EGD results.,0.0
+65,plan,The follow-up appointment will assess the patient's progress with dietary changes.,0.5
+66,plan,The follow-up appointment will assess the patient's progress with medication adjustments.,0.5
+67,plan,The doctor may prescribe Protonix if the EGD is normal and symptoms persist.,1.0
+68,plan,The Protonix dose is not specified.,0.0
+69,plan,Protonix is prescribed for persistent symptoms.,1.0
+70,plan,A pH impedance study may be obtained if the EGD is normal and symptoms persist.,1.0
+71,plan,The pH impedance study is to rule out abnormal acid reflux exposure.,1.0
+72,plan,The pH impedance study is to determine the etiology of the patient's symptoms.,1.0
+73,plan,The patient has GERD.,0.0
+74,plan,The patient is taking omeprazole.,0.75

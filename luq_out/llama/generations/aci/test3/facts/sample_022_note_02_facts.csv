@@ -1,0 +1,65 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient presented with left-sided back pain.,0.0
+1,subjective,The left-sided back pain is sharp at times.,0.5
+2,subjective,The left-sided back pain is not sharp at other times.,0.5
+3,subjective,The duration of the left-sided back pain varies.,1.0
+4,subjective,The patient reported an increase in urine output.,0.25
+5,subjective,The increase in urine output is particularly at night.,0.5
+6,subjective,The patient reported an increased thirst.,0.75
+7,subjective,The patient's appetite is unchanged.,0.0
+8,subjective,The patient has a history of recurrent strep throat.,0.0
+9,subjective,The patient had four episodes of strep throat in the last five months.,0.0
+10,subjective,The patient has a brother who smokes.,0.0
+11,subjective,The patient denied fever.,0.5
+12,subjective,The patient denied shortness of breath.,0.75
+13,subjective,The patient denied cough.,0.5
+14,subjective,The patient denied chest pain.,1.0
+15,subjective,The patient denied symptoms of kidney disease.,1.0
+16,subjective,The patient denied hematuria.,1.0
+17,subjective,The patient denied oliguria.,1.0
+18,objective,The patient's throat was not erythematous.,0.0
+19,objective,The patient's throat was without swelling.,0.25
+20,objective,The patient's tonsils were midline.,0.0
+21,objective,The patient's neck was without lymphadenopathy.,0.0
+22,objective,The patient's neck was without cervical adenopathy.,0.0
+23,objective,The patient's lungs were clear.,0.0
+24,objective,The patient's lungs were without wheezes.,0.0
+25,objective,The patient's lungs were without rales.,0.0
+26,objective,The patient's lungs were without rhonchi.,0.0
+27,objective,The patient's heart sounds were normal.,0.0
+28,objective,The patient's heart was without murmur.,0.0
+29,objective,The patient's heart was without rub.,0.0
+30,objective,The patient's heart was without gallop.,0.0
+31,objective,The patient's back was without tenderness on palpation.,0.0
+32,objective,The patient's abdomen was without pain.,0.0
+33,objective,The patient's abdomen was without rebound.,0.5
+34,assessment,The patient has recurrent strep throat.,0.25
+35,assessment,The patient has glomerulonephritis.,0.75
+36,assessment,Recurrent strep throat may be associated with glomerulonephritis.,0.0
+37,assessment,The patient's renal function needs to be monitored.,0.0
+38,assessment,Monitoring the patient's renal function is to prevent chronic kidney disease.,1.0
+39,assessment,Glomerulonephritis is a problem.,0.0
+40,assessment,Recurrent strep throat is a problem.,0.0
+41,plan,The patient was referred to an ENT specialist.,0.0
+42,plan,The ENT specialist will consider tonsillectomy.,0.0
+43,plan,Tonsillectomy is to help alleviate recurrent strep throat.,0.25
+44,plan,The doctor ordered a lipid panel.,0.0
+45,plan,The doctor ordered a UA.,0.0
+46,plan,The doctor ordered a CMP.,0.0
+47,plan,The doctor ordered a CBC.,0.0
+48,plan,The doctor ordered a vitamin D test.,0.0
+49,plan,The doctor ordered a TSH test.,0.0
+50,plan,The labs are to assess the patient's hormone levels.,0.75
+51,plan,The labs are to assess the patient's nutritional levels.,0.75
+52,plan,The patient was instructed to fast before some of the tests.,0.75
+53,plan,The patient was provided with a note to excuse them from class.,0.75
+54,plan,The patient was provided with a note to excuse them from work.,0.5
+55,plan,The note is to accommodate the testing.,0.0
+56,plan,The doctor advised the patient to monitor their salt intake.,0.75
+57,plan,Monitoring salt intake is to prevent further infections.,1.0
+58,plan,The patient will return in a week.,0.0
+59,plan,The patient will return for the results of the lab tests.,0.0
+60,plan,"If the results are normal, discussion will occur over the phone.",0.25
+61,plan,"If the results are not normal, the patient will need to return to the office.",0.75
+62,plan,Additional conversations may be needed.,0.25
+63,plan,Additional conversations will occur in the office if needed.,1.0

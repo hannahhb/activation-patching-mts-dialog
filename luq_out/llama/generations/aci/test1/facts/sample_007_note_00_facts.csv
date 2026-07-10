@@ -1,0 +1,65 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Jacqueline.,0.3333
+1,subjective,The patient presented to the clinic today.,0.0
+2,subjective,The patient expressed anxiety about her recent blood work results.,0.0
+3,subjective,The patient's blood work results showed hepatitis C.,0.0
+4,subjective,The patient was not aware of having hepatitis C in the past.,0.0
+5,subjective,The patient has been feeling fine.,0.0
+6,subjective,The patient has a history of using intravenous drugs.,0.1111
+7,subjective,The patient has been clean for over 15 years.,0.1111
+8,subjective,The patient has a history of heavy alcohol use.,0.4444
+9,subjective,The patient has reduced her alcohol consumption to about one beer a day.,0.4444
+10,subjective,The patient smokes one to two cigarettes a day.,0.0
+11,subjective,The patient has a history of hypertension.,0.6667
+12,subjective,The patient has a history of diabetes.,0.6667
+13,subjective,The patient has a history of depression.,0.6667
+14,subjective,Hypertension runs in the patient's family.,0.0
+15,subjective,Diabetes runs in the patient's family.,0.0
+16,subjective,Depression runs in the patient's family.,0.0
+17,subjective,The patient has a history of smoking.,0.0
+18,subjective,The patient's past smoking use was one to one and a half packs of cigarettes per day.,1.0
+19,subjective,The patient reported feeling tired at the end of the day.,0.0
+20,subjective,The patient gets enough sleep.,0.4444
+21,objective,The patient appears in no distress.,0.0
+22,objective,The patient has no jaundice on skin exam.,0.0
+23,objective,The patient's heart rate is regular.,0.1111
+24,objective,The patient's heart rhythm is regular.,0.1111
+25,objective,The patient has a 2/6 systolic murmur.,0.0
+26,objective,The patient's systolic murmur has not changed from last year.,0.0
+27,objective,The patient's lung exam was clear.,0.0
+28,objective,The patient has no wheezes.,0.0
+29,objective,The patient has no rales.,0.0
+30,objective,The patient has no rhonchi.,0.0
+31,objective,The patient's abdominal exam was normal.,0.0
+32,objective,The patient has present bowel sounds.,0.2222
+33,objective,The patient's abdomen is soft.,0.0
+34,objective,The patient has no hepatosplenomegaly.,0.0
+35,objective,The patient's musculoskeletal exam was normal.,0.3333
+36,objective,The patient has no gait disturbance.,0.4444
+37,objective,The patient has no edema.,0.6667
+38,objective,The patient's HCV antibody test is positive.,0.0
+39,objective,The patient's AST is elevated.,0.3333
+40,objective,The patient's AST is 39.,0.0
+41,objective,The patient's albumin level is normal.,0.3333
+42,objective,The patient's total bilirubin level is normal.,0.0
+43,assessment,The patient has hepatitis C.,0.0
+44,assessment,Hepatitis C is a viral infection.,0.1111
+45,assessment,Hepatitis C affects the liver.,0.0
+46,assessment,The patient most likely acquired hepatitis C years ago.,0.3333
+47,assessment,The patient has hypertension.,0.8889
+48,assessment,The hypertension is active.,0.8889
+49,assessment,The patient has diabetes.,0.8889
+50,assessment,The diabetes is active.,0.8889
+51,assessment,The patient has depression.,0.8889
+52,assessment,The depression is active.,1.0
+53,plan,The doctor ordered additional blood work.,0.125
+54,plan,The additional blood work is to confirm the diagnosis of hepatitis C.,0.125
+55,plan,The blood work includes checking the HCV RNA.,0.125
+56,plan,The blood work includes checking the HCV genotype.,0.125
+57,plan,The doctor ordered an ultrasound.,0.0
+58,plan,The ultrasound is to determine the severity of the patient's liver disease.,0.0
+59,plan,The ultrasound is to assess for fibrosis.,0.0
+60,plan,The patient has hepatitis C.,1.0
+61,plan,The patient has liver disease.,0.25
+62,plan,The doctor will use the blood work and ultrasound results to determine the next steps for treatment.,0.0
+63,plan,The patient will return in three weeks for follow-up.,0.0

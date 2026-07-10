@@ -1,0 +1,25 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 30-year-old male, presents with a 2-week history of right flank pain radiating to the groin, which worsens with increased fluid intake and physical activity.",1.0
+2,"The pain is described as a 4 out of 10, but can increase to a 4 out of 10 when uncontrolled.",1.0
+3,"The patient reports no nausea, vomiting, or fever.",0.0
+4,"He has a history of kidney stones, having passed some on his own and requiring surgery twice.",1.0
+5,His family history is significant for kidney stones.,0.0
+6,"Past medical history: The patient has a history of kidney stones, with previous episodes of passing stones on his own and requiring surgery.",0.0
+7,His family history is also significant for kidney stones.,0.0
+8,Review of systems: The patient denies any additional symptoms in other organs.,0.5
+9,Current medications: The patient is currently taking ibuprofen for pain.,0.25
+10,Objective:,0.0
+11,"Vital signs: The patient's blood pressure is slightly elevated, likely due to pain.",0.25
+12,"Physical exam: The physical exam reveals no tenderness to palpation of the abdomen, but there is CVA tenderness on the right side, consistent with the location of the kidney stone.",0.25
+13,"Test Results: A CT scan showed a 0.5 cm stone located on the proximal right ureter, with no evidence of high flow nephrosis or obstruction.",1.0
+14,Assessment / Problem List:,0.0
+15,Assessment: The patient has a confirmed diagnosis of a 0.5 cm kidney stone located on the proximal right ureter.,0.0
+16,Problem list: Kidney stone; confirmed.,0.75
+17,Plan:,0.0
+18,I prescribed ibuprofen to continue managing the patient's pain.,0.0
+19,I also prescribed tramadol 50 mg as needed for breakthrough pain.,0.75
+20,"I ordered a BMP, urinalysis, and urine culture to rule out infection.",0.25
+21,The patient is to continue using a strainer when urinating to attempt to catch the stone.,0.0
+22,"I will see the patient in 1-2 weeks to reassess symptoms and discuss further treatment options, including lithotripsy.",0.0
+23,Follow-up: I will see the patient in 1-2 weeks to reassess symptoms and discuss further treatment options.,0.25

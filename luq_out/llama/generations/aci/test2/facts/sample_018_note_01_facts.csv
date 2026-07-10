@@ -1,0 +1,69 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a female.,0.0
+1,subjective,The patient is 53 years old.,0.0
+2,subjective,The patient presents with chest pain.,0.0
+3,subjective,The chest pain is dull.,0.0
+4,subjective,The chest pain is pressure-like.,0.0
+5,subjective,The chest pain occurs when the patient walks.,0.0
+6,subjective,The chest pain has been ongoing for approximately three months.,0.0
+7,subjective,The chest pain is relieved when the patient stops walking.,0.5
+8,subjective,The patient denied shortness of breath.,0.0
+9,subjective,The patient denied sweats.,0.25
+10,subjective,The patient denied clamminess.,0.25
+11,subjective,The patient has diabetes.,0.0
+12,subjective,The patient has high blood pressure.,0.0
+13,subjective,The diabetes was not previously diagnosed by our office.,1.0
+14,subjective,The high blood pressure was not previously diagnosed by our office.,0.5
+15,subjective,The patient is taking metformin.,0.0
+16,subjective,The metformin dose is 500mg.,0.0
+17,subjective,Metformin is taken twice daily.,0.0
+18,subjective,Metformin is prescribed for diabetes.,0.0
+19,objective,The patient has a history of high blood pressure.,1.0
+20,objective,The patient's blood pressure was not measured in the office.,0.75
+21,objective,There is no jugular venous distension (JVD).,0.75
+22,objective,There is no swelling in the neck.,1.0
+23,objective,The lung exam is clear.,0.5
+24,objective,There are no crackles.,0.5
+25,objective,There are no rhonchi.,0.5
+26,objective,The heart rate is regular.,0.75
+27,objective,The heart rhythm is regular.,0.0
+28,objective,There is a 2/6 systolic ejection murmur.,0.25
+29,objective,The pulses are equal.,0.75
+30,objective,The abdomen is soft.,0.5
+31,objective,The abdomen is non-tender.,0.5
+32,objective,There are no abdominal masses.,0.5
+33,objective,There are no back exam abnormalities.,1.0
+34,objective,There is 1+ non-pitting edema in the ankle area.,0.0
+35,objective,There is no calf tenderness.,1.0
+36,objective,The ECG is normal.,0.0
+37,objective,There are no signs of a heart attack on the ECG.,0.0
+38,assessment,The patient has diabetes mellitus.,0.0
+39,assessment,The patient has suspected unstable angina.,0.0
+40,assessment,Chest pain may be related to suspected high blood pressure.,0.25
+41,assessment,Chest pain may be related to diabetes.,0.25
+42,assessment,The diagnosis of unstable angina is suspected.,0.25
+43,assessment,The patient is suspected to have high blood pressure.,0.0
+44,plan,The doctor prescribed aspirin.,0.0
+45,plan,The aspirin dose is 81mg.,0.0
+46,plan,Aspirin is taken daily.,0.0
+47,plan,Aspirin is prescribed for suspected unstable angina.,0.75
+48,plan,The doctor prescribed nitroglycerin.,0.0
+49,plan,The nitroglycerin dose is 1-3 tablets.,0.5
+50,plan,Nitroglycerin is taken every 5 minutes as needed.,0.5
+51,plan,Nitroglycerin is prescribed for chest pain.,0.0
+52,plan,The patient was instructed to seek immediate medical attention if chest pain does not resolve.,0.75
+53,plan,The doctor will refer the patient to cardiology.,0.0
+54,plan,The patient will have a stress test.,0.0
+55,plan,The doctor will continue the patient's metformin regimen.,0.25
+56,plan,The metformin dose is not specified.,0.5
+57,plan,Metformin is taken at an unspecified frequency.,0.75
+58,plan,The doctor ordered a hemoglobin A1c test.,0.25
+59,plan,The doctor prescribed hydrochlorothiazide.,0.25
+60,plan,The hydrochlorothiazide dose is not specified.,0.25
+61,plan,Hydrochlorothiazide is taken at an unspecified frequency.,0.5
+62,plan,Hydrochlorothiazide is prescribed for high blood pressure.,0.25
+63,plan,The patient was instructed to use a home blood pressure cuff.,0.0
+64,plan,The patient was instructed to enter blood pressure readings in Epic MyChart.,0.25
+65,plan,The patient will follow up with cardiology in one week.,1.0
+66,plan,The patient will have a follow-up appointment in our office in two weeks.,0.0
+67,plan,The purpose of the follow-up appointment is to review hemoglobin A1c results and adjust the treatment plan as needed.,1.0

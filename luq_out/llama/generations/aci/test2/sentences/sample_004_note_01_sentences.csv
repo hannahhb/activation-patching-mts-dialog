@@ -1,0 +1,35 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"The patient is a male who suffered a right knee injury three days ago while playing soccer, specifically feeling a pop in his knee during a plank kick.",1.0
+2,"He reports swelling, limited mobility, and pain on a scale of 6-7 out of 10.",0.25
+3,"He has been taking ibuprofen, which provided some relief, but he is concerned about his knee's functionality and ability to bear weight.",0.25
+4,He denies any fever or other symptoms.,0.5
+5,The patient has a history of using ibuprofen regularly for pain relief.,0.75
+6,Past medical history:,0.25
+7,The patient's past medical history is not mentioned.,0.0
+8,Review of systems:,0.25
+9,The patient denies any other symptoms in other organs.,0.5
+10,Current medications:,0.0
+11,I prescribed ibuprofen [dosage not specified] [frequency not specified] for pain relief.,0.75
+12,Objective:,0.0
+13,Vital signs: [NOT MENTIONED],0.0
+14,Physical exam:,0.0
+15,The patient has a marked limp on the right leg upon ambulation.,0.5
+16,There is significant effusion in the right knee with a slight bit of ecchymosis.,0.0
+17,Palpation at the medial joint line causes some pain.,0.0
+18,"The patient has difficulty with passive range of motion, lacking a few degrees of terminal extension to about 115 degrees and lacking about 20-30 degrees of terminal flexion due to pain.",0.5
+19,The patient has a positive Lachman exam.,0.0
+20,"The patient's bilateral lower extremities are neurovascularly intact, with muscle strength of 5 out of 5.",0.5
+21,Test Results:,0.0
+22,[NOT MENTIONED],1.0
+23,Assessment / Problem List:,0.0
+24,The patient has a right knee injury suggestive of an anterior cruciate ligament (ACL) tear.,0.0
+25,The patient's knee is currently active; the status of the ACL is suspected.,0.75
+26,Plan:,0.0
+27,I ordered an MRI to evaluate the integrity of the ACL.,0.0
+28,I prescribed meloxicam 50 milligrams per day to reduce swelling and pain.,0.0
+29,"I instructed the patient to ice the knee if necessary, wear a knee immobilizer, and use crutches to avoid putting too much stress and strain on the knee.",0.0
+30,"I advised the patient to limit their activities, including work activities, and to avoid jogging until further notice.",0.5
+31,I also instructed the patient to move their leg slightly every now and then to prevent it from locking up.,0.25
+32,Follow-up:,0.0
+33,"The patient will have an MRI, and I will reevaluate the results before determining the next course of action.",0.25

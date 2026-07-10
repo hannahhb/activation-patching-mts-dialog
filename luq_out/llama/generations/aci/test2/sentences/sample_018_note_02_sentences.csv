@@ -1,0 +1,38 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"The patient, a 53-year-old female, presents with a 3-month history of chest pain that occurs when walking and resolves when resting.",0.5
+2,"She describes the pain as dull and pressure-like, without radiation or exacerbation by any specific activities.",0.75
+3,"She denies any shortness of breath, sweating, or clamminess.",0.25
+4,"The patient has a past medical history of diabetes and high blood pressure, with a previous hemoglobin A1c of 7.0% and a family history of heart disease.",1.0
+5,She is currently taking metformin 500mg twice daily.,0.0
+6,She reports being addicted to diet soda and has been unable to exercise due to the chest pain.,1.0
+7,She has an upcoming appointment with ophthalmology in two weeks for diabetic retinopathy.,1.0
+8,Review of Systems:,0.25
+9,"The patient denies any nausea, vomiting, or diarrhea related to her diabetes or medications.",0.75
+10,"She has noticed a trend of high blood pressure in her chart, but has not been diagnosed or treated for it yet.",0.75
+11,Current Medications:,0.0
+12,Metformin 500mg twice daily,0.0
+13,Objective:,0.0
+14,Vital Signs:,0.25
+15,Blood pressure: Not mentioned,0.25
+16,Pulse rate: Not mentioned,0.0
+17,Oxygen saturation: Not mentioned,0.0
+18,Temperature: Not mentioned,0.0
+19,Physical Exam:,0.0
+20,The patient's exam is normal except for 1+ non-pitting edema in the lower legs and ankles.,0.5
+21,The heart exam reveals a 2/6 systolic ejection murmur.,0.25
+22,The lung and abdominal exams are normal.,0.5
+23,Test Results:,0.25
+24,"EKG: Normal, no signs of a heart attack",0.0
+25,Assessment / Problem List:,0.0
+26,Assessment: The patient presents with a 3-month history of chest pain that may be related to her suspected high blood pressure and diabetes.,0.75
+27,Problem List: Chest pain; Suspected high blood pressure; Diabetes mellitus; Unstable angina; Systolic ejection murmur; Lower extremity edema.,1.0
+28,Plan:,0.0
+29,I started the patient on aspirin 81mg daily for chest pain.,0.0
+30,"I also prescribed nitroglycerin for chest pain, with instructions to take up to 3 pills every 5 minutes if the pain does not resolve.",0.75
+31,I will refer the patient to cardiology for further evaluation and a stress test.,0.0
+32,I will continue the patient on metformin 500mg twice daily and will order another hemoglobin A1c in 2 weeks.,1.0
+33,I will also start the patient on hydrochlorothiazide for high blood pressure and instruct her to use a blood pressure cuff at home and enter her readings in her chart.,0.25
+34,I will see the patient in 2 weeks to monitor her blood pressure and make any necessary adjustments.,0.75
+35,Follow-up:,0.0
+36,"The patient will be seen in 2 weeks to follow up on her chest pain, diabetes, and high blood pressure.",1.0

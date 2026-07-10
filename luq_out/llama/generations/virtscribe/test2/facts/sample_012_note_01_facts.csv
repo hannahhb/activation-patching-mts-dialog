@@ -1,0 +1,84 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 32-year-old female.,0.0
+1,subjective,The patient has a history of irritable bowel syndrome (IBS).,0.0
+2,subjective,The patient has a history of functional abdominal pain.,0.0
+3,subjective,The patient was previously diagnosed with IBS.,0.0
+4,subjective,The patient was previously treated with Bentyl.,0.0
+5,subjective,The patient was previously treated with Bentyl for IBS.,0.0
+6,subjective,The patient reports experiencing flares of abdominal pain.,0.25
+7,subjective,The patient reports experiencing nausea.,0.0
+8,subjective,The patient reports experiencing vomiting.,0.5
+9,subjective,The patient has a history of using Reglan.,0.0
+10,subjective,The patient used Reglan for nausea.,0.0
+11,subjective,The patient stopped using Reglan.,0.0
+12,subjective,The patient started using Zofran.,0.0
+13,subjective,The patient uses Zofran for nausea.,0.0
+14,subjective,The patient uses Zofran as needed.,0.0
+15,subjective,The doctor prescribed Citrucel.,0.0
+16,subjective,The Citrucel dose is low-dose.,0.25
+17,subjective,Citrucel is taken daily.,0.0
+18,subjective,Citrucel is a fiber supplement.,0.0
+19,subjective,The doctor prescribed probiotics.,0.5
+20,subjective,Probiotics are for gas.,0.5
+21,subjective,Probiotics are for bloating.,0.5
+22,subjective,The patient was advised to avoid spicy foods.,1.0
+23,subjective,The patient was advised to avoid fatty foods.,1.0
+24,subjective,The patient was advised to avoid alcohol.,1.0
+25,subjective,The patient's symptoms worsen after consuming spicy foods.,0.0
+26,subjective,The patient's symptoms worsen after consuming spicy shrimp.,0.75
+27,subjective,The patient reports diarrhea.,0.0
+28,subjective,The patient reports abdominal pain.,0.0
+29,subjective,The patient eats pasta with alfredo sauce.,1.0
+30,subjective,Pasta with alfredo sauce usually does not bother the patient.,1.0
+31,subjective,The patient eats fried chicken.,0.75
+32,subjective,Fried chicken causes abdominal pain.,0.75
+33,subjective,Fried chicken causes diarrhea.,0.75
+34,subjective,The patient drinks tequila.,1.0
+35,subjective,The patient drinks dark liquor.,1.0
+36,subjective,The patient has noticed that drinking water instead of soda helps improve her symptoms.,0.5
+37,subjective,The doctor prescribed Bentyl.,0.0
+38,subjective,The Bentyl dose is up to four times daily.,0.5
+39,subjective,Bentyl is taken for intestinal cramping.,0.0
+40,subjective,The doctor prescribed Zofran.,0.0
+41,subjective,The Zofran dose is as needed.,0.0
+42,subjective,Zofran is prescribed for nausea.,0.0
+43,subjective,Citrucel is prescribed for fiber supplement.,0.0
+44,subjective,The patient has been instructed to use probiotics.,0.5
+45,subjective,Probiotics are taken to help with gas.,0.5
+46,subjective,Probiotics are taken to help with bloating.,0.5
+47,objective,The abdomen is soft.,0.0
+48,objective,The abdomen is non-tender.,0.0
+49,objective,There are no masses in the abdomen.,0.0
+50,objective,There is no organomegaly in the abdomen.,0.0
+51,objective,The bowel sounds are normal.,0.0
+52,objective,The bowel sounds are active.,0.0
+53,assessment,The patient has IBS.,0.0
+54,assessment,The patient has functional abdominal pain.,0.0
+55,assessment,Functional abdominal pain is aggravated by high stress.,0.25
+56,assessment,Functional abdominal pain is aggravated by poor eating habits.,0.0
+57,assessment,Functional abdominal pain is aggravated by poor sleeping habits.,0.25
+58,assessment,The patient has suspected food sensitivities.,0.75
+59,assessment,The patient has suspected alcohol sensitivity.,0.75
+60,plan,The Citrucel dose is 1 tablet.,1.0
+61,plan,Citrucel is taken twice daily.,0.75
+62,plan,Citrucel is prescribed for regularity.,0.75
+63,plan,The Bentyl dose is 20 mg.,0.0
+64,plan,Bentyl is taken 1 tablet before eating.,0.5
+65,plan,Bentyl can be taken up to four times daily.,0.75
+66,plan,The patient is advised to take Bentyl 30-45 minutes before leaving the house.,1.0
+67,plan,The patient is advised to take a second Bentyl tablet at the restaurant.,1.0
+68,plan,The patient is advised to reduce greasy foods.,0.0
+69,plan,The patient is advised to reduce fatty foods.,0.0
+70,plan,The patient is advised to reduce alcohol consumption.,0.0
+71,plan,The doctor discussed Elavil.,0.0
+72,plan,The Elavil dose is 25 mg.,0.0
+73,plan,Elavil is taken at bedtime.,0.0
+74,plan,Elavil is prescribed to manage symptoms.,0.0
+75,plan,Elavil is prescribed to reduce the need for Bentyl.,1.0
+76,plan,Elavil is prescribed to reduce the need for Zofran.,1.0
+77,plan,The patient's prescriptions were sent to her pharmacy.,1.0
+78,plan,The patient is asked to follow up in 1 month.,0.0
+79,plan,The patient is asked to report symptoms via email.,0.0
+80,plan,The patient is asked to report side effects via email.,0.0
+81,plan,The patient is asked to report issues with Elavil via email.,0.0
+82,plan,The patient will use MyChart for follow-up.,0.5

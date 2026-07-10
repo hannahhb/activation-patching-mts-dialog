@@ -1,0 +1,34 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient presents with right knee pain after playing basketball, where he felt a pop in his knee and experienced swelling, making it difficult to walk.",0.5
+2,He reports the pain is achy and located on the inside of his knee.,0.5
+3,"The patient has been taking Tylenol, which provided some relief.",0.0
+4,The swelling has decreased since he slept overnight.,0.25
+5,The patient rates his pain level as a 4 out of 10.,0.25
+6,He is currently favoring his knee and is able to bear weight on it.,0.75
+7,Past medical history: The patient has hypertension and diabetes.,0.0
+8,He is taking Norvasc 5mg daily for hypertension and Metformin 500mg daily for diabetes.,0.0
+9,"However, he often skips his Metformin due to gastrointestinal side effects.",0.5
+10,Review of systems: The patient's hypertension has been in the range of 140/80 to 150/80.,1.0
+11,"He has not been taking his blood sugars regularly, with last readings around 150.",1.0
+12,Current medications:,0.0
+13,Norvasc 5mg daily for hypertension,0.0
+14,Metformin 500mg daily for diabetes,0.0
+15,Objective:,0.0
+16,Vital signs: Not mentioned,0.75
+17,"Physical exam: The patient has pain to palpation on the medial aspect of the right knee, with some edema, swelling, and ecchymosis.",0.0
+18,The varus and valgus tests are negative.,0.0
+19,The patient has a grade 2 systolic ejection murmur.,1.0
+20,"Test Results: The patient had a normal x-ray of the right knee, with no fractures or bony abnormalities.",0.0
+21,Assessment / Problem List:,0.0
+22,"Assessment: The patient has a possible MCL strain, which will require an MRI to confirm.",0.0
+23,Problem list: Hypertension confirmed; diabetes confirmed; MCL strain suspected; MCL tear possible; past medical history of grade 2 systolic ejection murmur.,0.5
+24,Plan:,0.0
+25,I prescribed Meloxicam 15mg to help with pain and swelling.,0.0
+26,I will put the patient in a knee immobilizer and have him stay off the knee for the next couple of weeks.,0.75
+27,I will order an MRI to confirm the MCL strain or tear.,0.25
+28,I will also prescribe a knee immobilizer and instruct the patient to continue taking Tylenol as needed.,0.5
+29,"For hypertension, I will increase Norvasc 5mg and adjust the medication as needed.",1.0
+30,I will also prescribe a consult to nutrition to help improve the patient's diet.,0.0
+31,I will see the patient in two weeks.,0.5
+32,Follow-up: I will see the patient in two weeks to follow up on his progress and adjust his treatment plan as needed.,0.75

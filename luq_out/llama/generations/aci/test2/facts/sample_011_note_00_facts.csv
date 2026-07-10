@@ -1,0 +1,78 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 50-year-old male.,0.75
+1,subjective,The patient reports being okay.,0.5
+2,subjective,The patient feels that his medications are helping.,0.5
+3,subjective,The patient is concerned about the number of medications he is taking.,0.0
+4,subjective,The patient has a history of a heart attack.,0.0
+5,subjective,The heart attack occurred six months ago.,0.0
+6,subjective,The patient has coronary artery disease.,0.0
+7,subjective,The patient has been prescribed medications to manage his coronary artery disease.,0.0
+8,subjective,The patient reports dizziness when standing up quickly.,0.0
+9,subjective,The patient attributes dizziness to the heart attack or his medication.,0.25
+10,subjective,The patient has a history of diabetes.,0.0
+11,subjective,The patient has not been following up with his nephrologist as recommended.,0.5
+12,subjective,The patient has stage three chronic kidney disease.,0.0
+13,subjective,The patient requires follow-up with a nephrologist.,0.25
+14,subjective,The patient has not been taking medications that could harm his kidneys.,0.5
+15,subjective,The patient experiences puffiness in his legs.,0.75
+16,subjective,The patient's diabetes contributed to his heart attack.,0.75
+17,subjective,The patient reports feeling down.,1.0
+18,subjective,The patient reports feeling lonely.,1.0
+19,subjective,The patient's feelings of loneliness started since his heart attack.,1.0
+20,subjective,The doctor prescribed Aspirin.,0.0
+21,subjective,The Aspirin dose is 81mg.,1.0
+22,subjective,Aspirin is taken daily.,1.0
+23,subjective,Aspirin is prescribed for coronary artery disease.,0.0
+24,subjective,The doctor prescribed Brilinta.,0.0
+25,subjective,The Brilinta dose is 90mg.,1.0
+26,subjective,Brilinta is taken twice daily.,1.0
+27,subjective,Brilinta is prescribed for coronary artery disease.,0.0
+28,subjective,The doctor prescribed Crestor.,0.0
+29,subjective,The Crestor dose is 40mg.,0.0
+30,subjective,Crestor is taken daily.,0.0
+31,subjective,Crestor is prescribed for high cholesterol.,0.5
+32,subjective,The doctor prescribed Metoprolol.,0.0
+33,subjective,The Metoprolol dose is 50mg.,0.0
+34,subjective,Metoprolol is taken daily.,0.0
+35,subjective,Metoprolol is prescribed for coronary artery disease.,0.25
+36,subjective,The doctor prescribed Fish oil.,0.0
+37,subjective,Fish oil is prescribed for coronary artery disease.,1.0
+38,objective,The patient's blood pressure is 127/80.,0.0
+39,objective,The patient's neck exam is unremarkable.,0.75
+40,objective,The patient's heart exam reveals a slight 3/6 systolic ejection murmur.,0.0
+41,objective,The murmur is located at the left base.,0.0
+42,objective,The patient's lower extremity exam reveals one plus nonpitting edema.,0.0
+43,objective,The kidney function test results show stable kidney function.,0.0
+44,objective,The Hemoglobin A1c was reported to be approximately 60%.,1.0
+45,assessment,The patient's coronary artery disease is currently stable.,1.0
+46,assessment,The patient has chronic kidney disease.,0.0
+47,assessment,The patient's chronic kidney disease is stage three.,0.0
+48,assessment,The patient has diabetes.,0.0
+49,assessment,The patient is experiencing mild depression.,0.25
+50,assessment,The patient is experiencing loneliness.,1.0
+51,assessment,The patient had a heart attack.,0.5
+52,assessment,Coronary artery disease is on the patient's problem list.,0.0
+53,assessment,"Chronic kidney disease, stage three, is on the patient's problem list.",0.0
+54,assessment,Diabetes is on the patient's problem list.,0.0
+55,assessment,Mild depression is on the patient's problem list.,0.0
+56,plan,The patient was referred to cardiac rehab.,0.0
+57,plan,The purpose of cardiac rehab is to help the patient become more active and confident in exercising again.,0.0
+58,plan,The patient was referred to a dietitian.,0.0
+59,plan,The purpose of the dietitian referral is for education on managing his diabetes.,0.5
+60,plan,The doctor will contact the patient's nephrologist.,0.0
+61,plan,The purpose of contacting the nephrologist is to schedule an appointment.,0.0
+62,plan,The doctor will order a hemoglobin A1c test.,0.0
+63,plan,The purpose of the hemoglobin A1c test is to monitor the patient's diabetes.,0.5
+64,plan,The doctor will talk to the patient's primary care physician.,0.25
+65,plan,The purpose of talking to the primary care physician is to discuss adjusting his insulin regimen.,0.5
+66,plan,The patient has high cholesterol.,0.25
+67,plan,The patient has kidney disease.,0.5
+68,plan,The patient has depression.,0.25
+69,plan,The patient has loneliness.,1.0
+70,plan,The patient will follow up with his cardiologist.,0.75
+71,plan,The follow-up with the cardiologist is in six months.,1.0
+72,plan,The purpose of the follow-up with the cardiologist is to monitor his coronary artery disease.,1.0
+73,plan,The patient will follow up with his nephrologist.,0.25
+74,plan,The purpose of the follow-up with the nephrologist is to monitor his kidney disease.,0.75
+75,plan,The patient will see a psychiatrist.,0.0
+76,plan,The purpose of seeing the psychiatrist is to discuss his depression and loneliness.,1.0

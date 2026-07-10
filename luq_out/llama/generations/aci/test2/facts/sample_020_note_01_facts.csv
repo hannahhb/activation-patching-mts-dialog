@@ -1,0 +1,67 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 38-year-old male.,1.0
+1,subjective,The patient presents with low back pain.,0.0
+2,subjective,The low back pain started 2 weeks ago.,0.0
+3,subjective,The patient lifted a box of books before the low back pain started.,0.0
+4,subjective,The patient describes the low back pain as achy.,0.0
+5,subjective,The patient describes the low back pain as sharp.,0.0
+6,subjective,The low back pain radiates down the patient's left leg.,0.0
+7,subjective,The patient's pain worsens with lumbar flexion.,0.5
+8,subjective,The patient denied numbness in his legs.,0.0
+9,subjective,The patient denied tingling in his legs.,0.0
+10,subjective,The patient denied loss of sensation in his legs.,0.0
+11,subjective,The patient denied weakness in his legs.,0.0
+12,subjective,The patient denied loss of control of his bladder.,0.25
+13,subjective,The patient denied loss of control of his bowels.,0.25
+14,subjective,The patient's pain has been getting worse.,0.25
+15,subjective,The patient has taken ibuprofen for pain.,0.0
+16,subjective,The ibuprofen dose is not specified.,0.0
+17,subjective,Ibuprofen is taken at a frequency that is not specified.,0.0
+18,subjective,Ibuprofen is taken for low back pain.,0.0
+19,subjective,The patient has taken Tylenol for pain.,0.0
+20,subjective,The Tylenol dose is not specified.,0.0
+21,subjective,Tylenol is taken at a frequency that is not specified.,0.0
+22,subjective,Tylenol is taken for low back pain.,0.0
+23,subjective,The patient denies a history of smoking.,0.5
+24,subjective,The patient has a sedentary job.,0.5
+25,subjective,The patient is an Olympic weightlifter.,0.5
+26,subjective,The patient has a history of playing soccer.,0.0
+27,subjective,The patient's father has back pain.,0.0
+28,subjective,The patient denied symptoms in other organs relevant to his initial presentation.,0.0
+29,objective,The patient's blood pressure is 130/70.,0.0
+30,objective,The patient's respiratory rate is 18.,0.0
+31,objective,The patient's heart rate is regular.,0.5
+32,objective,The patient's heart rate is normal.,0.5
+33,objective,The patient has midline tenderness at the L4-L5 disk space.,0.0
+34,objective,The patient has right-sided lumbar paravertebral tenderness.,0.0
+35,objective,The patient has pain with lumbar flexion.,0.25
+36,objective,The supine straight leg test is positive.,0.25
+37,objective,The patient's patella reflexes are symmetrical.,0.5
+38,objective,The patient's achilles reflexes are symmetrical.,0.5
+39,objective,The patient had an MRI.,0.25
+40,objective,The MRI shows disk desiccation.,0.25
+41,objective,The MRI shows a disk bulge.,0.25
+42,objective,The MRI shows paracentral disk herniation.,0.25
+43,objective,The MRI shows moderate right neuroforaminal stenosis.,0.25
+44,objective,The disk bulge is at the L4-L5 disk space.,0.75
+45,objective,The paracentral disk herniation is at the L4-L5 disk space.,1.0
+46,objective,The moderate right neuroforaminal stenosis is at the L4-L5 disk space.,0.5
+47,assessment,The patient has lumbar back pain.,0.0
+48,assessment,The lumbar back pain is located at the L4-L5 disk space.,0.0
+49,assessment,The patient has a herniated disk.,0.0
+50,assessment,The herniated disk is located at the L4-L5 disk space.,0.0
+51,assessment,The patient has radiculopathy.,0.0
+52,assessment,The radiculopathy is due to a herniated disk.,0.0
+53,assessment,The herniated disk is the cause of the lumbar back pain.,0.0
+54,assessment,The radiculopathy is associated with the lumbar back pain.,0.0
+55,plan,The doctor recommends a spinal injection.,0.0
+56,plan,The spinal injection will contain a strong NSAID.,0.0
+57,plan,The spinal injection will contain a corticosteroid.,0.0
+58,plan,The spinal injection will be administered into the lumbar spine.,0.25
+59,plan,The spinal injection will be performed under fluoroscopy.,0.0
+60,plan,The purpose of the spinal injection is to help with inflammation.,0.0
+61,plan,The inflammation is causing the patient's pain.,0.25
+62,plan,The doctor will give the patient a prescription for the procedure.,0.75
+63,plan,The patient will sign informed consent paperwork.,0.75
+64,plan,The doctor will review the informed consent paperwork with the patient.,0.75
+65,plan,The procedure will be scheduled for today.,0.0

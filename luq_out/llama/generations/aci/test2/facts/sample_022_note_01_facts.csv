@@ -1,0 +1,74 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 57-year-old male.,0.0
+1,subjective,The patient presents with a 2-week history of shortness of breath.,0.0
+2,subjective,The patient's shortness of breath worsens with exertion.,0.75
+3,subjective,The patient reports coughing up blood.,0.0
+4,subjective,The patient coughs up approximately 3-4 cups of blood per day.,0.0
+5,subjective,The patient has been coughing up blood for the past 3 weeks.,0.0
+6,subjective,The patient has a history of diabetes.,0.0
+7,subjective,The patient has a history of high blood pressure.,0.0
+8,subjective,The patient has a history of asthma.,0.0
+9,subjective,The patient has difficulty controlling his blood sugar.,0.0
+10,subjective,The patient's blood sugar readings are often over 200 after meals.,0.0
+11,subjective,The patient's blood sugar readings are around 150 in the morning.,0.0
+12,subjective,The patient's blood pressure has been running low at times.,0.0
+13,subjective,The patient is taking Norvasc.,0.5
+14,subjective,The Norvasc dose is not specified.,0.0
+15,subjective,The Norvasc frequency is not specified.,0.0
+16,subjective,Norvasc is prescribed for high blood pressure.,0.25
+17,subjective,The patient denies fever.,0.0
+18,subjective,The patient denies bruising.,0.0
+19,subjective,The patient denies bleeding from his teeth or gums.,0.25
+20,subjective,The patient is taking Metformin.,0.0
+21,subjective,The Metformin dose is 500mg.,0.25
+22,subjective,Metformin is taken twice daily.,0.25
+23,subjective,Metformin is prescribed for diabetes.,0.0
+24,subjective,The patient reports shortness of breath.,0.0
+25,subjective,The patient reports difficulty controlling his blood sugar.,0.0
+26,objective,The patient's blood pressure is 120/70.,0.25
+27,objective,The patient's oxygen saturation is 94%.,0.0
+28,objective,The patient has no jugular venous distension.,0.25
+29,objective,The patient has no carotid bruits.,0.25
+30,objective,The patient has no swelling in the neck.,0.5
+31,objective,The patient has rails on the right side of the lung.,0.0
+32,objective,The patient has rhonchi on the right side of the lung.,0.0
+33,objective,The patient has diminished breath sounds on the right side of the lung.,0.0
+34,objective,The patient has a 2/6 systolic ejection murmur.,0.0
+35,objective,The patient's heart rate is regular.,0.75
+36,objective,The patient's heart rhythm is regular.,0.75
+37,objective,The patient's belly is soft.,0.0
+38,objective,The patient's belly is non-tender.,0.25
+39,objective,The patient has 1+ nonpitting edema on both lower extremities.,0.0
+40,objective,The patient has no calf tenderness.,0.25
+41,objective,The patient has no Homan's sign.,0.25
+42,objective,The patient's pulse rate is not specified.,0.25
+43,objective,The patient's temperature is not specified.,0.0
+44,assessment,The patient is experiencing a respiratory issue.,0.0
+45,assessment,The patient has pneumonia.,1.0
+46,assessment,The pneumonia is confirmed.,1.0
+47,assessment,The patient is coughing up blood.,0.0
+48,assessment,The patient is experiencing shortness of breath.,0.5
+49,assessment,The patient has Diabetes.,0.0
+50,assessment,The Diabetes is uncontrolled.,0.25
+51,assessment,The patient has Hypertension.,0.25
+52,assessment,The Hypertension is uncontrolled.,1.0
+53,plan,The doctor prescribed metformin.,0.25
+54,plan,The metformin dose is 750mg.,0.25
+55,plan,Metformin is prescribed to control diabetes.,0.25
+56,plan,The doctor ordered a hemoglobin A1c.,0.5
+57,plan,The hemoglobin A1c is to check blood sugar control.,0.5
+58,plan,The doctor referred the patient to the emergency department.,0.0
+59,plan,The patient will have a chest x-ray.,0.0
+60,plan,The patient will have a CT scan of the chest.,0.0
+61,plan,The patient will have blood work.,0.0
+62,plan,"The chest x-ray, CT scan of the chest, and blood work are to evaluate the cause of shortness of breath.",1.0
+63,plan,"The chest x-ray, CT scan of the chest, and blood work are to evaluate the cause of coughing up blood.",1.0
+64,plan,The patient is instructed to hold off on taking norvasc.,0.0
+65,plan,The patient is to hold off on taking norvasc until the episode of shortness of breath is resolved.,0.5
+66,plan,The doctor will have the patient return in 3 weeks.,0.0
+67,plan,The patient will return in 3 weeks to discuss his diabetes treatment plan.,0.0
+68,plan,The patient will return in 3 weeks to reassess his blood pressure.,0.5
+69,plan,The patient has diabetes.,0.0
+70,plan,The patient has shortness of breath.,1.0
+71,plan,The patient has coughing up blood.,1.0
+72,plan,The patient takes norvasc.,0.0

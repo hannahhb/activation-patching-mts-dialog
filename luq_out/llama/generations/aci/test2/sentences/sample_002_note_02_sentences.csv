@@ -1,0 +1,30 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"The patient, Jeremy, a 30-year-old male, presents with a 4-month history of lower back pain that began after lifting boxes while moving his son's college dorm.",0.5
+2,"He reports that the pain is exacerbated by movement and heavy lifting, and is accompanied by occasional numbness and tingling in his right foot that resolved after 1 hour.",1.0
+3,"He denies any difficulty with urination, bowel movements, or fever.",0.0
+4,"He reports taking Tylenol and ibuprofen for pain relief, but notes that ibuprofen provides only temporary relief.",0.5
+5,He underwent an MRI was recommended at an urgent care visit but did not follow through due to insurance concerns.,1.0
+6,He has a past medical history of a total knee replacement in 2020.,0.5
+7,He denies any past medical history of other conditions.,0.75
+8,Review of systems:,0.0
+9,"The patient denies any symptoms of bladder or bowel dysfunction, incontinence, or difficulty urinating.",0.25
+10,Current medications:,0.0
+11,I prescribed Tylenol and ibuprofen for pain relief.,1.0
+12,Objective:,0.0
+13,Vital signs:,0.0
+14,"The patient's blood pressure is 117/56 mmHg, heart rate is 68 beats per minute, and oxygen saturation is 95% on room air.",0.0
+15,Physical exam:,0.75
+16,"The patient has bony protuberance of the C5-C6 vertebrae, but no pain to palpation.",0.0
+17,"The lumbar spine exam reveals no pain to palpation, but decreased flexion and extension of the lower back, a positive straight leg raise, and spasm of the paraspinal muscles of the lumbar spine.",0.25
+18,Test results:,0.75
+19,"The lumbar spine x-ray showed no acute bony abnormality, and no fracture of the back.",0.75
+20,Assessment / Problem List:,0.0
+21,"Assessment: The patient has an acute disk herniation in the lumbar spine, likely resulting from a 4-month-old injury.",0.5
+22,Problem list: Lumbar disk herniation; Acute injury; Chronic back pain.,0.75
+23,Plan:,0.0
+24,I ordered a lumbar spine MRI to further evaluate the extent of the disk herniation.,0.25
+25,I referred the patient to a physical therapist through our health system.,0.25
+26,I prescribed meloxicam 15mg once daily to help with pain relief.,0.0
+27,Follow-up:,0.0
+28,"I will see the patient again in 2 weeks to review the MRI results and discuss further treatment options, including the possibility of an epidural steroid injection.",1.0

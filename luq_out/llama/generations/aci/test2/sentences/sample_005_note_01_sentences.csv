@@ -1,0 +1,41 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient presents with right elbow pain on the inside, which she describes as a 7/10 on the pain scale.",0.0
+2,The pain radiates down her arm and is exacerbated by activities such as pottery and bending the wrist.,0.75
+3,The pain has been present for 4 days and is not improving with ibuprofen.,0.0
+4,The patient denies any recent trauma or injury to the elbow.,0.75
+5,"Past medical history: The patient has a history of hypertension, for which she is currently on 10mg of lisinopril daily, and diabetes, for which she is currently on 500mg of metformin twice a day.",0.0
+6,"She reports difficulty adhering to her medication regimen, particularly with taking metformin.",0.25
+7,"Review of systems: The patient denies fever, shortness of breath, or other symptoms.",0.75
+8,Current medications:,0.0
+9,Lisinopril 10mg daily,0.0
+10,Metformin 500mg twice a day,0.0
+11,Objective:,0.0
+12,Vital signs: The patient's vital signs are as follows:,0.0
+13,Blood pressure: 120/70,0.0
+14,Pulse rate: 80,1.0
+15,Respiratory rate: 18,0.0
+16,Oxygen saturation: 100%,0.0
+17,Temperature: 97.9°F,0.25
+18,"Physical exam: The patient's right elbow is tender to the touch, particularly on the medial epicondyle.",0.0
+19,There is pain with resisted pronation of the right forearm and flexion of the wrist.,0.0
+20,"The patient's lungs are clear bilaterally, and there is no rash, bruising, or swelling at the elbow.",1.0
+21,Assessment / Problem List:,0.0
+22,"Assessment: The patient's primary problem is right elbow pain, consistent with medial epicondylitis, caused by overuse and damage to the tendons in her arm.",0.75
+23,Problem list:,0.0
+24,Medial epicondylitis; diabetes; hypertension; suspected.,0.5
+25,Plan:,0.0
+26,"For the patient's primary problem, medial epicondylitis, I recommend:",0.5
+27,Resting the elbow,0.5
+28,"Applying ice to the elbow for 20 minutes, three times a day",0.0
+29,"Taking 600mg of ibuprofen, three times a day, for one week",1.0
+30,Avoiding pottery and other activities that exacerbate the pain,1.0
+31,Wearing a sling on the right arm while awake,0.0
+32,"For the patient's diabetes, I recommend:",0.0
+33,Increasing metformin to 1000mg twice a day,0.0
+34,Monitoring blood sugars daily,1.0
+35,Following up in two weeks to review blood sugar levels and consider other treatment options if necessary,1.0
+36,"For the patient's hypertension, I recommend:",0.0
+37,Continuing lisinopril at 10mg daily,0.0
+38,Following up in two weeks to review blood pressure and adjust medication as necessary,1.0
+39,Follow-up: I will see the patient in two weeks to review progress and adjust the treatment plan as necessary.,0.0

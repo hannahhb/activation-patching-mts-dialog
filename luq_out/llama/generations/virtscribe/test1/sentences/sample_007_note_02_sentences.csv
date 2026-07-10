@@ -1,0 +1,27 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Diana Scott, is a 100-year-old woman who presented for a new patient visit on 7/9/2021, primarily due to a worrisome heart murmur diagnosed by her previous doctor.",0.75
+2,"She reports no symptoms of chest pain or shortness of breath, but does experience severe pains in her legs, which have been ongoing for about a month.",0.25
+3,She also reports feeling overly tired due to taking medication.,0.75
+4,"Additionally, she mentions that she gets short of breath if she walks too far or drinks too much water, and experiences lightheadedness and dizziness, which she manages with meclizine.",0.75
+5,"She has a history of surgeries, including a mention of her brother having a stroke due to diabetes and her eldest sister having a heart problem.",0.75
+6,She has never smoked and has no known allergies to medications.,0.5
+7,"Review of systems: The patient reports swelling in her ankles, which has been ongoing for about six months, but notes that it varies in severity.",1.0
+8,She also reports a recent weight loss of about 10 pounds over the past year.,1.0
+9,"Current medications: The patient is taking amlodipine and lisinopril, which she will continue to take as is.",1.0
+10,"She is also taking simvastatin 20mg for her lipids, which may be discontinued after evaluation by her PCP.",1.0
+11,Objective:,0.0
+12,Vital signs: Not mentioned.,0.0
+13,"Physical exam: For physical exam, the doctor notes that the patient is a constitutional elderly woman with no acute distress.",1.0
+14,Cardiovascular examination reveals a 4/6 systolic murmur at the right upper sternal border with mild radiation to the carotids.,0.0
+15,Neurologic examination shows a normal gait for her age.,0.25
+16,Test Results: Not mentioned.,0.0
+17,Assessment / Problem List:,0.0
+18,"Assessment: The patient has a cardiac murmur, most likely representing aortic stenosis, which may be severe, but her S2 is relatively preserved, suggesting moderate stenosis.",0.75
+19,Problem list: Cardiac murmur; suspected aortic stenosis; pvcs; hypolipidemia; lightheadedness/dizziness.,0.25
+20,Plan:,0.0
+21,"I will order an echocardiogram to assess the patient's cardiac structure and function, including the valve view of the aortic valve.",0.5
+22,"Depending on the results, we may consider further evaluation, including an ischemic evaluation or a heart monitor, to assess the burden of pvcs.",1.0
+23,I will also send the results and recommendations to the patient's PCP for discussion regarding the discontinuation of her statin.,0.75
+24,"The patient will continue to take her current medications as is, including amlodipine and lisinopril, and will follow up in three to four weeks to discuss the results and next steps.",0.5
+25,Follow-up: The patient will follow up in three to four weeks to discuss the results of the echocardiogram and next steps.,0.25

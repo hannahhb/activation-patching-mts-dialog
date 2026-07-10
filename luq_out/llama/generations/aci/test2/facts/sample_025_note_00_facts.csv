@@ -1,0 +1,90 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 62-year-old male.,0.75
+1,subjective,The patient has a history of coronary artery disease.,0.0
+2,subjective,The patient had a heart attack six months ago.,0.25
+3,subjective,The patient underwent a stent placement in his left anterior descending artery.,0.25
+4,subjective,The patient is taking aspirin.,0.25
+5,subjective,The aspirin dose is not specified.,0.5
+6,subjective,Aspirin is taken at a frequency that is not specified.,0.75
+7,subjective,Aspirin is prescribed for cardiac health.,0.25
+8,subjective,The patient is taking brilinta.,0.25
+9,subjective,The brilinta dose is not specified.,0.5
+10,subjective,Brilinta is taken at a frequency that is not specified.,0.75
+11,subjective,Brilinta is prescribed for cardiac health.,0.25
+12,subjective,The patient is taking crestor.,0.25
+13,subjective,The crestor dose is 40 mg.,0.5
+14,subjective,Crestor is taken once a day.,0.25
+15,subjective,Crestor is prescribed for cholesterol.,0.25
+16,subjective,The patient is taking fish oil.,0.25
+17,subjective,The fish oil dose is not specified.,0.0
+18,subjective,Fish oil is taken at a frequency that is not specified.,0.25
+19,subjective,Fish oil is prescribed for cardiac health.,0.75
+20,subjective,The patient is taking metoprolol.,0.25
+21,subjective,The metoprolol dose is 50 mg.,0.25
+22,subjective,Metoprolol is taken once a day.,0.25
+23,subjective,Metoprolol is prescribed for cardiac health.,0.25
+24,subjective,The patient has diabetes.,0.0
+25,subjective,The patient has not been following a diet for diabetes.,1.0
+26,subjective,The patient has a high hemoglobin A1c level of around 16.,0.25
+27,subjective,The patient has stage three chronic kidney disease.,0.0
+28,subjective,The patient has not seen his nephrologist in a year.,0.5
+29,subjective,The patient experiences dizziness when standing up quickly.,0.0
+30,subjective,The patient attributes dizziness to either the heart attack or the medication.,0.5
+31,subjective,The patient has puffiness in his legs.,1.0
+32,subjective,The patient attributes puffiness in his legs to the medications.,1.0
+33,subjective,The patient had a stent placement in his left anterior descending artery six months ago.,0.25
+34,subjective,The patient expresses concern about the number of medications he is taking.,0.0
+35,subjective,The patient is a fan of the San Francisco 49ers.,0.75
+36,subjective,The patient has been lonely since the heart attack.,0.75
+37,objective,The patient's blood pressure is 127/80 mmHg.,0.25
+38,objective,The patient's pulse rate is not specified.,0.0
+39,objective,The patient's oxygen saturation is not specified.,0.0
+40,objective,The patient's temperature is not specified.,0.0
+41,objective,Jugular venous distention was not appreciated.,0.75
+42,objective,Carotid bruits were not appreciated.,0.75
+43,objective,A 3/6 systolic ejection murmur was heard at the left base.,0.0
+44,objective,The patient has one plus nonpitting edema in the lower extremities.,0.0
+45,objective,The nonpitting edema is located in the lower extremities.,0.0
+46,objective,The degree of nonpitting edema is one plus.,0.0
+47,objective,The nonpitting edema is nonpitting.,0.0
+48,assessment,The patient has coronary artery disease.,0.0
+49,assessment,The patient is being followed by a cardiologist.,1.0
+50,assessment,The patient is being followed by a nephrologist.,1.0
+51,assessment,The patient's problem list includes coronary artery disease.,0.0
+52,assessment,The patient's problem list includes stage three chronic kidney disease.,0.0
+53,assessment,The patient's problem list includes diabetes mellitus.,0.0
+54,plan,The patient was referred for cardiac rehabilitation.,0.0
+55,plan,The purpose of cardiac rehabilitation is to help the patient be more active.,0.0
+56,plan,The purpose of cardiac rehabilitation is to help the patient be more confident in exercising again.,0.0
+57,plan,The doctor will refill metoprolol.,0.0
+58,plan,The metoprolol dose is not specified.,0.75
+59,plan,The metoprolol frequency is not specified.,0.75
+60,plan,The doctor will refill crestor.,0.0
+61,plan,The crestor dose is not specified.,1.0
+62,plan,The crestor frequency is not specified.,1.0
+63,plan,Crestor is prescribed for cardiac health.,0.25
+64,plan,The doctor will refill aspirin.,0.0
+65,plan,The aspirin frequency is not specified.,0.5
+66,plan,A stress test was not ordered at this time.,0.25
+67,plan,The doctor will reach out to Dr. Miller.,0.0
+68,plan,The purpose of reaching out to Dr. Miller is to schedule an appointment with the nephrologist.,0.0
+69,plan,The patient will see a nephrologist.,0.0
+70,plan,The patient has kidney disease.,0.75
+71,plan,The doctor will order a hemoglobin A1c test.,0.0
+72,plan,The patient will be referred to a dietitian.,0.0
+73,plan,The purpose of the dietitian referral is for dietary education.,0.0
+74,plan,The doctor will discuss the patient's insulin regimen.,0.25
+75,plan,The doctor will discuss the patient's insulin regimen with the primary care physician.,0.25
+76,plan,The patient has an insulin regimen.,0.25
+77,plan,The patient will follow up with his cardiologist in six months.,0.75
+78,plan,The purpose of the cardiologist follow-up is to check on the stent.,1.0
+79,plan,The purpose of the cardiologist follow-up is to continue monitoring the patient's cardiac health.,0.75
+80,plan,The patient has a stent.,1.0
+81,plan,The patient will follow up with his nephrologist.,0.25
+82,plan,The purpose of the nephrologist follow-up is to monitor the patient's kidney disease.,0.75
+83,plan,The patient will see a psychiatrist.,0.0
+84,plan,The purpose of the psychiatrist visit is to discuss the patient's feelings of sadness.,0.25
+85,plan,The purpose of the psychiatrist visit is to discuss the patient's feelings of loneliness.,1.0
+86,plan,The patient has feelings of sadness.,0.25
+87,plan,The patient has feelings of loneliness.,1.0
+88,plan,The patient had a heart attack.,0.0

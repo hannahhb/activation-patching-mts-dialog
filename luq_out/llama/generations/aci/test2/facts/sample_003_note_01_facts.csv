@@ -1,0 +1,78 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 57-year-old male.,0.0
+1,subjective,The patient presents with shortness of breath.,0.0
+2,subjective,The shortness of breath has lasted approximately two weeks.,0.0
+3,subjective,The patient experiences shortness of breath upon waking.,0.0
+4,subjective,The patient's shortness of breath persists throughout the day.,0.75
+5,subjective,The patient's shortness of breath persists even after resting.,0.5
+6,subjective,The patient coughs up blood.,0.0
+7,subjective,The patient coughs up approximately three to four cups of blood per day.,0.0
+8,subjective,The patient has been coughing up blood for three weeks.,0.0
+9,subjective,The patient denied fever.,0.0
+10,subjective,The patient denied bruising.,0.0
+11,subjective,The patient denied bleeding from other areas.,0.5
+12,subjective,The patient has a history of diabetes.,0.0
+13,subjective,The patient has a history of high blood pressure.,0.0
+14,subjective,The patient has a history of asthma.,0.0
+15,subjective,The patient's diabetes has been running high.,0.5
+16,subjective,The patient's blood sugar levels spike over 200 after meals.,0.5
+17,subjective,The patient's blood sugar levels range from 150 to 200 in the morning.,1.0
+18,subjective,The patient's blood pressure has been low at times.,0.25
+19,subjective,The patient's blood pressure ranges from the lower 90s.,0.5
+20,subjective,The patient is taking metformin.,0.0
+21,subjective,The metformin dose is 500 mg.,0.0
+22,subjective,Metformin is taken twice daily.,0.0
+23,subjective,Metformin is prescribed for diabetes.,0.0
+24,subjective,The patient is taking norvasc.,0.0
+25,subjective,Norvasc is prescribed for high blood pressure.,0.0
+26,objective,The patient's oxygen saturation is 94% on pulse oximetry.,0.0
+27,objective,The patient's pulse is regular.,0.5
+28,objective,The patient has no jugular venous distension.,0.0
+29,objective,The patient has no carotid bruits.,0.0
+30,objective,The patient has no swelling in the neck.,0.25
+31,objective,The lung exam reveals bilateral rales.,1.0
+32,objective,The lung exam reveals bilateral rhonchi.,1.0
+33,objective,The patient has diminished breath sounds on the right side.,0.0
+34,objective,The heart exam shows a 2/6 systolic ejection murmur.,0.0
+35,objective,The systolic ejection murmur is unchanged from previous exams.,0.75
+36,objective,The belly exam is soft.,0.75
+37,objective,The patient has 1+ non-pitting edema on both lower extremities.,0.0
+38,objective,The patient has no calf tenderness.,0.25
+39,objective,The patient has no Homan's sign.,0.25
+40,assessment,The patient has a possible pulmonary infection.,0.0
+41,assessment,The patient has a possible other lung condition.,0.0
+42,assessment,The patient is coughing up blood.,0.0
+43,assessment,The patient is experiencing shortness of breath.,0.0
+44,assessment,The patient's primary complaint is related to coughing up blood and shortness of breath.,0.0
+45,assessment,The patient has poorly controlled diabetes.,0.75
+46,assessment,The patient has high blood sugar levels.,0.75
+47,assessment,The patient has high blood pressure.,0.0
+48,assessment,The diagnosis is pulmonary infection or other lung condition.,0.0
+49,assessment,The diagnosis is poorly controlled diabetes.,0.75
+50,assessment,The diagnosis is high blood pressure.,1.0
+51,plan,The doctor prescribed metformin.,0.0
+52,plan,The metformin dose is 750 mg.,0.0
+53,plan,Metformin is taken twice daily.,0.0
+54,plan,Metformin is prescribed for diabetes management.,0.0
+55,plan,The doctor ordered a hemoglobin A1c.,0.25
+56,plan,The hemoglobin A1c is to assess the patient's diabetes control.,0.25
+57,plan,The patient will return in three weeks.,0.0
+58,plan,The patient will discuss his diabetes treatment plan in three weeks.,0.0
+59,plan,The patient was referred to the emergency department.,0.0
+60,plan,The referral to the emergency department is for further evaluation.,0.0
+61,plan,The referral to the emergency department is for treatment of shortness of breath.,0.5
+62,plan,The referral to the emergency department is for treatment of coughing up blood.,1.0
+63,plan,The patient will undergo a chest X-ray.,0.0
+64,plan,The chest X-ray is to rule out a blood clot.,0.75
+65,plan,The chest X-ray is to rule out other conditions.,0.5
+66,plan,The patient will undergo a CT scan of the chest.,0.0
+67,plan,The CT scan of the chest is to rule out a blood clot.,0.5
+68,plan,The CT scan of the chest is to rule out other conditions.,0.25
+69,plan,The patient will undergo blood work.,0.0
+70,plan,The blood work is to rule out a blood clot.,0.5
+71,plan,The blood work is to rule out other conditions.,0.25
+72,plan,The doctor instructed the patient to hold norvasc.,0.25
+73,plan,The patient is to hold norvasc until his blood pressure is under better control.,0.5
+74,plan,The patient will return to the emergency department.,0.75
+75,plan,The patient will return to the emergency department for further evaluation.,0.5
+76,plan,The patient will return to the emergency department for treatment.,0.5

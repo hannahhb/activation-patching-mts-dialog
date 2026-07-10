@@ -39,7 +39,6 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import time
 from pathlib import Path
 from typing import Dict, List, Tuple
 
@@ -51,10 +50,10 @@ import luq_sentence
 from luq_sentence import (
     DEFAULT_OUT_DIR,
     NLI_BATCH_SIZE,
-    get_bedrock_client,
     get_nli,
     clear_memory,
 )
+from llm_client import get_llm
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Constants
@@ -78,9 +77,6 @@ _CONJUNCTION_RE = re.compile(
     r"^(and|also|however|additionally|furthermore|moreover|in addition|but|or|nor|so|yet)\b",
     re.IGNORECASE,
 )
-
-MAX_RETRIES = 5
-RETRY_SLEEP = 2.0
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Embedder
@@ -253,48 +249,33 @@ COVERED_TOP_K = 3  # number of note candidates sent to LLM for completeness
 def _llm_covered(fact: str, candidates: List[str]) -> int:
     cand_text = "\n".join(f"{i + 1}. {c}" for i, c in enumerate(candidates))
     prompt = _COVERED_PROMPT.format(candidates=cand_text, fact=fact.strip())
-    client = get_bedrock_client()
-    for attempt in range(MAX_RETRIES):
-        try:
-            resp = client.converse(
-                modelId=BEDROCK_GEN_MODEL,
-                messages=[{"role": "user", "content": [{"text": prompt}]}],
-                inferenceConfig={"maxTokens": 4, "temperature": 0.0},
-            )
-            text = resp["output"]["message"]["content"][0]["text"].strip().lower()
-            return 1 if text.startswith("yes") else 0
-        except Exception as exc:
-            if attempt < MAX_RETRIES - 1:
-                tqdm.write(f"  [covered] error (attempt {attempt + 1}): {exc}")
-                time.sleep(RETRY_SLEEP * (attempt + 1))
-            else:
-                tqdm.write(f"  [covered] failed after {MAX_RETRIES} attempts: {exc}")
-                return 0
-    return 0
+    try:
+        resp = get_llm().converse(
+            stage="factmatch", model_id=BEDROCK_GEN_MODEL,
+            messages=[{"role": "user", "content": [{"text": prompt}]}],
+            inference_config={"maxTokens": 4, "temperature": 0.0},
+        )
+    except Exception:
+        return 0
+    text = resp["output"]["message"]["content"][0]["text"].strip().lower()
+    return 1 if text.startswith("yes") else 0
 
 
 FAITH_TOP_K = 5  # top-k transcript facts retrieved for NLI
 
 
 def _llm_extract(prompt: str, max_tokens: int = 1024) -> List[str]:
-    client = get_bedrock_client()
-    for attempt in range(MAX_RETRIES):
-        try:
-            resp = client.converse(
-                modelId=BEDROCK_GEN_MODEL,
-                messages=[{"role": "user", "content": [{"text": prompt}]}],
-                inferenceConfig={"maxTokens": max_tokens, "temperature": 0.0},
-            )
-            text = resp["output"]["message"]["content"][0]["text"].strip()
-            facts = [f.strip() for f in text.split("//") if f.strip()]
-            return [f for f in facts if len(f) > 4]
-        except Exception as exc:
-            if attempt < MAX_RETRIES - 1:
-                tqdm.write(f"  [factmatch] LLM error (attempt {attempt + 1}): {exc}")
-                time.sleep(RETRY_SLEEP * (attempt + 1))
-            else:
-                tqdm.write(f"  [factmatch] LLM failed after {MAX_RETRIES} attempts: {exc}")
-                return []
+    try:
+        resp = get_llm().converse(
+            stage="decomp", model_id=BEDROCK_GEN_MODEL,
+            messages=[{"role": "user", "content": [{"text": prompt}]}],
+            inference_config={"maxTokens": max_tokens, "temperature": 0.0},
+        )
+    except Exception:
+        return []
+    text = resp["output"]["message"]["content"][0]["text"].strip()
+    facts = [f.strip() for f in text.split("//") if f.strip()]
+    return [f for f in facts if len(f) > 4]
 
 
 def extract_transcript_facts(transcript: str) -> List[str]:

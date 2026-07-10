@@ -15,6 +15,7 @@
       "The abdominal pain is exacerbated by fatty foods.",
       "The patient is on a keto diet.",
       "The patient has lost 25 pounds over the last 3 months.",
+      "The patient started the keto diet 3 months ago.",
       "The patient has seen improvement in his blood sugar control.",
       "The patient has type 2 diabetes.",
       "The patient manages his type 2 diabetes with diet.",
@@ -52,34 +53,32 @@
     "assessment": [
       "The patient has mild cholecystitis.",
       "The patient has gallstones.",
-      "The patient has a possible obstruction.",
-      "The patient's cholecystitis is mild.",
+      "The patient may have a possible obstruction.",
+      "The patient has cholecystitis.",
       "The patient has Type 2 diabetes.",
       "The Type 2 diabetes is confirmed.",
-      "The patient has a family history of gallbladder disease.",
-      "Cholecystitis is a problem.",
-      "Gallstones are a problem.",
-      "Type 2 diabetes is a problem."
+      "The patient has a family history of gallbladder disease."
     ],
     "plan": [
       "The doctor prescribed a medication.",
       "The medication dose is not mentioned.",
       "The medication frequency is not mentioned.",
-      "The medication is prescribed for a condition that is not mentioned.",
+      "The medication is prescribed for a condition not mentioned.",
       "The doctor recommended a laparoscopic cholecystectomy.",
       "A laparoscopic cholecystectomy is done to remove the gallbladder.",
-      "The surgery time for the laparoscopic cholecystectomy is about an hour.",
-      "The surgery time for the laparoscopic cholecystectomy is about an hour and a half.",
-      "The patient will spend the night in the hospital for monitoring post-procedure.",
+      "The surgery time for a laparoscopic cholecystectomy is about an hour.",
+      "The surgery time for a laparoscopic cholecystectomy is about an hour and a half.",
+      "The patient will spend the night in the hospital after surgery.",
+      "The patient will be monitored post-procedure.",
       "The patient is advised to avoid high-fat foods after surgery.",
       "The patient is advised to eat high-fiber foods after surgery.",
-      "The patient will be encouraged to get up and move around on solid ground within a day after surgery.",
-      "The patient will be encouraged to get up and move around on solid ground within two days after surgery.",
-      "The doctor will see the patient in a week.",
+      "The patient will be encouraged to get up and move around within a day after surgery.",
+      "The patient will be encouraged to get up and move around within two days after surgery.",
+      "The patient will be seen by the doctor in a week.",
       "The purpose of the follow-up is to monitor the patient's progress.",
-      "The patient will be released to return to normal activities at follow-up.",
-      "The patient will be released to go hiking at follow-up.",
-      "The patient will be released to go photography at follow-up."
+      "The patient will be released to return to normal activities after the follow-up.",
+      "The patient's normal activities include hiking.",
+      "The patient's normal activities include photography."
     ]
   },
   {
@@ -105,8 +104,7 @@
       "The patient's parents had their gallbladders removed.",
       "The patient denies vomiting.",
       "The patient reports occasional low-grade fever.",
-      "The patient reports nausea.",
-      "The patient denies other symptoms."
+      "The patient reports nausea."
     ],
     "objective": [
       "The patient's blood pressure is 128/88.",
@@ -129,12 +127,9 @@
       "The patient has cholecystitis.",
       "The patient has mild cholecystitis.",
       "The patient has gallstones.",
-      "Cholecystitis is associated with gallstones.",
+      "The patient has cholecystitis with gallstones.",
       "The patient has Type 2 diabetes.",
-      "The Type 2 diabetes is active.",
-      "Cholecystitis with gallstones is a problem.",
-      "Gallstones are a problem.",
-      "Type 2 diabetes is a problem."
+      "The Type 2 diabetes is active."
     ],
     "plan": [
       "The doctor prescribed pain management.",
@@ -149,14 +144,14 @@
       "The patient should eat foods high in fiber.",
       "The patient should eat foods high in fiber after surgery.",
       "The doctor advised the patient to follow up with his primary care provider.",
-      "The patient has type 2 diabetes.",
       "The primary care provider will monitor the patient's type 2 diabetes.",
       "The patient will follow up with the doctor.",
       "The patient will follow up with the doctor in a week.",
       "The follow-up with the doctor is for post-operative care.",
       "The patient will be released to resume normal activities.",
       "The patient will resume hiking.",
-      "The patient will resume nature photography."
+      "The patient will resume nature photography.",
+      "The patient will resume normal activities after post-operative care."
     ]
   },
   {
@@ -174,8 +169,8 @@
       "The pain is exacerbated by fatty foods.",
       "The pain is triggered by meals.",
       "The patient has a history of type 2 diabetes.",
-      "The patient's type 2 diabetes is managed with diet.",
-      "The patient's type 2 diabetes is managed with exercise.",
+      "The type 2 diabetes is managed with diet.",
+      "The type 2 diabetes is managed with exercise.",
       "The patient is on a keto diet.",
       "The patient has lost 25 pounds of weight.",
       "The weight loss occurred over the past 3 months.",
@@ -202,10 +197,10 @@
       "The patient has pain upon palpation beneath the ribs on the right side.",
       "The patient's lungs are clear.",
       "The patient's lungs are equal bilaterally to auscultation.",
-      "The patient has multiple gallstones in the gallbladder.",
-      "The patient's gallbladder wall is mildly thickened.",
-      "The patient's common bile duct size is 4.1 mm.",
-      "The patient's common bile duct size is within normal limits."
+      "The patient's abdominal ultrasound shows multiple gallstones in the gallbladder.",
+      "The patient has mild thickening of the gallbladder wall.",
+      "The common bile duct size is within normal limits.",
+      "The common bile duct size is 4.1 mm."
     ],
     "assessment": [
       "The patient has mild cholecystitis.",
@@ -217,7 +212,7 @@
       "The patient has Gallbladder disease."
     ],
     "plan": [
-      "The doctor plans to perform a laparoscopic cholecystectomy.",
+      "The patient will undergo a laparoscopic cholecystectomy.",
       "The procedure is to remove the patient's gallbladder.",
       "The surgery will take approximately 1 hour.",
       "The surgery will take approximately 2 hours.",
@@ -227,7 +222,7 @@
       "The patient will be advised to eat a high-fiber diet.",
       "The patient will be seen again in a week.",
       "The follow-up visit is scheduled in a week.",
-      "The purpose of the visit is for follow-up."
+      "The purpose of the follow-up visit is for follow-up."
     ]
   }
 ]

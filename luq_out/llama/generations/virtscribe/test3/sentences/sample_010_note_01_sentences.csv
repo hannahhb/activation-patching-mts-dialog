@@ -1,0 +1,25 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Michelle King, a 36-year-old female, presents with a 24-year history of acid reflux, which has worsened over the past few years.",1.0
+2,"She reports taking 40 mg of omeprazole twice daily, but her symptoms persist.",0.0
+3,"She describes the sensation of burning in her chest and throat, particularly after consuming certain foods and beverages, including spicy foods, carbonated drinks, citrus products, and tomato-based products.",0.0
+4,"She denies difficulty swallowing, abdominal pain, nausea, vomiting, changes in bowel movements, constipation, diarrhea, or rectal bleeding.",0.5
+5,She has a history of anxiety and seasonal allergies.,0.0
+6,Past medical history: The patient has a history of anxiety and seasonal allergies.,0.0
+7,"Review of systems: The patient reports a stable weight, although she has had a decreased appetite for the past 2 months due to work-related stress.",1.0
+8,Current medications: Omeprazole 40 mg twice daily.,0.0
+9,Objective:,0.0
+10,Vital signs: [NOT MENTIONED],0.0
+11,"Physical exam: A well-healed abdominal surgical scar is noted, which the patient attributes to a surgery she underwent at 1 month old for intestinal twisting.",0.75
+12,Test Results: [NOT MENTIONED],0.0
+13,Assessment / Problem List:,0.0
+14,Assessment: I suspect that the patient likely has gastroesophageal reflux disease (GERD) with an underlying functional etiology.,0.0
+15,Problem list: GERD; suspected; confirmed; [NOT MENTIONED],0.75
+16,Plan:,0.0
+17,I prescribed Nexium 40 mg twice daily to replace her current omeprazole regimen.,0.25
+18,"I recommend that she avoid trigger foods, including spicy foods, carbonated beverages, citrus products, and tomato-based products, and work on managing stress and anxiety.",0.5
+19,"I also recommend an upper endoscopy (EGD) to investigate potential causes of her GERD, including ulcers, precancerous, or cancerous conditions.",0.0
+20,"The procedure will involve sedation and a small camera passed through her mouth to examine her esophagus, stomach, and small intestines.",0.25
+21,I will send a prescription for Nexium to her pharmacy on file and schedule the EGD at the checkout desk.,0.75
+22,Follow-up: I will see the patient in the office for follow-up after the EGD to discuss the results and assess her progress with the dietary changes and medication adjustments.,1.0
+23,"If the EGD is normal and her symptoms persist, we can consider a trial of Protonix and obtain a pH impedance study to rule out abnormal acid reflux exposure and determine the etiology of her symptoms.",1.0

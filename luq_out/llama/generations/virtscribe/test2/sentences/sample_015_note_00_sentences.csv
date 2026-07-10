@@ -1,0 +1,28 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Mr. Nelson, a 73-year-old male, presents with ongoing management of rheumatoid arthritis.",0.75
+2,"He reports that his right knee has been swollen for approximately 2 months, with pain level ranging from 3 to 6 out of 10.",0.75
+3,"He has tried compression socks, which provide some relief but not complete resolution.",0.5
+4,"He experiences stiffness, particularly when getting up from a seated position, and requires a cane for support.",0.0
+5,"He has been taking Xeljanz (11 mg daily) and Celebrex (200 mg daily) for 2 months, with some improvement in symptoms before the recent increase in swelling.",1.0
+6,"Past medical history: The patient has a history of rheumatoid arthritis, for which he has been receiving treatment.",0.0
+7,Review of systems: The patient reports no other symptoms related to his rheumatoid arthritis.,0.75
+8,Current medications:,0.0
+9,Xeljanz 11 mg daily,0.0
+10,Celebrex 200 mg daily,0.0
+11,Objective:,0.0
+12,Vital signs: [NOT MENTIONED],0.0
+13,"Physical exam: The patient's knee is swollen, with pitting around the knee and ankle.",0.25
+14,"The patient reports pain and stiffness, particularly when straightening the knee.",0.75
+15,Normal capillary refill in the toes.,0.25
+16,Test Results: [NOT MENTIONED],0.0
+17,Assessment / Problem List:,0.0
+18,"Assessment: The patient has recurrent swelling and pain in his right knee, likely related to his rheumatoid arthritis.",0.75
+19,Problem list: Rheumatoid arthritis; swelling of the right knee; pain of the right knee; stiffness of the right knee.,1.0
+20,Plan:,0.0
+21,I prescribed a steroid injection (80 mg of triamcinolone and 1 ml of lidocaine) for the patient's right knee.,0.5
+22,I also ordered an x-ray of the knee to investigate the cause of the swelling.,0.25
+23,I will refer the patient to physical therapy to address his stiffness and mobility issues.,1.0
+24,"If the current treatment plan does not improve his symptoms, I will consider a surgery consult to discuss further management options.",0.75
+25,Follow-up: I will see the patient again in 2-3 months to reassess his symptoms and adjust his treatment plan as needed.,0.75
+26,"I also instructed the patient to follow up with his primary care physician for routine monitoring of his CMP levels, which are currently within normal limits.",1.0

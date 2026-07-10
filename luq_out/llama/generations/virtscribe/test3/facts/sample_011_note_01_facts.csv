@@ -1,0 +1,50 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 39-year-old female.,0.0
+1,subjective,The patient has a history of quadriplegia.,0.0
+2,subjective,The patient's quadriplegia is due to a prior spinal cord injury.,0.0
+3,subjective,The patient presented with concerns of spasms.,0.0
+4,subjective,The patient presented with concerns of lightheadedness.,0.0
+5,subjective,The patient presented with concerns of significant constipation.,0.0
+6,subjective,The patient presented with concerns of diaphoresis.,0.0
+7,subjective,The patient was admitted to the hospital on 6/29/2021.,0.75
+8,subjective,The patient was discharged from the hospital on 7/2/2021.,0.75
+9,subjective,The patient was treated for a febrile condition.,0.5
+10,subjective,"The patient had an elevated white blood cell count of 23,000.",0.75
+11,subjective,The patient has concerns for an ongoing urinary tract infection.,0.75
+12,subjective,The patient believes her hospitalization was due to autonomic dysreflexia.,0.25
+13,subjective,The patient's autonomic dysreflexia is due to her quadriplegia.,0.0
+14,subjective,The patient's autonomic dysreflexia typically causes blood pressure fluctuations.,0.5
+15,subjective,The patient takes Miralax.,0.0
+16,subjective,The Miralax dose is not specified.,0.0
+17,subjective,Miralax is taken regularly.,0.0
+18,subjective,Miralax is prescribed for constipation.,0.0
+19,subjective,The patient takes Lactulose.,0.0
+20,subjective,The Lactulose dose is not specified.,0.0
+21,subjective,Lactulose is taken regularly.,0.5
+22,subjective,Lactulose is prescribed for severe constipation.,0.0
+23,subjective,The patient denied other symptoms.,0.75
+24,objective,The patient's vital signs were not mentioned.,0.5
+25,objective,The doctor performed a physical exam.,0.0
+26,objective,The patient denied pain.,1.0
+27,objective,The patient denied discomfort.,1.0
+28,objective,The patient had an elevated white blood cell count.,0.25
+29,objective,"The white blood cell count is 23,000.",0.25
+30,objective,The elevated white blood cell count is resolved.,1.0
+31,objective,Urine cultures were performed.,0.25
+32,objective,The urine cultures were not impressive.,1.0
+33,objective,X-rays were performed.,0.75
+34,objective,The X-ray results were not mentioned.,0.0
+35,assessment,The patient is a female.,1.0
+36,assessment,The patient is 39 years old.,1.0
+37,assessment,The patient has quadriplegia.,0.0
+38,assessment,The patient has a history of autonomic dysreflexia.,0.75
+39,assessment,The patient is presenting with concerns of constipation.,0.0
+40,assessment,The patient is presenting with an elevated white blood cell count.,0.0
+41,assessment,The patient's COVID vaccine status is unknown.,0.0
+42,plan,The patient will return in 2-3 weeks for follow-up.,0.0
+43,plan,The patient will have updated fasting labs in 2-3 weeks.,0.0
+44,plan,The updated fasting labs will include a CBC.,0.0
+45,plan,The purpose of the CBC is to ensure the patient's white blood cell count trends downward.,0.0
+46,plan,The doctor recommended the COVID vaccine.,0.0
+47,plan,The COVID vaccine is a preventative mechanism for COVID-19.,0.0
+48,plan,The patient is hesitant about the COVID vaccine.,1.0

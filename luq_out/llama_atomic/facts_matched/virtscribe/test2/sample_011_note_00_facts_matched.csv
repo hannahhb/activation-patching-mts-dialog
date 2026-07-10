@@ -1,0 +1,73 @@
+fact_idx,section,fact,uncertainty,match_sent_idx,sentence_text,precision,matched_by,clean_match,entity_score,entity_effective,name_overlap,number_overlap,salient_precision,lemma_precision,lcs_precision,neg_match,score
+0,subjective,The patient's name is Amanda Taylor.,0.25,1.0,"HPI: The patient, Amanda Taylor, a 72-year-old woman, presents for follow-up for hypertension.",0.9,name,True,0.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,0.9
+1,subjective,The patient is a woman.,0.0,1.0,"HPI: The patient, Amanda Taylor, a 72-year-old woman, presents for follow-up for hypertension.",0.23,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.23
+2,subjective,The patient is 72 years old.,0.0,1.0,"HPI: The patient, Amanda Taylor, a 72-year-old woman, presents for follow-up for hypertension.",0.21,,False,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.21
+3,subjective,The patient presents for follow-up for hypertension.,0.0,1.0,"HPI: The patient, Amanda Taylor, a 72-year-old woman, presents for follow-up for hypertension.",0.93,entity,True,0.85,0.85,0.0,0.0,1.0,1.0,1.0,1.0,0.93
+4,subjective,The patient has a history of significant alcohol use disorder.,0.0,2.0,She has a history of significant alcohol use disorder and mild hypercholesterolemia.,0.93,entity,True,0.85,0.85,0.0,0.0,0.0,1.0,1.0,1.0,0.93
+5,subjective,The patient has a history of mild hypercholesterolemia.,0.0,2.0,She has a history of significant alcohol use disorder and mild hypercholesterolemia.,0.93,entity,True,0.85,0.85,0.0,0.0,0.0,1.0,1.0,1.0,0.93
+6,subjective,The patient's last visit was on April 16.,0.75,3.0,"Her last visit was on April 16, with a blood pressure of 130/90.",0.88,name,True,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.88
+7,subjective,The patient's blood pressure was 130/90 on April 16.,0.75,3.0,"Her last visit was on April 16, with a blood pressure of 130/90.",0.88,name,True,0.0,0.0,1.0,1.0,1.0,1.0,0.6,1.0,0.88
+8,subjective,The patient has been drinking 4 to 5 days a week.,0.25,4.0,"She has been struggling with not drinking and has had a history of drinking 4 to 5 days a week, consuming hard alcohol.",0.88,number,True,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,0.88
+9,subjective,The patient consumes hard alcohol.,0.5,2.0,She has a history of significant alcohol use disorder and mild hypercholesterolemia.,0.93,,False,0.85,0.85,0.0,0.0,0.0,0.333,0.333,1.0,0.93
+10,subjective,The patient has tried to stop drinking.,0.0,5.0,"She has tried to stop drinking, but has been experiencing withdrawal symptoms.",0.23,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.23
+11,subjective,The patient has been experiencing withdrawal symptoms.,1.0,5.0,"She has tried to stop drinking, but has been experiencing withdrawal symptoms.",0.23,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.23
+12,subjective,The doctor prescribed lisinopril.,0.0,6.0,She is currently taking lisinopril 10 mg daily and hydrochlorothiazide 12.5 mg daily.,0.93,entity,True,0.85,0.85,0.0,0.0,0.0,0.5,0.5,1.0,0.93
+13,subjective,The lisinopril dose is 10 mg.,0.0,6.0,She is currently taking lisinopril 10 mg daily and hydrochlorothiazide 12.5 mg daily.,0.93,entity,True,0.85,0.85,0.0,1.0,1.0,0.75,0.75,1.0,0.93
+14,subjective,Lisinopril is taken daily.,0.25,6.0,She is currently taking lisinopril 10 mg daily and hydrochlorothiazide 12.5 mg daily.,0.93,entity,True,0.85,0.85,0.0,0.0,0.0,1.0,0.667,1.0,0.93
+15,subjective,The doctor prescribed hydrochlorothiazide.,0.0,13.0,Hydrochlorothiazide 12.5 mg daily,0.93,entity,True,0.85,0.85,0.0,0.0,0.0,0.5,0.5,1.0,0.93
+16,subjective,The hydrochlorothiazide dose is 12.5 mg.,0.0,13.0,Hydrochlorothiazide 12.5 mg daily,0.93,entity,True,0.85,0.85,0.0,1.0,1.0,0.75,0.75,1.0,0.93
+17,subjective,Hydrochlorothiazide is taken daily.,0.25,13.0,Hydrochlorothiazide 12.5 mg daily,0.93,entity,True,0.85,0.85,1.0,0.0,0.0,0.667,0.667,1.0,0.93
+18,subjective,The patient has received the coronavirus vaccine.,0.5,8.0,She has received the coronavirus vaccine on February 9.,0.23,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.23
+19,subjective,The patient received the coronavirus vaccine on February 9.,0.5,8.0,She has received the coronavirus vaccine on February 9.,0.88,name,True,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.88
+20,subjective,The patient denied fever.,0.0,9.0,"Review of systems: The patient denies fever, cough, shortness of breath, or sore throat.",0.374,lcs,True,0.45,0.45,0.0,0.0,0.0,1.0,1.0,1.0,0.374
+21,subjective,The patient denied cough.,0.0,9.0,"Review of systems: The patient denies fever, cough, shortness of breath, or sore throat.",0.93,entity,True,0.85,0.85,0.0,0.0,0.0,1.0,1.0,1.0,0.93
+22,subjective,The patient denied shortness of breath.,0.0,9.0,"Review of systems: The patient denies fever, cough, shortness of breath, or sore throat.",0.93,entity,True,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,0.93
+23,subjective,The patient denied sore throat.,0.0,9.0,"Review of systems: The patient denies fever, cough, shortness of breath, or sore throat.",0.93,entity,True,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,0.93
+24,subjective,The patient has not had recent travel.,0.25,10.0,She has not had recent travel or contact with the coronavirus.,0.23,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.23
+25,subjective,The patient has not had contact with the coronavirus.,0.25,10.0,She has not had recent travel or contact with the coronavirus.,0.23,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.23
+26,subjective,Lisinopril is prescribed for the patient.,0.0,6.0,She is currently taking lisinopril 10 mg daily and hydrochlorothiazide 12.5 mg daily.,0.93,entity,True,0.85,0.85,0.0,0.0,0.0,0.5,0.5,1.0,0.93
+27,subjective,Hydrochlorothiazide is prescribed for the patient.,0.0,13.0,Hydrochlorothiazide 12.5 mg daily,0.93,entity,True,0.85,0.85,1.0,0.0,0.0,0.5,0.5,1.0,0.93
+28,subjective,The patient is taking lisinopril for hypertension.,0.0,1.0,"HPI: The patient, Amanda Taylor, a 72-year-old woman, presents for follow-up for hypertension.",0.93,,False,0.85,0.85,0.0,0.0,0.0,0.333,0.333,1.0,0.93
+29,subjective,The patient is taking hydrochlorothiazide for hypertension.,0.25,1.0,"HPI: The patient, Amanda Taylor, a 72-year-old woman, presents for follow-up for hypertension.",0.93,,False,0.85,0.85,0.0,0.0,0.0,0.333,0.333,1.0,0.93
+30,objective,The patient is alert.,0.0,16.0,"Physical exam: The patient is alert, pleasant, and in no acute distress.",0.13,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.13
+31,objective,The patient is pleasant.,0.0,16.0,"Physical exam: The patient is alert, pleasant, and in no acute distress.",0.13,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.13
+32,objective,The patient is in no acute distress.,0.0,16.0,"Physical exam: The patient is alert, pleasant, and in no acute distress.",0.23,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.23
+33,objective,The patient's skin is moist.,0.25,17.0,Her skin is moist.,0.23,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.23
+34,objective,The patient is not diabetic.,0.75,18.0,She is not diabetic.,0.93,entity,True,0.85,0.85,0.0,0.0,0.0,1.0,1.0,1.0,0.93
+35,objective,There is no tremor.,0.25,19.0,There is no tremor.,0.93,entity,True,0.85,0.85,1.0,0.0,0.0,1.0,1.0,1.0,0.93
+36,objective,There is no CVA tenderness.,0.25,20.0,No CVA tenderness.,0.93,entity,True,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,0.93
+37,objective,The patient's chest is clear to percussion.,0.25,21.0,Her chest is clear to percussion and auscultation.,0.23,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.23
+38,objective,The patient's chest is clear to auscultation.,0.25,21.0,Her chest is clear to percussion and auscultation.,0.23,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.23
+39,objective,The patient's breathing is unlabored.,0.0,22.0,Her breathing is unlabored.,0.23,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.23
+40,objective,The patient's cardiac rhythm is regular.,0.0,23.0,Her cardiac rhythm is regular.,0.23,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.23
+41,objective,There is no murmur.,0.0,19.0,There is no tremor.,0.23,,False,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.23
+42,objective,There is no gallop.,0.0,19.0,There is no tremor.,0.23,,False,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.23
+43,objective,The patient's JVP is flat.,0.0,25.0,Her JVP is flat with a head at 90 degrees.,0.93,entity,True,0.85,0.85,1.0,0.0,0.0,1.0,1.0,1.0,0.93
+44,objective,The patient's JVP was measured with her head at 90 degrees.,0.0,25.0,Her JVP is flat with a head at 90 degrees.,0.88,name,True,0.0,0.0,1.0,1.0,1.0,0.8,0.8,1.0,0.88
+45,objective,The patient does not appear anxious.,0.0,26.0,"She does not appear anxious, agitated, or depressed.",0.23,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.23
+46,objective,The patient does not appear agitated.,0.0,26.0,"She does not appear anxious, agitated, or depressed.",0.23,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.23
+47,objective,The patient does not appear depressed.,0.0,26.0,"She does not appear anxious, agitated, or depressed.",0.93,entity,True,0.85,0.85,0.0,0.0,0.0,1.0,1.0,1.0,0.93
+48,assessment,The patient has alcohol use disorder.,0.0,28.0,"Assessment: The patient has alcohol use disorder, which is confirmed by her history of drinking 4 to 5 days a week and her struggles with withdrawal symptoms.",0.93,entity,True,0.85,0.85,0.0,0.0,0.0,1.0,1.0,1.0,0.93
+49,assessment,The patient drinks 4 to 5 days a week.,1.0,28.0,"Assessment: The patient has alcohol use disorder, which is confirmed by her history of drinking 4 to 5 days a week and her struggles with withdrawal symptoms.",0.88,number,True,0.0,0.0,0.0,1.0,1.0,0.8,0.8,1.0,0.88
+50,assessment,The patient experiences withdrawal symptoms.,1.0,28.0,"Assessment: The patient has alcohol use disorder, which is confirmed by her history of drinking 4 to 5 days a week and her struggles with withdrawal symptoms.",0.14,lcs,True,0.0,0.0,0.0,0.0,0.0,0.5,0.5,1.0,0.14
+51,assessment,The patient wants to start naltrexone.,1.0,29.0,The patient would like to start naltrexone to help with alcohol cessation.,0.93,entity,True,0.85,0.85,0.0,0.0,0.0,0.667,0.667,1.0,0.93
+52,assessment,The doctor prescribed naltrexone.,1.0,29.0,The patient would like to start naltrexone to help with alcohol cessation.,0.93,entity,True,0.85,0.85,0.0,0.0,0.0,0.5,0.5,1.0,0.93
+53,assessment,The naltrexone is prescribed for alcohol cessation.,1.0,28.0,"Assessment: The patient has alcohol use disorder, which is confirmed by her history of drinking 4 to 5 days a week and her struggles with withdrawal symptoms.",0.93,,False,0.85,0.255,0.0,0.0,0.0,0.25,0.25,1.0,0.93
+54,assessment,The patient has hypertension.,0.0,30.0,Problem list: Alcohol use disorder; Hypertension; Hypercholesterolemia; None other.,0.93,entity,True,0.85,0.85,0.0,0.0,0.0,1.0,1.0,1.0,0.93
+55,assessment,The patient has hypercholesterolemia.,0.5,30.0,Problem list: Alcohol use disorder; Hypertension; Hypercholesterolemia; None other.,0.93,entity,True,0.85,0.85,0.0,0.0,0.0,1.0,1.0,1.0,0.93
+56,assessment,The patient does not have other medical problems.,1.0,,,0.0,,False,,,,,,,,,
+57,plan,The naltrexone dose is not specified.,0.0,32.0,"I prescribed naltrexone, which will be administered via injection on May 17.",0.93,,False,0.85,0.85,0.0,0.0,0.0,0.333,0.333,0.0,0.93
+58,plan,Naltrexone is administered via injection.,0.0,32.0,"I prescribed naltrexone, which will be administered via injection on May 17.",0.93,entity,True,0.85,0.85,0.0,0.0,0.0,1.0,1.0,1.0,0.93
+59,plan,The first naltrexone injection is on May 17.,0.0,32.0,"I prescribed naltrexone, which will be administered via injection on May 17.",0.93,entity,True,0.85,0.85,1.0,1.0,0.5,1.0,1.0,1.0,0.93
+60,plan,Naltrexone may cause nausea.,1.0,32.0,"I prescribed naltrexone, which will be administered via injection on May 17.",0.93,,False,0.85,0.85,0.0,0.0,0.0,0.333,0.333,1.0,0.93
+61,plan,Naltrexone may cause headache.,1.0,32.0,"I prescribed naltrexone, which will be administered via injection on May 17.",0.93,,False,0.85,0.85,0.0,0.0,0.0,0.333,0.333,1.0,0.93
+62,plan,Naltrexone may cause dizziness.,1.0,32.0,"I prescribed naltrexone, which will be administered via injection on May 17.",0.93,,False,0.85,0.85,0.0,0.0,0.0,0.333,0.333,1.0,0.93
+63,plan,Naltrexone may cause anxiety.,1.0,32.0,"I prescribed naltrexone, which will be administered via injection on May 17.",0.93,,False,0.85,0.85,0.0,0.0,0.0,0.333,0.333,1.0,0.93
+64,plan,Naltrexone may cause tiredness.,1.0,32.0,"I prescribed naltrexone, which will be administered via injection on May 17.",0.93,,False,0.85,0.85,0.0,0.0,0.0,0.333,0.333,1.0,0.93
+65,plan,Naltrexone may cause trouble sleeping.,1.0,32.0,"I prescribed naltrexone, which will be administered via injection on May 17.",0.93,,False,0.85,0.255,0.0,0.0,0.0,0.25,0.25,1.0,0.93
+66,plan,The patient needs an influenza vaccination upgrade.,0.25,34.0,"I also recommended upgrading her influenza vaccination and Shingrix, which she deferred.",0.163,lcs,True,0.0,0.0,0.0,0.0,0.0,0.75,0.5,1.0,0.163
+67,plan,The patient needs a Shingrix upgrade.,0.25,34.0,"I also recommended upgrading her influenza vaccination and Shingrix, which she deferred.",0.9,name,True,0.0,0.0,1.0,0.0,0.0,0.667,0.333,1.0,0.9
+68,plan,The patient deferred the influenza vaccination upgrade.,0.25,34.0,"I also recommended upgrading her influenza vaccination and Shingrix, which she deferred.",0.185,lcs,True,0.0,0.0,0.0,0.0,0.0,1.0,0.5,1.0,0.185
+69,plan,The patient deferred the Shingrix upgrade.,0.25,34.0,"I also recommended upgrading her influenza vaccination and Shingrix, which she deferred.",0.9,name,True,0.0,0.0,1.0,0.0,0.0,1.0,0.333,1.0,0.9
+70,plan,The patient has a follow-up appointment on June 14.,0.75,35.0,"I will see her back on June 14 for a follow-up, which is likely around the time of her second naltrexone injection.",0.88,name,True,0.0,0.0,1.0,1.0,1.0,0.75,0.5,1.0,0.88
+71,plan,The second naltrexone injection is likely on June 14.,0.75,35.0,"I will see her back on June 14 for a follow-up, which is likely around the time of her second naltrexone injection.",0.957,entity,True,0.85,0.85,1.0,1.0,1.0,1.0,0.5,1.0,0.957

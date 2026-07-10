@@ -1,0 +1,61 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient presents with anxiety.,0.0
+1,subjective,The patient's blood work shows a diagnosis of hepatitis C.,0.1111
+2,subjective,The patient reports feeling fine despite the diagnosis of hepatitis C.,0.3333
+3,subjective,The patient denied a past medical history of hepatitis C.,1.0
+4,subjective,The patient has a history of intravenous drug use.,0.0
+5,subjective,The patient has a history of alcohol consumption.,0.0
+6,subjective,The patient's current alcohol intake is one beer per day.,0.3333
+7,subjective,The patient smokes one to two cigarettes per day.,0.1111
+8,subjective,The patient has a family history of hypertension.,0.0
+9,subjective,The patient has a family history of diabetes.,0.0
+10,subjective,The patient has a family history of depression.,0.0
+11,subjective,The patient has been clean from intravenous drug use for over 15 years.,0.1111
+12,subjective,The patient's past alcohol consumption was heavy.,0.3333
+13,subjective,The patient reports feeling tired at the end of the day.,0.0
+14,subjective,The patient gets enough sleep.,0.3333
+15,subjective,The patient denied any other symptoms besides feeling tired.,0.1111
+16,objective,The patient appears in no distress.,0.0
+17,objective,The patient has no jaundice on skin exam.,0.0
+18,objective,The patient's heart exam reveals a regular rate.,0.0
+19,objective,The patient's heart exam reveals a regular rhythm.,0.0
+20,objective,The patient has a 2/6 systolic murmur.,0.0
+21,objective,The patient's systolic murmur has not changed from last year.,0.0
+22,objective,The patient's lung exam is clear.,0.0
+23,objective,The patient has no wheezes.,0.0
+24,objective,The patient has no rales.,0.0
+25,objective,The patient has no rhonchi.,0.0
+26,objective,The patient has present bowel sounds.,0.4444
+27,objective,The patient's abdomen is soft.,0.0
+28,objective,The patient has no hepatosplenomegaly.,0.0
+29,objective,The patient's musculoskeletal exam is unremarkable.,0.0
+30,objective,The patient's HCV antibody test was positive.,0.0
+31,objective,The patient's liver panel showed an elevated AST.,0.0
+32,objective,The patient's AST level is 39.,0.0
+33,objective,The patient's albumin level is normal.,0.2222
+34,objective,The patient's total bilirubin level is normal.,0.0
+35,assessment,The patient has a confirmed diagnosis of hepatitis C.,0.0
+36,assessment,The patient tested positive for HCV antibody.,0.3333
+37,assessment,The patient has an elevated AST level.,0.8889
+38,assessment,The patient has a diagnosis of Hepatitis C.,0.0
+39,assessment,The patient has a diagnosis of Hypertension.,0.8889
+40,assessment,The patient has a diagnosis of Diabetes.,0.8889
+41,assessment,The patient has a diagnosis of Depression.,0.8889
+42,plan,The doctor prescribed additional blood work.,0.0
+43,plan,The additional blood work is to confirm the diagnosis.,0.0
+44,plan,The additional blood work is to determine the severity of the patient's liver disease.,0.75
+45,plan,The patient will undergo HCV RNA testing.,0.0
+46,plan,The HCV RNA testing is part of the additional blood work.,0.25
+47,plan,The patient will undergo HCV genotype testing.,0.125
+48,plan,The HCV genotype testing is part of the additional blood work.,0.25
+49,plan,The doctor ordered an ultrasound.,0.0
+50,plan,The ultrasound is to assess liver fibrosis.,0.125
+51,plan,The patient has liver disease.,0.625
+52,plan,The patient has hepatitis C.,1.0
+53,plan,The doctor will schedule follow-up appointments in three weeks.,0.125
+54,plan,The follow-up appointments are to discuss the results of the additional testing.,0.125
+55,plan,The follow-up appointments are to determine the next steps in treatment.,0.0
+56,plan,The doctor will recommend screening for hepatitis C to the patient's family members.,0.25
+57,plan,The patient will have a follow-up appointment in three weeks.,0.0
+58,plan,The doctor will review the results of the additional testing at the follow-up appointment.,0.125
+59,plan,The doctor will discuss the next steps in treatment at the follow-up appointment.,0.25

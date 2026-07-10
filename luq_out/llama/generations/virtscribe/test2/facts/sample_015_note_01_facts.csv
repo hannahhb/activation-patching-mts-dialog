@@ -1,0 +1,60 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Mr. Nelson.,0.25
+1,subjective,The patient is a male.,0.0
+2,subjective,The patient is 72 years old.,0.5
+3,subjective,The patient has rheumatoid arthritis.,0.0
+4,subjective,The patient's knee is swollen.,0.0
+5,subjective,The patient's knee is painful.,0.0
+6,subjective,The patient's pain level is approximately 3 out of 10 on a normal day.,1.0
+7,subjective,The patient's pain level is up to 6 out of 10 at times.,0.25
+8,subjective,The swelling in the patient's knee has been present for about 2 months.,0.0
+9,subjective,The patient uses compression socks.,0.25
+10,subjective,The compression socks provide some relief.,0.5
+11,subjective,The compression socks are not fully effective.,0.25
+12,subjective,The patient has difficulty getting up from sitting.,0.0
+13,subjective,The patient requires a cane for support.,0.0
+14,subjective,The patient experiences stiffness in his knee.,0.0
+15,subjective,The doctor prescribed Xeljanz.,0.0
+16,subjective,The Xeljanz dose is 11 mg.,0.0
+17,subjective,Xeljanz is taken daily.,0.0
+18,subjective,The doctor prescribed Celebrex.,0.0
+19,subjective,The Celebrex dose is 200 mg.,0.0
+20,subjective,Celebrex is taken daily.,0.0
+21,subjective,Xeljanz is prescribed for rheumatoid arthritis.,0.0
+22,subjective,Celebrex is prescribed for rheumatoid arthritis.,0.0
+23,subjective,The patient has a history of rheumatoid arthritis.,0.0
+24,subjective,The patient has been receiving treatment for rheumatoid arthritis.,0.0
+25,subjective,The patient denied other symptoms in other organs.,0.25
+26,objective,There is pitting around the patient's knee.,0.25
+27,objective,There is pitting around the patient's ankle.,0.25
+28,objective,The patient has normal capillary refill in the toes.,0.25
+29,objective,The patient's knee is hot to the touch.,0.5
+30,objective,The patient has inflammation in the knee.,0.0
+31,assessment,The patient has worsening knee swelling.,0.5
+32,assessment,The patient has worsening knee pain.,0.5
+33,assessment,The patient's problem list includes Rheumatoid Arthritis.,0.0
+34,assessment,The patient's problem list includes Swelling of the knee.,0.25
+35,assessment,The patient's problem list includes Pain.,0.5
+36,assessment,The patient's problem list includes Inflammation of the knee.,0.75
+37,plan,The doctor prescribed a steroid injection.,0.0
+38,plan,The steroid injection contains triamcinolone.,0.25
+39,plan,The triamcinolone dose is 80 mg.,0.25
+40,plan,The steroid injection contains lidocaine.,0.25
+41,plan,The lidocaine dose is 1 ml.,0.25
+42,plan,The steroid injection is for knee inflammation.,0.0
+43,plan,The doctor ordered an x-ray.,0.25
+44,plan,The x-ray is of the knee.,0.25
+45,plan,The x-ray is to investigate the cause of swelling.,0.25
+46,plan,The patient has knee swelling.,0.0
+47,plan,The doctor recommended reducing salt intake.,0.25
+48,plan,Reducing salt intake is to alleviate swelling.,0.25
+49,plan,The doctor recommended propping feet up at night.,0.25
+50,plan,Propping feet up at night is to alleviate swelling.,0.25
+51,plan,The patient takes Xeljanz.,0.75
+52,plan,Xeljanz is a high-risk medication.,1.0
+53,plan,The doctor advised the patient to follow up with their primary care physician.,0.0
+54,plan,The primary care physician will discuss further management of the patient's condition.,0.5
+55,plan,The doctor instructed the patient to schedule blood work.,0.25
+56,plan,The blood work is for CPM levels.,1.0
+57,plan,The patient will follow up with their primary care physician.,0.0
+58,plan,The patient will return for a follow-up appointment as needed.,0.25

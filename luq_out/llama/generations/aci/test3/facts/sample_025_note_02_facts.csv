@@ -1,0 +1,53 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 30-year-old male.,0.25
+1,subjective,The patient presents with right flank pain.,0.0
+2,subjective,The right flank pain radiates to the groin.,0.0
+3,subjective,The patient has a 2-week history of right flank pain.,0.25
+4,subjective,The right flank pain comes and goes.,0.0
+5,subjective,The right flank pain is exacerbated by drinking.,0.0
+6,subjective,The right flank pain is exacerbated by physical activity.,0.0
+7,subjective,The patient's current pain level is 4/10.,1.0
+8,subjective,The patient's pain level has been as high as 2/10 when under control.,0.75
+9,subjective,The patient denied fever.,0.0
+10,subjective,The patient denied nausea.,0.0
+11,subjective,The patient denied vomiting.,0.0
+12,subjective,The patient denied blood in the urine.,1.0
+13,subjective,The patient has a history of passing kidney stones.,0.0
+14,subjective,The patient has a family history of kidney stones.,0.0
+15,subjective,The patient had a kidney stone that required surgery.,0.0
+16,subjective,The patient has a history of using ibuprofen for pain management.,0.5
+17,subjective,The doctor prescribed ibuprofen.,0.25
+18,subjective,The ibuprofen dose is not specified.,0.0
+19,subjective,Ibuprofen is taken as needed.,0.5
+20,subjective,Ibuprofen is prescribed for pain management.,0.0
+21,objective,The patient's blood pressure is elevated.,0.0
+22,objective,The elevated blood pressure is likely due to pain.,0.25
+23,objective,The patient has CVa tenderness on the right side of the abdomen.,0.25
+24,objective,The patient has no tenderness to palpation of the abdomen.,0.25
+25,objective,A CT scan was performed.,0.0
+26,objective,The CT scan shows a 0.5 cm stone.,0.0
+27,objective,The stone is located on the proximal right ureter.,0.0
+28,objective,There is no evidence of hydronephrosis.,0.0
+29,assessment,The patient has a confirmed diagnosis of a kidney stone.,0.0
+30,assessment,The kidney stone measures 0.5 cm in size.,0.0
+31,assessment,The kidney stone is located on the proximal right ureter.,0.0
+32,assessment,The patient has a confirmed diagnosis of kidney stone.,0.0
+33,assessment,The patient does not have Hydronephrosis.,1.0
+34,assessment,The patient has a suspected diagnosis of Urinary tract infection.,1.0
+35,assessment,Kidney stone is a confirmed problem.,0.0
+36,assessment,Hydronephrosis is not a problem.,1.0
+37,assessment,Urinary tract infection is a suspected problem.,1.0
+38,plan,The ibuprofen dose is as needed.,0.5
+39,plan,The doctor prescribed tramadol.,0.0
+40,plan,The tramadol dose is 50mg.,0.25
+41,plan,Tramadol is prescribed for breakthrough pain.,0.0
+42,plan,The patient is recommended to use a strainer when urinating.,0.25
+43,plan,The purpose of the strainer is to catch the stone.,0.25
+44,plan,The doctor ordered a BMP.,0.0
+45,plan,The doctor ordered a urinalysis.,0.0
+46,plan,The doctor ordered a urine culture.,0.0
+47,plan,"The purpose of the BMP, urinalysis, and urine culture is to rule out a urinary tract infection.",0.0
+48,plan,The doctor will see the patient again in 1-2 weeks.,0.0
+49,plan,The purpose of the follow-up visit is to reassess symptoms.,0.0
+50,plan,The purpose of the follow-up visit is to discuss further treatment options.,0.0
+51,plan,Lithotripsy is a further treatment option.,0.0

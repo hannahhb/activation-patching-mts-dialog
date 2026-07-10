@@ -1,0 +1,26 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 25-year-old male, presents with a 2-week history of knee pain and swelling after a fall from a tandem bike.",1.0
+2,He reports taking ibuprofen for pain relief but experiencing persistent discomfort.,0.0
+3,The patient denies any previous knee problems or issues before the accident.,0.0
+4,"Past medical history: The patient works in a children's hospital as a baby rocker, is active, and swims occasionally.",0.25
+5,"He denies any history of substance abuse, smoking, or significant medical conditions.",1.0
+6,Review of systems: The patient denies any other symptoms related to the knee or other parts of the body.,0.75
+7,Current medications: Ibuprofen (dosage not specified) for pain relief.,0.0
+8,Objective:,0.0
+9,Vital signs: [NOT MENTIONED],0.0
+10,"Physical exam: The patient's knee is tender on the medial joint line, with a small, 1-week-old abrasion on the medial patella.",1.0
+11,"The knee is stable, with no deformities, and the patient can fully extend and flex the knee.",1.0
+12,"The valgus stress test is negative, and the medial and lateral collateral ligaments are intact.",0.75
+13,"The posterior drawer test is positive with 1+ laxity, and the anterior drawer test is negative.",0.75
+14,The McMurray test is negative on both sides.,0.75
+15,"Test Results: X-rays of the knee show no obvious fractures, bone spurs, or other abnormalities.",0.5
+16,Assessment / Problem List:,0.0
+17,"Assessment: The patient likely has a posterior cruciate ligament (PCL) injury, possibly with concomitant meniscal or cartilage damage, given the mechanism of injury and physical exam findings.",0.25
+18,Problem list: PCL injury; suspected meniscus or cartilage damage; knee pain; knee swelling.,1.0
+19,Plan:,0.0
+20,"I prescribed ibuprofen (dosage to be determined) for pain relief, and I will send a prescription for an alternative medication that can be taken twice a day.",0.75
+21,The patient will use ice packs and will be fitted with a temporary knee brace.,0.5
+22,I will refer the patient to physical therapy to regain strength and motion in the knee.,0.25
+23,Follow-up appointment in 4-6 weeks to reassess the knee and progress.,0.0
+24,Follow-up: The patient will follow up in 4-6 weeks to reassess the knee and progress.,0.5

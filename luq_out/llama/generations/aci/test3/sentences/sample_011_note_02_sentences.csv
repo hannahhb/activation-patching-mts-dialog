@@ -1,0 +1,24 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, a 37-year-old female, presents with a complaint of worsening headaches over the past few weeks, with blood pressure readings of 160/87 and 175/92, which are significantly higher than her previous reading of 124/82.",0.5
+2,"She reports taking her prescribed lisinopril, but admits to forgetting to take it on weekends.",0.0
+3,"She also has a history of hypertension and diabetes, for which she checks her blood sugar regularly and reports it has been running around 120, with occasional readings as low as 100.",0.5
+4,"She denies any significant changes in urination, and reports taking Tylenol for the headaches, which provides temporary relief.",0.25
+5,Past medical history: The patient has a history of hypertension and diabetes.,0.0
+6,"Review of systems: The patient denies any recent changes in appetite, weight, or fatigue.",1.0
+7,"She reports occasional migraines, but not like the current headaches she is experiencing.",0.75
+8,Current medications: Lisinopril 20mg once a day.,0.0
+9,Objective:,0.0
+10,"Vital signs: Blood pressure 160/87, 175/92 (previous reading 124/82).",0.5
+11,"Physical exam: The patient has tenderness to palpation of the forehead, cheekbones, and neck.",0.75
+12,Test Results: [NOT MENTIONED],0.0
+13,Assessment / Problem List:,0.0
+14,"Assessment: The patient has worsening headaches, likely related to uncontrolled hypertension and possibly contributing factors such as poor medication adherence.",0.5
+15,Problem list: Hypertension confirmed; Diabetes suspected; Headache active.,1.0
+16,Plan:,0.0
+17,I increased the patient's lisinopril to 40mg once a day for her hypertension.,0.25
+18,"I ordered blood tests, including hemoglobin A1c and laboratory tests, to monitor her diabetes and hypertension.",0.75
+19,I provided diabetic education for her to review.,0.75
+20,I advised her to continue her walks and exercise routine.,0.5
+21,I scheduled a follow-up appointment for her to review the blood test results and adjust her treatment plan as needed.,0.75
+22,Follow-up: I instructed the patient to return to the office after completing the blood tests and reviewing the diabetic education.,0.75

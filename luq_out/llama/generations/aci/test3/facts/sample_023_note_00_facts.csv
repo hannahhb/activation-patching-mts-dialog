@@ -1,0 +1,89 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 45-year-old female.,0.5
+1,subjective,The patient presents with shortness of breath.,0.0
+2,subjective,The shortness of breath started over the weekend.,0.0
+3,subjective,The patient's shortness of breath has progressed.,0.25
+4,subjective,The patient can only walk a short distance without experiencing shortness of breath.,0.25
+5,subjective,The patient was previously an active person.,0.0
+6,subjective,The patient would walk her dog a mile long every day.,1.0
+7,subjective,The patient denied coughing.,1.0
+8,subjective,The patient denied phlegm.,0.5
+9,subjective,The patient denied fever.,0.0
+10,subjective,The patient denied body aches.,0.5
+11,subjective,The patient denied sore throat.,0.25
+12,subjective,The patient denied sinus pain.,0.75
+13,subjective,The patient reports painful swallowing.,0.0
+14,subjective,The painful swallowing is particularly in her chest.,0.5
+15,subjective,The patient has not been taking her prescribed hydrocortisone liquids as much as instructed.,1.0
+16,subjective,The patient has not been taking hydrocortisone liquids due to pain.,1.0
+17,subjective,The patient has a husband.,0.75
+18,subjective,The patient has a daughter.,0.75
+19,subjective,The patient's husband and daughter provide support.,0.75
+20,subjective,The patient has a recent diagnosis of stage three non-small cell lung cancer.,0.0
+21,subjective,The patient is undergoing neo-Adjuvant chemotherapy.,0.0
+22,subjective,The patient is taking cisplatin.,0.25
+23,subjective,The cisplatin is part of the neo-Adjuvant chemotherapy.,0.25
+24,subjective,The patient is taking etoposide.,0.25
+25,subjective,The etoposide is part of the neo-Adjuvant chemotherapy.,0.25
+26,subjective,The patient has been experiencing nausea from the chemotherapy.,0.5
+27,subjective,The patient has been experiencing fatigue from the chemotherapy.,0.5
+28,subjective,The doctor prescribed zofran.,0.0
+29,subjective,The zofran is prescribed to alleviate nausea.,0.0
+30,subjective,The patient is taking zofran.,0.25
+31,subjective,The zofran has helped alleviate the patient's nausea.,0.5
+32,subjective,The patient is taking hydrocortisone liquids.,1.0
+33,subjective,The hydrocortisone liquids are prescribed for hydration.,1.0
+34,subjective,The patient is taking Ensure.,0.25
+35,subjective,The Ensure is prescribed for nutrition.,1.0
+36,subjective,The patient is taking milkshakes.,0.75
+37,subjective,The milkshakes are prescribed for nutrition.,1.0
+38,subjective,The patient reports dry cough.,0.0
+39,subjective,The patient reports no phlegm.,0.5
+40,subjective,The patient reports no fever.,0.0
+41,subjective,The patient reports no body aches.,0.5
+42,subjective,The patient reports no sore throat.,0.25
+43,subjective,The patient reports painful swallowing when swallowing.,0.0
+44,objective,The patient's pulse is normal.,0.5
+45,objective,The patient's blood pressure is normal.,0.25
+46,objective,The patient's oxygen saturation is normal.,0.0
+47,objective,The pulse ox is okay.,0.0
+48,objective,The patient's neck exam is unremarkable.,0.25
+49,objective,The patient has no cervical lymphadenopathy.,0.25
+50,objective,The patient has no subclavicular adenopathy.,0.25
+51,objective,The patient's heart exam is regular.,0.25
+52,objective,The patient has no murmur.,0.25
+53,objective,The patient has crackles in both lungs.,0.0
+54,objective,The patient has lung cancer.,0.25
+55,objective,The patient has erythema on the anterior aspect of her chest on the left side.,0.0
+56,objective,The erythema could be due to radiation.,0.25
+57,objective,The patient has no lower extremity edema.,0.0
+58,objective,The patient had a chest x-ray.,0.0
+59,objective,The chest x-ray showed mild radiation pneumonitis.,0.0
+60,objective,The patient has radiation pneumonitis.,0.0
+61,objective,Radiation pneumonitis is inflammation of the lungs due to radiation.,0.25
+62,assessment,The patient has stage three non-small cell lung cancer.,0.0
+63,assessment,The patient has odynophagia.,0.25
+64,assessment,Odynophagia is due to radiation.,0.5
+65,assessment,The patient's lung cancer is non-small cell.,0.0
+66,assessment,The patient's lung cancer is stage three.,0.0
+67,assessment,The patient has a confirmed diagnosis of lung cancer.,0.25
+68,assessment,The patient has a confirmed diagnosis of radiation pneumonitis.,0.0
+69,assessment,The patient has a confirmed diagnosis of odynophagia.,0.25
+70,assessment,The patient's lung cancer is active.,0.5
+71,assessment,The patient's radiation pneumonitis is active.,0.25
+72,assessment,The patient's odynophagia is active.,0.25
+73,plan,The doctor prescribed prednisone.,0.0
+74,plan,The prednisone dose is 40 milligrams.,0.0
+75,plan,Prednisone is taken one tablet a day.,0.5
+76,plan,Prednisone is taken for five days.,0.0
+77,plan,Prednisone is prescribed to reduce inflammation in the lungs.,0.0
+78,plan,Prednisone is prescribed to alleviate symptoms.,0.0
+79,plan,The doctor prescribed lidocaine spray.,0.25
+80,plan,The lidocaine spray dose is not specified.,0.0
+81,plan,Lidocaine spray is taken four times a day.,0.25
+82,plan,Lidocaine spray is taken before eating.,1.0
+83,plan,Lidocaine spray is taken before drinking.,1.0
+84,plan,Lidocaine spray is prescribed for painful swallowing.,0.0
+85,plan,The patient is to be seen in two weeks.,0.0
+86,plan,The purpose of the follow-up is to monitor the patient's progress.,0.75
+87,plan,The purpose of the follow-up is to adjust the treatment plan as necessary.,1.0

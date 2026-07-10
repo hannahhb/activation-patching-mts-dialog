@@ -1,0 +1,94 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Diana Scott.,0.0
+1,subjective,The patient is a female.,0.0
+2,subjective,The patient is 100 years old.,0.0
+3,subjective,The patient presented for a new patient consultation on 7/9/2021.,0.75
+4,subjective,The patient was referred by her previous doctor.,1.0
+5,subjective,The patient has a recently diagnosed heart murmur.,0.25
+6,subjective,The patient is concerned about her symptoms.,0.25
+7,subjective,The patient seeks further evaluation.,0.25
+8,subjective,The patient reports severe leg pain.,0.0
+9,subjective,The patient has had leg pain for about a month.,0.0
+10,subjective,The patient takes pain pills for leg pain.,0.5
+11,subjective,The patient experiences shortness of breath.,0.75
+12,subjective,The patient experiences shortness of breath when walking too fast.,1.0
+13,subjective,The patient experiences shortness of breath when walking too long.,0.75
+14,subjective,The patient experiences shortness of breath after drinking a full glass of water.,1.0
+15,subjective,The patient reports lightheadedness.,0.0
+16,subjective,The patient reports dizziness.,0.0
+17,subjective,The patient takes meclizine for lightheadedness and dizziness.,0.25
+18,subjective,The patient's symptoms have worsened over the past six months.,0.5
+19,subjective,The patient's symptoms have increased in severity by 70-80% compared to six months ago.,0.75
+20,subjective,The patient has a family history of heart problems.,0.0
+21,subjective,The patient's son had a heart attack.,0.25
+22,subjective,The patient's brother had a stroke.,0.25
+23,subjective,The patient's brother had diabetes.,0.5
+24,subjective,The patient's eldest sister had a heart problem.,0.5
+25,subjective,The patient does not have a history of smoking.,0.25
+26,subjective,The patient has no known allergies to medications.,0.5
+27,subjective,The patient reports severe leg pain on review of systems.,0.25
+28,subjective,The patient reports shortness of breath on review of systems.,1.0
+29,subjective,The patient reports lightheadedness on review of systems.,0.25
+30,subjective,The patient reports dizziness on review of systems.,0.25
+31,subjective,The patient denies fever.,0.5
+32,subjective,The patient denies chills.,0.5
+33,subjective,The patient denies other symptoms.,0.75
+34,subjective,The doctor prescribed Amlodipine.,0.0
+35,subjective,The Amlodipine dose is not specified.,0.25
+36,subjective,Amlodipine is taken at a frequency not specified.,0.25
+37,subjective,The indication for Amlodipine is not specified.,0.25
+38,subjective,The doctor prescribed lisinopril.,0.25
+39,subjective,The lisinopril dose is not specified.,0.25
+40,subjective,Lisinopril is taken at a frequency not specified.,0.25
+41,subjective,The indication for lisinopril is not specified.,0.0
+42,subjective,The doctor prescribed simvastatin.,0.0
+43,subjective,The simvastatin dose is 20mg.,0.25
+44,subjective,Simvastatin is taken at a frequency not specified.,0.25
+45,subjective,The indication for simvastatin is not specified.,0.5
+46,subjective,The doctor prescribed levothyroxine.,0.25
+47,subjective,The levothyroxine dose is not specified.,0.0
+48,subjective,Levothyroxine is taken at a frequency not specified.,0.25
+49,subjective,The indication for levothyroxine is not specified.,0.25
+50,subjective,The doctor prescribed meclizine.,0.5
+51,subjective,The meclizine dose is not specified.,0.0
+52,subjective,Meclizine is taken at a frequency not specified.,0.25
+53,subjective,Meclizine is prescribed for lightheadedness and dizziness.,0.25
+54,objective,The patient had a physical exam.,0.0
+55,objective,The patient's cardiovascular examination was normal.,1.0
+56,objective,The patient had a 4/6 systolic murmur.,0.0
+57,objective,The systolic murmur was located at the right upper sternal border.,0.0
+58,objective,The systolic murmur had mild radiation to the carotids.,0.0
+59,objective,The patient had a neurologic exam.,0.0
+60,objective,The patient's neurologic exam was normal for age.,0.25
+61,assessment,The patient has a systolic murmur.,0.25
+62,assessment,The systolic murmur is 4/6.,0.5
+63,assessment,The systolic murmur is located at the upper right sternal border.,0.5
+64,assessment,The systolic murmur has mild radiation to the carotids.,0.5
+65,assessment,The patient likely has aortic stenosis.,0.0
+66,assessment,The aortic stenosis may be moderate.,0.5
+67,assessment,The patient has a cardiac murmur.,0.0
+68,assessment,The patient has suspected aortic stenosis.,0.0
+69,assessment,The patient has pvcs.,0.0
+70,assessment,The patient has hypolipidemia.,0.0
+71,assessment,The patient has lightheadedness.,0.0
+72,assessment,The patient has dizziness.,0.0
+73,plan,The patient will undergo an echocardiogram.,0.0
+74,plan,The echocardiogram is to assess cardiac structure.,0.0
+75,plan,The echocardiogram is to assess cardiac function.,0.0
+76,plan,The echocardiogram is to assess the severity of aortic stenosis.,0.75
+77,plan,The patient has aortic stenosis.,1.0
+78,plan,The patient may undergo an ischemic evaluation.,0.75
+79,plan,The patient may undergo a heart monitor evaluation.,0.75
+80,plan,The patient is taking amlodipine.,0.25
+81,plan,The amlodipine dose is not specified.,0.25
+82,plan,The patient is taking lisinopril.,0.25
+83,plan,The patient is taking levothyroxine.,0.75
+84,plan,The patient may be considered for a transcatheter aortic valve replacement (TAVR).,0.75
+85,plan,The patient may be considered for a surgical aortic valve replacement (SAVR).,1.0
+86,plan,Amlodipine is prescribed for the patient's condition.,0.25
+87,plan,Lisinopril is prescribed for the patient's condition.,0.25
+88,plan,Levothyroxine is prescribed for the patient's condition.,0.75
+89,plan,The patient will have a follow-up appointment.,0.0
+90,plan,The follow-up appointment is in three to four weeks.,0.0
+91,plan,The purpose of the follow-up appointment is to discuss echocardiogram results.,0.0
+92,plan,The purpose of the follow-up appointment is to discuss next steps.,0.0

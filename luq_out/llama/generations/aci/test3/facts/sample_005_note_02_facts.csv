@@ -1,0 +1,57 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient presents with right elbow pain.,1.0
+1,subjective,The patient's elbow pain began yesterday.,0.25
+2,subjective,The patient's elbow pain has been present since waking up.,1.0
+3,subjective,The patient's pain is actually in the left arm.,0.25
+4,subjective,The patient's pain is from the elbow up to the neck.,0.0
+5,subjective,The patient describes the pain as aching.,0.0
+6,subjective,The patient describes the pain as heavy.,0.0
+7,subjective,The patient has taken Motrin for the pain.,0.0
+8,subjective,The Motrin dose is not specified.,0.0
+9,subjective,Motrin is taken for pain.,0.0
+10,subjective,The patient did not experience significant relief from Motrin.,0.0
+11,subjective,The patient reports chest pain.,0.0
+12,subjective,The patient's chest pain is intermittent.,0.0
+13,subjective,The patient's chest pain occurs with the elbow pain.,0.5
+14,subjective,The patient's chest pain sometimes radiates to the neck.,0.25
+15,subjective,The patient has had chest pain for one day.,1.0
+16,subjective,The patient's chest pain is not constant.,0.0
+17,subjective,The patient's chest pain occurs a few times a day.,1.0
+18,subjective,The patient denies shortness of breath.,0.0
+19,subjective,The patient has a history of hypertension.,0.0
+20,subjective,The patient has a history of diabetes.,0.0
+21,subjective,The patient's blood pressure is 150/90.,1.0
+22,subjective,The doctor prescribed Norvasc.,0.0
+23,subjective,The Norvasc dose is 2.5mg.,0.0
+24,subjective,Norvasc is taken daily.,0.25
+25,subjective,Norvasc is prescribed for hypertension.,0.0
+26,subjective,The patient's A1c result was 7.2.,0.5
+27,subjective,The doctor prescribed metformin.,0.0
+28,subjective,The metformin dose is 500mg.,0.0
+29,subjective,Metformin is taken daily.,0.25
+30,subjective,Metformin is prescribed for diabetes.,0.0
+31,subjective,The patient denies any other symptoms outside of the elbow pain and chest pain.,0.25
+32,objective,The patient has a heart murmur.,0.0
+33,objective,The heart murmur is slight.,0.0
+34,objective,The heart murmur was not previously noted.,0.5
+35,assessment,The patient is experiencing chest pain.,0.0
+36,assessment,The chest pain may be indicative of a mild heart attack.,0.25
+37,assessment,An EKG is needed to confirm the diagnosis of a mild heart attack.,1.0
+38,assessment,The patient has hypertension.,0.0
+39,assessment,The patient has diabetes.,0.0
+40,assessment,The patient has chest pain.,0.0
+41,assessment,The patient has a suspected heart attack.,0.0
+42,plan,The doctor prescribed aspirin.,0.0
+43,plan,The aspirin is prescribed to alleviate chest pain.,0.0
+44,plan,The doctor prescribed nitroglycerin.,0.25
+45,plan,The nitroglycerin is prescribed to alleviate chest pain.,0.25
+46,plan,The doctor ordered an EKG.,0.0
+47,plan,The EKG is to confirm a suspected heart attack.,0.75
+48,plan,The doctor ordered a glucose test.,0.0
+49,plan,The glucose test is to check the patient's blood sugar levels.,0.0
+50,plan,The patient is taking metformin.,0.0
+51,plan,The patient is taking Norvasc.,0.0
+52,plan,The patient is suspected to have a heart attack.,0.25
+53,plan,The patient will be admitted to the hospital.,0.5
+54,plan,The hospital admission is for further evaluation.,0.0
+55,plan,The hospital admission is for further treatment.,0.0

@@ -1,0 +1,63 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Sean.,1.0
+1,subjective,The patient is male.,0.75
+2,subjective,The patient presents with a history of back pain.,0.0
+3,subjective,The patient's back pain is located in the lower left area.,0.0
+4,subjective,The patient's back pain began after a microdiscectomy surgery.,0.25
+5,subjective,The microdiscectomy surgery occurred in November 2020.,0.0
+6,subjective,The patient describes the pain as horrible.,0.25
+7,subjective,The patient describes the pain as awful.,0.25
+8,subjective,The patient experiences nerve pain down his leg.,0.75
+9,subjective,The patient was prescribed gabapentin.,0.0
+10,subjective,The gabapentin dose is high.,0.5
+11,subjective,The patient found gabapentin difficult to withdraw from.,0.0
+12,subjective,Stretching helps alleviate the patient's pain.,0.0
+13,subjective,Bending over worsens the patient's pain.,0.0
+14,subjective,Physical activities worsen the patient's pain.,0.0
+15,subjective,The patient's pain is not always present.,0.75
+16,subjective,The patient's pain can occur randomly.,0.75
+17,subjective,The patient had a microdiscectomy surgery in November 2020.,0.0
+18,subjective,The microdiscectomy surgery was for a disk break.,0.75
+19,subjective,The disk break wrapped around the patient's spinal thecal sac.,0.75
+20,subjective,The disk break connected to the patient's spinal thecal sac.,0.75
+21,subjective,The patient reports pain in his lower back.,0.0
+22,subjective,The patient does not report symptoms in other organs.,0.25
+23,subjective,The patient is currently taking gabapentin.,0.25
+24,subjective,The doctor prescribed meloxicam.,0.75
+25,subjective,The doctor prescribed demerol.,1.0
+26,subjective,Meloxicam is prescribed for the patient.,0.75
+27,subjective,Demerol is prescribed for the patient.,1.0
+28,subjective,Gabapentin is taken by the patient.,0.25
+29,subjective,The patient will take meloxicam.,0.75
+30,subjective,The patient will take demerol.,1.0
+31,objective,The patient had no pain with flexion.,0.0
+32,objective,The patient had no pain with extension.,0.0
+33,objective,The patient reported pain when standing.,0.0
+34,objective,The patient reported pain with palpation on the left side around the L5.,0.0
+35,objective,Dorsiflexion was normal.,0.0
+36,objective,The patient had normal range of motion.,0.25
+37,objective,There was no pain down the patient's legs.,0.75
+38,objective,The patient had an x-ray.,0.0
+39,objective,The x-ray showed no fractures.,0.0
+40,objective,The x-ray showed no issues with the spinal bone.,0.0
+41,objective,The area where the patient had surgery had healed properly.,0.25
+42,assessment,The patient has a muscle pull.,0.0
+43,assessment,The muscle pull is due to a misalignment in his spine.,0.0
+44,assessment,The patient has a misalignment in his spine.,0.0
+45,assessment,The misalignment in the patient's spine was confirmed by physical exam.,1.0
+46,assessment,The misalignment in the patient's spine was confirmed by x-ray results.,1.0
+47,assessment,The patient has left side low back pain.,0.5
+48,assessment,The patient's left side low back pain was confirmed.,0.5
+49,assessment,The physical exam confirmed the patient's muscle pull.,1.0
+50,assessment,The x-ray results confirmed the patient's muscle pull.,1.0
+51,plan,The meloxicam is prescribed for pain management.,0.0
+52,plan,The doctor referred the patient to pain management.,0.0
+53,plan,The referral to pain management is for further evaluation.,0.25
+54,plan,The referral to pain management is for discussion of alternative pain management options.,0.25
+55,plan,The demerol is prescribed for pain management.,0.75
+56,plan,The patient will start physical therapy.,0.0
+57,plan,The physical therapy is to address the muscle pull.,0.25
+58,plan,The physical therapy is to address the misalignment in his spine.,1.0
+59,plan,The patient will see a physical therapist at the VA.,0.25
+60,plan,The patient has misalignment in his spine.,1.0
+61,plan,The patient will follow up with the doctor.,0.5

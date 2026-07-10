@@ -1,0 +1,57 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient is a 25-year-old male.,1.0
+1,subjective,The patient presents with a 2-week history of knee pain.,0.0
+2,subjective,The patient presents with a 2-week history of knee swelling.,1.0
+3,subjective,The knee pain and swelling started after a fall from a tandem bike.,1.0
+4,subjective,The patient takes ibuprofen.,0.0
+5,subjective,The ibuprofen dose is not specified.,0.0
+6,subjective,Ibuprofen is taken for pain relief.,0.0
+7,subjective,The patient denied any previous knee problems.,0.0
+8,subjective,The patient denied any previous knee issues before the accident.,0.0
+9,subjective,The patient works in a children's hospital as a baby rocker.,0.0
+10,subjective,The patient is active.,0.0
+11,subjective,The patient swims occasionally.,0.25
+12,subjective,The patient denies any history of substance abuse.,0.75
+13,subjective,The patient denies smoking.,0.75
+14,subjective,The patient denies significant medical conditions.,0.75
+15,subjective,The patient denies any other symptoms related to the knee.,0.75
+16,subjective,The patient denies any other symptoms related to other parts of the body.,0.5
+17,objective,The patient's knee is tender on the medial joint line.,0.0
+18,objective,The patient has a small abrasion on the medial patella.,0.0
+19,objective,The abrasion is 1-week-old.,1.0
+20,objective,The knee is stable.,1.0
+21,objective,The knee has no deformities.,0.25
+22,objective,The patient can fully extend the knee.,0.0
+23,objective,The patient can fully flex the knee.,0.25
+24,objective,The valgus stress test is negative.,0.75
+25,objective,The medial collateral ligament is intact.,0.25
+26,objective,The lateral collateral ligament is intact.,0.25
+27,objective,The posterior drawer test is positive.,0.0
+28,objective,The posterior drawer test shows 1+ laxity.,0.5
+29,objective,The anterior drawer test is negative.,0.5
+30,objective,The McMurray test is negative on the left side.,0.75
+31,objective,The McMurray test is negative on the right side.,0.75
+32,objective,The patient had X-rays of the knee.,0.0
+33,objective,The X-rays of the knee show no obvious fractures.,0.0
+34,objective,The X-rays of the knee show no bone spurs.,0.0
+35,objective,The X-rays of the knee show no other abnormalities.,0.5
+36,assessment,The patient has a PCL injury.,0.75
+37,assessment,The patient possibly has meniscal damage.,0.0
+38,assessment,The patient possibly has cartilage damage.,0.0
+39,assessment,The patient has knee pain.,0.5
+40,assessment,The patient has knee swelling.,1.0
+41,assessment,The diagnosis of PCL injury is based on the mechanism of injury.,1.0
+42,assessment,The diagnosis of PCL injury is based on physical exam findings.,1.0
+43,assessment,The patient possibly has concomitant meniscal or cartilage damage with a PCL injury.,0.0
+44,plan,The doctor prescribed ibuprofen.,0.25
+45,plan,The ibuprofen dose is to be determined.,0.5
+46,plan,Ibuprofen is prescribed for pain relief.,0.25
+47,plan,The doctor will send a prescription for an alternative medication.,0.25
+48,plan,The alternative medication can be taken twice a day.,0.5
+49,plan,The patient will use ice packs.,0.5
+50,plan,The patient will be fitted with a temporary knee brace.,0.0
+51,plan,The doctor will refer the patient to physical therapy.,0.0
+52,plan,Physical therapy is for regaining strength and motion in the knee.,0.25
+53,plan,The patient will follow up in 4-6 weeks.,0.0
+54,plan,The follow-up appointment is to reassess the knee.,0.25
+55,plan,The follow-up appointment is to reassess progress.,0.0

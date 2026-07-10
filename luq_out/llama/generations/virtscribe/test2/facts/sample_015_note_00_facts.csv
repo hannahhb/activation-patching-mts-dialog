@@ -1,0 +1,60 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Mr. Nelson.,0.25
+1,subjective,The patient is a male.,0.0
+2,subjective,The patient is 73 years old.,0.75
+3,subjective,The patient has rheumatoid arthritis.,0.0
+4,subjective,The patient's right knee has been swollen for 2 months.,0.5
+5,subjective,The patient's pain level ranges from 3 to 6 out of 10.,0.25
+6,subjective,The patient uses compression socks.,0.25
+7,subjective,Compression socks provide some relief to the patient.,0.5
+8,subjective,The patient experiences stiffness.,0.0
+9,subjective,The patient experiences stiffness when getting up from a seated position.,0.0
+10,subjective,The patient requires a cane for support.,0.0
+11,subjective,The doctor prescribed Xeljanz.,0.0
+12,subjective,The Xeljanz dose is 11 mg.,0.0
+13,subjective,Xeljanz is taken daily.,0.0
+14,subjective,The patient has been taking Xeljanz for 2 months.,0.5
+15,subjective,The doctor prescribed Celebrex.,0.0
+16,subjective,The Celebrex dose is 200 mg.,0.0
+17,subjective,Celebrex is taken daily.,0.0
+18,subjective,The patient has been taking Celebrex for 2 months.,0.5
+19,subjective,Xeljanz is prescribed for rheumatoid arthritis.,0.0
+20,subjective,Celebrex is prescribed for rheumatoid arthritis.,0.0
+21,subjective,The patient has a history of rheumatoid arthritis.,0.0
+22,subjective,The patient has been receiving treatment for rheumatoid arthritis.,0.0
+23,subjective,The patient denied other symptoms related to his rheumatoid arthritis.,0.5
+24,objective,The patient's knee is swollen.,0.25
+25,objective,There is pitting around the knee.,0.25
+26,objective,There is pitting around the ankle.,0.25
+27,objective,The patient reports pain.,0.75
+28,objective,The patient reports stiffness.,1.0
+29,objective,The stiffness occurs when straightening the knee.,0.75
+30,objective,The patient has normal capillary refill in the toes.,0.25
+31,assessment,The patient has swelling of the right knee.,0.25
+32,assessment,The patient has pain of the right knee.,0.75
+33,assessment,The patient has stiffness of the right knee.,1.0
+34,assessment,The patient's right knee swelling is recurrent.,1.0
+35,assessment,The patient's right knee pain is recurrent.,1.0
+36,assessment,The patient's right knee swelling is likely related to rheumatoid arthritis.,0.0
+37,assessment,The patient's right knee pain is likely related to rheumatoid arthritis.,0.5
+38,plan,The doctor prescribed a steroid injection.,0.0
+39,plan,The steroid injection contains 80 mg of triamcinolone.,0.25
+40,plan,The steroid injection contains 1 ml of lidocaine.,0.25
+41,plan,The steroid injection is for the patient's right knee.,0.25
+42,plan,The doctor ordered an x-ray of the knee.,0.25
+43,plan,The x-ray of the knee is to investigate the cause of the swelling.,0.25
+44,plan,The patient has swelling in the right knee.,0.5
+45,plan,The doctor will refer the patient to physical therapy.,0.75
+46,plan,The physical therapy is to address the patient's stiffness.,1.0
+47,plan,The physical therapy is to address the patient's mobility issues.,1.0
+48,plan,The patient has stiffness.,1.0
+49,plan,The patient has mobility issues.,0.75
+50,plan,The doctor will consider a surgery consult.,0.75
+51,plan,The surgery consult is for further management options.,0.75
+52,plan,The doctor will see the patient again in 2-3 months.,0.75
+53,plan,The follow-up appointment is to reassess the patient's symptoms.,1.0
+54,plan,The doctor will adjust the patient's treatment plan as needed.,0.25
+55,plan,The patient has a primary care physician.,0.0
+56,plan,The doctor instructed the patient to follow up with his primary care physician.,0.0
+57,plan,The follow-up with the primary care physician is for routine monitoring of CMP levels.,0.5
+58,plan,The patient's CMP levels are currently within normal limits.,0.75

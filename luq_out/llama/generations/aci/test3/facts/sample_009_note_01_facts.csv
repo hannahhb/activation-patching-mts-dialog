@@ -1,0 +1,64 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Matthew.,0.25
+1,subjective,The patient presented with right knee pain.,0.0
+2,subjective,The patient's knee pain started after playing basketball.,0.0
+3,subjective,The patient felt a pop in his knee.,0.5
+4,subjective,The patient's knee started swelling.,0.0
+5,subjective,The patient was unable to walk due to knee pain.,1.0
+6,subjective,The patient describes the pain as achy.,0.0
+7,subjective,The patient rates his pain a 4 out of 10.,0.25
+8,subjective,The patient has been taking Tylenol.,0.0
+9,subjective,Tylenol provided some relief for the patient's pain.,0.0
+10,subjective,The patient's knee swelling has decreased.,0.25
+11,subjective,The patient denied taking any other pain medication.,1.0
+12,subjective,The patient has a history of hypertension.,0.0
+13,subjective,The patient has a history of diabetes.,0.0
+14,subjective,The doctor prescribed Norvasc.,0.0
+15,subjective,The Norvasc dose is 5mg.,0.0
+16,subjective,Norvasc is taken daily.,0.0
+17,subjective,Norvasc is prescribed for hypertension.,0.0
+18,subjective,The doctor prescribed metformin.,0.0
+19,subjective,The metformin dose is 500mg.,0.0
+20,subjective,Metformin is taken daily.,0.75
+21,subjective,Metformin is prescribed for diabetes.,0.0
+22,subjective,The patient sometimes skips metformin.,0.0
+23,subjective,The patient skips metformin due to stomach upset.,0.25
+24,subjective,The patient's blood sugar readings are usually around 150.,0.75
+25,subjective,The patient has a history of a grade 2 systolic ejection murmur.,0.25
+26,subjective,The patient's current blood pressure is 140/80.,0.5
+27,objective,The patient has pain to palpation of the medial aspect of the right knee.,0.0
+28,objective,The patient has edema of the right knee.,0.0
+29,objective,The patient has swelling of the right knee.,0.0
+30,objective,The patient has ecchymosis of the right knee.,0.0
+31,objective,The varus test of the right knee is negative.,0.0
+32,objective,The valgus test of the right knee is negative.,0.0
+33,objective,The right knee examination shows swelling.,0.0
+34,objective,The right knee examination shows redness.,0.25
+35,objective,The patient had an x-ray of the right knee.,0.0
+36,objective,The x-ray of the right knee was normal.,0.0
+37,objective,The x-ray of the right knee shows no fractures.,0.0
+38,objective,The x-ray of the right knee shows no bony abnormalities.,0.0
+39,assessment,The patient has hypertension.,0.0
+40,assessment,The patient has diabetes.,0.0
+41,assessment,The patient has a right MCL strain.,1.0
+42,assessment,The patient's MCL strain may be a tear.,0.0
+43,assessment,An MRI confirmed the MCL strain.,1.0
+44,assessment,The MRI is pending.,0.25
+45,assessment,The patient has a Grade 2 systolic ejection murmur.,0.25
+46,assessment,The patient has a past medical history.,0.0
+47,plan,The doctor prescribed Tylenol.,0.5
+48,plan,Tylenol is prescribed for pain.,0.5
+49,plan,The doctor prescribed meloxicam.,0.0
+50,plan,The meloxicam dose is 15mg.,0.0
+51,plan,Meloxicam is prescribed for pain.,0.0
+52,plan,Meloxicam is prescribed for swelling.,0.0
+53,plan,The doctor ordered a knee immobilizer.,0.0
+54,plan,The knee immobilizer is to be worn for the next couple of weeks.,0.0
+55,plan,The doctor ordered an MRI.,0.25
+56,plan,The MRI is to confirm the MCL strain.,0.75
+57,plan,The patient has an MCL strain.,1.0
+58,plan,The doctor ordered a consult to nutrition.,0.0
+59,plan,The consult to nutrition is to improve the patient's diet.,0.0
+60,plan,The doctor advised the patient to take their blood sugars daily.,0.5
+61,plan,The patient is to bring their blood sugar results back to track their progress.,0.75
+62,plan,The patient will return in two weeks for follow-up.,0.0

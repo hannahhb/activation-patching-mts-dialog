@@ -1,0 +1,26 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient, Zachary, presents with right elbow pain, which he claims started since yesterday, but later corrects that it is actually his left arm that hurts.",1.0
+2,"He describes the pain as achiness and heaviness, which affects his entire left arm from the elbow to the neck.",0.0
+3,"He denies any specific incident that may have caused the pain, such as lifting heavy objects.",0.25
+4,"He has taken some Motrin for the pain, but it has not provided significant relief.",0.0
+5,"He also mentions that the pain is accompanied by chest pain, which he describes as coming and going, affecting his neck as well.",0.25
+6,He denies shortness of breath.,0.0
+7,"Past medical history: The patient has a history of hypertension, for which he is on 2.5mg of Norvasc, and diabetes, for which he is on 500mg of metformin.",0.0
+8,His A1C result from a previous visit was 7.2.,0.5
+9,Review of systems: The patient denies any other symptoms besides the elbow and chest pain.,0.25
+10,"Current medications: Norvasc 2.5mg daily for hypertension, Metformin 500mg daily for diabetes.",0.25
+11,Objective:,0.0
+12,"Vital signs: Blood pressure 150/90, which is slightly high.",0.75
+13,"Physical exam: The patient's physical exam reveals a slight murmur with his heart, which was not noted previously.",0.5
+14,Test Results: [NOT MENTIONED],0.0
+15,Assessment / Problem List:,0.0
+16,Assessment: The patient presents with symptoms suggestive of a possible myocardial infarction (heart attack).,0.0
+17,Problem list: Hypertension; Diabetes; Suspected myocardial infarction; Chest pain; Elbow pain.,0.75
+18,Plan:,0.0
+19,I prescribed Aspirin and Nitroglycerin to help alleviate the chest pain.,0.25
+20,I will get an EKG to further evaluate the patient's heart.,0.0
+21,I will also perform a glucose test to assess the patient's blood sugar levels and adjust his medication as needed.,1.0
+22,The patient will be kept on 500mg of metformin for diabetes and 2.5mg of Norvasc for hypertension.,0.0
+23,The patient will be referred to the hospital for further evaluation and treatment of the suspected myocardial infarction.,0.75
+24,Follow-up: The patient will be admitted to the hospital for further evaluation and treatment.,0.75

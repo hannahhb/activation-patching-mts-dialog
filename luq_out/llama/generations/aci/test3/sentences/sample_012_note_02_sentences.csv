@@ -1,0 +1,30 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient presented with a history of left-sided back pain that varies in intensity, described as sharp on some days and non-existent on others.",0.25
+2,"He reports no fever, unchanged appetite, and an increase in urine output.",0.25
+3,He denies being more tired than usual.,0.5
+4,"He has a history of recurrent strep throat, with four episodes in the last five months, for which he has been treated by his primary care physician.",1.0
+5,"Past medical history: The patient has a history of recurrent strep throat, with four episodes in the last five months.",0.0
+6,He has a brother who smokes.,0.0
+7,Review of systems: The patient denies any other symptoms.,0.75
+8,Current medications: [NOT MENTIONED],0.0
+9,Objective:,0.0
+10,Vital signs: [NOT MENTIONED],0.0
+11,"Physical exam: The patient's throat is not erythematous, and his tonsils are midline.",0.0
+12,There is no lymphadenopathy or cervical adenopathy.,0.0
+13,"Lung sounds are clear, with no wheezes, rales, or rhonchi.",0.0
+14,"Heart sounds are normal, with no murmur, rub, or gallop.",0.0
+15,The patient does not experience pain when pressing on the left side of the back.,0.25
+16,The abdomen is not tender to palpation.,0.25
+17,Test Results: [NOT MENTIONED],0.0
+18,Assessment / Problem List:,0.0
+19,"Assessment: The patient has a history of recurrent strep throat, which may be caused by glomerular nephritis, a condition that could lead to chronic kidney disease.",1.0
+20,Problem list: Glomerulonephritis; Suspected; Recurrent strep throat; Confirmed; Past strep throat episodes; Confirmed.,0.75
+21,Plan:,0.0
+22,I referred the patient to an ENT specialist to consider tonsillectomy to help manage his recurrent strep throat.,0.0
+23,"I ordered several laboratory tests, including a lipid panel, UA, CMP, CBC, vitamin D, and TSH, to evaluate his hormonal and nutritional status.",0.75
+24,"The patient will have these tests done as soon as possible, with the exception of those requiring fasting, which will be done today.",1.0
+25,I will write a note to excuse him from his class and work to accommodate the testing schedule.,0.75
+26,"We will discuss the possibility of a new job affecting his access to free food, which may impact his salt intake.",1.0
+27,I will also have a conversation with his brother about smoking.,1.0
+28,Follow-up: The patient will return in a week for the results of the laboratory tests.,0.25

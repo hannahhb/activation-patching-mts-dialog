@@ -1,0 +1,75 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Mrs. King.,0.5
+1,subjective,The patient is a 36-year-old female.,0.5
+2,subjective,The patient's date of birth is 1/5/1986.,1.0
+3,subjective,The patient's medical record number is Q227631.,1.0
+4,subjective,The patient presented for evaluation of acid reflux.,0.0
+5,subjective,The patient has a history of anxiety.,0.0
+6,subjective,The patient has a history of seasonal allergies.,0.0
+7,subjective,The patient was referred by Dr. Scott.,1.0
+8,subjective,The patient has been experiencing acid reflux since she was around 12 years old.,0.5
+9,subjective,The patient's acid reflux has worsened over the past few years.,0.0
+10,subjective,The patient is taking omeprazole.,0.0
+11,subjective,The omeprazole dose is 40 mg.,0.0
+12,subjective,Omeprazole is taken twice daily.,0.0
+13,subjective,The patient experiences burning in her chest.,0.0
+14,subjective,The patient experiences burning in her throat.,0.25
+15,subjective,The patient denied difficulty swallowing.,0.25
+16,subjective,The patient denied abdominal pain.,0.0
+17,subjective,The patient denied nausea.,0.0
+18,subjective,The patient denied vomiting.,0.0
+19,subjective,The patient denied changes in bowel movements.,0.0
+20,subjective,The patient denied constipation.,0.0
+21,subjective,The patient denied diarrhea.,0.0
+22,subjective,The patient denied rectal bleeding.,0.25
+23,subjective,The patient attributes her symptoms to stress.,0.5
+24,subjective,The patient attributes her symptoms to food choices.,0.0
+25,subjective,The patient's symptoms are exacerbated by spicy foods.,0.0
+26,subjective,The patient's symptoms are exacerbated by carbonated beverages.,0.0
+27,subjective,The patient's symptoms are exacerbated by citrus.,0.0
+28,subjective,The patient's symptoms are exacerbated by tomato-based foods.,0.0
+29,objective,The patient has a well-healed abdominal surgical scar.,0.0
+30,objective,The patient has a normal physical exam.,0.0
+31,objective,The physical exam was performed using a new patient template.,1.0
+32,assessment,The patient has gastroesophageal reflux disease (GERD).,0.5
+33,assessment,The patient has a suspected functional etiology.,0.0
+34,assessment,The suspected functional etiology is underlying.,0.0
+35,assessment,Gastroesophageal reflux disease (GERD) is in the patient's problem list.,0.0
+36,assessment,A suspected functional etiology is in the patient's problem list.,0.75
+37,plan,The patient was recommended to change her diet.,0.25
+38,plan,The patient was recommended to avoid spicy foods.,0.5
+39,plan,The patient was recommended to avoid carbonated beverages.,0.5
+40,plan,The patient was recommended to avoid citrus.,0.5
+41,plan,The patient was recommended to avoid tomato-based foods.,0.5
+42,plan,The patient was advised to work on stress management.,0.0
+43,plan,The patient's stress management is to address her anxiety.,0.5
+44,plan,The doctor prescribed Nexium.,0.0
+45,plan,The Nexium dose is 40 mg.,0.0
+46,plan,Nexium is taken twice daily.,0.0
+47,plan,Nexium is prescribed to replace omeprazole.,0.25
+48,plan,The patient is scheduled for an upper endoscopy procedure.,0.25
+49,plan,The upper endoscopy procedure is to look for potential causes of her GERD.,0.0
+50,plan,The upper endoscopy procedure will involve sedation.,0.25
+51,plan,The upper endoscopy procedure will involve a small camera.,0.0
+52,plan,The small camera will be passed through her mouth.,0.0
+53,plan,The small camera will be passed down her throat.,0.0
+54,plan,The small camera will be passed through her stomach.,0.25
+55,plan,The small camera will be passed into the small intestines.,0.25
+56,plan,The upper endoscopy procedure is to look for ulcers.,0.25
+57,plan,The upper endoscopy procedure is to look for signs of precancerous conditions.,0.0
+58,plan,The upper endoscopy procedure is to look for signs of cancerous conditions.,0.25
+59,plan,Biopsies will be taken during the upper endoscopy procedure.,1.0
+60,plan,Biopsies will be taken if anything suspicious is found.,0.75
+61,plan,The patient was instructed to schedule the procedure.,0.75
+62,plan,The patient was instructed to schedule the procedure at the checkout desk.,0.5
+63,plan,The patient was instructed to follow up with the doctor.,0.0
+64,plan,The patient was instructed to follow up with the doctor in the office.,0.0
+65,plan,The follow-up appointment is to discuss the results of the EGD.,0.0
+66,plan,The follow-up appointment is to discuss the effectiveness of the dietary changes.,0.5
+67,plan,The follow-up appointment is to discuss the effectiveness of the stress management changes.,0.75
+68,plan,The patient was instructed to call the doctor's office.,1.0
+69,plan,The patient was instructed to call the doctor's office if anything changes.,0.75
+70,plan,The patient was instructed to call the doctor's office if she has problems.,0.75
+71,plan,The patient was instructed to call the doctor's office before the EGD and follow-up appointment.,1.0
+72,plan,The patient has GERD.,0.0
+73,plan,The patient has anxiety.,0.5

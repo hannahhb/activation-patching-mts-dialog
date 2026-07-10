@@ -1,0 +1,67 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Michelle King.,0.5
+1,subjective,The patient is a 39-year-old female.,0.0
+2,subjective,The patient has a history of quadriplegia.,0.0
+3,subjective,The patient's quadriplegia is due to a prior spinal cord injury.,0.0
+4,subjective,The patient presented with increasing concerns for spasms.,0.0
+5,subjective,The patient presented with increasing concerns for lightheadedness.,0.0
+6,subjective,The patient presented with significant constipation.,0.0
+7,subjective,The patient reported diaphoresis.,0.0
+8,subjective,The patient was febrile.,0.25
+9,subjective,The patient had a significantly elevated white blood cell count.,0.25
+10,subjective,"The patient's white blood cell count is 23,000.",0.25
+11,subjective,The patient has concerns for an ongoing urinary tract infection.,0.75
+12,subjective,The patient was treated with IV antibiotic therapy.,0.25
+13,subjective,The patient had labile blood pressure.,0.75
+14,subjective,The patient had a headache.,0.75
+15,subjective,The patient had vomiting.,0.75
+16,subjective,The patient believes her hospitalization was due to dysreflexia.,0.25
+17,subjective,The patient's dysreflexia is due to her quadriplegia.,0.5
+18,subjective,The patient takes Miralax.,0.0
+19,subjective,The Miralax dose is not specified.,0.25
+20,subjective,Miralax is taken with an unspecified frequency.,0.75
+21,subjective,Miralax is prescribed for constipation issues.,0.0
+22,subjective,The patient takes lactulose.,0.25
+23,subjective,The lactulose dose is not specified.,0.0
+24,subjective,Lactulose is taken with an unspecified frequency.,0.25
+25,subjective,Lactulose is prescribed for severe constipation.,0.25
+26,subjective,The patient has a bowel regimen.,0.0
+27,subjective,The patient's bowel regimen includes Miralax.,0.0
+28,subjective,The patient's bowel regimen includes lactulose.,0.25
+29,subjective,The patient feels her hospitalization was less likely due to a true urinary tract infection.,0.0
+30,subjective,The patient feels her hospitalization was related to her constipation.,0.5
+31,subjective,The patient's symptoms include spasms.,0.0
+32,subjective,The patient's symptoms include lightheadedness.,0.0
+33,subjective,The patient's symptoms include significant constipation.,0.0
+34,subjective,The patient's symptoms include reported diaphoresis.,0.0
+35,objective,The patient's vital signs were not mentioned.,0.25
+36,objective,The doctor performed a physical exam.,0.0
+37,objective,The physical exam included listening to the patient's lungs.,0.75
+38,objective,The physical exam included listening to the patient's abdomen.,1.0
+39,objective,The patient reported no pain.,0.75
+40,objective,The patient reported no discomfort.,0.5
+41,objective,The patient reported no pain or discomfort anywhere during the exam.,0.0
+42,objective,The patient had a physical exam of the lungs.,0.75
+43,objective,"The patient had a physical exam of the abdomen. 
+
+Revised response to remove redundant information:
+ The patient's vital signs were not mentioned.",1.0
+44,assessment,The patient has quadriplegia.,0.0
+45,assessment,The patient has constipation.,0.0
+46,assessment,The patient has an elevated white blood cell count.,0.0
+47,assessment,The patient has dysreflexia.,0.5
+48,assessment,The patient has hypertension.,1.0
+49,assessment,Dysreflexia is a complication of quadriplegia.,0.5
+50,assessment,The patient's hospitalization was due to dysreflexia.,1.0
+51,assessment,The patient's hospitalization was due to quadriplegia.,1.0
+52,assessment,Quadriplegia can cause dysreflexia.,0.75
+53,plan,The patient will return in three to four weeks for updated fasting labs.,1.0
+54,plan,The patient will have a CBC.,0.0
+55,plan,The purpose of the CBC is to ensure her white blood cells tend downward.,1.0
+56,plan,The doctor recommended the COVID-19 vaccine.,0.0
+57,plan,The patient is hesitant about the COVID-19 vaccine.,1.0
+58,plan,Quadriplegia puts the patient at high risk for severe COVID-19.,0.0
+59,plan,The doctor recommended vaccination due to the patient's quadriplegia status.,0.0
+60,plan,The patient is somewhat homeopathic.,1.0
+61,plan,The patient needs to make her own decisions regarding vaccination.,0.5
+62,plan,The patient will return in two to three weeks for a follow-up appointment.,0.0

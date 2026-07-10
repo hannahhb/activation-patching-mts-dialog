@@ -1,0 +1,71 @@
+fact_idx,section,fact,uncertainty
+0,subjective,The patient's name is Ashley.,0.0
+1,subjective,The patient is 14 years old.,0.0
+2,subjective,The patient is female.,0.0
+3,subjective,The patient has a small right kidney.,0.0
+4,subjective,The right kidney is atrophic.,0.0
+5,subjective,The right kidney is smaller than the left kidney.,0.0
+6,subjective,The patient experienced severe abdominal pain.,0.75
+7,subjective,The patient experienced vomiting.,0.75
+8,subjective,The patient has a history of recurrent episodes of fever.,0.75
+9,subjective,The patient has a history of symptoms possibly indicative of a severe infection affecting her kidney.,0.25
+10,subjective,The possible severe infection may have occurred at age 4.,0.75
+11,subjective,The patient experiences persistent stomach pain.,0.0
+12,subjective,The patient experiences burning sensations when urinating.,0.5
+13,subjective,The burning sensations occur especially after consuming carbonated drinks.,0.5
+14,subjective,The patient takes Pepcid.,0.0
+15,subjective,The Pepcid dose is 40mg.,0.0
+16,subjective,Pepcid is taken daily.,0.0
+17,subjective,Pepcid is prescribed for stomach issues.,0.0
+18,subjective,The patient takes Claritin.,0.0
+19,subjective,The Claritin dose is 20mg.,1.0
+20,subjective,Claritin is taken daily.,1.0
+21,subjective,Claritin is prescribed for allergies.,0.0
+22,subjective,The patient has a family history of renal disease.,0.0
+23,subjective,The patient's father had a kidney transplant.,0.25
+24,subjective,The kidney transplant was due to obstructive neuropathy.,0.5
+25,subjective,The patient's aunt has end-stage renal disease.,0.5
+26,subjective,The patient's grandfather had posterior urethral valves.,0.25
+27,subjective,The patient's grandfather had obstructive neuropathy.,0.25
+28,subjective,The patient's grandfather has chronic kidney disease.,0.25
+29,subjective,The patient's grandfather is dialysis dependent.,0.25
+30,subjective,The patient reports stomach pain.,0.0
+31,subjective,The patient reports burning sensations when urinating.,0.5
+32,subjective,The patient reports occasional difficulty starting urination.,0.5
+33,objective,The patient is a female.,0.0
+34,objective,The patient is well-appearing.,0.0
+35,objective,The patient is alert.,0.0
+36,objective,The patient is oriented.,0.0
+37,objective,The patient is sitting comfortably.,0.75
+38,objective,The patient has no acute distress.,0.0
+39,objective,The physical exam is within normal limits.,0.0
+40,assessment,"The patient has a history of a small, atrophic right kidney.",0.0
+41,assessment,The patient's atrophic right kidney is possibly resulting from a severe infection.,0.5
+42,assessment,The patient had a severe infection at age 4.,1.0
+43,assessment,The patient has atrophic right kidney.,0.0
+44,assessment,The patient has suspected kidney disease.,0.0
+45,assessment,The patient has possible proteinuria.,0.5
+46,assessment,The patient has obstructive neuropathy.,0.75
+47,assessment,The patient has chronic kidney disease.,0.25
+48,plan,Ashley will undergo annual ultrasounds.,0.75
+49,plan,The ultrasounds are to monitor the size of her kidneys.,0.0
+50,plan,The ultrasounds are to monitor the function of her kidneys.,0.0
+51,plan,Ashley will have complete urinalyses.,0.0
+52,plan,The urinalyses are to check for protein in her urine.,0.0
+53,plan,The urinalyses are to check for blood in her urine.,0.0
+54,plan,Ashley will have regular blood pressure checks.,0.5
+55,plan,The doctor advised Ashley to avoid non-steroidal anti-inflammatory medications.,0.0
+56,plan,The doctor advised Ashley to avoid ibuprofen.,0.0
+57,plan,The doctor prescribed Tylenol.,1.0
+58,plan,Tylenol is prescribed as an alternative to non-steroidal anti-inflammatory medications.,0.25
+59,plan,Ashley should drink at least 2 liters of water per day.,0.25
+60,plan,The doctor recommended that Ashley stay well-hydrated.,0.0
+61,plan,The doctor recommended that Ashley maintain a healthy diet.,0.0
+62,plan,The doctor recommended that Ashley maintain an active lifestyle.,0.0
+63,plan,The purpose of the recommendations is to promote kidney health.,0.0
+64,plan,The doctor advised Ashley to avoid dehydration.,0.0
+65,plan,Dehydration can put strain on her kidneys.,0.25
+66,plan,Ashley will follow up with her primary care physician.,0.75
+67,plan,Ashley will follow up with an adult nephrologist.,0.75
+68,plan,The follow-up will be with a physician closer to her home.,0.0
+69,plan,Ashley will not return to Atlanta for follow-up.,0.5

@@ -1,0 +1,35 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"HPI: The patient is a 34-year-old female with a history of chronic migraines and hypertension who presents with abdominal pain that started 10 days ago with mild discomfort on her right side, which has worsened over the last couple of days.",0.0
+2,"The pain is a 4-5 out of 10 in severity, with occasional increases to 7-8.",0.5
+3,It is worse after meals and is localized to the right side with occasional radiation to the left.,0.25
+4,"She has associated nausea, heartburn, and mild fatigue, but no fever, vomiting, diarrhea, or blood in her urine or stool.",0.25
+5,She has not had any unusual travel or exposures.,0.5
+6,"Past medical history: The patient has a history of chronic migraines and hypertension, for which she takes lisinopril 20mg daily.",0.0
+7,"Review of systems: The patient denies any pain with urination, blood in her urine, diarrhea, or blood in her stool.",0.25
+8,She reports some chills but no documented fever.,0.5
+9,Current medications:,0.0
+10,Excedrin for migraines,0.0
+11,Sumatriptan as needed for breakthrough migraine pain,0.0
+12,Lisinopril 20mg daily for hypertension,0.0
+13,Objective:,0.0
+14,Vital signs:,0.0
+15,"Blood pressure is elevated today, but she typically checks her blood pressure 2-3 times a week and reports numbers in the 120s/70s.",1.0
+16,Physical exam:,0.5
+17,Normal cardiovascular exam with a grade 3/6 systolic ejection murmur,0.75
+18,"Tenderness in the right upper quadrant, mild to moderate",0.0
+19,Equivocal Murphy's sign in the right upper quadrant,0.0
+20,Soft and no significant tenderness in the right lower quadrant and no CVA tenderness on back exam,1.0
+21,Test Results:,0.75
+22,Not mentioned,0.0
+23,Assessment / Problem List:,0.0
+24,"Assessment: The patient has acute abdominal pain with right upper quadrant tenderness, which may be indicative of gallstones or an infection in the gallbladder.",0.0
+25,Problem list:,0.0
+26,Abdominal pain; suspected gallstones; suspected gallbladder infection; hypertension; chronic migraines,0.25
+27,Plan:,0.0
+28,"I ordered a CBC, chem 12, urinalysis, pregnancy test, and right upper quadrant ultrasound to investigate the cause of the abdominal pain.",0.0
+29,"I will continue the patient's current medications, including Excedrin for migraines, sumatriptan as needed for breakthrough migraine pain, and lisinopril 20mg daily for hypertension.",0.75
+30,I will also prescribe a refill for sumatriptan.,0.25
+31,I advised the patient to avoid eating until further notice in case surgical intervention is needed.,0.75
+32,Follow-up:,0.0
+33,I will follow up on the results of the ordered tests today and see the patient back in about four weeks.,0.25

@@ -1,0 +1,36 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"The patient, a 53-year-old female, presents with a complaint of chest pain that she describes as dull and pressure-like, which occurs when she walks and has been ongoing for approximately three months.",0.0
+2,The patient reports that the pain is relieved when she stops walking.,0.5
+3,"She denies having any shortness of breath, sweats, or clamminess.",0.25
+4,"Her past medical history includes diabetes and high blood pressure, which have not been previously diagnosed by our office but have been noted by other clinicians.",0.75
+5,The patient is currently taking metformin 500mg twice daily for her diabetes.,0.0
+6,Objective:,0.0
+7,Vital signs:,0.5
+8,"Blood pressure: Not measured in the office, but the patient's history of high blood pressure has been noted by other clinicians.",1.0
+9,Pulse rate: Not mentioned.,0.0
+10,Oxygen saturation: Not mentioned.,0.0
+11,Temperature: Not mentioned.,0.0
+12,Physical exam:,0.0
+13,No jugular venous distension (JVD) or swelling in the neck.,1.0
+14,Clear lung exam with no crackles or rhonchi.,0.5
+15,"Regular heart rate and rhythm, with a 2/6 systolic ejection murmur.",0.75
+16,Equal pulses.,0.75
+17,Soft and non-tender abdomen with no masses.,0.75
+18,No back exam abnormalities.,1.0
+19,Lower extremity exam reveals 1+ non-pitting edema in the ankle area with no calf tenderness.,1.0
+20,Test Results:,0.0
+21,"ECG: Normal, no signs of a heart attack.",0.0
+22,Assessment / Problem List:,0.0
+23,"Assessment: The patient presents with chest pain that may be related to suspected high blood pressure and diabetes, with a possible diagnosis of unstable angina.",0.5
+24,Problem list:,0.0
+25,Diabetes mellitus; High blood pressure; Unstable angina (suspected).,0.0
+26,Plan:,0.0
+27,I prescribed aspirin 81mg daily for the patient's suspected unstable angina.,1.0
+28,"I also prescribed nitroglycerin 1-3 tablets every 5 minutes as needed for chest pain, with the instruction to seek immediate medical attention if the pain does not resolve.",0.75
+29,I will refer the patient to cardiology for further evaluation and a stress test.,0.0
+30,I will continue the patient's current metformin regimen and order another hemoglobin A1c test.,0.25
+31,I will also start the patient on hydrochlorothiazide for her high blood pressure and instruct her to use a home blood pressure cuff and enter her readings in Epic MyChart.,0.5
+32,Follow-up:,0.0
+33,The patient will follow up with cardiology in one week for further evaluation and a stress test.,1.0
+34,She will also return to our office in two weeks to review her hemoglobin A1c results and adjust her treatment plan as needed.,1.0

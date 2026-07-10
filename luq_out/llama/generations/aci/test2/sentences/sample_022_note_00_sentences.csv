@@ -1,0 +1,24 @@
+sentence_idx,sentence,uncertainty
+0,Subjective:,0.0
+1,"The patient, a 57-year-old male, presents with a 2-week history of shortness of breath.",0.0
+2,"He reports waking up with shortness of breath, which persists upon exertion.",1.0
+3,"He has been coughing up blood for approximately 3 weeks, with a quantity of 3-4 cups per day.",0.0
+4,"He denies any fever, bruising, or bleeding from other sites.",0.5
+5,"He has a history of diabetes, high blood pressure, and asthma.",0.0
+6,"His blood sugar has been running high, with morning readings around 150 and post-meal readings over 200.",0.0
+7,"He is taking metformin and norvasc, but has been skipping doses due to low blood pressure.",0.75
+8,"He has a history of knee problems, but no swelling.",0.75
+9,He has not been to the hospital or emergency room for this episode.,0.75
+10,Objective:,0.0
+11,"Vital signs: Pulse 70, oxygen saturation 94%.",1.0
+12,"Physical exam: No JVD, no carotid bruits, lung exam reveals rails and rhonchi on the right side, diminished breath sounds on the right side, 2/6 systolic ejection murmur, regular rate and rhythm, soft belly, 1+ nonpitting edema on both lower extremities, no calf tenderness, no negative Homan sign.",0.75
+13,Assessment / Problem List:,0.0
+14,"The patient has an acute respiratory infection, likely pneumonia, with coughing up blood, and poorly controlled diabetes, with hemoglobin A1c of 7.7.",1.0
+15,"The patient's blood pressure is also elevated, with a reading of 120/70.",1.0
+16,Plan:,0.0
+17,I prescribed a chest X-ray and referred the patient to the emergency department for further evaluation and blood testing.,0.0
+18,I also ordered a CAT scan of the chest to rule out a blood clot.,0.75
+19,I increased the patient's dose of metformin to 750 mg twice a day and instructed him to hold his norvasc for the time being.,0.25
+20,I will have him return in three weeks to discuss his diabetes treatment plan and reassess his blood pressure once the current episode is under control.,1.0
+21,Follow-up:,0.0
+22,I will have the patient return to the clinic in three weeks to discuss his diabetes treatment plan and reassess his blood pressure.,0.5
