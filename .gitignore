@@ -13,6 +13,12 @@ results/**/*.npz
 results/**/*.parquet
 results/**/*.csv
 
+# Raw per-sample activation caches (huge, regenerable via redeep_sentence.py /
+# causal_intervention.py) — keep the aggregated analysis outputs elsewhere in
+# redeep_out/ tracked (e.g. word_plots/, word_classifier/), just not these.
+redeep_out/**/activations/
+redeep_out/**/sample_cache/
+
 # Jupyter
 .ipynb_checkpoints/
 
