@@ -92,9 +92,25 @@ prefix. That entire suffix is byte-identical across conditions and begins
 right after a "\n\n" boundary, so its tokenisation is context-independent
 of what precedes it (verified at runtime by `assert_suffix_alignment`,
 which hard-fails if the tokenised suffixes ever diverge). Consequently t*
-is always the LAST token of `full_ids` in every condition, regardless of
-each transcript's own length -- source and destination positions for
-patching are both simply -1, no cross-run offset bookkeeping required.
+is always the LAST token of `full_ids` in every condition -- source and
+destination positions for patching are both simply -1.
+
+IMPORTANT (fixed after the first run): matching the SUFFIX TEXT is not
+enough on its own. If the transcripts differ in TOKEN COUNT, position -1
+still lands at a DIFFERENT ABSOLUTE sequence index in each condition (the
+transcript edit shifts everything downstream), and Llama's RoPE encodes
+relative position -- so a patched-in residual carries a positional-context
+shift on top of the intended fact content, confounding the two. The first
+run of this script showed exactly this signature: both the "restore" and
+"sensitivity" directions pushed the corrupted run the SAME way at deep
+layers, which is what you'd expect from a generic positional artifact, not
+a content-specific evidence channel (those should push opposite ways).
+`equalize_lengths()` fixes this by padding every condition with a verified
+single-token neutral filler (a doctor backchannel, " okay") until
+`build_full_ids(...)` returns the EXACT same length for corrupted / clean /
+flip -- enforced by a hard assertion in `main()` before anything else runs.
+Only with equal total length does position -1 sit at the same absolute
+index everywhere, isolating fact content as the only thing that differs.
 
 Hierarchy (per Anthropic's circuit-tracing point that whole heads/layers
 are often too coarse)
@@ -169,13 +185,13 @@ _TRANSCRIPT_CORRUPTED = """\
 [patient] a little bit
 """
 
-# CLEAN (restoration) source: same fact, made maximally unambiguous with an
-# inserted confirmation exchange. Nothing about the world changes.
+# CLEAN (restoration) source: same fact, restated more emphatically in the
+# SAME line (not a new inserted exchange -- keeps the edit close in length to
+# the original, minimising how much artificial padding equalize_lengths()
+# below has to add).
 _TRANSCRIPT_CLEAN = _TRANSCRIPT_CORRUPTED.replace(
     "[patient] no i fell\n",
-    "[patient] no i fell\n"
-    "[doctor] just to make sure i have this right so you did fall down on the ice\n"
-    "[patient] yes that's right i fell down\n",
+    "[patient] no i fell, i definitely fell down\n",
 )
 
 # FLIP (sensitivity) source: the fact itself is negated to literally match
@@ -232,6 +248,56 @@ def assert_suffix_alignment(model, ids_a: torch.Tensor, ids_b: torch.Tensor,
             f"position=-1 alignment the whole script depends on.\n"
             f"  a: {da!r}\n  b: {db!r}"
         )
+
+
+# Neutral filler used ONLY to equalise total token length across conditions
+# (see equalize_lengths). Deliberately a generic doctor backchannel that is
+# extremely common and near content-free in real clinical dialogue, so
+# padding with it doesn't introduce new evidence.
+_FILLER_UNIT = " okay"
+
+
+def equalize_lengths(model, device: str, transcripts: Dict[str, str]) -> Dict[str, str]:
+    """
+    LENGTH-CONFOUND FIX. Position -1 being the SAME relative offset in every
+    condition (guaranteed by assert_suffix_alignment) is not enough: if the
+    transcripts differ in token count, position -1 sits at a DIFFERENT
+    absolute sequence index in each condition, so RoPE gives the model a
+    different relative-distance profile to every earlier token regardless of
+    what those tokens say. A patched-in residual then carries that positional
+    shift as well as the intended fact content, confounding the two.
+
+    Fix: pad every transcript shorter than the longest with repeated
+    _FILLER_UNIT (verified to be exactly one token) appended as a trailing
+    neutral doctor utterance, so build_full_ids(...) returns EXACTLY the same
+    length for every condition -- position -1 is then the same absolute
+    index everywhere, not just the same offset-from-the-end.
+    """
+    fu_ids = model.tokenizer.encode(_FILLER_UNIT, add_special_tokens=False)
+    assert len(fu_ids) == 1, (
+        f"_FILLER_UNIT {_FILLER_UNIT!r} is {len(fu_ids)} tokens, not 1 -- "
+        f"pick a different filler word before relying on equalize_lengths."
+    )
+
+    lengths = {k: build_full_ids(model, t, device).shape[1] for k, t in transcripts.items()}
+    target = max(lengths.values())
+    print(f"equalize_lengths: raw token counts {lengths}, padding all to {target}")
+
+    out = {}
+    for k, t in transcripts.items():
+        gap = target - lengths[k]
+        if gap == 0:
+            out[k] = t
+            continue
+        padded = t.rstrip("\n") + "\n[doctor]" + (_FILLER_UNIT * gap)
+        new_len = build_full_ids(model, padded, device).shape[1]
+        assert new_len == target, (
+            f"[{k}] padding overshot/undershot: got {new_len}, wanted {target} "
+            f"(requested gap={gap}) -- _FILLER_UNIT merged unexpectedly when "
+            f"repeated; try a different filler word."
+        )
+        out[k] = padded
+    return out
 
 
 def single_token_id(model, text: str) -> int:
@@ -329,7 +395,7 @@ def patch_attn_head(src_cache: dict, layer: int, head: int):
 def run_direction(model, direction: str, ids_corrupted: torch.Tensor,
                   ids_source: torch.Tensor, tok_h: int, tok_f: int,
                   n_layers: int, n_heads: int, out_dir: Path,
-                  m_corrupted: float) -> None:
+                  m_corrupted: float) -> list:
     tag = "restore" if direction == "clean" else "sensitivity"
     print(f"\n=== Direction: {tag} (source={'clean' if direction == 'clean' else 'flip'}) ===")
 
@@ -339,6 +405,11 @@ def run_direction(model, direction: str, ids_corrupted: torch.Tensor,
     print(f"  M_source ({tag})                 = {m_source:+.3f}  (expected {expect})")
     ok = (m_source < m_corrupted) if direction == "clean" else (m_source > m_corrupted)
     print(f"  Sanity check {'PASSED' if ok else '[!!] FAILED — reconsider the transcript edit'}")
+    summary_lines = [
+        f"Direction {tag}: M_source = {m_source:+.4f} (expected {expect}, "
+        f"M_corrupted = {m_corrupted:+.4f}) -- sanity check "
+        f"{'PASSED' if ok else '[!!] FAILED — reconsider the transcript edit'}",
+    ]
 
     src_cache = cache_last_position(model, ids_source, n_layers)
 
@@ -412,6 +483,13 @@ def run_direction(model, direction: str, ids_corrupted: torch.Tensor,
     plt.close(fig)
     print(f"  Saved peak_layer_breakdown_{tag}.csv / fig_peak_layer_heads_{tag}.png")
 
+    summary_lines.append(
+        f"  Peak layer {peak_layer}: resid_pre Δ={peak_row['delta_restore']:+.3f}, "
+        f"attn-all Δ={m_corrupted - m_attn:+.3f}, mlp Δ={m_corrupted - m_mlp:+.3f}, "
+        f"max |per-head Δ|={max(abs(d) for d in head_deltas):+.3f}"
+    )
+    return summary_lines
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Main
@@ -435,9 +513,23 @@ def main():
     model = load_model(args.model, args.device)
     n_layers, n_heads = model.cfg.n_layers, model.cfg.n_heads
 
-    ids_corrupted = build_full_ids(model, _TRANSCRIPT_CORRUPTED, args.device)
-    ids_clean = build_full_ids(model, _TRANSCRIPT_CLEAN, args.device)
-    ids_flip = build_full_ids(model, _TRANSCRIPT_FLIP, args.device)
+    equalized = equalize_lengths(model, args.device, {
+        "corrupted": _TRANSCRIPT_CORRUPTED,
+        "clean": _TRANSCRIPT_CLEAN,
+        "flip": _TRANSCRIPT_FLIP,
+    })
+    ids_corrupted = build_full_ids(model, equalized["corrupted"], args.device)
+    ids_clean = build_full_ids(model, equalized["clean"], args.device)
+    ids_flip = build_full_ids(model, equalized["flip"], args.device)
+
+    assert ids_corrupted.shape[1] == ids_clean.shape[1] == ids_flip.shape[1], (
+        f"Length-confound fix failed: shapes are "
+        f"{ids_corrupted.shape[1]}, {ids_clean.shape[1]}, {ids_flip.shape[1]} "
+        f"-- position -1 would sit at different absolute indices across "
+        f"conditions, invalidating the patching comparison."
+    )
+    print(f"All three conditions equalised to {ids_corrupted.shape[1]} tokens "
+         f"-- position -1 is the same absolute index in every condition.")
 
     assert_suffix_alignment(model, ids_corrupted, ids_clean, label="corrupted vs clean")
     assert_suffix_alignment(model, ids_corrupted, ids_flip, label="corrupted vs flip")
@@ -455,6 +547,7 @@ def main():
         interpretation = ("[!!] model does NOT prefer y_H here — baseline does not reproduce "
                           "the hallucination; re-check the generation prefix / tokenisation.")
     summary_lines = [
+        f"All conditions equalised to {ids_corrupted.shape[1]} tokens (length-confound fix).",
         f"M_corrupted (real transcript, real prefix, no patch) = {m_corrupted:+.4f}",
         f"  Interpretation: {interpretation}",
     ]
@@ -474,11 +567,11 @@ def main():
     print("Saved logit_lens_trajectory.csv / fig_logit_lens_trajectory.png")
 
     if args.direction in ("restore", "both"):
-        run_direction(model, "clean", ids_corrupted, ids_clean, tok_h, tok_f,
-                     n_layers, n_heads, out_dir, m_corrupted)
+        summary_lines += run_direction(model, "clean", ids_corrupted, ids_clean, tok_h, tok_f,
+                                       n_layers, n_heads, out_dir, m_corrupted)
     if args.direction in ("sensitivity", "both"):
-        run_direction(model, "flip", ids_corrupted, ids_flip, tok_h, tok_f,
-                     n_layers, n_heads, out_dir, m_corrupted)
+        summary_lines += run_direction(model, "flip", ids_corrupted, ids_flip, tok_h, tok_f,
+                                       n_layers, n_heads, out_dir, m_corrupted)
 
     (out_dir / "baseline_summary.txt").write_text("\n".join(summary_lines) + "\n")
     print("\n" + "\n".join(summary_lines))
