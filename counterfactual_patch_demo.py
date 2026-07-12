@@ -149,7 +149,7 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
-from typing import Dict, Tuple
+from typing import Dict
 
 import numpy as np
 import pandas as pd
@@ -257,7 +257,7 @@ def assert_suffix_alignment(model, ids_a: torch.Tensor, ids_b: torch.Tensor,
 _FILLER_UNIT = " okay"
 
 
-def equalize_lengths(model, device: str, transcripts: Dict[str, str]) -> Dict[str, str]:
+def equalize_lengths(model, device: str, transcripts: Dict[str, str]) -> Dict[str, torch.Tensor]:
     """
     LENGTH-CONFOUND FIX. Position -1 being the SAME relative offset in every
     condition (guaranteed by assert_suffix_alignment) is not enough: if the
@@ -267,35 +267,57 @@ def equalize_lengths(model, device: str, transcripts: Dict[str, str]) -> Dict[st
     what those tokens say. A patched-in residual then carries that positional
     shift as well as the intended fact content, confounding the two.
 
-    Fix: pad every transcript shorter than the longest with repeated
-    _FILLER_UNIT (verified to be exactly one token) appended as a trailing
-    neutral doctor utterance, so build_full_ids(...) returns EXACTLY the same
-    length for every condition -- position -1 is then the same absolute
-    index everywhere, not just the same offset-from-the-end.
+    Fix: splice raw pad TOKEN IDS (a single verified-one-token filler,
+    _FILLER_UNIT) directly into the already-tokenised id sequence, right
+    before the fixed suffix (_PROMPT_MIDDLE + _GENERATION_PREFIX), so every
+    condition reaches EXACTLY the same total length.
+
+    NOT implemented as repeated filler TEXT re-tokenised from scratch: a
+    first attempt did that and failed at runtime (e.g. requested gap=10,
+    got 1012 tokens instead of 1008) because BPE can merge a run of the same
+    repeated word differently than an isolated occurrence -- "N repeats" and
+    "N tokens" are not the same guarantee once retokenised in context.
+    Splicing already-tokenised IDs sidesteps this entirely: nothing gets
+    retokenised at the padded region, so `gap` requested == `gap` added,
+    always, by construction.
     """
-    fu_ids = model.tokenizer.encode(_FILLER_UNIT, add_special_tokens=False)
-    assert len(fu_ids) == 1, (
-        f"_FILLER_UNIT {_FILLER_UNIT!r} is {len(fu_ids)} tokens, not 1 -- "
+    suffix_ids = model.tokenizer.encode(_PROMPT_MIDDLE + _GENERATION_PREFIX,
+                                        add_special_tokens=False)
+    suffix_len = len(suffix_ids)
+    suffix_tensor = torch.tensor(suffix_ids)
+
+    pad_ids = model.tokenizer.encode(_FILLER_UNIT, add_special_tokens=False)
+    assert len(pad_ids) == 1, (
+        f"_FILLER_UNIT {_FILLER_UNIT!r} is {len(pad_ids)} tokens, not 1 -- "
         f"pick a different filler word before relying on equalize_lengths."
     )
+    pad_id = pad_ids[0]
 
-    lengths = {k: build_full_ids(model, t, device).shape[1] for k, t in transcripts.items()}
+    ids = {k: build_full_ids(model, t, device) for k, t in transcripts.items()}
+    for k, x in ids.items():
+        tail = x[0, -suffix_len:].cpu()
+        if not torch.equal(tail, suffix_tensor):
+            raise AssertionError(
+                f"[{k}] the fixed suffix did not tokenise identically in "
+                f"context (got {model.tokenizer.decode(tail)!r}, expected "
+                f"{model.tokenizer.decode(suffix_tensor)!r}) -- cannot "
+                f"locate a safe splice point before it."
+            )
+
+    lengths = {k: x.shape[1] for k, x in ids.items()}
     target = max(lengths.values())
     print(f"equalize_lengths: raw token counts {lengths}, padding all to {target}")
 
     out = {}
-    for k, t in transcripts.items():
+    for k, x in ids.items():
         gap = target - lengths[k]
         if gap == 0:
-            out[k] = t
+            out[k] = x
             continue
-        padded = t.rstrip("\n") + "\n[doctor]" + (_FILLER_UNIT * gap)
-        new_len = build_full_ids(model, padded, device).shape[1]
-        assert new_len == target, (
-            f"[{k}] padding overshot/undershot: got {new_len}, wanted {target} "
-            f"(requested gap={gap}) -- _FILLER_UNIT merged unexpectedly when "
-            f"repeated; try a different filler word."
-        )
+        split = x.shape[1] - suffix_len
+        pad_block = torch.full((1, gap), pad_id, dtype=x.dtype, device=x.device)
+        padded = torch.cat([x[:, :split], pad_block, x[:, split:]], dim=1)
+        assert padded.shape[1] == target  # exact by construction; cheap defense-in-depth
         out[k] = padded
     return out
 
@@ -518,9 +540,9 @@ def main():
         "clean": _TRANSCRIPT_CLEAN,
         "flip": _TRANSCRIPT_FLIP,
     })
-    ids_corrupted = build_full_ids(model, equalized["corrupted"], args.device)
-    ids_clean = build_full_ids(model, equalized["clean"], args.device)
-    ids_flip = build_full_ids(model, equalized["flip"], args.device)
+    ids_corrupted = equalized["corrupted"]
+    ids_clean = equalized["clean"]
+    ids_flip = equalized["flip"]
 
     assert ids_corrupted.shape[1] == ids_clean.shape[1] == ids_flip.shape[1], (
         f"Length-confound fix failed: shapes are "
