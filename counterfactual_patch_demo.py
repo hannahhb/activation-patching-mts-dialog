@@ -449,9 +449,14 @@ def main():
 
     m_corrupted = logit_diff_at_last_pos(model, ids_corrupted, tok_h, tok_f)
 
+    if m_corrupted > 0:
+        interpretation = "model prefers y_H ('denies') — reproduces the hallucination, as expected."
+    else:
+        interpretation = ("[!!] model does NOT prefer y_H here — baseline does not reproduce "
+                          "the hallucination; re-check the generation prefix / tokenisation.")
     summary_lines = [
         f"M_corrupted (real transcript, real prefix, no patch) = {m_corrupted:+.4f}",
-        f"  Interpretation: {'model prefers y_H (\"denies\") — reproduces the hallucination, as expected.' if m_corrupted > 0 else '[!!] model does NOT prefer y_H here — baseline does not reproduce the hallucination; re-check the generation prefix / tokenisation.'}",
+        f"  Interpretation: {interpretation}",
     ]
 
     ll_df = logit_lens_trajectory(model, ids_corrupted, n_layers, tok_h, tok_f)
