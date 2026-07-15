@@ -1,0 +1,51 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Randy Gutierrez.,0.5,"[""Randy Gutierrez""]","[[18, 33]]","[""exact""]",True,False
+1,subjective,The patient is a 2-year-old male.,0.75,"[""a 2-year-old male""]","[[35, 52]]","[""exact""]",True,False
+2,subjective,The patient presented with symptoms of a runny nose.,0.0,"[""symptoms of a runny nose""]","[[69, 93]]","[""exact""]",True,False
+3,subjective,The patient presented with symptoms of stuffiness.,0.25,"[""stuffiness""]","[[95, 105]]","[""exact""]",True,False
+4,subjective,The patient presented with symptoms of a cough that is not barky.,0.0,"[""a cough that is not barky""]","[[111, 136]]","[""exact""]",True,False
+5,subjective,The patient's symptoms started around supper time last night.,0.25,"[""starting around supper time last night""]","[[138, 176]]","[""exact""]",True,False
+6,subjective,The patient has been pulling on his ears.,0.0,"[""he has been pulling on his ears""]","[[203, 234]]","[""exact""]",True,False
+7,subjective,The patient has been rubbing his nose.,0.0,"[""rubbing his nose""]","[[239, 255]]","[""exact""]",True,False
+8,subjective,The patient has a low-grade fever of 100.3°F.,0.0,"[""a low-grade fever of 100.3\u00b0F""]","[[273, 301]]","[""exact""]",True,False
+9,subjective,The patient ate his supper.,0.75,"[""He ate his supper""]","[[303, 320]]","[""exact""]",True,False
+10,subjective,The patient ate his breakfast.,0.75,"[""He ate his supper and breakfast""]","[[303, 334]]","[""exact""]",True,False
+11,subjective,The patient only consumed a small amount of food.,0.5,"[""but only consumed a small amount of food""]","[[336, 376]]","[""exact""]",True,False
+12,subjective,The patient has been irritable.,0.0,"[""He has been irritable""]","[[378, 399]]","[""exact""]",True,False
+13,subjective,The patient has difficulty sleeping.,0.0,"[""difficulty sleeping""]","[[408, 427]]","[""exact""]",True,False
+14,subjective,The patient's older sister has been sick.,0.0,"[""his older sister has been sick""]","[[459, 489]]","[""exact""]",True,False
+15,subjective,The patient had a playdate with a nephew who had a sinus infection.,0.25,"[""they had a playdate with a nephew who had a sinus infection""]","[[495, 554]]","[""exact""]",True,False
+16,subjective,The patient has a runny nose.,0.0,"[""The patient has a runny nose""]","[[577, 605]]","[""exact""]",True,False
+17,subjective,The patient has a stuffy nose.,0.25,"[""stuffy nose""]","[[607, 618]]","[""exact""]",True,False
+18,subjective,The patient has a cough.,0.0,"[""cough""]","[[113, 118]]","[""exact""]",True,False
+19,subjective,The patient has a low-grade fever.,0.0,"[""He has a low-grade fever""]","[[670, 694]]","[""exact""]",True,False
+20,subjective,The patient is currently taking Tylenol.,0.0,"[""The patient is currently taking Tylenol""]","[[718, 757]]","[""exact""]",True,False
+21,subjective,The patient is taking Tylenol for fever.,0.0,"[""for fever""]","[[758, 767]]","[""exact""]",True,False
+22,subjective,The patient has used saline mist.,0.25,"[""saline mist""]","[[781, 792]]","[""exact""]",True,False
+23,subjective,The patient has used baby Vicks.,0.25,"[""baby Vicks""]","[[794, 804]]","[""exact""]",True,False
+24,subjective,The patient has used a humidifier.,0.0,"[""a humidifier""]","[[810, 822]]","[""exact""]",True,False
+25,subjective,The patient's mother has been using Aveno shampoo on his scalp.,1.0,"[""Aveno shampoo on his scalp""]","[[850, 876]]","[""exact""]",True,False
+26,objective,The patient's temperature is 100.3°F.,0.0,"[""Temperature 100.3\u00b0F""]","[[13, 32]]","[""exact""]",True,False
+27,objective,The patient's temperature was taken rectally.,0.5,"[""(rectal)""]","[[33, 41]]","[""exact""]",True,False
+28,objective,The patient's pulse rate is not mentioned.,0.0,"[""pulse rate not mentioned""]","[[43, 67]]","[""exact""]",True,False
+29,objective,The patient's blood pressure is not mentioned.,0.0,"[""blood pressure not mentioned""]","[[69, 97]]","[""exact""]",True,False
+30,objective,The patient's oxygen saturation is not mentioned.,0.0,"[""oxygen saturation not mentioned""]","[[99, 130]]","[""exact""]",True,False
+31,objective,The patient's respiratory rate is not mentioned.,0.0,"[""respiratory rate not mentioned""]","[[136, 166]]","[""exact""]",True,False
+32,objective,The patient's ears appear okay.,0.0,"[""The patient's ears appear okay""]","[[184, 214]]","[""exact""]",True,False
+33,objective,The patient's mucous is clear.,0.5,"[""his mucous is clear""]","[[220, 239]]","[""exact""]",True,False
+34,assessment,The patient has a viral upper respiratory infection.,0.0,"[""The patient has a viral upper respiratory infection""]","[[12, 63]]","[""exact""]",True,False
+35,assessment,The patient has an upper respiratory infection.,0.0,"[""Upper respiratory infection""]","[[80, 107]]","[""exact""]",True,False
+36,assessment,The patient is suspected to have a viral upper respiratory infection.,0.0,"[""suspected viral upper respiratory infection""]","[[109, 152]]","[""exact""]",True,False
+37,plan,The patient was prescribed a medication for a barky cough.,0.25,"[""I prescribed the same medication as his sister, which is a half a teaspoon of medication for a barky cough, to be given if the patient develops a barky cough""]","[[0, 157]]","[""exact""]",True,False
+38,plan,The patient's medication for a barky cough is a half a teaspoon.,0.0,"[""a half a teaspoon of medication for a barky cough""]","[[57, 106]]","[""exact""]",True,False
+39,plan,The patient's medication for a barky cough is to be given if the patient develops a barky cough.,0.0,"[""to be given if the patient develops a barky cough""]","[[108, 157]]","[""exact""]",True,False
+40,plan,The patient was recommended Zarbee's for his stuffy nose.,0.0,"[""I also recommended Zarbee's for his stuffy nose""]","[[159, 206]]","[""exact""]",True,False
+41,plan,The mother should continue to use saline mist.,0.75,"[""The mother should continue to use saline mist, baby Vicks, and a humidifier""]","[[208, 283]]","[""exact""]",True,False
+42,plan,The mother should continue to use baby Vicks.,1.0,"[""The mother should continue to use saline mist, baby Vicks, and a humidifier""]","[[208, 283]]","[""exact""]",True,False
+43,plan,The mother should continue to use a humidifier.,0.75,"[""The mother should continue to use saline mist, baby Vicks, and a humidifier""]","[[208, 283]]","[""exact""]",True,False
+44,plan,The patient was recommended a shampoo such as Head & Shoulders for his cradle cap.,0.0,"[""I recommended using a shampoo such as Head & Shoulders, Selsun Blue, or Nizoral AD, and to use a soft brush and baby oil to remove the scales""]","[[305, 446]]","[""exact""]",True,False
+45,plan,The patient was recommended a shampoo such as Selsun Blue for his cradle cap.,0.0,"[""I recommended using a shampoo such as Head & Shoulders, Selsun Blue, or Nizoral AD, and to use a soft brush and baby oil to remove the scales""]","[[305, 446]]","[""exact""]",True,False
+46,plan,The patient was recommended a shampoo such as Nizoral AD for his cradle cap.,0.0,"[""I recommended using a shampoo such as Head & Shoulders, Selsun Blue, or Nizoral AD, and to use a soft brush and baby oil to remove the scales""]","[[305, 446]]","[""exact""]",True,False
+47,plan,The patient should use a soft brush to remove the scales of his cradle cap.,0.25,"[""and to use a soft brush and baby oil to remove the scales""]","[[389, 446]]","[""exact""]",True,False
+48,plan,The patient should use baby oil to remove the scales of his cradle cap.,0.25,"[""and to use a soft brush and baby oil to remove the scales""]","[[389, 446]]","[""exact""]",True,False
+49,plan,The patient will be seen again in one week.,0.0,"[""The patient will be seen again in one week""]","[[460, 502]]","[""exact""]",True,False

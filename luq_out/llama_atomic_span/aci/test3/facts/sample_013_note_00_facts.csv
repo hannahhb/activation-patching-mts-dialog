@@ -1,0 +1,61 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 74-year-old teacher.,0.0,"[""a 74-year-old teacher""]","[[18, 39]]","[""exact""]",True,False
+1,subjective,The patient presented with a cough that started about a week ago.,0.0,"[""presented with a cough that started about a week ago""]","[[41, 93]]","[""exact""]",True,False
+2,subjective,The patient's cough has worsened over the last two days.,0.0,"[""which has worsened over the last two days""]","[[95, 136]]","[""exact""]",True,False
+3,subjective,The patient's cough is productive of yellow sputum.,0.0,"[""The cough is productive of yellow sputum""]","[[138, 178]]","[""exact""]",True,False
+4,subjective,The patient denies fever.,0.0,"[""denies fever, chills, shortness of breath, runny nose, sore throat, and sinus pain""]","[[192, 274]]","[""exact""]",True,False
+5,subjective,The patient denies chills.,0.0,"[""denies fever, chills, shortness of breath, runny nose, sore throat, and sinus pain""]","[[192, 274]]","[""exact""]",True,False
+6,subjective,The patient denies shortness of breath.,0.0,"[""denies fever, chills, shortness of breath, runny nose, sore throat, and sinus pain""]","[[192, 274]]","[""exact""]",True,False
+7,subjective,The patient denies runny nose.,0.25,"[""denies fever, chills, shortness of breath, runny nose, sore throat, and sinus pain""]","[[192, 274]]","[""exact""]",True,False
+8,subjective,The patient denies sore throat.,0.5,"[""denies fever, chills, shortness of breath, runny nose, sore throat, and sinus pain""]","[[192, 274]]","[""exact""]",True,False
+9,subjective,The patient denies sinus pain.,0.5,"[""denies fever, chills, shortness of breath, runny nose, sore throat, and sinus pain""]","[[192, 274]]","[""exact""]",True,False
+10,subjective,The patient reports a little bit of pressure in the sinuses.,0.0,"[""a little bit of pressure in the sinuses""]","[[296, 335]]","[""exact""]",True,False
+11,subjective,The patient reports a little bit of a congested feeling in the throat.,0.75,"[""a little bit of a congested feeling in the throat""]","[[340, 389]]","[""exact""]",True,False
+12,subjective,The patient recently fell down the stairs while coughing and injured their right knee.,0.25,"[""recently fell down the stairs while coughing and injured their right knee""]","[[403, 476]]","[""exact""]",True,False
+13,subjective,The patient has a history of hypertension.,0.0,"[""history of hypertension""]","[[496, 519]]","[""exact""]",True,False
+14,subjective,The patient has been struggling with hypertension for the past year.,1.0,"[""which they have been struggling with for the past year""]","[[521, 575]]","[""exact""]",True,False
+15,subjective,The patient is taking lisinopril.,0.0,"[""Lisinopril 20mg/day for hypertension""]","[[906, 942]]","[""exact""]",True,False
+16,subjective,The patient is taking lisinopril 20mg/day.,0.0,"[""20mg/day""]","[[613, 621]]","[""exact""]",True,False
+17,subjective,The patient is taking lisinopril for hypertension.,0.0,"[""for hypertension""]","[[926, 942]]","[""exact""]",True,False
+18,subjective,The patient has diabetes.,0.0,"[""diabetes""]","[[644, 652]]","[""exact""]",True,False
+19,subjective,The patient is taking metformin.,0.0,"[""Metformin (dose not specified) for diabetes""]","[[945, 988]]","[""exact""]",True,False
+20,subjective,The patient is taking metformin for diabetes.,0.0,"[""for diabetes""]","[[976, 988]]","[""exact""]",True,False
+21,subjective,The patient does not monitor their blood sugars.,0.25,"[""reports not monitoring their blood sugars""]","[[682, 723]]","[""exact""]",True,False
+22,subjective,The patient does not monitor their diet.,0.5,"[""or diet""]","[[724, 731]]","[""exact""]",True,False
+23,objective,The patient's temperature is 98.4°F.,0.0,"[""temperature is 98.4\u00b0F""]","[[27, 48]]","[""exact""]",True,False
+24,objective,The patient's blood pressure is 125/62.,0.0,"[""blood pressure is 125/62""]","[[50, 74]]","[""exact""]",True,False
+25,objective,The patient's heart rate is in the 80s.,0.0,"[""heart rate is in the 80s""]","[[76, 100]]","[""exact""]",True,False
+26,objective,The patient's oxygen saturation is 97% on room air.,0.0,"[""oxygen saturation is 97% on room air""]","[[106, 142]]","[""exact""]",True,False
+27,objective,The patient has pain to palpation of the bilateral maxillary sinuses.,0.0,"[""pain to palpation of the bilateral maxillary sinuses""]","[[176, 228]]","[""exact""]",True,False
+28,objective,The patient has erythema and edema of the nasal turbinates bilaterally.,0.0,"[""erythema and edema of the nasal turbinates bilaterally""]","[[230, 284]]","[""exact""]",True,False
+29,objective,The patient has yellow discharge from the nasal turbinates.,0.5,"[""associated yellow discharge""]","[[290, 317]]","[""exact""]",True,False
+30,objective,The patient has coarse rhonchi present bilaterally.,0.0,"[""coarse rhonchi present bilaterally""]","[[323, 357]]","[""exact""]",True,False
+31,objective,The patient's coarse rhonchi clear with cough.,0.0,"[""that clears with cough""]","[[358, 380]]","[""exact""]",True,False
+32,objective,The patient has bilateral cervical lymphadenopathy.,0.5,"[""bilateral cervical lymphadenopathy""]","[[398, 432]]","[""exact""]",True,False
+33,objective,The patient has pain to palpation on the right knee.,0.25,"[""pain to palpation on the right knee""]","[[450, 485]]","[""exact""]",True,False
+34,objective,The patient has decreased flexion and extension of the right knee.,0.0,"[""decreased flexion and extension of the right knee""]","[[487, 536]]","[""exact""]",True,False
+35,objective,The patient has ecchymosis to the right medial knee.,0.0,"[""associated ecchymosis to the right medial knee""]","[[538, 584]]","[""exact""]",True,False
+36,objective,The patient has no evidence of an effusion in the right knee.,0.25,"[""no evidence of an effusion""]","[[590, 616]]","[""exact""]",True,False
+37,assessment,The patient has a viral syndrome.,0.0,"[""viral syndrome""]","[[30, 44]]","[""exact""]",True,False
+38,assessment,The patient has mild bronchitis.,0.0,"[""mild bronchitis""]","[[50, 65]]","[""exact""]",True,False
+39,assessment,The patient has a right medial collateral ligament strain.,0.0,"[""right medial collateral ligament strain""]","[[69, 108]]","[""exact""]",True,False
+40,assessment,The patient's right medial collateral ligament strain is from a recent fall.,0.5,"[""from a recent fall""]","[[109, 127]]","[""exact""]",True,False
+41,assessment,The patient has hypertension.,0.0,"[""hypertension"", ""Hypertension""]","[[129, 141], [243, 255]]","[""exact"", ""exact""]",True,True
+42,assessment,The patient's diabetes is uncontrolled.,0.25,"[""uncontrolled diabetes"", ""Uncontrolled diabetes""]","[[147, 168], [267, 288]]","[""exact"", ""exact""]",True,True
+43,plan,The patient was prescribed guaifenesin.,0.0,"[""I prescribed guaifenesin 600mg twice a day""]","[[0, 42]]","[""exact""]",True,False
+44,plan,The patient's guaifenesin dose is 600mg.,0.0,"[""600mg""]","[[25, 30]]","[""exact""]",True,False
+45,plan,The patient's guaifenesin frequency is twice a day.,0.0,"[""twice a day""]","[[31, 42]]","[""exact""]",True,False
+46,plan,The patient's guaifenesin is for coughing up phlegm.,0.0,"[""to help cough up phlegm""]","[[43, 66]]","[""exact""]",True,False
+47,plan,The patient was prescribed meloxicam.,0.5,"[""I prescribed meloxicam 15mg once a day""]","[[68, 106]]","[""exact""]",True,False
+48,plan,The patient's meloxicam dose is 15mg.,0.5,"[""15mg""]","[[91, 95]]","[""exact""]",True,False
+49,plan,The patient's meloxicam frequency is once a day.,0.5,"[""once a day""]","[[96, 106]]","[""exact""]",True,False
+50,plan,The patient's meloxicam is for the right knee pain.,0.5,"[""for the right knee pain""]","[[107, 130]]","[""exact""]",True,False
+51,plan,A right knee x-ray was ordered for the patient.,0.0,"[""I ordered a right knee x-ray""]","[[132, 160]]","[""exact""]",True,False
+52,plan,The right knee x-ray is to ensure no bone injury.,0.0,"[""to ensure no bone injury""]","[[161, 185]]","[""exact""]",True,False
+53,plan,A lipid panel was ordered for the patient.,0.0,"[""I ordered a lipid panel""]","[[187, 210]]","[""exact""]",True,False
+54,plan,The lipid panel is to check the patient's lipid levels.,0.0,"[""to check the patient's lipid levels""]","[[211, 246]]","[""exact""]",True,False
+55,plan,A hemoglobin A1c was ordered for the patient.,0.0,"[""I ordered a hemoglobin A1c""]","[[248, 274]]","[""exact""]",True,False
+56,plan,The hemoglobin A1c is to check the patient's blood sugar control.,0.0,"[""to check the patient's blood sugar control""]","[[275, 317]]","[""exact""]",True,False
+57,plan,The patient was referred to physical therapy.,0.25,"[""I referred the patient to physical therapy""]","[[319, 361]]","[""exact""]",True,False
+58,plan,The physical therapy is to help strengthen the muscles around the right knee.,0.25,"[""to help strengthen the muscles around the right knee""]","[[362, 414]]","[""exact""]",True,False
+59,plan,The patient will follow up with the doctor for the results of the ordered tests.,0.25,"[""The patient will follow up with me for the results of the ordered tests""]","[[428, 499]]","[""exact""]",True,False

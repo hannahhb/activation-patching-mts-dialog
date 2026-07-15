@@ -1,0 +1,40 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Gregory.,0.0,"[""The patient, Gregory,""]","[[5, 26]]","[""exact""]",True,False
+1,subjective,The patient presented with right ankle pain.,0.0,"[""right ankle pain""]","[[42, 58]]","[""exact""]",True,False
+2,subjective,The patient presented with right ankle swelling.,0.0,"[""right ankle pain and swelling""]","[[42, 71]]","[""exact""]",True,False
+3,subjective,The patient's right ankle pain and swelling were caused by a fall on the ice.,0.0,"[""after falling on the ice""]","[[72, 96]]","[""exact""]",True,False
+4,subjective,The patient was being careful before the fall.,0.25,"[""He reports that he was being careful""]","[[98, 134]]","[""exact""]",True,False
+5,subjective,The patient slipped on an icy patch.,0.25,"[""slipped on an icy patch""]","[[139, 162]]","[""exact""]",True,False
+6,subjective,The patient's friend helped him up after the fall.,1.0,"[""his friend helped him up""]","[[168, 192]]","[""exact""]",True,False
+7,subjective,The patient has been keeping the ankle elevated.,0.25,"[""He has been keeping the ankle elevated""]","[[194, 232]]","[""exact""]",True,False
+8,subjective,The patient has been icing the ankle.,0.0,"[""icing it""]","[[234, 242]]","[""exact""]",True,False
+9,subjective,The patient has been taking ibuprofen for pain.,0.0,"[""taking ibuprofen, which has provided some relief"", ""The patient has been taking ibuprofen as needed for pain""]","[[248, 296], [743, 799]]","[""exact"", ""exact""]",True,True
+10,subjective,The patient's ibuprofen has provided some relief.,0.25,"[""which has provided some relief""]","[[266, 296]]","[""exact""]",True,False
+11,subjective,The patient denies numbness in the foot.,0.0,"[""He denies numbness in the foot"", ""The patient denies numbness in the foot""]","[[298, 328], [664, 703]]","[""exact"", ""exact""]",True,True
+12,subjective,The patient has a history of playing soccer.,0.0,"[""He has a history of playing soccer"", ""The patient has a history of playing soccer""]","[[330, 364], [537, 580]]","[""exact"", ""exact""]",True,True
+13,subjective,The patient does not recall injuring this ankle before.,0.5,"[""but does not recall injuring this ankle before""]","[[366, 412]]","[""exact""]",True,False
+14,subjective,The patient's children are involved in soccer.,0.5,"[""His children are also involved in soccer""]","[[414, 454]]","[""exact""]",True,False
+15,subjective,The patient's oldest son will soon be playing in a local league.,0.75,"[""his oldest son will soon be playing in a local league""]","[[459, 512]]","[""exact""]",True,False
+16,objective,The patient's blood pressure was not mentioned.,0.0,"[""Blood pressure, pulse rate, oxygen saturation, and temperature were not mentioned""]","[[13, 94]]","[""exact""]",True,False
+17,objective,The patient's pulse rate was not mentioned.,0.0,"[""Blood pressure, pulse rate, oxygen saturation, and temperature were not mentioned""]","[[13, 94]]","[""exact""]",True,False
+18,objective,The patient's oxygen saturation was not mentioned.,0.0,"[""Blood pressure, pulse rate, oxygen saturation, and temperature were not mentioned""]","[[13, 94]]","[""exact""]",True,False
+19,objective,The patient's temperature was not mentioned.,0.0,"[""Blood pressure, pulse rate, oxygen saturation, and temperature were not mentioned""]","[[13, 94]]","[""exact""]",True,False
+20,objective,The patient has ecchymosis on the skin over the lateral malleolus.,0.0,"[""The patient has ecchymosis (bruising) on the skin over the lateral malleolus""]","[[112, 188]]","[""exact""]",True,False
+21,objective,The patient has associated swelling.,0.0,"[""and associated swelling""]","[[189, 212]]","[""exact""]",True,False
+22,objective,The patient has tenderness to palpation anterolaterally in the soft tissue.,0.0,"[""There is tenderness to palpation anterolaterally in the soft tissue""]","[[214, 281]]","[""exact""]",True,False
+23,objective,The patient has no laxity on anterior drawer and inversion stress.,0.0,"[""no laxity on anterior drawer and inversion stress""]","[[287, 336]]","[""exact""]",True,False
+24,objective,The patient has no bony tenderness on palpation of the foot.,0.0,"[""no bony tenderness on palpation of the foot""]","[[342, 385]]","[""exact""]",True,False
+25,objective,The patient's capillary refill is less than three seconds.,0.0,"[""capillary refill less than three seconds""]","[[416, 456]]","[""exact""]",True,False
+26,objective,The patient has a strong dorsalis pedis pulse.,0.0,"[""strong dorsalis pedis pulse""]","[[462, 489]]","[""exact""]",True,False
+27,objective,The patient's sensation is intact to light touch.,0.5,"[""sensation intact to light touch""]","[[494, 525]]","[""exact""]",True,False
+28,objective,The patient's right ankle x-ray showed no fracture.,0.0,"[""The right ankle x-ray showed no fracture""]","[[542, 582]]","[""exact""]",True,False
+29,assessment,The patient has a right ankle sprain.,0.0,"[""The patient's symptoms are consistent with a right ankle sprain""]","[[12, 75]]","[""exact""]",True,False
+30,plan,The patient was prescribed ibuprofen.,0.25,"[""I prescribed ibuprofen as needed for pain""]","[[0, 41]]","[""exact""]",True,False
+31,plan,The patient was prescribed ibuprofen as needed for pain.,0.0,"[""I prescribed ibuprofen as needed for pain""]","[[0, 41]]","[""exact""]",True,False
+32,plan,The patient will use an aircast to help stabilize the ankle.,0.0,"[""I am ordering an aircast to help stabilize the ankle""]","[[43, 95]]","[""exact""]",True,False
+33,plan,The patient will use crutches for the next one to two days.,0.0,"[""crutches for the next one to two days""]","[[100, 137]]","[""exact""]",True,False
+34,plan,The patient will continue to ice the ankle.,0.0,"[""The patient will continue to ice the ankle""]","[[139, 181]]","[""exact""]",True,False
+35,plan,The patient will keep the ankle elevated.,0.0,"[""keep it elevated""]","[[186, 202]]","[""exact""]",True,False
+36,plan,The patient will be followed up in two weeks.,0.0,"[""The patient will be followed up in two weeks to assess progress and determine readiness to return to soccer"", ""The patient will be seen in two weeks to assess progress and determine readiness to return to soccer""]","[[204, 311], [325, 425]]","[""exact"", ""exact""]",True,True
+37,plan,The purpose of the follow-up is to assess progress.,0.0,"[""to assess progress and determine readiness to return to soccer"", ""to assess progress and determine readiness to return to soccer""]","[[249, 311], [249, 311]]","[""exact"", ""exact""]",True,True
+38,plan,The purpose of the follow-up is to determine readiness to return to soccer.,0.0,"[""to assess progress and determine readiness to return to soccer"", ""to assess progress and determine readiness to return to soccer""]","[[249, 311], [249, 311]]","[""exact"", ""exact""]",True,True

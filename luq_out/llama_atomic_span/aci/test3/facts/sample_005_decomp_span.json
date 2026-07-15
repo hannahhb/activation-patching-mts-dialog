@@ -1,0 +1,709 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Zachary.",
+        "spans": [
+          "The patient, Zachary,"
+        ],
+        "span_offsets": [
+          [
+            5,
+            26
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with left arm pain.",
+        "spans": [
+          "it is actually his left arm that hurts"
+        ],
+        "span_offsets": [
+          [
+            124,
+            162
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left arm pain started yesterday.",
+        "spans": [
+          "which he claims started since yesterday"
+        ],
+        "span_offsets": [
+          [
+            59,
+            98
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient describes the left arm pain as achiness and heaviness.",
+        "spans": [
+          "He describes the pain as achiness and heaviness"
+        ],
+        "span_offsets": [
+          [
+            164,
+            211
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left arm pain affects his entire left arm from the elbow to the neck.",
+        "spans": [
+          "which affects his entire left arm from the elbow to the neck"
+        ],
+        "span_offsets": [
+          [
+            213,
+            273
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any specific incident that may have caused the left arm pain.",
+        "spans": [
+          "He denies any specific incident that may have caused the pain"
+        ],
+        "span_offsets": [
+          [
+            275,
+            336
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has taken Motrin for the left arm pain.",
+        "spans": [
+          "He has taken some Motrin for the pain"
+        ],
+        "span_offsets": [
+          [
+            369,
+            406
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Motrin has not provided significant relief for the left arm pain.",
+        "spans": [
+          "but it has not provided significant relief"
+        ],
+        "span_offsets": [
+          [
+            408,
+            450
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has chest pain.",
+        "spans": [
+          "the pain is accompanied by chest pain"
+        ],
+        "span_offsets": [
+          [
+            474,
+            511
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's chest pain is intermittent.",
+        "spans": [
+          "which he describes as coming and going"
+        ],
+        "span_offsets": [
+          [
+            513,
+            551
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's chest pain affects his neck.",
+        "spans": [
+          "affecting his neck as well"
+        ],
+        "span_offsets": [
+          [
+            553,
+            579
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies shortness of breath.",
+        "spans": [
+          "He denies shortness of breath"
+        ],
+        "span_offsets": [
+          [
+            581,
+            610
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of hypertension.",
+        "spans": [
+          "The patient has a history of hypertension"
+        ],
+        "span_offsets": [
+          [
+            635,
+            676
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is on Norvasc for hypertension.",
+        "spans": [
+          "for which he is on 2.5mg of Norvasc"
+        ],
+        "span_offsets": [
+          [
+            678,
+            713
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Norvasc dose is 2.5mg.",
+        "spans": [
+          "2.5mg of Norvasc"
+        ],
+        "span_offsets": [
+          [
+            697,
+            713
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Norvasc frequency is daily.",
+        "spans": [
+          "Norvasc 2.5mg daily"
+        ],
+        "span_offsets": [
+          [
+            928,
+            947
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of diabetes.",
+        "spans": [
+          "and diabetes"
+        ],
+        "span_offsets": [
+          [
+            715,
+            727
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is on metformin for diabetes.",
+        "spans": [
+          "for which he is on 500mg of metformin"
+        ],
+        "span_offsets": [
+          [
+            729,
+            766
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's metformin dose is 500mg.",
+        "spans": [
+          "500mg of metformin"
+        ],
+        "span_offsets": [
+          [
+            748,
+            766
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's metformin frequency is daily.",
+        "spans": [
+          "Metformin 500mg daily"
+        ],
+        "span_offsets": [
+          [
+            966,
+            987
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's A1C result was 7.2.",
+        "spans": [
+          "His A1C result from a previous visit was 7.2"
+        ],
+        "span_offsets": [
+          [
+            768,
+            812
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any other symptoms besides the elbow and chest pain.",
+        "spans": [
+          "The patient denies any other symptoms besides the elbow and chest pain"
+        ],
+        "span_offsets": [
+          [
+            834,
+            904
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is 150/90.",
+        "spans": [
+          "Blood pressure 150/90"
+        ],
+        "span_offsets": [
+          [
+            13,
+            34
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's blood pressure is slightly high.",
+        "spans": [
+          "which is slightly high"
+        ],
+        "span_offsets": [
+          [
+            36,
+            58
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a slight heart murmur.",
+        "spans": [
+          "a slight murmur with his heart"
+        ],
+        "span_offsets": [
+          [
+            113,
+            143
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heart murmur was not noted previously.",
+        "spans": [
+          "which was not noted previously"
+        ],
+        "span_offsets": [
+          [
+            145,
+            175
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has symptoms suggestive of a possible myocardial infarction.",
+        "spans": [
+          "symptoms suggestive of a possible myocardial infarction"
+        ],
+        "span_offsets": [
+          [
+            38,
+            93
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has hypertension.",
+        "spans": [
+          "Hypertension"
+        ],
+        "span_offsets": [
+          [
+            125,
+            137
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has diabetes.",
+        "spans": [
+          "Diabetes"
+        ],
+        "span_offsets": [
+          [
+            139,
+            147
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has suspected myocardial infarction.",
+        "spans": [
+          "Suspected myocardial infarction"
+        ],
+        "span_offsets": [
+          [
+            149,
+            180
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has elbow pain.",
+        "spans": [
+          "Elbow pain"
+        ],
+        "span_offsets": [
+          [
+            194,
+            204
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed Aspirin to help alleviate the chest pain.",
+        "spans": [
+          "I prescribed Aspirin and Nitroglycerin to help alleviate the chest pain"
+        ],
+        "span_offsets": [
+          [
+            0,
+            71
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed Nitroglycerin to help alleviate the chest pain.",
+        "spans": [
+          "I prescribed Aspirin and Nitroglycerin to help alleviate the chest pain"
+        ],
+        "span_offsets": [
+          [
+            0,
+            71
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "An EKG will be performed to further evaluate the patient's heart.",
+        "spans": [
+          "I will get an EKG to further evaluate the patient's heart"
+        ],
+        "span_offsets": [
+          [
+            73,
+            130
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A glucose test will be performed to assess the patient's blood sugar levels.",
+        "spans": [
+          "I will also perform a glucose test to assess the patient's blood sugar levels"
+        ],
+        "span_offsets": [
+          [
+            132,
+            209
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's medication will be adjusted as needed based on the glucose test results.",
+        "spans": [
+          "and adjust his medication as needed"
+        ],
+        "span_offsets": [
+          [
+            210,
+            245
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be kept on 500mg of metformin for diabetes.",
+        "spans": [
+          "The patient will be kept on 500mg of metformin for diabetes"
+        ],
+        "span_offsets": [
+          [
+            247,
+            306
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be kept on 2.5mg of Norvasc for hypertension.",
+        "spans": [
+          "The patient will be kept on 2.5mg of Norvasc for hypertension"
+        ],
+        "span_offsets": [
+          [
+            313,
+            344
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be referred to the hospital for further evaluation and treatment of the suspected myocardial infarction.",
+        "spans": [
+          "The patient will be referred to the hospital for further evaluation and treatment of the suspected myocardial infarction"
+        ],
+        "span_offsets": [
+          [
+            346,
+            466
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be admitted to the hospital for further evaluation and treatment.",
+        "spans": [
+          "The patient will be admitted to the hospital for further evaluation and treatment"
+        ],
+        "span_offsets": [
+          [
+            480,
+            561
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a suspected myocardial infarction.",
+        "spans": [
+          "suspected myocardial infarction"
+        ],
+        "span_offsets": [
+          [
+            435,
+            466
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

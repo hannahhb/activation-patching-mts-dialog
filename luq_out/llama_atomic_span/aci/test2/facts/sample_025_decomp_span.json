@@ -1,0 +1,868 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 62-year-old male.",
+        "spans": [
+          "The patient is a 62-year-old male"
+        ],
+        "span_offsets": [
+          [
+            0,
+            33
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of coronary artery disease.",
+        "spans": [
+          "a history of coronary artery disease"
+        ],
+        "span_offsets": [
+          [
+            52,
+            88
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient had a heart attack six months ago.",
+        "spans": [
+          "a heart attack six months ago"
+        ],
+        "span_offsets": [
+          [
+            93,
+            122
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient underwent a stent placement in his left anterior descending artery.",
+        "spans": [
+          "underwent a stent placement in his left anterior descending artery"
+        ],
+        "span_offsets": [
+          [
+            137,
+            203
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking aspirin.",
+        "spans": [
+          "aspirin"
+        ],
+        "span_offsets": [
+          [
+            265,
+            272
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking brilinta.",
+        "spans": [
+          "brilinta"
+        ],
+        "span_offsets": [
+          [
+            274,
+            282
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking crestor.",
+        "spans": [
+          "crestor"
+        ],
+        "span_offsets": [
+          [
+            288,
+            295
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's crestor dose is 40 mg.",
+        "spans": [
+          "Crestor 40 mg"
+        ],
+        "span_offsets": [
+          [
+            1522,
+            1535
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes crestor once a day.",
+        "spans": [
+          "once a day"
+        ],
+        "span_offsets": [
+          [
+            1536,
+            1546
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking crestor for cholesterol.",
+        "spans": [
+          "indication: cholesterol"
+        ],
+        "span_offsets": [
+          [
+            1548,
+            1571
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking fish oil.",
+        "spans": [
+          "Fish oil"
+        ],
+        "span_offsets": [
+          [
+            1575,
+            1583
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking metoprolol.",
+        "spans": [
+          "Metoprolol"
+        ],
+        "span_offsets": [
+          [
+            1664,
+            1674
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's metoprolol dose is 50 mg.",
+        "spans": [
+          "50 mg"
+        ],
+        "span_offsets": [
+          [
+            1675,
+            1680
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes metoprolol once a day.",
+        "spans": [
+          "once a day"
+        ],
+        "span_offsets": [
+          [
+            1536,
+            1546
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking metoprolol for cardiac health.",
+        "spans": [
+          "indication: cardiac health"
+        ],
+        "span_offsets": [
+          [
+            1403,
+            1429
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has diabetes.",
+        "spans": [
+          "a history of diabetes"
+        ],
+        "span_offsets": [
+          [
+            534,
+            555
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's hemoglobin A1c level is around 16.",
+        "spans": [
+          "having a high hemoglobin A1c level of around 16"
+        ],
+        "span_offsets": [
+          [
+            613,
+            660
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has stage three chronic kidney disease.",
+        "spans": [
+          "stage three chronic kidney disease"
+        ],
+        "span_offsets": [
+          [
+            674,
+            708
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences dizziness when standing up quickly.",
+        "spans": [
+          "experiences dizziness when standing up quickly"
+        ],
+        "span_offsets": [
+          [
+            413,
+            459
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient attributes his dizziness to either the heart attack or the medication.",
+        "spans": [
+          "which he attributes to either the heart attack or the medication"
+        ],
+        "span_offsets": [
+          [
+            461,
+            525
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has puffiness in his legs.",
+        "spans": [
+          "having some puffiness in his legs"
+        ],
+        "span_offsets": [
+          [
+            765,
+            798
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient attributes his puffiness to the medications.",
+        "spans": [
+          "which he attributes to the medications"
+        ],
+        "span_offsets": [
+          [
+            800,
+            838
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not seen his nephrologist in a year.",
+        "spans": [
+          "has not seen his nephrologist in a year"
+        ],
+        "span_offsets": [
+          [
+            713,
+            752
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not been following a diet for his diabetes.",
+        "spans": [
+          "for which he has not been following a diet"
+        ],
+        "span_offsets": [
+          [
+            557,
+            599
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is 127/80 mmHg.",
+        "spans": [
+          "blood pressure 127/80 mmHg"
+        ],
+        "span_offsets": [
+          [
+            15,
+            41
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pulse rate is not specified.",
+        "spans": [
+          "pulse rate not specified"
+        ],
+        "span_offsets": [
+          [
+            43,
+            67
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's oxygen saturation is not specified.",
+        "spans": [
+          "oxygen saturation not specified"
+        ],
+        "span_offsets": [
+          [
+            69,
+            100
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's temperature is not specified.",
+        "spans": [
+          "temperature not specified"
+        ],
+        "span_offsets": [
+          [
+            102,
+            127
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have jugular venous distention.",
+        "spans": [
+          "jugular venous distention not appreciated"
+        ],
+        "span_offsets": [
+          [
+            145,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have carotid bruits.",
+        "spans": [
+          "carotid bruits not appreciated"
+        ],
+        "span_offsets": [
+          [
+            188,
+            218
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a 3/6 systolic ejection murmur at the left base.",
+        "spans": [
+          "a slight 3/6 systolic ejection murmur heard at the left base"
+        ],
+        "span_offsets": [
+          [
+            220,
+            280
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has one plus nonpitting edema in the lower extremities.",
+        "spans": [
+          "one plus nonpitting edema in the lower extremities"
+        ],
+        "span_offsets": [
+          [
+            282,
+            332
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has coronary artery disease.",
+        "spans": [
+          "The patient has coronary artery disease, stage three chronic kidney disease, and diabetes",
+          "Coronary artery disease"
+        ],
+        "span_offsets": [
+          [
+            12,
+            101
+          ],
+          [
+            187,
+            210
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient is being followed by a cardiologist.",
+        "spans": [
+          "for which he is being followed by his cardiologist and nephrologist"
+        ],
+        "span_offsets": [
+          [
+            103,
+            170
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is being followed by a nephrologist.",
+        "spans": [
+          "for which he is being followed by his cardiologist and nephrologist"
+        ],
+        "span_offsets": [
+          [
+            103,
+            170
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was referred for cardiac rehabilitation.",
+        "spans": [
+          "I referred the patient for cardiac rehabilitation"
+        ],
+        "span_offsets": [
+          [
+            0,
+            49
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the cardiac rehabilitation is to help the patient be more active and confident in exercising again.",
+        "spans": [
+          "to help him be more active and confident in exercising again"
+        ],
+        "span_offsets": [
+          [
+            50,
+            110
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's metoprolol prescription will be refilled.",
+        "spans": [
+          "refill his metoprolol"
+        ],
+        "span_offsets": [
+          [
+            124,
+            145
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's crestor prescription will be refilled.",
+        "spans": [
+          "refill his crestor"
+        ],
+        "span_offsets": [
+          [
+            124,
+            154
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's aspirin prescription will be refilled.",
+        "spans": [
+          "refill his aspirin"
+        ],
+        "span_offsets": [
+          [
+            112,
+            168
+          ]
+        ],
+        "span_match_methods": [
+          "semantic"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A stress test was not deemed necessary at this time.",
+        "spans": [
+          "I did not think it necessary to proceed with a stress test at this time"
+        ],
+        "span_offsets": [
+          [
+            169,
+            240
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be scheduled for an appointment with his nephrologist.",
+        "spans": [
+          "I will reach out to Dr. Miller to schedule an appointment for the patient to see his nephrologist"
+        ],
+        "span_offsets": [
+          [
+            242,
+            339
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Another hemoglobin A1c will be ordered for the patient.",
+        "spans": [
+          "I will order another hemoglobin A1c"
+        ],
+        "span_offsets": [
+          [
+            341,
+            376
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be referred to a dietitian for dietary education.",
+        "spans": [
+          "refer the patient to a dietitian for dietary education"
+        ],
+        "span_offsets": [
+          [
+            381,
+            435
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's insulin regimen will be discussed with his primary care physician.",
+        "spans": [
+          "discuss his insulin regimen with his primary care physician"
+        ],
+        "span_offsets": [
+          [
+            449,
+            508
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will follow up with his cardiologist in six months.",
+        "spans": [
+          "The patient will follow up with his cardiologist in six months"
+        ],
+        "span_offsets": [
+          [
+            511,
+            573
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the follow-up with the cardiologist is to check on the stent and continue monitoring his cardiac health.",
+        "spans": [
+          "to check on the stent and continue monitoring his cardiac health"
+        ],
+        "span_offsets": [
+          [
+            574,
+            638
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will follow up with his nephrologist to monitor his kidney disease.",
+        "spans": [
+          "follow up with his nephrologist to monitor his kidney disease"
+        ],
+        "span_offsets": [
+          [
+            653,
+            714
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will see a psychiatrist to discuss his feelings of sadness and loneliness.",
+        "spans": [
+          "see a psychiatrist to discuss his feelings of sadness and loneliness"
+        ],
+        "span_offsets": [
+          [
+            738,
+            806
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's feelings of sadness and loneliness are since the heart attack.",
+        "spans": [
+          "since the heart attack"
+        ],
+        "span_offsets": [
+          [
+            807,
+            829
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

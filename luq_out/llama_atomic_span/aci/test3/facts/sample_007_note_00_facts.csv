@@ -1,0 +1,52 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient has a three-day history of a hacking cough.,0.0,"[""a three-day history of a hacking cough""]","[[31, 69]]","[""exact""]",True,False
+1,subjective,The patient's cough started with a gradual onset.,0.25,"[""started with a gradual onset""]","[[75, 103]]","[""exact""]",True,False
+2,subjective,The patient's cough has progressed to include coughing up green phlegm.,0.0,"[""has progressed to include coughing up green phlegm""]","[[108, 158]]","[""exact""]",True,False
+3,subjective,The patient has a sore throat.,0.0,"[""a sore throat""]","[[188, 201]]","[""exact""]",True,False
+4,subjective,The patient has nasal congestion.,0.0,"[""nasal congestion""]","[[203, 219]]","[""exact""]",True,False
+5,subjective,The patient denies fever.,0.0,"[""no fever"", ""The patient denies fever""]","[[225, 233], [898, 922]]","[""exact"", ""exact""]",True,True
+6,subjective,The patient denies shortness of breath.,0.0,"[""no shortness of breath"", ""The patient denies shortness of breath""]","[[235, 254], [235, 254]]","[""word"", ""word""]",True,True
+7,subjective,The patient denies body aches.,0.0,"[""no body aches"", ""The patient denies body aches""]","[[256, 266], [256, 266]]","[""word"", ""word""]",True,True
+8,subjective,The patient denies nausea.,0.0,"[""no nausea"", ""The patient denies nausea""]","[[268, 274], [268, 274]]","[""word"", ""word""]",True,True
+9,subjective,The patient denies vomiting.,0.0,"[""no vomiting"", ""The patient denies vomiting""]","[[279, 287], [279, 287]]","[""word"", ""word""]",True,True
+10,subjective,The patient has a history of seasonal allergies.,0.0,"[""a history of seasonal allergies""]","[[305, 336]]","[""exact""]",True,False
+11,subjective,The patient's seasonal allergies are typically seasonal and present around spring time.,0.25,"[""which are typically seasonal and present around spring time""]","[[338, 397]]","[""exact""]",True,False
+12,subjective,The patient is taking metformin 500mg daily for diabetes.,0.0,"[""metformin 500mg daily for diabetes""]","[[979, 1013]]","[""exact""]",True,False
+13,subjective,The patient's metformin dose is 500mg daily.,0.0,"[""500mg daily""]","[[459, 470]]","[""exact""]",True,False
+14,subjective,The patient's metformin is taken daily.,0.0,"[""daily""]","[[465, 470]]","[""exact""]",True,False
+15,subjective,The patient's metformin has been tolerated well.,0.0,"[""which has been tolerated well""]","[[472, 501]]","[""exact""]",True,False
+16,subjective,The patient is checking their blood sugars with readings in the range of 120.,0.0,"[""has been checking their blood sugars with readings in the range of 120""]","[[507, 577]]","[""exact""]",True,False
+17,subjective,The patient has a history of type 2 diabetes.,0.0,"[""a history of type 2 diabetes""]","[[810, 838]]","[""exact""]",True,False
+18,subjective,The patient has a history of hypertension.,0.0,"[""a history of hypertension""]","[[595, 620]]","[""exact""]",True,False
+19,subjective,The patient is taking hydrochlorothiazide for hypertension.,0.0,"[""Hydrochlorothiazide taken as prescribed for hypertension""]","[[1014, 1070]]","[""exact""]",True,False
+20,subjective,The patient's hydrochlorothiazide is taken as prescribed.,0.0,"[""taken as prescribed""]","[[677, 696]]","[""exact""]",True,False
+21,subjective,"The patient's diet has been a challenge, particularly with sugar intake.",1.0,"[""The patient's diet has been a challenge, particularly with sugar intake""]","[[698, 769]]","[""exact""]",True,False
+22,objective,The patient's blood pressure is elevated at 144/72.,0.0,"[""Blood pressure is elevated at 144/72""]","[[13, 49]]","[""exact""]",True,False
+23,objective,The patient's other vital signs are within normal limits.,0.25,"[""otherwise vital signs are within normal limits""]","[[51, 97]]","[""exact""]",True,False
+24,objective,The patient's sinuses are tender to palpation bilaterally.,0.0,"[""The patient's sinuses are tender to palpation bilaterally""]","[[115, 172]]","[""exact""]",True,False
+25,objective,The patient's pharynx is erythematous.,0.0,"[""The pharynx is erythematous""]","[[174, 201]]","[""exact""]",True,False
+26,objective,The patient's tonsils are symmetrical without exudates.,0.25,"[""the tonsils are symmetrical without exudates""]","[[206, 250]]","[""exact""]",True,False
+27,objective,The patient has anterior cervical adenopathy.,0.0,"[""The patient has anterior cervical adenopathy""]","[[252, 296]]","[""exact""]",True,False
+28,objective,The patient's lungs are clear to auscultation.,0.0,"[""The lungs are clear to auscultation""]","[[298, 333]]","[""exact""]",True,False
+29,objective,The patient's heart has a regular rate and rhythm.,0.75,"[""The heart has a regular rate and rhythm""]","[[335, 374]]","[""exact""]",True,False
+30,objective,The patient has a 2/6 systolic ejection murmur at the left base.,0.75,"[""a 2/6 systolic ejection murmur at the left base""]","[[380, 427]]","[""exact""]",True,False
+31,objective,The patient's lower extremities are without edema.,0.0,"[""The lower extremities are without edema""]","[[429, 468]]","[""exact""]",True,False
+32,assessment,The patient has an upper respiratory infection.,0.0,"[""The patient has an upper respiratory infection, likely caused by a virus, given the sudden onset and the fact that they were exposed to someone with similar symptoms""]","[[12, 177]]","[""exact""]",True,False
+33,assessment,The patient's upper respiratory infection is likely caused by a virus.,0.0,"[""likely caused by a virus""]","[[60, 84]]","[""exact""]",True,False
+34,assessment,The patient had a sudden onset of symptoms.,1.0,"[""the sudden onset""]","[[92, 108]]","[""exact""]",True,False
+35,assessment,The patient was exposed to someone with similar symptoms.,0.75,"[""they were exposed to someone with similar symptoms""]","[[127, 177]]","[""exact""]",True,False
+36,assessment,The patient has Type 2 diabetes.,0.0,"[""Type 2 diabetes""]","[[223, 238]]","[""exact""]",True,False
+37,assessment,The patient has Hypertension.,0.0,"[""Hypertension""]","[[240, 252]]","[""exact""]",True,False
+38,assessment,The patient has Seasonal allergies.,1.0,"[""Seasonal allergies""]","[[254, 272]]","[""exact""]",True,False
+39,plan,The patient was prescribed Coricidin HBP.,0.25,"[""I prescribed Coricidin HBP for the cough""]","[[0, 40]]","[""exact""]",True,False
+40,plan,The patient was prescribed Coricidin HBP for the cough.,0.25,"[""I prescribed Coricidin HBP for the cough""]","[[0, 40]]","[""exact""]",True,False
+41,plan,The patient was advised to drink plenty of fluids.,0.25,"[""advised the patient to continue drinking plenty of fluids""]","[[45, 102]]","[""exact""]",True,False
+42,plan,The patient was advised to get plenty of rest.,0.25,"[""getting plenty of rest""]","[[107, 129]]","[""exact""]",True,False
+43,plan,The patient will be checked for COVID-19.,0.0,"[""I will check the patient for COVID-19""]","[[131, 168]]","[""exact""]",True,False
+44,plan,The patient's hydrochlorothiazide dose was increased to 25mg.,0.0,"[""I increased the hydrochlorothiazide dose to 25mg""]","[[195, 243]]","[""exact""]",True,False
+45,plan,The patient was advised to take hydrochlorothiazide once daily.,0.0,"[""once daily""]","[[244, 254]]","[""exact""]",True,False
+46,plan,The patient was advised to take hydrochlorothiazide in the morning.,0.75,"[""take it in the morning""]","[[282, 304]]","[""exact""]",True,False
+47,plan,The patient was advised to continue checking their blood pressure at different times of the day.,0.75,"[""advised the patient to continue to check their blood pressure at different times of the day""]","[[342, 410]]","[""word""]",True,False
+48,plan,The patient will return for a follow-up visit.,0.0,"[""The patient will return for a follow-up visit""]","[[424, 469]]","[""exact""]",True,False
+49,plan,The patient's hemoglobin A1c will be checked during the follow-up visit.,0.0,"[""to check their hemoglobin A1c""]","[[470, 499]]","[""exact""]",True,False
+50,plan,The patient's blood pressure will be reassessed during the follow-up visit.,0.0,"[""to reassess their blood pressure""]","[[504, 536]]","[""exact""]",True,False

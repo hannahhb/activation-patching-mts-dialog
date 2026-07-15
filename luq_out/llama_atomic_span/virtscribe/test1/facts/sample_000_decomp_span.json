@@ -1,0 +1,760 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Mr. James.",
+        "spans": [
+          "Mr. James"
+        ],
+        "span_offsets": [
+          [
+            5,
+            14
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is a 64-year-old male.",
+        "spans": [
+          "a 64-year-old male"
+        ],
+        "span_offsets": [
+          [
+            18,
+            36
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a 5-month history of constant pain in his left shoulder and elbow.",
+        "spans": [
+          "a 5-month history of constant pain in his left shoulder and elbow"
+        ],
+        "span_offsets": [
+          [
+            53,
+            118
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain started after a fall 5 months ago while going up stairs.",
+        "spans": [
+          "which started after a fall 5 months ago while going up stairs"
+        ],
+        "span_offsets": [
+          [
+            120,
+            181
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is worse with lifting.",
+        "spans": [
+          "The pain is worse with lifting"
+        ],
+        "span_offsets": [
+          [
+            183,
+            213
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is worse when lifting more than 15-20 pounds.",
+        "spans": [
+          "particularly when lifting more than 15-20 pounds"
+        ],
+        "span_offsets": [
+          [
+            215,
+            263
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain has been exacerbated by his weightlifting routine at the gym.",
+        "spans": [
+          "has been exacerbated by his weightlifting routine at the gym"
+        ],
+        "span_offsets": [
+          [
+            269,
+            329
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not taken any pain medication.",
+        "spans": [
+          "He has not taken any pain medication"
+        ],
+        "span_offsets": [
+          [
+            331,
+            367
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has tried icing for pain relief.",
+        "spans": [
+          "has tried icing"
+        ],
+        "span_offsets": [
+          [
+            372,
+            387
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has tried stopping exercise for pain relief.",
+        "spans": [
+          "stopping exercise"
+        ],
+        "span_offsets": [
+          [
+            392,
+            409
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Icing and stopping exercise have provided some relief for the patient's pain.",
+        "spans": [
+          "which has provided some relief"
+        ],
+        "span_offsets": [
+          [
+            411,
+            441
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies numbness in the affected area.",
+        "spans": [
+          "denies numbness or tingling in the affected area"
+        ],
+        "span_offsets": [
+          [
+            446,
+            494
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies tingling in the affected area.",
+        "spans": [
+          "denies numbness or tingling in the affected area"
+        ],
+        "span_offsets": [
+          [
+            446,
+            494
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's left shoulder was tender to palpation.",
+        "spans": [
+          "The patient's left shoulder and elbow were tender to palpation"
+        ],
+        "span_offsets": [
+          [
+            15,
+            77
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left elbow was tender to palpation.",
+        "spans": [
+          "The patient's left shoulder and elbow were tender to palpation"
+        ],
+        "span_offsets": [
+          [
+            15,
+            77
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left shoulder had no warmth.",
+        "spans": [
+          "with no warmth, erythema, or deformity"
+        ],
+        "span_offsets": [
+          [
+            79,
+            117
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left elbow had no warmth.",
+        "spans": [
+          "with no warmth, erythema, or deformity"
+        ],
+        "span_offsets": [
+          [
+            79,
+            117
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left shoulder had no erythema.",
+        "spans": [
+          "with no warmth, erythema, or deformity"
+        ],
+        "span_offsets": [
+          [
+            79,
+            117
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left elbow had no erythema.",
+        "spans": [
+          "with no warmth, erythema, or deformity"
+        ],
+        "span_offsets": [
+          [
+            79,
+            117
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left shoulder had no deformity.",
+        "spans": [
+          "with no warmth, erythema, or deformity"
+        ],
+        "span_offsets": [
+          [
+            79,
+            117
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left elbow had no deformity.",
+        "spans": [
+          "with no warmth, erythema, or deformity"
+        ],
+        "span_offsets": [
+          [
+            79,
+            117
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Hawkins-Kennedy test was positive.",
+        "spans": [
+          "The Hawkins-Kennedy and Neer's tests were positive"
+        ],
+        "span_offsets": [
+          [
+            119,
+            169
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Neer's test was positive.",
+        "spans": [
+          "The Hawkins-Kennedy and Neer's tests were positive"
+        ],
+        "span_offsets": [
+          [
+            119,
+            169
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's proximal upper extremity strength was normal.",
+        "spans": [
+          "The proximal and distal upper extremity strength were normal"
+        ],
+        "span_offsets": [
+          [
+            171,
+            231
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's distal upper extremity strength was normal.",
+        "spans": [
+          "The proximal and distal upper extremity strength were normal"
+        ],
+        "span_offsets": [
+          [
+            171,
+            231
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's median sensation was intact.",
+        "spans": [
+          "the median, radial, and ulnar sensation were intact"
+        ],
+        "span_offsets": [
+          [
+            237,
+            288
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's radial sensation was intact.",
+        "spans": [
+          "the median, radial, and ulnar sensation were intact"
+        ],
+        "span_offsets": [
+          [
+            237,
+            288
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ulnar sensation was intact.",
+        "spans": [
+          "the median, radial, and ulnar sensation were intact"
+        ],
+        "span_offsets": [
+          [
+            237,
+            288
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient had abduction to 90 degrees.",
+        "spans": [
+          "The patient had abduction to 90 degrees"
+        ],
+        "span_offsets": [
+          [
+            290,
+            329
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's empty can test was normal.",
+        "spans": [
+          "a normal empty can test"
+        ],
+        "span_offsets": [
+          [
+            334,
+            357
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient is experiencing impingement syndrome of the left shoulder.",
+        "spans": [
+          "The patient is experiencing impingement syndrome of the left shoulder"
+        ],
+        "span_offsets": [
+          [
+            12,
+            81
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has shoulder impingement syndrome.",
+        "spans": [
+          "Shoulder impingement syndrome"
+        ],
+        "span_offsets": [
+          [
+            98,
+            127
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has elbow pain.",
+        "spans": [
+          "Elbow pain"
+        ],
+        "span_offsets": [
+          [
+            129,
+            139
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's shoulder impingement syndrome is active.",
+        "spans": [
+          "Shoulder impingement syndrome; Elbow pain; Status: active"
+        ],
+        "span_offsets": [
+          [
+            98,
+            155
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's elbow pain is active.",
+        "spans": [
+          "Shoulder impingement syndrome; Elbow pain; Status: active"
+        ],
+        "span_offsets": [
+          [
+            98,
+            155
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed physical therapy with Dr. Martha Rivera.",
+        "spans": [
+          "I prescribed physical therapy with Dr. Martha Rivera"
+        ],
+        "span_offsets": [
+          [
+            0,
+            52
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's physical therapy will occur two days per week.",
+        "spans": [
+          "two days per week"
+        ],
+        "span_offsets": [
+          [
+            53,
+            70
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was recommended to continue icing the shoulder.",
+        "spans": [
+          "continue to ice the shoulder"
+        ],
+        "span_offsets": [
+          [
+            103,
+            131
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was recommended to rest as much as possible.",
+        "spans": [
+          "rest as much as possible"
+        ],
+        "span_offsets": [
+          [
+            136,
+            160
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A referral for physical therapy will be obtained for the patient.",
+        "spans": [
+          "I will obtain a referral for physical therapy"
+        ],
+        "span_offsets": [
+          [
+            162,
+            207
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be contacted within the next day or two to schedule a physical therapy appointment.",
+        "spans": [
+          "the patient will be contacted within the next day or two to schedule an appointment"
+        ],
+        "span_offsets": [
+          [
+            213,
+            296
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will follow up with the doctor if symptoms worsen.",
+        "spans": [
+          "if his symptoms worsen"
+        ],
+        "span_offsets": [
+          [
+            367,
+            389
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will follow up with the doctor if symptoms do not improve with physical therapy.",
+        "spans": [
+          "or do not improve with physical therapy"
+        ],
+        "span_offsets": [
+          [
+            390,
+            429
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will contact the office for follow-up.",
+        "spans": [
+          "or contact our office"
+        ],
+        "span_offsets": [
+          [
+            345,
+            366
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

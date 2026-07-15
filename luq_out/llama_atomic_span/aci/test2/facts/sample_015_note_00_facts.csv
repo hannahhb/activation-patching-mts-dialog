@@ -1,0 +1,64 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is an 82-year-old male.,0.0,"[""an 82-year-old male""]","[[13, 32]]","[""exact""]",True,False
+1,subjective,The patient presents for hospital follow-up after an acute on chronic congestive heart failure exacerbation.,0.0,"[""presents for hospital follow-up after an acute on chronic congestive heart failure exacerbation""]","[[34, 129]]","[""exact""]",True,False
+2,subjective,The patient reports feeling well.,0.25,"[""feeling well""]","[[142, 154]]","[""exact""]",True,False
+3,subjective,The patient had been trying to watch his diet.,0.0,"[""had been trying to watch his diet""]","[[173, 206]]","[""exact""]",True,False
+4,subjective,The patient experienced swelling in his ankles.,0.25,"[""swelling in his ankles""]","[[224, 246]]","[""exact""]",True,False
+5,subjective,The patient experienced shortness of breath.,0.25,"[""shortness of breath""]","[[251, 270]]","[""exact""]",True,False
+6,subjective,The patient was hospitalized for 2 days.,0.75,"[""hospitalized for 2 days""]","[[279, 302]]","[""exact""]",True,False
+7,subjective,"The patient received treatment, including a medication that caused him to urinate frequently.",0.5,"[""a medication that caused him to urinate frequently""]","[[337, 387]]","[""exact""]",True,False
+8,subjective,The patient received a water pill given through his IV.,0.75,"[""a water pill given through his IV""]","[[392, 425]]","[""exact""]",True,False
+9,subjective,The patient reports feeling much better now.,0.5,"[""feeling much better now""]","[[438, 461]]","[""exact""]",True,False
+10,subjective,The patient has been taking his medications as instructed since returning home.,0.75,"[""has been taking his medications as instructed since returning home""]","[[466, 532]]","[""exact""]",True,False
+11,subjective,The patient has been monitoring his blood pressure with a cuff he purchased.,0.5,"[""has been monitoring his blood pressure with a cuff he purchased""]","[[537, 600]]","[""exact""]",True,False
+12,subjective,The patient denies shortness of breath.,0.0,"[""denies shortness of breath""]","[[605, 631]]","[""exact""]",True,False
+13,subjective,The patient denies chest pain.,0.0,"[""denies chest pain""]","[[633, 643]]","[""word""]",True,False
+14,subjective,The patient denies problems sleeping.,0.0,"[""denies problems sleeping""]","[[648, 665]]","[""word""]",True,False
+15,subjective,The patient has a significant past medical history of hypertension.,0.0,"[""hypertension""]","[[722, 734]]","[""exact""]",True,False
+16,subjective,The patient has a significant past medical history of stage three chronic kidney disease.,0.0,"[""stage three chronic kidney disease""]","[[739, 773]]","[""exact""]",True,False
+17,subjective,The patient denies any symptoms in other organs that are relevant to his initial presentation.,0.25,"[""denies any symptoms in other organs that are relevant to his initial presentation""]","[[788, 869]]","[""exact""]",True,False
+18,subjective,The patient is prescribed bumex 2 milligrams daily for congestive heart failure.,0.25,"[""bumex 2 milligrams daily for congestive heart failure""]","[[885, 938]]","[""exact""]",True,False
+19,subjective,The patient is prescribed cozaar 100 milligrams daily for hypertension.,0.25,"[""cozaar 100 milligrams daily for hypertension""]","[[940, 984]]","[""exact""]",True,False
+20,subjective,The patient is prescribed norvasc 5 milligrams once daily for hypertension.,0.25,"[""norvasc 5 milligrams once daily for hypertension""]","[[990, 1038]]","[""exact""]",True,False
+21,subjective,The patient takes bumex 2 milligrams.,0.25,"[""bumex 2 milligrams""]","[[885, 903]]","[""exact""]",True,False
+22,subjective,The patient takes bumex daily.,0.25,"[""daily""]","[[904, 909]]","[""exact""]",True,False
+23,subjective,The patient takes cozaar 100 milligrams.,0.25,"[""cozaar 100 milligrams""]","[[940, 961]]","[""exact""]",True,False
+24,subjective,The patient takes cozaar daily.,0.25,"[""daily""]","[[904, 909]]","[""exact""]",True,False
+25,subjective,The patient takes norvasc 5 milligrams.,0.25,"[""norvasc 5 milligrams""]","[[990, 1010]]","[""exact""]",True,False
+26,subjective,The patient takes norvasc once daily.,0.25,"[""once daily""]","[[1011, 1021]]","[""exact""]",True,False
+27,objective,The patient's blood pressure is 128/72.,0.0,"[""blood pressure today is 128/72""]","[[27, 57]]","[""exact""]",True,False
+28,objective,The patient's heart rate is 79.,0.0,"[""heart rate is 79""]","[[59, 75]]","[""exact""]",True,False
+29,objective,The patient's respiratory rate is 26.,0.0,"[""respiratory rate is 26""]","[[77, 99]]","[""exact""]",True,False
+30,objective,The patient's oxygen saturation is 99%.,0.0,"[""oxygen saturation is 99%""]","[[105, 129]]","[""exact""]",True,False
+31,objective,The patient's neck exam is normal.,0.25,"[""neck exam is normal""]","[[169, 188]]","[""exact""]",True,False
+32,objective,The patient has no jugular venous distention.,0.25,"[""no jugular venous distention""]","[[194, 222]]","[""exact""]",True,False
+33,objective,The patient has a stable 2/6 systolic ejection murmur.,0.25,"[""stable 2/6 systolic ejection murmur""]","[[249, 284]]","[""exact""]",True,False
+34,objective,The patient's lungs are clear bilaterally.,0.0,"[""lungs are clear bilaterally""]","[[290, 317]]","[""exact""]",True,False
+35,objective,The patient has a trace of edema in the lower extremities.,0.0,"[""lower extremities show a trace of edema""]","[[333, 372]]","[""exact""]",True,False
+36,objective,The patient's echocardiogram shows a preserved EF of 55%.,0.25,"[""preserved EF of 55%""]","[[402, 421]]","[""exact""]",True,False
+37,objective,The patient has abnormal diastolic filling.,0.25,"[""abnormal diastolic filling""]","[[423, 449]]","[""exact""]",True,False
+38,objective,The patient has mild to moderate mitral regurgitation.,0.25,"[""mild to moderate mitral regurgitation""]","[[455, 492]]","[""exact""]",True,False
+39,assessment,The patient has congestive heart failure.,0.0,"[""The patient has congestive heart failure""]","[[12, 52]]","[""exact""]",True,False
+40,assessment,The patient's congestive heart failure is caused by dietary indiscretion.,1.0,"[""congestive heart failure caused by dietary indiscretion""]","[[28, 83]]","[""exact""]",True,False
+41,assessment,The patient's congestive heart failure is caused by uncontrolled hypertension.,1.0,"[""congestive heart failure caused by dietary indiscretion and uncontrolled hypertension""]","[[28, 113]]","[""exact""]",True,False
+42,assessment,The patient has stage three chronic kidney disease.,0.25,"[""stage three chronic kidney disease""]","[[115, 149]]","[""exact""]",True,False
+43,assessment,The patient has hypertension.,0.0,"[""and hypertension""]","[[151, 167]]","[""exact""]",True,False
+44,assessment,The patient has congestive heart failure as a problem.,0.0,"[""Congestive heart failure;""]","[[184, 209]]","[""exact""]",True,False
+45,assessment,The patient has chronic kidney disease as a problem.,0.0,"[""Congestive heart failure; chronic kidney disease;""]","[[184, 233]]","[""exact""]",True,False
+46,assessment,The patient has hypertension as a problem.,0.0,"[""Congestive heart failure; chronic kidney disease; hypertension;""]","[[184, 247]]","[""exact""]",True,False
+47,assessment,The patient has suspected secondary causes of hypertension as a problem.,1.0,"[""suspected secondary causes of hypertension;""]","[[248, 291]]","[""exact""]",True,False
+48,assessment,The patient has kidney disease as a problem.,0.0,"[""kidney disease.""]","[[292, 307]]","[""exact""]",True,False
+49,plan,The patient is prescribed bumex 2 milligrams daily.,0.0,"[""bumex 2 milligrams daily""]","[[34, 58]]","[""exact""]",True,False
+50,plan,The patient is prescribed bumex for congestive heart failure.,0.0,"[""for congestive heart failure""]","[[59, 87]]","[""exact""]",True,False
+51,plan,The patient is advised to watch his diet.,0.0,"[""watch his diet""]","[[107, 121]]","[""exact""]",True,False
+52,plan,The patient is advised to avoid salty foods.,0.0,"[""avoid salty foods""]","[[126, 143]]","[""exact""]",True,False
+53,plan,The patient is advised to weigh himself daily.,0.0,"[""weigh himself daily""]","[[164, 183]]","[""exact""]",True,False
+54,plan,The patient is instructed to call if he gains 3 pounds in 2 days.,0.25,"[""call me if he gains 3 pounds in 2 days""]","[[188, 226]]","[""exact""]",True,False
+55,plan,The patient will be referred to a nutritionist for education on healthy eating.,0.0,"[""refer him to a nutritionist for education on healthy eating""]","[[235, 294]]","[""exact""]",True,False
+56,plan,The patient is prescribed cozaar 100 milligrams daily.,0.25,"[""cozaar 100 milligrams daily""]","[[319, 346]]","[""exact""]",True,False
+57,plan,The patient is prescribed cozaar for hypertension.,0.25,"[""for hypertension""]","[[383, 399]]","[""exact""]",True,False
+58,plan,The patient is prescribed norvasc 5 milligrams once daily.,0.25,"[""norvasc 5 milligrams once daily""]","[[351, 382]]","[""exact""]",True,False
+59,plan,The patient is prescribed norvasc for hypertension.,0.25,"[""for hypertension""]","[[383, 399]]","[""exact""]",True,False
+60,plan,A renal artery ultrasound will be ordered to rule out secondary causes of hypertension.,1.0,"[""order a renal artery ultrasound to rule out secondary causes of hypertension""]","[[408, 484]]","[""exact""]",True,False
+61,plan,Additional labs will be obtained to monitor the patient's kidney disease.,0.5,"[""obtain additional labs to monitor his kidney disease""]","[[498, 550]]","[""exact""]",True,False
+62,plan,The patient will be seen again in 3 months.,0.0,"[""will be seen again in 3 months""]","[[565, 595]]","[""exact""]",True,False

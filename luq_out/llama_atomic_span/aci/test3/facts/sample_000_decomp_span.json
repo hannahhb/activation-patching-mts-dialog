@@ -1,0 +1,624 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is male.",
+        "spans": [
+          "a male"
+        ],
+        "span_offsets": [
+          [
+            13,
+            19
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with chronic lower back pain.",
+        "spans": [
+          "chronic lower back pain"
+        ],
+        "span_offsets": [
+          [
+            35,
+            58
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lower back pain is specifically left-sided.",
+        "spans": [
+          "specifically left-sided"
+        ],
+        "span_offsets": [
+          [
+            60,
+            83
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient describes his lower back pain as horrible.",
+        "spans": [
+          "horrible"
+        ],
+        "span_offsets": [
+          [
+            108,
+            116
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient describes his lower back pain as awful.",
+        "spans": [
+          "awful"
+        ],
+        "span_offsets": [
+          [
+            123,
+            128
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lower back pain is exacerbated by bending over.",
+        "spans": [
+          "exacerbated by bending over"
+        ],
+        "span_offsets": [
+          [
+            159,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient sometimes experiences pain on the right side.",
+        "spans": [
+          "sometimes he experiences pain on the right side as well"
+        ],
+        "span_offsets": [
+          [
+            192,
+            247
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Stretching helps alleviate the patient's lower back pain.",
+        "spans": [
+          "stretching helps alleviate the pain"
+        ],
+        "span_offsets": [
+          [
+            266,
+            301
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of back surgery.",
+        "spans": [
+          "a history of back surgery"
+        ],
+        "span_offsets": [
+          [
+            310,
+            335
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's back surgery occurred in November 2020.",
+        "spans": [
+          "in November 2020"
+        ],
+        "span_offsets": [
+          [
+            336,
+            352
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's back surgery involved a microdiscectomy.",
+        "spans": [
+          "which involved a microdiscectomy"
+        ],
+        "span_offsets": [
+          [
+            354,
+            386
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed gabapentin.",
+        "spans": [
+          "He was prescribed gabapentin"
+        ],
+        "span_offsets": [
+          [
+            388,
+            416
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient had difficulty withdrawing from gabapentin.",
+        "spans": [
+          "which he had difficulty withdrawing from"
+        ],
+        "span_offsets": [
+          [
+            418,
+            458
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient stopped taking gabapentin suddenly.",
+        "spans": [
+          "when he stopped taking it suddenly"
+        ],
+        "span_offsets": [
+          [
+            459,
+            493
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient currently takes ibuprofen.",
+        "spans": [
+          "He currently takes ibuprofen"
+        ],
+        "span_offsets": [
+          [
+            495,
+            523
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes ibuprofen 800mg daily.",
+        "spans": [
+          "ibuprofen 800mg daily"
+        ],
+        "span_offsets": [
+          [
+            514,
+            535
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes ibuprofen for pain management.",
+        "spans": [
+          "for pain management"
+        ],
+        "span_offsets": [
+          [
+            536,
+            555
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient had no pain with flexion.",
+        "spans": [
+          "The patient had no pain with flexion or extension"
+        ],
+        "span_offsets": [
+          [
+            15,
+            64
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient had no pain with extension.",
+        "spans": [
+          "The patient had no pain with flexion or extension"
+        ],
+        "span_offsets": [
+          [
+            15,
+            64
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experienced pain with weight-bearing.",
+        "spans": [
+          "did experience pain with weight-bearing"
+        ],
+        "span_offsets": [
+          [
+            70,
+            109
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experienced pain with palpation to the left side around the L5.",
+        "spans": [
+          "did experience pain with weight-bearing and palpation to the left side around the L5"
+        ],
+        "span_offsets": [
+          [
+            70,
+            154
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's dorsiflexion was normal.",
+        "spans": [
+          "Dorsiflexion was normal"
+        ],
+        "span_offsets": [
+          [
+            156,
+            179
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient had a normal range of motion.",
+        "spans": [
+          "with a normal range of motion"
+        ],
+        "span_offsets": [
+          [
+            180,
+            209
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's X-ray results showed no fractures.",
+        "spans": [
+          "X-ray results showed no fractures or abnormalities"
+        ],
+        "span_offsets": [
+          [
+            225,
+            275
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's X-ray results showed no abnormalities on the spinal bone.",
+        "spans": [
+          "X-ray results showed no fractures or abnormalities on the spinal bone"
+        ],
+        "span_offsets": [
+          [
+            225,
+            294
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has chronic left-sided lower back pain.",
+        "spans": [
+          "The patient has chronic left-sided lower back pain"
+        ],
+        "span_offsets": [
+          [
+            12,
+            62
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's chronic left-sided lower back pain is likely due to a muscle pull from a misalignment in his spine.",
+        "spans": [
+          "likely due to a muscle pull from a misalignment in his spine"
+        ],
+        "span_offsets": [
+          [
+            64,
+            124
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has chronic lower back pain.",
+        "spans": [
+          "Chronic lower back pain"
+        ],
+        "span_offsets": [
+          [
+            140,
+            163
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has musculoskeletal strain of the lumbar region.",
+        "spans": [
+          "musculoskeletal strain of the lumbar region"
+        ],
+        "span_offsets": [
+          [
+            165,
+            208
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed meloxicam for pain management.",
+        "spans": [
+          "I prescribed meloxicam for pain management"
+        ],
+        "span_offsets": [
+          [
+            0,
+            42
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was referred to pain management for further evaluation.",
+        "spans": [
+          "I also referred the patient to pain management for further evaluation and to discuss alternative pain management options"
+        ],
+        "span_offsets": [
+          [
+            44,
+            164
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was referred to pain management to discuss alternative pain management options.",
+        "spans": [
+          "I also referred the patient to pain management for further evaluation and to discuss alternative pain management options"
+        ],
+        "span_offsets": [
+          [
+            44,
+            164
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was referred to physical therapy to help with the muscle pull.",
+        "spans": [
+          "I referred the patient to physical therapy to help with the muscle pull"
+        ],
+        "span_offsets": [
+          [
+            166,
+            237
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed demerol.",
+        "spans": [
+          "I prescribed demerol"
+        ],
+        "span_offsets": [
+          [
+            239,
+            259
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will follow up with the physical therapist.",
+        "spans": [
+          "The patient will follow up with the physical therapist and the pain management specialist"
+        ],
+        "span_offsets": [
+          [
+            273,
+            362
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will follow up with the pain management specialist.",
+        "spans": [
+          "The patient will follow up with the physical therapist and the pain management specialist"
+        ],
+        "span_offsets": [
+          [
+            273,
+            362
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

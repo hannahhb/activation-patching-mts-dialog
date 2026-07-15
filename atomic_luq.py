@@ -30,7 +30,7 @@ import re
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, Tuple
 
 import numpy as np
 import pandas as pd
@@ -39,7 +39,8 @@ from tqdm import tqdm
 sys.path.insert(0, str(Path(__file__).parent))
 import factmatch_sentence as fm
 import luq_sentence as luq
-from llm_client import gptoss_yesno, GPTOSS_MAX_WORKERS, tracker as llm_tracker
+from llm_client import gptoss_yesno, GPTOSS_MAX_WORKERS, tracker as llm_tracker, get_llm
+from redeep_word_plots import find_span_char_range
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 DEFAULT_K         = 10   # total notes in the NLI reference pool
@@ -97,6 +98,408 @@ def decompose_section(text: str) -> List[str]:
         return []
     raw = fm._llm_extract(fm._NOTE_PROMPT.format(note=text.strip()))
     return fm.filter_facts(raw)
+
+
+# ── Decomposition with span-level origin (--decomp-mode span) ──────────────────
+# Second decomposition option, opt-in via --decomp-mode span: same task as
+# decompose_section() above, but the LLM also reports each fact's verbatim
+# source span within the section text, in one call, instead of the two-stage
+# decompose-then-locate-heuristically approach fact_sentence_match.py uses.
+# Every returned span is verified as a real substring before being trusted
+# (see demo_fact_span_decompose.py for the standalone demo + rationale) --
+# an LLM-reported span that doesn't literally appear in the section text is
+# kept with span_verified=False rather than silently discarded, so callers
+# can see and filter hallucinated spans themselves.
+#
+# Deliberately does NOT touch decompose_section() or its prompt/cache format
+# above -- this is a fully separate code path (own prompt, own cache
+# filename via decomp_cache stem below, own CSV columns) so existing
+# plain-mode caches/outputs are completely unaffected.
+
+_SPAN_SYSTEM_PROMPT = (
+    "You are a meticulous physician extracting atomic clinical facts from a "
+    "SOAP note section, with each fact's exact textual origin. Return ONLY "
+    "valid JSON — no explanation, no preamble, no markdown code fences."
+)
+
+_SPAN_USER_TEMPLATE = """\
+Extract every clinical fact from the note section below as a JSON array. For \
+each fact, also give its "spans": a JSON list of one or more exact minimal \
+substrings of the text (copy-pasted verbatim, not paraphrased) that \
+together support the fact.
+
+VERBATIM RULE (the rule most often broken — follow it exactly):
+- Every string in "spans" MUST be an EXACT, character-for-character, \
+case-preserving substring of the text below. Copy it, do not retype or \
+improve it.
+- Do NOT upgrade informal or colloquial wording into clinical phrasing for \
+the span. If the source text says "seems to make it worse", the span must \
+contain that exact wording — NOT a rewritten version like "exacerbated by".
+    WRONG:  fact: "The patient's pain is exacerbated by walking."
+            spans: ["exacerbated by walking"]        <- rewritten, not in the text
+    RIGHT:  fact: "The patient's pain is exacerbated by walking."
+            spans: ["walking seems to make it worse"] <- copied verbatim
+- Before writing a span, check it word-for-word against the text below. If \
+you cannot find an exact match, search again for the closest literal \
+wording in the text and use that — never invent clinical-sounding text.
+
+MULTIPLE-SPANS RULE:
+- Almost every fact has exactly ONE span: "spans": ["<one string>"].
+- A fact split off a shared local clause (e.g. "X and Y were normal" split \
+into a fact about X and a fact about Y) still has ONE span — give BOTH \
+facts the SAME full shared span. This is NOT a multi-span case: the \
+evidence is local and contiguous, just shared between two split facts.
+- Only use TWO OR MORE entries in "spans" when the fact genuinely requires \
+evidence from separate, non-adjacent parts of the text (e.g. a diagnosis \
+combining a symptom mentioned in one sentence with a lab value mentioned \
+several sentences later). List each supporting substring separately.
+
+Other rules:
+- Split conjunctions: "denied X and Y" -> two separate facts, one for X and \
+one for Y.
+- Split medications: drug name, dose, frequency, indication as separate \
+facts (repeat the drug name in each). Each fact's span is the specific \
+phrase that supports IT alone, not the whole medication sentence (e.g. the \
+dose fact's span is "10 mg", not the full sentence).
+- Include all clinical findings, diagnoses, plans, and demographics.
+
+Return this JSON structure and nothing else:
+[
+  {{"fact": "<atomic fact as a full sentence>", "spans": ["<exact verbatim substring>", ...]}},
+  ...
+]
+
+Example 1 — single local span shared across a conjunction split:
+Text: "Chest X-ray and pulmonary function test were normal."
+Output:
+[
+  {{"fact": "The patient's chest X-ray is normal.", "spans": ["Chest X-ray and pulmonary function test were normal"]}},
+  {{"fact": "The patient's pulmonary function test is normal.", "spans": ["Chest X-ray and pulmonary function test were normal"]}}
+]
+
+Example 2 — verbatim, not paraphrased (keep the source's own words):
+Text: "The patient reports standing and walking seems to make the pain worse; coughing and sneezing make it worse too."
+Output:
+[
+  {{"fact": "The patient's pain is exacerbated by standing.", "spans": ["standing and walking seems to make the pain worse"]}},
+  {{"fact": "The patient's pain is exacerbated by walking.", "spans": ["standing and walking seems to make the pain worse"]}},
+  {{"fact": "The patient's pain is exacerbated by coughing.", "spans": ["coughing and sneezing make it worse"]}},
+  {{"fact": "The patient's pain is exacerbated by sneezing.", "spans": ["coughing and sneezing make it worse"]}}
+]
+
+Example 3 — genuinely disjoint spans (two separate, non-adjacent parts):
+Text: "HPI: The patient reports chest pain radiating to the left arm. ... Assessment: Troponin returned at 0.8, consistent with myocardial infarction."
+Output:
+[
+  {{"fact": "The patient has chest pain radiating to the left arm.", "spans": ["chest pain radiating to the left arm"]}},
+  {{"fact": "The patient's troponin is elevated at 0.8, consistent with myocardial infarction.", "spans": ["Troponin returned at 0.8", "consistent with myocardial infarction"]}}
+]
+
+Text:
+\"\"\"
+{note}
+\"\"\"
+
+Output:\
+"""
+
+
+def _parse_span_json(raw: str) -> Optional[List[dict]]:
+    cleaned = re.sub(r"```(?:json)?", "", raw).strip().strip("`").strip()
+    match = re.search(r"\[.*\]", cleaned, re.DOTALL)
+    if not match:
+        return None
+    try:
+        return json.loads(match.group())
+    except json.JSONDecodeError:
+        return None
+
+
+def _extract_spans(item: dict) -> List[str]:
+    """Read the "spans" list, with a defensive fallback to a legacy/singular
+    "span" string key in case the model doesn't follow the schema exactly."""
+    spans = item.get("spans")
+    if isinstance(spans, list):
+        return [str(s).strip() for s in spans if str(s).strip()]
+    single = item.get("span")
+    return [str(single).strip()] if single and str(single).strip() else []
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Multi-tier span location: exact -> word-level -> semantic
+#
+# The stricter prompt (VERBATIM RULE, WRONG/RIGHT example) cuts how often the
+# LLM's span isn't a real substring, but doesn't eliminate it -- the model
+# still occasionally normalises tense/casing beyond what find_span_char_range
+# tolerates, or paraphrases a word (e.g. "worse" -> "exacerbated"). Rather
+# than just discarding those as span_verified=False, retry with two
+# progressively looser (and progressively coarser-grained) matchers before
+# giving up, and record WHICH tier found it so callers can weight confidence.
+# ─────────────────────────────────────────────────────────────────────────────
+
+_WORD_STOPWORDS = frozenset({
+    "a", "an", "the", "and", "or", "but", "nor", "so", "yet", "if", "then",
+    "than", "as", "that", "this", "these", "those", "there", "here",
+    "i", "me", "my", "we", "us", "our", "you", "your", "he", "him", "his",
+    "she", "her", "it", "its", "they", "them", "their", "who", "whom",
+    "whose", "which", "what", "is", "am", "are", "was", "were", "be",
+    "been", "being", "have", "has", "had", "having", "do", "does", "did",
+    "doing", "will", "would", "shall", "should", "can", "could", "may",
+    "might", "must", "to", "of", "in", "on", "at", "by", "for", "with",
+    "about", "against", "between", "into", "through", "during", "before",
+    "after", "above", "below", "from", "up", "down", "out", "off", "over",
+    "under", "again", "further", "not", "no", "own", "same", "just", "also",
+    # Near-universal clinical-note words that appear in almost every fact
+    # regardless of content, so a match on these alone is not meaningful
+    # signal -- same list fact_sentence_match.py's _LEMMA_STOP excludes for
+    # the identical reason (there, it caused a fact about "denied X" to
+    # spuriously match on "denied" instead of X; here it would let an
+    # UNRELATED query match on "patient" alone).
+    "patient", "patients", "doctor", "symptom", "symptoms", "report",
+    "reports", "reported", "present", "presents", "presented", "mention",
+    "mentioned", "state", "stated", "current", "medication", "medications",
+    "history", "review", "system", "assessment", "problem", "list",
+    "objective", "subjective", "plan", "follow", "followup", "test",
+    "result", "results", "physical", "exam", "vital", "signs", "sign",
+    "issue", "deny", "denied", "denies", "note", "noted", "admit",
+    "admitted", "endorse", "endorsed", "complain", "complained",
+})
+
+# Minimum matched content-word run required to accept a tier-2 match. A
+# single incidental overlapping word (e.g. "patient") is not trustworthy
+# evidence on its own -- require 2, unless the query itself only HAS 1
+# content word to begin with (then that's the best achievable).
+_MIN_WORD_MATCH = 2
+
+
+def _content_words(text: str) -> List[str]:
+    words = re.findall(r"[a-zA-Z0-9']+", text.lower())
+    return [w for w in words if w not in _WORD_STOPWORDS and len(w) > 1]
+
+
+def _find_word_level_span(text: str, query: str) -> Optional[Tuple[int, int]]:
+    """Fallback tier 2: longest contiguous run of `text` tokens whose
+    lowercase forms are content words of `query` (the LLM's span guess),
+    bridging up to 2 connector words but never crossing a clause/list-item
+    boundary (;/./:). Same algorithm validated in fact_sentence_match.py's
+    _locate_span, reimplemented self-contained here (no scispaCy) since
+    `query` is a free-text LLM guess, not NER-tagged fact/sentence info.
+    Requires at least _MIN_WORD_MATCH matched words (see above) to avoid
+    accepting a spurious single-generic-word coincidence."""
+    tokens = [(m.group(0), m.start(), m.end()) for m in re.finditer(r"[a-zA-Z0-9']+", text)]
+    query_words = set(_content_words(query))
+    if not query_words or not tokens:
+        return None
+    min_required = min(_MIN_WORD_MATCH, len(query_words))
+
+    hits = [tok.lower() in query_words for tok, _, _ in tokens]
+    n = len(tokens)
+    GAP_TOLERANCE = 2
+    HARD_BOUNDARY = re.compile(r"[;.:]")
+
+    def _crosses_boundary(a: int, b: int) -> bool:
+        return bool(HARD_BOUNDARY.search(text[tokens[a][2]:tokens[b][1]]))
+
+    best: Optional[Tuple[int, int, int]] = None  # (run_len, start_idx, end_idx)
+    i = 0
+    while i < n:
+        if not hits[i]:
+            i += 1
+            continue
+        j = i
+        while True:
+            next_hit = None
+            for g in range(1, GAP_TOLERANCE + 2):
+                if j + g < n and hits[j + g] and not _crosses_boundary(j, j + g):
+                    next_hit = j + g
+                    break
+            if next_hit is None:
+                break
+            j = next_hit
+        run_len = sum(1 for k in range(i, j + 1) if hits[k])
+        if best is None or run_len > best[0]:
+            best = (run_len, i, j)
+        i = j + 1
+
+    if best is None:
+        return None
+    run_len, start_idx, end_idx = best
+    if run_len < min_required:
+        return None
+    while end_idx > start_idx and not hits[end_idx]:
+        end_idx -= 1
+    while start_idx < end_idx and not hits[start_idx]:
+        start_idx += 1
+    return tokens[start_idx][1], tokens[end_idx][2]
+
+
+# Min cosine sim to accept a tier-3 clause match. Calibrated empirically,
+# not theoretically: for SHORT clinical clauses, pritamdeka/S-PubMedBert-MS-MARCO
+# cosine similarities don't spread out as cleanly as one might hope -- a
+# genuinely unrelated query ("denied fever or chills" vs. a walking/pain
+# clause) still scored 0.87, while true paraphrases scored 0.90-0.99. 0.90
+# is the empirical cut that separated them in that test; there is no
+# guarantee it generalises perfectly, which is exactly why every span
+# carries its span_match_methods entry -- a "semantic" match is inherently
+# the least reliable of the three tiers and downstream consumers that need
+# high precision should filter to "exact"/"word" only.
+_SEMANTIC_MATCH_FLOOR = 0.90
+
+
+def _split_clauses(text: str) -> List[str]:
+    """luq.split_sentences() only breaks on '.', so a semicolon-joined
+    compound sentence ("X worse; Y worse too.") comes back as ONE candidate
+    -- which trivially "wins" any similarity comparison since there's
+    nothing to compare it against, defeating the whole purpose of tier 3.
+    Pre-split on ';' (a clause boundary the rest of this file already treats
+    as a hard boundary, e.g. _find_word_level_span's HARD_BOUNDARY) before
+    handing each piece to the real sentence splitter."""
+    clauses: List[str] = []
+    for chunk in text.split(";"):
+        clauses.extend(luq.split_sentences(chunk))
+    return clauses
+
+
+def _find_semantic_span(text: str, query: str, floor: float = _SEMANTIC_MATCH_FLOOR
+                        ) -> Optional[Tuple[int, int]]:
+    """Fallback tier 3 (last resort): split `text` into sentences/clauses,
+    embed each plus `query` with the project's biomedical sentence encoder
+    (same model factmatch_sentence.py uses for fact dedup), and return the
+    char range of the highest-cosine candidate if it clears `floor`. Coarser
+    than tier 2 (clause/sentence granularity, not a minimal phrase) but
+    catches genuine paraphrases with near-zero literal word overlap."""
+    sentences = _split_clauses(text)
+    if not sentences:
+        return None
+    if len(sentences) == 1:
+        # Only one candidate to compare against -- any query would trivially
+        # "win", which isn't a meaningful match. Refuse rather than return
+        # the whole text as a fake precise span.
+        return None
+    embs = fm.embed_facts(sentences + [query])  # L2-normalised, so dot = cosine
+    sent_embs, query_emb = embs[:-1], embs[-1]
+    sims = sent_embs @ query_emb
+    best_idx = int(np.argmax(sims))
+    if sims[best_idx] < floor:
+        return None
+    best_sentence = sentences[best_idx]
+    pos = text.find(best_sentence)
+    if pos != -1:
+        return pos, pos + len(best_sentence)
+    return find_span_char_range(text, best_sentence)  # whitespace/case fallback
+
+
+def _locate_span_multi_tier(text: str, query: str) -> Tuple[Optional[Tuple[int, int]], str]:
+    """Try exact -> word-level -> semantic, in that order (cheapest and most
+    precise first). Returns ((start, end) or None, method), method one of
+    "exact" / "word" / "semantic" / "unmatched"."""
+    located = find_span_char_range(text, query)
+    if located is not None:
+        return located, "exact"
+    located = _find_word_level_span(text, query)
+    if located is not None:
+        return located, "word"
+    located = _find_semantic_span(text, query)
+    if located is not None:
+        return located, "semantic"
+    return None, "unmatched"
+
+
+def decompose_section_with_spans(text: str) -> List[dict]:
+    """Same decomposition task as decompose_section(), returning dicts with
+    span-level provenance instead of plain fact strings. Each dict:
+      fact, spans (list of verbatim strings as the LLM returned them),
+      span_offsets (list of (start, end) or None per entry in `spans`, None
+        only if ALL THREE location tiers failed for that span),
+      span_match_methods (list of "exact"/"word"/"semantic"/"unmatched",
+        one per entry in `spans` -- see _locate_span_multi_tier),
+      span_verified (bool -- True only if EVERY span in `spans` was located
+        by some tier; False means at least one is "unmatched" and the
+        fact's provenance should not be fully trusted for highlighting),
+      synthesized (bool, computed as len(spans) > 1 -- NOT self-reported by
+        the LLM: an earlier version trusted a model-authored "synthesized"
+        flag and it was unreliable, e.g. flagging a fact as disjoint when it
+        just shared one local span with a sibling fact from a conjunction
+        split. Deriving it from the verified span count is deterministic.)"""
+    if not text.strip():
+        return []
+    user_msg = _SPAN_USER_TEMPLATE.format(note=text.strip())
+    try:
+        resp = get_llm().converse(
+            stage="decomp_span", model_id=fm.BEDROCK_GEN_MODEL,
+            system=[{"text": _SPAN_SYSTEM_PROMPT}],
+            messages=[{"role": "user", "content": [{"text": user_msg}]}],
+            inference_config={"maxTokens": 2048, "temperature": 0.0},
+        )
+    except Exception:
+        return []
+    raw = resp["output"]["message"]["content"][0]["text"]
+    parsed = _parse_span_json(raw)
+    if parsed is None:
+        return []
+
+    results = []
+    for item in parsed:
+        fact = str(item.get("fact", "")).strip()
+        if not fact or len(fact) <= 4:
+            continue
+        spans = _extract_spans(item)
+        if not spans:
+            continue
+        located = [_locate_span_multi_tier(text, s) for s in spans]
+        offsets = [loc for loc, _ in located]
+        methods = [method for _, method in located]
+        results.append({
+            "fact": fact,
+            "spans": spans,
+            "span_offsets": offsets,
+            "span_match_methods": methods,
+            "span_verified": all(o is not None for o in offsets),
+            "synthesized": len(spans) > 1,
+        })
+    return results
+
+
+# Column names shared by score_sample() and score_sample_gptoss() when
+# decomp_mode == "span". spans/span_offsets/span_match_methods are
+# JSON-encoded (a CSV cell can't hold a Python list directly); span_offsets
+# entries are [start, end] or null per corresponding entry in spans;
+# span_match_methods entries are "exact"/"word"/"semantic"/"unmatched".
+SPAN_CSV_COLUMNS = ["spans", "span_offsets", "span_match_methods", "span_verified", "synthesized"]
+
+
+def _span_row_fields(d: dict) -> dict:
+    """Build the SPAN_CSV_COLUMNS fields for one facts-CSV row from a
+    decompose_section_with_spans() item."""
+    return {
+        "spans":              json.dumps(d.get("spans", [])),
+        "span_offsets":       json.dumps(d.get("span_offsets", [])),
+        "span_match_methods": json.dumps(d.get("span_match_methods", [])),
+        "span_verified":      d.get("span_verified"),
+        "synthesized":        d.get("synthesized"),
+    }
+
+
+def dedupe_across_sections_spans(note_decomp: Dict[str, List[dict]]) -> Dict[str, List[dict]]:
+    """Span-aware analogue of dedupe_across_sections() -- exact-match dedup
+    on the fact text, keeping the first (section, span-info) occurrence."""
+    flat, flat_secs = [], []
+    for sec in SECTION_NAMES:
+        for d in note_decomp.get(sec, []):
+            flat.append(d)
+            flat_secs.append(sec)
+    if len(flat) < 2:
+        return note_decomp
+
+    seen: set = set()
+    out: Dict[str, List[dict]] = {sec: [] for sec in SECTION_NAMES}
+    for d, sec in zip(flat, flat_secs):
+        key = d["fact"].strip()
+        if key in seen:
+            continue
+        seen.add(key)
+        out[sec].append(d)
+    return out
 
 
 def dedupe_across_sections(note_decomp: Dict[str, List[str]]) -> Dict[str, List[str]]:
@@ -198,11 +601,20 @@ def facts_csv_path(out_dir: Path, sample_idx: int, note_idx: int) -> Path:
 # ── Scoring ────────────────────────────────────────────────────────────────────
 
 def _prepare_decomp(sample_idx: int, notes: List[str], decomp_k: int,
-                    out_dir: Path, use_cache: bool
-                    ) -> Tuple[List[Dict[str, str]], List[Dict[str, List[str]]]]:
+                    out_dir: Path, use_cache: bool, decomp_mode: str = "plain",
+                    ) -> Tuple[List[Dict[str, str]], List[Dict[str, List]]]:
     """Steps 1-2 shared by every scoring backend: parse raw sections for all
     K notes, then decompose the first decomp_k of them into atomic facts
-    (LLM, cached to disk)."""
+    (LLM, cached to disk).
+
+    decomp_mode:
+      "plain" (default) -- decompose_section(), note_decomp[sec] is a
+        List[str] of fact text, exactly as before this option existed.
+      "span" -- decompose_section_with_spans(), note_decomp[sec] is a
+        List[dict] with fact/span/span_start/span_end/span_verified/
+        synthesized. Uses a separate decomp_cache filename (_decomp_span vs
+        _decomp) so it can never collide with or corrupt an existing
+        plain-mode cache."""
     facts_dir = out_dir / "facts"
     facts_dir.mkdir(parents=True, exist_ok=True)
 
@@ -216,7 +628,8 @@ def _prepare_decomp(sample_idx: int, notes: List[str], decomp_k: int,
     # reruns with a larger --atomic-decomp-k), only decompose the newly
     # requested notes rather than trusting a shorter cached list as-is --
     # that used to IndexError on the notes past the old cache's length.
-    decomp_cache = out_dir / "facts" / f"sample_{sample_idx:03d}_decomp.json"
+    cache_stem = "decomp_span" if decomp_mode == "span" else "decomp"
+    decomp_cache = out_dir / "facts" / f"sample_{sample_idx:03d}_{cache_stem}.json"
 
     all_decomp = []
     if use_cache and decomp_cache.exists():
@@ -228,12 +641,20 @@ def _prepare_decomp(sample_idx: int, notes: List[str], decomp_k: int,
             note_decomp = {}
             for sec in SECTION_NAMES:
                 text = all_sections[note_idx].get(sec, "")
-                facts = decompose_section(text) if text else []
+                if not text:
+                    facts = []
+                elif decomp_mode == "span":
+                    facts = decompose_section_with_spans(text)
+                else:
+                    facts = decompose_section(text)
                 note_decomp[sec] = facts
                 if facts:
                     tqdm.write(f"    note {note_idx} [{sec}]: {len(facts)} facts")
             n_before = sum(len(v) for v in note_decomp.values())
-            note_decomp = dedupe_across_sections(note_decomp)
+            if decomp_mode == "span":
+                note_decomp = dedupe_across_sections_spans(note_decomp)
+            else:
+                note_decomp = dedupe_across_sections(note_decomp)
             n_after = sum(len(v) for v in note_decomp.values())
             if n_after < n_before:
                 tqdm.write(f"    note {note_idx}: cross-section dedup {n_before} -> {n_after} facts")
@@ -244,15 +665,20 @@ def _prepare_decomp(sample_idx: int, notes: List[str], decomp_k: int,
 
 
 def score_sample(sample_idx: int, notes: List[str], decomp_k: int,
-                 out_dir: Path, use_cache: bool) -> List[dict]:
+                 out_dir: Path, use_cache: bool, decomp_mode: str = "plain") -> List[dict]:
     """
     notes     : all K notes (default 10) — used as NLI reference pool.
     decomp_k  : first decomp_k notes are decomposed; their facts are scored
                 against the raw section text of every other note (K-1 refs).
     uncertainty = 1 - mean(softmax entailment prob over K-1 reference notes)
+    decomp_mode: "plain" (default) or "span" -- see _prepare_decomp. In
+                 "span" mode the output CSV gains span/span_start/span_end/
+                 span_verified/synthesized columns alongside the existing
+                 fact_idx/section/fact/uncertainty ones.
     """
     K = len(notes)
-    all_sections, all_decomp = _prepare_decomp(sample_idx, notes, decomp_k, out_dir, use_cache)
+    all_sections, all_decomp = _prepare_decomp(sample_idx, notes, decomp_k, out_dir, use_cache,
+                                               decomp_mode=decomp_mode)
 
     # ── Step 3: NLI scoring ──────────────────────────────────────────────────
     # For each fact in a decomposed note:
@@ -288,9 +714,13 @@ def score_sample(sample_idx: int, notes: List[str], decomp_k: int,
         note_rows = []
 
         for sec in SECTION_NAMES:
-            my_facts = all_decomp[note_idx].get(sec, [])
-            if not my_facts:
+            my_items = all_decomp[note_idx].get(sec, [])
+            if not my_items:
                 continue
+            # NLI always needs plain fact text; span mode stores dicts, so
+            # unpack the text for scoring but keep my_items around to attach
+            # span columns to note_rows below.
+            my_facts = [d["fact"] for d in my_items] if decomp_mode == "span" else my_items
 
             support_sum = np.zeros(len(my_facts), dtype=np.float64)
             support_cnt = np.zeros(len(my_facts), dtype=np.int32)
@@ -330,15 +760,19 @@ def score_sample(sample_idx: int, notes: List[str], decomp_k: int,
                 else:
                     uncertainty = 1.0 - float(support_sum[local_idx] / support_cnt[local_idx])
 
-                note_rows.append({
+                row = {
                     "fact_idx":    len(note_rows),
                     "section":     sec,
                     "fact":        fact,
                     "uncertainty": round(uncertainty, 4),
-                })
+                }
+                if decomp_mode == "span":
+                    row.update(_span_row_fields(my_items[local_idx]))
+                note_rows.append(row)
 
-        df = pd.DataFrame(note_rows) if note_rows else pd.DataFrame(
-            columns=["fact_idx", "section", "fact", "uncertainty"])
+        base_cols = ["fact_idx", "section", "fact", "uncertainty"]
+        cols = base_cols + SPAN_CSV_COLUMNS if decomp_mode == "span" else base_cols
+        df = pd.DataFrame(note_rows) if note_rows else pd.DataFrame(columns=cols)
         df.to_csv(csv_p, index=False)
         mean_u = df["uncertainty"].mean() if len(df) else float("nan")
         tqdm.write(f"  [saved] sample {sample_idx} note {note_idx}: "
@@ -365,7 +799,8 @@ def score_sample(sample_idx: int, notes: List[str], decomp_k: int,
 def score_sample_gptoss(sample_idx: int, notes: List[str], decomp_k: int,
                         out_dir: Path, use_cache: bool,
                         reasoning_effort: str = "low",
-                        max_workers: int = GPTOSS_MAX_WORKERS) -> List[dict]:
+                        max_workers: int = GPTOSS_MAX_WORKERS,
+                        decomp_mode: str = "plain") -> List[dict]:
     """Same fact decomposition as score_sample; NLI is replaced by a
     gpt-oss-20b yes/no call per (fact, reference note) pair, premise = the
     full matching section of that reference note.
@@ -376,9 +811,12 @@ def score_sample_gptoss(sample_idx: int, notes: List[str], decomp_k: int,
     ref_idx serially per fact -- that serial version capped concurrency at
     K-1 (=4) in-flight calls at a time; flattening across every fact in the
     note keeps `max_workers` calls in flight continuously.
+
+    decomp_mode: "plain" (default) or "span" -- see _prepare_decomp / score_sample.
     """
     K = len(notes)
-    all_sections, all_decomp = _prepare_decomp(sample_idx, notes, decomp_k, out_dir, use_cache)
+    all_sections, all_decomp = _prepare_decomp(sample_idx, notes, decomp_k, out_dir, use_cache,
+                                               decomp_mode=decomp_mode)
 
     rows = []
     for note_idx in range(decomp_k):
@@ -393,11 +831,15 @@ def score_sample_gptoss(sample_idx: int, notes: List[str], decomp_k: int,
 
         # Flatten every (section, fact) this note decomposed to, in the same
         # order score_sample uses, so fact_idx/output ordering is unchanged.
-        sec_fact_list: List[Tuple[str, str]] = [
-            (sec, fact)
-            for sec in SECTION_NAMES
-            for fact in all_decomp[note_idx].get(sec, [])
-        ]
+        # sec_item_list keeps the original item (dict in span mode, else the
+        # bare fact string again) so span columns can be attached below.
+        sec_fact_list: List[Tuple[str, str]] = []
+        sec_item_list: List = []
+        for sec in SECTION_NAMES:
+            for item in all_decomp[note_idx].get(sec, []):
+                fact = item["fact"] if decomp_mode == "span" else item
+                sec_fact_list.append((sec, fact))
+                sec_item_list.append(item)
         votes_by_item: Dict[int, List[float]] = {i: [] for i in range(len(sec_fact_list))}
 
         with ThreadPoolExecutor(max_workers=max_workers) as pool:
@@ -419,15 +861,19 @@ def score_sample_gptoss(sample_idx: int, notes: List[str], decomp_k: int,
         for item_idx, (sec, fact) in enumerate(sec_fact_list):
             votes = votes_by_item[item_idx]
             uncertainty = 1.0 if not votes else 1.0 - float(np.mean(votes))
-            note_rows.append({
+            row = {
                 "fact_idx":    item_idx,
                 "section":     sec,
                 "fact":        fact,
                 "uncertainty": round(uncertainty, 4),
-            })
+            }
+            if decomp_mode == "span":
+                row.update(_span_row_fields(sec_item_list[item_idx]))
+            note_rows.append(row)
 
-        df = pd.DataFrame(note_rows) if note_rows else pd.DataFrame(
-            columns=["fact_idx", "section", "fact", "uncertainty"])
+        base_cols = ["fact_idx", "section", "fact", "uncertainty"]
+        cols = base_cols + SPAN_CSV_COLUMNS if decomp_mode == "span" else base_cols
+        df = pd.DataFrame(note_rows) if note_rows else pd.DataFrame(columns=cols)
         df.to_csv(csv_p, index=False)
         mean_u = df["uncertainty"].mean() if len(df) else float("nan")
         tqdm.write(f"  [saved] sample {sample_idx} note {note_idx}: "
@@ -460,6 +906,18 @@ def parse_args():
     p.add_argument("--gptoss-workers", type=int, default=GPTOSS_MAX_WORKERS,
                    help="Concurrent Bedrock calls for --backend gptoss "
                         f"(default {GPTOSS_MAX_WORKERS})")
+    p.add_argument("--decomp-mode", choices=["plain", "span"], default="plain",
+                   help="'plain' (default): existing decompose_section(), "
+                        "flat fact list, unchanged output schema. "
+                        "'span': decompose_section_with_spans() -- one LLM "
+                        "call per section also returns each fact's verbatim "
+                        "source span (verified against the section text), "
+                        "adding span/span_start/span_end/span_verified/"
+                        "synthesized columns to the facts CSV. Uses a "
+                        "separate decomp cache filename, so it never touches "
+                        "an existing --decomp-mode plain cache in the same "
+                        "--out dir -- but point --out at a fresh directory "
+                        "anyway to keep the two runs' facts CSVs separate.")
     return p.parse_args()
 
 
@@ -479,6 +937,7 @@ def main():
     print(f"Cache    : {'on' if use_cache else 'off'}")
     print(f"Backend  : {args.backend}"
           + (f" (reasoning_effort={args.reasoning_effort})" if args.backend == "gptoss" else ""))
+    print(f"Decomp mode : {args.decomp_mode}")
 
     summary_rows = []
     n_processed = 0
@@ -497,9 +956,11 @@ def main():
         if args.backend == "gptoss":
             rows = score_sample_gptoss(sample_idx, notes, decomp_k, out_dir, use_cache,
                                        reasoning_effort=args.reasoning_effort,
-                                       max_workers=args.gptoss_workers)
+                                       max_workers=args.gptoss_workers,
+                                       decomp_mode=args.decomp_mode)
         else:
-            rows = score_sample(sample_idx, notes, decomp_k, out_dir, use_cache)
+            rows = score_sample(sample_idx, notes, decomp_k, out_dir, use_cache,
+                                decomp_mode=args.decomp_mode)
 
         # Decomposition (stage="decomp") runs for every sample regardless of
         # backend; NLI scoring only shows up here as stage="nli" when

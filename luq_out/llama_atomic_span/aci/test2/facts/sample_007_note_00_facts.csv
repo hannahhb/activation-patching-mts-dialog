@@ -1,0 +1,51 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Gregory.,0.0,"[""The patient, Gregory""]","[[0, 20]]","[""exact""]",True,False
+1,subjective,The patient is a 35-year-old male.,1.0,"[""a 35-year-old male""]","[[22, 40]]","[""exact""]",True,False
+2,subjective,The patient presents with right knee pain.,0.0,"[""right knee pain""]","[[71, 86]]","[""exact""]",True,False
+3,subjective,The patient presents with a clicking sensation in the right knee.,0.0,"[""clicking sensation""]","[[91, 109]]","[""exact""]",True,False
+4,subjective,The patient's right knee pain and clicking sensation started approximately 2.5 weeks ago.,0.0,"[""which started approximately 2.5 weeks ago""]","[[111, 152]]","[""exact""]",True,False
+5,subjective,The patient's right knee pain and clicking sensation began after twisting his ankle while stepping off a curb.,0.25,"[""after twisting his ankle while stepping off a curb""]","[[153, 203]]","[""exact""]",True,False
+6,subjective,The patient's right knee pain is most noticeable when performing activities such as squats.,0.0,"[""most noticeable when he performs activities such as squats""]","[[247, 305]]","[""exact""]",True,False
+7,subjective,The patient's right knee pain is most noticeable when standing on one foot for an extended period.,0.5,"[""most noticeable when he performs activities such as ... stands on one foot for an extended period""]","[[247, 295]]","[""word""]",True,False
+8,subjective,The patient denies any pain at rest.,0.0,"[""denies any pain at rest""]","[[355, 378]]","[""exact""]",True,False
+9,subjective,The patient denies any pain when the knee is in a neutral position.,0.0,"[""denies any pain at rest or when the knee is in a neutral position""]","[[355, 420]]","[""exact""]",True,False
+10,subjective,The patient has taken ibuprofen for pain.,0.0,"[""He has taken ibuprofen for pain""]","[[422, 453]]","[""exact""]",True,False
+11,subjective,The patient's ibuprofen provides some relief at night.,0.25,"[""which provides some relief at night""]","[[455, 490]]","[""exact""]",True,False
+12,subjective,The patient's ibuprofen has not had significant impact on his symptoms during the day.,0.5,"[""but has not had significant impact on his symptoms during the day""]","[[492, 557]]","[""exact""]",True,False
+13,subjective,The patient has a history of three previous toe fractures.,0.0,"[""a history of three previous toe fractures""]","[[576, 617]]","[""exact""]",True,False
+14,subjective,The patient has a history of a broken second toe on his right foot.,0.0,"[""including a broken second toe on his right foot""]","[[619, 666]]","[""exact""]",True,False
+15,subjective,The patient's broken second toe on his right foot has resulted in persistent numbness and tingling in the foot.,0.25,"[""which has resulted in persistent numbness and tingling in the foot""]","[[668, 734]]","[""exact""]",True,False
+16,subjective,The patient's numbness and tingling in the foot depend on the shoe he wears.,0.75,"[""depending on the shoe he wears""]","[[736, 766]]","[""exact""]",True,False
+17,subjective,The patient reports no numbness or tingling in the foot other than the previously mentioned condition.,0.5,"[""The patient reports no numbness or tingling in the foot, other than the previously mentioned condition""]","[[769, 871]]","[""exact""]",True,False
+18,subjective,The patient's current knee injury is not related to the previously mentioned condition.,0.0,"[""which is not related to the current knee injury""]","[[873, 920]]","[""exact""]",True,False
+19,subjective,The patient has been taking ibuprofen.,0.0,"[""The patient has been taking ibuprofen""]","[[923, 960]]","[""exact""]",True,False
+20,subjective,The dose of the patient's ibuprofen is not specified.,0.0,"[""but the dose and frequency are not specified""]","[[962, 1006]]","[""exact""]",True,False
+21,subjective,The frequency of the patient's ibuprofen is not specified.,0.25,"[""but the dose and frequency are not specified""]","[[962, 1006]]","[""exact""]",True,False
+22,objective,The patient has a slight effusion on the right knee.,0.0,"[""The patient has a slight effusion and edema on the right knee""]","[[0, 61]]","[""exact""]",True,False
+23,objective,The patient has edema on the right knee.,0.5,"[""The patient has a slight effusion and edema on the right knee""]","[[0, 61]]","[""exact""]",True,False
+24,objective,Palpation of the right lateral knee does not elicit pain.,0.25,"[""Palpation of the right lateral knee does not elicit pain""]","[[63, 119]]","[""exact""]",True,False
+25,objective,The patient has a positive varus test.,0.0,"[""The patient has a positive varus test and a negative Lachman sign""]","[[121, 186]]","[""exact""]",True,False
+26,objective,The patient has a negative Lachman sign.,0.0,"[""The patient has a positive varus test and a negative Lachman sign""]","[[121, 186]]","[""exact""]",True,False
+27,objective,The patient has a full range of motion in the knee.,0.0,"[""The patient has a full range of motion in the knee""]","[[188, 238]]","[""exact""]",True,False
+28,objective,The patient's cardiovascular exam is normal.,0.75,"[""The cardiovascular exam is normal, with palpable dorsalis pedis and posterior tibialis pulses""]","[[240, 333]]","[""exact""]",True,False
+29,objective,The patient has palpable dorsalis pedis pulses.,0.0,"[""The cardiovascular exam is normal, with palpable dorsalis pedis and posterior tibialis pulses""]","[[240, 333]]","[""exact""]",True,False
+30,objective,The patient has palpable posterior tibialis pulses.,0.0,"[""The cardiovascular exam is normal, with palpable dorsalis pedis and posterior tibialis pulses""]","[[240, 333]]","[""exact""]",True,False
+31,objective,The X-ray results of the knee are negative for acute fracture.,0.0,"[""X-ray results of the knee are negative for acute fracture or bony abnormality""]","[[336, 413]]","[""exact""]",True,False
+32,objective,The X-ray results of the knee are negative for bony abnormality.,0.0,"[""X-ray results of the knee are negative for acute fracture or bony abnormality""]","[[336, 413]]","[""exact""]",True,False
+33,assessment,The patient has a lateral collateral ligament strain of the right knee.,0.5,"[""The patient has a lateral collateral ligament strain of the right knee""]","[[0, 70]]","[""exact""]",True,False
+34,assessment,The patient has a lateral collateral ligament strain.,0.0,"[""Lateral collateral ligament strain""]","[[87, 121]]","[""exact""]",True,False
+35,assessment,The patient's lateral collateral ligament strain is located in the right knee.,0.5,"[""right knee""]","[[60, 70]]","[""exact""]",True,False
+36,assessment,The patient has a past fracture of the right foot.,1.0,"[""past fracture of right foot""]","[[135, 162]]","[""exact""]",True,False
+37,assessment,The patient experiences numbness and tingling in the right foot.,0.75,"[""numbness and tingling in right foot""]","[[164, 199]]","[""exact""]",True,False
+38,plan,The patient was prescribed meloxicam for pain management.,0.0,"[""I prescribed meloxicam 15 mg once a day for pain management""]","[[0, 59]]","[""exact""]",True,False
+39,plan,The patient's meloxicam dose is 15 mg.,0.0,"[""15 mg""]","[[23, 28]]","[""exact""]",True,False
+40,plan,The patient's meloxicam frequency is once a day.,0.0,"[""once a day""]","[[29, 39]]","[""exact""]",True,False
+41,plan,The patient was referred to physical therapy.,0.0,"[""I referred the patient to physical therapy""]","[[61, 103]]","[""exact""]",True,False
+42,plan,The purpose of the patient's physical therapy is to strengthen the muscles around the injured area.,0.0,"[""to strengthen the muscles around the injured area""]","[[104, 153]]","[""exact""]",True,False
+43,plan,The purpose of the patient's physical therapy is to prevent future injuries.,0.0,"[""and prevent future injuries""]","[[154, 181]]","[""exact""]",True,False
+44,plan,The patient has been icing the knee at least 4 times a day.,1.0,"[""he has been doing at least 4 times a day""]","[[239, 279]]","[""exact""]",True,False
+45,plan,The patient was advised to continue icing the knee.,0.0,"[""I advised the patient to continue icing the knee""]","[[183, 231]]","[""exact""]",True,False
+46,plan,The patient was instructed to call the physician if his symptoms worsen.,1.0,"[""I instructed him to call me if his symptoms worsen""]","[[281, 331]]","[""exact""]",True,False
+47,plan,The patient will follow up with the physician if his symptoms persist.,0.3333,"[""The patient will follow up with me if his symptoms persist or worsen""]","[[334, 402]]","[""exact""]",True,False
+48,plan,The patient will follow up with the physician if his symptoms worsen.,0.6667,"[""The patient will follow up with me if his symptoms persist or worsen""]","[[334, 402]]","[""exact""]",True,False
+49,plan,The patient will follow up with the physician if he experiences any new symptoms.,1.0,"[""or if he experiences any new symptoms""]","[[404, 441]]","[""exact""]",True,False

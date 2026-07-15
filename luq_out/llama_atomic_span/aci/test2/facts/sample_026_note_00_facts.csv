@@ -1,0 +1,39 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Alexis.,0.0,"[""The patient, Alexis,""]","[[5, 25]]","[""exact""]",True,False
+1,subjective,The patient has been experiencing numbness and tingling in her right hand for approximately six months.,0.0,"[""numbness and tingling in her right hand for approximately six months""]","[[73, 141]]","[""exact""]",True,False
+2,subjective,The patient's symptoms have become more persistent over the last month.,0.0,"[""with the symptoms becoming more persistent over the last month""]","[[143, 205]]","[""exact""]",True,False
+3,subjective,"The patient experiences pain, particularly when typing on a keyboard or using a mouse.",0.0,"[""experiencing pain, particularly when typing on a keyboard or using a mouse""]","[[219, 293]]","[""exact""]",True,False
+4,subjective,The patient's numbness and tingling are constant.,0.25,"[""The numbness and tingling are constant""]","[[295, 333]]","[""exact""]",True,False
+5,subjective,The patient's pain is intermittent.,0.25,"[""the pain is intermittent""]","[[343, 367]]","[""exact""]",True,False
+6,subjective,The patient has found some relief with rest.,0.0,"[""some relief with rest""]","[[383, 404]]","[""exact""]",True,False
+7,subjective,The patient has found some relief with the use of ibuprofen.,0.0,"[""some relief with the use of ibuprofen""]","[[383, 394]]","[""word""]",True,False
+8,subjective,The patient takes ibuprofen 600mg four times a day.,0.25,"[""600mg four times a day""]","[[444, 466]]","[""exact""]",True,False
+9,subjective,The patient's past medical history is not mentioned in the transcript.,0.25,"[""Alexis's past medical history is not mentioned in the transcript""]","[[490, 554]]","[""exact""]",True,False
+10,subjective,The patient reports no pain at night that wakes her up.,0.25,"[""no pain at night that wakes her up""]","[[595, 629]]","[""exact""]",True,False
+11,subjective,The patient's symptoms are not affecting her sleep.,0.25,"[""her symptoms are not affecting her sleep""]","[[635, 675]]","[""exact""]",True,False
+12,subjective,The patient is prescribed ibuprofen 600mg four times a day for pain.,0.0,"[""I prescribed ibuprofen 600mg four times a day for pain""]","[[698, 752]]","[""exact""]",True,False
+13,objective,The patient's blood pressure is not mentioned in the transcript.,0.0,"[""Blood pressure, pulse rate, oxygen saturation, and temperature are not mentioned in the transcript""]","[[13, 111]]","[""exact""]",True,False
+14,objective,The patient's pulse rate is not mentioned in the transcript.,0.0,"[""Blood pressure, pulse rate, oxygen saturation, and temperature are not mentioned in the transcript""]","[[13, 111]]","[""exact""]",True,False
+15,objective,The patient's oxygen saturation is not mentioned in the transcript.,0.0,"[""Blood pressure, pulse rate, oxygen saturation, and temperature are not mentioned in the transcript""]","[[13, 111]]","[""exact""]",True,False
+16,objective,The patient's temperature is not mentioned in the transcript.,0.0,"[""Blood pressure, pulse rate, oxygen saturation, and temperature are not mentioned in the transcript""]","[[13, 111]]","[""exact""]",True,False
+17,objective,The patient has pain on extension of the wrist.,0.0,"[""The patient has pain on extension and flexion of the wrist""]","[[128, 186]]","[""exact""]",True,False
+18,objective,The patient has pain on flexion of the wrist.,0.0,"[""The patient has pain on extension and flexion of the wrist""]","[[128, 186]]","[""exact""]",True,False
+19,objective,The patient has a positive Tinel's sign.,0.0,"[""The patient has a positive Tinel's sign""]","[[198, 214]]","[""word""]",True,False
+20,objective,The patient's test results are not mentioned.,0.75,"[""Test Results: [NOT MENTIONED]""]","[[221, 250]]","[""exact""]",True,False
+21,assessment,The patient is suspected to have carpal tunnel syndrome.,0.25,"[""I suspect that Alexis has carpal tunnel syndrome""]","[[12, 60]]","[""exact""]",True,False
+22,assessment,The patient has carpal tunnel syndrome in their problem list.,0.25,"[""Carpal tunnel syndrome; unknown""]","[[76, 107]]","[""exact""]",True,False
+23,assessment,The patient has an unknown condition in their problem list.,1.0,"[""Carpal tunnel syndrome; unknown""]","[[76, 107]]","[""exact""]",True,False
+24,plan,The patient will wear a splint at night to help alleviate symptoms.,0.0,"[""I would like to put Alexis in a splint to wear at night to help alleviate symptoms""]","[[0, 82]]","[""exact""]",True,False
+25,plan,The patient is prescribed ibuprofen.,0.0,"[""I will continue to prescribe ibuprofen""]","[[84, 122]]","[""exact""]",True,False
+26,plan,The patient's ibuprofen dose is 600mg.,0.0,"[""ibuprofen 600mg""]","[[113, 128]]","[""exact""]",True,False
+27,plan,The patient's ibuprofen frequency is four times a day.,0.0,"[""four times a day""]","[[129, 145]]","[""exact""]",True,False
+28,plan,The patient's ibuprofen indication is pain management.,0.25,"[""for pain management""]","[[146, 165]]","[""exact""]",True,False
+29,plan,An EMG will be ordered for the patient.,0.0,"[""I will also order an EMG""]","[[167, 191]]","[""exact""]",True,False
+30,plan,A nerve conduction study will be ordered for the patient.,0.0,"[""and nerve conduction study""]","[[192, 218]]","[""exact""]",True,False
+31,plan,The patient has nerve impingement in her wrist.,1.0,"[""nerve impingement in her wrist""]","[[243, 273]]","[""exact""]",True,False
+32,plan,The patient will start with conservative treatment.,0.0,"[""We will start with conservative treatment""]","[[275, 316]]","[""exact""]",True,False
+33,plan,The patient will be reassessed after the test results.,0.0,"[""and reassess after the test results""]","[[317, 352]]","[""exact""]",True,False
+34,plan,The patient will have a follow-up after the EMG and nerve conduction study.,0.0,"[""I will follow up with Alexis after the EMG and nerve conduction study""]","[[355, 424]]","[""exact""]",True,False
+35,plan,The patient's test results will be discussed during the follow-up.,0.0,"[""to discuss the results""]","[[425, 447]]","[""exact""]",True,False
+36,plan,The patient may be prescribed physical therapy.,0.25,"[""which may include physical therapy""]","[[489, 523]]","[""exact""]",True,False
+37,plan,The patient may be prescribed surgery.,0.0,"[""or surgery""]","[[524, 534]]","[""exact""]",True,False

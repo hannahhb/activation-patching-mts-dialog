@@ -1,0 +1,36 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Judy Gomez.,0.0,"[""Judy Gomez""]","[[18, 28]]","[""exact""]",True,False
+1,subjective,The patient is a 62-year-old female.,0.75,"[""62-year-old female""]","[[35, 53]]","[""exact""]",True,False
+2,subjective,The patient has psoriatic arthritis.,0.0,"[""psoriatic arthritis""]","[[93, 112]]","[""exact""]",True,False
+3,subjective,The patient's symptoms have improved with the current treatment regimen.,0.25,"[""her symptoms have improved with the current treatment regimen""]","[[181, 242]]","[""exact""]",True,False
+4,subjective,The patient occasionally experiences increased pain in her feet when she is more active.,0.5,"[""increased pain in her feet when she has a day off from her desk job and is more active""]","[[291, 377]]","[""exact""]",True,False
+5,subjective,The patient denies taking methotrexate on the day of her COVID-19 vaccination.,0.75,"[""denies taking methotrexate on the day of her COVID-19 vaccination""]","[[409, 474]]","[""exact""]",True,False
+6,subjective,The patient believes not taking methotrexate on the day of her COVID-19 vaccination may have reduced the efficacy of the vaccine.,0.75,"[""which she believes may have reduced the efficacy of the vaccine""]","[[476, 539]]","[""exact""]",True,False
+7,subjective,The patient felt unwell after the first dose of the COVID-19 vaccine.,0.5,"[""feeling unwell after the first dose""]","[[553, 588]]","[""exact""]",True,False
+8,subjective,The patient tolerated the second dose of the COVID-19 vaccine after consulting the hotline.,1.0,"[""tolerating the second dose after consulting the hotline""]","[[593, 648]]","[""exact""]",True,False
+9,subjective,The patient has a history of psoriatic arthritis.,0.0,"[""history of psoriatic arthritis""]","[[691, 721]]","[""exact""]",True,False
+10,subjective,The patient is currently being treated with methotrexate for psoriatic arthritis.,0.0,"[""methotrexate and prednisone"", ""I prescribed methotrexate for psoriatic arthritis""]","[[769, 796], [1052, 1101]]","[""exact"", ""exact""]",True,True
+11,subjective,The patient is currently being treated with prednisone for psoriatic arthritis.,0.0,"[""methotrexate and prednisone""]","[[769, 796]]","[""exact""]",True,False
+12,subjective,The patient has had a recent COVID-19 vaccination.,0.25,"[""recent COVID-19 vaccination""]","[[812, 839]]","[""exact""]",True,False
+13,subjective,The patient did not take methotrexate on the day of the first dose of the COVID-19 vaccination.,0.75,"[""for which she did not take methotrexate on the day of the first dose""]","[[841, 909]]","[""exact""]",True,False
+14,subjective,"The patient reports bruising, particularly on her skin.",0.0,"[""The patient reports bruising, particularly on her skin""]","[[931, 985]]","[""exact""]",True,False
+15,subjective,The patient attributes her bruising to taking prednisone.,0.25,"[""which she attributes to taking prednisone""]","[[987, 1028]]","[""exact""]",True,False
+16,subjective,Methotrexate is prescribed for the patient's psoriatic arthritis.,0.0,"[""I prescribed methotrexate for psoriatic arthritis""]","[[1052, 1101]]","[""exact""]",True,False
+17,objective,The patient has a good range of motion in her toes.,0.0,"[""The patient has a good range of motion in her toes and knees""]","[[15, 75]]","[""exact""]",True,False
+18,objective,The patient has a good range of motion in her knees.,0.75,"[""The patient has a good range of motion in her toes and knees""]","[[15, 75]]","[""exact""]",True,False
+19,objective,The patient reports pain in her joint areas.,1.0,"[""reports pain in her joint areas""]","[[81, 112]]","[""exact""]",True,False
+20,objective,The patient reports pain particularly in her feet.,0.75,"[""particularly in her feet and knees""]","[[114, 148]]","[""exact""]",True,False
+21,objective,The patient reports pain particularly in her knees.,0.75,"[""particularly in her feet and knees""]","[[114, 148]]","[""exact""]",True,False
+22,objective,The patient has ridges on her nails.,0.0,"[""She has ridges on her nails""]","[[150, 177]]","[""exact""]",True,False
+23,objective,The patient's nail ridges are consistent with psoriasis.,0.0,"[""which are consistent with psoriasis""]","[[179, 214]]","[""exact""]",True,False
+24,objective,The patient has bruising on her skin.,1.0,"[""Examination of the skin reveals bruising""]","[[216, 256]]","[""exact""]",True,False
+25,assessment,The patient is being managed with methotrexate for psoriatic arthritis.,0.0,"[""which is being managed with methotrexate and prednisone""]","[[49, 104]]","[""exact""]",True,False
+26,assessment,The patient is being managed with prednisone for psoriatic arthritis.,0.5,"[""which is being managed with methotrexate and prednisone""]","[[49, 104]]","[""exact""]",True,False
+27,assessment,There are plans to discontinue prednisone.,0.75,"[""with plans to discontinue prednisone""]","[[106, 142]]","[""exact""]",True,False
+28,assessment,There are plans to continue methotrexate.,0.25,"[""continue with methotrexate""]","[[147, 173]]","[""exact""]",True,False
+29,assessment,Psoriatic arthritis is on the patient's problem list.,0.0,"[""Psoriatic arthritis; suspected bruising due to prednisone use""]","[[189, 250]]","[""exact""]",True,False
+30,assessment,Suspected bruising due to prednisone use is on the patient's problem list.,0.75,"[""Psoriatic arthritis; suspected bruising due to prednisone use""]","[[189, 250]]","[""exact""]",True,False
+31,plan,The patient's prednisone was discontinued.,0.0,"[""I discontinued the patient's prednisone""]","[[0, 39]]","[""exact""]",True,False
+32,plan,The patient is to continue taking methotrexate.,0.0,"[""instructed her to continue with methotrexate""]","[[44, 88]]","[""exact""]",True,False
+33,plan,The patient is to schedule an appointment for blood work.,0.0,"[""instructed her to schedule an appointment for blood work at the front desk""]","[[97, 171]]","[""exact""]",True,False
+34,plan,The patient is to return in three months.,0.0,"[""instructed her to return in three months"", ""The patient is to return in three months for follow-up""]","[[179, 201], [215, 269]]","[""word"", ""exact""]",True,True

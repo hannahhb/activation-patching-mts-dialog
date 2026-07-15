@@ -1,0 +1,59 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 25-year-old male.,0.25,"[""a 25-year-old male""]","[[18, 36]]","[""exact""]",True,False
+1,subjective,"The patient presents with a 3-week history of severe, squeezing pain on the right-hand side of his belly.",0.0,"[""a 3-week history of severe, squeezing pain on the right-hand side of his belly""]","[[52, 130]]","[""exact""]",True,False
+2,subjective,The patient's pain is located underneath his ribs.,0.0,"[""located underneath his ribs""]","[[132, 159]]","[""exact""]",True,False
+3,subjective,The patient describes the pain as an 8 out of 10 in severity.,0.25,"[""an 8 out of 10 in severity""]","[[186, 212]]","[""exact""]",True,False
+4,subjective,The patient's pain comes and goes.,0.25,"[""it comes and goes""]","[[228, 245]]","[""exact""]",True,False
+5,subjective,The patient's pain is often accompanied by nausea and vomiting.,0.25,"[""often accompanied by nausea and vomiting""]","[[247, 287]]","[""exact""]",True,False
+6,subjective,The patient's pain is exacerbated by eating.,0.0,"[""exacerbated by eating""]","[[301, 322]]","[""exact""]",True,False
+7,subjective,The patient's pain is exacerbated by fatty foods.,0.0,"[""particularly fatty foods""]","[[324, 348]]","[""exact""]",True,False
+8,subjective,The patient is on a keto diet.,0.5,"[""his current keto diet""]","[[371, 392]]","[""exact""]",True,False
+9,subjective,The patient has lost 25 pounds over the last 3 months.,0.0,"[""lost 25 pounds over the last 3 months""]","[[401, 438]]","[""exact""]",True,False
+10,subjective,The patient has seen improvement in his blood sugar control since starting the diet.,0.75,"[""has seen improvement in his blood sugar control""]","[[467, 514]]","[""exact""]",True,False
+11,subjective,The patient has type 2 diabetes.,0.0,"[""type 2 diabetes""]","[[560, 575]]","[""exact""]",True,False
+12,subjective,The patient manages his type 2 diabetes with diet and exercise.,0.0,"[""which he has managed with diet and exercise""]","[[577, 620]]","[""exact""]",True,False
+13,subjective,The patient has a family history of gallbladder disease.,0.0,"[""a family history of gallbladder disease""]","[[629, 668]]","[""exact""]",True,False
+14,subjective,The patient's parents have had their gallbladders removed.,0.0,"[""both parents having had their gallbladders removed""]","[[675, 725]]","[""exact""]",True,False
+15,subjective,The patient reports occasional low-grade fevers.,0.0,"[""occasional low-grade fevers""]","[[767, 794]]","[""exact""]",True,False
+16,subjective,The patient reports nausea.,0.0,"[""nausea""]","[[268, 274]]","[""exact""]",True,False
+17,subjective,The patient denies vomiting at the time of the visit.,0.75,"[""no vomiting"", ""He denies any fever at the time of the visit""]","[[811, 822], [824, 868]]","[""exact"", ""exact""]",True,True
+18,subjective,The patient denies fever at the time of the visit.,0.75,"[""He denies any fever at the time of the visit""]","[[824, 868]]","[""exact""]",True,False
+19,objective,The patient's blood pressure is 128/88.,0.0,"[""Blood pressure was 128/88""]","[[13, 38]]","[""exact""]",True,False
+20,objective,The patient's respiratory rate is 16.,0.0,"[""respiratory rate was 16""]","[[40, 63]]","[""exact""]",True,False
+21,objective,The patient's pulse rate is 68.,0.0,"[""pulse rate was 68""]","[[65, 82]]","[""exact""]",True,False
+22,objective,The patient's oxygen saturation on room air is 99%.,0.0,"[""oxygen saturation on room air was 99%""]","[[88, 125]]","[""exact""]",True,False
+23,objective,The patient has a regular heart rhythm.,1.0,"[""The patient has a regular heart rhythm""]","[[143, 181]]","[""exact""]",True,False
+24,objective,The patient has no murmurs.,1.0,"[""no murmurs""]","[[186, 196]]","[""exact""]",True,False
+25,objective,The patient has no clicks.,1.0,"[""no murmurs, clicks, or rubs""]","[[186, 213]]","[""exact""]",True,False
+26,objective,The patient has no rubs.,1.0,"[""no murmurs, clicks, or rubs""]","[[186, 213]]","[""exact""]",True,False
+27,objective,The patient's lungs are clear.,0.75,"[""The lungs are clear and equal bilaterally""]","[[215, 256]]","[""exact""]",True,False
+28,objective,The patient's lungs are equal bilaterally.,0.75,"[""The lungs are clear and equal bilaterally""]","[[215, 256]]","[""exact""]",True,False
+29,objective,The patient's abdomen is soft.,0.0,"[""The abdomen is soft and nondistended""]","[[258, 294]]","[""exact""]",True,False
+30,objective,The patient's abdomen is nondistended.,0.0,"[""The abdomen is soft and nondistended""]","[[258, 294]]","[""exact""]",True,False
+31,objective,The patient has positive bowel sounds.,0.0,"[""with positive bowel sounds""]","[[296, 322]]","[""exact""]",True,False
+32,objective,The patient has slight guarding in the right upper quadrant.,0.0,"[""There is slight guarding in the right upper quadrant""]","[[324, 376]]","[""exact""]",True,False
+33,objective,The patient has no rebound tenderness.,0.25,"[""but no rebound tenderness""]","[[378, 403]]","[""exact""]",True,False
+34,objective,The patient experiences pain when pressure is applied to the right-hand side of his abdomen.,0.25,"[""The patient experiences pain when pressure is applied to the right-hand side of his abdomen""]","[[405, 496]]","[""exact""]",True,False
+35,objective,The patient's abdominal exam is consistent with Murphy's sign.,0.0,"[""consistent with Murphy's sign""]","[[498, 527]]","[""exact""]",True,False
+36,objective,The patient has multiple gallstones in the gallbladder.,0.0,"[""Abdominal ultrasound shows multiple gallstones in the gallbladder""]","[[544, 609]]","[""exact""]",True,False
+37,objective,The patient has mild thickening of the gallbladder wall.,0.0,"[""with mild thickening of the gallbladder wall""]","[[611, 655]]","[""exact""]",True,False
+38,objective,The patient's common bile duct size is within normal limits.,0.0,"[""The common bile duct size is within normal limits""]","[[657, 706]]","[""exact""]",True,False
+39,objective,The patient's common bile duct size is 4.1 mm.,0.0,"[""at 4.1 mm""]","[[707, 716]]","[""exact""]",True,False
+40,assessment,The patient has mild cholecystitis.,0.0,"[""The patient has mild cholecystitis with gallstones, with a possible obstruction not appreciated""]","[[12, 107]]","[""exact""]",True,False
+41,assessment,The patient has gallstones.,0.0,"[""The patient has mild cholecystitis with gallstones, with a possible obstruction not appreciated""]","[[12, 107]]","[""exact""]",True,False
+42,assessment,The patient may have a possible obstruction.,1.0,"[""with a possible obstruction not appreciated""]","[[64, 107]]","[""exact""]",True,False
+43,assessment,The patient has cholecystitis.,0.0,"[""Cholecystitis""]","[[124, 137]]","[""exact""]",True,False
+44,assessment,The patient has Type 2 diabetes.,0.0,"[""Type 2 diabetes (status: confirmed)""]","[[151, 186]]","[""exact""]",True,False
+45,assessment,The patient's Type 2 diabetes is confirmed.,0.0,"[""(status: confirmed)""]","[[167, 186]]","[""exact""]",True,False
+46,plan,The patient was prescribed a medication.,0.75,"[""I prescribed [NOT MENTIONED] for [NOT MENTIONED]""]","[[0, 48]]","[""exact""]",True,False
+47,plan,The patient was recommended to undergo a laparoscopic cholecystectomy.,0.0,"[""I recommended a laparoscopic cholecystectomy to remove the gallbladder""]","[[50, 120]]","[""exact""]",True,False
+48,plan,The laparoscopic cholecystectomy is expected to take about an hour to an hour and a half.,0.75,"[""with a surgery time of about an hour to an hour and a half""]","[[122, 180]]","[""exact""]",True,False
+49,plan,The patient will spend the night in the hospital for monitoring post-procedure.,0.25,"[""The patient will spend the night in the hospital for monitoring post-procedure""]","[[182, 260]]","[""exact""]",True,False
+50,plan,The patient will be advised to avoid high-fat foods after surgery.,0.0,"[""will be advised to avoid high-fat foods""]","[[265, 304]]","[""exact""]",True,False
+51,plan,The patient will be advised to eat high-fiber foods after surgery.,0.0,"[""eat high-fiber foods""]","[[309, 329]]","[""exact""]",True,False
+52,plan,The patient will be encouraged to get up and move around on solid ground within a day or two after surgery.,0.75,"[""will be encouraged to get up and move around on solid ground within a day or two after surgery""]","[[357, 451]]","[""exact""]",True,False
+53,plan,The patient will have a follow-up appointment in a week.,0.0,"[""I will see the patient in a week""]","[[465, 497]]","[""exact""]",True,False
+54,plan,The purpose of the follow-up appointment is to monitor the patient's progress.,0.5,"[""to monitor his progress""]","[[498, 521]]","[""exact""]",True,False
+55,plan,The patient will be released to return to normal activities at the follow-up appointment.,0.75,"[""and release him to return to normal activities""]","[[522, 568]]","[""exact""]",True,False
+56,plan,The patient's normal activities include hiking.,0.75,"[""including hiking""]","[[570, 586]]","[""exact""]",True,False
+57,plan,The patient's normal activities include photography.,0.75,"[""including hiking and photography""]","[[570, 602]]","[""exact""]",True,False

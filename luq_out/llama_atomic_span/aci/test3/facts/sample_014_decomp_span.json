@@ -1,0 +1,925 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Theresa.",
+        "spans": [
+          "The patient, Theresa,"
+        ],
+        "span_offsets": [
+          [
+            0,
+            21
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is a 50-year-old female.",
+        "spans": [
+          "a 50-year-old female"
+        ],
+        "span_offsets": [
+          [
+            25,
+            45
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with a complaint of headaches.",
+        "spans": [
+          "presents with a complaint of headaches"
+        ],
+        "span_offsets": [
+          [
+            50,
+            88
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's headaches are characterized by a throbbing sensation at the top of her head.",
+        "spans": [
+          "a throbbing sensation at the top of her head"
+        ],
+        "span_offsets": [
+          [
+            103,
+            147
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's headaches have been ongoing for approximately a month.",
+        "spans": [
+          "have been ongoing for approximately a month"
+        ],
+        "span_offsets": [
+          [
+            155,
+            198
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's headaches are accompanied by dizziness.",
+        "spans": [
+          "her headaches are accompanied by dizziness and blurry vision",
+          "She reports dizziness and blurry vision with her headaches"
+        ],
+        "span_offsets": [
+          [
+            217,
+            277
+          ],
+          [
+            923,
+            969
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient's headaches are accompanied by blurry vision.",
+        "spans": [
+          "her headaches are accompanied by dizziness and blurry vision",
+          "She reports dizziness and blurry vision with her headaches"
+        ],
+        "span_offsets": [
+          [
+            217,
+            277
+          ],
+          [
+            923,
+            969
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient has high blood pressure.",
+        "spans": [
+          "high blood pressure"
+        ],
+        "span_offsets": [
+          [
+            328,
+            347
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking chlorthalidone for hypertension.",
+        "spans": [
+          "Chlorthalidone for hypertension"
+        ],
+        "span_offsets": [
+          [
+            974,
+            1052
+          ]
+        ],
+        "span_match_methods": [
+          "semantic"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not been adherent to the chlorthalidone medication regimen.",
+        "spans": [
+          "but she has not been adherent to the medication regimen"
+        ],
+        "span_offsets": [
+          [
+            393,
+            448
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences gastrointestinal side effects from chlorthalidone.",
+        "spans": [
+          "due to gastrointestinal side effects"
+        ],
+        "span_offsets": [
+          [
+            449,
+            485
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient eats a lot of fast food, particularly McDonald's.",
+        "spans": [
+          "eating a lot of fast food, particularly McDonald's"
+        ],
+        "span_offsets": [
+          [
+            501,
+            551
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient consumed Easter candy over the weekend.",
+        "spans": [
+          "consuming Easter candy over the weekend"
+        ],
+        "span_offsets": [
+          [
+            557,
+            596
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient believes that her diet may have contributed to her high blood sugar.",
+        "spans": [
+          "which she believes may have contributed to her high blood sugar"
+        ],
+        "span_offsets": [
+          [
+            598,
+            661
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of hypertension.",
+        "spans": [
+          "a history of hypertension"
+        ],
+        "span_offsets": [
+          [
+            680,
+            705
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of diabetes.",
+        "spans": [
+          "a history of diabetes"
+        ],
+        "span_offsets": [
+          [
+            710,
+            718
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking metformin for diabetes.",
+        "spans": [
+          "metformin for diabetes"
+        ],
+        "span_offsets": [
+          [
+            664,
+            764
+          ]
+        ],
+        "span_match_methods": [
+          "semantic"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a family history of obesity.",
+        "spans": [
+          "a family history of obesity"
+        ],
+        "span_offsets": [
+          [
+            773,
+            800
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of occasional forgetfulness.",
+        "spans": [
+          "a history of occasional forgetfulness"
+        ],
+        "span_offsets": [
+          [
+            805,
+            842
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's history of forgetfulness has led to non-adherence to her medication regimen.",
+        "spans": [
+          "which has led to non-adherence to her medication regimen"
+        ],
+        "span_offsets": [
+          [
+            844,
+            900
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is 172/98 mmHg.",
+        "spans": [
+          "Blood pressure: 172/98 mmHg"
+        ],
+        "span_offsets": [
+          [
+            2,
+            29
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pulse rate is within normal limits.",
+        "spans": [
+          "Pulse rate: within normal limits"
+        ],
+        "span_offsets": [
+          [
+            32,
+            64
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's oxygen saturation is fine.",
+        "spans": [
+          "Oxygen saturation: fine"
+        ],
+        "span_offsets": [
+          [
+            67,
+            90
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's blood pressure is elevated.",
+        "spans": [
+          "Blood pressure is elevated"
+        ],
+        "span_offsets": [
+          [
+            123,
+            149
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heart rate is within normal limits.",
+        "spans": [
+          "Heart rate is within normal limits"
+        ],
+        "span_offsets": [
+          [
+            152,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's oxygenation is fine.",
+        "spans": [
+          "Oxygenation is fine"
+        ],
+        "span_offsets": [
+          [
+            189,
+            208
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have jugular venous distention.",
+        "spans": [
+          "Jugular venous distention is not appreciated"
+        ],
+        "span_offsets": [
+          [
+            211,
+            255
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have carotid bruits.",
+        "spans": [
+          "Carotid bruits are not present"
+        ],
+        "span_offsets": [
+          [
+            258,
+            288
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lungs are clear bilaterally.",
+        "spans": [
+          "Lungs are clear bilaterally"
+        ],
+        "span_offsets": [
+          [
+            291,
+            318
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a 2/6 systolic ejection murmur.",
+        "spans": [
+          "Heart exam reveals a 2/6 systolic ejection murmur, which has not changed from last year"
+        ],
+        "span_offsets": [
+          [
+            321,
+            408
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's 2/6 systolic ejection murmur has not changed from last year.",
+        "spans": [
+          "Heart exam reveals a 2/6 systolic ejection murmur, which has not changed from last year"
+        ],
+        "span_offsets": [
+          [
+            321,
+            408
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has 1+ pitting edema on both legs.",
+        "spans": [
+          "1+ pitting edema is noted on both legs"
+        ],
+        "span_offsets": [
+          [
+            411,
+            449
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient is experiencing uncontrolled hypertension.",
+        "spans": [
+          "uncontrolled hypertension"
+        ],
+        "span_offsets": [
+          [
+            40,
+            65
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has elevated blood sugar levels.",
+        "spans": [
+          "elevated blood sugar levels"
+        ],
+        "span_offsets": [
+          [
+            70,
+            97
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's uncontrolled hypertension is likely due to non-adherence to medication regimen.",
+        "spans": [
+          "likely due to non-adherence to medication regimen"
+        ],
+        "span_offsets": [
+          [
+            99,
+            148
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's uncontrolled hypertension is likely due to dietary factors.",
+        "spans": [
+          "dietary factors"
+        ],
+        "span_offsets": [
+          [
+            153,
+            168
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's elevated blood sugar levels are likely due to non-adherence to medication regimen.",
+        "spans": [
+          "likely due to non-adherence to medication regimen"
+        ],
+        "span_offsets": [
+          [
+            99,
+            148
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's elevated blood sugar levels are likely due to dietary factors.",
+        "spans": [
+          "dietary factors"
+        ],
+        "span_offsets": [
+          [
+            153,
+            168
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has hypertension.",
+        "spans": [
+          "Hypertension"
+        ],
+        "span_offsets": [
+          [
+            185,
+            197
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's hypertension is active.",
+        "spans": [
+          "Hypertension; Active"
+        ],
+        "span_offsets": [
+          [
+            232,
+            239
+          ]
+        ],
+        "span_match_methods": [
+          "semantic"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has suspected elevated blood sugar.",
+        "spans": [
+          "Elevated blood sugar; Suspected"
+        ],
+        "span_offsets": [
+          [
+            70,
+            90
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient is currently taking chlorthalidone.",
+        "spans": [
+          "chlorthalidone"
+        ],
+        "span_offsets": [
+          [
+            71,
+            85
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is currently taking metformin.",
+        "spans": [
+          "metformin"
+        ],
+        "span_offsets": [
+          [
+            90,
+            99
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is advised to take her medication daily.",
+        "spans": [
+          "take her medication daily"
+        ],
+        "span_offsets": [
+          [
+            122,
+            147
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is recommended to use a blood pressure monitor at home.",
+        "spans": [
+          "use a blood pressure monitor at home"
+        ],
+        "span_offsets": [
+          [
+            170,
+            206
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is recommended to track her blood pressure three times a week.",
+        "spans": [
+          "track her blood pressure three times a week"
+        ],
+        "span_offsets": [
+          [
+            210,
+            253
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be referred to a nutritionist.",
+        "spans": [
+          "refer her to a nutritionist"
+        ],
+        "span_offsets": [
+          [
+            270,
+            297
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will discuss dietary changes to reduce sodium intake with a nutritionist.",
+        "spans": [
+          "discuss dietary changes to reduce sodium intake"
+        ],
+        "span_offsets": [
+          [
+            301,
+            348
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's metformin dose will be increased to 1500 mg.",
+        "spans": [
+          "increase her metformin to 1500 mg"
+        ],
+        "span_offsets": [
+          [
+            375,
+            408
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is advised to continue monitoring her blood sugars.",
+        "spans": [
+          "continue monitoring her blood sugars"
+        ],
+        "span_offsets": [
+          [
+            424,
+            460
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will have a one-month follow-up appointment.",
+        "spans": [
+          "one-month follow-up appointment"
+        ],
+        "span_offsets": [
+          [
+            499,
+            530
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's blood pressure will be reassessed at the follow-up appointment.",
+        "spans": [
+          "reassess her blood pressure"
+        ],
+        "span_offsets": [
+          [
+            534,
+            561
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's blood sugar levels will be reassessed at the follow-up appointment.",
+        "spans": [
+          "reassess her blood pressure and blood sugar levels"
+        ],
+        "span_offsets": [
+          [
+            534,
+            584
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

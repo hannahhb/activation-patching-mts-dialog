@@ -1,0 +1,777 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 37-year-old female.",
+        "spans": [
+          "a 37-year-old female"
+        ],
+        "span_offsets": [
+          [
+            13,
+            33
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with a complaint of worsening headaches over the past few weeks.",
+        "spans": [
+          "presents with a complaint of worsening headaches over the past few weeks"
+        ],
+        "span_offsets": [
+          [
+            35,
+            107
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's blood pressure has been running high.",
+        "spans": [
+          "her blood pressure has been running high"
+        ],
+        "span_offsets": [
+          [
+            121,
+            161
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a blood pressure reading of 160/87.",
+        "spans": [
+          "readings of 160/87"
+        ],
+        "span_offsets": [
+          [
+            168,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a blood pressure reading of 175/92.",
+        "spans": [
+          "readings of 175/92"
+        ],
+        "span_offsets": [
+          [
+            191,
+            197
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of hypertension.",
+        "spans": [
+          "a history of hypertension"
+        ],
+        "span_offsets": [
+          [
+            231,
+            256
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of diabetes.",
+        "spans": [
+          "a history of hypertension and diabetes"
+        ],
+        "span_offsets": [
+          [
+            231,
+            269
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes lisinopril 20mg once a day.",
+        "spans": [
+          "lisinopril 20mg once a day"
+        ],
+        "span_offsets": [
+          [
+            291,
+            317
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient sometimes forgets to take lisinopril.",
+        "spans": [
+          "admits to sometimes forgetting to take it"
+        ],
+        "span_offsets": [
+          [
+            323,
+            364
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient forgets to take lisinopril particularly on weekends.",
+        "spans": [
+          "particularly on weekends"
+        ],
+        "span_offsets": [
+          [
+            366,
+            390
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences occasional headaches.",
+        "spans": [
+          "has been experiencing occasional headaches"
+        ],
+        "span_offsets": [
+          [
+            410,
+            443
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient rates the intensity of her headaches as 7 out of 10.",
+        "spans": [
+          "rates as a 7 out of 10 in intensity"
+        ],
+        "span_offsets": [
+          [
+            455,
+            490
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient manages her headaches with Tylenol.",
+        "spans": [
+          "has been managing them with Tylenol"
+        ],
+        "span_offsets": [
+          [
+            496,
+            531
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any recent changes in urination.",
+        "spans": [
+          "denies any recent changes in urination"
+        ],
+        "span_offsets": [
+          [
+            537,
+            575
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any recent cough.",
+        "spans": [
+          "denies any recent changes in urination, cough"
+        ],
+        "span_offsets": [
+          [
+            848,
+            893
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any recent runny nose.",
+        "spans": [
+          "denies any recent changes in urination, cough, runny nose"
+        ],
+        "span_offsets": [
+          [
+            848,
+            905
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any recent congestion.",
+        "spans": [
+          "denies any recent changes in urination, cough, runny nose, or congestion"
+        ],
+        "span_offsets": [
+          [
+            848,
+            920
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a family history of migraines.",
+        "spans": [
+          "a family history of migraines"
+        ],
+        "span_offsets": [
+          [
+            607,
+            636
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's family history of migraines does not include similar headaches.",
+        "spans": [
+          "but not similar headaches like the ones she is currently experiencing"
+        ],
+        "span_offsets": [
+          [
+            638,
+            707
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Lisinopril is prescribed for the patient's hypertension.",
+        "spans": [
+          "Lisinopril 20mg once a day for hypertension"
+        ],
+        "span_offsets": [
+          [
+            923,
+            966
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's dose of lisinopril is 20mg.",
+        "spans": [
+          "lisinopril 20mg"
+        ],
+        "span_offsets": [
+          [
+            291,
+            306
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's frequency of lisinopril is once a day.",
+        "spans": [
+          "once a day"
+        ],
+        "span_offsets": [
+          [
+            307,
+            317
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is 160/87.",
+        "spans": [
+          "Blood pressure 160/87"
+        ],
+        "span_offsets": [
+          [
+            13,
+            34
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's blood pressure is 175/92.",
+        "spans": [
+          "Blood pressure 160/87 and 175/92"
+        ],
+        "span_offsets": [
+          [
+            13,
+            45
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's previous blood pressure was 124/82.",
+        "spans": [
+          "but previously was 124/82"
+        ],
+        "span_offsets": [
+          [
+            47,
+            72
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has tenderness to palpation over the frontal sinuses.",
+        "spans": [
+          "tenderness to palpation over the frontal sinuses"
+        ],
+        "span_offsets": [
+          [
+            91,
+            139
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have tenderness over the maxillary sinuses.",
+        "spans": [
+          "but no tenderness over the maxillary sinuses"
+        ],
+        "span_offsets": [
+          [
+            141,
+            185
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have lymphadenopathy.",
+        "spans": [
+          "or lymphadenopathy"
+        ],
+        "span_offsets": [
+          [
+            186,
+            204
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient presents with worsening headaches.",
+        "spans": [
+          "worsening headaches"
+        ],
+        "span_offsets": [
+          [
+            38,
+            57
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has uncontrolled hypertension.",
+        "spans": [
+          "uncontrolled hypertension"
+        ],
+        "span_offsets": [
+          [
+            62,
+            87
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed lisinopril.",
+        "spans": [
+          "I prescribed lisinopril 40mg once a day for hypertension"
+        ],
+        "span_offsets": [
+          [
+            0,
+            56
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lisinopril dose is 40mg.",
+        "spans": [
+          "40mg"
+        ],
+        "span_offsets": [
+          [
+            24,
+            28
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lisinopril frequency is once a day.",
+        "spans": [
+          "once a day"
+        ],
+        "span_offsets": [
+          [
+            29,
+            39
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lisinopril indication is hypertension.",
+        "spans": [
+          "for hypertension"
+        ],
+        "span_offsets": [
+          [
+            40,
+            56
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient had blood tests ordered.",
+        "spans": [
+          "I ordered blood tests"
+        ],
+        "span_offsets": [
+          [
+            58,
+            79
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient had hemoglobin A1c tests ordered.",
+        "spans": [
+          "including hemoglobin A1c"
+        ],
+        "span_offsets": [
+          [
+            81,
+            105
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has diabetes.",
+        "spans": [
+          "to monitor her diabetes"
+        ],
+        "span_offsets": [
+          [
+            134,
+            157
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has hypertension.",
+        "spans": [
+          "to monitor her diabetes and hypertension"
+        ],
+        "span_offsets": [
+          [
+            134,
+            174
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was referred to Doctor Ruth.",
+        "spans": [
+          "I referred her to see Doctor Ruth"
+        ],
+        "span_offsets": [
+          [
+            176,
+            209
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's referral to Doctor Ruth is for further evaluation and education on managing her diabetes.",
+        "spans": [
+          "for further evaluation and education on managing her diabetes"
+        ],
+        "span_offsets": [
+          [
+            210,
+            271
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to continue taking Tylenol.",
+        "spans": [
+          "I advised her to continue taking Tylenol"
+        ],
+        "span_offsets": [
+          [
+            273,
+            313
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Tylenol indication is headaches.",
+        "spans": [
+          "for her headaches"
+        ],
+        "span_offsets": [
+          [
+            314,
+            331
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to check her blood pressure.",
+        "spans": [
+          "to keep checking her blood pressure"
+        ],
+        "span_offsets": [
+          [
+            336,
+            371
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is scheduled for follow-up after her blood tests are complete.",
+        "spans": [
+          "to return for follow-up after her blood tests are complete"
+        ],
+        "span_offsets": [
+          [
+            399,
+            457
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's follow-up will include reviewing her blood test results.",
+        "spans": [
+          "to review the results with me or Doctor Ruth"
+        ],
+        "span_offsets": [
+          [
+            462,
+            506
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

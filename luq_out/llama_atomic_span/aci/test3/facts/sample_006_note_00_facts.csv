@@ -1,0 +1,61 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 34-year-old female.,0.0,"[""The patient is a 34-year-old female""]","[[0, 35]]","[""exact""]",True,False
+1,subjective,The patient has a history of chronic migraines.,0.0,"[""a history of chronic migraines""]","[[41, 71]]","[""exact""]",True,False
+2,subjective,The patient has a history of hypertension.,0.0,"[""a history of chronic migraines and hypertension""]","[[41, 88]]","[""exact""]",True,False
+3,subjective,The patient presents with abdominal pain.,0.0,"[""abdominal pain that started 10 days ago""]","[[107, 146]]","[""exact""]",True,False
+4,subjective,The patient's abdominal pain started 10 days ago.,0.0,"[""abdominal pain that started 10 days ago""]","[[107, 146]]","[""exact""]",True,False
+5,subjective,The patient's abdominal pain began with mild discomfort on her right side.,0.0,"[""mild discomfort on her right side""]","[[152, 185]]","[""exact""]",True,False
+6,subjective,The patient's abdominal pain has worsened over the last couple of days.,0.0,"[""which has worsened over the last couple of days""]","[[187, 234]]","[""exact""]",True,False
+7,subjective,The patient's abdominal pain is a 4 or 5 out of 10 in severity.,0.0,"[""The pain is a 4 or 5 out of 10 in severity""]","[[236, 278]]","[""exact""]",True,False
+8,subjective,The patient's abdominal pain can reach up to 7 or 8 in severity.,0.5,"[""but can reach up to 7 or 8""]","[[280, 306]]","[""exact""]",True,False
+9,subjective,The patient's abdominal pain worsens after meals.,0.0,"[""the pain worsens after meals""]","[[333, 361]]","[""exact""]",True,False
+10,subjective,The patient's abdominal pain is localized to the right side.,0.0,"[""localized to the right side""]","[[366, 393]]","[""exact""]",True,False
+11,subjective,The patient's abdominal pain radiates slightly to the left.,0.25,"[""radiates slightly to the left""]","[[399, 428]]","[""exact""]",True,False
+12,subjective,The patient experiences nausea.,0.0,"[""nausea, heartburn, and fatigue""]","[[451, 481]]","[""exact""]",True,False
+13,subjective,The patient experiences heartburn.,0.0,"[""nausea, heartburn, and fatigue""]","[[451, 481]]","[""exact""]",True,False
+14,subjective,The patient experiences fatigue.,0.0,"[""nausea, heartburn, and fatigue""]","[[451, 481]]","[""exact""]",True,False
+15,subjective,The patient denies fever.,0.0,"[""denies fever""]","[[495, 507]]","[""exact""]",True,False
+16,subjective,The patient denies urinary symptoms.,0.0,"[""urinary symptoms""]","[[509, 525]]","[""exact""]",True,False
+17,subjective,The patient denies diarrhea.,0.0,"[""diarrhea""]","[[527, 535]]","[""exact""]",True,False
+18,subjective,The patient denies blood in her stool.,0.0,"[""blood in her stool""]","[[540, 558]]","[""exact""]",True,False
+19,subjective,The patient has not had any unusual travel or exposures.,0.5,"[""She has not had any unusual travel or exposures""]","[[560, 607]]","[""exact""]",True,False
+20,subjective,The patient's migraines have been rare.,0.5,"[""The patient's migraines have been rare""]","[[609, 647]]","[""exact""]",True,False
+21,subjective,The patient's migraines are responsive to Excedrin.,0.5,"[""responsive to Excedrin""]","[[652, 674]]","[""exact""]",True,False
+22,subjective,The patient takes sumatriptan for breakthrough migraines.,0.0,"[""sumatriptan for breakthrough migraines""]","[[703, 741]]","[""exact""]",True,False
+23,subjective,The patient takes lisinopril 20 milligrams per day for hypertension.,0.0,"[""lisinopril 20 milligrams per day for hypertension""]","[[829, 878]]","[""exact""]",True,False
+24,subjective,The patient takes Excedrin as needed for migraines.,0.0,"[""Excedrin as needed for migraines""]","[[936, 968]]","[""exact""]",True,False
+25,subjective,The patient takes sumatriptan as needed for breakthrough migraines.,0.0,"[""Sumatriptan as needed for breakthrough migraines""]","[[971, 1019]]","[""exact""]",True,False
+26,subjective,The patient takes lisinopril 20 milligrams per day.,0.0,"[""Lisinopril 20 milligrams per day""]","[[1022, 1054]]","[""exact""]",True,False
+27,subjective,The patient takes lisinopril for hypertension.,0.0,"[""for hypertension""]","[[862, 878]]","[""exact""]",True,False
+28,subjective,The patient's dose of lisinopril is 20 milligrams per day.,0.0,"[""20 milligrams per day""]","[[840, 861]]","[""exact""]",True,False
+29,objective,The patient's blood pressure is elevated today.,0.25,"[""The patient's blood pressure is elevated today""]","[[13, 59]]","[""exact""]",True,False
+30,objective,The patient has a grade 3 out of 6 systolic ejection murmur on her heart exam.,0.0,"[""The patient has a grade 3 out of 6 systolic ejection murmur on her heart exam""]","[[117, 194]]","[""exact""]",True,False
+31,objective,The patient's systolic ejection murmur is unchanged from prior exams.,0.5,"[""which is unchanged from prior exams""]","[[196, 231]]","[""exact""]",True,False
+32,objective,The patient's cardiovascular exam is otherwise normal.,0.75,"[""The cardiovascular exam is otherwise normal""]","[[233, 276]]","[""exact""]",True,False
+33,objective,The patient has mild to moderate tenderness in the right upper quadrant on abdominal exam.,0.0,"[""mild to moderate tenderness in the right upper quadrant""]","[[305, 360]]","[""exact""]",True,False
+34,objective,The patient has an equivocal Murphy's sign.,0.0,"[""with an equivocal Murphy's sign""]","[[362, 393]]","[""exact""]",True,False
+35,assessment,The patient has acute abdominal pain.,0.0,"[""The patient has acute abdominal pain""]","[[0, 36]]","[""exact""]",True,False
+36,assessment,The patient has right upper quadrant tenderness.,0.0,"[""right upper quadrant tenderness""]","[[42, 73]]","[""exact""]",True,False
+37,assessment,The patient's acute abdominal pain may be due to gallstones.,0.0,"[""possibly due to gallstones""]","[[75, 101]]","[""exact""]",True,False
+38,assessment,The patient's acute abdominal pain may be due to an infection in the gallbladder.,0.0,"[""possibly due to gallstones or an infection in the gallbladder""]","[[75, 136]]","[""exact""]",True,False
+39,assessment,The patient's migraines are well-managed with Excedrin.,1.0,"[""her migraines are well-managed with Excedrin and sumatriptan""]","[[190, 250]]","[""exact""]",True,False
+40,assessment,The patient's migraines are well-managed with sumatriptan.,1.0,"[""her migraines are well-managed with Excedrin and sumatriptan""]","[[190, 250]]","[""exact""]",True,False
+41,assessment,The patient has hypertension.,0.25,"[""The patient's hypertension""]","[[252, 278]]","[""exact""]",True,False
+42,assessment,The patient's hypertension is under adequate control on lisinopril.,1.0,"[""The patient's hypertension is under adequate control on lisinopril""]","[[252, 318]]","[""exact""]",True,False
+43,assessment,Acute abdominal pain is a problem for the patient.,0.0,"[""Acute abdominal pain; Chronic migraines; Hypertension""]","[[335, 388]]","[""exact""]",True,False
+44,assessment,Chronic migraines are a problem for the patient.,0.25,"[""Acute abdominal pain; Chronic migraines; Hypertension""]","[[335, 388]]","[""exact""]",True,False
+45,assessment,Hypertension is a problem for the patient.,0.25,"[""Acute abdominal pain; Chronic migraines; Hypertension""]","[[335, 388]]","[""exact""]",True,False
+46,plan,The patient has abdominal pain.,0.0,"[""abdominal pain""]","[[156, 170]]","[""exact""]",True,False
+47,plan,A CBC will be ordered for the patient.,0.0,"[""CBC""]","[[26, 29]]","[""exact""]",True,False
+48,plan,A chem 12 will be ordered for the patient.,0.0,"[""chem 12""]","[[31, 38]]","[""exact""]",True,False
+49,plan,A urinalysis will be ordered for the patient.,0.0,"[""urinalysis""]","[[40, 50]]","[""exact""]",True,False
+50,plan,A pregnancy test will be ordered for the patient.,0.0,"[""pregnancy test""]","[[52, 66]]","[""exact""]",True,False
+51,plan,An ultrasound of the right upper quadrant will be ordered for the patient.,0.0,"[""ultrasound of the right upper quadrant""]","[[75, 113]]","[""exact""]",True,False
+52,plan,The patient will be prescribed lisinopril.,0.0,"[""lisinopril""]","[[206, 216]]","[""exact""]",True,False
+53,plan,The patient will be prescribed lisinopril 20 milligrams per day.,0.25,"[""lisinopril 20 milligrams per day""]","[[206, 238]]","[""exact""]",True,False
+54,plan,The patient will be prescribed sumatriptan.,0.0,"[""sumatriptan""]","[[289, 300]]","[""exact""]",True,False
+55,plan,The patient has migraines.,0.0,"[""for the patient's migraines""]","[[301, 328]]","[""exact""]",True,False
+56,plan,The patient will be instructed not to eat anything until the results of the tests are available.,1.0,"[""not to eat anything until the results of the tests are available""]","[[358, 422]]","[""exact""]",True,False
+57,plan,The patient's test results will be followed up on today.,0.25,"[""follow up on the results of the tests today""]","[[432, 475]]","[""exact""]",True,False
+58,plan,The patient's condition will be checked on today.,0.25,"[""check on the patient's condition""]","[[480, 512]]","[""exact""]",True,False
+59,plan,The patient will be seen in about four weeks to reassess her condition.,0.0,"[""see the patient in about four weeks to reassess her condition""]","[[521, 582]]","[""exact""]",True,False

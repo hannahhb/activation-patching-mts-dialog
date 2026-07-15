@@ -1,0 +1,704 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Betty.",
+        "spans": [
+          "The patient, Betty,"
+        ],
+        "span_offsets": [
+          [
+            5,
+            24
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with a 3-week history of left shoulder pain.",
+        "spans": [
+          "a 3-week history of left shoulder pain"
+        ],
+        "span_offsets": [
+          [
+            39,
+            77
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left shoulder pain is constant.",
+        "spans": [
+          "which is described as constant"
+        ],
+        "span_offsets": [
+          [
+            79,
+            109
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left shoulder pain is exacerbated by pressure.",
+        "spans": [
+          "exacerbated by pressure"
+        ],
+        "span_offsets": [
+          [
+            114,
+            137
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left shoulder pain is exacerbated by sleeping on the affected side.",
+        "spans": [
+          "particularly when sleeping on the affected side"
+        ],
+        "span_offsets": [
+          [
+            139,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left shoulder pain is alleviated with Tylenol.",
+        "spans": [
+          "The pain is alleviated with Tylenol"
+        ],
+        "span_offsets": [
+          [
+            188,
+            223
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any direct trauma to the shoulder.",
+        "spans": [
+          "The patient denies any direct trauma to the shoulder"
+        ],
+        "span_offsets": [
+          [
+            225,
+            277
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been active and recently renovating the basement, which may be contributing to the pain.",
+        "spans": [
+          "being active and recently renovating the basement, which may be contributing to the pain"
+        ],
+        "span_offsets": [
+          [
+            292,
+            380
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left shoulder pain is a 7 out of 10 without Tylenol.",
+        "spans": [
+          "the pain is a 7 out of 10 without Tylenol"
+        ],
+        "span_offsets": [
+          [
+            407,
+            448
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left shoulder pain is 2-3 with Tylenol.",
+        "spans": [
+          "2-3 with Tylenol"
+        ],
+        "span_offsets": [
+          [
+            453,
+            469
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of occasional aches and pains.",
+        "spans": [
+          "a history of occasional aches and pains"
+        ],
+        "span_offsets": [
+          [
+            510,
+            549
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's occasional aches and pains are typically managed with Tylenol.",
+        "spans": [
+          "which are typically managed with Tylenol"
+        ],
+        "span_offsets": [
+          [
+            551,
+            591
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies numbness or tingling in the arm or hand.",
+        "spans": [
+          "The patient denies numbness or tingling in the arm or hand"
+        ],
+        "span_offsets": [
+          [
+            613,
+            671
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is prescribed Tylenol.",
+        "spans": [
+          "I prescribed Tylenol"
+        ],
+        "span_offsets": [
+          [
+            695,
+            715
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Tylenol dose is 2 tablets.",
+        "spans": [
+          "Tylenol (2 tablets)"
+        ],
+        "span_offsets": [
+          [
+            708,
+            727
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Tylenol frequency is every 6-8 hours.",
+        "spans": [
+          "every 6-8 hours"
+        ],
+        "span_offsets": [
+          [
+            728,
+            743
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Tylenol is prescribed for pain.",
+        "spans": [
+          "for pain"
+        ],
+        "span_offsets": [
+          [
+            744,
+            752
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has limited active range of motion in the left shoulder.",
+        "spans": [
+          "limited active and passive range of motion in the left shoulder"
+        ],
+        "span_offsets": [
+          [
+            31,
+            94
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has limited passive range of motion in the left shoulder.",
+        "spans": [
+          "limited active and passive range of motion in the left shoulder"
+        ],
+        "span_offsets": [
+          [
+            31,
+            94
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has tenderness of the greater tuberosity of the humerus.",
+        "spans": [
+          "tenderness of the greater tuberosity of the humerus"
+        ],
+        "span_offsets": [
+          [
+            96,
+            147
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no tenderness at the sternoclavicular joint.",
+        "spans": [
+          "no tenderness at the sternoclavicular or clavicular joints"
+        ],
+        "span_offsets": [
+          [
+            153,
+            211
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no tenderness at the clavicular joint.",
+        "spans": [
+          "no tenderness at the sternoclavicular or clavicular joints"
+        ],
+        "span_offsets": [
+          [
+            153,
+            211
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has good hand grip bilaterally.",
+        "spans": [
+          "good hand grip bilaterally"
+        ],
+        "span_offsets": [
+          [
+            229,
+            255
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left arm has brisk cap refill in less than 3 seconds.",
+        "spans": [
+          "brisk cap refill in less than 3 seconds"
+        ],
+        "span_offsets": [
+          [
+            302,
+            341
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left arm has intact motor function.",
+        "spans": [
+          "intact motor and sensation to light touch"
+        ],
+        "span_offsets": [
+          [
+            346,
+            387
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left arm has intact sensation to light touch.",
+        "spans": [
+          "intact motor and sensation to light touch"
+        ],
+        "span_offsets": [
+          [
+            346,
+            387
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The X-ray of the left shoulder shows no fracture.",
+        "spans": [
+          "X-ray of the left shoulder shows no fracture or bony abnormality"
+        ],
+        "span_offsets": [
+          [
+            404,
+            468
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The X-ray of the left shoulder shows no bony abnormality.",
+        "spans": [
+          "X-ray of the left shoulder shows no fracture or bony abnormality"
+        ],
+        "span_offsets": [
+          [
+            404,
+            468
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has rotator cuff tendinopathy.",
+        "spans": [
+          "The patient's symptoms are most likely due to rotator cuff tendinopathy",
+          "Rotator cuff tendinopathy; active; confirmed"
+        ],
+        "span_offsets": [
+          [
+            12,
+            83
+          ],
+          [
+            171,
+            215
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient's rotator cuff tendinopathy is active.",
+        "spans": [
+          "Rotator cuff tendinopathy; active; confirmed"
+        ],
+        "span_offsets": [
+          [
+            171,
+            215
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's rotator cuff tendinopathy is confirmed.",
+        "spans": [
+          "Rotator cuff tendinopathy; active; confirmed"
+        ],
+        "span_offsets": [
+          [
+            171,
+            215
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's rotator cuff tendinopathy affects the left shoulder.",
+        "spans": [
+          "which is an injury to the tendons of the muscles of the left shoulder"
+        ],
+        "span_offsets": [
+          [
+            85,
+            154
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was ordered to have an MRI of the left shoulder.",
+        "spans": [
+          "I ordered an MRI of the left shoulder"
+        ],
+        "span_offsets": [
+          [
+            0,
+            37
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the MRI of the left shoulder is to rule out any other conditions.",
+        "spans": [
+          "to rule out any other conditions"
+        ],
+        "span_offsets": [
+          [
+            38,
+            70
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was referred for physical therapy.",
+        "spans": [
+          "I referred the patient for physical therapy"
+        ],
+        "span_offsets": [
+          [
+            72,
+            115
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The duration of the physical therapy is approximately 6-8 weeks.",
+        "spans": [
+          "for approximately 6-8 weeks"
+        ],
+        "span_offsets": [
+          [
+            116,
+            143
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to continue taking Tylenol.",
+        "spans": [
+          "I instructed the patient to continue taking Tylenol"
+        ],
+        "span_offsets": [
+          [
+            145,
+            196
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient should take Tylenol as needed.",
+        "spans": [
+          "as needed"
+        ],
+        "span_offsets": [
+          [
+            197,
+            206
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A steroid injection of the left shoulder may be considered if symptoms do not improve.",
+        "spans": [
+          "we may consider a steroid injection of the left shoulder",
+          "If symptoms do not improve"
+        ],
+        "span_offsets": [
+          [
+            236,
+            292
+          ],
+          [
+            208,
+            234
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient will return in 2 weeks for a follow-up appointment.",
+        "spans": [
+          "The patient will return in 2 weeks for a follow-up appointment"
+        ],
+        "span_offsets": [
+          [
+            306,
+            368
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

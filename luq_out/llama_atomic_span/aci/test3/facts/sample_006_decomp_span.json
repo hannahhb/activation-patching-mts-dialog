@@ -1,0 +1,1032 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 34-year-old female.",
+        "spans": [
+          "The patient is a 34-year-old female"
+        ],
+        "span_offsets": [
+          [
+            0,
+            35
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of chronic migraines.",
+        "spans": [
+          "a history of chronic migraines"
+        ],
+        "span_offsets": [
+          [
+            41,
+            71
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of hypertension.",
+        "spans": [
+          "a history of chronic migraines and hypertension"
+        ],
+        "span_offsets": [
+          [
+            41,
+            88
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with abdominal pain.",
+        "spans": [
+          "abdominal pain that started 10 days ago"
+        ],
+        "span_offsets": [
+          [
+            107,
+            146
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdominal pain started 10 days ago.",
+        "spans": [
+          "abdominal pain that started 10 days ago"
+        ],
+        "span_offsets": [
+          [
+            107,
+            146
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdominal pain began with mild discomfort on her right side.",
+        "spans": [
+          "mild discomfort on her right side"
+        ],
+        "span_offsets": [
+          [
+            152,
+            185
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdominal pain has worsened over the last couple of days.",
+        "spans": [
+          "which has worsened over the last couple of days"
+        ],
+        "span_offsets": [
+          [
+            187,
+            234
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdominal pain is a 4 or 5 out of 10 in severity.",
+        "spans": [
+          "The pain is a 4 or 5 out of 10 in severity"
+        ],
+        "span_offsets": [
+          [
+            236,
+            278
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdominal pain can reach up to 7 or 8 in severity.",
+        "spans": [
+          "but can reach up to 7 or 8"
+        ],
+        "span_offsets": [
+          [
+            280,
+            306
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdominal pain worsens after meals.",
+        "spans": [
+          "the pain worsens after meals"
+        ],
+        "span_offsets": [
+          [
+            333,
+            361
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdominal pain is localized to the right side.",
+        "spans": [
+          "localized to the right side"
+        ],
+        "span_offsets": [
+          [
+            366,
+            393
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdominal pain radiates slightly to the left.",
+        "spans": [
+          "radiates slightly to the left"
+        ],
+        "span_offsets": [
+          [
+            399,
+            428
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences nausea.",
+        "spans": [
+          "nausea, heartburn, and fatigue"
+        ],
+        "span_offsets": [
+          [
+            451,
+            481
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences heartburn.",
+        "spans": [
+          "nausea, heartburn, and fatigue"
+        ],
+        "span_offsets": [
+          [
+            451,
+            481
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences fatigue.",
+        "spans": [
+          "nausea, heartburn, and fatigue"
+        ],
+        "span_offsets": [
+          [
+            451,
+            481
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies fever.",
+        "spans": [
+          "denies fever"
+        ],
+        "span_offsets": [
+          [
+            495,
+            507
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies urinary symptoms.",
+        "spans": [
+          "urinary symptoms"
+        ],
+        "span_offsets": [
+          [
+            509,
+            525
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies diarrhea.",
+        "spans": [
+          "diarrhea"
+        ],
+        "span_offsets": [
+          [
+            527,
+            535
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies blood in her stool.",
+        "spans": [
+          "blood in her stool"
+        ],
+        "span_offsets": [
+          [
+            540,
+            558
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not had any unusual travel or exposures.",
+        "spans": [
+          "She has not had any unusual travel or exposures"
+        ],
+        "span_offsets": [
+          [
+            560,
+            607
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's migraines have been rare.",
+        "spans": [
+          "The patient's migraines have been rare"
+        ],
+        "span_offsets": [
+          [
+            609,
+            647
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's migraines are responsive to Excedrin.",
+        "spans": [
+          "responsive to Excedrin"
+        ],
+        "span_offsets": [
+          [
+            652,
+            674
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes sumatriptan for breakthrough migraines.",
+        "spans": [
+          "sumatriptan for breakthrough migraines"
+        ],
+        "span_offsets": [
+          [
+            703,
+            741
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes lisinopril 20 milligrams per day for hypertension.",
+        "spans": [
+          "lisinopril 20 milligrams per day for hypertension"
+        ],
+        "span_offsets": [
+          [
+            829,
+            878
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes Excedrin as needed for migraines.",
+        "spans": [
+          "Excedrin as needed for migraines"
+        ],
+        "span_offsets": [
+          [
+            936,
+            968
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes sumatriptan as needed for breakthrough migraines.",
+        "spans": [
+          "Sumatriptan as needed for breakthrough migraines"
+        ],
+        "span_offsets": [
+          [
+            971,
+            1019
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes lisinopril 20 milligrams per day.",
+        "spans": [
+          "Lisinopril 20 milligrams per day"
+        ],
+        "span_offsets": [
+          [
+            1022,
+            1054
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes lisinopril for hypertension.",
+        "spans": [
+          "for hypertension"
+        ],
+        "span_offsets": [
+          [
+            862,
+            878
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's dose of lisinopril is 20 milligrams per day.",
+        "spans": [
+          "20 milligrams per day"
+        ],
+        "span_offsets": [
+          [
+            840,
+            861
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is elevated today.",
+        "spans": [
+          "The patient's blood pressure is elevated today"
+        ],
+        "span_offsets": [
+          [
+            13,
+            59
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a grade 3 out of 6 systolic ejection murmur on her heart exam.",
+        "spans": [
+          "The patient has a grade 3 out of 6 systolic ejection murmur on her heart exam"
+        ],
+        "span_offsets": [
+          [
+            117,
+            194
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's systolic ejection murmur is unchanged from prior exams.",
+        "spans": [
+          "which is unchanged from prior exams"
+        ],
+        "span_offsets": [
+          [
+            196,
+            231
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's cardiovascular exam is otherwise normal.",
+        "spans": [
+          "The cardiovascular exam is otherwise normal"
+        ],
+        "span_offsets": [
+          [
+            233,
+            276
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has mild to moderate tenderness in the right upper quadrant on abdominal exam.",
+        "spans": [
+          "mild to moderate tenderness in the right upper quadrant"
+        ],
+        "span_offsets": [
+          [
+            305,
+            360
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has an equivocal Murphy's sign.",
+        "spans": [
+          "with an equivocal Murphy's sign"
+        ],
+        "span_offsets": [
+          [
+            362,
+            393
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has acute abdominal pain.",
+        "spans": [
+          "The patient has acute abdominal pain"
+        ],
+        "span_offsets": [
+          [
+            0,
+            36
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has right upper quadrant tenderness.",
+        "spans": [
+          "right upper quadrant tenderness"
+        ],
+        "span_offsets": [
+          [
+            42,
+            73
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's acute abdominal pain may be due to gallstones.",
+        "spans": [
+          "possibly due to gallstones"
+        ],
+        "span_offsets": [
+          [
+            75,
+            101
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's acute abdominal pain may be due to an infection in the gallbladder.",
+        "spans": [
+          "possibly due to gallstones or an infection in the gallbladder"
+        ],
+        "span_offsets": [
+          [
+            75,
+            136
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's migraines are well-managed with Excedrin.",
+        "spans": [
+          "her migraines are well-managed with Excedrin and sumatriptan"
+        ],
+        "span_offsets": [
+          [
+            190,
+            250
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's migraines are well-managed with sumatriptan.",
+        "spans": [
+          "her migraines are well-managed with Excedrin and sumatriptan"
+        ],
+        "span_offsets": [
+          [
+            190,
+            250
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has hypertension.",
+        "spans": [
+          "The patient's hypertension"
+        ],
+        "span_offsets": [
+          [
+            252,
+            278
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's hypertension is under adequate control on lisinopril.",
+        "spans": [
+          "The patient's hypertension is under adequate control on lisinopril"
+        ],
+        "span_offsets": [
+          [
+            252,
+            318
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Acute abdominal pain is a problem for the patient.",
+        "spans": [
+          "Acute abdominal pain; Chronic migraines; Hypertension"
+        ],
+        "span_offsets": [
+          [
+            335,
+            388
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Chronic migraines are a problem for the patient.",
+        "spans": [
+          "Acute abdominal pain; Chronic migraines; Hypertension"
+        ],
+        "span_offsets": [
+          [
+            335,
+            388
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Hypertension is a problem for the patient.",
+        "spans": [
+          "Acute abdominal pain; Chronic migraines; Hypertension"
+        ],
+        "span_offsets": [
+          [
+            335,
+            388
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient has abdominal pain.",
+        "spans": [
+          "abdominal pain"
+        ],
+        "span_offsets": [
+          [
+            156,
+            170
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A CBC will be ordered for the patient.",
+        "spans": [
+          "CBC"
+        ],
+        "span_offsets": [
+          [
+            26,
+            29
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A chem 12 will be ordered for the patient.",
+        "spans": [
+          "chem 12"
+        ],
+        "span_offsets": [
+          [
+            31,
+            38
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A urinalysis will be ordered for the patient.",
+        "spans": [
+          "urinalysis"
+        ],
+        "span_offsets": [
+          [
+            40,
+            50
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A pregnancy test will be ordered for the patient.",
+        "spans": [
+          "pregnancy test"
+        ],
+        "span_offsets": [
+          [
+            52,
+            66
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "An ultrasound of the right upper quadrant will be ordered for the patient.",
+        "spans": [
+          "ultrasound of the right upper quadrant"
+        ],
+        "span_offsets": [
+          [
+            75,
+            113
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be prescribed lisinopril.",
+        "spans": [
+          "lisinopril"
+        ],
+        "span_offsets": [
+          [
+            206,
+            216
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be prescribed lisinopril 20 milligrams per day.",
+        "spans": [
+          "lisinopril 20 milligrams per day"
+        ],
+        "span_offsets": [
+          [
+            206,
+            238
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be prescribed sumatriptan.",
+        "spans": [
+          "sumatriptan"
+        ],
+        "span_offsets": [
+          [
+            289,
+            300
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has migraines.",
+        "spans": [
+          "for the patient's migraines"
+        ],
+        "span_offsets": [
+          [
+            301,
+            328
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be instructed not to eat anything until the results of the tests are available.",
+        "spans": [
+          "not to eat anything until the results of the tests are available"
+        ],
+        "span_offsets": [
+          [
+            358,
+            422
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's test results will be followed up on today.",
+        "spans": [
+          "follow up on the results of the tests today"
+        ],
+        "span_offsets": [
+          [
+            432,
+            475
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's condition will be checked on today.",
+        "spans": [
+          "check on the patient's condition"
+        ],
+        "span_offsets": [
+          [
+            480,
+            512
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be seen in about four weeks to reassess her condition.",
+        "spans": [
+          "see the patient in about four weeks to reassess her condition"
+        ],
+        "span_offsets": [
+          [
+            521,
+            582
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

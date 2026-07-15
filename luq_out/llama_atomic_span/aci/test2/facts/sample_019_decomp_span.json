@@ -1,0 +1,789 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 6th grader.",
+        "spans": [
+          "a 6th grader at one point"
+        ],
+        "span_offsets": [
+          [
+            18,
+            43
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with a 6-month history of knee pain.",
+        "spans": [
+          "a 6-month history of knee pain"
+        ],
+        "span_offsets": [
+          [
+            59,
+            89
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's knee pain is described as a deep, achy pain behind her kneecaps.",
+        "spans": [
+          "a deep, achy pain behind her kneecaps"
+        ],
+        "span_offsets": [
+          [
+            114,
+            151
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences occasional creaking sounds in her knees.",
+        "spans": [
+          "with occasional creaking sounds"
+        ],
+        "span_offsets": [
+          [
+            153,
+            184
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's knee pain worsens with getting up from a seated position.",
+        "spans": [
+          "getting up from a seated position"
+        ],
+        "span_offsets": [
+          [
+            244,
+            277
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's knee pain worsens with walking up and down stairs.",
+        "spans": [
+          "walking up and down stairs"
+        ],
+        "span_offsets": [
+          [
+            279,
+            305
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's knee pain worsens with running.",
+        "spans": [
+          "running"
+        ],
+        "span_offsets": [
+          [
+            311,
+            318
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's knee pain is alleviated by rest.",
+        "spans": [
+          "rest typically alleviates the pain"
+        ],
+        "span_offsets": [
+          [
+            336,
+            370
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has tried ice for her knee pain.",
+        "spans": [
+          "ice"
+        ],
+        "span_offsets": [
+          [
+            386,
+            389
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has tried Ace bandages for her knee pain.",
+        "spans": [
+          "Ace bandages"
+        ],
+        "span_offsets": [
+          [
+            391,
+            403
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes ibuprofen for her knee pain.",
+        "spans": [
+          "ibuprofen or Aleve in the past",
+          "ibuprofen or Aleve as needed for pain"
+        ],
+        "span_offsets": [
+          [
+            409,
+            439
+          ],
+          [
+            960,
+            997
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient takes Aleve for her knee pain.",
+        "spans": [
+          "ibuprofen or Aleve in the past",
+          "ibuprofen or Aleve as needed for pain"
+        ],
+        "span_offsets": [
+          [
+            409,
+            439
+          ],
+          [
+            960,
+            997
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient tries to avoid medication.",
+        "spans": [
+          "tries to avoid medication"
+        ],
+        "span_offsets": [
+          [
+            444,
+            469
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has decreased her running mileage due to knee pain.",
+        "spans": [
+          "a significant decrease in her running mileage, from 5-6 miles to less than half a mile, due to knee pain"
+        ],
+        "span_offsets": [
+          [
+            483,
+            587
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's running mileage has decreased from 5-6 miles to less than half a mile.",
+        "spans": [
+          "from 5-6 miles to less than half a mile"
+        ],
+        "span_offsets": [
+          [
+            530,
+            569
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies swelling in her knees.",
+        "spans": [
+          "denies swelling or redness in her knees"
+        ],
+        "span_offsets": [
+          [
+            593,
+            632
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies redness in her knees.",
+        "spans": [
+          "denies swelling or redness in her knees"
+        ],
+        "span_offsets": [
+          [
+            593,
+            632
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no history of knee injuries.",
+        "spans": [
+          "no history of knee injuries"
+        ],
+        "span_offsets": [
+          [
+            641,
+            668
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of breaking her arm in sixth grade.",
+        "spans": [
+          "a history of breaking her arm in sixth grade"
+        ],
+        "span_offsets": [
+          [
+            709,
+            753
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any other injuries or conditions.",
+        "spans": [
+          "denies any other injuries or conditions"
+        ],
+        "span_offsets": [
+          [
+            758,
+            797
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports no other symptoms in other organs relevant to her initial presentation.",
+        "spans": [
+          "no other symptoms in other organs that are relevant to her initial presentation"
+        ],
+        "span_offsets": [
+          [
+            839,
+            918
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has a normal gait.",
+        "spans": [
+          "The patient has a normal gait"
+        ],
+        "span_offsets": [
+          [
+            15,
+            44
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has normal strength in the lower extremities except for abduction.",
+        "spans": [
+          "with normal strength in the lower extremities except for abduction"
+        ],
+        "span_offsets": [
+          [
+            46,
+            112
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abduction strength is 3/5 bilaterally.",
+        "spans": [
+          "which is 3/5 bilaterally"
+        ],
+        "span_offsets": [
+          [
+            114,
+            138
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has tenderness to palpation of the bilateral retinacular retinaculum.",
+        "spans": [
+          "tenderness to palpation of the bilateral retinacular retinaculum"
+        ],
+        "span_offsets": [
+          [
+            162,
+            226
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a positive patellar grind test.",
+        "spans": [
+          "positive patellar grind test"
+        ],
+        "span_offsets": [
+          [
+            228,
+            256
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has pain with squatting.",
+        "spans": [
+          "pain with squatting"
+        ],
+        "span_offsets": [
+          [
+            262,
+            281
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Lachman test is negative.",
+        "spans": [
+          "The Lachman, anterior and posterior drawer, and McMurray tests are all negative"
+        ],
+        "span_offsets": [
+          [
+            283,
+            362
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's anterior drawer test is negative.",
+        "spans": [
+          "The Lachman, anterior and posterior drawer, and McMurray tests are all negative"
+        ],
+        "span_offsets": [
+          [
+            283,
+            362
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's posterior drawer test is negative.",
+        "spans": [
+          "The Lachman, anterior and posterior drawer, and McMurray tests are all negative"
+        ],
+        "span_offsets": [
+          [
+            283,
+            362
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's McMurray test is negative.",
+        "spans": [
+          "The Lachman, anterior and posterior drawer, and McMurray tests are all negative"
+        ],
+        "span_offsets": [
+          [
+            283,
+            362
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's neuro exam is normal.",
+        "spans": [
+          "The neuro exam is normal"
+        ],
+        "span_offsets": [
+          [
+            364,
+            388
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's X-rays of both knees show no fractures.",
+        "spans": [
+          "The patient's X-rays of both knees show no fractures or osteoarthritis"
+        ],
+        "span_offsets": [
+          [
+            405,
+            475
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's X-rays of both knees show no osteoarthritis.",
+        "spans": [
+          "The patient's X-rays of both knees show no fractures or osteoarthritis"
+        ],
+        "span_offsets": [
+          [
+            405,
+            475
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has patellofemoral pain syndrome.",
+        "spans": [
+          "The patient's symptoms are consistent with patellofemoral pain syndrome"
+        ],
+        "span_offsets": [
+          [
+            12,
+            83
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Patellofemoral pain syndrome is a common condition causing knee pain in active young people.",
+        "spans": [
+          "a common condition causing knee pain in active young people"
+        ],
+        "span_offsets": [
+          [
+            85,
+            144
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is active.",
+        "spans": [
+          "active"
+        ],
+        "span_offsets": [
+          [
+            125,
+            131
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was recommended physical therapy to increase lower extremity strength.",
+        "spans": [
+          "physical therapy to increase lower extremity strength, mobility, and correct any incorrect running mechanics"
+        ],
+        "span_offsets": [
+          [
+            14,
+            122
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was recommended physical therapy to increase lower extremity mobility.",
+        "spans": [
+          "physical therapy to increase lower extremity strength, mobility, and correct any incorrect running mechanics"
+        ],
+        "span_offsets": [
+          [
+            14,
+            122
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was recommended physical therapy to correct any incorrect running mechanics.",
+        "spans": [
+          "physical therapy to increase lower extremity strength, mobility, and correct any incorrect running mechanics"
+        ],
+        "span_offsets": [
+          [
+            14,
+            122
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to continue taking ibuprofen for pain.",
+        "spans": [
+          "ibuprofen or anti-inflammatory medication as needed for pain"
+        ],
+        "span_offsets": [
+          [
+            165,
+            225
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to continue taking anti-inflammatory medication for pain.",
+        "spans": [
+          "ibuprofen or anti-inflammatory medication as needed for pain"
+        ],
+        "span_offsets": [
+          [
+            165,
+            225
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to take it easy from running for now.",
+        "spans": [
+          "take it easy from running for now"
+        ],
+        "span_offsets": [
+          [
+            255,
+            288
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be followed up with soon to assess her progress.",
+        "spans": [
+          "I will follow up with the patient soon to assess her progress"
+        ],
+        "span_offsets": [
+          [
+            359,
+            420
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The treatment plan will be adjusted as needed.",
+        "spans": [
+          "adjust the treatment plan as needed"
+        ],
+        "span_offsets": [
+          [
+            425,
+            460
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

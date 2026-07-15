@@ -1,0 +1,42 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Zachary.,0.75,"[""The patient, Zachary,""]","[[5, 26]]","[""exact""]",True,False
+1,subjective,The patient presents with left arm pain.,0.0,"[""it is actually his left arm that hurts""]","[[124, 162]]","[""exact""]",True,False
+2,subjective,The patient's left arm pain started yesterday.,0.0,"[""which he claims started since yesterday""]","[[59, 98]]","[""exact""]",True,False
+3,subjective,The patient describes the left arm pain as achiness and heaviness.,0.0,"[""He describes the pain as achiness and heaviness""]","[[164, 211]]","[""exact""]",True,False
+4,subjective,The patient's left arm pain affects his entire left arm from the elbow to the neck.,0.0,"[""which affects his entire left arm from the elbow to the neck""]","[[213, 273]]","[""exact""]",True,False
+5,subjective,The patient denies any specific incident that may have caused the left arm pain.,0.25,"[""He denies any specific incident that may have caused the pain""]","[[275, 336]]","[""exact""]",True,False
+6,subjective,The patient has taken Motrin for the left arm pain.,0.0,"[""He has taken some Motrin for the pain""]","[[369, 406]]","[""exact""]",True,False
+7,subjective,The patient's Motrin has not provided significant relief for the left arm pain.,0.0,"[""but it has not provided significant relief""]","[[408, 450]]","[""exact""]",True,False
+8,subjective,The patient has chest pain.,0.0,"[""the pain is accompanied by chest pain""]","[[474, 511]]","[""exact""]",True,False
+9,subjective,The patient's chest pain is intermittent.,0.0,"[""which he describes as coming and going""]","[[513, 551]]","[""exact""]",True,False
+10,subjective,The patient's chest pain affects his neck.,0.25,"[""affecting his neck as well""]","[[553, 579]]","[""exact""]",True,False
+11,subjective,The patient denies shortness of breath.,0.0,"[""He denies shortness of breath""]","[[581, 610]]","[""exact""]",True,False
+12,subjective,The patient has a history of hypertension.,0.0,"[""The patient has a history of hypertension""]","[[635, 676]]","[""exact""]",True,False
+13,subjective,The patient is on Norvasc for hypertension.,0.0,"[""for which he is on 2.5mg of Norvasc""]","[[678, 713]]","[""exact""]",True,False
+14,subjective,The patient's Norvasc dose is 2.5mg.,0.0,"[""2.5mg of Norvasc""]","[[697, 713]]","[""exact""]",True,False
+15,subjective,The patient's Norvasc frequency is daily.,0.25,"[""Norvasc 2.5mg daily""]","[[928, 947]]","[""exact""]",True,False
+16,subjective,The patient has a history of diabetes.,0.0,"[""and diabetes""]","[[715, 727]]","[""exact""]",True,False
+17,subjective,The patient is on metformin for diabetes.,0.0,"[""for which he is on 500mg of metformin""]","[[729, 766]]","[""exact""]",True,False
+18,subjective,The patient's metformin dose is 500mg.,0.0,"[""500mg of metformin""]","[[748, 766]]","[""exact""]",True,False
+19,subjective,The patient's metformin frequency is daily.,0.25,"[""Metformin 500mg daily""]","[[966, 987]]","[""exact""]",True,False
+20,subjective,The patient's A1C result was 7.2.,0.5,"[""His A1C result from a previous visit was 7.2""]","[[768, 812]]","[""exact""]",True,False
+21,subjective,The patient denies any other symptoms besides the elbow and chest pain.,0.25,"[""The patient denies any other symptoms besides the elbow and chest pain""]","[[834, 904]]","[""exact""]",True,False
+22,objective,The patient's blood pressure is 150/90.,0.25,"[""Blood pressure 150/90""]","[[13, 34]]","[""exact""]",True,False
+23,objective,The patient's blood pressure is slightly high.,0.25,"[""which is slightly high""]","[[36, 58]]","[""exact""]",True,False
+24,objective,The patient has a slight heart murmur.,0.0,"[""a slight murmur with his heart""]","[[113, 143]]","[""exact""]",True,False
+25,objective,The patient's heart murmur was not noted previously.,0.5,"[""which was not noted previously""]","[[145, 175]]","[""exact""]",True,False
+26,assessment,The patient has symptoms suggestive of a possible myocardial infarction.,0.0,"[""symptoms suggestive of a possible myocardial infarction""]","[[38, 93]]","[""exact""]",True,False
+27,assessment,The patient has hypertension.,0.0,"[""Hypertension""]","[[125, 137]]","[""exact""]",True,False
+28,assessment,The patient has diabetes.,0.0,"[""Diabetes""]","[[139, 147]]","[""exact""]",True,False
+29,assessment,The patient has suspected myocardial infarction.,0.0,"[""Suspected myocardial infarction""]","[[149, 180]]","[""exact""]",True,False
+30,assessment,The patient has elbow pain.,0.75,"[""Elbow pain""]","[[194, 204]]","[""exact""]",True,False
+31,plan,The patient was prescribed Aspirin to help alleviate the chest pain.,0.0,"[""I prescribed Aspirin and Nitroglycerin to help alleviate the chest pain""]","[[0, 71]]","[""exact""]",True,False
+32,plan,The patient was prescribed Nitroglycerin to help alleviate the chest pain.,0.25,"[""I prescribed Aspirin and Nitroglycerin to help alleviate the chest pain""]","[[0, 71]]","[""exact""]",True,False
+33,plan,An EKG will be performed to further evaluate the patient's heart.,0.0,"[""I will get an EKG to further evaluate the patient's heart""]","[[73, 130]]","[""exact""]",True,False
+34,plan,A glucose test will be performed to assess the patient's blood sugar levels.,0.0,"[""I will also perform a glucose test to assess the patient's blood sugar levels""]","[[132, 209]]","[""exact""]",True,False
+35,plan,The patient's medication will be adjusted as needed based on the glucose test results.,0.75,"[""and adjust his medication as needed""]","[[210, 245]]","[""exact""]",True,False
+36,plan,The patient will be kept on 500mg of metformin for diabetes.,0.0,"[""The patient will be kept on 500mg of metformin for diabetes""]","[[247, 306]]","[""exact""]",True,False
+37,plan,The patient will be kept on 2.5mg of Norvasc for hypertension.,0.0,"[""The patient will be kept on 2.5mg of Norvasc for hypertension""]","[[313, 344]]","[""word""]",True,False
+38,plan,The patient will be referred to the hospital for further evaluation and treatment of the suspected myocardial infarction.,0.5,"[""The patient will be referred to the hospital for further evaluation and treatment of the suspected myocardial infarction""]","[[346, 466]]","[""exact""]",True,False
+39,plan,The patient will be admitted to the hospital for further evaluation and treatment.,0.5,"[""The patient will be admitted to the hospital for further evaluation and treatment""]","[[480, 561]]","[""exact""]",True,False
+40,plan,The patient has a suspected myocardial infarction.,0.5,"[""suspected myocardial infarction""]","[[435, 466]]","[""exact""]",True,False

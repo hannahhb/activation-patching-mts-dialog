@@ -1,0 +1,43 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 37-year-old male.,0.75,"[""a 37-year-old male""]","[[18, 36]]","[""exact""]",True,False
+1,subjective,The patient presents with a 2-week history of flank pain radiating to the groin.,0.0,"[""a 2-week history of flank pain radiating to the groin""]","[[52, 105]]","[""exact""]",True,False
+2,subjective,The patient's flank pain is intermittent.,0.25,"[""which is intermittent""]","[[107, 128]]","[""exact""]",True,False
+3,subjective,The patient's flank pain worsens with increased fluid intake.,0.0,"[""worsens with increased fluid intake""]","[[133, 168]]","[""exact""]",True,False
+4,subjective,The patient's flank pain worsens with physical activity.,0.0,"[""and physical activity""]","[[169, 190]]","[""exact""]",True,False
+5,subjective,The patient's pain is described as a 4 out of 10.,0.5,"[""a 4 out of 10""]","[[217, 230]]","[""exact""]",True,False
+6,subjective,The patient's pain has been as high as a 2 out of 10.,0.25,"[""has been as high as a 2 out of 10""]","[[236, 269]]","[""exact""]",True,False
+7,subjective,The patient denies nausea.,0.0,"[""denies nausea, vomiting, fever, and chills""]","[[274, 316]]","[""exact""]",True,False
+8,subjective,The patient denies vomiting.,0.0,"[""denies nausea, vomiting, fever, and chills""]","[[274, 316]]","[""exact""]",True,False
+9,subjective,The patient denies fever.,0.0,"[""denies nausea, vomiting, fever, and chills""]","[[274, 316]]","[""exact""]",True,False
+10,subjective,The patient denies chills.,0.5,"[""denies nausea, vomiting, fever, and chills""]","[[274, 316]]","[""exact""]",True,False
+11,subjective,The patient has a history of passing kidney stones.,0.0,"[""a history of passing kidney stones""]","[[329, 363]]","[""exact""]",True,False
+12,subjective,The patient has had kidney stones that required surgery in the past.,0.0,"[""including one that required surgery""]","[[377, 412]]","[""exact""]",True,False
+13,subjective,The patient has a family history of kidney stones.,0.0,"[""a family history of kidney stones""]","[[453, 486]]","[""exact""]",True,False
+14,subjective,The patient has passed kidney stones on his own in the past.,0.0,"[""including passing some on his own""]","[[525, 558]]","[""exact""]",True,False
+15,subjective,The patient has undergone surgery for kidney stones in the past.,0.0,"[""including passing some on his own and undergoing surgery""]","[[525, 581]]","[""exact""]",True,False
+16,subjective,The patient is currently taking ibuprofen.,0.0,"[""The patient is currently taking ibuprofen""]","[[659, 700]]","[""exact""]",True,False
+17,subjective,The patient is taking ibuprofen for pain.,0.0,"[""for pain""]","[[701, 709]]","[""exact""]",True,False
+18,objective,The patient's blood pressure is elevated.,0.0,"[""Blood pressure is elevated""]","[[13, 39]]","[""exact""]",True,False
+19,objective,The patient's elevated blood pressure is likely due to pain.,0.0,"[""but this is likely due to pain""]","[[41, 71]]","[""exact""]",True,False
+20,objective,The patient has CVA tenderness on the right side.,0.0,"[""The patient has CVA tenderness on the right side""]","[[89, 137]]","[""exact""]",True,False
+21,objective,The patient's CVA tenderness is consistent with the location of the kidney stone.,0.0,"[""consistent with the location of the kidney stone""]","[[139, 187]]","[""exact""]",True,False
+22,objective,The patient had a CT scan.,0.0,"[""The patient had a CT scan""]","[[204, 229]]","[""exact""]",True,False
+23,objective,The CT scan showed a 0.5 cm stone located on the proximal right ureter.,0.0,"[""a 0.5 cm stone located on the proximal right ureter""]","[[242, 293]]","[""exact""]",True,False
+24,objective,The CT scan showed no evidence of high flow nephrosis.,0.25,"[""with no evidence of high flow nephrosis""]","[[294, 333]]","[""exact""]",True,False
+25,assessment,The patient has a confirmed diagnosis of a kidney stone.,0.0,"[""The patient has a confirmed diagnosis of a kidney stone""]","[[12, 67]]","[""exact""]",True,False
+26,assessment,The patient's kidney stone measures 0.5 cm in size.,0.0,"[""measuring 0.5 cm in size""]","[[69, 93]]","[""exact""]",True,False
+27,assessment,The patient's kidney stone is located on the proximal right ureter.,0.0,"[""located on the proximal right ureter""]","[[95, 131]]","[""exact""]",True,False
+28,plan,The patient was prescribed ibuprofen for pain management.,0.0,"[""I prescribed ibuprofen as before for pain management""]","[[0, 52]]","[""exact""]",True,False
+29,plan,The patient was prescribed tramadol 50 mg for breakthrough pain.,0.5,"[""tramadol 50 mg as needed for breakthrough pain""]","[[80, 126]]","[""exact""]",True,False
+30,plan,The patient's tramadol dose is 50 mg.,0.5,"[""50 mg""]","[[89, 94]]","[""exact""]",True,False
+31,plan,The patient's tramadol frequency is as needed.,0.0,"[""as needed""]","[[95, 104]]","[""exact""]",True,False
+32,plan,The patient's tramadol indication is breakthrough pain.,0.0,"[""for breakthrough pain""]","[[105, 126]]","[""exact""]",True,False
+33,plan,The patient should use a strainer when urinating to try to catch the stone.,0.0,"[""The patient should continue to use a strainer when urinating to try to catch the stone""]","[[128, 214]]","[""exact""]",True,False
+34,plan,A BMP was ordered for the patient.,0.0,"[""I will order a BMP""]","[[216, 234]]","[""exact""]",True,False
+35,plan,A urinalysis was ordered for the patient.,0.0,"[""urinalysis""]","[[236, 246]]","[""exact""]",True,False
+36,plan,A urine culture was ordered for the patient.,0.0,"[""urine culture""]","[[252, 265]]","[""exact""]",True,False
+37,plan,The purpose of the ordered tests is to rule out infection.,0.0,"[""to rule out infection""]","[[266, 287]]","[""exact""]",True,False
+38,plan,The patient will follow up in 1-2 weeks.,0.0,"[""I will see the patient in 1-2 weeks"", ""The patient will follow up in 1-2 weeks""]","[[289, 324], [426, 465]]","[""exact"", ""exact""]",True,True
+39,plan,The purpose of the follow-up is to reassess symptoms.,0.0,"[""to reassess symptoms""]","[[325, 345]]","[""exact""]",True,False
+40,plan,The purpose of the follow-up is to consider further treatment.,0.0,"[""to reassess symptoms and consider further treatment"", ""consider further treatment""]","[[325, 376], [350, 376]]","[""exact"", ""exact""]",True,True
+41,plan,Lithotripsy is a possible further treatment for the patient.,0.0,"[""including lithotripsy if necessary""]","[[378, 412]]","[""exact""]",True,False

@@ -43,7 +43,7 @@ MODEL_PRICING: Dict[str, Tuple[float, float]] = {
     "openai.gpt-oss-20b-1:0":             (0.07, 0.30),
 }
 
-BEDROCK_REGION = os.environ.get("AWS_DEFAULT_REGION", "us-east-2")
+BEDROCK_REGION = os.environ.get("AWS_DEFAULT_REGION", "us-east-1")
 
 
 @dataclass

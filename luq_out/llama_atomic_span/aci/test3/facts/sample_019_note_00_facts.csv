@@ -1,0 +1,62 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 45-year-old female.,0.75,"[""a 45-year-old female""]","[[18, 38]]","[""exact""]",True,False
+1,subjective,The patient has a recent diagnosis of stage three nonsmall cell lung cancer.,0.0,"[""a recent diagnosis of stage three nonsmall cell lung cancer""]","[[44, 103]]","[""exact""]",True,False
+2,subjective,The patient presents for follow-up on her neoadjuvant chemotherapy regimen.,1.0,"[""presents for follow-up on her neoadjuvant chemotherapy regimen""]","[[105, 167]]","[""exact""]",True,False
+3,subjective,The patient reports shortness of breath.,0.0,"[""shortness of breath""]","[[181, 200]]","[""exact""]",True,False
+4,subjective,The patient attributes her shortness of breath to her decreased physical activity since her diagnosis.,1.0,"[""which she attributes to her decreased physical activity since her diagnosis""]","[[202, 277]]","[""exact""]",True,False
+5,subjective,The patient normally walks her dog for a mile-long walk daily.,0.25,"[""She normally walks her dog for a mile-long walk daily""]","[[279, 332]]","[""exact""]",True,False
+6,subjective,The patient can only walk down to the end of the street without becoming short of breath.,0.75,"[""but now she can only walk down to the end of the street without becoming short of breath""]","[[334, 422]]","[""exact""]",True,False
+7,subjective,The patient denies coughing.,1.0,"[""She denies coughing or phlegm""]","[[424, 453]]","[""exact""]",True,False
+8,subjective,The patient denies phlegm.,0.25,"[""She denies coughing or phlegm""]","[[424, 453]]","[""exact""]",True,False
+9,subjective,The patient admits to a dry cough.,0.0,"[""but admits to a dry cough""]","[[455, 480]]","[""exact""]",True,False
+10,subjective,The patient reports pain with swallowing.,0.0,"[""pain with swallowing""]","[[499, 519]]","[""exact""]",True,False
+11,subjective,The patient describes her pain with swallowing as a sharp pain in her chest.,0.5,"[""a sharp pain in her chest""]","[[544, 569]]","[""exact""]",True,False
+12,subjective,The patient's pain with swallowing worsens when she swallows.,0.75,"[""which worsens when she swallows""]","[[575, 600]]","[""word""]",True,False
+13,subjective,The patient has been taking Ensure and other liquids.,0.0,"[""She has been taking Ensure and other liquids""]","[[602, 646]]","[""exact""]",True,False
+14,subjective,The patient has been having trouble taking her hydrocortisone liquids due to the pain.,1.0,"[""but has been having trouble taking her hydrocortisone liquids due to the pain""]","[[648, 725]]","[""exact""]",True,False
+15,subjective,The patient is on cisplatin chemotherapy.,0.25,"[""cisplatin""]","[[754, 763]]","[""exact""]",True,False
+16,subjective,The patient is on topotecan chemotherapy.,0.5,"[""topotecan""]","[[768, 777]]","[""exact""]",True,False
+17,subjective,The patient started her cisplatin and topotecan chemotherapy a few days ago.,1.0,"[""which she started a few days ago""]","[[792, 824]]","[""exact""]",True,False
+18,subjective,The patient has a history of stage three nonsmall cell lung cancer.,0.0,"[""a history of stage three nonsmall cell lung cancer""]","[[865, 915]]","[""exact""]",True,False
+19,subjective,The patient's stage three nonsmall cell lung cancer was diagnosed recently.,0.25,"[""diagnosed recently""]","[[917, 935]]","[""exact""]",True,False
+20,subjective,The patient reports shortness of breath on review of systems.,0.25,"[""The patient reports shortness of breath""]","[[957, 996]]","[""exact""]",True,False
+21,subjective,The patient reports dry cough on review of systems.,0.25,"[""dry cough""]","[[471, 480]]","[""exact""]",True,False
+22,subjective,The patient reports painful swallowing on review of systems.,0.25,"[""painful swallowing""]","[[1013, 1031]]","[""exact""]",True,False
+23,subjective,The patient is taking cisplatin.,0.5,"[""Cisplatin""]","[[1055, 1064]]","[""exact""]",True,False
+24,subjective,The patient is taking topotecan.,0.5,"[""topotecan""]","[[768, 777]]","[""exact""]",True,False
+25,subjective,The patient is taking zofran.,0.25,"[""zofran""]","[[1077, 1083]]","[""exact""]",True,False
+26,subjective,The patient is taking hydrocortisone.,1.0,"[""hydrocortisone""]","[[687, 701]]","[""exact""]",True,False
+27,objective,The patient's pulse is within normal limits.,0.25,"[""The patient's pulse, oxygen saturation, and temperature are within normal limits""]","[[13, 93]]","[""exact""]",True,False
+28,objective,The patient's oxygen saturation is within normal limits.,0.25,"[""The patient's pulse, oxygen saturation, and temperature are within normal limits""]","[[13, 93]]","[""exact""]",True,False
+29,objective,The patient's temperature is within normal limits.,0.25,"[""The patient's pulse, oxygen saturation, and temperature are within normal limits""]","[[13, 93]]","[""exact""]",True,False
+30,objective,The patient has crackles in the lungs bilaterally.,0.0,"[""crackles in the lungs bilaterally""]","[[154, 187]]","[""exact""]",True,False
+31,objective,The patient's lung findings could indicate fluid in the lungs.,0.25,"[""which could indicate fluid in the lungs""]","[[189, 228]]","[""exact""]",True,False
+32,objective,The patient has a lung cancer diagnosis.,0.5,"[""consistent with her lung cancer diagnosis""]","[[230, 271]]","[""exact""]",True,False
+33,objective,The patient has erythema on the anterior aspect of the chest on the left side.,0.0,"[""erythema on the anterior aspect of the chest on the left side""]","[[295, 356]]","[""exact""]",True,False
+34,objective,The patient's erythema could be due to radiation burns.,0.0,"[""which could be due to radiation burns""]","[[358, 395]]","[""exact""]",True,False
+35,objective,The patient has no lower extremity edema.,0.0,"[""The extremity exam shows no lower extremity edema""]","[[397, 446]]","[""exact""]",True,False
+36,objective,The patient had a recent chest X-ray.,0.0,"[""The patient had a recent chest X-ray""]","[[463, 499]]","[""exact""]",True,False
+37,objective,The patient's chest X-ray showed mild radiation pneumonitis.,0.0,"[""which showed mild radiation pneumonitis""]","[[501, 540]]","[""exact""]",True,False
+38,objective,The patient's radiation pneumonitis indicates inflammation of the lungs due to radiation.,0.0,"[""indicating inflammation of the lungs due to radiation""]","[[542, 595]]","[""exact""]",True,False
+39,assessment,The patient has stage three nonsmall cell lung cancer.,0.0,"[""The patient has stage three nonsmall cell lung cancer and radiation pneumonitis""]","[[12, 91]]","[""exact""]",True,False
+40,assessment,The patient has radiation pneumonitis.,0.0,"[""The patient has stage three nonsmall cell lung cancer and radiation pneumonitis""]","[[12, 91]]","[""exact""]",True,False
+41,assessment,The patient's radiation pneumonitis is causing symptoms of shortness of breath.,1.0,"[""which is causing her symptoms of shortness of breath""]","[[93, 145]]","[""exact""]",True,False
+42,assessment,The patient's radiation pneumonitis is causing symptoms of dry cough.,1.0,"[""which is causing her symptoms of dry cough""]","[[147, 156]]","[""word""]",True,False
+43,assessment,The patient's radiation pneumonitis is causing symptoms of painful swallowing.,1.0,"[""which is causing her symptoms of painful swallowing""]","[[162, 180]]","[""word""]",True,False
+44,assessment,The patient has nonsmall cell lung cancer as a problem.,0.0,"[""Nonsmall cell lung cancer; radiation pneumonitis; painful swallowing""]","[[197, 265]]","[""exact""]",True,False
+45,assessment,The patient has radiation pneumonitis as a problem.,0.0,"[""Nonsmall cell lung cancer; radiation pneumonitis; painful swallowing""]","[[197, 265]]","[""exact""]",True,False
+46,assessment,The patient has painful swallowing as a problem.,0.25,"[""Nonsmall cell lung cancer; radiation pneumonitis; painful swallowing""]","[[197, 265]]","[""exact""]",True,False
+47,plan,The patient was prescribed prednisone.,0.0,"[""I prescribed prednisone 40 mg once daily for 5 days""]","[[0, 51]]","[""exact""]",True,False
+48,plan,The patient's prednisone dose is 40 mg.,0.0,"[""40 mg""]","[[24, 29]]","[""exact""]",True,False
+49,plan,The patient's prednisone frequency is once daily.,0.0,"[""once daily""]","[[30, 40]]","[""exact""]",True,False
+50,plan,The patient's prednisone duration is 5 days.,0.0,"[""for 5 days""]","[[41, 51]]","[""exact""]",True,False
+51,plan,The indication for the patient's prednisone is to reduce inflammation in the lungs.,0.0,"[""to reduce inflammation in the lungs""]","[[52, 87]]","[""exact""]",True,False
+52,plan,The patient's prednisone is also intended to alleviate symptoms.,0.0,"[""and alleviate symptoms""]","[[88, 110]]","[""exact""]",True,False
+53,plan,The patient was prescribed lidocaine spray.,0.0,"[""I also prescribed lidocaine spray""]","[[112, 145]]","[""exact""]",True,False
+54,plan,The patient's lidocaine spray is intended to help alleviate painful swallowing.,0.0,"[""to help alleviate painful swallowing""]","[[146, 182]]","[""exact""]",True,False
+55,plan,The patient's lidocaine spray frequency is 4 times a day.,0.5,"[""which can be used 4 times a day""]","[[184, 215]]","[""exact""]",True,False
+56,plan,The patient is instructed to take the medication after eating and drinking.,1.0,"[""after eating and drinking""]","[[262, 287]]","[""exact""]",True,False
+57,plan,The purpose of taking the medication after eating and drinking is to help the patient stay hydrated.,1.0,"[""to help her stay hydrated""]","[[288, 313]]","[""exact""]",True,False
+58,plan,The patient will have a follow-up appointment in two weeks.,0.0,"[""We will see the patient back in two weeks""]","[[327, 368]]","[""exact""]",True,False
+59,plan,The purpose of the follow-up appointment is to monitor the patient's progress.,0.25,"[""to monitor her progress""]","[[369, 392]]","[""exact""]",True,False
+60,plan,The treatment plan will be adjusted as needed during the follow-up appointment.,0.25,"[""and adjust her treatment plan as needed""]","[[393, 432]]","[""exact""]",True,False

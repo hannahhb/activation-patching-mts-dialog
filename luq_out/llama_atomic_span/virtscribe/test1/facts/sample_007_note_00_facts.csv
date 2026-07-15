@@ -1,0 +1,53 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Diana Scott.,0.0,"[""Diana Scott""]","[[18, 29]]","[""exact""]",True,False
+1,subjective,The patient is a 100-year-old female.,0.0,"[""a 100-year-old female""]","[[31, 52]]","[""exact""]",True,False
+2,subjective,The patient presented for a new patient consultation on 7/9/2021.,0.75,"[""presented for a new patient consultation on 7/9/2021""]","[[54, 106]]","[""exact""]",True,False
+3,subjective,The patient was referred by her previous doctor.,1.0,"[""She was referred by her previous doctor""]","[[160, 199]]","[""exact""]",True,False
+4,subjective,The patient's previous doctor mentioned a new worrisome heart murmur.,0.0,"[""who mentioned a new worrisome heart murmur""]","[[201, 243]]","[""exact""]",True,False
+5,subjective,The patient is concerned about her symptoms.,0.25,"[""She is concerned about her symptoms""]","[[245, 280]]","[""exact""]",True,False
+6,subjective,The patient is seeking further evaluation.,0.0,"[""and is seeking further evaluation""]","[[281, 314]]","[""exact""]",True,False
+7,subjective,The patient reports severe leg pain.,0.0,"[""severe leg pain""]","[[328, 343]]","[""exact""]",True,False
+8,subjective,The patient's leg pain has lasted for about a month.,0.0,"[""for about a month""]","[[344, 361]]","[""exact""]",True,False
+9,subjective,The patient is taking pain pills for her leg pain.,0.5,"[""for which she is taking pain pills""]","[[363, 397]]","[""exact""]",True,False
+10,subjective,"The patient experiences shortness of breath when walking too fast or too long, or after drinking a full glass of water.",0.75,"[""shortness of breath when walking too fast or too long, or after drinking a full glass of water""]","[[415, 509]]","[""exact""]",True,False
+11,subjective,The patient reports lightheadedness.,0.0,"[""lightheadedness""]","[[528, 543]]","[""exact""]",True,False
+12,subjective,The patient reports dizziness.,0.0,"[""dizziness""]","[[548, 557]]","[""exact""]",True,False
+13,subjective,The patient takes meclizine for her lightheadedness and dizziness.,0.5,"[""for which she takes meclizine""]","[[559, 588]]","[""exact""]",True,False
+14,subjective,The patient's symptoms have worsened over the past six months.,0.5,"[""Her symptoms have worsened over the past six months""]","[[590, 641]]","[""exact""]",True,False
+15,subjective,The patient's symptoms have increased in severity by an estimated 70-80% compared to six months ago.,0.75,"[""with an estimated 70-80% increase in severity compared to six months ago""]","[[643, 715]]","[""exact""]",True,False
+16,subjective,The patient has a family history of heart problems.,0.0,"[""a family history of heart problems""]","[[756, 790]]","[""exact""]",True,False
+17,subjective,The patient's son had a heart attack.,0.25,"[""her son having had a heart attack""]","[[797, 830]]","[""exact""]",True,False
+18,subjective,The patient's brother had a stroke due to diabetes.,0.5,"[""her brother having had a stroke due to diabetes""]","[[832, 879]]","[""exact""]",True,False
+19,subjective,The patient's eldest sister had a heart problem.,0.5,"[""her eldest sister having had a heart problem""]","[[885, 929]]","[""exact""]",True,False
+20,subjective,The patient does not have a history of smoking.,0.25,"[""She does not have a history of smoking""]","[[931, 969]]","[""exact""]",True,False
+21,subjective,The patient has no known allergies to medications.,0.5,"[""there are no known allergies to medications""]","[[975, 1018]]","[""exact""]",True,False
+22,subjective,The patient denies fever.,0.5,"[""denies fever""]","[[1134, 1146]]","[""exact""]",True,False
+23,subjective,The patient denies chills.,0.5,"[""denies chills""]","[[1148, 1154]]","[""word""]",True,False
+24,subjective,The patient denies any other symptoms.,1.0,"[""or any other symptoms""]","[[1156, 1177]]","[""exact""]",True,False
+25,subjective,The patient is taking Amlodipine.,0.0,"[""Amlodipine""]","[[1201, 1211]]","[""exact""]",True,False
+26,subjective,The patient is taking lisinopril.,0.0,"[""lisinopril""]","[[1213, 1223]]","[""exact""]",True,False
+27,subjective,The patient is taking simvastatin.,0.0,"[""simvastatin""]","[[1225, 1236]]","[""exact""]",True,False
+28,subjective,The patient's simvastatin dose is 20mg.,0.25,"[""simvastatin (20mg)""]","[[1225, 1243]]","[""exact""]",True,False
+29,subjective,The patient is taking levothyroxine.,0.25,"[""levothyroxine""]","[[1245, 1258]]","[""exact""]",True,False
+30,subjective,The patient is taking meclizine.,0.25,"[""meclizine""]","[[579, 588]]","[""exact""]",True,False
+31,objective,The patient's cardiovascular examination is normal.,1.0,"[""normal cardiovascular examination""]","[[54, 87]]","[""exact""]",True,False
+32,objective,The patient has a 4/6 systolic murmur at the right upper sternal border.,0.0,"[""a 4/6 systolic murmur at the right upper sternal border""]","[[94, 149]]","[""exact""]",True,False
+33,objective,The patient's systolic murmur has mild radiation to the carotids.,0.0,"[""with mild radiation to the carotids""]","[[150, 185]]","[""exact""]",True,False
+34,objective,The patient's neurologic exam is normal for age.,0.25,"[""Neurologic exam was normal for age""]","[[187, 221]]","[""exact""]",True,False
+35,assessment,The patient has a 4/6 systolic murmur at the upper right sternal border.,0.5,"[""4/6 systolic murmur at the upper right sternal border""]","[[30, 83]]","[""exact""]",True,False
+36,assessment,The patient's systolic murmur is likely representative of aortic stenosis.,0.0,"[""likely representative of aortic stenosis""]","[[121, 161]]","[""exact""]",True,False
+37,assessment,The patient's aortic stenosis may be moderate.,0.25,"[""which may be moderate""]","[[163, 184]]","[""exact""]",True,False
+38,assessment,The patient has a cardiac murmur.,0.0,"[""Cardiac murmur""]","[[201, 215]]","[""exact""]",True,False
+39,assessment,The patient has suspected aortic stenosis.,0.0,"[""suspected aortic stenosis""]","[[217, 242]]","[""exact""]",True,False
+40,assessment,The patient has pvcs.,0.0,"[""pvcs""]","[[244, 248]]","[""exact""]",True,False
+41,assessment,The patient has hypolipidemia.,0.0,"[""hypolipidemia""]","[[250, 263]]","[""exact""]",True,False
+42,assessment,The patient has lightheadedness/dizziness.,0.0,"[""lightheadedness/dizziness""]","[[265, 290]]","[""exact""]",True,False
+43,plan,The patient will undergo an echocardiogram to assess her cardiac structure and function.,0.0,"[""The patient will undergo an echocardiogram to assess her cardiac structure and function, as well as the severity of her aortic stenosis""]","[[0, 135]]","[""exact""]",True,False
+44,plan,The patient will undergo an echocardiogram to assess the severity of her aortic stenosis.,0.75,"[""The patient will undergo an echocardiogram to assess her cardiac structure and function, as well as the severity of her aortic stenosis""]","[[0, 135]]","[""exact""]",True,False
+45,plan,"The patient may require further evaluation, including an ischemic evaluation or a heart monitor, depending on the results of the echocardiogram.",0.75,"[""Depending on the results, further evaluation, including an ischemic evaluation or a heart monitor, may be necessary""]","[[137, 252]]","[""exact""]",True,False
+46,plan,The patient is taking amlodipine.,0.25,"[""including amlodipine, lisinopril, and levothyroxine""]","[[305, 356]]","[""exact""]",True,False
+47,plan,The patient may be considered for a transcatheter aortic valve replacement (TAVR).,0.75,"[""may be considered for a transcatheter aortic valve replacement (TAVR) or surgical aortic valve replacement (SAVR)""]","[[362, 475]]","[""exact""]",True,False
+48,plan,The patient may be considered for a surgical aortic valve replacement (SAVR).,1.0,"[""may be considered for a transcatheter aortic valve replacement (TAVR) or surgical aortic valve replacement (SAVR)""]","[[362, 475]]","[""exact""]",True,False
+49,plan,The decision for a transcatheter aortic valve replacement (TAVR) or surgical aortic valve replacement (SAVR) will depend on the patient's overall medical history and the results of the echocardiogram.,1.0,"[""but this will depend on her overall medical history and the results of the echocardiogram""]","[[477, 566]]","[""exact""]",True,False
+50,plan,The patient will be seen in three to four weeks for follow-up.,0.0,"[""The patient will be seen in three to four weeks to discuss the results of the echocardiogram and next steps""]","[[580, 687]]","[""exact""]",True,False
+51,plan,The patient's follow-up appointment will include discussion of the echocardiogram results and next steps.,0.0,"[""to discuss the results of the echocardiogram and next steps""]","[[628, 687]]","[""exact""]",True,False

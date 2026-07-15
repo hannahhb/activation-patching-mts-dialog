@@ -1,0 +1,585 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 30-year-old male.",
+        "spans": [
+          "a 30-year-old male"
+        ],
+        "span_offsets": [
+          [
+            18,
+            36
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with heel pain.",
+        "spans": [
+          "complaint of heel pain"
+        ],
+        "span_offsets": [
+          [
+            54,
+            76
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heel pain is located in the back of his heel.",
+        "spans": [
+          "specifically in the back of his heel"
+        ],
+        "span_offsets": [
+          [
+            78,
+            114
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heel pain radiates up into his calf.",
+        "spans": [
+          "which radiates up into his calf"
+        ],
+        "span_offsets": [
+          [
+            116,
+            147
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heel pain occurs after a workout.",
+        "spans": [
+          "this pain occurs after a workout"
+        ],
+        "span_offsets": [
+          [
+            165,
+            197
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heel pain occurs when he first gets up in the morning.",
+        "spans": [
+          "when he first gets up in the morning"
+        ],
+        "span_offsets": [
+          [
+            201,
+            237
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is training for a triathlon.",
+        "spans": [
+          "he is currently training for a triathlon"
+        ],
+        "span_offsets": [
+          [
+            239,
+            279
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's training program includes running.",
+        "spans": [
+          "running"
+        ],
+        "span_offsets": [
+          [
+            349,
+            356
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's training program includes biking.",
+        "spans": [
+          "biking"
+        ],
+        "span_offsets": [
+          [
+            358,
+            364
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's training program includes swimming.",
+        "spans": [
+          "swimming"
+        ],
+        "span_offsets": [
+          [
+            370,
+            378
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heel pain is worse when he runs.",
+        "spans": [
+          "the pain is worse when he runs"
+        ],
+        "span_offsets": [
+          [
+            396,
+            426
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences some pain when he first wakes up in the morning.",
+        "spans": [
+          "he experiences some pain when he first wakes up in the morning"
+        ],
+        "span_offsets": [
+          [
+            432,
+            494
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any other symptoms in other organs.",
+        "spans": [
+          "The patient denies any other symptoms in other organs"
+        ],
+        "span_offsets": [
+          [
+            517,
+            570
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heel and calf pain is exacerbated by activity.",
+        "spans": [
+          "the pain in his heel and calf is exacerbated by activity"
+        ],
+        "span_offsets": [
+          [
+            589,
+            645
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heel and calf pain improves with rest.",
+        "spans": [
+          "improves with rest"
+        ],
+        "span_offsets": [
+          [
+            650,
+            668
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has a negative Thompson test.",
+        "spans": [
+          "The patient has a negative Thompson test"
+        ],
+        "span_offsets": [
+          [
+            15,
+            55
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right heel is painful.",
+        "spans": [
+          "pain in the right heel"
+        ],
+        "span_offsets": [
+          [
+            160,
+            182
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Achilles tendon is painful.",
+        "spans": [
+          "pain in the right heel and Achilles tendon"
+        ],
+        "span_offsets": [
+          [
+            160,
+            202
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right Achilles tendon is tender.",
+        "spans": [
+          "The doctor finds the right Achilles tendon to be tender"
+        ],
+        "span_offsets": [
+          [
+            204,
+            259
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has achilles tendinitis.",
+        "spans": [
+          "The patient has achilles tendinitis, likely due to overuse from his aggressive training for a triathlon.",
+          "Achilles tendinitis; status: confirmed"
+        ],
+        "span_offsets": [
+          [
+            12,
+            116
+          ],
+          [
+            132,
+            170
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient's achilles tendinitis is likely due to overuse from his aggressive training for a triathlon.",
+        "spans": [
+          "The patient has achilles tendinitis, likely due to overuse from his aggressive training for a triathlon."
+        ],
+        "span_offsets": [
+          [
+            12,
+            116
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's achilles tendinitis is confirmed.",
+        "spans": [
+          "Achilles tendinitis; status: confirmed."
+        ],
+        "span_offsets": [
+          [
+            132,
+            171
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed ibuprofen.",
+        "spans": [
+          "I prescribed ibuprofen"
+        ],
+        "span_offsets": [
+          [
+            0,
+            22
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ibuprofen dose is 3 tablets.",
+        "spans": [
+          "ibuprofen 3 tablets"
+        ],
+        "span_offsets": [
+          [
+            13,
+            32
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ibuprofen frequency is every 6 hours.",
+        "spans": [
+          "every 6 hours"
+        ],
+        "span_offsets": [
+          [
+            33,
+            46
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ibuprofen is for inflammation.",
+        "spans": [
+          "for inflammation"
+        ],
+        "span_offsets": [
+          [
+            47,
+            63
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was ordered physical therapy visits.",
+        "spans": [
+          "I ordered 2 physical therapy visits"
+        ],
+        "span_offsets": [
+          [
+            65,
+            100
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's physical therapy visits are 2 in number.",
+        "spans": [
+          "2 physical therapy visits"
+        ],
+        "span_offsets": [
+          [
+            75,
+            100
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The goal of the patient's physical therapy is to improve strength.",
+        "spans": [
+          "to improve strength"
+        ],
+        "span_offsets": [
+          [
+            101,
+            120
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The goal of the patient's physical therapy is to improve stretching knowledge.",
+        "spans": [
+          "and stretching knowledge"
+        ],
+        "span_offsets": [
+          [
+            121,
+            145
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's physical therapy will focus on the lower extremities.",
+        "spans": [
+          "particularly in the lower extremities"
+        ],
+        "span_offsets": [
+          [
+            147,
+            184
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is to return in 7-10 days.",
+        "spans": [
+          "to return in 7-10 days",
+          "in 7-10 days"
+        ],
+        "span_offsets": [
+          [
+            205,
+            227
+          ],
+          [
+            215,
+            227
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The purpose of the patient's follow-up is to monitor his progress.",
+        "spans": [
+          "to monitor his progress"
+        ],
+        "span_offsets": [
+          [
+            228,
+            251
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

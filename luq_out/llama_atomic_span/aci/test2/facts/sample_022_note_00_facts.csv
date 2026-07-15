@@ -1,0 +1,51 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 57-year-old male.,0.0,"[""a 57-year-old male""]","[[13, 31]]","[""exact""]",True,False
+1,subjective,The patient presents with a 2-week history of shortness of breath.,0.0,"[""a 2-week history of shortness of breath""]","[[47, 86]]","[""exact""]",True,False
+2,subjective,The patient experiences shortness of breath upon waking.,0.75,"[""waking up with shortness of breath""]","[[99, 133]]","[""exact""]",True,False
+3,subjective,The patient's shortness of breath persists upon exertion.,0.5,"[""which persists upon exertion""]","[[135, 163]]","[""exact""]",True,False
+4,subjective,The patient has been coughing up blood for approximately 3 weeks.,0.0,"[""coughing up blood for approximately 3 weeks""]","[[177, 220]]","[""exact""]",True,False
+5,subjective,The patient coughs up a quantity of 3-4 cups of blood per day.,0.0,"[""a quantity of 3-4 cups per day""]","[[227, 257]]","[""exact""]",True,False
+6,subjective,The patient denies any fever.,0.0,"[""denies any fever""]","[[262, 278]]","[""exact""]",True,False
+7,subjective,The patient denies any bruising.,0.0,"[""denies any fever, bruising, or bleeding from other sites""]","[[262, 318]]","[""exact""]",True,False
+8,subjective,The patient denies any bleeding from other sites.,0.5,"[""denies any fever, bruising, or bleeding from other sites""]","[[262, 318]]","[""exact""]",True,False
+9,subjective,The patient has a history of diabetes.,0.0,"[""a history of diabetes""]","[[327, 348]]","[""exact""]",True,False
+10,subjective,The patient has a history of high blood pressure.,0.25,"[""high blood pressure""]","[[350, 369]]","[""exact""]",True,False
+11,subjective,The patient has a history of asthma.,0.0,"[""asthma""]","[[375, 381]]","[""exact""]",True,False
+12,subjective,The patient's blood sugar has been running high.,0.0,"[""His blood sugar has been running high""]","[[383, 420]]","[""exact""]",True,False
+13,subjective,The patient's morning blood sugar readings are around 150.,0.0,"[""morning readings around 150""]","[[427, 454]]","[""exact""]",True,False
+14,subjective,The patient's post-meal blood sugar readings are over 200.,0.25,"[""post-meal readings over 200""]","[[459, 486]]","[""exact""]",True,False
+15,subjective,The patient is taking metformin.,0.0,"[""taking metformin""]","[[494, 510]]","[""exact""]",True,False
+16,subjective,The patient is taking norvasc.,0.25,"[""taking metformin and norvasc""]","[[494, 522]]","[""exact""]",True,False
+17,subjective,The patient has been skipping doses of metformin and norvasc due to low blood pressure.,1.0,"[""but has been skipping doses due to low blood pressure""]","[[524, 577]]","[""exact""]",True,False
+18,subjective,The patient has a history of knee problems.,0.75,"[""a history of knee problems""]","[[586, 612]]","[""exact""]",True,False
+19,subjective,The patient has no swelling.,0.75,"[""but no swelling""]","[[614, 629]]","[""exact""]",True,False
+20,subjective,The patient has not been to the hospital or emergency room for this episode.,0.25,"[""He has not been to the hospital or emergency room for this episode""]","[[631, 697]]","[""exact""]",True,False
+21,objective,The patient's pulse is 70.,1.0,"[""Pulse 70""]","[[13, 21]]","[""exact""]",True,False
+22,objective,The patient's oxygen saturation is 94%.,0.0,"[""oxygen saturation 94%""]","[[23, 44]]","[""exact""]",True,False
+23,objective,The patient has no jugular venous distension (JVD).,0.25,"[""No JVD""]","[[61, 67]]","[""exact""]",True,False
+24,objective,The patient has no carotid bruits.,0.25,"[""no carotid bruits""]","[[69, 86]]","[""exact""]",True,False
+25,objective,The patient has rails and rhonchi on the right side of the lung.,0.0,"[""lung exam reveals rails and rhonchi on the right side""]","[[88, 141]]","[""exact""]",True,False
+26,objective,The patient has diminished breath sounds on the right side.,0.0,"[""diminished breath sounds on the right side""]","[[143, 185]]","[""exact""]",True,False
+27,objective,The patient has a 2/6 systolic ejection murmur.,0.0,"[""2/6 systolic ejection murmur""]","[[187, 215]]","[""exact""]",True,False
+28,objective,The patient has a regular heart rate and rhythm.,0.75,"[""regular rate and rhythm""]","[[217, 240]]","[""exact""]",True,False
+29,objective,The patient has a soft belly.,0.0,"[""soft belly""]","[[242, 252]]","[""exact""]",True,False
+30,objective,The patient has 1+ nonpitting edema on both lower extremities.,0.0,"[""1+ nonpitting edema on both lower extremities""]","[[254, 299]]","[""exact""]",True,False
+31,objective,The patient has no calf tenderness.,0.25,"[""no calf tenderness""]","[[301, 319]]","[""exact""]",True,False
+32,objective,The patient has no negative Homan sign.,0.5,"[""no negative Homan sign""]","[[321, 343]]","[""exact""]",True,False
+33,assessment,The patient has an acute respiratory infection.,0.5,"[""The patient has an acute respiratory infection, likely pneumonia, with coughing up blood, and poorly controlled diabetes, with hemoglobin A1c of 7.7""]","[[0, 148]]","[""exact""]",True,False
+34,assessment,The patient likely has pneumonia.,0.5,"[""The patient has an acute respiratory infection, likely pneumonia, with coughing up blood, and poorly controlled diabetes, with hemoglobin A1c of 7.7""]","[[0, 148]]","[""exact""]",True,False
+35,assessment,The patient is coughing up blood.,0.0,"[""The patient has an acute respiratory infection, likely pneumonia, with coughing up blood, and poorly controlled diabetes, with hemoglobin A1c of 7.7""]","[[0, 148]]","[""exact""]",True,False
+36,assessment,The patient has poorly controlled diabetes.,0.25,"[""The patient has an acute respiratory infection, likely pneumonia, with coughing up blood, and poorly controlled diabetes, with hemoglobin A1c of 7.7""]","[[0, 148]]","[""exact""]",True,False
+37,assessment,The patient's hemoglobin A1c is 7.7.,1.0,"[""with hemoglobin A1c of 7.7""]","[[122, 148]]","[""exact""]",True,False
+38,assessment,The patient's blood pressure is elevated.,0.25,"[""The patient's blood pressure is also elevated, with a reading of 120/70""]","[[150, 221]]","[""exact""]",True,False
+39,assessment,The patient's blood pressure reading is 120/70.,1.0,"[""with a reading of 120/70""]","[[197, 221]]","[""exact""]",True,False
+40,plan,The patient was prescribed a chest X-ray.,0.25,"[""I prescribed a chest X-ray""]","[[0, 26]]","[""exact""]",True,False
+41,plan,The patient was referred to the emergency department for further evaluation and blood testing.,0.0,"[""referred the patient to the emergency department for further evaluation and blood testing""]","[[31, 120]]","[""exact""]",True,False
+42,plan,The patient was ordered a CAT scan of the chest to rule out a blood clot.,0.75,"[""I also ordered a CAT scan of the chest to rule out a blood clot""]","[[122, 185]]","[""exact""]",True,False
+43,plan,The patient's dose of metformin was increased to 750 mg twice a day.,0.25,"[""I increased the patient's dose of metformin to 750 mg twice a day""]","[[187, 252]]","[""exact""]",True,False
+44,plan,The patient was instructed to hold his norvasc for the time being.,0.0,"[""instructed him to hold his norvasc for the time being""]","[[257, 310]]","[""exact""]",True,False
+45,plan,The patient will return to the clinic in three weeks.,0.0,"[""I will have him return in three weeks"", ""I will have the patient return to the clinic in three weeks""]","[[312, 349], [465, 524]]","[""exact"", ""exact""]",True,True
+46,plan,The patient's diabetes treatment plan will be discussed at the follow-up visit.,0.0,"[""discuss his diabetes treatment plan""]","[[353, 388]]","[""exact""]",True,False
+47,plan,The patient's blood pressure will be reassessed at the follow-up visit.,0.25,"[""reassess his blood pressure""]","[[393, 420]]","[""exact""]",True,False
+48,plan,The patient is currently being treated for diabetes.,0.0,"[""diabetes treatment plan""]","[[365, 388]]","[""exact""]",True,False
+49,plan,The patient is currently being treated for high blood pressure.,1.0,"[""reassess his blood pressure"", ""norvasc""]","[[393, 420], [284, 291]]","[""exact"", ""exact""]",True,True

@@ -1,0 +1,840 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Angela.",
+        "spans": [
+          "The patient, Angela,"
+        ],
+        "span_offsets": [
+          [
+            5,
+            25
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a history of kidney stones.",
+        "spans": [
+          "a history of kidney stones"
+        ],
+        "span_offsets": [
+          [
+            40,
+            66
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "This is the patient's seventh or eighth episode of kidney stones.",
+        "spans": [
+          "seventh or eighth episode"
+        ],
+        "span_offsets": [
+          [
+            88,
+            113
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's current kidney stone has passed.",
+        "spans": [
+          "the current stone has passed"
+        ],
+        "span_offsets": [
+          [
+            132,
+            160
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is currently pain-free.",
+        "spans": [
+          "she is currently pain-free"
+        ],
+        "span_offsets": [
+          [
+            166,
+            192
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a past medical history of hypertension.",
+        "spans": [
+          "a past medical history of hypertension"
+        ],
+        "span_offsets": [
+          [
+            207,
+            245
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a past medical history of diabetes.",
+        "spans": [
+          "a past medical history of diabetes"
+        ],
+        "span_offsets": [
+          [
+            209,
+            221
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "word"
+        ]
+      },
+      {
+        "fact": "The patient is taking norvasc.",
+        "spans": [
+          "norvasc"
+        ],
+        "span_offsets": [
+          [
+            299,
+            306
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is taking norvasc 2.5mg daily.",
+        "spans": [
+          "2.5mg of norvasc",
+          "norvasc 2.5mg daily"
+        ],
+        "span_offsets": [
+          [
+            290,
+            306
+          ],
+          [
+            824,
+            843
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": true,
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is taking norvasc for hypertension.",
+        "spans": [
+          "norvasc 2.5mg daily for hypertension"
+        ],
+        "span_offsets": [
+          [
+            824,
+            860
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is taking metformin.",
+        "spans": [
+          "metformin"
+        ],
+        "span_offsets": [
+          [
+            320,
+            329
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is taking metformin 500mg daily.",
+        "spans": [
+          "500mg of metformin daily",
+          "metformin 500mg daily"
+        ],
+        "span_offsets": [
+          [
+            311,
+            335
+          ],
+          [
+            865,
+            886
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": true,
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is taking metformin for diabetes.",
+        "spans": [
+          "metformin 500mg daily for diabetes"
+        ],
+        "span_offsets": [
+          [
+            865,
+            899
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a history of high blood pressure readings.",
+        "spans": [
+          "a history of having high blood pressure readings"
+        ],
+        "span_offsets": [
+          [
+            359,
+            407
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's home blood pressure readings have been within normal limits.",
+        "spans": [
+          "her home readings have been within normal limits"
+        ],
+        "span_offsets": [
+          [
+            413,
+            461
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has difficulty controlling her diet.",
+        "spans": [
+          "having difficulty controlling her diet"
+        ],
+        "span_offsets": [
+          [
+            480,
+            518
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient consumes fast food and sugary snacks.",
+        "spans": [
+          "consuming fast food and sugary snacks"
+        ],
+        "span_offsets": [
+          [
+            538,
+            575
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has trouble sleeping due to insomnia.",
+        "spans": [
+          "having trouble sleeping due to insomnia"
+        ],
+        "span_offsets": [
+          [
+            590,
+            629
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's insomnia is attributed to worrying.",
+        "spans": [
+          "insomnia, which she attributes to worrying"
+        ],
+        "span_offsets": [
+          [
+            621,
+            663
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has tried using meditation apps to help with insomnia.",
+        "spans": [
+          "tried using meditation apps to help"
+        ],
+        "span_offsets": [
+          [
+            672,
+            707
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports no chest pain.",
+        "spans": [
+          "no chest pain"
+        ],
+        "span_offsets": [
+          [
+            941,
+            954
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports no belly pain.",
+        "spans": [
+          "belly pain"
+        ],
+        "span_offsets": [
+          [
+            956,
+            966
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports no other symptoms.",
+        "spans": [
+          "or other symptoms"
+        ],
+        "span_offsets": [
+          [
+            968,
+            985
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is 150/90.",
+        "spans": [
+          "Blood pressure was 150/90 when taken in the office"
+        ],
+        "span_offsets": [
+          [
+            13,
+            63
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's lungs are clear bilaterally.",
+        "spans": [
+          "The patient's lungs are clear bilaterally"
+        ],
+        "span_offsets": [
+          [
+            65,
+            106
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a grade 2/6 systolic ejection murmur.",
+        "spans": [
+          "her heart exam shows a grade 2/6 systolic ejection murmur"
+        ],
+        "span_offsets": [
+          [
+            112,
+            169
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's systolic ejection murmur has not worsened since the last visit.",
+        "spans": [
+          "which has not worsened since the last visit"
+        ],
+        "span_offsets": [
+          [
+            171,
+            214
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's abdomen exam shows no tenderness to palpation.",
+        "spans": [
+          "The abdomen exam shows no tenderness to palpation"
+        ],
+        "span_offsets": [
+          [
+            216,
+            265
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has a history of recurrent kidney stones.",
+        "spans": [
+          "The patient has a history of recurrent kidney stones"
+        ],
+        "span_offsets": [
+          [
+            12,
+            64
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a history of hypertension.",
+        "spans": [
+          "The patient has a history of recurrent kidney stones, hypertension, and diabetes"
+        ],
+        "span_offsets": [
+          [
+            12,
+            92
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a history of diabetes.",
+        "spans": [
+          "The patient has a history of recurrent kidney stones, hypertension, and diabetes"
+        ],
+        "span_offsets": [
+          [
+            12,
+            92
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's current kidney stone appears to have passed.",
+        "spans": [
+          "with the current kidney stone appearing to have passed"
+        ],
+        "span_offsets": [
+          [
+            94,
+            148
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has kidney stones.",
+        "spans": [
+          "Kidney stones"
+        ],
+        "span_offsets": [
+          [
+            165,
+            178
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has hypertension.",
+        "spans": [
+          "Hypertension"
+        ],
+        "span_offsets": [
+          [
+            180,
+            192
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has diabetes.",
+        "spans": [
+          "Diabetes"
+        ],
+        "span_offsets": [
+          [
+            194,
+            202
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has insomnia.",
+        "spans": [
+          "Insomnia"
+        ],
+        "span_offsets": [
+          [
+            204,
+            212
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed a urinalysis.",
+        "spans": [
+          "I prescribed the patient a urinalysis and a urine culture"
+        ],
+        "span_offsets": [
+          [
+            0,
+            57
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was prescribed a urine culture.",
+        "spans": [
+          "I prescribed the patient a urinalysis and a urine culture"
+        ],
+        "span_offsets": [
+          [
+            0,
+            57
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The purpose of the urinalysis and urine culture is to ensure the kidney stone has fully passed and there are no residual issues.",
+        "spans": [
+          "to ensure the kidney stone has fully passed and there are no residual issues"
+        ],
+        "span_offsets": [
+          [
+            58,
+            134
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was referred to urology.",
+        "spans": [
+          "I referred the patient to urology"
+        ],
+        "span_offsets": [
+          [
+            136,
+            169
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The purpose of the urology referral is to further evaluate and manage her recurrent kidney stones.",
+        "spans": [
+          "to further evaluate and manage her recurrent kidney stones"
+        ],
+        "span_offsets": [
+          [
+            170,
+            228
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was referred to a nutritionist.",
+        "spans": [
+          "I referred the patient to a nutritionist"
+        ],
+        "span_offsets": [
+          [
+            230,
+            362
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "semantic"
+        ]
+      },
+      {
+        "fact": "The purpose of the nutritionist referral is to help her with dietary modifications to better manage her hypertension and diabetes.",
+        "spans": [
+          "to help her with dietary modifications to better manage her hypertension and diabetes"
+        ],
+        "span_offsets": [
+          [
+            276,
+            361
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was advised to start taking her blood sugars before meals to monitor her glucose levels.",
+        "spans": [
+          "I advised the patient to start taking her blood sugars before meals to monitor her glucose levels"
+        ],
+        "span_offsets": [
+          [
+            363,
+            460
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was prescribed 10mg of melatonin.",
+        "spans": [
+          "I prescribed 10mg of melatonin"
+        ],
+        "span_offsets": [
+          [
+            462,
+            492
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was prescribed melatonin as needed for her insomnia.",
+        "spans": [
+          "as needed for her insomnia"
+        ],
+        "span_offsets": [
+          [
+            493,
+            519
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was advised to practice good sleep hygiene.",
+        "spans": [
+          "I advised her to practice good sleep hygiene"
+        ],
+        "span_offsets": [
+          [
+            525,
+            567
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "word"
+        ]
+      },
+      {
+        "fact": "The patient will return in three months for a follow-up appointment.",
+        "spans": [
+          "The patient will return in three months for a follow-up appointment"
+        ],
+        "span_offsets": [
+          [
+            581,
+            648
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ]
+  }
+]

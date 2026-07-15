@@ -1,0 +1,56 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 60-year-old male.,1.0,"[""a 60-year-old male""]","[[13, 31]]","[""exact""]",True,False
+1,subjective,The patient has a 3-4 month history of difficulty adjusting to dark environments.,0.0,"[""a 3-4 month history of difficulty adjusting to dark environments""]","[[47, 111]]","[""exact""]",True,False
+2,subjective,The patient has difficulty reading in dimly lit places.,0.0,"[""specifically when reading in dimly lit places""]","[[113, 158]]","[""exact""]",True,False
+3,subjective,The patient has difficulty perceiving straight lines as wavy.,0.0,"[""difficulty perceiving straight lines as wavy""]","[[164, 208]]","[""exact""]",True,False
+4,subjective,The patient's symptoms have been worsening over the past few months.,0.25,"[""this has been worsening over the past few months""]","[[226, 274]]","[""exact""]",True,False
+5,subjective,The patient has trouble with his vision when looking at his office paneling.,0.25,"[""trouble with his vision when looking at his office paneling""]","[[314, 373]]","[""exact""]",True,False
+6,subjective,The patient's office paneling has dark grooves that appear wavy to him.,1.0,"[""dark grooves that appear wavy to him""]","[[385, 421]]","[""exact""]",True,False
+7,subjective,The patient denies any fever.,0.5,"[""denies any fever""]","[[426, 442]]","[""exact""]",True,False
+8,subjective,The patient denies other symptoms.,0.25,"[""denies any other symptoms""]","[[982, 1007]]","[""exact""]",True,False
+9,subjective,The patient has a history of smoking.,0.0,"[""history of smoking a pack a day""]","[[591, 622]]","[""exact""]",True,False
+10,subjective,The patient smokes a pack of cigarettes a day.,0.0,"[""smoking a pack a day""]","[[602, 622]]","[""exact""]",True,False
+11,subjective,The patient has tried to quit smoking through hypnosis.,0.5,"[""quit through hypnosis""]","[[653, 674]]","[""exact""]",True,False
+12,subjective,The patient has tried to quit smoking through lozenges.,0.5,"[""quit through lozenges""]","[[653, 684]]","[""word""]",True,False
+13,subjective,The patient has tried to quit smoking through chewing gum.,0.5,"[""quit through chewing gum""]","[[690, 701]]","[""word""]",True,False
+14,subjective,The patient has a history of high blood pressure.,0.0,"[""history of high blood pressure""]","[[721, 751]]","[""exact""]",True,False
+15,subjective,The patient is not taking his blood pressure medication as prescribed.,0.0,"[""not taking his blood pressure medication as prescribed""]","[[766, 820]]","[""exact""]",True,False
+16,subjective,The patient has been to a restaurant recently.,0.25,"[""recently visited a restaurant""]","[[511, 540]]","[""exact""]",True,False
+17,subjective,The patient and his wife frequently dine out.,0.5,"[""frequently dine out""]","[[487, 506]]","[""exact""]",True,False
+18,objective,The patient has posterior chamber intraocular lenses in both eyes.,0.0,"[""posterior chamber intraocular lenses in both eyes""]","[[173, 222]]","[""exact""]",True,False
+19,objective,The patient's cornea is clear in both eyes.,0.25,"[""The cornea is clear in both eyes"", ""The cornea is clear in the left eye""]","[[224, 256], [660, 695]]","[""exact"", ""exact""]",True,True
+20,objective,The patient's peak hole cup to disc ratio is 0.2 in the right eye.,0.25,"[""The peak hole cup to disc ratio is 0.2 in the right eye""]","[[258, 313]]","[""exact""]",True,False
+21,objective,The patient's peak hole cup to disc ratio is 0.3 in the left eye.,0.25,"[""The peak hole cup to disc ratio is 0.3 in the left eye""]","[[262, 289]]","[""word""]",True,False
+22,objective,The patient's retina is attached 360 degrees in the right eye.,0.25,"[""The fundus examination of the right eye shows the retina to be attached 360 degrees""]","[[339, 422]]","[""exact""]",True,False
+23,objective,The patient has no holes or tears noted in the right eye.,0.0,"[""no holes or tears noted""]","[[428, 451]]","[""exact""]",True,False
+24,objective,The patient has RPE changes in the fovea of the right eye.,0.25,"[""RPE changes are present in the fovea""]","[[453, 489]]","[""exact""]",True,False
+25,objective,The patient has drusen in the macula of the right eye.,0.0,"[""drusen in the macula""]","[[524, 544]]","[""exact""]",True,False
+26,objective,The patient has retinal thickening in the right eye.,0.0,"[""retinal thickening""]","[[546, 564]]","[""exact""]",True,False
+27,objective,The patient has subretinal fluid in the right eye.,0.0,"[""presence of subretinal fluid""]","[[570, 598]]","[""exact""]",True,False
+28,objective,The patient has exudate accumulation in the right eye.,0.0,"[""exudate accumulation""]","[[603, 623]]","[""exact""]",True,False
+29,objective,The patient has a hemorrhage in the right eye.,0.0,"[""a hemorrhage in the right eye""]","[[629, 658]]","[""exact""]",True,False
+30,objective,The patient's retina is attached appropriately in the left eye.,0.5,"[""the retina is attached appropriately""]","[[701, 737]]","[""exact""]",True,False
+31,objective,The patient has no hemorrhage in the left eye.,0.0,"[""no hemorrhage""]","[[743, 756]]","[""exact""]",True,False
+32,objective,The patient has no subretinal fluid in the left eye.,0.0,"[""no subretinal fluid noted""]","[[582, 598]]","[""word""]",True,False
+33,objective,The patient's OCT exam shows drusen deposits under the RPE.,0.75,"[""The OCT exam shows drusen deposits under the RPE""]","[[798, 846]]","[""exact""]",True,False
+34,objective,The patient's OCT exam shows subretinal fluid accumulation.,0.5,"[""subretinal fluid accumulation""]","[[848, 877]]","[""exact""]",True,False
+35,objective,The patient's OCT exam shows a choroidal neovascular membrane.,0.5,"[""choroidal neovascular membrane""]","[[883, 913]]","[""exact""]",True,False
+36,objective,The patient's fluorescein angiography reveals a focal area of leakage in the right eye.,0.25,"[""The fluorescein angiography reveals a focal area of leakage in the right eye""]","[[915, 991]]","[""exact""]",True,False
+37,objective,The patient has neovascular age-related macular degeneration in the right eye.,0.0,"[""consistent with neovascular age-related macular degeneration""]","[[992, 1052]]","[""exact""]",True,False
+38,assessment,The patient has neovascular age-related macular degeneration.,0.0,"[""The patient has neovascular age-related macular degeneration, also known as wet macular degeneration, which is an advanced stage that typically leads to more severe vision loss.""]","[[12, 189]]","[""exact""]",True,False
+39,assessment,The patient has wet macular degeneration.,0.0,"[""The patient has neovascular age-related macular degeneration, also known as wet macular degeneration, which is an advanced stage that typically leads to more severe vision loss.""]","[[12, 189]]","[""exact""]",True,False
+40,assessment,The patient's neovascular age-related macular degeneration is in an advanced stage.,0.5,"[""The patient has neovascular age-related macular degeneration, also known as wet macular degeneration, which is an advanced stage that typically leads to more severe vision loss.""]","[[12, 189]]","[""exact""]",True,False
+41,assessment,The patient's neovascular age-related macular degeneration typically leads to more severe vision loss.,0.25,"[""The patient has neovascular age-related macular degeneration, also known as wet macular degeneration, which is an advanced stage that typically leads to more severe vision loss.""]","[[12, 189]]","[""exact""]",True,False
+42,assessment,The patient has age-related macular degeneration.,0.0,"[""Age-related macular degeneration, suspected""]","[[205, 248]]","[""exact""]",True,False
+43,assessment,The patient's age-related macular degeneration is suspected.,1.0,"[""Age-related macular degeneration, suspected""]","[[205, 248]]","[""exact""]",True,False
+44,assessment,The patient has high blood pressure.,0.5,"[""high blood pressure, not controlled""]","[[250, 285]]","[""exact""]",True,False
+45,assessment,The patient's high blood pressure is not controlled.,1.0,"[""high blood pressure, not controlled""]","[[250, 285]]","[""exact""]",True,False
+46,assessment,The patient is an active smoker.,0.5,"[""smoking, active""]","[[287, 302]]","[""exact""]",True,False
+47,plan,The patient was prescribed Lucentis injections.,0.0,"[""I prescribed Lucentis injections""]","[[0, 32]]","[""exact""]",True,False
+48,plan,The patient's Lucentis injections are to be administered once a month.,0.0,"[""to be administered once a month""]","[[33, 64]]","[""exact""]",True,False
+49,plan,The purpose of the Lucentis injections is to slow the progression of the disease.,0.0,"[""to slow the progression of the disease""]","[[65, 103]]","[""exact""]",True,False
+50,plan,The patient will receive the first Lucentis injection today.,0.0,"[""The patient will receive the first injection today""]","[[105, 155]]","[""exact""]",True,False
+51,plan,The patient was instructed to take his blood pressure medication as prescribed.,0.0,"[""to take his blood pressure medication as prescribed""]","[[190, 241]]","[""exact""]",True,False
+52,plan,The patient was instructed to check his blood pressures on a regular basis.,0.3333,"[""to check his blood pressures on a regular basis""]","[[246, 293]]","[""exact""]",True,False
+53,plan,A follow-up appointment will be scheduled to monitor the patient's response to the treatment.,0.0,"[""to monitor the patient's response to the treatment""]","[[397, 447]]","[""exact""]",True,False
+54,plan,Subsequent Lucentis injections will be administered as needed during the follow-up appointment.,1.0,"[""to administer subsequent injections as needed""]","[[452, 497]]","[""exact""]",True,False

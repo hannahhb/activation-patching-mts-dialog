@@ -1,0 +1,60 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Matthew.,0.25,"[""The patient, Matthew,""]","[[5, 26]]","[""exact""]",True,False
+1,subjective,The patient presented with right knee pain.,0.0,"[""right knee pain""]","[[42, 57]]","[""exact""]",True,False
+2,subjective,The patient's right knee pain started after playing basketball.,0.0,"[""presented with right knee pain that started after playing basketball""]","[[27, 95]]","[""exact""]",True,False
+3,subjective,The patient landed awkwardly and felt his knee pop.,1.0,"[""landed awkwardly and felt his knee pop""]","[[104, 142]]","[""exact""]",True,False
+4,subjective,The patient experienced swelling after the injury.,0.0,"[""leading to swelling""]","[[144, 163]]","[""exact""]",True,False
+5,subjective,The patient has difficulty walking due to the injury.,0.5,"[""difficulty walking""]","[[168, 186]]","[""exact""]",True,False
+6,subjective,The patient's right knee pain is achy.,0.0,"[""the pain is achy""]","[[199, 215]]","[""exact""]",True,False
+7,subjective,The patient's right knee pain has been present since the injury.,0.0,"[""has been present since the injury""]","[[220, 253]]","[""exact""]",True,False
+8,subjective,The patient's right knee pain showed some improvement overnight.,0.0,"[""with some improvement overnight""]","[[255, 286]]","[""exact""]",True,False
+9,subjective,The patient has taken Tylenol for pain.,0.0,"[""He has taken Tylenol""]","[[288, 308]]","[""exact""]",True,False
+10,subjective,The patient experienced some relief from Tylenol.,0.0,"[""with some relief""]","[[309, 325]]","[""exact""]",True,False
+11,subjective,The patient rates his pain level at 4/10.,0.25,"[""He rates his pain level at 4/10""]","[[327, 358]]","[""exact""]",True,False
+12,subjective,The patient has a history of hypertension.,0.0,"[""hypertension""]","[[394, 406]]","[""exact""]",True,False
+13,subjective,The patient has a history of diabetes.,0.0,"[""diabetes""]","[[411, 419]]","[""exact""]",True,False
+14,subjective,The patient's A1c is 7.2.,0.5,"[""an A1c of 7.2""]","[[426, 439]]","[""exact""]",True,False
+15,subjective,The patient is taking Norvasc.,0.0,"[""Norvasc 5mg daily for hypertension""]","[[850, 884]]","[""exact""]",True,False
+16,subjective,The patient is taking Norvasc 5mg daily.,0.0,"[""5mg of Norvasc daily""]","[[464, 484]]","[""exact""]",True,False
+17,subjective,The patient is taking Norvasc for hypertension.,0.0,"[""for hypertension""]","[[485, 501]]","[""exact""]",True,False
+18,subjective,The patient is taking metformin.,0.0,"[""500mg of metformin daily for diabetes""]","[[506, 543]]","[""exact""]",True,False
+19,subjective,The patient is taking metformin 500mg daily.,0.25,"[""500mg of metformin daily""]","[[506, 530]]","[""exact""]",True,False
+20,subjective,The patient is taking metformin for diabetes.,0.0,"[""for diabetes""]","[[531, 543]]","[""exact""]",True,False
+21,subjective,The patient has been inconsistent with taking his medications.,0.0,"[""has been inconsistent with taking his medications""]","[[549, 598]]","[""exact""]",True,False
+22,subjective,The patient has a history of a grade 2 systolic ejection murmur.,0.25,"[""a history of a grade 2 systolic ejection murmur""]","[[607, 654]]","[""exact""]",True,False
+23,subjective,The patient has had the grade 2 systolic ejection murmur for a couple of years.,0.75,"[""which he has had for a couple of years""]","[[656, 694]]","[""exact""]",True,False
+24,subjective,The patient's blood pressure is currently elevated at 140/80.,0.25,"[""his blood pressure is currently elevated at 140/80""]","[[776, 826]]","[""exact""]",True,False
+25,subjective,The patient is taking Tylenol for pain.,0.0,"[""Tylenol (dose not specified) for pain""]","[[922, 959]]","[""exact""]",True,False
+26,subjective,The patient's dose of Tylenol is not specified.,0.0,"[""(dose not specified)""]","[[930, 950]]","[""exact""]",True,False
+27,objective,The patient has pain to palpation of the medial aspect of the right knee.,0.0,"[""pain to palpation of the medial aspect of the right knee""]","[[31, 87]]","[""exact""]",True,False
+28,objective,The patient has edema of the right knee.,0.0,"[""some edema""]","[[94, 104]]","[""exact""]",True,False
+29,objective,The patient has swelling of the right knee.,0.0,"[""some swelling"", ""some swelling""]","[[200, 213], [200, 213]]","[""exact"", ""exact""]",True,True
+30,objective,The patient has ecchymosis of the right knee.,0.0,"[""ecchymosis""]","[[120, 130]]","[""exact""]",True,False
+31,objective,The patient has redness of the right knee.,0.25,"[""some redness""]","[[200, 225]]","[""word""]",True,False
+32,objective,The varus test of the right knee is negative.,0.0,"[""The varus and valgus tests were negative""]","[[132, 172]]","[""exact""]",True,False
+33,objective,The valgus test of the right knee is negative.,0.0,"[""The varus and valgus tests were negative""]","[[132, 172]]","[""exact""]",True,False
+34,objective,The X-ray of the right knee is normal.,0.0,"[""X-ray of the right knee was normal""]","[[242, 276]]","[""exact""]",True,False
+35,objective,The patient's right knee X-ray shows no fractures.,0.0,"[""showing no fractures or bony abnormalities""]","[[278, 320]]","[""exact""]",True,False
+36,objective,The patient's right knee X-ray shows no bony abnormalities.,0.0,"[""showing no fractures or bony abnormalities""]","[[278, 320]]","[""exact""]",True,False
+37,assessment,The patient has an MCL strain.,0.5,"[""MCL strain or possible tear""]","[[31, 58]]","[""exact""]",True,False
+38,assessment,The patient has a possible MCL tear.,0.0,"[""MCL strain or possible tear""]","[[31, 58]]","[""exact""]",True,False
+39,assessment,The patient will require an MRI to confirm the MCL strain or possible tear.,0.0,"[""which will require an MRI to confirm""]","[[60, 96]]","[""exact""]",True,False
+40,assessment,The patient has hypertension.,0.0,"[""Hypertension""]","[[113, 125]]","[""exact""]",True,False
+41,assessment,The patient has diabetes.,0.0,"[""Diabetes""]","[[127, 135]]","[""exact""]",True,False
+42,assessment,The patient has an MCL strain or suspected tear.,0.0,"[""MCL strain/suspected tear""]","[[137, 162]]","[""exact""]",True,False
+43,assessment,The patient has a Grade 2 systolic ejection murmur.,0.25,"[""Grade 2 systolic ejection murmur""]","[[164, 196]]","[""exact""]",True,False
+44,assessment,The patient's Grade 2 systolic ejection murmur is a past condition.,0.5,"[""past""]","[[198, 202]]","[""exact""]",True,False
+45,plan,The patient was prescribed Meloxicam.,0.0,"[""I prescribed Meloxicam 15mg daily for pain and swelling""]","[[0, 55]]","[""exact""]",True,False
+46,plan,The patient's Meloxicam dose is 15mg daily.,0.75,"[""15mg daily""]","[[23, 33]]","[""exact""]",True,False
+47,plan,The patient's Meloxicam is for pain and swelling.,0.0,"[""for pain and swelling""]","[[34, 55]]","[""exact""]",True,False
+48,plan,The patient was prescribed a knee immobilizer.,0.25,"[""and a knee immobilizer to be worn for the next couple of weeks""]","[[57, 119]]","[""exact""]",True,False
+49,plan,The patient's knee immobilizer is to be worn for the next couple of weeks.,0.0,"[""to be worn for the next couple of weeks""]","[[80, 119]]","[""exact""]",True,False
+50,plan,The patient will continue to take Tylenol.,0.25,"[""The patient will continue to take Tylenol as needed""]","[[121, 172]]","[""exact""]",True,False
+51,plan,The patient's Tylenol is to be taken as needed.,0.5,"[""as needed""]","[[163, 172]]","[""exact""]",True,False
+52,plan,The patient was prescribed a log book to track their daily blood sugars.,0.75,"[""I will also prescribe a log book for the patient to track their daily blood sugars""]","[[174, 256]]","[""exact""]",True,False
+53,plan,The patient's log book is for tracking daily blood sugars.,0.5,"[""to track their daily blood sugars""]","[[223, 256]]","[""exact""]",True,False
+54,plan,A nutrition consult was ordered for the patient.,0.0,"[""and will get a consult with nutrition to improve their diet""]","[[258, 317]]","[""exact""]",True,False
+55,plan,The patient's nutrition consult is to improve their diet.,0.0,"[""to improve their diet""]","[[296, 317]]","[""exact""]",True,False
+56,plan,The patient's Norvasc dose was increased to 10mg daily.,0.75,"[""I will up the patient's Norvasc medication to 10mg daily""]","[[319, 375]]","[""exact""]",True,False
+57,plan,The patient's Norvasc is for lowering their blood pressure.,0.25,"[""to help lower their blood pressure""]","[[376, 410]]","[""exact""]",True,False
+58,plan,The patient will be seen in two weeks for a follow-up appointment.,0.0,"[""I will see the patient back in two weeks for follow-up"", ""The patient will be seen in two weeks for a follow-up appointment""]","[[412, 466], [480, 545]]","[""exact"", ""exact""]",True,True

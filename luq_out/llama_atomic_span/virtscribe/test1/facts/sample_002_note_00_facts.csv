@@ -1,0 +1,48 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Kayla Ward.,0.0,"[""Kayla Ward""]","[[5, 15]]","[""exact""]",True,False
+1,subjective,The patient is a 7th-grade student.,0.25,"[""a 7th-grade student""]","[[17, 36]]","[""exact""]",True,False
+2,subjective,The patient has a 2-year history of acne on her face.,0.0,"[""a 2-year history of acne on her face""]","[[52, 88]]","[""exact""]",True,False
+3,subjective,The patient's acne is present most every day.,0.0,"[""which is present most every day""]","[[90, 121]]","[""exact""]",True,False
+4,subjective,The patient has been using Persa-Gel for acne treatment.,0.0,"[""She has been using Persa-Gel""]","[[123, 151]]","[""exact""]",True,False
+5,subjective,The patient washes her face regularly for acne treatment.,0.0,"[""washing regularly""]","[[156, 173]]","[""exact""]",True,False
+6,subjective,Using Persa-Gel and washing regularly is somewhat helpful for the patient's acne.,0.0,"[""which is somewhat helpful""]","[[175, 200]]","[""exact""]",True,False
+7,subjective,The patient does not have itching associated with her acne.,0.0,"[""including itching""]","[[235, 252]]","[""exact""]",True,False
+8,subjective,The patient does not have bleeding associated with her acne.,0.0,"[""including bleeding""]","[[235, 262]]","[""word""]",True,False
+9,subjective,The patient does not have pain associated with her acne.,0.0,"[""or pain""]","[[264, 271]]","[""exact""]",True,False
+10,subjective,The patient has no additional past medical history.,0.0,"[""No additional past medical history""]","[[273, 307]]","[""exact""]",True,False
+11,subjective,The patient lives with her parents.,0.25,"[""She lives with her parents""]","[[309, 335]]","[""exact""]",True,False
+12,subjective,The patient lives with her sister.,0.25,"[""and sister""]","[[336, 346]]","[""exact""]",True,False
+13,subjective,The patient has a dog.,0.5,"[""dog""]","[[357, 360]]","[""exact""]",True,False
+14,subjective,The patient has a bird.,0.5,"[""bird""]","[[362, 366]]","[""exact""]",True,False
+15,subjective,The patient has bunnies.,0.5,"[""bunnies""]","[[372, 379]]","[""exact""]",True,False
+16,subjective,The patient wears sunscreen in the summer.,0.25,"[""She wears sunscreen in the summer""]","[[381, 414]]","[""exact""]",True,False
+17,subjective,The patient's sunscreen has an SPF of 30.,0.25,"[""SPF 30""]","[[420, 426]]","[""exact""]",True,False
+18,subjective,The patient has no additional symptoms in other organs.,0.0,"[""No additional symptoms in other organs""]","[[507, 545]]","[""exact""]",True,False
+19,objective,"The patient had a full physical exam performed today, except for under the underwear and under the bra.",0.75,"[""Full exam is performed today, except for under the underwear and under the bra""]","[[15, 93]]","[""exact""]",True,False
+20,objective,The patient has multiple benign nevi on the trunk and extremities.,0.0,"[""Multiple benign nevi on the trunk and extremities""]","[[95, 144]]","[""exact""]",True,False
+21,objective,The patient has scattered skin-colored papules.,0.0,"[""Scattered skin-colored papules""]","[[146, 176]]","[""exact""]",True,False
+22,objective,The patient has open and closed comedones.,0.0,"[""Open and closed comedones""]","[[178, 203]]","[""exact""]",True,False
+23,objective,The patient has erythematous papules on the face.,0.0,"[""Erythematous papules on the face, primarily on the forehead and with also some on the central cheeks and chin""]","[[205, 314]]","[""exact""]",True,False
+24,objective,The patient's erythematous papules are primarily located on the forehead.,0.0,"[""Erythematous papules on the face, primarily on the forehead and with also some on the central cheeks and chin""]","[[205, 314]]","[""exact""]",True,False
+25,objective,The patient has erythematous papules on the central cheeks.,0.0,"[""Erythematous papules on the face, primarily on the forehead and with also some on the central cheeks and chin""]","[[205, 314]]","[""exact""]",True,False
+26,objective,The patient has erythematous papules on the chin.,0.0,"[""Erythematous papules on the face, primarily on the forehead and with also some on the central cheeks and chin""]","[[205, 314]]","[""exact""]",True,False
+27,objective,The patient's chest is relatively spared.,0.0,"[""The chest and back are relatively spared""]","[[316, 356]]","[""exact""]",True,False
+28,objective,The patient's back is relatively spared.,0.0,"[""The chest and back are relatively spared""]","[[316, 356]]","[""exact""]",True,False
+29,objective,The remainder of the patient's examination is normal.,0.0,"[""The remainder of the examination is normal""]","[[358, 400]]","[""exact""]",True,False
+30,assessment,The patient has mild to moderate acne.,0.0,"[""Mild to moderate acne""]","[[12, 33]]","[""exact""]",True,False
+31,assessment,The patient's acne is mostly comedonal.,0.0,"[""mostly comedonal""]","[[35, 51]]","[""exact""]",True,False
+32,assessment,The patient's acne has a small inflammatory component.,0.0,"[""small inflammatory component""]","[[57, 85]]","[""exact""]",True,False
+33,plan,The patient was prescribed adapalene 0.1% cream.,0.0,"[""adapalene 0.1% cream""]","[[13, 33]]","[""exact""]",True,False
+34,plan,The patient's adapalene 0.1% cream is to be applied in a thin layer.,0.25,"[""to be applied in a thin layer""]","[[34, 63]]","[""exact""]",True,False
+35,plan,The patient's adapalene 0.1% cream is to be applied to the areas she generally gets acne.,0.0,"[""to the areas she generally gets acne""]","[[64, 100]]","[""exact""]",True,False
+36,plan,The patient's adapalene 0.1% cream is to be started with a few nights a week and slowly worked up to every night.,0.0,"[""starting with a few nights a week and slowly working up to every night""]","[[102, 172]]","[""exact""]",True,False
+37,plan,The patient will use a mild cleanser.,0.25,"[""a mild cleanser""]","[[192, 207]]","[""exact""]",True,False
+38,plan,The patient will use a non-comedogenic moisturizer with sunscreen SPF 30 or higher in the morning.,0.0,"[""a non-comedogenic moisturizer with sunscreen SPF 30 or higher in the morning""]","[[212, 288]]","[""exact""]",True,False
+39,plan,The patient will wash her face with the same cleanser at night.,1.0,"[""wash her face with the same cleanser and apply a non-comedogenic moisturizer at night""]","[[294, 379]]","[""exact""]",True,False
+40,plan,The patient will apply a non-comedogenic moisturizer at night.,0.25,"[""wash her face with the same cleanser and apply a non-comedogenic moisturizer at night""]","[[294, 379]]","[""exact""]",True,False
+41,plan,The patient was prescribed Clean and Clear Persa-Gel.,1.0,"[""Clean and Clear Persa-Gel""]","[[399, 424]]","[""exact""]",True,False
+42,plan,The patient's Clean and Clear Persa-Gel is to be applied in a thin layer.,0.75,"[""in a thin layer on the areas she generally gets acne""]","[[425, 477]]","[""exact""]",True,False
+43,plan,The patient's Clean and Clear Persa-Gel is to be applied to the areas she generally gets acne.,0.75,"[""in a thin layer on the areas she generally gets acne""]","[[425, 477]]","[""exact""]",True,False
+44,plan,The patient was advised to wear sunscreen when outside.,0.0,"[""wear sunscreen when outside""]","[[496, 523]]","[""exact""]",True,False
+45,plan,The patient may experience potential sensitivity and dryness or irritation from the adapalene.,0.0,"[""due to potential sensitivity and dryness or irritation from the adapalene""]","[[524, 597]]","[""exact""]",True,False
+46,plan,The patient will have a follow-up appointment in six months.,0.0,"[""I plan to see Kayla in six months to assess her progress""]","[[611, 667]]","[""exact""]",True,False

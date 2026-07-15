@@ -1,0 +1,783 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 48-year-old female.",
+        "spans": [
+          "a 48-year-old female"
+        ],
+        "span_offsets": [
+          [
+            18,
+            38
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of a recent myocardial infarction.",
+        "spans": [
+          "a history of a recent myocardial infarction"
+        ],
+        "span_offsets": [
+          [
+            54,
+            97
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient underwent a cardiac catheterization and stent placement in the right coronary artery 2 weeks ago.",
+        "spans": [
+          "underwent a cardiac catheterization and stent placement in the right coronary artery 2 weeks ago"
+        ],
+        "span_offsets": [
+          [
+            112,
+            208
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's stent placement was in the right coronary artery.",
+        "spans": [
+          "in the right coronary artery"
+        ],
+        "span_offsets": [
+          [
+            168,
+            196
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies chest pain since the stent placement.",
+        "spans": [
+          "denies chest pain since the stent placement"
+        ],
+        "span_offsets": [
+          [
+            391,
+            434
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports occasional shortness of breath when walking up and down stairs.",
+        "spans": [
+          "occasional shortness of breath when walking up and down stairs",
+          "occasional shortness of breath when walking up and down stairs"
+        ],
+        "span_offsets": [
+          [
+            447,
+            509
+          ],
+          [
+            447,
+            509
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient has been taking brilinta.",
+        "spans": [
+          "brilinta 90mg twice a day"
+        ],
+        "span_offsets": [
+          [
+            531,
+            556
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's brilinta dose is 90mg.",
+        "spans": [
+          "90mg"
+        ],
+        "span_offsets": [
+          [
+            540,
+            544
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes brilinta twice a day.",
+        "spans": [
+          "twice a day"
+        ],
+        "span_offsets": [
+          [
+            545,
+            556
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been taking baby aspirin.",
+        "spans": [
+          "Baby aspirin once a day"
+        ],
+        "span_offsets": [
+          [
+            936,
+            959
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes baby aspirin once a day.",
+        "spans": [
+          "once a day"
+        ],
+        "span_offsets": [
+          [
+            949,
+            959
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has eaten pizza a few times a week.",
+        "spans": [
+          "eaten pizza a few times a week"
+        ],
+        "span_offsets": [
+          [
+            592,
+            622
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is trying to watch her salt intake and diet.",
+        "spans": [
+          "trying to watch her salt intake and diet"
+        ],
+        "span_offsets": [
+          [
+            630,
+            670
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is within normal limits.",
+        "spans": [
+          "The patient's blood pressure is within normal limits"
+        ],
+        "span_offsets": [
+          [
+            15,
+            67
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's neck exam is unremarkable.",
+        "spans": [
+          "The neck exam is unremarkable"
+        ],
+        "span_offsets": [
+          [
+            69,
+            98
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no jugular venous distention.",
+        "spans": [
+          "no jugular venous distention"
+        ],
+        "span_offsets": [
+          [
+            105,
+            133
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no carotid bruits.",
+        "spans": [
+          "no carotid bruits"
+        ],
+        "span_offsets": [
+          [
+            137,
+            151
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a 3/6 systolic ejection murmur at the left base.",
+        "spans": [
+          "a slight 3/6 systolic ejection murmur at the left base"
+        ],
+        "span_offsets": [
+          [
+            176,
+            230
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lung exam is clear to auscultation bilaterally.",
+        "spans": [
+          "The lung exam is clear to auscultation bilaterally"
+        ],
+        "span_offsets": [
+          [
+            232,
+            282
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right radial artery cardiac cath site is clean, dry, and intact.",
+        "spans": [
+          "a clean, dry, and intact right radial artery cardiac cath site"
+        ],
+        "span_offsets": [
+          [
+            317,
+            379
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a palpable radial pulse.",
+        "spans": [
+          "a palpable radial pulse"
+        ],
+        "span_offsets": [
+          [
+            385,
+            408
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has a history of myocardial infarction.",
+        "spans": [
+          "a history of a recent myocardial infarction"
+        ],
+        "span_offsets": [
+          [
+            53,
+            96
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of stent placement in the right coronary artery.",
+        "spans": [
+          "stent placement in the right coronary artery"
+        ],
+        "span_offsets": [
+          [
+            101,
+            145
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a slight systolic ejection murmur.",
+        "spans": [
+          "a slight systolic ejection murmur"
+        ],
+        "span_offsets": [
+          [
+            152,
+            185
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has mild mitral regurgitation.",
+        "spans": [
+          "mild mitral regurgitation"
+        ],
+        "span_offsets": [
+          [
+            190,
+            215
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has myocardial infarction.",
+        "spans": [
+          "Myocardial infarction"
+        ],
+        "span_offsets": [
+          [
+            232,
+            253
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has mitral regurgitation.",
+        "spans": [
+          "Mitral regurgitation"
+        ],
+        "span_offsets": [
+          [
+            255,
+            275
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has hypertension.",
+        "spans": [
+          "Hypertension"
+        ],
+        "span_offsets": [
+          [
+            277,
+            289
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The status of the patient's hypertension is unknown.",
+        "spans": [
+          "Hypertension (status: unknown)"
+        ],
+        "span_offsets": [
+          [
+            277,
+            307
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has hyperlipidemia.",
+        "spans": [
+          "Hyperlipidemia"
+        ],
+        "span_offsets": [
+          [
+            309,
+            323
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The status of the patient's hyperlipidemia is unknown.",
+        "spans": [
+          "Hyperlipidemia (status: unknown)"
+        ],
+        "span_offsets": [
+          [
+            309,
+            341
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a cardiac catheterization site complication.",
+        "spans": [
+          "Cardiac catheterization site complication"
+        ],
+        "span_offsets": [
+          [
+            343,
+            384
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The status of the patient's cardiac catheterization site complication is unknown.",
+        "spans": [
+          "Cardiac catheterization site complication (status: unknown)"
+        ],
+        "span_offsets": [
+          [
+            343,
+            402
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient is taking aspirin once a day.",
+        "spans": [
+          "aspirin once a day"
+        ],
+        "span_offsets": [
+          [
+            27,
+            45
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking brilinta 90mg twice a day.",
+        "spans": [
+          "brilinta 90mg twice a day"
+        ],
+        "span_offsets": [
+          [
+            50,
+            75
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking brilinta for at least one year.",
+        "spans": [
+          "for at least one year"
+        ],
+        "span_offsets": [
+          [
+            76,
+            97
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking crestor 40mg once a day.",
+        "spans": [
+          "crestor 40mg once a day"
+        ],
+        "span_offsets": [
+          [
+            112,
+            135
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has an echocardiogram ordered in six months.",
+        "spans": [
+          "I ordered an echocardiogram in six months"
+        ],
+        "span_offsets": [
+          [
+            137,
+            178
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is enrolled in cardiac rehab for dietary education and counseling.",
+        "spans": [
+          "I enrolled the patient in cardiac rehab for dietary education and counseling"
+        ],
+        "span_offsets": [
+          [
+            180,
+            256
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has liver function studies ordered to follow up in six weeks.",
+        "spans": [
+          "I ordered liver function studies"
+        ],
+        "span_offsets": [
+          [
+            258,
+            290
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a lipid panel ordered to follow up in six weeks.",
+        "spans": [
+          "and a lipid panel"
+        ],
+        "span_offsets": [
+          [
+            291,
+            308
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is advised to resume swimming with caution.",
+        "spans": [
+          "to resume swimming with caution"
+        ],
+        "span_offsets": [
+          [
+            358,
+            389
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking toprol 50mg once a day.",
+        "spans": [
+          "toprol 50mg once a day"
+        ],
+        "span_offsets": [
+          [
+            402,
+            424
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a follow-up appointment in six weeks.",
+        "spans": [
+          "I want to see the patient again in six weeks"
+        ],
+        "span_offsets": [
+          [
+            438,
+            482
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The follow-up appointment is to discuss the echocardiogram and lab results.",
+        "spans": [
+          "to follow up on the echocardiogram and lab results"
+        ],
+        "span_offsets": [
+          [
+            483,
+            533
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

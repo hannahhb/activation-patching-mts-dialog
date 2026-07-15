@@ -1,0 +1,55 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 67-year-old male.,0.0,"[""a 67-year-old male""]","[[13, 31]]","[""exact""]",True,False
+1,subjective,The patient has a history of essential hypertension.,0.0,"[""a history of essential hypertension""]","[[47, 82]]","[""exact""]",True,False
+2,subjective,The patient has a history of hyperlipidemia.,0.0,"[""a history of hyperlipidemia""]","[[84, 98]]","[""word""]",True,False
+3,subjective,The patient has a history of osteoarthritis.,0.0,"[""a history of osteoarthritis""]","[[104, 118]]","[""word""]",True,False
+4,subjective,The patient has been experiencing elevated and fluctuating blood pressures.,0.0,"[""elevated and fluctuating blood pressures""]","[[145, 185]]","[""exact""]",True,False
+5,subjective,The patient's blood pressure upper numbers are occasionally over 180.,0.0,"[""upper numbers occasionally over 180""]","[[192, 227]]","[""exact""]",True,False
+6,subjective,The patient feels lightheaded.,0.0,"[""feeling lightheaded""]","[[240, 259]]","[""exact""]",True,False
+7,subjective,The patient experiences slight headaches.,0.0,"[""slight headaches""]","[[277, 293]]","[""exact""]",True,False
+8,subjective,The patient denies any recent fever.,0.0,"[""denies any recent fever""]","[[378, 401]]","[""exact""]",True,False
+9,subjective,The patient denies any recent nausea.,0.0,"[""denies any recent nausea""]","[[385, 409]]","[""word""]",True,False
+10,subjective,The patient denies any recent vomiting.,0.0,"[""denies any recent vomiting""]","[[385, 419]]","[""word""]",True,False
+11,subjective,The patient denies any recent diarrhea.,0.0,"[""denies any recent diarrhea""]","[[385, 395]]","[""word""]",True,False
+12,subjective,The patient reports some chest heaviness.,0.5,"[""some chest heaviness""]","[[445, 465]]","[""exact""]",True,False
+13,subjective,The patient does not have sustained chest pain.,0.0,"[""no sustained chest pain""]","[[470, 493]]","[""exact""]",True,False
+14,subjective,The patient does not have respiratory difficulty.,0.25,"[""no respiratory difficulty""]","[[497, 519]]","[""word""]",True,False
+15,subjective,The patient experiences unsteadiness when his blood pressure is higher.,0.75,"[""unsteadiness and slight headaches when his blood pressure is higher""]","[[536, 603]]","[""exact""]",True,False
+16,subjective,The patient experiences slight headaches when his blood pressure is higher.,0.5,"[""unsteadiness and slight headaches when his blood pressure is higher""]","[[536, 603]]","[""exact""]",True,False
+17,subjective,The patient feels lightheaded when his blood pressure is higher.,0.0,"[""feels lightheaded but not like he might pass out""]","[[609, 657]]","[""exact""]",True,False
+18,subjective,The patient is taking lisinopril.,0.0,"[""lisinopril 20mg twice daily for hypertension""]","[[672, 716]]","[""exact""]",True,False
+19,subjective,The patient's lisinopril dose is 20mg twice daily.,0.25,"[""20mg twice daily""]","[[683, 699]]","[""exact""]",True,False
+20,subjective,The patient takes lisinopril for hypertension.,0.0,"[""for hypertension""]","[[700, 716]]","[""exact""]",True,False
+21,subjective,The patient is taking atorvastatin.,0.0,"[""atorvastatin for hyperlipidemia""]","[[722, 753]]","[""exact""]",True,False
+22,subjective,The patient takes atorvastatin for hyperlipidemia.,0.0,"[""for hyperlipidemia""]","[[735, 753]]","[""exact""]",True,False
+23,subjective,The patient uses a pillbox to track his medication schedule.,1.0,"[""uses a pillbox and a new app to track his medication schedule""]","[[758, 819]]","[""exact""]",True,False
+24,subjective,The patient uses a new app to track his medication schedule.,0.75,"[""uses a pillbox and a new app to track his medication schedule""]","[[758, 819]]","[""exact""]",True,False
+25,subjective,The patient's medication schedule is mostly accurate.,0.0,"[""which he reports is mostly accurate""]","[[821, 856]]","[""exact""]",True,False
+26,subjective,The patient has a grandson who helps him.,0.75,"[""a grandson who helped him set up the app and is a great help""]","[[865, 925]]","[""exact""]",True,False
+27,subjective,The patient's grandson helped him set up the app.,0.75,"[""a grandson who helped him set up the app and is a great help""]","[[865, 925]]","[""exact""]",True,False
+28,subjective,The patient is able to golf.,0.75,"[""currently able to golf and walk the full course""]","[[998, 1045]]","[""exact""]",True,False
+29,subjective,The patient is able to walk the full golf course.,0.75,"[""currently able to golf and walk the full course""]","[[998, 1045]]","[""exact""]",True,False
+30,subjective,The patient takes Tylenol for mild pain.,0.5,"[""takes Tylenol for mild pain""]","[[1098, 1125]]","[""exact""]",True,False
+31,subjective,The patient adjusts his activity level as needed.,1.0,"[""adjusts his activity level as needed""]","[[1130, 1166]]","[""exact""]",True,False
+32,objective,The patient has a grade 3/6 systolic ejection murmur.,0.0,"[""grade 3/6 systolic ejection murmur""]","[[33, 67]]","[""exact""]",True,False
+33,objective,The patient has mild bibasilar rales.,0.0,"[""mild bibasilar rales""]","[[69, 89]]","[""exact""]",True,False
+34,objective,The patient has trace lower extremity edema bilaterally.,0.25,"[""trace lower extremity edema bilaterally""]","[[95, 134]]","[""exact""]",True,False
+35,assessment,The patient has elevated blood pressure.,0.0,"[""elevated blood pressure"", ""Elevated blood pressure""]","[[16, 39], [77, 100]]","[""exact"", ""exact""]",True,True
+36,assessment,The patient has hyperlipidemia.,0.0,"[""hyperlipidemia"", ""Hyperlipidemia""]","[[41, 55], [102, 116]]","[""exact"", ""exact""]",True,True
+37,assessment,The patient has osteoarthritis.,0.0,"[""osteoarthritis"", ""Osteoarthritis""]","[[61, 75], [118, 132]]","[""exact"", ""exact""]",True,True
+38,assessment,The patient's condition is active.,0.0,"[""Active""]","[[134, 140]]","[""exact""]",True,False
+39,plan,The patient's lisinopril dose was increased to 60mg twice daily.,0.25,"[""I increased the patient's lisinopril to 60mg twice daily""]","[[0, 56]]","[""exact""]",True,False
+40,plan,The patient was prescribed 25mg of hydrochlorothiazide daily.,0.0,"[""added 25mg of hydrochlorothiazide daily""]","[[61, 100]]","[""exact""]",True,False
+41,plan,The purpose of hydrochlorothiazide is to help control the patient's blood pressure.,0.0,"[""to help control his blood pressure""]","[[101, 135]]","[""exact""]",True,False
+42,plan,The patient was instructed to check his blood pressure twice daily.,0.25,"[""instructed him to check his blood pressure twice daily""]","[[139, 193]]","[""exact""]",True,False
+43,plan,The patient was instructed to check his blood pressure for the next two weeks.,0.25,"[""for the next two weeks""]","[[194, 216]]","[""exact""]",True,False
+44,plan,"The patient had blood tests sent, including a cholesterol panel.",0.0,"[""cholesterol panel""]","[[254, 271]]","[""exact""]",True,False
+45,plan,"The patient had blood tests sent, including a CBC with differential.",0.0,"[""CBC with differential""]","[[273, 294]]","[""exact""]",True,False
+46,plan,"The patient had blood tests sent, including a comprehensive metabolic panel.",0.0,"[""comprehensive metabolic panel""]","[[296, 325]]","[""exact""]",True,False
+47,plan,The patient had a urinalysis sent to check his kidney function.,0.0,"[""urinalysis to check his kidney function""]","[[331, 370]]","[""exact""]",True,False
+48,plan,The patient is currently taking atorvastatin for hyperlipidemia.,0.0,"[""continued the current management plan for his hyperlipidemia with atorvastatin""]","[[374, 452]]","[""exact""]",True,False
+49,plan,The patient's current management plan for hyperlipidemia includes atorvastatin.,0.0,"[""continued the current management plan for his hyperlipidemia with atorvastatin""]","[[374, 452]]","[""exact""]",True,False
+50,plan,The patient was advised to stay active for his osteoarthritis.,1.0,"[""advised him to continue to stay active""]","[[480, 518]]","[""exact""]",True,False
+51,plan,The patient was advised to avoid overdoing it for his osteoarthritis.,0.75,"[""avoid overdoing it""]","[[520, 538]]","[""exact""]",True,False
+52,plan,The patient was instructed to take Tylenol for mild osteoarthritis pain.,0.0,"[""take Tylenol for mild pain""]","[[544, 570]]","[""exact""]",True,False
+53,plan,The patient will have a follow-up appointment in two weeks.,0.0,"[""instructed him to see me back in two weeks"", ""The patient will see me in two weeks for a follow-up appointment""]","[[574, 616], [619, 683]]","[""exact"", ""exact""]",True,True

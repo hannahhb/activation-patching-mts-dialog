@@ -1,0 +1,738 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 37-year-old male.",
+        "spans": [
+          "a 37-year-old male"
+        ],
+        "span_offsets": [
+          [
+            18,
+            36
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with a 2-week history of flank pain radiating to the groin.",
+        "spans": [
+          "a 2-week history of flank pain radiating to the groin"
+        ],
+        "span_offsets": [
+          [
+            52,
+            105
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's flank pain is intermittent.",
+        "spans": [
+          "which is intermittent"
+        ],
+        "span_offsets": [
+          [
+            107,
+            128
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's flank pain worsens with increased fluid intake.",
+        "spans": [
+          "worsens with increased fluid intake"
+        ],
+        "span_offsets": [
+          [
+            133,
+            168
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's flank pain worsens with physical activity.",
+        "spans": [
+          "and physical activity"
+        ],
+        "span_offsets": [
+          [
+            169,
+            190
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is described as a 4 out of 10.",
+        "spans": [
+          "a 4 out of 10"
+        ],
+        "span_offsets": [
+          [
+            217,
+            230
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain has been as high as a 2 out of 10.",
+        "spans": [
+          "has been as high as a 2 out of 10"
+        ],
+        "span_offsets": [
+          [
+            236,
+            269
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies nausea.",
+        "spans": [
+          "denies nausea, vomiting, fever, and chills"
+        ],
+        "span_offsets": [
+          [
+            274,
+            316
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies vomiting.",
+        "spans": [
+          "denies nausea, vomiting, fever, and chills"
+        ],
+        "span_offsets": [
+          [
+            274,
+            316
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies fever.",
+        "spans": [
+          "denies nausea, vomiting, fever, and chills"
+        ],
+        "span_offsets": [
+          [
+            274,
+            316
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies chills.",
+        "spans": [
+          "denies nausea, vomiting, fever, and chills"
+        ],
+        "span_offsets": [
+          [
+            274,
+            316
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of passing kidney stones.",
+        "spans": [
+          "a history of passing kidney stones"
+        ],
+        "span_offsets": [
+          [
+            329,
+            363
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has had kidney stones that required surgery in the past.",
+        "spans": [
+          "including one that required surgery"
+        ],
+        "span_offsets": [
+          [
+            377,
+            412
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a family history of kidney stones.",
+        "spans": [
+          "a family history of kidney stones"
+        ],
+        "span_offsets": [
+          [
+            453,
+            486
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has passed kidney stones on his own in the past.",
+        "spans": [
+          "including passing some on his own"
+        ],
+        "span_offsets": [
+          [
+            525,
+            558
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has undergone surgery for kidney stones in the past.",
+        "spans": [
+          "including passing some on his own and undergoing surgery"
+        ],
+        "span_offsets": [
+          [
+            525,
+            581
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is currently taking ibuprofen.",
+        "spans": [
+          "The patient is currently taking ibuprofen"
+        ],
+        "span_offsets": [
+          [
+            659,
+            700
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking ibuprofen for pain.",
+        "spans": [
+          "for pain"
+        ],
+        "span_offsets": [
+          [
+            701,
+            709
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is elevated.",
+        "spans": [
+          "Blood pressure is elevated"
+        ],
+        "span_offsets": [
+          [
+            13,
+            39
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's elevated blood pressure is likely due to pain.",
+        "spans": [
+          "but this is likely due to pain"
+        ],
+        "span_offsets": [
+          [
+            41,
+            71
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has CVA tenderness on the right side.",
+        "spans": [
+          "The patient has CVA tenderness on the right side"
+        ],
+        "span_offsets": [
+          [
+            89,
+            137
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's CVA tenderness is consistent with the location of the kidney stone.",
+        "spans": [
+          "consistent with the location of the kidney stone"
+        ],
+        "span_offsets": [
+          [
+            139,
+            187
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient had a CT scan.",
+        "spans": [
+          "The patient had a CT scan"
+        ],
+        "span_offsets": [
+          [
+            204,
+            229
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The CT scan showed a 0.5 cm stone located on the proximal right ureter.",
+        "spans": [
+          "a 0.5 cm stone located on the proximal right ureter"
+        ],
+        "span_offsets": [
+          [
+            242,
+            293
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The CT scan showed no evidence of high flow nephrosis.",
+        "spans": [
+          "with no evidence of high flow nephrosis"
+        ],
+        "span_offsets": [
+          [
+            294,
+            333
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has a confirmed diagnosis of a kidney stone.",
+        "spans": [
+          "The patient has a confirmed diagnosis of a kidney stone"
+        ],
+        "span_offsets": [
+          [
+            12,
+            67
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's kidney stone measures 0.5 cm in size.",
+        "spans": [
+          "measuring 0.5 cm in size"
+        ],
+        "span_offsets": [
+          [
+            69,
+            93
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's kidney stone is located on the proximal right ureter.",
+        "spans": [
+          "located on the proximal right ureter"
+        ],
+        "span_offsets": [
+          [
+            95,
+            131
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed ibuprofen for pain management.",
+        "spans": [
+          "I prescribed ibuprofen as before for pain management"
+        ],
+        "span_offsets": [
+          [
+            0,
+            52
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed tramadol 50 mg for breakthrough pain.",
+        "spans": [
+          "tramadol 50 mg as needed for breakthrough pain"
+        ],
+        "span_offsets": [
+          [
+            80,
+            126
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's tramadol dose is 50 mg.",
+        "spans": [
+          "50 mg"
+        ],
+        "span_offsets": [
+          [
+            89,
+            94
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's tramadol frequency is as needed.",
+        "spans": [
+          "as needed"
+        ],
+        "span_offsets": [
+          [
+            95,
+            104
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's tramadol indication is breakthrough pain.",
+        "spans": [
+          "for breakthrough pain"
+        ],
+        "span_offsets": [
+          [
+            105,
+            126
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient should use a strainer when urinating to try to catch the stone.",
+        "spans": [
+          "The patient should continue to use a strainer when urinating to try to catch the stone"
+        ],
+        "span_offsets": [
+          [
+            128,
+            214
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A BMP was ordered for the patient.",
+        "spans": [
+          "I will order a BMP"
+        ],
+        "span_offsets": [
+          [
+            216,
+            234
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A urinalysis was ordered for the patient.",
+        "spans": [
+          "urinalysis"
+        ],
+        "span_offsets": [
+          [
+            236,
+            246
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A urine culture was ordered for the patient.",
+        "spans": [
+          "urine culture"
+        ],
+        "span_offsets": [
+          [
+            252,
+            265
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the ordered tests is to rule out infection.",
+        "spans": [
+          "to rule out infection"
+        ],
+        "span_offsets": [
+          [
+            266,
+            287
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will follow up in 1-2 weeks.",
+        "spans": [
+          "I will see the patient in 1-2 weeks",
+          "The patient will follow up in 1-2 weeks"
+        ],
+        "span_offsets": [
+          [
+            289,
+            324
+          ],
+          [
+            426,
+            465
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The purpose of the follow-up is to reassess symptoms.",
+        "spans": [
+          "to reassess symptoms"
+        ],
+        "span_offsets": [
+          [
+            325,
+            345
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the follow-up is to consider further treatment.",
+        "spans": [
+          "to reassess symptoms and consider further treatment",
+          "consider further treatment"
+        ],
+        "span_offsets": [
+          [
+            325,
+            376
+          ],
+          [
+            350,
+            376
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "Lithotripsy is a possible further treatment for the patient.",
+        "spans": [
+          "including lithotripsy if necessary"
+        ],
+        "span_offsets": [
+          [
+            378,
+            412
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

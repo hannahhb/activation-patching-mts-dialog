@@ -1,0 +1,41 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Betty.,1.0,"[""The patient, Betty,""]","[[5, 24]]","[""exact""]",True,False
+1,subjective,The patient presents with a 3-week history of left shoulder pain.,0.0,"[""a 3-week history of left shoulder pain""]","[[39, 77]]","[""exact""]",True,False
+2,subjective,The patient's left shoulder pain is constant.,0.0,"[""which is described as constant""]","[[79, 109]]","[""exact""]",True,False
+3,subjective,The patient's left shoulder pain is exacerbated by pressure.,0.75,"[""exacerbated by pressure""]","[[114, 137]]","[""exact""]",True,False
+4,subjective,The patient's left shoulder pain is exacerbated by sleeping on the affected side.,0.25,"[""particularly when sleeping on the affected side""]","[[139, 186]]","[""exact""]",True,False
+5,subjective,The patient's left shoulder pain is alleviated with Tylenol.,0.0,"[""The pain is alleviated with Tylenol""]","[[188, 223]]","[""exact""]",True,False
+6,subjective,The patient denies any direct trauma to the shoulder.,0.0,"[""The patient denies any direct trauma to the shoulder""]","[[225, 277]]","[""exact""]",True,False
+7,subjective,"The patient has been active and recently renovating the basement, which may be contributing to the pain.",0.5,"[""being active and recently renovating the basement, which may be contributing to the pain""]","[[292, 380]]","[""exact""]",True,False
+8,subjective,The patient's left shoulder pain is a 7 out of 10 without Tylenol.,0.5,"[""the pain is a 7 out of 10 without Tylenol""]","[[407, 448]]","[""exact""]",True,False
+9,subjective,The patient's left shoulder pain is 2-3 with Tylenol.,0.5,"[""2-3 with Tylenol""]","[[453, 469]]","[""exact""]",True,False
+10,subjective,The patient has a history of occasional aches and pains.,0.25,"[""a history of occasional aches and pains""]","[[510, 549]]","[""exact""]",True,False
+11,subjective,The patient's occasional aches and pains are typically managed with Tylenol.,0.25,"[""which are typically managed with Tylenol""]","[[551, 591]]","[""exact""]",True,False
+12,subjective,The patient denies numbness or tingling in the arm or hand.,0.0,"[""The patient denies numbness or tingling in the arm or hand""]","[[613, 671]]","[""exact""]",True,False
+13,subjective,The patient is prescribed Tylenol.,0.0,"[""I prescribed Tylenol""]","[[695, 715]]","[""exact""]",True,False
+14,subjective,The patient's Tylenol dose is 2 tablets.,0.25,"[""Tylenol (2 tablets)""]","[[708, 727]]","[""exact""]",True,False
+15,subjective,The patient's Tylenol frequency is every 6-8 hours.,0.25,"[""every 6-8 hours""]","[[728, 743]]","[""exact""]",True,False
+16,subjective,The patient's Tylenol is prescribed for pain.,0.0,"[""for pain""]","[[744, 752]]","[""exact""]",True,False
+17,objective,The patient has limited active range of motion in the left shoulder.,0.0,"[""limited active and passive range of motion in the left shoulder""]","[[31, 94]]","[""exact""]",True,False
+18,objective,The patient has limited passive range of motion in the left shoulder.,0.0,"[""limited active and passive range of motion in the left shoulder""]","[[31, 94]]","[""exact""]",True,False
+19,objective,The patient has tenderness of the greater tuberosity of the humerus.,0.0,"[""tenderness of the greater tuberosity of the humerus""]","[[96, 147]]","[""exact""]",True,False
+20,objective,The patient has no tenderness at the sternoclavicular joint.,0.0,"[""no tenderness at the sternoclavicular or clavicular joints""]","[[153, 211]]","[""exact""]",True,False
+21,objective,The patient has no tenderness at the clavicular joint.,0.0,"[""no tenderness at the sternoclavicular or clavicular joints""]","[[153, 211]]","[""exact""]",True,False
+22,objective,The patient has good hand grip bilaterally.,0.5,"[""good hand grip bilaterally""]","[[229, 255]]","[""exact""]",True,False
+23,objective,The patient's left arm has brisk cap refill in less than 3 seconds.,0.0,"[""brisk cap refill in less than 3 seconds""]","[[302, 341]]","[""exact""]",True,False
+24,objective,The patient's left arm has intact motor function.,0.0,"[""intact motor and sensation to light touch""]","[[346, 387]]","[""exact""]",True,False
+25,objective,The patient's left arm has intact sensation to light touch.,0.0,"[""intact motor and sensation to light touch""]","[[346, 387]]","[""exact""]",True,False
+26,objective,The X-ray of the left shoulder shows no fracture.,0.0,"[""X-ray of the left shoulder shows no fracture or bony abnormality""]","[[404, 468]]","[""exact""]",True,False
+27,objective,The X-ray of the left shoulder shows no bony abnormality.,0.0,"[""X-ray of the left shoulder shows no fracture or bony abnormality""]","[[404, 468]]","[""exact""]",True,False
+28,assessment,The patient has rotator cuff tendinopathy.,0.0,"[""The patient's symptoms are most likely due to rotator cuff tendinopathy"", ""Rotator cuff tendinopathy; active; confirmed""]","[[12, 83], [171, 215]]","[""exact"", ""exact""]",True,True
+29,assessment,The patient's rotator cuff tendinopathy is active.,0.25,"[""Rotator cuff tendinopathy; active; confirmed""]","[[171, 215]]","[""exact""]",True,False
+30,assessment,The patient's rotator cuff tendinopathy is confirmed.,0.5,"[""Rotator cuff tendinopathy; active; confirmed""]","[[171, 215]]","[""exact""]",True,False
+31,assessment,The patient's rotator cuff tendinopathy affects the left shoulder.,0.0,"[""which is an injury to the tendons of the muscles of the left shoulder""]","[[85, 154]]","[""exact""]",True,False
+32,plan,The patient was ordered to have an MRI of the left shoulder.,0.5,"[""I ordered an MRI of the left shoulder""]","[[0, 37]]","[""exact""]",True,False
+33,plan,The purpose of the MRI of the left shoulder is to rule out any other conditions.,0.0,"[""to rule out any other conditions""]","[[38, 70]]","[""exact""]",True,False
+34,plan,The patient was referred for physical therapy.,0.0,"[""I referred the patient for physical therapy""]","[[72, 115]]","[""exact""]",True,False
+35,plan,The duration of the physical therapy is approximately 6-8 weeks.,0.0,"[""for approximately 6-8 weeks""]","[[116, 143]]","[""exact""]",True,False
+36,plan,The patient was instructed to continue taking Tylenol.,0.0,"[""I instructed the patient to continue taking Tylenol""]","[[145, 196]]","[""exact""]",True,False
+37,plan,The patient should take Tylenol as needed.,0.0,"[""as needed""]","[[197, 206]]","[""exact""]",True,False
+38,plan,A steroid injection of the left shoulder may be considered if symptoms do not improve.,0.0,"[""we may consider a steroid injection of the left shoulder"", ""If symptoms do not improve""]","[[236, 292], [208, 234]]","[""exact"", ""exact""]",True,True
+39,plan,The patient will return in 2 weeks for a follow-up appointment.,0.0,"[""The patient will return in 2 weeks for a follow-up appointment""]","[[306, 368]]","[""exact""]",True,False

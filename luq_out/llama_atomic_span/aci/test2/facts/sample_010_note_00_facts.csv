@@ -1,0 +1,69 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient had an interior ST-elevation myocardial infarction (STEMI).,0.0,"[""interior ST-elevation myocardial infarction (STEMI)""]","[[47, 98]]","[""exact""]",True,False
+1,subjective,The patient had the placement of another stent.,0.25,"[""with the placement of another stent""]","[[99, 134]]","[""exact""]",True,False
+2,subjective,The patient reports similar symptoms to their previous heart attack.,0.0,"[""similar symptoms to their previous heart attack""]","[[156, 203]]","[""exact""]",True,False
+3,subjective,The patient has chest pain.,1.0,"[""chest pain""]","[[215, 225]]","[""exact""]",True,False
+4,subjective,The patient has shortness of breath.,1.0,"[""shortness of breath""]","[[230, 249]]","[""exact""]",True,False
+5,subjective,The patient has a history of coronary artery disease.,0.0,"[""history of coronary artery disease""]","[[269, 303]]","[""exact""]",True,False
+6,subjective,The patient has a history of hypertension.,0.0,"[""history of hypertension""]","[[305, 317]]","[""word""]",True,False
+7,subjective,The patient has a history of diabetes.,0.0,"[""history of diabetes""]","[[323, 331]]","[""word""]",True,False
+8,subjective,The patient has been experiencing leg swelling since discharge from the hospital.,0.0,"[""leg swelling since discharge from the hospital""]","[[367, 413]]","[""exact""]",True,False
+9,subjective,The patient has been taking their medications as prescribed.,0.5,"[""been taking their medications as prescribed""]","[[431, 474]]","[""exact""]",True,False
+10,subjective,The patient has good insurance coverage.,0.75,"[""good insurance coverage""]","[[483, 506]]","[""exact""]",True,False
+11,subjective,The patient has been less strict with their diet since the last heart attack.,0.75,"[""been less strict with their diet since the last heart attack""]","[[524, 584]]","[""exact""]",True,False
+12,subjective,The patient consumes high-sodium foods like pizza and pepperoni.,0.75,"[""consuming high-sodium foods like pizza and pepperoni""]","[[586, 638]]","[""exact""]",True,False
+13,subjective,The patient manages their diabetes with metformin.,0.0,"[""managing their diabetes with metformin""]","[[661, 699]]","[""exact""]",True,False
+14,subjective,The patient walks their dog daily.,0.0,"[""walking their dog daily""]","[[704, 727]]","[""exact""]",True,False
+15,subjective,The patient denies any chest pain.,0.25,"[""denies any chest pain or shortness of breath""]","[[761, 805]]","[""exact""]",True,False
+16,subjective,The patient denies any shortness of breath.,0.0,"[""denies any chest pain or shortness of breath""]","[[761, 805]]","[""exact""]",True,False
+17,subjective,The patient is taking Aspirin.,0.0,"[""Aspirin 81 milligrams daily""]","[[808, 835]]","[""exact""]",True,False
+18,subjective,The patient is taking Aspirin 81 milligrams daily.,0.0,"[""81 milligrams daily""]","[[816, 835]]","[""exact""]",True,False
+19,subjective,The patient is taking Brilinta.,0.0,"[""Brilinta 90 milligrams twice daily""]","[[837, 871]]","[""exact""]",True,False
+20,subjective,The patient is taking Brilinta 90 milligrams twice daily.,0.0,"[""90 milligrams twice daily""]","[[846, 871]]","[""exact""]",True,False
+21,subjective,The patient is taking Lipitor.,0.0,"[""Lipitor 80 milligrams daily""]","[[873, 900]]","[""exact""]",True,False
+22,subjective,The patient is taking Lipitor 80 milligrams daily.,0.0,"[""80 milligrams daily""]","[[881, 900]]","[""exact""]",True,False
+23,subjective,The patient is taking Toprol.,0.0,"[""Toprol 50 milligrams daily""]","[[902, 928]]","[""exact""]",True,False
+24,subjective,The patient is taking Toprol 50 milligrams daily.,0.0,"[""50 milligrams daily""]","[[909, 928]]","[""exact""]",True,False
+25,subjective,The patient is taking Metformin.,0.0,"[""Metformin (for diabetes)""]","[[930, 954]]","[""exact""]",True,False
+26,subjective,The patient is taking Metformin for diabetes.,0.0,"[""(for diabetes)""]","[[940, 954]]","[""exact""]",True,False
+27,subjective,The patient is taking Lisinopril.,0.5,"[""Lisinopril 20 milligrams daily""]","[[956, 986]]","[""exact""]",True,False
+28,subjective,The patient is taking Lisinopril 20 milligrams daily.,0.5,"[""20 milligrams daily""]","[[967, 986]]","[""exact""]",True,False
+29,objective,The patient's vital signs are good.,0.75,"[""The patient's vital signs are good""]","[[13, 47]]","[""exact""]",True,False
+30,objective,The patient's blood pressure is not mentioned.,0.0,"[""the blood pressure is not specifically mentioned""]","[[53, 101]]","[""exact""]",True,False
+31,objective,The patient's neck exam is unremarkable.,0.0,"[""The patient's neck exam is unremarkable""]","[[119, 158]]","[""exact""]",True,False
+32,objective,The patient has no jugular venous distention.,0.0,"[""no jugular venous distention""]","[[164, 192]]","[""exact""]",True,False
+33,objective,The patient has no carotid bruits.,0.0,"[""no carotid bruits""]","[[196, 210]]","[""word""]",True,False
+34,objective,The patient has a 3/6 systolic ejection murmur at the left base.,0.0,"[""a 3/6 systolic ejection murmur at the left base""]","[[235, 282]]","[""exact""]",True,False
+35,objective,The patient's lungs are clear.,0.0,"[""The lungs are clear""]","[[284, 303]]","[""exact""]",True,False
+36,objective,The patient has lower limb edema.,0.0,"[""lower limb edema""]","[[321, 337]]","[""exact""]",True,False
+37,objective,The patient has pitting edema on the right radial artery.,0.0,"[""pitting edema on the right radial artery""]","[[343, 383]]","[""exact""]",True,False
+38,objective,The patient's pitting edema is 1+ on the right radial artery.,0.0,"[""1+ on the right radial artery""]","[[385, 414]]","[""exact""]",True,False
+39,objective,The cath site is clean.,0.5,"[""clean""]","[[433, 438]]","[""exact""]",True,False
+40,objective,The cath site is dry.,0.5,"[""dry""]","[[440, 443]]","[""exact""]",True,False
+41,objective,The cath site is intact.,0.5,"[""intact""]","[[449, 455]]","[""exact""]",True,False
+42,objective,The cath site has no hematoma.,0.5,"[""without hematoma""]","[[456, 472]]","[""exact""]",True,False
+43,objective,The patient's right radial artery pulses are palpable.,0.5,"[""the right radial artery pulses are palpable""]","[[478, 521]]","[""exact""]",True,False
+44,objective,The patient's EKG shows a normal sinus rhythm.,0.0,"[""a normal sinus rhythm""]","[[562, 583]]","[""exact""]",True,False
+45,objective,The patient's EKG shows good R wave progression.,0.0,"[""good R wave progression""]","[[585, 608]]","[""exact""]",True,False
+46,objective,The patient's EKG shows expected changes after a STEMI.,0.25,"[""expected changes after a STEMI""]","[[614, 644]]","[""exact""]",True,False
+47,objective,The patient's echo reveals a reduced ejection fraction.,0.0,"[""a reduced ejection fraction""]","[[663, 690]]","[""exact""]",True,False
+48,objective,The patient's ejection fraction is 35%.,0.0,"[""a reduced ejection fraction of 35%""]","[[663, 697]]","[""exact""]",True,False
+49,assessment,The patient has coronary artery disease.,0.0,"[""The patient has coronary artery disease"", ""Coronary artery disease""]","[[12, 51], [172, 195]]","[""exact"", ""exact""]",True,True
+50,assessment,The patient has newly reduced left ventricular dysfunction.,0.25,"[""newly reduced left ventricular dysfunction"", ""reduced left ventricular dysfunction""]","[[53, 95], [59, 95]]","[""exact"", ""exact""]",True,True
+51,assessment,The patient has moderate mitral regurgitation.,0.25,"[""moderate mitral regurgitation"", ""moderate mitral regurgitation""]","[[101, 130], [101, 130]]","[""exact"", ""exact""]",True,True
+52,assessment,The patient has acute heart failure.,0.0,"[""acute heart failure"", ""acute heart failure""]","[[136, 155], [136, 155]]","[""exact"", ""exact""]",True,True
+53,plan,The patient was prescribed Lasix 40 milligrams.,0.0,"[""Lasix 40 milligrams once daily""]","[[13, 43]]","[""exact""]",True,False
+54,plan,The patient was prescribed Lasix once daily.,0.0,"[""Lasix 40 milligrams once daily""]","[[13, 43]]","[""exact""]",True,False
+55,plan,The patient was prescribed Lasix for fluid retention.,0.25,"[""for fluid retention""]","[[44, 63]]","[""exact""]",True,False
+56,plan,The patient was prescribed Aldactone 12.5 milligrams.,0.0,"[""Aldactone 12.5 milligrams daily""]","[[73, 104]]","[""exact""]",True,False
+57,plan,The patient was prescribed Aldactone daily.,0.0,"[""Aldactone 12.5 milligrams daily""]","[[73, 104]]","[""exact""]",True,False
+58,plan,The patient was prescribed Aldactone for fluid retention.,0.25,"[""for the same reason""]","[[105, 124]]","[""exact""]",True,False
+59,plan,The patient was referred to cardiac rehab.,0.0,"[""I referred the patient to cardiac rehab""]","[[126, 165]]","[""exact""]",True,False
+60,plan,The patient was referred to cardiac rehab for education.,0.0,"[""for education and exercise counseling""]","[[166, 203]]","[""exact""]",True,False
+61,plan,The patient was referred to cardiac rehab for exercise counseling.,0.0,"[""for education and exercise counseling""]","[[166, 203]]","[""exact""]",True,False
+62,plan,The patient is taking aspirin.,0.25,"[""including aspirin""]","[[263, 280]]","[""exact""]",True,False
+63,plan,The patient will have an echo repeated in two months.,0.0,"[""I will repeat an echo in about two months"", ""another echo will be repeated in two months""]","[[324, 365], [550, 593]]","[""exact"", ""exact""]",True,True
+64,plan,The patient was recommended nutrition counseling.,0.5,"[""I also recommend nutrition counseling""]","[[367, 404]]","[""exact""]",True,False
+65,plan,The patient was recommended to discuss diet options during nutrition counseling.,0.5,"[""to discuss diet options""]","[[405, 428]]","[""exact""]",True,False
+66,plan,The patient was recommended to cut out preserved meat during nutrition counseling.,0.75,"[""cutting out preserved meat""]","[[440, 466]]","[""exact""]",True,False
+67,plan,The patient was recommended to find alternatives to preserved meat during nutrition counseling.,0.75,"[""finding alternatives""]","[[471, 491]]","[""exact""]",True,False

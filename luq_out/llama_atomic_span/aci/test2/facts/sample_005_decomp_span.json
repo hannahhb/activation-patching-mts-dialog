@@ -1,0 +1,930 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 40-year-old female.",
+        "spans": [
+          "a 40-year-old female"
+        ],
+        "span_offsets": [
+          [
+            18,
+            38
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with a 4-day history of worsening right elbow pain.",
+        "spans": [
+          "a 4-day history of worsening right elbow pain"
+        ],
+        "span_offsets": [
+          [
+            54,
+            99
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right elbow pain is exacerbated by activities such as pottery and ceramics.",
+        "spans": [
+          "exacerbated by activities such as pottery and ceramics"
+        ],
+        "span_offsets": [
+          [
+            101,
+            155
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is located on the inside of the elbow.",
+        "spans": [
+          "The pain is located on the inside of the elbow"
+        ],
+        "span_offsets": [
+          [
+            157,
+            203
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain radiates down the arm.",
+        "spans": [
+          "radiates down the arm"
+        ],
+        "span_offsets": [
+          [
+            208,
+            229
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient describes the pain as a 7 out of 10.",
+        "spans": [
+          "describes the pain as a 7 out of 10"
+        ],
+        "span_offsets": [
+          [
+            235,
+            270
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain keeps her awake at night.",
+        "spans": [
+          "it keeps her awake at night"
+        ],
+        "span_offsets": [
+          [
+            282,
+            309
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has tried taking ibuprofen for pain relief.",
+        "spans": [
+          "She has tried taking ibuprofen"
+        ],
+        "span_offsets": [
+          [
+            311,
+            341
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ibuprofen has not provided significant relief for the patient's pain.",
+        "spans": [
+          "it has not provided significant relief"
+        ],
+        "span_offsets": [
+          [
+            347,
+            385
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of hypertension.",
+        "spans": [
+          "a history of hypertension"
+        ],
+        "span_offsets": [
+          [
+            405,
+            430
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of diabetes.",
+        "spans": [
+          "a history of diabetes"
+        ],
+        "span_offsets": [
+          [
+            435,
+            443
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is currently taking lisinopril.",
+        "spans": [
+          "taking 10mg of lisinopril"
+        ],
+        "span_offsets": [
+          [
+            551,
+            576
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lisinopril dose is 10mg.",
+        "spans": [
+          "10mg of lisinopril"
+        ],
+        "span_offsets": [
+          [
+            558,
+            576
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is currently taking metformin.",
+        "spans": [
+          "taking 500mg of metformin"
+        ],
+        "span_offsets": [
+          [
+            581,
+            599
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's metformin dose is 500mg.",
+        "spans": [
+          "500mg of metformin"
+        ],
+        "span_offsets": [
+          [
+            581,
+            599
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes metformin twice a day.",
+        "spans": [
+          "500mg of metformin twice a day"
+        ],
+        "span_offsets": [
+          [
+            581,
+            611
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a sweet tooth.",
+        "spans": [
+          "a sweet tooth"
+        ],
+        "span_offsets": [
+          [
+            668,
+            681
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of baking.",
+        "spans": [
+          "a history of baking"
+        ],
+        "span_offsets": [
+          [
+            686,
+            705
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient sometimes forgets to take her medication.",
+        "spans": [
+          "admits to sometimes forgetting to take her medication"
+        ],
+        "span_offsets": [
+          [
+            800,
+            853
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is 120/70.",
+        "spans": [
+          "Blood pressure 120/70"
+        ],
+        "span_offsets": [
+          [
+            13,
+            34
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's respiratory rate is 18.",
+        "spans": [
+          "respiratory rate 18"
+        ],
+        "span_offsets": [
+          [
+            36,
+            55
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's temperature is 97.9\u00b0F.",
+        "spans": [
+          "temperature 97.9\u00b0F"
+        ],
+        "span_offsets": [
+          [
+            57,
+            75
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's oxygen saturation is 100%.",
+        "spans": [
+          "oxygen saturation 100%"
+        ],
+        "span_offsets": [
+          [
+            77,
+            99
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has moderate tenderness at the medial epicondyle.",
+        "spans": [
+          "Moderate tenderness at the medial epicondyle"
+        ],
+        "span_offsets": [
+          [
+            117,
+            161
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences pain with resisted pronation of the right forearm.",
+        "spans": [
+          "pain with resisted pronation of the right forearm"
+        ],
+        "span_offsets": [
+          [
+            163,
+            212
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences pain with flexion and bending of the wrist.",
+        "spans": [
+          "pain with flexion and bending of the wrist"
+        ],
+        "span_offsets": [
+          [
+            218,
+            260
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have a rash.",
+        "spans": [
+          "No rash"
+        ],
+        "span_offsets": [
+          [
+            262,
+            269
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have bruising.",
+        "spans": [
+          "No rash, bruising, or swelling is noted"
+        ],
+        "span_offsets": [
+          [
+            262,
+            301
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have swelling.",
+        "spans": [
+          "No rash, bruising, or swelling is noted"
+        ],
+        "span_offsets": [
+          [
+            262,
+            301
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has medial epicondylitis.",
+        "spans": [
+          "The patient has medial epicondylitis,"
+        ],
+        "span_offsets": [
+          [
+            12,
+            49
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Medial epicondylitis is characterized by pain caused by overuse and damage to the tendons in the arm.",
+        "spans": [
+          "a condition characterized by pain caused by overuse and damage to the tendons in the arm"
+        ],
+        "span_offsets": [
+          [
+            50,
+            138
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has medial epicondylitis that is active.",
+        "spans": [
+          "Medial epicondylitis (active)"
+        ],
+        "span_offsets": [
+          [
+            155,
+            184
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has hypertension.",
+        "spans": [
+          "hypertension (stable)"
+        ],
+        "span_offsets": [
+          [
+            186,
+            207
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's hypertension is stable.",
+        "spans": [
+          "hypertension (stable)"
+        ],
+        "span_offsets": [
+          [
+            186,
+            207
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has diabetes.",
+        "spans": [
+          "diabetes (stable)"
+        ],
+        "span_offsets": [
+          [
+            209,
+            226
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's diabetes is stable.",
+        "spans": [
+          "diabetes (stable)"
+        ],
+        "span_offsets": [
+          [
+            209,
+            226
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was ordered a sling for her right arm.",
+        "spans": [
+          "I ordered a sling for the patient's right arm"
+        ],
+        "span_offsets": [
+          [
+            0,
+            45
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to wear the sling while awake.",
+        "spans": [
+          "to be worn while awake"
+        ],
+        "span_offsets": [
+          [
+            46,
+            68
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to apply ice to her elbow.",
+        "spans": [
+          "apply ice to the elbow"
+        ],
+        "span_offsets": [
+          [
+            92,
+            114
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to apply ice to her elbow for 20 minutes.",
+        "spans": [
+          "for 20 minutes"
+        ],
+        "span_offsets": [
+          [
+            115,
+            129
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to apply ice to her elbow three times a day.",
+        "spans": [
+          "three times a day"
+        ],
+        "span_offsets": [
+          [
+            131,
+            148
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed ibuprofen.",
+        "spans": [
+          "I also prescribed 600mg of ibuprofen"
+        ],
+        "span_offsets": [
+          [
+            150,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed 600mg of ibuprofen.",
+        "spans": [
+          "600mg of ibuprofen"
+        ],
+        "span_offsets": [
+          [
+            168,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed ibuprofen every 6 hours.",
+        "spans": [
+          "every 6 hours"
+        ],
+        "span_offsets": [
+          [
+            187,
+            200
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed ibuprofen with food.",
+        "spans": [
+          "with food"
+        ],
+        "span_offsets": [
+          [
+            201,
+            210
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed ibuprofen for 1 week.",
+        "spans": [
+          "for 1 week"
+        ],
+        "span_offsets": [
+          [
+            211,
+            221
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid pottery and ceramics.",
+        "spans": [
+          "avoid pottery and ceramics"
+        ],
+        "span_offsets": [
+          [
+            240,
+            266
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid pottery and ceramics for the next 2 weeks.",
+        "spans": [
+          "for the next 2 weeks"
+        ],
+        "span_offsets": [
+          [
+            267,
+            287
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's metformin was increased to 1000mg twice a day.",
+        "spans": [
+          "I increased her metformin to 1000mg twice a day"
+        ],
+        "span_offsets": [
+          [
+            334,
+            381
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was ordered an A1c test.",
+        "spans": [
+          "I ordered an A1c test"
+        ],
+        "span_offsets": [
+          [
+            386,
+            400
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was referred to diabetic counseling.",
+        "spans": [
+          "I also referred her to diabetic counseling"
+        ],
+        "span_offsets": [
+          [
+            407,
+            449
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lisinopril was continued at 10mg.",
+        "spans": [
+          "I continued her on lisinopril 10mg"
+        ],
+        "span_offsets": [
+          [
+            505,
+            539
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a follow-up appointment scheduled in 2 weeks.",
+        "spans": [
+          "I scheduled a follow-up appointment in 2 weeks"
+        ],
+        "span_offsets": [
+          [
+            553,
+            599
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's treatment plan will be reviewed and adjusted as needed at the follow-up appointment.",
+        "spans": [
+          "to review the patient's progress and adjust her treatment plan as needed"
+        ],
+        "span_offsets": [
+          [
+            600,
+            672
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

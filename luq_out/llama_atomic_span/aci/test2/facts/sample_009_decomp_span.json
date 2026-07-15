@@ -1,0 +1,953 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Christina.",
+        "spans": [
+          "The patient, Christina,"
+        ],
+        "span_offsets": [
+          [
+            5,
+            28
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a non-healing foot ulcer on her right foot.",
+        "spans": [
+          "a non-healing foot ulcer on her right foot"
+        ],
+        "span_offsets": [
+          [
+            43,
+            85
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's foot ulcer has been present for approximately one year.",
+        "spans": [
+          "which has been present for approximately one year"
+        ],
+        "span_offsets": [
+          [
+            87,
+            136
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's foot wound initially started as a blister.",
+        "spans": [
+          "the wound initially started as a blister"
+        ],
+        "span_offsets": [
+          [
+            155,
+            195
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's foot wound became red and infected.",
+        "spans": [
+          "became red and infected"
+        ],
+        "span_offsets": [
+          [
+            197,
+            220
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was treated with antibiotics for the foot wound.",
+        "spans": [
+          "was treated with antibiotics"
+        ],
+        "span_offsets": [
+          [
+            226,
+            254
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's foot wound has not fully resolved.",
+        "spans": [
+          "but has not fully resolved"
+        ],
+        "span_offsets": [
+          [
+            256,
+            282
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any recent trauma to the foot.",
+        "spans": [
+          "She denies any recent trauma to the foot"
+        ],
+        "span_offsets": [
+          [
+            284,
+            324
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of type 2 diabetes.",
+        "spans": [
+          "a history of type 2 diabetes"
+        ],
+        "span_offsets": [
+          [
+            342,
+            370
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has neuropathy.",
+        "spans": [
+          "neuropathy"
+        ],
+        "span_offsets": [
+          [
+            390,
+            400
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has decreased sensation in her foot due to neuropathy.",
+        "spans": [
+          "decreased sensation in her foot"
+        ],
+        "span_offsets": [
+          [
+            407,
+            438
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's foot wound has been producing more drainage lately.",
+        "spans": [
+          "the wound has been producing more drainage lately"
+        ],
+        "span_offsets": [
+          [
+            458,
+            507
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been feeling tired.",
+        "spans": [
+          "she has been feeling tired"
+        ],
+        "span_offsets": [
+          [
+            512,
+            538
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's past medical history includes type 2 diabetes.",
+        "spans": [
+          "The patient has type 2 diabetes"
+        ],
+        "span_offsets": [
+          [
+            563,
+            594
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's past medical history includes neuropathy.",
+        "spans": [
+          "neuropathy"
+        ],
+        "span_offsets": [
+          [
+            390,
+            400
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been taking Keflex antibiotics.",
+        "spans": [
+          "She has been taking Keflex antibiotics"
+        ],
+        "span_offsets": [
+          [
+            633,
+            671
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been taking Keflex antibiotics for the past five months.",
+        "spans": [
+          "for the past five months"
+        ],
+        "span_offsets": [
+          [
+            672,
+            696
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports fatigue.",
+        "spans": [
+          "The patient reports fatigue"
+        ],
+        "span_offsets": [
+          [
+            718,
+            745
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports increased drainage from the wound.",
+        "spans": [
+          "increased drainage from the wound"
+        ],
+        "span_offsets": [
+          [
+            750,
+            783
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Keflex.",
+        "spans": [
+          "Keflex"
+        ],
+        "span_offsets": [
+          [
+            653,
+            659
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Keflex 500mg.",
+        "spans": [
+          "Keflex [500mg]"
+        ],
+        "span_offsets": [
+          [
+            807,
+            821
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Keflex twice daily.",
+        "spans": [
+          "[twice daily]"
+        ],
+        "span_offsets": [
+          [
+            822,
+            835
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Keflex for infection.",
+        "spans": [
+          "[for infection]"
+        ],
+        "span_offsets": [
+          [
+            836,
+            851
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has a wound on the dorsal aspect of the lateral right foot.",
+        "spans": [
+          "The patient has a 1 by 2 centimeter (2 inch) circular wound on the dorsal aspect of the lateral right foot, proximal to the fifth MTP joint"
+        ],
+        "span_offsets": [
+          [
+            15,
+            154
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The wound is 1 by 2 centimeters in size.",
+        "spans": [
+          "1 by 2 centimeter"
+        ],
+        "span_offsets": [
+          [
+            33,
+            50
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The wound is circular in shape.",
+        "spans": [
+          "circular wound"
+        ],
+        "span_offsets": [
+          [
+            60,
+            74
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The wound is located proximal to the fifth MTP joint.",
+        "spans": [
+          "proximal to the fifth MTP joint"
+        ],
+        "span_offsets": [
+          [
+            123,
+            154
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The wound has yellow slough.",
+        "spans": [
+          "The wound has yellow slough"
+        ],
+        "span_offsets": [
+          [
+            156,
+            183
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The wound has minimal granulation tissue.",
+        "spans": [
+          "minimal granulation tissue"
+        ],
+        "span_offsets": [
+          [
+            188,
+            214
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The wound does not have surrounding erythema.",
+        "spans": [
+          "no surrounding erythema"
+        ],
+        "span_offsets": [
+          [
+            220,
+            243
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The wound does not have cellulitis.",
+        "spans": [
+          "no surrounding erythema or cellulitis"
+        ],
+        "span_offsets": [
+          [
+            220,
+            257
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The wound does not have fluid collection.",
+        "spans": [
+          "fluid collection"
+        ],
+        "span_offsets": [
+          [
+            259,
+            275
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The wound does not have necrosis.",
+        "spans": [
+          "necrosis"
+        ],
+        "span_offsets": [
+          [
+            277,
+            285
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The wound does not have bony exposure.",
+        "spans": [
+          "bony exposure"
+        ],
+        "span_offsets": [
+          [
+            290,
+            303
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The wound does not hurt when touched.",
+        "spans": [
+          "The wound does not hurt when touched"
+        ],
+        "span_offsets": [
+          [
+            305,
+            341
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's X-ray of the right foot shows no evidence of osteomyelitis.",
+        "spans": [
+          "X-ray of the right foot shows no evidence of osteomyelitis"
+        ],
+        "span_offsets": [
+          [
+            358,
+            416
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has a diabetic foot ulcer.",
+        "spans": [
+          "The patient has a diabetic foot ulcer with possible decreased blood flow"
+        ],
+        "span_offsets": [
+          [
+            12,
+            84
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has possible decreased blood flow.",
+        "spans": [
+          "The patient has a diabetic foot ulcer with possible decreased blood flow"
+        ],
+        "span_offsets": [
+          [
+            12,
+            84
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a diabetic foot ulcer as a problem.",
+        "spans": [
+          "Diabetic foot ulcer; decreased blood flow to the right foot; high A1c; uncontrolled type 2 diabetes"
+        ],
+        "span_offsets": [
+          [
+            101,
+            200
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has decreased blood flow to the right foot as a problem.",
+        "spans": [
+          "Diabetic foot ulcer; decreased blood flow to the right foot; high A1c; uncontrolled type 2 diabetes"
+        ],
+        "span_offsets": [
+          [
+            101,
+            200
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has high A1c as a problem.",
+        "spans": [
+          "Diabetic foot ulcer; decreased blood flow to the right foot; high A1c; uncontrolled type 2 diabetes"
+        ],
+        "span_offsets": [
+          [
+            101,
+            200
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has uncontrolled type 2 diabetes as a problem.",
+        "spans": [
+          "Diabetic foot ulcer; decreased blood flow to the right foot; high A1c; uncontrolled type 2 diabetes"
+        ],
+        "span_offsets": [
+          [
+            101,
+            200
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed colaganase ointment.",
+        "spans": [
+          "I prescribed colaganase ointment"
+        ],
+        "span_offsets": [
+          [
+            0,
+            32
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's colaganase ointment is to be applied once a day.",
+        "spans": [
+          "to be applied once a day"
+        ],
+        "span_offsets": [
+          [
+            33,
+            57
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's colaganase ointment is to be applied to the wound.",
+        "spans": [
+          "to be applied once a day to the wound"
+        ],
+        "span_offsets": [
+          [
+            33,
+            70
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The wound is to be covered with a sterile dressing.",
+        "spans": [
+          "covered with a sterile dressing"
+        ],
+        "span_offsets": [
+          [
+            72,
+            103
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The physician will perform a debridement of the wound in the office.",
+        "spans": [
+          "I will perform a debridement of the wound in the office"
+        ],
+        "span_offsets": [
+          [
+            105,
+            160
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will have an ABI test.",
+        "spans": [
+          "I ordered an ABI (ankle-brachial index) test"
+        ],
+        "span_offsets": [
+          [
+            162,
+            206
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The ABI test is to determine the patient's blood supply.",
+        "spans": [
+          "to determine the patient's blood supply"
+        ],
+        "span_offsets": [
+          [
+            207,
+            246
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The physician will obtain a surgical shoe for the patient.",
+        "spans": [
+          "I will obtain a surgical shoe"
+        ],
+        "span_offsets": [
+          [
+            248,
+            277
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The surgical shoe is to reduce pressure on the area.",
+        "spans": [
+          "to reduce pressure on the area"
+        ],
+        "span_offsets": [
+          [
+            278,
+            308
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to wear the surgical shoe.",
+        "spans": [
+          "I instructed the patient to wear the surgical shoe"
+        ],
+        "span_offsets": [
+          [
+            310,
+            360
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to avoid putting pressure on the wound.",
+        "spans": [
+          "avoid putting pressure on the wound"
+        ],
+        "span_offsets": [
+          [
+            365,
+            400
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be seen in two weeks for follow-up.",
+        "spans": [
+          "I will see the patient back in two weeks",
+          "I will see the patient back in two weeks"
+        ],
+        "span_offsets": [
+          [
+            402,
+            442
+          ],
+          [
+            402,
+            442
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The physician may perform another debridement in two weeks.",
+        "spans": [
+          "possible perform another debridement"
+        ],
+        "span_offsets": [
+          [
+            469,
+            505
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

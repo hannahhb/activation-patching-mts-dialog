@@ -1,0 +1,62 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 31-year-old female.,0.0,"[""a 31-year-old female""]","[[18, 38]]","[""exact""]",True,False
+1,subjective,The patient has been experiencing abdominal pain for the past week.,0.0,"[""abdominal pain for the past week""]","[[62, 94]]","[""exact""]",True,False
+2,subjective,The patient's abdominal pain has been gradually increasing in severity.,0.0,"[""which has been gradually increasing in severity""]","[[96, 143]]","[""exact""]",True,False
+3,subjective,The patient has a history of diabetes type two.,0.0,"[""history of diabetes type two""]","[[155, 183]]","[""exact""]",True,False
+4,subjective,The patient has a history of asthma.,0.0,"[""history of asthma""]","[[188, 194]]","[""word""]",True,False
+5,subjective,The patient reports nausea.,0.0,"[""nausea and vomiting""]","[[208, 227]]","[""exact""]",True,False
+6,subjective,The patient reports vomiting.,0.0,"[""nausea and vomiting""]","[[208, 227]]","[""exact""]",True,False
+7,subjective,The patient's nausea occurred approximately three times in the past week.,0.0,"[""nausea occurring approximately three times in the past week""]","[[234, 293]]","[""exact""]",True,False
+8,subjective,The patient's vomiting occurred a couple of times.,0.25,"[""vomiting a couple of times""]","[[298, 324]]","[""exact""]",True,False
+9,subjective,The patient believes her increased coffee consumption may have contributed to the abdominal pain.,0.0,"[""may have contributed to the abdominal pain""]","[[372, 414]]","[""exact""]",True,False
+10,subjective,The patient consumed a lot of coffee in the past week.,0.0,"[""having consumed a lot of coffee""]","[[416, 447]]","[""exact""]",True,False
+11,subjective,The patient consumed venti-sized nitrocolbrus from Starbucks in the past week.,0.5,"[""venti-sized nitrocolbrus from Starbucks""]","[[459, 498]]","[""exact""]",True,False
+12,subjective,The patient's abdominal pain is located in both sides of her upper abdomen.,0.25,"[""located in both sides of her upper abdomen""]","[[530, 572]]","[""exact""]",True,False
+13,subjective,The patient's abdominal pain worsens with exercise.,0.0,"[""worsens with exercise""]","[[577, 598]]","[""exact""]",True,False
+14,subjective,The patient's abdominal pain worsens with jogging.,0.0,"[""such as jogging or running""]","[[600, 626]]","[""exact""]",True,False
+15,subjective,The patient's abdominal pain worsens with running.,0.0,"[""such as jogging or running""]","[[600, 626]]","[""exact""]",True,False
+16,subjective,The patient has not had any fever with the pain.,0.0,"[""has not had any fever with the pain""]","[[632, 667]]","[""exact""]",True,False
+17,subjective,The patient is taking metformin.,0.0,"[""metformin 500 milligrams twice daily""]","[[775, 811]]","[""exact""]",True,False
+18,subjective,The patient is taking metformin 500 milligrams twice daily.,0.5,"[""metformin 500 milligrams twice daily""]","[[775, 811]]","[""exact""]",True,False
+19,subjective,The patient's metformin is for diabetes.,0.0,"[""Metformin 500 milligrams twice daily for diabetes""]","[[954, 1003]]","[""exact""]",True,False
+20,subjective,The patient is taking flovent.,0.0,"[""Flovent twice daily""]","[[1004, 1023]]","[""exact""]",True,False
+21,subjective,The patient is taking flovent twice daily.,0.0,"[""Flovent twice daily""]","[[1004, 1023]]","[""exact""]",True,False
+22,subjective,The patient's flovent is for asthma.,0.0,"[""Flovent twice daily for asthma""]","[[1004, 1034]]","[""exact""]",True,False
+23,subjective,The patient is taking albuterol.,0.0,"[""Albuterol as needed""]","[[1035, 1054]]","[""exact""]",True,False
+24,subjective,The patient is taking albuterol as needed.,0.0,"[""Albuterol as needed""]","[[1035, 1054]]","[""exact""]",True,False
+25,subjective,The patient's albuterol is for asthma.,0.0,"[""Albuterol as needed for asthma""]","[[1035, 1065]]","[""exact""]",True,False
+26,subjective,The patient's blood sugar has been under control at around 800.,0.75,"[""her blood sugar has been under control at around 800""]","[[817, 869]]","[""exact""]",True,False
+27,objective,The patient's physical exam is mostly unremarkable.,0.25,"[""The patient's physical exam is mostly unremarkable""]","[[15, 65]]","[""exact""]",True,False
+28,objective,The patient has mild tenderness in the epigastrium of her abdomen.,0.0,"[""mild tenderness in the epigastrium of her abdomen""]","[[72, 121]]","[""exact""]",True,False
+29,objective,The patient has a grade three out of six systolic ejection murmur.,0.0,"[""a grade three out of six systolic ejection murmur""]","[[123, 172]]","[""exact""]",True,False
+30,objective,The patient has mild end-expiratory wheezes.,0.0,"[""mild end-expiratory wheezes""]","[[174, 201]]","[""exact""]",True,False
+31,objective,The patient's lung exam is otherwise normal.,0.25,"[""and otherwise normal lung exam""]","[[203, 233]]","[""exact""]",True,False
+32,assessment,The patient is diagnosed with acute gastritis.,0.0,"[""I diagnose the patient with acute gastritis""]","[[12, 55]]","[""exact""]",True,False
+33,assessment,The patient's acute gastritis is likely related to caffeine intake.,0.0,"[""likely related to caffeine intake""]","[[57, 90]]","[""exact""]",True,False
+34,assessment,The patient's acute gastritis is possibly exacerbated by her history of alcohol use.,0.0,"[""possibly exacerbated by her history of alcohol use""]","[[95, 145]]","[""exact""]",True,False
+35,assessment,The patient has gastritis.,0.0,"[""Gastritis""]","[[161, 170]]","[""exact""]",True,False
+36,assessment,The patient has diabetes type two.,0.0,"[""Diabetes type two""]","[[172, 189]]","[""exact""]",True,False
+37,assessment,The patient has asthma.,0.0,"[""Asthma""]","[[191, 197]]","[""exact""]",True,False
+38,assessment,The patient has a systolic ejection murmur.,1.0,"[""Systolic ejection murmur""]","[[199, 223]]","[""exact""]",True,False
+39,plan,The patient was prescribed Zantac.,0.0,"[""I prescribed Zantac 150 milligrams twice daily for gastritis""]","[[0, 60]]","[""exact""]",True,False
+40,plan,The patient's Zantac dose is 150 milligrams.,0.0,"[""150 milligrams""]","[[20, 34]]","[""exact""]",True,False
+41,plan,The patient's Zantac frequency is twice daily.,0.0,"[""twice daily""]","[[35, 46]]","[""exact""]",True,False
+42,plan,The patient's Zantac indication is gastritis.,0.75,"[""for gastritis""]","[[47, 60]]","[""exact""]",True,False
+43,plan,The patient's metformin dose was increased.,0.75,"[""I increased the patient's metformin dose to 1000 milligrams in the morning and 500 milligrams in the evening""]","[[62, 170]]","[""exact""]",True,False
+44,plan,The patient's metformin morning dose is 1000 milligrams.,0.25,"[""1000 milligrams in the morning""]","[[106, 136]]","[""exact""]",True,False
+45,plan,The patient's metformin evening dose is 500 milligrams.,0.25,"[""500 milligrams in the evening""]","[[141, 170]]","[""exact""]",True,False
+46,plan,The patient was advised to cut back on caffeine.,0.25,"[""cut back on her caffeine""]","[[197, 221]]","[""exact""]",True,False
+47,plan,The patient was advised to limit coffee consumption.,0.25,"[""limiting her coffee consumption""]","[[252, 283]]","[""exact""]",True,False
+48,plan,The patient was advised to reduce alcohol intake.,0.5,"[""reducing her alcohol to less than two or three drinks per week""]","[[288, 350]]","[""exact""]",True,False
+49,plan,The patient's recommended alcohol intake is less than two or three drinks per week.,0.5,"[""less than two or three drinks per week""]","[[312, 350]]","[""exact""]",True,False
+50,plan,The patient was advised to decrease spicy food intake.,0.25,"[""decrease her spicy food intake""]","[[380, 410]]","[""exact""]",True,False
+51,plan,A urinalysis was ordered for the patient.,0.25,"[""I ordered a urinalysis""]","[[412, 434]]","[""exact""]",True,False
+52,plan,A urine pregnancy test was ordered for the patient.,0.25,"[""urine pregnancy test""]","[[436, 456]]","[""exact""]",True,False
+53,plan,A CBC was ordered for the patient.,0.25,"[""CBC""]","[[458, 461]]","[""exact""]",True,False
+54,plan,A comprehensive metabolic panel was ordered for the patient.,0.25,"[""comprehensive metabolic panel""]","[[467, 496]]","[""exact""]",True,False
+55,plan,The patient was instructed to continue taking flovent.,0.5,"[""continue taking flovent twice daily""]","[[555, 590]]","[""exact""]",True,False
+56,plan,The patient's flovent frequency is twice daily.,1.0,"[""twice daily""]","[[35, 46]]","[""exact""]",True,False
+57,plan,The patient was instructed to continue taking albuterol as needed.,0.5,"[""albuterol as needed""]","[[595, 614]]","[""exact""]",True,False
+58,plan,The patient's albuterol indication is asthma.,0.5,"[""for asthma""]","[[615, 625]]","[""exact""]",True,False
+59,plan,A follow-up appointment was scheduled with the patient in four weeks.,0.0,"[""I scheduled a follow-up appointment with the patient in four weeks""]","[[639, 705]]","[""exact""]",True,False
+60,plan,The purpose of the follow-up appointment is to monitor gastritis and diabetes.,1.0,"[""to monitor her gastritis and diabetes""]","[[706, 743]]","[""exact""]",True,False

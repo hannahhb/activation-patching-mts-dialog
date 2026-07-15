@@ -1,0 +1,891 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Jacqueline.",
+        "spans": [
+          "The patient, Jacqueline,"
+        ],
+        "span_offsets": [
+          [
+            5,
+            29
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presented with a complaint of a painful right ankle.",
+        "spans": [
+          "a complaint of a painful right ankle"
+        ],
+        "span_offsets": [
+          [
+            45,
+            81
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right ankle pain was caused by a mountain biking incident.",
+        "spans": [
+          "a mountain biking incident, where she fell and twisted her ankle outward"
+        ],
+        "span_offsets": [
+          [
+            88,
+            160
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient fell and twisted her ankle outward during the incident.",
+        "spans": [
+          "where she fell and twisted her ankle outward"
+        ],
+        "span_offsets": [
+          [
+            116,
+            160
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is located on the outer ankle.",
+        "spans": [
+          "the pain is located on the outer ankle"
+        ],
+        "span_offsets": [
+          [
+            179,
+            217
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences tingling in her toes.",
+        "spans": [
+          "some tingling and numbness in her toes"
+        ],
+        "span_offsets": [
+          [
+            240,
+            278
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences numbness in her toes.",
+        "spans": [
+          "some tingling and numbness in her toes"
+        ],
+        "span_offsets": [
+          [
+            240,
+            278
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reported numbness in her heart, but this was not discussed further.",
+        "spans": [
+          "some tingling and numbness in her toes and heart",
+          "although I clarified that I am an orthopedic person and couldn't discuss the numbness in her heart"
+        ],
+        "span_offsets": [
+          [
+            240,
+            288
+          ],
+          [
+            290,
+            388
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient's pain is not relieved by Tylenol.",
+        "spans": [
+          "the pain is not relieved by Tylenol"
+        ],
+        "span_offsets": [
+          [
+            407,
+            442
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient heard a crack when the injury occurred.",
+        "spans": [
+          "she heard a crack when the injury occurred"
+        ],
+        "span_offsets": [
+          [
+            452,
+            494
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies fever.",
+        "spans": [
+          "She denies any fever, chills, or other systemic symptoms"
+        ],
+        "span_offsets": [
+          [
+            496,
+            552
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies chills.",
+        "spans": [
+          "She denies any fever, chills, or other systemic symptoms"
+        ],
+        "span_offsets": [
+          [
+            496,
+            552
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies other systemic symptoms.",
+        "spans": [
+          "She denies any fever, chills, or other systemic symptoms"
+        ],
+        "span_offsets": [
+          [
+            496,
+            552
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reported a fever of 200 degrees Fahrenheit, but this was clarified as not being a fever.",
+        "spans": [
+          "but reports having a fever of 200 degrees Fahrenheit",
+          "which I clarified is not a fever"
+        ],
+        "span_offsets": [
+          [
+            554,
+            606
+          ],
+          [
+            608,
+            640
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient has been mountain biking for three years.",
+        "spans": [
+          "She has been mountain biking for three years"
+        ],
+        "span_offsets": [
+          [
+            642,
+            686
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is unsure of her favorite mountain biking location.",
+        "spans": [
+          "and is not sure of her favorite location"
+        ],
+        "span_offsets": [
+          [
+            687,
+            727
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's temperature is 98.6 degrees Fahrenheit.",
+        "spans": [
+          "Her temperature is 98.6 degrees Fahrenheit"
+        ],
+        "span_offsets": [
+          [
+            13,
+            55
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's blood pressure is 118/77.",
+        "spans": [
+          "blood pressure is 118/77"
+        ],
+        "span_offsets": [
+          [
+            57,
+            81
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heart rate is 77 beats per minute.",
+        "spans": [
+          "heart rate is 77 beats per minute"
+        ],
+        "span_offsets": [
+          [
+            87,
+            120
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has edema on the right ankle.",
+        "spans": [
+          "some edema and erythema on the lateral malleolus"
+        ],
+        "span_offsets": [
+          [
+            172,
+            220
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has erythema on the right ankle.",
+        "spans": [
+          "some edema and erythema on the lateral malleolus"
+        ],
+        "span_offsets": [
+          [
+            172,
+            220
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has ecchymosis on the right ankle.",
+        "spans": [
+          "associated ecchymosis"
+        ],
+        "span_offsets": [
+          [
+            222,
+            243
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has excoriations on the right ankle.",
+        "spans": [
+          "a few excoriations"
+        ],
+        "span_offsets": [
+          [
+            249,
+            267
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has pain to palpation of the right lateral malleolus.",
+        "spans": [
+          "pain to palpation of the right lateral malleolus"
+        ],
+        "span_offsets": [
+          [
+            278,
+            326
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has decreased flexion of the right ankle.",
+        "spans": [
+          "decreased flexion and extension of the right ankle"
+        ],
+        "span_offsets": [
+          [
+            328,
+            378
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has decreased extension of the right ankle.",
+        "spans": [
+          "decreased flexion and extension of the right ankle"
+        ],
+        "span_offsets": [
+          [
+            328,
+            378
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has decreased internal rotation of the right ankle.",
+        "spans": [
+          "internal and external rotation"
+        ],
+        "span_offsets": [
+          [
+            384,
+            414
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has decreased external rotation of the right ankle.",
+        "spans": [
+          "internal and external rotation"
+        ],
+        "span_offsets": [
+          [
+            384,
+            414
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have an apparent injury to the knee.",
+        "spans": [
+          "no apparent injury to the knee or the foot"
+        ],
+        "span_offsets": [
+          [
+            425,
+            467
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have an apparent injury to the foot.",
+        "spans": [
+          "no apparent injury to the knee or the foot"
+        ],
+        "span_offsets": [
+          [
+            425,
+            467
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right ankle x-ray shows no acute fracture.",
+        "spans": [
+          "The right ankle x-ray shows no acute fracture or bony abnormality"
+        ],
+        "span_offsets": [
+          [
+            484,
+            549
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right ankle x-ray shows no bony abnormality.",
+        "spans": [
+          "The right ankle x-ray shows no acute fracture or bony abnormality"
+        ],
+        "span_offsets": [
+          [
+            484,
+            549
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a soft tissue injury on the right ankle.",
+        "spans": [
+          "only some soft tissue injury"
+        ],
+        "span_offsets": [
+          [
+            551,
+            579
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient is suspected to have an acute right ankle sprain.",
+        "spans": [
+          "I believe the patient has an acute right ankle sprain"
+        ],
+        "span_offsets": [
+          [
+            12,
+            65
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has an ankle sprain in their problem list.",
+        "spans": [
+          "Ankle sprain; suspected; confirmed; past; unknown"
+        ],
+        "span_offsets": [
+          [
+            81,
+            130
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The ankle sprain is suspected.",
+        "spans": [
+          "Ankle sprain; suspected; confirmed; past; unknown"
+        ],
+        "span_offsets": [
+          [
+            81,
+            130
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The ankle sprain is confirmed.",
+        "spans": [
+          "Ankle sprain; suspected; confirmed; past; unknown"
+        ],
+        "span_offsets": [
+          [
+            81,
+            130
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The ankle sprain is in the past.",
+        "spans": [
+          "Ankle sprain; suspected; confirmed; past; unknown"
+        ],
+        "span_offsets": [
+          [
+            81,
+            130
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The ankle sprain status is unknown.",
+        "spans": [
+          "Ankle sprain; suspected; confirmed; past; unknown"
+        ],
+        "span_offsets": [
+          [
+            81,
+            130
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed meloxicam for pain.",
+        "spans": [
+          "I prescribed meloxicam 15 milligrams once a day for pain"
+        ],
+        "span_offsets": [
+          [
+            0,
+            56
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's meloxicam dose is 15 milligrams.",
+        "spans": [
+          "15 milligrams"
+        ],
+        "span_offsets": [
+          [
+            23,
+            36
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's meloxicam frequency is once a day.",
+        "spans": [
+          "once a day"
+        ],
+        "span_offsets": [
+          [
+            37,
+            47
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to ice the area for about 20 minutes, five times a day.",
+        "spans": [
+          "ice the area for about 20 minutes, five times a day"
+        ],
+        "span_offsets": [
+          [
+            75,
+            126
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to weight-bear as tolerated.",
+        "spans": [
+          "weight-bear as tolerated"
+        ],
+        "span_offsets": [
+          [
+            135,
+            159
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was recommended an air cast.",
+        "spans": [
+          "an air cast"
+        ],
+        "span_offsets": [
+          [
+            175,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was provided crutches.",
+        "spans": [
+          "provided crutches"
+        ],
+        "span_offsets": [
+          [
+            191,
+            208
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is expected to start feeling better in the next couple of weeks.",
+        "spans": [
+          "start feeling better in the next couple of weeks"
+        ],
+        "span_offsets": [
+          [
+            230,
+            278
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to return if she doesn't improve.",
+        "spans": [
+          "instructed her to return if she doesn't improve"
+        ],
+        "span_offsets": [
+          [
+            283,
+            330
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient may be considered for physical therapy if she doesn't improve.",
+        "spans": [
+          "consider physical therapy or further imaging"
+        ],
+        "span_offsets": [
+          [
+            355,
+            399
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient may be considered for further imaging if she doesn't improve.",
+        "spans": [
+          "consider physical therapy or further imaging"
+        ],
+        "span_offsets": [
+          [
+            355,
+            399
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to follow up with the physician if she doesn't start feeling better.",
+        "spans": [
+          "instructed her to follow up with me if she doesn't start feeling better"
+        ],
+        "span_offsets": [
+          [
+            415,
+            486
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

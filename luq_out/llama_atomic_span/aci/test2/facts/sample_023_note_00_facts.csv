@@ -1,0 +1,73 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 65-year-old female.,0.75,"[""a 65-year-old female""]","[[13, 33]]","[""exact""]",True,False
+1,subjective,The patient presents for follow-up after an inferior ST-elevation myocardial infarction (STEMI).,0.25,"[""an inferior ST-elevation myocardial infarction (STEMI)""]","[[64, 118]]","[""exact""]",True,False
+2,subjective,The patient had an additional stent placed during the STEMI treatment.,0.25,"[""where an additional stent was placed""]","[[119, 155]]","[""exact""]",True,False
+3,subjective,The patient reports experiencing similar symptoms to her previous heart attack.,0.0,"[""similar symptoms to her previous heart attack""]","[[182, 227]]","[""exact""]",True,False
+4,subjective,The patient experienced chest pain that would not go away.,0.5,"[""chest pain that would not go away""]","[[239, 272]]","[""exact""]",True,False
+5,subjective,The patient visited the emergency room due to chest pain that would not go away.,0.75,"[""which prompted her to visit the emergency room""]","[[274, 320]]","[""exact""]",True,False
+6,subjective,The patient has been experiencing lower extremity swelling since being discharged from the hospital.,0.0,"[""lower extremity swelling since being discharged from the hospital""]","[[348, 413]]","[""exact""]",True,False
+7,subjective,The patient's lower extremity swelling is pitting 1+ on her right radial artery.,1.0,"[""it is pitting 1+ on her right radial artery""]","[[430, 473]]","[""exact""]",True,False
+8,subjective,The patient has been taking aspirin as prescribed.,0.0,"[""aspirin, brilinta, and toprol, and has been taking her medications as prescribed""]","[[514, 565]]","[""word""]",True,False
+9,subjective,The patient has been taking brilinta as prescribed.,0.0,"[""aspirin, brilinta, and toprol, and has been taking her medications as prescribed""]","[[514, 565]]","[""word""]",True,False
+10,subjective,The patient has been taking toprol as prescribed.,0.0,"[""aspirin, brilinta, and toprol, and has been taking her medications as prescribed""]","[[514, 565]]","[""word""]",True,False
+11,subjective,The patient has been taking metformin as prescribed.,0.25,"[""and has been monitoring her sugars with metformin""]","[[567, 616]]","[""exact""]",True,False
+12,subjective,The patient's aspirin dose is 81mg daily.,0.0,"[""Aspirin 81mg daily""]","[[1047, 1065]]","[""exact""]",True,False
+13,subjective,The patient's brilinta dose is 90mg twice daily.,0.0,"[""Brilinta 90mg twice daily""]","[[1067, 1092]]","[""exact""]",True,False
+14,subjective,The patient's toprol dose is 50mg daily.,0.0,"[""Toprool 50mg daily""]","[[1094, 1112]]","[""exact""]",True,False
+15,subjective,The patient's metformin dose is not specified.,0.0,"[""Metformin (no dose specified)""]","[[1114, 1143]]","[""exact""]",True,False
+16,subjective,The patient's lipitor dose is 80mg daily.,0.0,"[""Lipitor 80mg daily""]","[[1145, 1163]]","[""exact""]",True,False
+17,subjective,The patient has not been adhering to a strict diet.,0.0,"[""has not been adhering to a strict diet""]","[[622, 660]]","[""exact""]",True,False
+18,subjective,The patient consumes high-sodium foods like pizza.,0.0,"[""high-sodium foods like pizza""]","[[725, 753]]","[""exact""]",True,False
+19,subjective,The patient has a history of coronary artery disease.,0.0,"[""a history of coronary artery disease""]","[[772, 808]]","[""exact""]",True,False
+20,subjective,The patient has a history of hypertension.,0.0,"[""hypertension""]","[[810, 822]]","[""exact""]",True,False
+21,subjective,The patient has a history of diabetes.,0.0,"[""diabetes""]","[[828, 836]]","[""exact""]",True,False
+22,subjective,The patient underwent an RCA stent placement in 2018.,0.5,"[""RCA stent placement in 2018""]","[[859, 886]]","[""exact""]",True,False
+23,subjective,The patient was recently treated for an inferior STEMI.,0.25,"[""recently treated for an inferior STEMI""]","[[895, 933]]","[""exact""]",True,False
+24,subjective,The patient denies any chest pain.,0.5,"[""denies any chest pain""]","[[948, 969]]","[""exact""]",True,False
+25,subjective,The patient denies any shortness of breath.,0.0,"[""denies any chest pain or shortness of breath""]","[[948, 992]]","[""exact""]",True,False
+26,subjective,The patient has been experiencing lower extremity swelling.,0.0,"[""has been experiencing lower extremity swelling""]","[[326, 372]]","[""exact""]",True,False
+27,objective,The patient's neck exam is unremarkable.,0.0,"[""The patient's neck exam is unremarkable""]","[[15, 54]]","[""exact""]",True,False
+28,objective,The patient has no jugular venous distention.,0.0,"[""with no jugular venous distention""]","[[56, 89]]","[""exact""]",True,False
+29,objective,The patient has no carotid bruits.,0.0,"[""or carotid bruits""]","[[90, 107]]","[""exact""]",True,False
+30,objective,The patient has a 3/6 systolic ejection murmur at the left base.,0.0,"[""a 3/6 systolic ejection murmur at the left base""]","[[132, 179]]","[""exact""]",True,False
+31,objective,The patient's lungs are clear.,0.0,"[""The lungs are clear""]","[[181, 200]]","[""exact""]",True,False
+32,objective,The patient has lower extremity swelling.,0.0,"[""lower extremity swelling""]","[[222, 246]]","[""exact""]",True,False
+33,objective,The patient has pitting 1+ on the right radial artery.,0.0,"[""pitting 1+ on the right radial artery""]","[[252, 289]]","[""exact""]",True,False
+34,objective,The cath site is clean.,0.0,"[""The cath site is clean""]","[[291, 313]]","[""exact""]",True,False
+35,objective,The cath site is dry.,0.0,"[""clean, dry""]","[[308, 318]]","[""exact""]",True,False
+36,objective,The cath site is intact.,0.0,"[""and intact""]","[[320, 330]]","[""exact""]",True,False
+37,objective,The patient has no hematoma at the cath site.,0.0,"[""without hematoma""]","[[331, 347]]","[""exact""]",True,False
+38,objective,The patient's right radial artery pulses are palpable.,0.0,"[""the right radial artery pulses are palpable""]","[[353, 396]]","[""exact""]",True,False
+39,objective,The patient's EKG shows a normal sinus rhythm.,0.0,"[""The patient's EKG shows a normal sinus rhythm""]","[[412, 457]]","[""exact""]",True,False
+40,objective,The patient's EKG shows good R wave progression.,0.0,"[""good R wave progression""]","[[459, 482]]","[""exact""]",True,False
+41,objective,The patient's EKG shows evolutionary changes anticipated after a STEMI.,0.0,"[""evolutionary changes anticipated after a STEMI""]","[[488, 534]]","[""exact""]",True,False
+42,objective,The patient's echocardiogram shows a reduced ejection fraction of 35%.,0.0,"[""a reduced ejection fraction of 35%""]","[[561, 595]]","[""exact""]",True,False
+43,assessment,The patient's primary diagnosis is coronary artery disease.,0.75,"[""The patient's primary diagnosis is coronary artery disease""]","[[12, 70]]","[""exact""]",True,False
+44,assessment,The patient has newly reduced left ventricular dysfunction.,0.5,"[""with a newly reduced left ventricular dysfunction""]","[[72, 121]]","[""exact""]",True,False
+45,assessment,The patient has moderate mitral regurgitation.,0.0,"[""with moderate mitral regurgitation""]","[[126, 155]]","[""word""]",True,False
+46,assessment,The patient is experiencing acute heart failure.,0.0,"[""The patient is also experiencing acute heart failure""]","[[157, 209]]","[""exact""]",True,False
+47,assessment,Coronary artery disease is a problem for the patient.,0.0,"[""Coronary artery disease; reduced left ventricular dysfunction; moderate mitral regurgitation; acute heart failure""]","[[226, 339]]","[""exact""]",True,False
+48,assessment,Reduced left ventricular dysfunction is a problem for the patient.,0.0,"[""Coronary artery disease; reduced left ventricular dysfunction; moderate mitral regurgitation; acute heart failure""]","[[226, 339]]","[""exact""]",True,False
+49,assessment,Moderate mitral regurgitation is a problem for the patient.,0.0,"[""Coronary artery disease; reduced left ventricular dysfunction; moderate mitral regurgitation; acute heart failure""]","[[226, 339]]","[""exact""]",True,False
+50,assessment,Acute heart failure is a problem for the patient.,0.0,"[""Coronary artery disease; reduced left ventricular dysfunction; moderate mitral regurgitation; acute heart failure""]","[[226, 339]]","[""exact""]",True,False
+51,plan,The patient was prescribed Lasix 40mg daily.,0.0,"[""Lasix 40mg daily""]","[[13, 29]]","[""exact""]",True,False
+52,plan,The patient was prescribed Lasix to manage fluid retention.,0.25,"[""to manage fluid retention""]","[[30, 55]]","[""exact""]",True,False
+53,plan,The patient was prescribed Aldactone 12.5mg daily.,0.0,"[""Aldactone 12.5mg daily""]","[[75, 97]]","[""exact""]",True,False
+54,plan,The patient was prescribed Aldactone to help with fluid management.,0.0,"[""to help with fluid management""]","[[98, 127]]","[""exact""]",True,False
+55,plan,The patient was referred to cardiac rehab.,0.0,"[""I referred the patient to cardiac rehab""]","[[129, 168]]","[""exact""]",True,False
+56,plan,The purpose of the cardiac rehab referral is to educate the patient on regular exercise.,0.25,"[""to educate her on regular exercise""]","[[169, 203]]","[""exact""]",True,False
+57,plan,The purpose of the cardiac rehab referral is to improve the patient's confidence.,1.0,"[""and improve her confidence""]","[[204, 230]]","[""exact""]",True,False
+58,plan,The patient's current medication includes aspirin.,0.25,"[""including aspirin""]","[[273, 290]]","[""exact""]",True,False
+59,plan,The patient's current medication includes brilinta.,0.25,"[""including aspirin, brilinta""]","[[273, 300]]","[""exact""]",True,False
+60,plan,The patient's current medication includes toprol.,0.25,"[""including aspirin, brilinta, toprol""]","[[273, 308]]","[""exact""]",True,False
+61,plan,The patient's current medication includes Lipitor.,0.25,"[""and Lipitor""]","[[310, 321]]","[""exact""]",True,False
+62,plan,The patient's current medication includes Metformin.,0.75,"[""including Metformin""]","[[323, 358]]","[""semantic""]",True,False
+63,plan,The patient will have an echo repeated in about two months.,0.0,"[""to repeat an echo in about two months""]","[[366, 403]]","[""exact""]",True,False
+64,plan,The purpose of the echo is to monitor the patient's condition.,0.25,"[""to monitor the patient's condition""]","[[404, 438]]","[""exact""]",True,False
+65,plan,The patient was recommended nutrition counseling.,0.5,"[""I recommend nutrition counseling""]","[[440, 472]]","[""exact""]",True,False
+66,plan,The purpose of the nutrition counseling is to discuss alternative diet options.,0.5,"[""to discuss alternative diet options""]","[[473, 508]]","[""exact""]",True,False
+67,plan,The purpose of the nutrition counseling is to provide suggestions for reducing sodium intake.,0.5,"[""and suggestions for reducing sodium intake""]","[[509, 551]]","[""exact""]",True,False
+68,plan,"The patient should reduce sodium intake, particularly with regards to preserved meats like pepperoni.",0.75,"[""particularly with regards to preserved meats like pepperoni""]","[[553, 612]]","[""exact""]",True,False
+69,plan,The patient will return in two months for a follow-up appointment.,0.0,"[""The patient will return in two months for a follow-up appointment""]","[[626, 691]]","[""exact""]",True,False
+70,plan,The purpose of the follow-up appointment is to monitor the patient's condition.,0.0,"[""to monitor her condition""]","[[692, 716]]","[""exact""]",True,False
+71,plan,The purpose of the follow-up appointment is to assess the effectiveness of the treatment plan.,0.0,"[""and assess the effectiveness of the treatment plan""]","[[717, 767]]","[""exact""]",True,False

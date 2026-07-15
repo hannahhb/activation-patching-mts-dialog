@@ -1,0 +1,964 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Jacqueline.",
+        "spans": [
+          "The patient, Jacqueline,"
+        ],
+        "span_offsets": [
+          [
+            5,
+            29
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient presented to the clinic today expressing anxiety about her recent blood work results.",
+        "spans": [
+          "expressing anxiety about her recent blood work results"
+        ],
+        "span_offsets": [
+          [
+            60,
+            114
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's recent blood work results showed that she has hepatitis C.",
+        "spans": [
+          "which showed that she has hepatitis C"
+        ],
+        "span_offsets": [
+          [
+            116,
+            153
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was not aware of having hepatitis C in the past.",
+        "spans": [
+          "She stated that she was not aware of having hepatitis C in the past"
+        ],
+        "span_offsets": [
+          [
+            155,
+            222
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has been feeling fine.",
+        "spans": [
+          "has been feeling fine"
+        ],
+        "span_offsets": [
+          [
+            227,
+            248
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a history of using intravenous drugs.",
+        "spans": [
+          "a history of using intravenous drugs"
+        ],
+        "span_offsets": [
+          [
+            258,
+            294
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has been clean for over 15 years.",
+        "spans": [
+          "has been clean for over 15 years"
+        ],
+        "span_offsets": [
+          [
+            312,
+            344
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a history of heavy alcohol use.",
+        "spans": [
+          "a history of heavy alcohol use"
+        ],
+        "span_offsets": [
+          [
+            364,
+            394
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has reduced her alcohol consumption to about one beer a day.",
+        "spans": [
+          "has reduced her consumption to about one beer a day"
+        ],
+        "span_offsets": [
+          [
+            400,
+            451
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient smokes one to two cigarettes a day.",
+        "spans": [
+          "smokes one to two cigarettes a day"
+        ],
+        "span_offsets": [
+          [
+            462,
+            496
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a history of hypertension.",
+        "spans": [
+          "a history of hypertension"
+        ],
+        "span_offsets": [
+          [
+            537,
+            562
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a history of diabetes.",
+        "spans": [
+          "diabetes"
+        ],
+        "span_offsets": [
+          [
+            564,
+            572
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a history of depression.",
+        "spans": [
+          "depression"
+        ],
+        "span_offsets": [
+          [
+            578,
+            588
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "Hypertension runs in the patient's family.",
+        "spans": [
+          "which run in her family"
+        ],
+        "span_offsets": [
+          [
+            590,
+            613
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "Diabetes runs in the patient's family.",
+        "spans": [
+          "which run in her family"
+        ],
+        "span_offsets": [
+          [
+            590,
+            613
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "Depression runs in the patient's family.",
+        "spans": [
+          "which run in her family"
+        ],
+        "span_offsets": [
+          [
+            590,
+            613
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a history of smoking.",
+        "spans": [
+          "a history of smoking"
+        ],
+        "span_offsets": [
+          [
+            623,
+            643
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's past smoking use was one to one and a half packs of cigarettes per day.",
+        "spans": [
+          "one to one and a half packs of cigarettes per day"
+        ],
+        "span_offsets": [
+          [
+            664,
+            713
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reported feeling tired at the end of the day.",
+        "spans": [
+          "The patient reported feeling tired at the end of the day"
+        ],
+        "span_offsets": [
+          [
+            735,
+            791
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient gets enough sleep.",
+        "spans": [
+          "despite getting enough sleep"
+        ],
+        "span_offsets": [
+          [
+            793,
+            821
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient appears in no distress.",
+        "spans": [
+          "The patient appears in no distress"
+        ],
+        "span_offsets": [
+          [
+            15,
+            49
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no jaundice on skin exam.",
+        "spans": [
+          "no jaundice on skin exam"
+        ],
+        "span_offsets": [
+          [
+            54,
+            78
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's heart exam revealed a regular rate and rhythm.",
+        "spans": [
+          "a regular rate and rhythm"
+        ],
+        "span_offsets": [
+          [
+            104,
+            129
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a 2/6 systolic murmur.",
+        "spans": [
+          "a 2/6 systolic murmur"
+        ],
+        "span_offsets": [
+          [
+            135,
+            156
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's systolic murmur has not changed from last year.",
+        "spans": [
+          "which has not changed from last year"
+        ],
+        "span_offsets": [
+          [
+            158,
+            194
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's lung exam was clear.",
+        "spans": [
+          "The lung exam was clear"
+        ],
+        "span_offsets": [
+          [
+            196,
+            219
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no wheezes.",
+        "spans": [
+          "no wheezes"
+        ],
+        "span_offsets": [
+          [
+            225,
+            235
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no rales.",
+        "spans": [
+          "no wheezes, rales, or rhonchi"
+        ],
+        "span_offsets": [
+          [
+            225,
+            254
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no rhonchi.",
+        "spans": [
+          "no wheezes, rales, or rhonchi"
+        ],
+        "span_offsets": [
+          [
+            225,
+            254
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's abdominal exam was normal.",
+        "spans": [
+          "The abdominal exam was normal"
+        ],
+        "span_offsets": [
+          [
+            256,
+            285
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has present bowel sounds.",
+        "spans": [
+          "present bowel sounds"
+        ],
+        "span_offsets": [
+          [
+            292,
+            312
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a soft abdomen.",
+        "spans": [
+          "a soft abdomen"
+        ],
+        "span_offsets": [
+          [
+            317,
+            331
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no hepatosplenomegaly.",
+        "spans": [
+          "without hepatosplenomegaly"
+        ],
+        "span_offsets": [
+          [
+            332,
+            358
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's musculoskeletal exam was normal.",
+        "spans": [
+          "The musculoskeletal exam was normal"
+        ],
+        "span_offsets": [
+          [
+            360,
+            395
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no gait disturbance.",
+        "spans": [
+          "no gait disturbance"
+        ],
+        "span_offsets": [
+          [
+            402,
+            421
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no edema.",
+        "spans": [
+          "or edema"
+        ],
+        "span_offsets": [
+          [
+            422,
+            430
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's HCV antibody test is positive.",
+        "spans": [
+          "a positive HCV antibody test"
+        ],
+        "span_offsets": [
+          [
+            486,
+            514
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's AST is elevated at 39.",
+        "spans": [
+          "an elevated AST at 39"
+        ],
+        "span_offsets": [
+          [
+            519,
+            540
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's albumin level is normal.",
+        "spans": [
+          "normal albumin"
+        ],
+        "span_offsets": [
+          [
+            546,
+            560
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's total bilirubin level is normal.",
+        "spans": [
+          "normal total bilirubin levels"
+        ],
+        "span_offsets": [
+          [
+            546,
+            587
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "word"
+        ]
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has hepatitis C.",
+        "spans": [
+          "The patient has hepatitis C"
+        ],
+        "span_offsets": [
+          [
+            12,
+            39
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's hepatitis C is active.",
+        "spans": [
+          "Hepatitis C; active"
+        ],
+        "span_offsets": [
+          [
+            140,
+            159
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has hypertension.",
+        "spans": [
+          "Hypertension; active"
+        ],
+        "span_offsets": [
+          [
+            161,
+            181
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's hypertension is active.",
+        "spans": [
+          "Hypertension; active"
+        ],
+        "span_offsets": [
+          [
+            161,
+            181
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has diabetes.",
+        "spans": [
+          "Diabetes; active"
+        ],
+        "span_offsets": [
+          [
+            183,
+            199
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's diabetes is active.",
+        "spans": [
+          "Diabetes; active"
+        ],
+        "span_offsets": [
+          [
+            183,
+            199
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has depression.",
+        "spans": [
+          "Depression; active"
+        ],
+        "span_offsets": [
+          [
+            201,
+            219
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's depression is active.",
+        "spans": [
+          "Depression; active"
+        ],
+        "span_offsets": [
+          [
+            201,
+            219
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's hepatitis C is a viral infection that affects the liver.",
+        "spans": [
+          "a viral infection that affects the liver"
+        ],
+        "span_offsets": [
+          [
+            41,
+            81
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient most likely acquired hepatitis C years ago.",
+        "spans": [
+          "which she most likely acquired years ago"
+        ],
+        "span_offsets": [
+          [
+            83,
+            123
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient has a diagnosis of hepatitis C.",
+        "spans": [
+          "diagnosis of hepatitis C"
+        ],
+        "span_offsets": [
+          [
+            47,
+            71
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will undergo blood work to check HCV RNA.",
+        "spans": [
+          "checking the HCV RNA"
+        ],
+        "span_offsets": [
+          [
+            83,
+            103
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will undergo blood work to check HCV genotype.",
+        "spans": [
+          "HCV genotype"
+        ],
+        "span_offsets": [
+          [
+            108,
+            120
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will undergo an ultrasound to assess liver disease severity.",
+        "spans": [
+          "ultrasound to determine the severity of the patient's liver disease"
+        ],
+        "span_offsets": [
+          [
+            140,
+            207
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will undergo an ultrasound to assess for fibrosis.",
+        "spans": [
+          "assess for fibrosis"
+        ],
+        "span_offsets": [
+          [
+            212,
+            231
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will return for follow-up in three weeks.",
+        "spans": [
+          "return in three weeks for follow-up"
+        ],
+        "span_offsets": [
+          [
+            349,
+            384
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,1044 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 74-year-old teacher.",
+        "spans": [
+          "a 74-year-old teacher"
+        ],
+        "span_offsets": [
+          [
+            18,
+            39
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presented with a cough that started about a week ago.",
+        "spans": [
+          "presented with a cough that started about a week ago"
+        ],
+        "span_offsets": [
+          [
+            41,
+            93
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's cough has worsened over the last two days.",
+        "spans": [
+          "which has worsened over the last two days"
+        ],
+        "span_offsets": [
+          [
+            95,
+            136
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's cough is productive of yellow sputum.",
+        "spans": [
+          "The cough is productive of yellow sputum"
+        ],
+        "span_offsets": [
+          [
+            138,
+            178
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies fever.",
+        "spans": [
+          "denies fever, chills, shortness of breath, runny nose, sore throat, and sinus pain"
+        ],
+        "span_offsets": [
+          [
+            192,
+            274
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies chills.",
+        "spans": [
+          "denies fever, chills, shortness of breath, runny nose, sore throat, and sinus pain"
+        ],
+        "span_offsets": [
+          [
+            192,
+            274
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies shortness of breath.",
+        "spans": [
+          "denies fever, chills, shortness of breath, runny nose, sore throat, and sinus pain"
+        ],
+        "span_offsets": [
+          [
+            192,
+            274
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies runny nose.",
+        "spans": [
+          "denies fever, chills, shortness of breath, runny nose, sore throat, and sinus pain"
+        ],
+        "span_offsets": [
+          [
+            192,
+            274
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies sore throat.",
+        "spans": [
+          "denies fever, chills, shortness of breath, runny nose, sore throat, and sinus pain"
+        ],
+        "span_offsets": [
+          [
+            192,
+            274
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies sinus pain.",
+        "spans": [
+          "denies fever, chills, shortness of breath, runny nose, sore throat, and sinus pain"
+        ],
+        "span_offsets": [
+          [
+            192,
+            274
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports a little bit of pressure in the sinuses.",
+        "spans": [
+          "a little bit of pressure in the sinuses"
+        ],
+        "span_offsets": [
+          [
+            296,
+            335
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports a little bit of a congested feeling in the throat.",
+        "spans": [
+          "a little bit of a congested feeling in the throat"
+        ],
+        "span_offsets": [
+          [
+            340,
+            389
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient recently fell down the stairs while coughing and injured their right knee.",
+        "spans": [
+          "recently fell down the stairs while coughing and injured their right knee"
+        ],
+        "span_offsets": [
+          [
+            403,
+            476
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of hypertension.",
+        "spans": [
+          "history of hypertension"
+        ],
+        "span_offsets": [
+          [
+            496,
+            519
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been struggling with hypertension for the past year.",
+        "spans": [
+          "which they have been struggling with for the past year"
+        ],
+        "span_offsets": [
+          [
+            521,
+            575
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking lisinopril.",
+        "spans": [
+          "Lisinopril 20mg/day for hypertension"
+        ],
+        "span_offsets": [
+          [
+            906,
+            942
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking lisinopril 20mg/day.",
+        "spans": [
+          "20mg/day"
+        ],
+        "span_offsets": [
+          [
+            613,
+            621
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking lisinopril for hypertension.",
+        "spans": [
+          "for hypertension"
+        ],
+        "span_offsets": [
+          [
+            926,
+            942
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has diabetes.",
+        "spans": [
+          "diabetes"
+        ],
+        "span_offsets": [
+          [
+            644,
+            652
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking metformin.",
+        "spans": [
+          "Metformin (dose not specified) for diabetes"
+        ],
+        "span_offsets": [
+          [
+            945,
+            988
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking metformin for diabetes.",
+        "spans": [
+          "for diabetes"
+        ],
+        "span_offsets": [
+          [
+            976,
+            988
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not monitor their blood sugars.",
+        "spans": [
+          "reports not monitoring their blood sugars"
+        ],
+        "span_offsets": [
+          [
+            682,
+            723
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not monitor their diet.",
+        "spans": [
+          "or diet"
+        ],
+        "span_offsets": [
+          [
+            724,
+            731
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's temperature is 98.4\u00b0F.",
+        "spans": [
+          "temperature is 98.4\u00b0F"
+        ],
+        "span_offsets": [
+          [
+            27,
+            48
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's blood pressure is 125/62.",
+        "spans": [
+          "blood pressure is 125/62"
+        ],
+        "span_offsets": [
+          [
+            50,
+            74
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heart rate is in the 80s.",
+        "spans": [
+          "heart rate is in the 80s"
+        ],
+        "span_offsets": [
+          [
+            76,
+            100
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's oxygen saturation is 97% on room air.",
+        "spans": [
+          "oxygen saturation is 97% on room air"
+        ],
+        "span_offsets": [
+          [
+            106,
+            142
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has pain to palpation of the bilateral maxillary sinuses.",
+        "spans": [
+          "pain to palpation of the bilateral maxillary sinuses"
+        ],
+        "span_offsets": [
+          [
+            176,
+            228
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has erythema and edema of the nasal turbinates bilaterally.",
+        "spans": [
+          "erythema and edema of the nasal turbinates bilaterally"
+        ],
+        "span_offsets": [
+          [
+            230,
+            284
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has yellow discharge from the nasal turbinates.",
+        "spans": [
+          "associated yellow discharge"
+        ],
+        "span_offsets": [
+          [
+            290,
+            317
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has coarse rhonchi present bilaterally.",
+        "spans": [
+          "coarse rhonchi present bilaterally"
+        ],
+        "span_offsets": [
+          [
+            323,
+            357
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's coarse rhonchi clear with cough.",
+        "spans": [
+          "that clears with cough"
+        ],
+        "span_offsets": [
+          [
+            358,
+            380
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has bilateral cervical lymphadenopathy.",
+        "spans": [
+          "bilateral cervical lymphadenopathy"
+        ],
+        "span_offsets": [
+          [
+            398,
+            432
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has pain to palpation on the right knee.",
+        "spans": [
+          "pain to palpation on the right knee"
+        ],
+        "span_offsets": [
+          [
+            450,
+            485
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has decreased flexion and extension of the right knee.",
+        "spans": [
+          "decreased flexion and extension of the right knee"
+        ],
+        "span_offsets": [
+          [
+            487,
+            536
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has ecchymosis to the right medial knee.",
+        "spans": [
+          "associated ecchymosis to the right medial knee"
+        ],
+        "span_offsets": [
+          [
+            538,
+            584
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no evidence of an effusion in the right knee.",
+        "spans": [
+          "no evidence of an effusion"
+        ],
+        "span_offsets": [
+          [
+            590,
+            616
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has a viral syndrome.",
+        "spans": [
+          "viral syndrome"
+        ],
+        "span_offsets": [
+          [
+            30,
+            44
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has mild bronchitis.",
+        "spans": [
+          "mild bronchitis"
+        ],
+        "span_offsets": [
+          [
+            50,
+            65
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a right medial collateral ligament strain.",
+        "spans": [
+          "right medial collateral ligament strain"
+        ],
+        "span_offsets": [
+          [
+            69,
+            108
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right medial collateral ligament strain is from a recent fall.",
+        "spans": [
+          "from a recent fall"
+        ],
+        "span_offsets": [
+          [
+            109,
+            127
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has hypertension.",
+        "spans": [
+          "hypertension",
+          "Hypertension"
+        ],
+        "span_offsets": [
+          [
+            129,
+            141
+          ],
+          [
+            243,
+            255
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient's diabetes is uncontrolled.",
+        "spans": [
+          "uncontrolled diabetes",
+          "Uncontrolled diabetes"
+        ],
+        "span_offsets": [
+          [
+            147,
+            168
+          ],
+          [
+            267,
+            288
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed guaifenesin.",
+        "spans": [
+          "I prescribed guaifenesin 600mg twice a day"
+        ],
+        "span_offsets": [
+          [
+            0,
+            42
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's guaifenesin dose is 600mg.",
+        "spans": [
+          "600mg"
+        ],
+        "span_offsets": [
+          [
+            25,
+            30
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's guaifenesin frequency is twice a day.",
+        "spans": [
+          "twice a day"
+        ],
+        "span_offsets": [
+          [
+            31,
+            42
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's guaifenesin is for coughing up phlegm.",
+        "spans": [
+          "to help cough up phlegm"
+        ],
+        "span_offsets": [
+          [
+            43,
+            66
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed meloxicam.",
+        "spans": [
+          "I prescribed meloxicam 15mg once a day"
+        ],
+        "span_offsets": [
+          [
+            68,
+            106
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's meloxicam dose is 15mg.",
+        "spans": [
+          "15mg"
+        ],
+        "span_offsets": [
+          [
+            91,
+            95
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's meloxicam frequency is once a day.",
+        "spans": [
+          "once a day"
+        ],
+        "span_offsets": [
+          [
+            96,
+            106
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's meloxicam is for the right knee pain.",
+        "spans": [
+          "for the right knee pain"
+        ],
+        "span_offsets": [
+          [
+            107,
+            130
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A right knee x-ray was ordered for the patient.",
+        "spans": [
+          "I ordered a right knee x-ray"
+        ],
+        "span_offsets": [
+          [
+            132,
+            160
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The right knee x-ray is to ensure no bone injury.",
+        "spans": [
+          "to ensure no bone injury"
+        ],
+        "span_offsets": [
+          [
+            161,
+            185
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A lipid panel was ordered for the patient.",
+        "spans": [
+          "I ordered a lipid panel"
+        ],
+        "span_offsets": [
+          [
+            187,
+            210
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The lipid panel is to check the patient's lipid levels.",
+        "spans": [
+          "to check the patient's lipid levels"
+        ],
+        "span_offsets": [
+          [
+            211,
+            246
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A hemoglobin A1c was ordered for the patient.",
+        "spans": [
+          "I ordered a hemoglobin A1c"
+        ],
+        "span_offsets": [
+          [
+            248,
+            274
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The hemoglobin A1c is to check the patient's blood sugar control.",
+        "spans": [
+          "to check the patient's blood sugar control"
+        ],
+        "span_offsets": [
+          [
+            275,
+            317
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was referred to physical therapy.",
+        "spans": [
+          "I referred the patient to physical therapy"
+        ],
+        "span_offsets": [
+          [
+            319,
+            361
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The physical therapy is to help strengthen the muscles around the right knee.",
+        "spans": [
+          "to help strengthen the muscles around the right knee"
+        ],
+        "span_offsets": [
+          [
+            362,
+            414
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will follow up with the doctor for the results of the ordered tests.",
+        "spans": [
+          "The patient will follow up with me for the results of the ordered tests"
+        ],
+        "span_offsets": [
+          [
+            428,
+            499
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

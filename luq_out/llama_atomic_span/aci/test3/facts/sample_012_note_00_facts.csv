@@ -1,0 +1,46 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient presents with left-sided back pain.,0.0,"[""left-sided back pain""]","[[44, 64]]","[""exact""]",True,False
+1,subjective,The patient's left-sided back pain is intermittent.,0.0,"[""which is intermittent""]","[[66, 87]]","[""exact""]",True,False
+2,subjective,The patient's left-sided back pain is sometimes sharp.,0.0,"[""sometimes sharp""]","[[92, 107]]","[""exact""]",True,False
+3,subjective,The patient's left-sided back pain is sometimes dull.,0.75,"[""sometimes dull""]","[[109, 123]]","[""exact""]",True,False
+4,subjective,The patient's left-sided back pain is mostly on the left side.,0.0,"[""The pain is mostly on the left side""]","[[125, 160]]","[""exact""]",True,False
+5,subjective,The patient has been experiencing an increase in urine output.,0.0,"[""an increase in urine output""]","[[196, 223]]","[""exact""]",True,False
+6,subjective,The patient has been drinking more water.,0.5,"[""has been drinking more water""]","[[228, 256]]","[""exact""]",True,False
+7,subjective,The patient experiences nocturnal awakenings to use the restroom.,0.5,"[""nocturnal awakenings to use the restroom""]","[[271, 311]]","[""exact""]",True,False
+8,subjective,The patient has a history of recurrent strep throat.,0.25,"[""history of recurrent strep throat""]","[[331, 364]]","[""exact""]",True,False
+9,subjective,The patient has had four episodes of strep throat in the last five months.,0.0,"[""with four episodes in the last five months""]","[[366, 408]]","[""exact""]",True,False
+10,subjective,The patient's brother is a smoker.,0.0,"[""The patient's brother is a smoker""]","[[410, 443]]","[""exact""]",True,False
+11,subjective,The patient does not smoke.,1.0,"[""the patient does not smoke""]","[[449, 475]]","[""exact""]",True,False
+12,subjective,The patient is a student.,0.25,"[""The patient is a student""]","[[477, 501]]","[""exact""]",True,False
+13,subjective,The patient rides a bike occasionally.,0.25,"[""rides a bike occasionally""]","[[503, 528]]","[""exact""]",True,False
+14,subjective,The patient has been getting good grades in school.,0.25,"[""has been getting good grades in school""]","[[534, 572]]","[""exact""]",True,False
+15,subjective,The patient denies fatigue.,0.5,"[""denies fatigue""]","[[875, 889]]","[""exact""]",True,False
+16,subjective,The patient denies decreased appetite.,0.0,"[""decreased appetite""]","[[891, 909]]","[""exact""]",True,False
+17,subjective,The patient denies fever.,0.0,"[""or fever""]","[[911, 919]]","[""exact""]",True,False
+18,objective,The patient's throat is not erythematous.,0.0,"[""The patient's throat is not erythematous""]","[[15, 55]]","[""exact""]",True,False
+19,objective,The patient's tonsils are midline.,0.0,"[""and the tonsils are midline""]","[[57, 84]]","[""exact""]",True,False
+20,objective,The patient does not have cervical adenopathy.,0.0,"[""There is no cervical adenopathy or lymphadenopathy""]","[[86, 136]]","[""exact""]",True,False
+21,objective,The patient does not have lymphadenopathy.,0.0,"[""There is no cervical adenopathy or lymphadenopathy""]","[[86, 136]]","[""exact""]",True,False
+22,objective,The patient's lungs are clear.,0.0,"[""The lungs are clear""]","[[138, 157]]","[""exact""]",True,False
+23,objective,The patient's heart sounds are normal.,0.0,"[""and the heart sounds are normal""]","[[159, 190]]","[""exact""]",True,False
+24,objective,The patient does not have tenderness to palpation on the left side of the back.,0.25,"[""The patient does not have tenderness to palpation on the left side of the back""]","[[192, 270]]","[""exact""]",True,False
+25,objective,The patient does not have rebound.,0.5,"[""and there is no rebound or guarding""]","[[272, 307]]","[""exact""]",True,False
+26,objective,The patient does not have guarding.,0.25,"[""and there is no rebound or guarding""]","[[272, 307]]","[""exact""]",True,False
+27,assessment,The patient's history of recurrent strep throat may be indicative of glomerular nephritis.,0.25,"[""which may be indicative of glomerular nephritis""]","[[65, 112]]","[""exact""]",True,False
+28,assessment,Glomerular nephritis is a condition that could lead to chronic kidney disease.,0.0,"[""a condition that could lead to chronic kidney disease""]","[[114, 167]]","[""exact""]",True,False
+29,assessment,The patient has glomerulonephritis.,0.75,"[""Glomerulonephritis""]","[[184, 202]]","[""exact""]",True,False
+30,assessment,The patient has recurrent strep throat.,0.25,"[""Recurrent strep throat""]","[[204, 226]]","[""exact""]",True,False
+31,plan,The patient was ordered a lipid panel.,0.0,"[""I ordered a lipid panel, UA, CMP, CBC, vitamin D, and TSH""]","[[0, 57]]","[""exact""]",True,False
+32,plan,The patient was ordered a urinalysis (UA).,0.0,"[""I ordered a lipid panel, UA, CMP, CBC, vitamin D, and TSH""]","[[0, 57]]","[""exact""]",True,False
+33,plan,The patient was ordered a comprehensive metabolic panel (CMP).,0.0,"[""I ordered a lipid panel, UA, CMP, CBC, vitamin D, and TSH""]","[[0, 57]]","[""exact""]",True,False
+34,plan,The patient was ordered a complete blood count (CBC).,0.0,"[""I ordered a lipid panel, UA, CMP, CBC, vitamin D, and TSH""]","[[0, 57]]","[""exact""]",True,False
+35,plan,The patient was ordered a vitamin D test.,0.0,"[""I ordered a lipid panel, UA, CMP, CBC, vitamin D, and TSH""]","[[0, 57]]","[""exact""]",True,False
+36,plan,The patient was ordered a thyroid-stimulating hormone (TSH) test.,0.0,"[""I ordered a lipid panel, UA, CMP, CBC, vitamin D, and TSH""]","[[0, 57]]","[""exact""]",True,False
+37,plan,The patient was referred to an ENT specialist.,0.0,"[""I referred the patient to an ENT specialist""]","[[103, 146]]","[""exact""]",True,False
+38,plan,The patient was referred for further evaluation of recurrent strep throat.,0.0,"[""for further evaluation and consideration of tonsillectomy to address the recurrent strep throat""]","[[147, 242]]","[""exact""]",True,False
+39,plan,The patient was referred for consideration of tonsillectomy.,0.0,"[""for further evaluation and consideration of tonsillectomy to address the recurrent strep throat""]","[[147, 242]]","[""exact""]",True,False
+40,plan,The patient was referred to a specialist for glomerulonephritis.,0.5,"[""I also referred the patient to a specialist for the glomerulonephritis""]","[[244, 314]]","[""exact""]",True,False
+41,plan,The patient will be excused from class and work to accommodate testing.,0.5,"[""to excuse the patient's absence from class and work to accommodate the testing""]","[[336, 414]]","[""exact""]",True,False
+42,plan,The patient is scheduled for a follow-up appointment in one week.,0.0,"[""I will schedule a follow-up appointment with the patient in one week""]","[[416, 484]]","[""exact""]",True,False
+43,plan,The purpose of the follow-up appointment is to discuss test results.,0.0,"[""to discuss the results of the tests"", ""to discuss the results""]","[[558, 593], [485, 507]]","[""exact"", ""exact""]",True,True
+44,plan,The patient is to return in one week.,0.0,"[""The patient is to return in one week""]","[[521, 557]]","[""exact""]",True,False

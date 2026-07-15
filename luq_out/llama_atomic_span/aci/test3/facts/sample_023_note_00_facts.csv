@@ -1,0 +1,80 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 45-year-old female.,0.5,"[""a 45-year-old female""]","[[18, 38]]","[""exact""]",True,False
+1,subjective,The patient presents with shortness of breath.,0.0,"[""shortness of breath""]","[[54, 73]]","[""exact""]",True,False
+2,subjective,The patient's shortness of breath started over the weekend.,0.0,"[""that started over the weekend""]","[[74, 103]]","[""exact""]",True,False
+3,subjective,The patient's shortness of breath has progressed.,0.0,"[""which has progressed""]","[[105, 125]]","[""exact""]",True,False
+4,subjective,The patient can only walk a short distance without experiencing shortness of breath.,0.25,"[""where she can only walk a short distance without experiencing shortness of breath""]","[[139, 220]]","[""exact""]",True,False
+5,subjective,The patient was previously an active person.,0.0,"[""an active person""]","[[258, 274]]","[""exact""]",True,False
+6,subjective,The patient previously walked her dog a mile long every day.,0.75,"[""would walk her dog a mile long every day""]","[[279, 319]]","[""exact""]",True,False
+7,subjective,The patient denies coughing.,1.0,"[""denies coughing""]","[[325, 340]]","[""exact""]",True,False
+8,subjective,The patient denies phlegm.,0.25,"[""denies phlegm""]","[[342, 348]]","[""word""]",True,False
+9,subjective,The patient denies fever.,0.0,"[""denies fever""]","[[350, 355]]","[""word""]",True,False
+10,subjective,The patient denies body aches.,0.5,"[""denies body aches""]","[[357, 367]]","[""word""]",True,False
+11,subjective,The patient denies sore throat.,0.5,"[""denies sore throat""]","[[369, 380]]","[""word""]",True,False
+12,subjective,The patient denies sinus pain.,0.75,"[""denies sinus pain""]","[[386, 396]]","[""word""]",True,False
+13,subjective,The patient reports painful swallowing.,0.0,"[""swallowing is painful""]","[[415, 436]]","[""exact""]",True,False
+14,subjective,The patient's painful swallowing is particularly in her chest.,0.5,"[""particularly in her chest""]","[[438, 463]]","[""exact""]",True,False
+15,subjective,The patient has not been taking her prescribed hydrocortisone liquids as much as instructed.,1.0,"[""has not been taking her prescribed hydrocortisone liquids as much as instructed""]","[[478, 557]]","[""exact""]",True,False
+16,subjective,The patient has not been taking her prescribed hydrocortisone liquids due to pain.,1.0,"[""due to pain""]","[[558, 569]]","[""exact""]",True,False
+17,subjective,The patient has a husband and daughter who provide support.,0.75,"[""a husband and daughter who provide support""]","[[587, 629]]","[""exact""]",True,False
+18,subjective,The patient has a recent diagnosis of stage three non-small cell lung cancer.,0.0,"[""a recent diagnosis of stage three non-small cell lung cancer""]","[[670, 730]]","[""exact""]",True,False
+19,subjective,The patient is undergoing neo-Adjuvant chemotherapy.,0.0,"[""undergoing neo-Adjuvant chemotherapy""]","[[749, 785]]","[""exact""]",True,False
+20,subjective,The patient is taking cisplatin as part of her chemotherapy.,0.25,"[""cisplatin""]","[[791, 800]]","[""exact""]",True,False
+21,subjective,The patient is taking etoposide as part of her chemotherapy.,0.25,"[""etoposide""]","[[805, 814]]","[""exact""]",True,False
+22,subjective,The patient has been experiencing nausea from the chemotherapy.,0.25,"[""nausea and fatigue from the chemotherapy"", ""nausea""]","[[842, 882], [842, 848]]","[""exact"", ""exact""]",True,True
+23,subjective,The patient has been experiencing fatigue from the chemotherapy.,0.5,"[""nausea and fatigue from the chemotherapy"", ""fatigue""]","[[842, 882], [853, 860]]","[""exact"", ""exact""]",True,True
+24,subjective,The patient's nausea has been alleviated by zofran.,0.5,"[""zofran has helped alleviate her nausea""]","[[901, 939]]","[""exact""]",True,False
+25,subjective,The patient reports dry cough.,0.0,"[""dry cough""]","[[981, 990]]","[""exact""]",True,False
+26,subjective,The patient reports no phlegm.,0.5,"[""no phlegm""]","[[992, 1001]]","[""exact""]",True,False
+27,subjective,The patient reports no fever.,0.0,"[""no fever""]","[[1003, 1011]]","[""exact""]",True,False
+28,subjective,The patient reports no body aches or sore throat.,0.25,"[""no body aches or sore throat""]","[[1017, 1045]]","[""exact""]",True,False
+29,subjective,The patient reports painful swallowing when swallowing.,0.0,"[""painful swallowing when swallowing""]","[[1063, 1097]]","[""exact""]",True,False
+30,subjective,The patient is taking zofran.,0.25,"[""zofran""]","[[901, 907]]","[""exact""]",True,False
+31,subjective,The patient is taking zofran to alleviate nausea.,0.25,"[""zofran to alleviate nausea""]","[[1134, 1160]]","[""exact""]",True,False
+32,subjective,The patient is taking hydrocortisone liquids.,1.0,"[""hydrocortisone liquids""]","[[513, 535]]","[""exact""]",True,False
+33,subjective,The patient is taking hydrocortisone liquids for hydration.,1.0,"[""hydrocortisone liquids for hydration""]","[[1162, 1198]]","[""exact""]",True,False
+34,subjective,The patient is taking Ensure.,0.25,"[""Ensure""]","[[1204, 1210]]","[""exact""]",True,False
+35,subjective,The patient is taking Ensure for nutrition.,0.25,"[""Ensure and milkshakes for nutrition""]","[[1204, 1239]]","[""exact""]",True,False
+36,subjective,The patient is taking milkshakes.,0.75,"[""milkshakes""]","[[1215, 1225]]","[""exact""]",True,False
+37,subjective,The patient is taking milkshakes for nutrition.,1.0,"[""Ensure and milkshakes for nutrition""]","[[1204, 1239]]","[""exact""]",True,False
+38,objective,The patient's pulse is normal.,0.75,"[""The patient's pulse, blood pressure, and oxygen saturation are normal""]","[[13, 82]]","[""exact""]",True,False
+39,objective,The patient's blood pressure is normal.,0.25,"[""The patient's pulse, blood pressure, and oxygen saturation are normal""]","[[13, 82]]","[""exact""]",True,False
+40,objective,The patient's oxygen saturation is normal.,0.0,"[""The patient's pulse, blood pressure, and oxygen saturation are normal""]","[[13, 82]]","[""exact""]",True,False
+41,objective,The patient's pulse ox is okay.,0.0,"[""Pulse ox is okay""]","[[84, 100]]","[""exact""]",True,False
+42,objective,The patient's neck exam is unremarkable.,0.25,"[""The patient's neck exam is unremarkable""]","[[118, 157]]","[""exact""]",True,False
+43,objective,The patient has no cervical lymphadenopathy.,0.25,"[""with no cervical lymphadenopathy""]","[[159, 191]]","[""exact""]",True,False
+44,objective,The patient has no subclavicular adenopathy.,0.25,"[""with no cervical lymphadenopathy or subclavicular adenopathy""]","[[159, 219]]","[""exact""]",True,False
+45,objective,The patient's heart exam is regular.,0.25,"[""Her heart exam is regular""]","[[221, 246]]","[""exact""]",True,False
+46,objective,The patient has no murmur.,0.25,"[""with no murmur""]","[[248, 262]]","[""exact""]",True,False
+47,objective,The patient has crackles in both lungs.,0.0,"[""Her lung exam reveals crackles in both lungs""]","[[264, 308]]","[""exact""]",True,False
+48,objective,The patient's lung cancer diagnosis could indicate fluid accumulation in the lungs.,0.25,"[""which could indicate fluid accumulation due to her lung cancer diagnosis""]","[[310, 382]]","[""exact""]",True,False
+49,objective,The patient has erythema on the anterior aspect of her chest on the left side.,0.0,"[""The skin exam reveals erythema on the anterior aspect of her chest on the left side""]","[[384, 467]]","[""exact""]",True,False
+50,objective,The patient's erythema could be due to radiation.,0.25,"[""which could be due to radiation""]","[[469, 500]]","[""exact""]",True,False
+51,objective,The patient has no lower extremity edema.,0.0,"[""There is no lower extremity edema""]","[[502, 535]]","[""exact""]",True,False
+52,objective,The patient had a chest x-ray.,0.0,"[""The patient had a chest x-ray""]","[[552, 581]]","[""exact""]",True,False
+53,objective,The patient's chest x-ray showed mild radiation pneumonitis.,0.0,"[""which showed mild radiation pneumonitis""]","[[583, 622]]","[""exact""]",True,False
+54,objective,The patient's chest x-ray showed inflammation of the lungs due to radiation.,0.0,"[""or inflammation of the lungs due to radiation""]","[[624, 669]]","[""exact""]",True,False
+55,assessment,The patient has stage three non-small cell lung cancer.,0.0,"[""The patient has stage three non-small cell lung cancer, radiation pneumonitis, and odynophagia (painful swallowing) due to radiation""]","[[12, 144]]","[""exact""]",True,False
+56,assessment,The patient has radiation pneumonitis.,0.0,"[""The patient has stage three non-small cell lung cancer, radiation pneumonitis, and odynophagia (painful swallowing) due to radiation""]","[[12, 144]]","[""exact""]",True,False
+57,assessment,The patient has odynophagia (painful swallowing) due to radiation.,0.5,"[""The patient has stage three non-small cell lung cancer, radiation pneumonitis, and odynophagia (painful swallowing) due to radiation""]","[[12, 144]]","[""exact""]",True,False
+58,assessment,The patient's lung cancer is active.,0.5,"[""Lung cancer; radiation pneumonitis; odynophagia; active; confirmed; suspected""]","[[161, 238]]","[""exact""]",True,False
+59,assessment,The patient's radiation pneumonitis is active.,0.25,"[""Lung cancer; radiation pneumonitis; odynophagia; active; confirmed; suspected""]","[[161, 238]]","[""exact""]",True,False
+60,assessment,The patient's odynophagia is active.,0.25,"[""Lung cancer; radiation pneumonitis; odynophagia; active; confirmed; suspected""]","[[161, 238]]","[""exact""]",True,False
+61,assessment,The patient's lung cancer is confirmed.,0.25,"[""Lung cancer; radiation pneumonitis; odynophagia; active; confirmed; suspected""]","[[161, 238]]","[""exact""]",True,False
+62,assessment,The patient's radiation pneumonitis is confirmed.,0.0,"[""Lung cancer; radiation pneumonitis; odynophagia; active; confirmed; suspected""]","[[161, 238]]","[""exact""]",True,False
+63,assessment,The patient's odynophagia is confirmed.,0.25,"[""Lung cancer; radiation pneumonitis; odynophagia; active; confirmed; suspected""]","[[161, 238]]","[""exact""]",True,False
+64,assessment,The patient has a suspected condition.,0.75,"[""Lung cancer; radiation pneumonitis; odynophagia; active; confirmed; suspected""]","[[161, 238]]","[""exact""]",True,False
+65,plan,The patient was prescribed prednisone.,0.0,"[""I prescribed prednisone""]","[[0, 23]]","[""exact""]",True,False
+66,plan,The patient's prednisone dose is 40 milligrams.,0.0,"[""40 milligrams""]","[[24, 37]]","[""exact""]",True,False
+67,plan,The patient's prednisone frequency is one tablet a day.,0.0,"[""one tablet a day""]","[[38, 54]]","[""exact""]",True,False
+68,plan,The patient's prednisone duration is five days.,0.0,"[""for five days""]","[[55, 68]]","[""exact""]",True,False
+69,plan,The indication for the patient's prednisone is to reduce inflammation in the lungs.,0.0,"[""to reduce inflammation in the lungs""]","[[69, 104]]","[""exact""]",True,False
+70,plan,The indication for the patient's prednisone is to alleviate symptoms.,0.0,"[""and alleviate symptoms""]","[[105, 127]]","[""exact""]",True,False
+71,plan,The patient was prescribed lidocaine spray.,0.25,"[""I also prescribed lidocaine spray""]","[[129, 162]]","[""exact""]",True,False
+72,plan,The indication for the patient's lidocaine spray is for painful swallowing.,0.0,"[""for painful swallowing""]","[[163, 185]]","[""exact""]",True,False
+73,plan,The patient's lidocaine spray frequency is four times a day.,0.0,"[""to be taken four times a day""]","[[187, 215]]","[""exact""]",True,False
+74,plan,The patient should take lidocaine spray before eating and drinking.,1.0,"[""before eating and drinking""]","[[246, 272]]","[""exact""]",True,False
+75,plan,The patient's lidocaine spray is intended to alleviate pain.,0.0,"[""to alleviate pain""]","[[273, 290]]","[""exact""]",True,False
+76,plan,The patient will be seen for follow-up in two weeks.,0.0,"[""see her back in two weeks"", ""We will see the patient in two weeks""]","[[337, 362], [376, 412]]","[""exact"", ""exact""]",True,True
+77,plan,The purpose of the follow-up is to monitor the patient's progress.,0.75,"[""to monitor her progress""]","[[413, 436]]","[""exact""]",True,False
+78,plan,The purpose of the follow-up is to adjust the patient's treatment plan as necessary.,1.0,"[""and adjust her treatment plan as necessary""]","[[437, 479]]","[""exact""]",True,False

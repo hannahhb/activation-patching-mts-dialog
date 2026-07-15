@@ -1,0 +1,641 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient, Alexis, has a 6-month history of intermittent numbness and tingling in her right hand.",
+        "spans": [
+          "a 6-month history of intermittent numbness and tingling in her right hand"
+        ],
+        "span_offsets": [
+          [
+            35,
+            108
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's numbness and tingling in her right hand have become more persistent over the last month.",
+        "spans": [
+          "which has become more persistent over the last month"
+        ],
+        "span_offsets": [
+          [
+            110,
+            162
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences pain in her right hand, primarily when typing on the keyboard.",
+        "spans": [
+          "some pain, primarily when typing on the keyboard"
+        ],
+        "span_offsets": [
+          [
+            176,
+            224
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain in her right hand is alleviated by ibuprofen and rest.",
+        "spans": [
+          "ibuprofen and rest help alleviate the symptoms"
+        ],
+        "span_offsets": [
+          [
+            244,
+            290
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences numbness and tingling in her right hand all the time.",
+        "spans": [
+          "The numbness and tingling are present all the time"
+        ],
+        "span_offsets": [
+          [
+            292,
+            342
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences pain in her right hand when moving her mouse.",
+        "spans": [
+          "she experiences pain when moving her mouse"
+        ],
+        "span_offsets": [
+          [
+            348,
+            390
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any pain in her right hand at night.",
+        "spans": [
+          "she denies any pain or numbness at night"
+        ],
+        "span_offsets": [
+          [
+            392,
+            432
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any numbness in her right hand at night.",
+        "spans": [
+          "she denies any pain or numbness at night"
+        ],
+        "span_offsets": [
+          [
+            392,
+            432
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms are not affecting her sleep.",
+        "spans": [
+          "her symptoms are not affecting her sleep"
+        ],
+        "span_offsets": [
+          [
+            438,
+            478
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient uses ibuprofen for pain management.",
+        "spans": [
+          "She uses ibuprofen for pain management"
+        ],
+        "span_offsets": [
+          [
+            480,
+            518
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences numbness in her thumb.",
+        "spans": [
+          "numbness in her thumb, index finger, and middle finger"
+        ],
+        "span_offsets": [
+          [
+            532,
+            586
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences numbness in her index finger.",
+        "spans": [
+          "numbness in her thumb, index finger, and middle finger"
+        ],
+        "span_offsets": [
+          [
+            532,
+            586
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences numbness in her middle finger.",
+        "spans": [
+          "numbness in her thumb, index finger, and middle finger"
+        ],
+        "span_offsets": [
+          [
+            532,
+            586
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ring finger feels normal.",
+        "spans": [
+          "with the other two fingers feeling normal"
+        ],
+        "span_offsets": [
+          [
+            588,
+            629
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's little finger feels normal.",
+        "spans": [
+          "with the other two fingers feeling normal"
+        ],
+        "span_offsets": [
+          [
+            588,
+            629
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has less grip strength in her right hand.",
+        "spans": [
+          "She has less grip strength on the right hand"
+        ],
+        "span_offsets": [
+          [
+            631,
+            675
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a positive Tinel's sign.",
+        "spans": [
+          "a positive Tinel's sign is present"
+        ],
+        "span_offsets": [
+          [
+            681,
+            715
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has pain on extension of the wrist.",
+        "spans": [
+          "pain on extension and flexion of the wrist"
+        ],
+        "span_offsets": [
+          [
+            16,
+            58
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has pain on flexion of the wrist.",
+        "spans": [
+          "pain on extension and flexion of the wrist"
+        ],
+        "span_offsets": [
+          [
+            16,
+            58
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has numbness in the thumb.",
+        "spans": [
+          "numbness in the thumb, index finger, and middle finger"
+        ],
+        "span_offsets": [
+          [
+            68,
+            122
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has numbness in the index finger.",
+        "spans": [
+          "numbness in the thumb, index finger, and middle finger"
+        ],
+        "span_offsets": [
+          [
+            68,
+            122
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has numbness in the middle finger.",
+        "spans": [
+          "numbness in the thumb, index finger, and middle finger"
+        ],
+        "span_offsets": [
+          [
+            68,
+            122
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's grip strength is less on the right hand.",
+        "spans": [
+          "Grip strength is less on the right hand"
+        ],
+        "span_offsets": [
+          [
+            200,
+            239
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has carpal tunnel syndrome.",
+        "spans": [
+          "The patient has carpal tunnel syndrome, likely due to repetitive strain from data entry"
+        ],
+        "span_offsets": [
+          [
+            12,
+            99
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's carpal tunnel syndrome is likely due to repetitive strain from data entry.",
+        "spans": [
+          "likely due to repetitive strain from data entry"
+        ],
+        "span_offsets": [
+          [
+            52,
+            99
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Carpal tunnel syndrome is active.",
+        "spans": [
+          "Carpal tunnel syndrome; active"
+        ],
+        "span_offsets": [
+          [
+            115,
+            145
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "There is suspected nerve compression in the wrist.",
+        "spans": [
+          "suspected nerve compression in the wrist"
+        ],
+        "span_offsets": [
+          [
+            147,
+            187
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed ibuprofen for pain management.",
+        "spans": [
+          "ibuprofen 600 mg four times a day for pain management"
+        ],
+        "span_offsets": [
+          [
+            13,
+            66
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ibuprofen dose is 600 mg.",
+        "spans": [
+          "600 mg"
+        ],
+        "span_offsets": [
+          [
+            23,
+            29
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ibuprofen frequency is four times a day.",
+        "spans": [
+          "four times a day"
+        ],
+        "span_offsets": [
+          [
+            30,
+            46
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "An EMG was ordered for the patient.",
+        "spans": [
+          "I ordered an EMG and nerve conduction study to confirm the diagnosis"
+        ],
+        "span_offsets": [
+          [
+            68,
+            136
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A nerve conduction study was ordered for the patient.",
+        "spans": [
+          "I ordered an EMG and nerve conduction study to confirm the diagnosis"
+        ],
+        "span_offsets": [
+          [
+            68,
+            136
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will wear a wrist splint at night.",
+        "spans": [
+          "I will have the patient wear a wrist splint at night to help alleviate symptoms"
+        ],
+        "span_offsets": [
+          [
+            138,
+            217
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the wrist splint is to help alleviate symptoms.",
+        "spans": [
+          "to help alleviate symptoms"
+        ],
+        "span_offsets": [
+          [
+            191,
+            217
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A follow-up appointment will be scheduled to review the EMG and nerve conduction study results.",
+        "spans": [
+          "I will schedule a follow-up appointment to review the EMG and nerve conduction study results"
+        ],
+        "span_offsets": [
+          [
+            336,
+            428
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Physical therapy is a potential further treatment option for the patient.",
+        "spans": [
+          "including physical therapy or surgery"
+        ],
+        "span_offsets": [
+          [
+            296,
+            333
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Surgery is a potential further treatment option for the patient.",
+        "spans": [
+          "including physical therapy or surgery"
+        ],
+        "span_offsets": [
+          [
+            296,
+            333
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

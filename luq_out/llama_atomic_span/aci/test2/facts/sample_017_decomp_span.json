@@ -1,0 +1,857 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 17-year-old non-binary individual.",
+        "spans": [
+          "a 17-year-old non-binary individual"
+        ],
+        "span_offsets": [
+          [
+            18,
+            53
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents for evaluation of newly diagnosed hypercholesterolemia.",
+        "spans": [
+          "presents for evaluation of newly diagnosed hypercholesterolemia"
+        ],
+        "span_offsets": [
+          [
+            55,
+            118
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was informed of the elevated cholesterol level after a routine annual checkup.",
+        "spans": [
+          "were informed of the elevated cholesterol level after a routine annual checkup"
+        ],
+        "span_offsets": [
+          [
+            125,
+            203
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's cholesterol level is 210.",
+        "spans": [
+          "a cholesterol level of 210"
+        ],
+        "span_offsets": [
+          [
+            240,
+            266
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been told to make lifestyle changes.",
+        "spans": [
+          "have been told to make lifestyle changes"
+        ],
+        "span_offsets": [
+          [
+            307,
+            347
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is active.",
+        "spans": [
+          "The patient is active"
+        ],
+        "span_offsets": [
+          [
+            349,
+            370
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient enjoys riding their bicycle.",
+        "spans": [
+          "enjoys riding their bicycle"
+        ],
+        "span_offsets": [
+          [
+            372,
+            399
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient tries to eat a relatively clean diet.",
+        "spans": [
+          "tries to eat a relatively clean diet"
+        ],
+        "span_offsets": [
+          [
+            405,
+            441
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a weakness for chocolate chip cookies.",
+        "spans": [
+          "has a weakness for chocolate chip cookies"
+        ],
+        "span_offsets": [
+          [
+            447,
+            488
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no significant past medical history.",
+        "spans": [
+          "The patient has no significant past medical history"
+        ],
+        "span_offsets": [
+          [
+            513,
+            564
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's grandparents did not have high cholesterol at a young age.",
+        "spans": [
+          "their grandparents reported that they did not have high cholesterol at a young age"
+        ],
+        "span_offsets": [
+          [
+            570,
+            652
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A cousin of the patient died of a heart attack at age 44 or 45.",
+        "spans": [
+          "a cousin died of a heart attack at age 44 or 45"
+        ],
+        "span_offsets": [
+          [
+            695,
+            742
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports feeling healthy.",
+        "spans": [
+          "The patient reports feeling healthy"
+        ],
+        "span_offsets": [
+          [
+            764,
+            799
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not experienced any issues with growing pains or other symptoms.",
+        "spans": [
+          "has not experienced any issues with growing pains or other symptoms"
+        ],
+        "span_offsets": [
+          [
+            804,
+            871
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is within a normal range.",
+        "spans": [
+          "The patient's blood pressure is within a normal range"
+        ],
+        "span_offsets": [
+          [
+            13,
+            66
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's physical exam is unremarkable.",
+        "spans": [
+          "The patient's physical exam is unremarkable"
+        ],
+        "span_offsets": [
+          [
+            127,
+            170
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no murmurs on the heart exam.",
+        "spans": [
+          "no murmurs, rubs, or gallops on the heart exam"
+        ],
+        "span_offsets": [
+          [
+            177,
+            223
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no rubs on the heart exam.",
+        "spans": [
+          "no murmurs, rubs, or gallops on the heart exam"
+        ],
+        "span_offsets": [
+          [
+            177,
+            223
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no gallops on the heart exam.",
+        "spans": [
+          "no murmurs, rubs, or gallops on the heart exam"
+        ],
+        "span_offsets": [
+          [
+            177,
+            223
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lungs are clear.",
+        "spans": [
+          "clear lungs"
+        ],
+        "span_offsets": [
+          [
+            225,
+            236
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no thyroid megalogy.",
+        "spans": [
+          "no thyroid megalogy"
+        ],
+        "span_offsets": [
+          [
+            238,
+            257
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no hepatomegaly on the abdominal exam.",
+        "spans": [
+          "no hepatomegaly or splenomegaly on the abdominal exam"
+        ],
+        "span_offsets": [
+          [
+            263,
+            316
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no splenomegaly on the abdominal exam.",
+        "spans": [
+          "no hepatomegaly or splenomegaly on the abdominal exam"
+        ],
+        "span_offsets": [
+          [
+            263,
+            316
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's cholesterol level is elevated at 210.",
+        "spans": [
+          "The patient's cholesterol level was elevated at 210"
+        ],
+        "span_offsets": [
+          [
+            333,
+            384
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The doctor plans to order a full cholesterol panel.",
+        "spans": [
+          "full cholesterol panel"
+        ],
+        "span_offsets": [
+          [
+            464,
+            486
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The doctor plans to order glucose testing.",
+        "spans": [
+          "glucose"
+        ],
+        "span_offsets": [
+          [
+            488,
+            495
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The doctor plans to order a complete metabolic panel.",
+        "spans": [
+          "complete metabolic panel"
+        ],
+        "span_offsets": [
+          [
+            497,
+            521
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The doctor plans to order thyroid studies.",
+        "spans": [
+          "thyroid studies"
+        ],
+        "span_offsets": [
+          [
+            523,
+            538
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The doctor plans to order liver panels.",
+        "spans": [
+          "liver panels"
+        ],
+        "span_offsets": [
+          [
+            544,
+            556
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The doctor plans to order genetic testing.",
+        "spans": [
+          "genetic testing"
+        ],
+        "span_offsets": [
+          [
+            569,
+            584
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has elevated cholesterol.",
+        "spans": [
+          "The patient has elevated cholesterol"
+        ],
+        "span_offsets": [
+          [
+            12,
+            48
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Elevated cholesterol is a risk factor for premature heart attacks.",
+        "spans": [
+          "which is a risk factor for premature heart attacks"
+        ],
+        "span_offsets": [
+          [
+            50,
+            100
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has hypercholesterolemia.",
+        "spans": [
+          "Hypercholesterolemia"
+        ],
+        "span_offsets": [
+          [
+            117,
+            137
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has suspected familial hypercholesterolemia.",
+        "spans": [
+          "Suspected familial hypercholesterolemia"
+        ],
+        "span_offsets": [
+          [
+            139,
+            178
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was ordered a full cholesterol panel.",
+        "spans": [
+          "I ordered a full cholesterol panel"
+        ],
+        "span_offsets": [
+          [
+            0,
+            34
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was ordered glucose testing.",
+        "spans": [
+          "I ordered a full cholesterol panel, glucose"
+        ],
+        "span_offsets": [
+          [
+            0,
+            43
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was ordered a complete metabolic panel.",
+        "spans": [
+          "complete metabolic panel"
+        ],
+        "span_offsets": [
+          [
+            45,
+            69
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was ordered thyroid studies.",
+        "spans": [
+          "thyroid studies"
+        ],
+        "span_offsets": [
+          [
+            71,
+            86
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was ordered liver panels.",
+        "spans": [
+          "liver panels"
+        ],
+        "span_offsets": [
+          [
+            92,
+            104
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the ordered tests is to investigate the cause of the elevated cholesterol.",
+        "spans": [
+          "to investigate the cause of the elevated cholesterol"
+        ],
+        "span_offsets": [
+          [
+            105,
+            157
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was recommended genetic testing.",
+        "spans": [
+          "I also recommended genetic testing"
+        ],
+        "span_offsets": [
+          [
+            159,
+            193
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the genetic testing is to determine if the problem is familial or secondary.",
+        "spans": [
+          "to determine if the problem is familial or secondary"
+        ],
+        "span_offsets": [
+          [
+            194,
+            246
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will meet with a nutritionist.",
+        "spans": [
+          "The patient will meet with a nutritionist"
+        ],
+        "span_offsets": [
+          [
+            248,
+            289
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the meeting with the nutritionist is to learn about a well-balanced diet.",
+        "spans": [
+          "to learn about a well-balanced diet"
+        ],
+        "span_offsets": [
+          [
+            290,
+            325
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The recommended diet is low in saturated fat and sugars.",
+        "spans": [
+          "low in saturated fat and sugars"
+        ],
+        "span_offsets": [
+          [
+            327,
+            358
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will continue to be active and exercise regularly.",
+        "spans": [
+          "They will continue to be active and exercise regularly"
+        ],
+        "span_offsets": [
+          [
+            360,
+            414
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will include bike riding in their exercise routine.",
+        "spans": [
+          "including bike riding"
+        ],
+        "span_offsets": [
+          [
+            416,
+            437
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be followed up with in 3-6 months.",
+        "spans": [
+          "I will follow up with the patient in 3-6 months",
+          "The patient will be seen again in 3-6 months"
+        ],
+        "span_offsets": [
+          [
+            439,
+            486
+          ],
+          [
+            570,
+            614
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The purpose of the follow-up is to check the patient's cholesterol level after they have made dietary changes.",
+        "spans": [
+          "to check their cholesterol level after they have made dietary changes",
+          "to check their cholesterol level after they have met with the nutritionist and made dietary changes"
+        ],
+        "span_offsets": [
+          [
+            487,
+            556
+          ],
+          [
+            615,
+            714
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient presented with left knee pain.,0.25,"[""left knee pain""]","[[32, 46]]","[""exact""]",True,False
+1,subjective,The patient's left knee pain occurred when she was running with her niece.,0.5,"[""running with her 5-year-old niece""]","[[74, 107]]","[""exact""]",True,False
+2,subjective,The patient twisted her knee in a funky way.,0.0,"[""twisted her knee in a \""funky way\""""]","[[177, 210]]","[""exact""]",True,False
+3,subjective,The patient heard a pop in her knee.,0.25,"[""heard a pop""]","[[215, 226]]","[""exact""]",True,False
+4,subjective,The patient's initial knee pain was 4/10.,0.5,"[""started as a 4/10 pain""]","[[234, 256]]","[""exact""]",True,False
+5,subjective,The patient's knee pain has worsened to a throbbing pain.,0.25,"[""has worsened to a throbbing pain""]","[[261, 293]]","[""exact""]",True,False
+6,subjective,The patient's pain is located on the medial aspect of the knee.,0.25,"[""located on the medial aspect of the knee""]","[[307, 347]]","[""exact""]",True,False
+7,subjective,The patient's pain is more severe on the medial aspect of the knee than the lateral aspect.,0.5,"[""more than the lateral aspect""]","[[349, 377]]","[""exact""]",True,False
+8,subjective,The patient has been limping.,0.75,"[""has been limping""]","[[391, 407]]","[""exact""]",True,False
+9,subjective,The patient has been taking Tylenol as needed for pain.,0.0,"[""taking Tylenol as needed""]","[[412, 436]]","[""exact""]",True,False
+10,subjective,The patient has been taking Tylenol for breakthrough pain.,0.25,"[""Tylenol as needed for breakthrough pain""]","[[575, 614]]","[""exact""]",True,False
+11,subjective,The patient has a history of ulcers.,0.0,"[""history of ulcers""]","[[481, 498]]","[""exact""]",True,False
+12,subjective,The patient was advised against taking NSAIDs.,0.25,"[""was advised against taking NSAIDs""]","[[503, 536]]","[""exact""]",True,False
+13,objective,The patient had moderate range of motion in the left knee.,0.0,"[""The patient had moderate range of motion in the left knee""]","[[15, 72]]","[""exact""]",True,False
+14,objective,The patient had pain on flexion and extension in the left knee.,0.0,"[""with pain on flexion and extension""]","[[74, 108]]","[""exact""]",True,False
+15,objective,The patient had edema in the knee.,0.0,"[""The patient had edema and effusion in the knee""]","[[110, 156]]","[""exact""]",True,False
+16,objective,The patient had effusion in the knee.,0.0,"[""The patient had edema and effusion in the knee""]","[[110, 156]]","[""exact""]",True,False
+17,objective,The Lachman's test was negative.,0.0,"[""The Lachman's test, valgus, and varus tests were negative""]","[[158, 215]]","[""exact""]",True,False
+18,objective,The valgus test was negative.,0.0,"[""The Lachman's test, valgus, and varus tests were negative""]","[[158, 215]]","[""exact""]",True,False
+19,objective,The varus test was negative.,0.0,"[""The Lachman's test, valgus, and varus tests were negative""]","[[158, 215]]","[""exact""]",True,False
+20,objective,The patient's knee x-ray showed no tears.,1.0,"[""indicating no tears in the knee""]","[[217, 248]]","[""exact""]",True,False
+21,objective,The patient's left knee x-ray was normal.,0.0,"[""A x-ray of the left knee was normal""]","[[250, 285]]","[""exact""]",True,False
+22,objective,The patient's left knee x-ray showed no fractures.,0.0,"[""showing no fractures or bony abnormalities""]","[[287, 329]]","[""exact""]",True,False
+23,objective,The patient's left knee x-ray showed no bony abnormalities.,0.0,"[""showing no fractures or bony abnormalities""]","[[287, 329]]","[""exact""]",True,False
+24,assessment,The patient has a medial collateral ligament (MCL) strain.,0.5,"[""The patient has a medial collateral ligament (MCL) strain, likely sustained during a twisting injury while running with her niece""]","[[12, 141]]","[""exact""]",True,False
+25,assessment,The patient's MCL strain was likely sustained during a twisting injury.,0.75,"[""The patient has a medial collateral ligament (MCL) strain, likely sustained during a twisting injury while running with her niece""]","[[12, 141]]","[""exact""]",True,False
+26,assessment,The patient's MCL strain was sustained while running with her niece.,0.75,"[""The patient has a medial collateral ligament (MCL) strain, likely sustained during a twisting injury while running with her niece""]","[[12, 141]]","[""exact""]",True,False
+27,assessment,The patient sustained a twisting injury while running with her niece.,0.75,"[""The patient has a medial collateral ligament (MCL) strain, likely sustained during a twisting injury while running with her niece""]","[[12, 141]]","[""exact""]",True,False
+28,plan,The patient was prescribed Tramadol for pain management.,0.0,"[""Tramadol 50mg twice a day for pain management""]","[[13, 58]]","[""exact""]",True,False
+29,plan,The patient's Tramadol dose is 50mg.,0.0,"[""50mg""]","[[22, 26]]","[""exact""]",True,False
+30,plan,The patient's Tramadol frequency is twice a day.,0.0,"[""twice a day""]","[[27, 38]]","[""exact""]",True,False
+31,plan,The patient was recommended to wear a knee immobilizer.,0.0,"[""wear a knee immobilizer""]","[[86, 109]]","[""exact""]",True,False
+32,plan,The patient's knee immobilizer is for the next week.,0.0,"[""for the next week""]","[[110, 127]]","[""exact""]",True,False
+33,plan,The purpose of the knee immobilizer is to prevent further movement and reduce inflammation.,0.25,"[""to prevent further movement and reduce inflammation""]","[[128, 179]]","[""exact""]",True,False
+34,plan,The patient was advised to ice the knee.,0.0,"[""ice the knee""]","[[206, 218]]","[""exact""]",True,False
+35,plan,The patient's knee icing frequency is 3-4 times a day.,0.0,"[""3-4 times a day""]","[[219, 234]]","[""exact""]",True,False
+36,plan,The patient's knee icing duration is 20-30 minutes at a time.,0.0,"[""20-30 minutes at a time""]","[[239, 262]]","[""exact""]",True,False
+37,plan,The patient was instructed to avoid running with her niece.,0.5,"[""avoid running with her niece""]","[[292, 320]]","[""exact""]",True,False
+38,plan,The patient's avoidance of running with her niece is for the next 3 weeks.,0.5,"[""for the next 3 weeks""]","[[321, 341]]","[""exact""]",True,False
+39,plan,The purpose of avoiding running with her niece is to allow the knee to heal.,0.5,"[""to allow the knee to heal""]","[[342, 367]]","[""exact""]",True,False
+40,plan,The patient was instructed to follow up in a month.,1.0,"[""follow up with me in a month""]","[[409, 437]]","[""exact""]",True,False
+41,plan,The purpose of the follow-up is to assess the progress of the knee and determine if further imaging or treatment is needed.,0.25,"[""to assess the progress of the knee and determine if further imaging or treatment is needed""]","[[438, 528]]","[""exact""]",True,False

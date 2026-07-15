@@ -1,0 +1,46 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 32-year-old male.,1.0,"[""a 32-year-old male""]","[[18, 36]]","[""exact""]",True,False
+1,subjective,The patient presents with a 2-week history of low back pain.,0.0,"[""a 2-week history of low back pain""]","[[52, 85]]","[""exact""]",True,False
+2,subjective,The patient's low back pain started after lifting a box of books.,0.0,"[""that started after lifting a box of books""]","[[86, 127]]","[""exact""]",True,False
+3,subjective,The patient describes the pain as achy and sharp in his low back.,0.0,"[""achy and sharp in his low back""]","[[154, 184]]","[""exact""]",True,False
+4,subjective,The patient has radiation down his left leg.,0.0,"[""radiation down his left leg""]","[[191, 218]]","[""exact""]",True,False
+5,subjective,The patient's pain has worsened over time.,0.25,"[""The pain has worsened over time""]","[[220, 251]]","[""exact""]",True,False
+6,subjective,The patient has not experienced numbness in his legs.,0.0,"[""he has not experienced numbness, tingling, or weakness in his legs""]","[[257, 323]]","[""exact""]",True,False
+7,subjective,The patient has not experienced tingling in his legs.,0.0,"[""he has not experienced numbness, tingling, or weakness in his legs""]","[[257, 323]]","[""exact""]",True,False
+8,subjective,The patient has not experienced weakness in his legs.,0.0,"[""he has not experienced numbness, tingling, or weakness in his legs""]","[[257, 323]]","[""exact""]",True,False
+9,subjective,The patient denies loss of control of bladder or bowels.,0.25,"[""He denies loss of control of bladder or bowels""]","[[325, 371]]","[""exact""]",True,False
+10,subjective,The patient takes ibuprofen.,0.0,"[""ibuprofen""]","[[393, 402]]","[""exact""]",True,False
+11,subjective,The patient takes Tylenol.,0.0,"[""Tylenol""]","[[407, 414]]","[""exact""]",True,False
+12,subjective,The patient takes ibuprofen as needed.,0.0,"[""as needed""]","[[782, 791]]","[""exact""]",True,False
+13,subjective,The patient takes Tylenol as needed.,0.0,"[""as needed""]","[[782, 791]]","[""exact""]",True,False
+14,subjective,Ibuprofen sometimes helps the patient.,0.0,"[""which sometimes helps""]","[[416, 437]]","[""exact""]",True,False
+15,subjective,Tylenol sometimes helps the patient.,0.0,"[""which sometimes helps""]","[[416, 437]]","[""exact""]",True,False
+16,subjective,The patient's father has a history of back pain.,0.0,"[""The patient's father has a history of back pain""]","[[515, 562]]","[""exact""]",True,False
+17,subjective,The patient has a history of playing soccer.,0.0,"[""The patient has a history of playing soccer""]","[[564, 607]]","[""exact""]",True,False
+18,subjective,The patient denies any other symptoms.,0.0,"[""The patient denies any other symptoms""]","[[681, 718]]","[""exact""]",True,False
+19,subjective,The patient has not discussed surgery previously.,0.5,"[""He has not discussed surgery with anyone previously""]","[[439, 490]]","[""exact""]",True,False
+20,objective,The patient's blood pressure is 130/70.,0.0,"[""Blood pressure 130/70""]","[[13, 34]]","[""exact""]",True,False
+21,objective,The patient's respiratory rate is 18.,0.0,"[""respiratory rate 18""]","[[36, 55]]","[""exact""]",True,False
+22,objective,The patient has a regular heart rate and rhythm.,0.5,"[""regular heart rate and rhythm""]","[[57, 86]]","[""exact""]",True,False
+23,objective,The patient's lungs are clear bilaterally.,0.75,"[""clear lungs bilaterally""]","[[88, 111]]","[""exact""]",True,False
+24,objective,The patient has midline tenderness at the L4-L5 disk space.,0.0,"[""midline tenderness at the L4-L5 disk space""]","[[185, 227]]","[""exact""]",True,False
+25,objective,The patient has right-sided lumbar paravertebral tenderness.,0.0,"[""right-sided lumbar paravertebral tenderness""]","[[233, 276]]","[""exact""]",True,False
+26,objective,The patient has pain with lumbar flexion.,0.25,"[""pain with lumbar flexion""]","[[285, 309]]","[""exact""]",True,False
+27,objective,The patient has a positive straight leg raise test.,0.25,"[""a positive straight leg raise test""]","[[315, 349]]","[""exact""]",True,False
+28,objective,The patient's MRI results show disk desiccation.,0.25,"[""disk desiccation""]","[[385, 401]]","[""exact""]",True,False
+29,objective,The patient's MRI results show a disk bulge.,0.25,"[""a disk bulge""]","[[403, 415]]","[""exact""]",True,False
+30,objective,The patient's MRI results show paracentral disk herniation.,0.25,"[""paracentral disk herniation""]","[[421, 448]]","[""exact""]",True,False
+31,objective,The patient's MRI results show moderate right neuroforaminal stenosis.,0.25,"[""moderate right neuroforaminal stenosis""]","[[462, 500]]","[""exact""]",True,False
+32,objective,The patient has a herniated disk with nerve impingement.,0.25,"[""a herniated disk with nerve impingement""]","[[518, 557]]","[""exact""]",True,False
+33,assessment,The patient has lumbar back pain at the L4-L5 disk space.,0.0,"[""The patient has lumbar back pain at the L4-L5 disk space due to a herniated disk with radiculopathy""]","[[12, 111]]","[""exact""]",True,False
+34,assessment,The patient has a herniated disk with radiculopathy.,0.0,"[""The patient has lumbar back pain at the L4-L5 disk space due to a herniated disk with radiculopathy""]","[[12, 111]]","[""exact""]",True,False
+35,assessment,The patient is diagnosed with lumbar back pain at the L4-L5 disk space.,0.0,"[""Lumbar back pain at the L4-L5 disk space""]","[[128, 168]]","[""exact""]",True,False
+36,assessment,The patient is diagnosed with a herniated disk with nerve impingement.,0.0,"[""Herniated disk with nerve impingement""]","[[170, 207]]","[""exact""]",True,False
+37,assessment,The patient is diagnosed with lumbar radiculopathy.,0.0,"[""Lumbar radiculopathy""]","[[209, 229]]","[""exact""]",True,False
+38,plan,The patient was prescribed a spinal injection.,0.25,"[""I prescribed a spinal injection""]","[[0, 31]]","[""exact""]",True,False
+39,plan,The spinal injection will be administered with a strong NSAID.,0.0,"[""a strong NSAID""]","[[37, 51]]","[""exact""]",True,False
+40,plan,The spinal injection will be administered with a corticosteroid.,0.0,"[""a corticosteroid""]","[[56, 72]]","[""exact""]",True,False
+41,plan,The spinal injection will be administered under fluoroscopy.,0.0,"[""under fluoroscopy""]","[[92, 109]]","[""exact""]",True,False
+42,plan,The patient will receive paperwork explaining the risks and benefits of the spinal injection procedure.,0.5,"[""The patient will receive paperwork with explanations of the risks and benefits of the procedure""]","[[152, 247]]","[""exact""]",True,False
+43,plan,The physician will answer any further questions the patient may have about the spinal injection procedure.,1.0,"[""I will answer any further questions the patient may have""]","[[249, 305]]","[""exact""]",True,False
+44,plan,The patient will be scheduled for the spinal injection procedure today.,0.0,"[""I will schedule the procedure for today"", ""The patient will be scheduled for the spinal injection procedure today""]","[[111, 150], [319, 389]]","[""exact"", ""exact""]",True,True

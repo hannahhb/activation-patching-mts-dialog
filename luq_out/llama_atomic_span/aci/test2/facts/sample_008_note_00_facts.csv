@@ -1,0 +1,34 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 30-year-old male.,1.0,"[""a 30-year-old male""]","[[18, 36]]","[""exact""]",True,False
+1,subjective,The patient presents with heel pain.,0.0,"[""complaint of heel pain""]","[[54, 76]]","[""exact""]",True,False
+2,subjective,The patient's heel pain is located in the back of his heel.,0.0,"[""specifically in the back of his heel""]","[[78, 114]]","[""exact""]",True,False
+3,subjective,The patient's heel pain radiates up into his calf.,0.0,"[""which radiates up into his calf""]","[[116, 147]]","[""exact""]",True,False
+4,subjective,The patient's heel pain occurs after a workout.,0.0,"[""this pain occurs after a workout""]","[[165, 197]]","[""exact""]",True,False
+5,subjective,The patient's heel pain occurs when he first gets up in the morning.,0.0,"[""when he first gets up in the morning""]","[[201, 237]]","[""exact""]",True,False
+6,subjective,The patient is training for a triathlon.,0.0,"[""he is currently training for a triathlon""]","[[239, 279]]","[""exact""]",True,False
+7,subjective,The patient's training program includes running.,0.0,"[""running""]","[[349, 356]]","[""exact""]",True,False
+8,subjective,The patient's training program includes biking.,0.25,"[""biking""]","[[358, 364]]","[""exact""]",True,False
+9,subjective,The patient's training program includes swimming.,0.25,"[""swimming""]","[[370, 378]]","[""exact""]",True,False
+10,subjective,The patient's heel pain is worse when he runs.,0.75,"[""the pain is worse when he runs""]","[[396, 426]]","[""exact""]",True,False
+11,subjective,The patient experiences some pain when he first wakes up in the morning.,0.0,"[""he experiences some pain when he first wakes up in the morning""]","[[432, 494]]","[""exact""]",True,False
+12,subjective,The patient denies any other symptoms in other organs.,0.75,"[""The patient denies any other symptoms in other organs""]","[[517, 570]]","[""exact""]",True,False
+13,subjective,The patient's heel and calf pain is exacerbated by activity.,0.0,"[""the pain in his heel and calf is exacerbated by activity""]","[[589, 645]]","[""exact""]",True,False
+14,subjective,The patient's heel and calf pain improves with rest.,1.0,"[""improves with rest""]","[[650, 668]]","[""exact""]",True,False
+15,objective,The patient has a negative Thompson test.,0.25,"[""The patient has a negative Thompson test""]","[[15, 55]]","[""exact""]",True,False
+16,objective,The patient's right heel is painful.,0.0,"[""pain in the right heel""]","[[160, 182]]","[""exact""]",True,False
+17,objective,The patient's Achilles tendon is painful.,0.0,"[""pain in the right heel and Achilles tendon""]","[[160, 202]]","[""exact""]",True,False
+18,objective,The patient's right Achilles tendon is tender.,0.0,"[""The doctor finds the right Achilles tendon to be tender""]","[[204, 259]]","[""exact""]",True,False
+19,assessment,The patient has achilles tendinitis.,0.0,"[""The patient has achilles tendinitis, likely due to overuse from his aggressive training for a triathlon."", ""Achilles tendinitis; status: confirmed""]","[[12, 116], [132, 170]]","[""exact"", ""exact""]",True,True
+20,assessment,The patient's achilles tendinitis is likely due to overuse from his aggressive training for a triathlon.,0.0,"[""The patient has achilles tendinitis, likely due to overuse from his aggressive training for a triathlon.""]","[[12, 116]]","[""exact""]",True,False
+21,assessment,The patient's achilles tendinitis is confirmed.,0.0,"[""Achilles tendinitis; status: confirmed.""]","[[132, 171]]","[""exact""]",True,False
+22,plan,The patient was prescribed ibuprofen.,0.0,"[""I prescribed ibuprofen""]","[[0, 22]]","[""exact""]",True,False
+23,plan,The patient's ibuprofen dose is 3 tablets.,0.0,"[""ibuprofen 3 tablets""]","[[13, 32]]","[""exact""]",True,False
+24,plan,The patient's ibuprofen frequency is every 6 hours.,0.0,"[""every 6 hours""]","[[33, 46]]","[""exact""]",True,False
+25,plan,The patient's ibuprofen is for inflammation.,0.0,"[""for inflammation""]","[[47, 63]]","[""exact""]",True,False
+26,plan,The patient was ordered physical therapy visits.,0.0,"[""I ordered 2 physical therapy visits""]","[[65, 100]]","[""exact""]",True,False
+27,plan,The patient's physical therapy visits are 2 in number.,0.5,"[""2 physical therapy visits""]","[[75, 100]]","[""exact""]",True,False
+28,plan,The goal of the patient's physical therapy is to improve strength.,0.0,"[""to improve strength""]","[[101, 120]]","[""exact""]",True,False
+29,plan,The goal of the patient's physical therapy is to improve stretching knowledge.,0.5,"[""and stretching knowledge""]","[[121, 145]]","[""exact""]",True,False
+30,plan,The patient's physical therapy will focus on the lower extremities.,0.0,"[""particularly in the lower extremities""]","[[147, 184]]","[""exact""]",True,False
+31,plan,The patient is to return in 7-10 days.,0.0,"[""to return in 7-10 days"", ""in 7-10 days""]","[[205, 227], [215, 227]]","[""exact"", ""exact""]",True,True
+32,plan,The purpose of the patient's follow-up is to monitor his progress.,0.25,"[""to monitor his progress""]","[[228, 251]]","[""exact""]",True,False

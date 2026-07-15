@@ -1,0 +1,61 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Mrs. Kelly Wood.,0.5,"[""Mrs. Kelly Wood""]","[[13, 28]]","[""exact""]",True,False
+1,subjective,The patient is a 43-year-old female.,0.5,"[""a 43-year-old female""]","[[30, 50]]","[""exact""]",True,False
+2,subjective,The patient presented with hematuria.,0.0,"[""presented with hematuria""]","[[52, 76]]","[""exact""]",True,False
+3,subjective,The patient's urine is bright red and resembles cherry Kool-Aid.,0.0,"[""bright red urine resembling cherry Kool-Aid""]","[[91, 134]]","[""exact""]",True,False
+4,subjective,The patient has been experiencing hematuria for the past six weeks.,0.0,"[""for the past six weeks""]","[[136, 158]]","[""exact""]",True,False
+5,subjective,The patient has episodes of frequent urination.,0.0,"[""episodes of frequent urination""]","[[165, 195]]","[""exact""]",True,False
+6,subjective,The patient has severe pain rated an 8/10.,0.0,"[""severe pain rated an 8/10""]","[[200, 225]]","[""exact""]",True,False
+7,subjective,The patient passed two small stones last week.,0.0,"[""passed two small stones last week""]","[[246, 279]]","[""exact""]",True,False
+8,subjective,The blood in the patient's urine has nearly subsided.,1.0,"[""the blood in her urine has nearly subsided""]","[[285, 327]]","[""exact""]",True,False
+9,subjective,The patient has no drug allergies.,0.0,"[""The patient has no drug allergies""]","[[329, 362]]","[""exact""]",True,False
+10,subjective,The patient is taking Alavert.,0.0,"[""taking Alavert 10mg daily""]","[[370, 395]]","[""exact""]",True,False
+11,subjective,The patient's Alavert dose is 10mg.,0.0,"[""10mg""]","[[385, 389]]","[""exact""]",True,False
+12,subjective,The patient takes Alavert daily.,0.0,"[""daily""]","[[390, 395]]","[""exact""]",True,False
+13,subjective,The patient has a history of dehydration.,0.25,"[""a history of dehydration""]","[[414, 438]]","[""exact""]",True,False
+14,subjective,The patient consumes a significant amount of sugary drinks like Mountain Dew.,0.25,"[""consumes a significant amount of sugary drinks like Mountain Dew""]","[[440, 504]]","[""exact""]",True,False
+15,subjective,The patient has a family history of kidney stones.,0.75,"[""a family history of kidney stones""]","[[514, 547]]","[""exact""]",True,False
+16,subjective,The patient has a history of passing kidney stones.,0.0,"[""a history of passing kidney stones""]","[[588, 622]]","[""exact""]",True,False
+17,subjective,The patient has a 6mm non-obstructing stone in the left kidney.,1.0,"[""a 6mm non-obstructing stone in the left kidney""]","[[653, 699]]","[""exact""]",True,False
+18,subjective,The patient reports episodes of bright red urine.,0.0,"[""The patient reports episodes of bright red urine""]","[[721, 769]]","[""exact""]",True,False
+19,subjective,The patient reports frequent urination.,0.0,"[""frequent urination""]","[[177, 195]]","[""exact""]",True,False
+20,subjective,The patient reports severe pain in the past six weeks.,0.5,"[""severe pain in the past six weeks""]","[[795, 828]]","[""exact""]",True,False
+21,subjective,The patient is currently pain-free.,1.0,"[""but is currently pain-free""]","[[830, 856]]","[""exact""]",True,False
+22,objective,The patient's abdomen is normal.,0.25,"[""The patient's abdomen and anti-gu are normal, and the vaginal exam is normal""]","[[15, 91]]","[""exact""]",True,False
+23,objective,The patient's anti-gu is normal.,0.5,"[""The patient's abdomen and anti-gu are normal, and the vaginal exam is normal""]","[[15, 91]]","[""exact""]",True,False
+24,objective,The patient's vaginal exam is normal.,0.25,"[""The patient's abdomen and anti-gu are normal, and the vaginal exam is normal""]","[[15, 91]]","[""exact""]",True,False
+25,objective,The patient's urine dipstick test was negative for leukocytes.,0.0,"[""The urine dipstick was negative for leukocytes, nitrates, protein, ketone, bilirubin, and glucose""]","[[108, 205]]","[""exact""]",True,False
+26,objective,The patient's urine dipstick test was negative for nitrates.,0.0,"[""The urine dipstick was negative for leukocytes, nitrates, protein, ketone, bilirubin, and glucose""]","[[108, 205]]","[""exact""]",True,False
+27,objective,The patient's urine dipstick test was negative for protein.,0.0,"[""The urine dipstick was negative for leukocytes, nitrates, protein, ketone, bilirubin, and glucose""]","[[108, 205]]","[""exact""]",True,False
+28,objective,The patient's urine dipstick test was negative for ketone.,0.0,"[""The urine dipstick was negative for leukocytes, nitrates, protein, ketone, bilirubin, and glucose""]","[[108, 205]]","[""exact""]",True,False
+29,objective,The patient's urine dipstick test was negative for bilirubin.,0.0,"[""The urine dipstick was negative for leukocytes, nitrates, protein, ketone, bilirubin, and glucose""]","[[108, 205]]","[""exact""]",True,False
+30,objective,The patient's urine dipstick test was negative for glucose.,0.0,"[""The urine dipstick was negative for leukocytes, nitrates, protein, ketone, bilirubin, and glucose""]","[[108, 205]]","[""exact""]",True,False
+31,objective,The patient's urine dipstick test showed a yellow and clear color.,0.0,"[""with a yellow and clear color""]","[[207, 236]]","[""exact""]",True,False
+32,objective,The patient's urine dipstick test showed urobilinogen 0.2.,0.0,"[""urobilinogen 0.2""]","[[238, 254]]","[""exact""]",True,False
+33,objective,The patient's urine dipstick test showed a pH of 5.5.,0.0,"[""pH 5.5""]","[[256, 262]]","[""exact""]",True,False
+34,objective,The patient's urine dipstick test showed a specific gravity of 1.020.,0.0,"[""specific gravity 1.020""]","[[268, 290]]","[""exact""]",True,False
+35,objective,The patient's right kidney is 10cm in length and 5cm wide.,0.0,"[""the right kidney being 10cm in length and 5cm wide""]","[[375, 425]]","[""exact""]",True,False
+36,objective,The patient's left kidney is 10.8cm in length and 5cm wide.,0.0,"[""the left kidney being 10.8cm in length and 5cm wide""]","[[431, 482]]","[""exact""]",True,False
+37,assessment,The patient has a confirmed diagnosis of hematuria.,0.0,"[""The patient has a confirmed diagnosis of hematuria and chronic urolithiasis""]","[[12, 87]]","[""exact""]",True,False
+38,assessment,The patient has a confirmed diagnosis of chronic urolithiasis.,0.0,"[""The patient has a confirmed diagnosis of hematuria and chronic urolithiasis""]","[[12, 87]]","[""exact""]",True,False
+39,assessment,Hematuria is a problem for the patient.,0.0,"[""Hematuria; Chronic urolithiasis;""]","[[158, 190]]","[""exact""]",True,False
+40,assessment,Chronic urolithiasis is a problem for the patient.,0.0,"[""Hematuria; Chronic urolithiasis;""]","[[158, 190]]","[""exact""]",True,False
+41,plan,The patient was prescribed no surgical intervention at this time.,0.0,"[""I prescribed no surgical intervention at this time""]","[[0, 50]]","[""exact""]",True,False
+42,plan,The stone is not obstructing.,1.0,"[""the stone is not obstructing or causing pain""]","[[55, 99]]","[""exact""]",True,False
+43,plan,The stone is not causing pain.,0.5,"[""the stone is not obstructing or causing pain""]","[[55, 99]]","[""exact""]",True,False
+44,plan,The patient was recommended to increase her water intake to 125 ounces per day.,0.0,"[""increase her water intake to 125 ounces per day""]","[[132, 179]]","[""exact""]",True,False
+45,plan,"The patient was recommended to consume less than 1,000mg of sodium daily.",0.75,"[""consume less than 1,000mg of sodium daily""]","[[191, 232]]","[""exact""]",True,False
+46,plan,The patient was recommended to reduce her consumption of salty foods.,0.0,"[""reduce her consumption of salty, processed foods""]","[[238, 286]]","[""exact""]",True,False
+47,plan,The patient was recommended to reduce her consumption of processed foods.,0.25,"[""reduce her consumption of salty, processed foods""]","[[238, 286]]","[""exact""]",True,False
+48,plan,The patient was recommended to reduce her consumption of animal protein.,0.0,"[""reduce her consumption of animal protein""]","[[238, 260]]","[""word""]",True,False
+49,plan,The patient was recommended to reduce her consumption of foods high in oxalate.,0.25,"[""reduce her consumption of foods high in oxalate""]","[[308, 329]]","[""word""]",True,False
+50,plan,The patient was recommended to reduce her consumption of spinach.,0.75,"[""such as spinach""]","[[331, 346]]","[""exact""]",True,False
+51,plan,The patient was recommended to reduce her consumption of chocolate.,1.0,"[""such as spinach, chocolate, beets, rhubarb, and soy products""]","[[331, 391]]","[""exact""]",True,False
+52,plan,The patient was recommended to reduce her consumption of beets.,1.0,"[""such as spinach, chocolate, beets, rhubarb, and soy products""]","[[331, 391]]","[""exact""]",True,False
+53,plan,The patient was recommended to reduce her consumption of rhubarb.,0.75,"[""such as spinach, chocolate, beets, rhubarb, and soy products""]","[[331, 391]]","[""exact""]",True,False
+54,plan,The patient was recommended to reduce her consumption of soy products.,1.0,"[""such as spinach, chocolate, beets, rhubarb, and soy products""]","[[331, 391]]","[""exact""]",True,False
+55,plan,The patient was provided with a handout outlining the dietary recommendations.,0.0,"[""I provided the patient with a handout outlining the dietary recommendations""]","[[393, 468]]","[""exact""]",True,False
+56,plan,The patient will not need to be seen again until next year.,0.5,"[""The patient will not need to be seen again until next year""]","[[482, 540]]","[""exact""]",True,False
+57,plan,The patient is advised to call the office sooner if she has any concerns.,0.0,"[""She is advised to call the office sooner if she has any concerns""]","[[607, 671]]","[""exact""]",True,False
+58,plan,The patient is advised to seek emergency care if she experiences severe pain.,0.5,"[""to seek emergency care if she experiences severe pain or bright red blood in her urine""]","[[677, 763]]","[""exact""]",True,False
+59,plan,The patient is advised to seek emergency care if she experiences bright red blood in her urine.,0.5,"[""to seek emergency care if she experiences severe pain or bright red blood in her urine""]","[[677, 763]]","[""exact""]",True,False

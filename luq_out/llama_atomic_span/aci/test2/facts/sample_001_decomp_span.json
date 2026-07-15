@@ -1,0 +1,896 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 67-year-old male.",
+        "spans": [
+          "a 67-year-old male"
+        ],
+        "span_offsets": [
+          [
+            20,
+            38
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient sustained a right shoulder injury during a tackle football game.",
+        "spans": [
+          "sustained a right shoulder injury during a tackle football game"
+        ],
+        "span_offsets": [
+          [
+            43,
+            106
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right shoulder injury occurred approximately 4 days ago.",
+        "spans": [
+          "approximately 4 days ago"
+        ],
+        "span_offsets": [
+          [
+            107,
+            131
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was tackled and landed on his shoulder.",
+        "spans": [
+          "he was tackled and landed on his shoulder"
+        ],
+        "span_offsets": [
+          [
+            149,
+            190
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's shoulder has been bothering him since the injury.",
+        "spans": [
+          "which has been bothering him since then"
+        ],
+        "span_offsets": [
+          [
+            192,
+            231
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient describes the pain as being on the back side of the shoulder.",
+        "spans": [
+          "on the back side of the shoulder"
+        ],
+        "span_offsets": [
+          [
+            264,
+            296
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is located around the acromioclavicular joint.",
+        "spans": [
+          "around the acromioclavicular joint"
+        ],
+        "span_offsets": [
+          [
+            298,
+            332
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any numbness or tingling in his fingers.",
+        "spans": [
+          "denies any numbness or tingling in his fingers"
+        ],
+        "span_offsets": [
+          [
+            337,
+            383
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's arm strength is intact.",
+        "spans": [
+          "his arm strength is intact"
+        ],
+        "span_offsets": [
+          [
+            389,
+            415
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has difficulty lifting heavy objects.",
+        "spans": [
+          "difficulty lifting heavy objects"
+        ],
+        "span_offsets": [
+          [
+            433,
+            465
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has taken Tylenol for the pain.",
+        "spans": [
+          "He has taken Tylenol for the pain"
+        ],
+        "span_offsets": [
+          [
+            467,
+            500
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports that Tylenol has not provided significant relief for the pain.",
+        "spans": [
+          "it has not provided significant relief"
+        ],
+        "span_offsets": [
+          [
+            518,
+            556
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient had a past appendectomy approximately 3-4 years ago.",
+        "spans": [
+          "a past appendectomy approximately 3-4 years ago"
+        ],
+        "span_offsets": [
+          [
+            601,
+            648
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any other medical problems.",
+        "spans": [
+          "denies any other medical problems"
+        ],
+        "span_offsets": [
+          [
+            653,
+            686
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any other surgeries.",
+        "spans": [
+          "denies any other medical problems, surgeries, or joint injuries"
+        ],
+        "span_offsets": [
+          [
+            653,
+            716
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any other joint injuries.",
+        "spans": [
+          "denies any other medical problems, surgeries, or joint injuries"
+        ],
+        "span_offsets": [
+          [
+            653,
+            716
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any fever.",
+        "spans": [
+          "denies any fever, chills, headache, or neck problems"
+        ],
+        "span_offsets": [
+          [
+            750,
+            802
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any chills.",
+        "spans": [
+          "denies any fever, chills, headache, or neck problems"
+        ],
+        "span_offsets": [
+          [
+            750,
+            802
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any headache.",
+        "spans": [
+          "denies any fever, chills, headache, or neck problems"
+        ],
+        "span_offsets": [
+          [
+            750,
+            802
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any neck problems.",
+        "spans": [
+          "denies any fever, chills, headache, or neck problems"
+        ],
+        "span_offsets": [
+          [
+            750,
+            802
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any elbow pain.",
+        "spans": [
+          "denies any numbness or tingling in his fingers, elbow, or wrist pain"
+        ],
+        "span_offsets": [
+          [
+            812,
+            880
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any wrist pain.",
+        "spans": [
+          "denies any numbness or tingling in his fingers, elbow, or wrist pain"
+        ],
+        "span_offsets": [
+          [
+            812,
+            880
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is currently taking Tylenol.",
+        "spans": [
+          "The patient is currently taking Tylenol"
+        ],
+        "span_offsets": [
+          [
+            904,
+            943
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Tylenol for pain.",
+        "spans": [
+          "The patient is currently taking Tylenol for pain"
+        ],
+        "span_offsets": [
+          [
+            904,
+            952
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is 122/76.",
+        "spans": [
+          "The patient's blood pressure is 122/76"
+        ],
+        "span_offsets": [
+          [
+            13,
+            51
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heart rate is 82 beats per minute.",
+        "spans": [
+          "heart rate is 82 beats per minute"
+        ],
+        "span_offsets": [
+          [
+            53,
+            86
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's oxygen saturation is 95% on room air.",
+        "spans": [
+          "oxygen saturation is 95% on room air"
+        ],
+        "span_offsets": [
+          [
+            92,
+            128
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's cervical spine exam is unremarkable.",
+        "spans": [
+          "The patient's cervical spine exam is unremarkable"
+        ],
+        "span_offsets": [
+          [
+            146,
+            195
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's cervical spine exam shows no tenderness to palpation.",
+        "spans": [
+          "with no tenderness to palpation"
+        ],
+        "span_offsets": [
+          [
+            197,
+            228
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's head exam is unremarkable.",
+        "spans": [
+          "The head exam is also unremarkable"
+        ],
+        "span_offsets": [
+          [
+            230,
+            264
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's head exam shows no ecchymosis or bruising.",
+        "spans": [
+          "with no ecchymosis or bruising"
+        ],
+        "span_offsets": [
+          [
+            266,
+            296
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has pain to palpation of the posterior shoulder at the acromioclavicular joint.",
+        "spans": [
+          "pain to palpation of the posterior shoulder at the acromioclavicular joint"
+        ],
+        "span_offsets": [
+          [
+            331,
+            405
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has decreased abduction and adduction to 90 degrees.",
+        "spans": [
+          "decreased abduction and adduction to 90 degrees"
+        ],
+        "span_offsets": [
+          [
+            407,
+            454
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has pain with supination and pronation of the right arm.",
+        "spans": [
+          "pain with supination and pronation of the right arm"
+        ],
+        "span_offsets": [
+          [
+            460,
+            511
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right shoulder x-ray shows an acute acromioclavicular joint fracture.",
+        "spans": [
+          "The patient's right shoulder x-ray shows an acute acromioclavicular joint fracture"
+        ],
+        "span_offsets": [
+          [
+            528,
+            610
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has an acute acromioclavicular joint fracture.",
+        "spans": [
+          "The patient has an acute acromioclavicular joint fracture"
+        ],
+        "span_offsets": [
+          [
+            12,
+            69
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has an acromioclavicular joint fracture.",
+        "spans": [
+          "Acromioclavicular joint fracture"
+        ],
+        "span_offsets": [
+          [
+            85,
+            117
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a suspected shoulder injury.",
+        "spans": [
+          "Suspected shoulder injury"
+        ],
+        "span_offsets": [
+          [
+            119,
+            144
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed meloxicam for pain management.",
+        "spans": [
+          "meloxicam 15 milligrams once a day for pain management"
+        ],
+        "span_offsets": [
+          [
+            13,
+            67
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's meloxicam dose is 15 milligrams.",
+        "spans": [
+          "15 milligrams"
+        ],
+        "span_offsets": [
+          [
+            23,
+            36
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's meloxicam frequency is once a day.",
+        "spans": [
+          "once a day"
+        ],
+        "span_offsets": [
+          [
+            37,
+            47
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A CT scan of the right shoulder was ordered for the patient.",
+        "spans": [
+          "I ordered a CT scan of the right shoulder"
+        ],
+        "span_offsets": [
+          [
+            69,
+            110
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the CT scan is to further evaluate the joint.",
+        "spans": [
+          "to further evaluate the joint"
+        ],
+        "span_offsets": [
+          [
+            111,
+            140
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was referred to physical therapy.",
+        "spans": [
+          "I referred the patient to physical therapy"
+        ],
+        "span_offsets": [
+          [
+            142,
+            184
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The goal of physical therapy is to strengthen the shoulder.",
+        "spans": [
+          "to strengthen the shoulder"
+        ],
+        "span_offsets": [
+          [
+            185,
+            211
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The goal of physical therapy is to avoid future surgery.",
+        "spans": [
+          "to avoid future surgery"
+        ],
+        "span_offsets": [
+          [
+            216,
+            236
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to use a sling for the shoulder.",
+        "spans": [
+          "to use a sling for the shoulder"
+        ],
+        "span_offsets": [
+          [
+            263,
+            294
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid heavy lifting.",
+        "spans": [
+          "avoid heavy lifting"
+        ],
+        "span_offsets": [
+          [
+            299,
+            318
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid tackle football.",
+        "spans": [
+          "avoid heavy lifting or tackle football"
+        ],
+        "span_offsets": [
+          [
+            299,
+            337
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will follow up with the physician in a few days.",
+        "spans": [
+          "The patient will follow up with me in a few days"
+        ],
+        "span_offsets": [
+          [
+            370,
+            418
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the follow-up is to review the results of the CT scan.",
+        "spans": [
+          "to review the results of the CT scan"
+        ],
+        "span_offsets": [
+          [
+            419,
+            455
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the follow-up is to assess the patient's progress.",
+        "spans": [
+          "to review the results of the CT scan and assess the patient's progress"
+        ],
+        "span_offsets": [
+          [
+            419,
+            489
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

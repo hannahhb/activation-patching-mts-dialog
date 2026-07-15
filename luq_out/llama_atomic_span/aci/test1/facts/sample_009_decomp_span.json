@@ -1,0 +1,794 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 25-year-old male.",
+        "spans": [
+          "a 25-year-old male"
+        ],
+        "span_offsets": [
+          [
+            18,
+            36
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient presented with neck pain following a car accident one week ago.",
+        "spans": [
+          "presented with neck pain following a car accident one week ago"
+        ],
+        "span_offsets": [
+          [
+            38,
+            100
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was involved in a rear-end collision.",
+        "spans": [
+          "a rear-end collision"
+        ],
+        "span_offsets": [
+          [
+            131,
+            151
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's head and neck moved forward quickly during the accident.",
+        "spans": [
+          "his head and neck moved forward quickly"
+        ],
+        "span_offsets": [
+          [
+            159,
+            198
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's neck pain has been persistent.",
+        "spans": [
+          "The pain has been persistent"
+        ],
+        "span_offsets": [
+          [
+            200,
+            228
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's neck pain severity is 7 out of 10.",
+        "spans": [
+          "a severity of 7 out of 10"
+        ],
+        "span_offsets": [
+          [
+            235,
+            260
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's neck pain is exacerbated by movement of the neck.",
+        "spans": [
+          "exacerbated by movement of the neck"
+        ],
+        "span_offsets": [
+          [
+            262,
+            297
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's neck pain is localized to the back of the neck.",
+        "spans": [
+          "localized to the back of the neck"
+        ],
+        "span_offsets": [
+          [
+            311,
+            344
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's neck pain has not been constant.",
+        "spans": [
+          "has not been constant"
+        ],
+        "span_offsets": [
+          [
+            349,
+            370
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has tried ibuprofen for neck pain.",
+        "spans": [
+          "The patient has tried ibuprofen"
+        ],
+        "span_offsets": [
+          [
+            372,
+            403
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has had minimal relief from ibuprofen for neck pain.",
+        "spans": [
+          "with minimal relief"
+        ],
+        "span_offsets": [
+          [
+            404,
+            423
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient experiences pain with flexion of the neck.",
+        "spans": [
+          "pain with flexion"
+        ],
+        "span_offsets": [
+          [
+            436,
+            453
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient experiences pain with extension of the neck.",
+        "spans": [
+          "extension"
+        ],
+        "span_offsets": [
+          [
+            455,
+            464
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient experiences pain with rotation of the neck.",
+        "spans": [
+          "rotation"
+        ],
+        "span_offsets": [
+          [
+            466,
+            474
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient experiences pain with lateral bending of the neck.",
+        "spans": [
+          "lateral bending"
+        ],
+        "span_offsets": [
+          [
+            480,
+            495
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies any hearing problems.",
+        "spans": [
+          "denies any hearing problems"
+        ],
+        "span_offsets": [
+          [
+            542,
+            569
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies any visual disturbances.",
+        "spans": [
+          "visual disturbances"
+        ],
+        "span_offsets": [
+          [
+            571,
+            590
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies any symptoms in other organs.",
+        "spans": [
+          "symptoms in other organs"
+        ],
+        "span_offsets": [
+          [
+            595,
+            619
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has positive pain to palpation of the soft tissues of the neck.",
+        "spans": [
+          "positive pain to palpation of the soft tissues of the neck"
+        ],
+        "span_offsets": [
+          [
+            31,
+            89
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has pain with flexion of the neck.",
+        "spans": [
+          "pain with flexion, extension, rotation, and lateral bending of the neck"
+        ],
+        "span_offsets": [
+          [
+            91,
+            162
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has pain with extension of the neck.",
+        "spans": [
+          "pain with flexion, extension, rotation, and lateral bending of the neck"
+        ],
+        "span_offsets": [
+          [
+            91,
+            162
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has pain with rotation of the neck.",
+        "spans": [
+          "pain with flexion, extension, rotation, and lateral bending of the neck"
+        ],
+        "span_offsets": [
+          [
+            91,
+            162
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has pain with lateral bending of the neck.",
+        "spans": [
+          "pain with flexion, extension, rotation, and lateral bending of the neck"
+        ],
+        "span_offsets": [
+          [
+            91,
+            162
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is able to move his neck from side to side.",
+        "spans": [
+          "The patient was able to move his neck from side to side, but with pain"
+        ],
+        "span_offsets": [
+          [
+            164,
+            234
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has pain when moving his neck from side to side.",
+        "spans": [
+          "The patient was able to move his neck from side to side, but with pain"
+        ],
+        "span_offsets": [
+          [
+            164,
+            234
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's x-ray results show no signs of fracture.",
+        "spans": [
+          "The x-ray results showed no signs of fracture or bony abnormalities"
+        ],
+        "span_offsets": [
+          [
+            251,
+            318
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's x-ray results show no bony abnormalities.",
+        "spans": [
+          "The x-ray results showed no signs of fracture or bony abnormalities"
+        ],
+        "span_offsets": [
+          [
+            251,
+            318
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has a neck strain.",
+        "spans": [
+          "I believe the patient has a neck strain"
+        ],
+        "span_offsets": [
+          [
+            12,
+            51
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's neck strain is likely caused by whiplash.",
+        "spans": [
+          "likely caused by whiplash from the car accident"
+        ],
+        "span_offsets": [
+          [
+            53,
+            100
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was in a car accident.",
+        "spans": [
+          "car accident"
+        ],
+        "span_offsets": [
+          [
+            88,
+            100
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed Motrin.",
+        "spans": [
+          "I prescribed Motrin 600mg every 6-8 hours for anti-inflammatory purposes"
+        ],
+        "span_offsets": [
+          [
+            0,
+            72
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Motrin dose is 600mg.",
+        "spans": [
+          "600mg"
+        ],
+        "span_offsets": [
+          [
+            20,
+            25
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Motrin frequency is every 6-8 hours.",
+        "spans": [
+          "every 6-8 hours"
+        ],
+        "span_offsets": [
+          [
+            26,
+            41
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Motrin is for anti-inflammatory purposes.",
+        "spans": [
+          "for anti-inflammatory purposes"
+        ],
+        "span_offsets": [
+          [
+            42,
+            72
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was prescribed Flexeril.",
+        "spans": [
+          "I also prescribed Flexeril 10mg every 12 hours as needed for muscle relaxation"
+        ],
+        "span_offsets": [
+          [
+            74,
+            152
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Flexeril dose is 10mg.",
+        "spans": [
+          "10mg"
+        ],
+        "span_offsets": [
+          [
+            101,
+            105
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Flexeril frequency is every 12 hours.",
+        "spans": [
+          "every 12 hours"
+        ],
+        "span_offsets": [
+          [
+            106,
+            120
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Flexeril is for muscle relaxation.",
+        "spans": [
+          "for muscle relaxation"
+        ],
+        "span_offsets": [
+          [
+            131,
+            152
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was advised to be conservative with neck movement.",
+        "spans": [
+          "to be conservative with neck movement"
+        ],
+        "span_offsets": [
+          [
+            176,
+            213
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was advised to try to relax the neck.",
+        "spans": [
+          "to try to relax the neck"
+        ],
+        "span_offsets": [
+          [
+            218,
+            242
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient had an MRI ordered.",
+        "spans": [
+          "I ordered an MRI to rule out any underlying conditions"
+        ],
+        "span_offsets": [
+          [
+            244,
+            298
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The MRI is to rule out any underlying conditions.",
+        "spans": [
+          "to rule out any underlying conditions"
+        ],
+        "span_offsets": [
+          [
+            261,
+            298
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was referred to physical rehab.",
+        "spans": [
+          "I referred the patient to either physical rehab or a chiropractor for further evaluation and treatment"
+        ],
+        "span_offsets": [
+          [
+            300,
+            402
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was referred to a chiropractor.",
+        "spans": [
+          "I referred the patient to either physical rehab or a chiropractor for further evaluation and treatment"
+        ],
+        "span_offsets": [
+          [
+            300,
+            402
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will have a follow-up.",
+        "spans": [
+          "Follow-up: I will review the MRI results and provide further instructions based on the findings"
+        ],
+        "span_offsets": [
+          [
+            405,
+            500
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The follow-up will include a review of the MRI results.",
+        "spans": [
+          "I will review the MRI results and provide further instructions based on the findings"
+        ],
+        "span_offsets": [
+          [
+            416,
+            500
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ]
+  }
+]

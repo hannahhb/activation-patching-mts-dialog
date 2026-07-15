@@ -1,0 +1,861 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient has a 3-month history of intermittent cough.",
+        "spans": [
+          "3-month history of intermittent cough"
+        ],
+        "span_offsets": [
+          [
+            33,
+            70
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's cough began approximately 3 months ago while working with horses.",
+        "spans": [
+          "which began approximately 3 months ago while working with horses"
+        ],
+        "span_offsets": [
+          [
+            72,
+            136
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's cough has been exacerbated by a recent cold.",
+        "spans": [
+          "has been exacerbated by a recent cold"
+        ],
+        "span_offsets": [
+          [
+            142,
+            179
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's cough has improved with exercise, specifically biking.",
+        "spans": [
+          "The patient reports that the cough has improved with exercise, specifically biking"
+        ],
+        "span_offsets": [
+          [
+            181,
+            263
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a history of rheumatoid arthritis.",
+        "spans": [
+          "The patient has a history of rheumatoid arthritis"
+        ],
+        "span_offsets": [
+          [
+            265,
+            314
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is currently managed with methotrexate for rheumatoid arthritis.",
+        "spans": [
+          "currently managed with methotrexate 7.5mg weekly"
+        ],
+        "span_offsets": [
+          [
+            316,
+            364
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient takes methotrexate 7.5mg weekly.",
+        "spans": [
+          "methotrexate 7.5mg weekly"
+        ],
+        "span_offsets": [
+          [
+            339,
+            364
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's rheumatoid arthritis is currently under control with methotrexate 7.5mg weekly.",
+        "spans": [
+          "which is currently under control with methotrexate 7.5mg weekly"
+        ],
+        "span_offsets": [
+          [
+            689,
+            752
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is a former smoker.",
+        "spans": [
+          "The patient has been a former smoker for approximately 7 years"
+        ],
+        "span_offsets": [
+          [
+            381,
+            420
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "word"
+        ]
+      },
+      {
+        "fact": "The patient stopped smoking approximately 7 years ago.",
+        "spans": [
+          "having stopped approximately 7 years ago"
+        ],
+        "span_offsets": [
+          [
+            786,
+            826
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's mother has a history of breast cancer.",
+        "spans": [
+          "The patient's mother has a history of breast cancer"
+        ],
+        "span_offsets": [
+          [
+            828,
+            879
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies any previous history of lung infections or pneumonia.",
+        "spans": [
+          "The patient denies any previous history of lung infections or pneumonia"
+        ],
+        "span_offsets": [
+          [
+            542,
+            613
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies any pain.",
+        "spans": [
+          "The patient denies any pain, shortness of breath, or other symptoms"
+        ],
+        "span_offsets": [
+          [
+            901,
+            968
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies any shortness of breath.",
+        "spans": [
+          "The patient denies any pain, shortness of breath, or other symptoms"
+        ],
+        "span_offsets": [
+          [
+            901,
+            968
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies any other symptoms.",
+        "spans": [
+          "The patient denies any pain, shortness of breath, or other symptoms"
+        ],
+        "span_offsets": [
+          [
+            901,
+            968
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "Methotrexate 7.5mg weekly is prescribed for the patient's rheumatoid arthritis.",
+        "spans": [
+          "I prescribed methotrexate 7.5mg weekly for rheumatoid arthritis"
+        ],
+        "span_offsets": [
+          [
+            992,
+            1055
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is 124/76.",
+        "spans": [
+          "The patient's blood pressure is 124/76"
+        ],
+        "span_offsets": [
+          [
+            13,
+            51
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's heart rate is 70.",
+        "spans": [
+          "heart rate is 70"
+        ],
+        "span_offsets": [
+          [
+            53,
+            69
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's respiration rate is 16.",
+        "spans": [
+          "respiration rate is 16"
+        ],
+        "span_offsets": [
+          [
+            71,
+            93
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's oxygen saturation on room air is 98%.",
+        "spans": [
+          "oxygen saturation on room air is 98%"
+        ],
+        "span_offsets": [
+          [
+            99,
+            135
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is afebrile.",
+        "spans": [
+          "The patient is afebrile"
+        ],
+        "span_offsets": [
+          [
+            137,
+            160
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's lungs are clear and equal bilateral.",
+        "spans": [
+          "The patient's lungs are clear and equal bilateral"
+        ],
+        "span_offsets": [
+          [
+            178,
+            227
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no abnormalities noted on auscultation.",
+        "spans": [
+          "with no abnormalities noted on auscultation"
+        ],
+        "span_offsets": [
+          [
+            229,
+            272
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's heart has a regular rate and rhythm.",
+        "spans": [
+          "The heart has a regular rate and rhythm"
+        ],
+        "span_offsets": [
+          [
+            274,
+            313
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's heart has no clicks, rubs, or murmurs.",
+        "spans": [
+          "with no clicks, rubs, or murmurs"
+        ],
+        "span_offsets": [
+          [
+            315,
+            347
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has mild swelling to the knuckles on both hands.",
+        "spans": [
+          "The patient has mild swelling to the knuckles on both hands"
+        ],
+        "span_offsets": [
+          [
+            349,
+            408
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's mild swelling to the knuckles on both hands is consistent with rheumatoid arthritis.",
+        "spans": [
+          "which is consistent with rheumatoid arthritis"
+        ],
+        "span_offsets": [
+          [
+            410,
+            455
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has pulses intact in all extremities.",
+        "spans": [
+          "Pulses are intact in all extremities"
+        ],
+        "span_offsets": [
+          [
+            457,
+            493
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has brisk capillary refill.",
+        "spans": [
+          "capillary refill is brisk"
+        ],
+        "span_offsets": [
+          [
+            499,
+            524
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient had a chest CT scan prior to the visit.",
+        "spans": [
+          "The patient had a chest CT scan prior to the visit"
+        ],
+        "span_offsets": [
+          [
+            541,
+            591
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's chest CT scan showed a solitary 2cm nodule in the lateral aspect of the right upper lobe.",
+        "spans": [
+          "which showed a solitary 2cm nodule in the lateral aspect of the right upper lobe"
+        ],
+        "span_offsets": [
+          [
+            593,
+            673
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The nodule on the patient's chest CT scan is smooth in appearance.",
+        "spans": [
+          "The nodule is smooth in appearance"
+        ],
+        "span_offsets": [
+          [
+            675,
+            709
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no evidence of emphysematous disease on the chest CT scan.",
+        "spans": [
+          "there is no evidence of emphysematous disease"
+        ],
+        "span_offsets": [
+          [
+            715,
+            760
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has an incidentally found right upper lobe lung nodule.",
+        "spans": [
+          "The patient has an incidentally found right upper lobe lung nodule"
+        ],
+        "span_offsets": [
+          [
+            12,
+            78
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's lung nodule requires further evaluation.",
+        "spans": [
+          "which requires further evaluation"
+        ],
+        "span_offsets": [
+          [
+            80,
+            113
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has lung nodule.",
+        "spans": [
+          "Lung nodule"
+        ],
+        "span_offsets": [
+          [
+            130,
+            141
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has rheumatoid arthritis.",
+        "spans": [
+          "Rheumatoid arthritis"
+        ],
+        "span_offsets": [
+          [
+            143,
+            163
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a family history of breast cancer.",
+        "spans": [
+          "Family history of breast cancer"
+        ],
+        "span_offsets": [
+          [
+            180,
+            211
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will undergo a pulmonary function test (PFT).",
+        "spans": [
+          "I will order a pulmonary function test (PFT)"
+        ],
+        "span_offsets": [
+          [
+            220,
+            264
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The purpose of the pulmonary function test (PFT) is to assess lung function.",
+        "spans": [
+          "to assess lung function"
+        ],
+        "span_offsets": [
+          [
+            265,
+            288
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will undergo a PET CT scan.",
+        "spans": [
+          "I will schedule a PET CT"
+        ],
+        "span_offsets": [
+          [
+            290,
+            314
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The purpose of the PET CT scan is to determine if the nodule is metabolically active.",
+        "spans": [
+          "to determine if the nodule is metabolically active"
+        ],
+        "span_offsets": [
+          [
+            315,
+            365
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will undergo a video-assisted thoracoscopy to remove the nodule.",
+        "spans": [
+          "I will recommend a video-assisted thoracoscopy to remove the nodule"
+        ],
+        "span_offsets": [
+          [
+            367,
+            434
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The video-assisted thoracoscopy will involve general anesthesia.",
+        "spans": [
+          "which will involve a general anesthesia"
+        ],
+        "span_offsets": [
+          [
+            436,
+            475
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will have a hospital stay of one night after the video-assisted thoracoscopy.",
+        "spans": [
+          "and a hospital stay of one night"
+        ],
+        "span_offsets": [
+          [
+            476,
+            508
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will have a chest tube in place until the following day.",
+        "spans": [
+          "The patient will have a chest tube in place until the following day"
+        ],
+        "span_offsets": [
+          [
+            510,
+            577
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will continue to follow up with their rheumatologist.",
+        "spans": [
+          "The patient will continue to follow up with their rheumatologist"
+        ],
+        "span_offsets": [
+          [
+            579,
+            643
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will maintain their current medication therapy for rheumatoid arthritis.",
+        "spans": [
+          "and maintain their current medication therapy for rheumatoid arthritis"
+        ],
+        "span_offsets": [
+          [
+            644,
+            714
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will be scheduled for a PET CT scan.",
+        "spans": [
+          "The patient will be scheduled for a PET CT scan"
+        ],
+        "span_offsets": [
+          [
+            728,
+            775
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will be scheduled for a video-assisted thoracoscopy to remove the lung nodule.",
+        "spans": [
+          "and a video-assisted thoracoscopy to remove the lung nodule"
+        ],
+        "span_offsets": [
+          [
+            776,
+            835
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "plan": []
+  }
+]

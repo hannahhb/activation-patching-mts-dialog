@@ -1,0 +1,71 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 50-year-old male.,0.75,"[""a 50-year-old male""]","[[13, 31]]","[""exact""]",True,False
+1,subjective,The patient reports being okay and feeling that his medications are helping.,0.5,"[""reports being okay and feeling that his medications are helping""]","[[33, 96]]","[""exact""]",True,False
+2,subjective,The patient is concerned about the number of medications he is taking.,0.0,"[""being concerned about the number of medications he is taking""]","[[110, 170]]","[""exact""]",True,False
+3,subjective,The patient has a history of a heart attack six months ago.,0.0,"[""a history of a heart attack six months ago""]","[[179, 221]]","[""exact""]",True,False
+4,subjective,The patient has been prescribed medications to manage his coronary artery disease.,0.0,"[""has been prescribed medications to manage his coronary artery disease""]","[[226, 295]]","[""exact""]",True,False
+5,subjective,The patient reports a complaint of dizziness when standing up quickly.,0.0,"[""dizziness when standing up quickly""]","[[323, 357]]","[""exact""]",True,False
+6,subjective,The patient attributes his dizziness to the heart attack or his medication.,0.25,"[""which he attributes to the heart attack or his medication""]","[[359, 416]]","[""exact""]",True,False
+7,subjective,The patient has a preference for chocolate chip cookies.,1.0,"[""a preference for chocolate chip cookies""]","[[435, 474]]","[""exact""]",True,False
+8,subjective,The patient has a history of diabetes.,0.0,"[""a history of diabetes""]","[[483, 504]]","[""exact""]",True,False
+9,subjective,The patient has not been following up with his nephrologist as recommended.,0.5,"[""has not been following up with his nephrologist as recommended""]","[[509, 571]]","[""exact""]",True,False
+10,subjective,The patient is a fan of the San Francisco 49ers.,0.75,"[""a fan of the San Francisco 49ers""]","[[579, 611]]","[""exact""]",True,False
+11,subjective,The patient has not been taking medications that could harm his kidneys.,0.5,"[""has not been taking medications that could harm his kidneys""]","[[616, 675]]","[""exact""]",True,False
+12,subjective,The patient has been experiencing some puffiness in his legs.,0.75,"[""some puffiness in his legs""]","[[702, 728]]","[""exact""]",True,False
+13,subjective,The patient has a history of coronary artery disease.,0.0,"[""a history of coronary artery disease""]","[[748, 784]]","[""exact""]",True,False
+14,subjective,The patient's coronary artery disease led to a heart attack six months ago.,0.0,"[""which led to a heart attack six months ago""]","[[786, 828]]","[""exact""]",True,False
+15,subjective,The patient's diabetes contributed to his heart attack.,0.75,"[""which contributed to his heart attack""]","[[968, 1005]]","[""exact""]",True,False
+16,subjective,The patient has stage three chronic kidney disease.,0.0,"[""stage three chronic kidney disease""]","[[1014, 1048]]","[""exact""]",True,False
+17,subjective,The patient's stage three chronic kidney disease requires him to follow up with a nephrologist.,0.5,"[""which requires him to follow up with a nephrologist""]","[[1050, 1101]]","[""exact""]",True,False
+18,subjective,The patient reports feeling down and lonely since his heart attack.,1.0,"[""feeling down and lonely since his heart attack""]","[[1311, 1357]]","[""exact""]",True,False
+19,subjective,The patient is taking aspirin.,0.0,"[""Aspirin 81mg daily for coronary artery disease""]","[[1363, 1409]]","[""exact""]",True,False
+20,subjective,The patient's aspirin dose is 81mg daily.,1.0,"[""81mg daily""]","[[1371, 1381]]","[""exact""]",True,False
+21,subjective,The patient takes aspirin for coronary artery disease.,0.0,"[""for coronary artery disease""]","[[1382, 1409]]","[""exact""]",True,False
+22,subjective,The patient is taking brilinta.,0.0,"[""Brilinta 90mg twice daily for coronary artery disease""]","[[1412, 1465]]","[""exact""]",True,False
+23,subjective,The patient's brilinta dose is 90mg twice daily.,1.0,"[""90mg twice daily""]","[[1421, 1437]]","[""exact""]",True,False
+24,subjective,The patient takes brilinta for coronary artery disease.,0.0,"[""for coronary artery disease""]","[[1382, 1409]]","[""exact""]",True,False
+25,subjective,The patient is taking crestor.,0.0,"[""Crestor 40mg daily for high cholesterol""]","[[1468, 1507]]","[""exact""]",True,False
+26,subjective,The patient's crestor dose is 40mg daily.,0.0,"[""40mg daily""]","[[1476, 1486]]","[""exact""]",True,False
+27,subjective,The patient takes crestor for high cholesterol.,0.25,"[""for high cholesterol""]","[[1487, 1507]]","[""exact""]",True,False
+28,subjective,The patient is taking metoprolol.,0.0,"[""Metoprolol 50mg daily for coronary artery disease""]","[[1510, 1559]]","[""exact""]",True,False
+29,subjective,The patient's metoprolol dose is 50mg daily.,0.0,"[""50mg daily""]","[[1521, 1531]]","[""exact""]",True,False
+30,subjective,The patient takes metoprolol for coronary artery disease.,0.0,"[""for coronary artery disease""]","[[1382, 1409]]","[""exact""]",True,False
+31,subjective,The patient is taking fish oil.,0.0,"[""Fish oil for coronary artery disease""]","[[1562, 1598]]","[""exact""]",True,False
+32,subjective,The patient takes fish oil for coronary artery disease.,1.0,"[""for coronary artery disease""]","[[1382, 1409]]","[""exact""]",True,False
+33,objective,The patient's blood pressure is 127/80.,0.0,"[""Blood pressure: 127/80""]","[[2, 24]]","[""exact""]",True,False
+34,objective,The patient's neck exam is unremarkable.,0.75,"[""The patient's neck exam is unremarkable""]","[[127, 166]]","[""exact""]",True,False
+35,objective,The patient has a 3/6 systolic ejection murmur at the left base.,0.0,"[""The patient's heart exam reveals a slight 3/6 systolic ejection murmur at the left base""]","[[170, 257]]","[""exact""]",True,False
+36,objective,The patient has one plus nonpitting edema in the lower extremities.,0.0,"[""The patient's lower extremity exam reveals one plus nonpitting edema""]","[[261, 329]]","[""exact""]",True,False
+37,objective,The patient's kidney function is stable.,0.0,"[""Kidney function test results show stable kidney function""]","[[335, 391]]","[""exact""]",True,False
+38,objective,The patient's Hemoglobin A1c is approximately 60%.,1.0,"[""Hemoglobin A1c was reported to be approximately 60%""]","[[395, 446]]","[""exact""]",True,False
+39,assessment,The patient has coronary artery disease.,0.0,"[""The patient has coronary artery disease, which is currently stable""]","[[0, 66]]","[""exact""]",True,False
+40,assessment,The patient's coronary artery disease is currently stable.,1.0,"[""which is currently stable""]","[[41, 66]]","[""exact""]",True,False
+41,assessment,The patient has chronic kidney disease.,0.0,"[""chronic kidney disease, stage three""]","[[68, 103]]","[""exact""]",True,False
+42,assessment,The patient's chronic kidney disease is stage three.,0.0,"[""stage three""]","[[92, 103]]","[""exact""]",True,False
+43,assessment,The patient has diabetes.,0.0,"[""diabetes""]","[[109, 117]]","[""exact""]",True,False
+44,assessment,The patient is experiencing mild depression.,0.25,"[""mild depression and loneliness following his heart attack""]","[[147, 204]]","[""exact""]",True,False
+45,assessment,The patient is experiencing loneliness.,1.0,"[""mild depression and loneliness following his heart attack""]","[[147, 204]]","[""exact""]",True,False
+46,assessment,The patient had a heart attack.,0.5,"[""following his heart attack""]","[[178, 204]]","[""exact""]",True,False
+47,assessment,Coronary artery disease is on the patient's problem list.,0.0,"[""Coronary artery disease; chronic kidney disease, stage three; diabetes; mild depression""]","[[221, 308]]","[""exact""]",True,False
+48,assessment,Chronic kidney disease is on the patient's problem list.,0.0,"[""Coronary artery disease; chronic kidney disease, stage three; diabetes; mild depression""]","[[221, 308]]","[""exact""]",True,False
+49,assessment,Diabetes is on the patient's problem list.,0.0,"[""Coronary artery disease; chronic kidney disease, stage three; diabetes; mild depression""]","[[221, 308]]","[""exact""]",True,False
+50,assessment,Mild depression is on the patient's problem list.,0.0,"[""Coronary artery disease; chronic kidney disease, stage three; diabetes; mild depression""]","[[221, 308]]","[""exact""]",True,False
+51,plan,The patient is prescribed Metoprolol.,0.0,"[""Metoprolol 50mg daily for coronary artery disease""]","[[42, 91]]","[""exact""]",True,False
+52,plan,The patient's Metoprolol dose is 50mg daily.,0.75,"[""50mg daily""]","[[53, 63]]","[""exact""]",True,False
+53,plan,The patient's Metoprolol is prescribed for coronary artery disease.,1.0,"[""for coronary artery disease""]","[[64, 91]]","[""exact""]",True,False
+54,plan,The patient is prescribed Crestor.,0.0,"[""Crestor 40mg daily for high cholesterol""]","[[95, 134]]","[""exact""]",True,False
+55,plan,The patient's Crestor dose is 40mg daily.,0.25,"[""40mg daily""]","[[103, 113]]","[""exact""]",True,False
+56,plan,The patient's Crestor is prescribed for high cholesterol.,0.25,"[""for high cholesterol""]","[[114, 134]]","[""exact""]",True,False
+57,plan,The patient is prescribed Aspirin.,0.0,"[""Aspirin 81mg daily for coronary artery disease""]","[[138, 184]]","[""exact""]",True,False
+58,plan,The patient's Aspirin dose is 81mg daily.,1.0,"[""81mg daily""]","[[146, 156]]","[""exact""]",True,False
+59,plan,The patient's Aspirin is prescribed for coronary artery disease.,1.0,"[""for coronary artery disease""]","[[64, 91]]","[""exact""]",True,False
+60,plan,The patient has high cholesterol.,0.25,"[""for high cholesterol""]","[[114, 134]]","[""exact""]",True,False
+61,plan,The patient is referred to cardiac rehab.,0.0,"[""I referred the patient to cardiac rehab""]","[[186, 225]]","[""exact""]",True,False
+62,plan,The patient is referred to a dietitian.,0.0,"[""I also referred the patient to a dietitian""]","[[292, 334]]","[""exact""]",True,False
+63,plan,The patient will have a hemoglobin A1c test.,0.0,"[""I will order another hemoglobin A1c test""]","[[445, 485]]","[""exact""]",True,False
+64,plan,The patient has kidney disease.,0.5,"[""to monitor his kidney disease""]","[[760, 789]]","[""exact""]",True,False
+65,plan,The patient has depression.,0.25,"[""to discuss his depression""]","[[827, 852]]","[""exact""]",True,False
+66,plan,The patient has loneliness.,1.0,"[""and loneliness""]","[[853, 867]]","[""exact""]",True,False
+67,plan,The patient will follow up with his cardiologist in six months.,1.0,"[""The patient will follow up with his cardiologist in six months""]","[[612, 674]]","[""exact""]",True,False
+68,plan,The patient will follow up with his nephrologist.,0.25,"[""He will also follow up with his nephrologist""]","[[715, 759]]","[""exact""]",True,False
+69,plan,The patient will see a psychiatrist.,0.0,"[""The patient will see a psychiatrist""]","[[791, 826]]","[""exact""]",True,False

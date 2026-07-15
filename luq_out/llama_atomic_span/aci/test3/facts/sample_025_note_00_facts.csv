@@ -1,0 +1,44 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 30-year-old male.,0.25,"[""a 30-year-old male""]","[[18, 36]]","[""exact""]",True,False
+1,subjective,The patient presents with a 2-week history of intermittent flank pain.,0.0,"[""2-week history of intermittent flank pain""]","[[54, 95]]","[""exact""]",True,False
+2,subjective,The patient's flank pain radiates to the groin.,0.0,"[""flank pain radiating to the groin""]","[[85, 118]]","[""exact""]",True,False
+3,subjective,The patient's flank pain is exacerbated by fluid intake.,0.0,"[""exacerbated by fluid intake and physical activity""]","[[129, 178]]","[""exact""]",True,False
+4,subjective,The patient's flank pain is exacerbated by physical activity.,0.0,"[""exacerbated by fluid intake and physical activity""]","[[129, 178]]","[""exact""]",True,False
+5,subjective,The patient's pain is described as a 1-4/10.,0.25,"[""a 1-4/10""]","[[205, 213]]","[""exact""]",True,False
+6,subjective,The patient experiences periods of more intense pain.,0.5,"[""periods of more intense pain""]","[[220, 248]]","[""exact""]",True,False
+7,subjective,The patient reports no fever.,0.0,"[""no fever""]","[[270, 278]]","[""exact""]",True,False
+8,subjective,The patient reports no nausea.,0.0,"[""no nausea""]","[[280, 286]]","[""word""]",True,False
+9,subjective,The patient reports no vomiting.,0.0,"[""no vomiting""]","[[288, 296]]","[""word""]",True,False
+10,subjective,The patient reports no chills.,0.5,"[""no chills""]","[[301, 307]]","[""word""]",True,False
+11,subjective,The patient has a history of passing kidney stones.,0.0,"[""history of passing kidney stones""]","[[318, 350]]","[""exact""]",True,False
+12,subjective,The patient has a history of surgical interventions for kidney stones.,0.0,"[""including a couple of instances requiring surgery""]","[[364, 413]]","[""exact""]",True,False
+13,subjective,The patient has a family history of kidney stones.,0.0,"[""family history of kidney stones""]","[[425, 456]]","[""exact""]",True,False
+14,subjective,The patient reports no abdominal tenderness.,1.0,"[""no abdominal tenderness""]","[[703, 726]]","[""exact""]",True,False
+15,subjective,The patient reports right-sided CVA tenderness.,1.0,"[""right-sided CVA tenderness""]","[[758, 784]]","[""exact""]",True,False
+16,subjective,The patient is prescribed ibuprofen.,0.25,"[""I prescribed ibuprofen""]","[[808, 830]]","[""exact""]",True,False
+17,subjective,The patient takes ibuprofen as needed for pain.,0.0,"[""as needed for pain""]","[[831, 849]]","[""exact""]",True,False
+18,objective,The patient's blood pressure is elevated.,0.0,"[""Blood pressure is elevated""]","[[13, 39]]","[""exact""]",True,False
+19,objective,The patient's elevated blood pressure is likely due to pain.,0.25,"[""likely due to pain""]","[[41, 59]]","[""exact""]",True,False
+20,objective,The patient's abdomen is not tender to palpation.,0.25,"[""The patient's abdomen is not tender to palpation""]","[[118, 166]]","[""exact""]",True,False
+21,objective,The patient has CVA tenderness on the right side of the abdomen.,0.25,"[""CVA tenderness""]","[[210, 224]]","[""exact""]",True,False
+22,objective,A CT scan shows a stone located on the proximal right ureter.,0.0,"[""A CT scan shows a 0.5 cm stone located on the proximal right ureter""]","[[241, 308]]","[""exact""]",True,False
+23,objective,The stone on the proximal right ureter is 0.5 cm in size.,0.0,"[""0.5 cm""]","[[259, 265]]","[""exact""]",True,False
+24,objective,There is no hydronephrosis.,0.0,"[""with no hydronephrosis""]","[[310, 332]]","[""exact""]",True,False
+25,assessment,The patient has a kidney stone.,0.0,"[""The patient has a kidney stone""]","[[12, 42]]","[""exact""]",True,False
+26,assessment,The patient's kidney stone is approximately 0.5 cm in size.,0.0,"[""approximately 0.5 cm in size""]","[[44, 72]]","[""exact""]",True,False
+27,assessment,The patient's kidney stone is located on the proximal right ureter.,0.0,"[""located on the proximal right ureter""]","[[74, 110]]","[""exact""]",True,False
+28,assessment,The patient has intermittent flank pain.,0.75,"[""intermittent flank pain""]","[[117, 140]]","[""exact""]",True,False
+29,assessment,The patient has CVA tenderness.,0.75,"[""CVA tenderness""]","[[145, 159]]","[""exact""]",True,False
+30,plan,The patient will continue to take ibuprofen as needed for pain.,0.25,"[""ibuprofen as needed for pain""]","[[31, 59]]","[""exact""]",True,False
+31,plan,The patient will take tramadol 50mg as needed for breakthrough pain.,0.25,"[""tramadol 50mg as needed for breakthrough pain""]","[[74, 119]]","[""exact""]",True,False
+32,plan,The patient's tramadol dose is 50mg.,0.25,"[""tramadol 50mg""]","[[74, 87]]","[""exact""]",True,False
+33,plan,The patient will take tramadol for breakthrough pain.,0.0,"[""for breakthrough pain""]","[[98, 119]]","[""exact""]",True,False
+34,plan,A BMP will be ordered for the patient.,0.0,"[""BMP""]","[[141, 144]]","[""exact""]",True,False
+35,plan,A urinalysis will be ordered for the patient.,0.0,"[""urinalysis""]","[[146, 156]]","[""exact""]",True,False
+36,plan,A urine culture will be ordered for the patient.,0.0,"[""urine culture""]","[[162, 175]]","[""exact""]",True,False
+37,plan,"The purpose of the BMP, urinalysis, and urine culture is to rule out infection.",0.0,"[""to rule out infection""]","[[176, 197]]","[""exact""]",True,False
+38,plan,The patient will continue to use a strainer when urinating to try to catch the stone.,0.25,"[""The patient will continue to use a strainer when urinating to try to catch the stone""]","[[199, 283]]","[""exact""]",True,False
+39,plan,The patient is expected to return in 1-2 weeks for a follow-up appointment.,0.0,"[""The patient will return in 1-2 weeks for a follow-up appointment"", ""I will see the patient again in 1-2 weeks""]","[[424, 488], [285, 326]]","[""exact"", ""exact""]",True,True
+40,plan,The patient's symptoms will be reassessed in 1-2 weeks.,0.0,"[""to reassess symptoms""]","[[327, 347]]","[""exact""]",True,False
+41,plan,Further treatment will be planned in 1-2 weeks.,0.0,"[""plan further treatment""]","[[352, 374]]","[""exact""]",True,False
+42,plan,Lithotripsy may be necessary for the patient.,0.0,"[""including lithotripsy if necessary""]","[[376, 410]]","[""exact""]",True,False

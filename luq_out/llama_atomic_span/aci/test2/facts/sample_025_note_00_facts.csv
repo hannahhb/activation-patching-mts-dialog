@@ -1,0 +1,51 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 62-year-old male.,0.75,"[""The patient is a 62-year-old male""]","[[0, 33]]","[""exact""]",True,False
+1,subjective,The patient has a history of coronary artery disease.,0.0,"[""a history of coronary artery disease""]","[[52, 88]]","[""exact""]",True,False
+2,subjective,The patient had a heart attack six months ago.,0.25,"[""a heart attack six months ago""]","[[93, 122]]","[""exact""]",True,False
+3,subjective,The patient underwent a stent placement in his left anterior descending artery.,0.25,"[""underwent a stent placement in his left anterior descending artery""]","[[137, 203]]","[""exact""]",True,False
+4,subjective,The patient is taking aspirin.,0.25,"[""aspirin""]","[[265, 272]]","[""exact""]",True,False
+5,subjective,The patient is taking brilinta.,0.25,"[""brilinta""]","[[274, 282]]","[""exact""]",True,False
+6,subjective,The patient is taking crestor.,0.25,"[""crestor""]","[[288, 295]]","[""exact""]",True,False
+7,subjective,The patient's crestor dose is 40 mg.,0.5,"[""Crestor 40 mg""]","[[1522, 1535]]","[""exact""]",True,False
+8,subjective,The patient takes crestor once a day.,0.5,"[""once a day""]","[[1536, 1546]]","[""exact""]",True,False
+9,subjective,The patient is taking crestor for cholesterol.,0.5,"[""indication: cholesterol""]","[[1548, 1571]]","[""exact""]",True,False
+10,subjective,The patient is taking fish oil.,0.25,"[""Fish oil""]","[[1575, 1583]]","[""exact""]",True,False
+11,subjective,The patient is taking metoprolol.,0.25,"[""Metoprolol""]","[[1664, 1674]]","[""exact""]",True,False
+12,subjective,The patient's metoprolol dose is 50 mg.,0.25,"[""50 mg""]","[[1675, 1680]]","[""exact""]",True,False
+13,subjective,The patient takes metoprolol once a day.,0.25,"[""once a day""]","[[1536, 1546]]","[""exact""]",True,False
+14,subjective,The patient is taking metoprolol for cardiac health.,0.5,"[""indication: cardiac health""]","[[1403, 1429]]","[""exact""]",True,False
+15,subjective,The patient has diabetes.,0.0,"[""a history of diabetes""]","[[534, 555]]","[""exact""]",True,False
+16,subjective,The patient's hemoglobin A1c level is around 16.,0.25,"[""having a high hemoglobin A1c level of around 16""]","[[613, 660]]","[""exact""]",True,False
+17,subjective,The patient has stage three chronic kidney disease.,0.0,"[""stage three chronic kidney disease""]","[[674, 708]]","[""exact""]",True,False
+18,subjective,The patient experiences dizziness when standing up quickly.,0.0,"[""experiences dizziness when standing up quickly""]","[[413, 459]]","[""exact""]",True,False
+19,subjective,The patient attributes his dizziness to either the heart attack or the medication.,0.5,"[""which he attributes to either the heart attack or the medication""]","[[461, 525]]","[""exact""]",True,False
+20,subjective,The patient has puffiness in his legs.,1.0,"[""having some puffiness in his legs""]","[[765, 798]]","[""exact""]",True,False
+21,subjective,The patient attributes his puffiness to the medications.,1.0,"[""which he attributes to the medications""]","[[800, 838]]","[""exact""]",True,False
+22,subjective,The patient has not seen his nephrologist in a year.,0.5,"[""has not seen his nephrologist in a year""]","[[713, 752]]","[""exact""]",True,False
+23,subjective,The patient has not been following a diet for his diabetes.,1.0,"[""for which he has not been following a diet""]","[[557, 599]]","[""exact""]",True,False
+24,objective,The patient's blood pressure is 127/80 mmHg.,0.25,"[""blood pressure 127/80 mmHg""]","[[15, 41]]","[""exact""]",True,False
+25,objective,The patient's pulse rate is not specified.,0.0,"[""pulse rate not specified""]","[[43, 67]]","[""exact""]",True,False
+26,objective,The patient's oxygen saturation is not specified.,0.0,"[""oxygen saturation not specified""]","[[69, 100]]","[""exact""]",True,False
+27,objective,The patient's temperature is not specified.,0.0,"[""temperature not specified""]","[[102, 127]]","[""exact""]",True,False
+28,objective,The patient does not have jugular venous distention.,0.75,"[""jugular venous distention not appreciated""]","[[145, 186]]","[""exact""]",True,False
+29,objective,The patient does not have carotid bruits.,0.75,"[""carotid bruits not appreciated""]","[[188, 218]]","[""exact""]",True,False
+30,objective,The patient has a 3/6 systolic ejection murmur at the left base.,0.0,"[""a slight 3/6 systolic ejection murmur heard at the left base""]","[[220, 280]]","[""exact""]",True,False
+31,objective,The patient has one plus nonpitting edema in the lower extremities.,0.0,"[""one plus nonpitting edema in the lower extremities""]","[[282, 332]]","[""exact""]",True,False
+32,assessment,The patient has coronary artery disease.,0.0,"[""The patient has coronary artery disease, stage three chronic kidney disease, and diabetes"", ""Coronary artery disease""]","[[12, 101], [187, 210]]","[""exact"", ""exact""]",True,True
+33,assessment,The patient is being followed by a cardiologist.,1.0,"[""for which he is being followed by his cardiologist and nephrologist""]","[[103, 170]]","[""exact""]",True,False
+34,assessment,The patient is being followed by a nephrologist.,1.0,"[""for which he is being followed by his cardiologist and nephrologist""]","[[103, 170]]","[""exact""]",True,False
+35,plan,The patient was referred for cardiac rehabilitation.,0.0,"[""I referred the patient for cardiac rehabilitation""]","[[0, 49]]","[""exact""]",True,False
+36,plan,The purpose of the cardiac rehabilitation is to help the patient be more active and confident in exercising again.,0.0,"[""to help him be more active and confident in exercising again""]","[[50, 110]]","[""exact""]",True,False
+37,plan,The patient's metoprolol prescription will be refilled.,0.0,"[""refill his metoprolol""]","[[124, 145]]","[""exact""]",True,False
+38,plan,The patient's crestor prescription will be refilled.,0.0,"[""refill his crestor""]","[[124, 154]]","[""word""]",True,False
+39,plan,The patient's aspirin prescription will be refilled.,0.0,"[""refill his aspirin""]","[[112, 168]]","[""semantic""]",True,False
+40,plan,A stress test was not deemed necessary at this time.,0.75,"[""I did not think it necessary to proceed with a stress test at this time""]","[[169, 240]]","[""exact""]",True,False
+41,plan,The patient will be scheduled for an appointment with his nephrologist.,0.0,"[""I will reach out to Dr. Miller to schedule an appointment for the patient to see his nephrologist""]","[[242, 339]]","[""exact""]",True,False
+42,plan,Another hemoglobin A1c will be ordered for the patient.,0.0,"[""I will order another hemoglobin A1c""]","[[341, 376]]","[""exact""]",True,False
+43,plan,The patient will be referred to a dietitian for dietary education.,0.0,"[""refer the patient to a dietitian for dietary education""]","[[381, 435]]","[""exact""]",True,False
+44,plan,The patient's insulin regimen will be discussed with his primary care physician.,0.25,"[""discuss his insulin regimen with his primary care physician""]","[[449, 508]]","[""exact""]",True,False
+45,plan,The patient will follow up with his cardiologist in six months.,0.75,"[""The patient will follow up with his cardiologist in six months""]","[[511, 573]]","[""exact""]",True,False
+46,plan,The purpose of the follow-up with the cardiologist is to check on the stent and continue monitoring his cardiac health.,1.0,"[""to check on the stent and continue monitoring his cardiac health""]","[[574, 638]]","[""exact""]",True,False
+47,plan,The patient will follow up with his nephrologist to monitor his kidney disease.,0.0,"[""follow up with his nephrologist to monitor his kidney disease""]","[[653, 714]]","[""exact""]",True,False
+48,plan,The patient will see a psychiatrist to discuss his feelings of sadness and loneliness.,0.25,"[""see a psychiatrist to discuss his feelings of sadness and loneliness""]","[[738, 806]]","[""exact""]",True,False
+49,plan,The patient's feelings of sadness and loneliness are since the heart attack.,0.25,"[""since the heart attack""]","[[807, 829]]","[""exact""]",True,False

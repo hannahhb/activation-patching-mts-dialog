@@ -1,0 +1,1049 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 31-year-old female.",
+        "spans": [
+          "a 31-year-old female"
+        ],
+        "span_offsets": [
+          [
+            18,
+            38
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing abdominal pain for the past week.",
+        "spans": [
+          "abdominal pain for the past week"
+        ],
+        "span_offsets": [
+          [
+            62,
+            94
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdominal pain has been gradually increasing in severity.",
+        "spans": [
+          "which has been gradually increasing in severity"
+        ],
+        "span_offsets": [
+          [
+            96,
+            143
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of diabetes type two.",
+        "spans": [
+          "history of diabetes type two"
+        ],
+        "span_offsets": [
+          [
+            155,
+            183
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of asthma.",
+        "spans": [
+          "history of asthma"
+        ],
+        "span_offsets": [
+          [
+            188,
+            194
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports nausea.",
+        "spans": [
+          "nausea and vomiting"
+        ],
+        "span_offsets": [
+          [
+            208,
+            227
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports vomiting.",
+        "spans": [
+          "nausea and vomiting"
+        ],
+        "span_offsets": [
+          [
+            208,
+            227
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's nausea occurred approximately three times in the past week.",
+        "spans": [
+          "nausea occurring approximately three times in the past week"
+        ],
+        "span_offsets": [
+          [
+            234,
+            293
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's vomiting occurred a couple of times.",
+        "spans": [
+          "vomiting a couple of times"
+        ],
+        "span_offsets": [
+          [
+            298,
+            324
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient believes her increased coffee consumption may have contributed to the abdominal pain.",
+        "spans": [
+          "may have contributed to the abdominal pain"
+        ],
+        "span_offsets": [
+          [
+            372,
+            414
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient consumed a lot of coffee in the past week.",
+        "spans": [
+          "having consumed a lot of coffee"
+        ],
+        "span_offsets": [
+          [
+            416,
+            447
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient consumed venti-sized nitrocolbrus from Starbucks in the past week.",
+        "spans": [
+          "venti-sized nitrocolbrus from Starbucks"
+        ],
+        "span_offsets": [
+          [
+            459,
+            498
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdominal pain is located in both sides of her upper abdomen.",
+        "spans": [
+          "located in both sides of her upper abdomen"
+        ],
+        "span_offsets": [
+          [
+            530,
+            572
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdominal pain worsens with exercise.",
+        "spans": [
+          "worsens with exercise"
+        ],
+        "span_offsets": [
+          [
+            577,
+            598
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdominal pain worsens with jogging.",
+        "spans": [
+          "such as jogging or running"
+        ],
+        "span_offsets": [
+          [
+            600,
+            626
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdominal pain worsens with running.",
+        "spans": [
+          "such as jogging or running"
+        ],
+        "span_offsets": [
+          [
+            600,
+            626
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not had any fever with the pain.",
+        "spans": [
+          "has not had any fever with the pain"
+        ],
+        "span_offsets": [
+          [
+            632,
+            667
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking metformin.",
+        "spans": [
+          "metformin 500 milligrams twice daily"
+        ],
+        "span_offsets": [
+          [
+            775,
+            811
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking metformin 500 milligrams twice daily.",
+        "spans": [
+          "metformin 500 milligrams twice daily"
+        ],
+        "span_offsets": [
+          [
+            775,
+            811
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's metformin is for diabetes.",
+        "spans": [
+          "Metformin 500 milligrams twice daily for diabetes"
+        ],
+        "span_offsets": [
+          [
+            954,
+            1003
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking flovent.",
+        "spans": [
+          "Flovent twice daily"
+        ],
+        "span_offsets": [
+          [
+            1004,
+            1023
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking flovent twice daily.",
+        "spans": [
+          "Flovent twice daily"
+        ],
+        "span_offsets": [
+          [
+            1004,
+            1023
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's flovent is for asthma.",
+        "spans": [
+          "Flovent twice daily for asthma"
+        ],
+        "span_offsets": [
+          [
+            1004,
+            1034
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking albuterol.",
+        "spans": [
+          "Albuterol as needed"
+        ],
+        "span_offsets": [
+          [
+            1035,
+            1054
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking albuterol as needed.",
+        "spans": [
+          "Albuterol as needed"
+        ],
+        "span_offsets": [
+          [
+            1035,
+            1054
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's albuterol is for asthma.",
+        "spans": [
+          "Albuterol as needed for asthma"
+        ],
+        "span_offsets": [
+          [
+            1035,
+            1065
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's blood sugar has been under control at around 800.",
+        "spans": [
+          "her blood sugar has been under control at around 800"
+        ],
+        "span_offsets": [
+          [
+            817,
+            869
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's physical exam is mostly unremarkable.",
+        "spans": [
+          "The patient's physical exam is mostly unremarkable"
+        ],
+        "span_offsets": [
+          [
+            15,
+            65
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has mild tenderness in the epigastrium of her abdomen.",
+        "spans": [
+          "mild tenderness in the epigastrium of her abdomen"
+        ],
+        "span_offsets": [
+          [
+            72,
+            121
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a grade three out of six systolic ejection murmur.",
+        "spans": [
+          "a grade three out of six systolic ejection murmur"
+        ],
+        "span_offsets": [
+          [
+            123,
+            172
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has mild end-expiratory wheezes.",
+        "spans": [
+          "mild end-expiratory wheezes"
+        ],
+        "span_offsets": [
+          [
+            174,
+            201
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lung exam is otherwise normal.",
+        "spans": [
+          "and otherwise normal lung exam"
+        ],
+        "span_offsets": [
+          [
+            203,
+            233
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient is diagnosed with acute gastritis.",
+        "spans": [
+          "I diagnose the patient with acute gastritis"
+        ],
+        "span_offsets": [
+          [
+            12,
+            55
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's acute gastritis is likely related to caffeine intake.",
+        "spans": [
+          "likely related to caffeine intake"
+        ],
+        "span_offsets": [
+          [
+            57,
+            90
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's acute gastritis is possibly exacerbated by her history of alcohol use.",
+        "spans": [
+          "possibly exacerbated by her history of alcohol use"
+        ],
+        "span_offsets": [
+          [
+            95,
+            145
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has gastritis.",
+        "spans": [
+          "Gastritis"
+        ],
+        "span_offsets": [
+          [
+            161,
+            170
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has diabetes type two.",
+        "spans": [
+          "Diabetes type two"
+        ],
+        "span_offsets": [
+          [
+            172,
+            189
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has asthma.",
+        "spans": [
+          "Asthma"
+        ],
+        "span_offsets": [
+          [
+            191,
+            197
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a systolic ejection murmur.",
+        "spans": [
+          "Systolic ejection murmur"
+        ],
+        "span_offsets": [
+          [
+            199,
+            223
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed Zantac.",
+        "spans": [
+          "I prescribed Zantac 150 milligrams twice daily for gastritis"
+        ],
+        "span_offsets": [
+          [
+            0,
+            60
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Zantac dose is 150 milligrams.",
+        "spans": [
+          "150 milligrams"
+        ],
+        "span_offsets": [
+          [
+            20,
+            34
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Zantac frequency is twice daily.",
+        "spans": [
+          "twice daily"
+        ],
+        "span_offsets": [
+          [
+            35,
+            46
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Zantac indication is gastritis.",
+        "spans": [
+          "for gastritis"
+        ],
+        "span_offsets": [
+          [
+            47,
+            60
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's metformin dose was increased.",
+        "spans": [
+          "I increased the patient's metformin dose to 1000 milligrams in the morning and 500 milligrams in the evening"
+        ],
+        "span_offsets": [
+          [
+            62,
+            170
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's metformin morning dose is 1000 milligrams.",
+        "spans": [
+          "1000 milligrams in the morning"
+        ],
+        "span_offsets": [
+          [
+            106,
+            136
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's metformin evening dose is 500 milligrams.",
+        "spans": [
+          "500 milligrams in the evening"
+        ],
+        "span_offsets": [
+          [
+            141,
+            170
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to cut back on caffeine.",
+        "spans": [
+          "cut back on her caffeine"
+        ],
+        "span_offsets": [
+          [
+            197,
+            221
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to limit coffee consumption.",
+        "spans": [
+          "limiting her coffee consumption"
+        ],
+        "span_offsets": [
+          [
+            252,
+            283
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to reduce alcohol intake.",
+        "spans": [
+          "reducing her alcohol to less than two or three drinks per week"
+        ],
+        "span_offsets": [
+          [
+            288,
+            350
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's recommended alcohol intake is less than two or three drinks per week.",
+        "spans": [
+          "less than two or three drinks per week"
+        ],
+        "span_offsets": [
+          [
+            312,
+            350
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to decrease spicy food intake.",
+        "spans": [
+          "decrease her spicy food intake"
+        ],
+        "span_offsets": [
+          [
+            380,
+            410
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A urinalysis was ordered for the patient.",
+        "spans": [
+          "I ordered a urinalysis"
+        ],
+        "span_offsets": [
+          [
+            412,
+            434
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A urine pregnancy test was ordered for the patient.",
+        "spans": [
+          "urine pregnancy test"
+        ],
+        "span_offsets": [
+          [
+            436,
+            456
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A CBC was ordered for the patient.",
+        "spans": [
+          "CBC"
+        ],
+        "span_offsets": [
+          [
+            458,
+            461
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A comprehensive metabolic panel was ordered for the patient.",
+        "spans": [
+          "comprehensive metabolic panel"
+        ],
+        "span_offsets": [
+          [
+            467,
+            496
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to continue taking flovent.",
+        "spans": [
+          "continue taking flovent twice daily"
+        ],
+        "span_offsets": [
+          [
+            555,
+            590
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's flovent frequency is twice daily.",
+        "spans": [
+          "twice daily"
+        ],
+        "span_offsets": [
+          [
+            35,
+            46
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to continue taking albuterol as needed.",
+        "spans": [
+          "albuterol as needed"
+        ],
+        "span_offsets": [
+          [
+            595,
+            614
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's albuterol indication is asthma.",
+        "spans": [
+          "for asthma"
+        ],
+        "span_offsets": [
+          [
+            615,
+            625
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A follow-up appointment was scheduled with the patient in four weeks.",
+        "spans": [
+          "I scheduled a follow-up appointment with the patient in four weeks"
+        ],
+        "span_offsets": [
+          [
+            639,
+            705
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the follow-up appointment is to monitor gastritis and diabetes.",
+        "spans": [
+          "to monitor her gastritis and diabetes"
+        ],
+        "span_offsets": [
+          [
+            706,
+            743
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

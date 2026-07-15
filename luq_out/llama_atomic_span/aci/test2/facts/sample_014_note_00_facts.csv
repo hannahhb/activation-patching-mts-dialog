@@ -1,0 +1,56 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Philip.,0.75,"[""The patient, Philip,""]","[[5, 25]]","[""exact""]",True,False
+1,subjective,The patient presented with a one-week history of right elbow pain.,0.0,"[""a one-week history of right elbow pain""]","[[41, 79]]","[""exact""]",True,False
+2,subjective,The patient's right elbow pain began after playing lacrosse with his children.,0.0,"[""that began after playing lacrosse with his children""]","[[80, 131]]","[""exact""]",True,False
+3,subjective,The patient's right elbow pain is sharp.,0.0,"[""the pain is sharp""]","[[149, 166]]","[""exact""]",True,False
+4,subjective,The patient's right elbow pain radiates down his forearm.,0.0,"[""radiates down his forearm""]","[[171, 196]]","[""exact""]",True,False
+5,subjective,The patient's right elbow pain worsens with movement of the elbow.,0.5,"[""worsening with movement of the elbow""]","[[198, 234]]","[""exact""]",True,False
+6,subjective,The patient denies any history of falling.,1.0,"[""He denies any history of falling""]","[[236, 268]]","[""exact""]",True,False
+7,subjective,"The patient's son was checking him several times during the game, which may have contributed to the injury.",0.0,"[""which may have contributed to the injury"", ""his son was checking him several times during the game""]","[[343, 383], [287, 341]]","[""exact"", ""exact""]",True,True
+8,subjective,The patient has tried taking Advil for right elbow pain.,0.0,"[""He has tried taking Advil""]","[[385, 410]]","[""exact""]",True,False
+9,subjective,The patient's right elbow pain was provided some relief by Advil.,0.0,"[""which provided some relief""]","[[412, 438]]","[""exact""]",True,False
+10,subjective,The patient has a past medical history of hypertension.,0.0,"[""a past medical history of hypertension""]","[[479, 517]]","[""exact""]",True,False
+11,subjective,The patient has a past medical history of diabetes.,0.0,"[""a past medical history of hypertension and diabetes""]","[[479, 530]]","[""exact""]",True,False
+12,subjective,The patient is currently on lisinopril.,0.0,"[""He is currently on 20mg of lisinopril for hypertension""]","[[532, 586]]","[""exact""]",True,False
+13,subjective,The patient's lisinopril dose is 20mg.,0.0,"[""20mg of lisinopril""]","[[551, 569]]","[""exact""]",True,False
+14,subjective,The patient takes lisinopril for hypertension.,0.0,"[""for hypertension""]","[[570, 586]]","[""exact""]",True,False
+15,subjective,The patient is currently on metformin.,0.0,"[""He is currently on 500mg of metformin for diabetes""]","[[591, 622]]","[""word""]",True,False
+16,subjective,The patient's metformin dose is 500mg.,0.0,"[""500mg of metformin""]","[[591, 609]]","[""exact""]",True,False
+17,subjective,The patient takes metformin for diabetes.,0.0,"[""for diabetes""]","[[610, 622]]","[""exact""]",True,False
+18,subjective,The patient follows a Mediterranean diet.,0.25,"[""following a Mediterranean diet""]","[[635, 665]]","[""exact""]",True,False
+19,subjective,The patient's Mediterranean diet is low in salt.,0.5,"[""which is low in salt""]","[[667, 687]]","[""exact""]",True,False
+20,objective,The patient's blood pressure is 150/90.,0.5,"[""The patient's blood pressure was 150/90""]","[[13, 52]]","[""exact""]",True,False
+21,objective,The patient's blood pressure is high.,0.5,"[""which is high""]","[[54, 67]]","[""exact""]",True,False
+22,objective,The patient's lungs are clear bilaterally.,0.0,"[""The patient's lungs are clear bilaterally""]","[[152, 193]]","[""exact""]",True,False
+23,objective,The patient has a grade 2/6 systolic ejection murmur.,0.0,"[""a grade 2/6 systolic ejection murmur""]","[[222, 258]]","[""exact""]",True,False
+24,objective,The patient's systolic ejection murmur has been present before.,0.75,"[""which has been present before""]","[[260, 289]]","[""exact""]",True,False
+25,objective,The patient has pain to palpation of the olecranon area of the posterior elbow.,0.0,"[""pain to palpation of the olecranon area of the posterior elbow""]","[[318, 380]]","[""exact""]",True,False
+26,objective,The patient has mild pain with flexion and extension of the right elbow.,0.25,"[""mild pain with flexion and extension""]","[[382, 418]]","[""exact""]",True,False
+27,objective,The patient has a normal range of motion in the right elbow.,0.25,"[""normal range of motion""]","[[424, 446]]","[""exact""]",True,False
+28,assessment,The patient has a right elbow contusion.,0.75,"[""The patient has a right elbow contusion""]","[[12, 51]]","[""exact""]",True,False
+29,assessment,The patient's right elbow contusion was likely caused by a lacrosse stick check from his son.,1.0,"[""likely caused by a lacrosse stick check from his son""]","[[53, 105]]","[""exact""]",True,False
+30,assessment,The patient's right elbow contusion resulted in pain.,0.75,"[""resulting in pain and swelling""]","[[107, 137]]","[""exact""]",True,False
+31,assessment,The patient's right elbow contusion resulted in swelling.,0.75,"[""resulting in pain and swelling""]","[[107, 137]]","[""exact""]",True,False
+32,assessment,The patient has elbow contusion.,0.0,"[""Elbow contusion""]","[[140, 155]]","[""exact""]",True,False
+33,assessment,The patient has hypertension.,0.0,"[""Hypertension""]","[[157, 169]]","[""exact""]",True,False
+34,assessment,The patient has diabetes.,0.0,"[""Diabetes""]","[[171, 179]]","[""exact""]",True,False
+35,assessment,The patient has a systolic ejection murmur.,0.5,"[""Systolic ejection murmur (past/confirmed)""]","[[181, 222]]","[""exact""]",True,False
+36,plan,The patient was prescribed 800mg of ibuprofen.,0.0,"[""800mg of ibuprofen""]","[[13, 31]]","[""exact""]",True,False
+37,plan,The patient was prescribed ibuprofen twice daily.,0.0,"[""twice daily""]","[[32, 43]]","[""exact""]",True,False
+38,plan,The patient's ibuprofen is for the elbow contusion.,0.0,"[""for the elbow contusion""]","[[44, 67]]","[""exact""]",True,False
+39,plan,The patient's ibuprofen is to help with pain.,0.0,"[""to help with pain""]","[[68, 85]]","[""exact""]",True,False
+40,plan,The patient's ibuprofen is to help with swelling.,0.25,"[""to help with pain and swelling""]","[[68, 98]]","[""exact""]",True,False
+41,plan,The patient was instructed to ice the elbow.,0.0,"[""ice the elbow""]","[[128, 141]]","[""exact""]",True,False
+42,plan,The patient was instructed to ice the elbow three times a day.,0.0,"[""three times a day""]","[[142, 159]]","[""exact""]",True,False
+43,plan,The patient was instructed to ice the elbow for 20 minutes each time.,0.0,"[""for 20 minutes each time""]","[[160, 184]]","[""exact""]",True,False
+44,plan,The patient was advised to avoid playing lacrosse with his son.,0.75,"[""avoid playing lacrosse with his son""]","[[211, 246]]","[""exact""]",True,False
+45,plan,The patient was advised to avoid playing lacrosse for the next couple of weeks.,0.0,"[""for the next couple of weeks""]","[[247, 275]]","[""exact""]",True,False
+46,plan,The patient is taking 20mg of lisinopril daily.,0.25,"[""20mg of lisinopril daily""]","[[335, 359]]","[""exact""]",True,False
+47,plan,The patient's lisinopril is for hypertension.,0.0,"[""for hypertension""]","[[360, 376]]","[""exact""]",True,False
+48,plan,The patient is taking 500mg of metformin daily.,0.25,"[""500mg of metformin daily""]","[[381, 405]]","[""exact""]",True,False
+49,plan,The patient's metformin is for diabetes.,0.0,"[""for diabetes""]","[[406, 418]]","[""exact""]",True,False
+50,plan,The patient will have an A1c obtained.,0.0,"[""obtain an A1c""]","[[433, 446]]","[""exact""]",True,False
+51,plan,The A1c is to check the patient's blood sugar levels.,0.0,"[""to check the patient's blood sugar levels""]","[[447, 488]]","[""exact""]",True,False
+52,plan,The patient's metformin dosage will be adjusted as needed.,0.5,"[""adjust the metformin dosage as needed""]","[[493, 530]]","[""exact""]",True,False
+53,plan,The patient will have a follow-up appointment.,0.0,"[""We will see the patient next time""]","[[544, 577]]","[""exact""]",True,False
+54,plan,The nurse will bring in the prescriptions at the follow-up appointment.,0.5,"[""the nurse will bring in the prescriptions""]","[[583, 624]]","[""exact""]",True,False

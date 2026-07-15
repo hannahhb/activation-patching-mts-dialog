@@ -1,0 +1,811 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Jeremy.",
+        "spans": [
+          "The patient, Jeremy"
+        ],
+        "span_offsets": [
+          [
+            0,
+            19
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is a 38-year-old male.",
+        "spans": [
+          "a 38-year-old male"
+        ],
+        "span_offsets": [
+          [
+            21,
+            39
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presented to the office with a complaint of lower back pain.",
+        "spans": [
+          "presented to the office with a complaint of lower back pain"
+        ],
+        "span_offsets": [
+          [
+            41,
+            100
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lower back pain started approximately four months ago.",
+        "spans": [
+          "started approximately four months ago"
+        ],
+        "span_offsets": [
+          [
+            106,
+            143
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lower back pain began after lifting heavy boxes during his son's college move-out.",
+        "spans": [
+          "after lifting heavy boxes during his son's college move-out"
+        ],
+        "span_offsets": [
+          [
+            144,
+            203
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient attempted physical therapy at his gym for lower back pain.",
+        "spans": [
+          "attempting physical therapy at his gym"
+        ],
+        "span_offsets": [
+          [
+            252,
+            290
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient took over-the-counter pain medications such as Tylenol for lower back pain.",
+        "spans": [
+          "taking over-the-counter pain medications such as Tylenol"
+        ],
+        "span_offsets": [
+          [
+            295,
+            351
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient took over-the-counter pain medications such as ibuprofen for lower back pain.",
+        "spans": [
+          "taking over-the-counter pain medications such as Tylenol and ibuprofen"
+        ],
+        "span_offsets": [
+          [
+            295,
+            365
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any fever.",
+        "spans": [
+          "denies any fever, chills, or other systemic symptoms"
+        ],
+        "span_offsets": [
+          [
+            370,
+            422
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any chills.",
+        "spans": [
+          "denies any fever, chills, or other systemic symptoms"
+        ],
+        "span_offsets": [
+          [
+            370,
+            422
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any other systemic symptoms.",
+        "spans": [
+          "denies any fever, chills, or other systemic symptoms"
+        ],
+        "span_offsets": [
+          [
+            370,
+            422
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of a total knee replacement.",
+        "spans": [
+          "a history of a total knee replacement"
+        ],
+        "span_offsets": [
+          [
+            440,
+            477
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's total knee replacement occurred in the spring of 2020.",
+        "spans": [
+          "in the spring of 2020"
+        ],
+        "span_offsets": [
+          [
+            478,
+            499
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's total knee replacement was successful.",
+        "spans": [
+          "which he reports was successful"
+        ],
+        "span_offsets": [
+          [
+            662,
+            693
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has had no issues since his total knee replacement.",
+        "spans": [
+          "has had no issues since"
+        ],
+        "span_offsets": [
+          [
+            698,
+            721
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any symptoms of bladder incontinence.",
+        "spans": [
+          "denies any symptoms of bladder or bowel incontinence"
+        ],
+        "span_offsets": [
+          [
+            736,
+            788
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any symptoms of bowel incontinence.",
+        "spans": [
+          "denies any symptoms of bladder or bowel incontinence"
+        ],
+        "span_offsets": [
+          [
+            736,
+            788
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any weakness in his legs.",
+        "spans": [
+          "denies any weakness or numbness in his legs"
+        ],
+        "span_offsets": [
+          [
+            816,
+            859
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experienced a brief episode of numbness in his toes after the initial injury.",
+        "spans": [
+          "except for a brief episode of numbness in his toes after the initial injury"
+        ],
+        "span_offsets": [
+          [
+            860,
+            935
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is concerned about the persistent pain in his lower back.",
+        "spans": [
+          "concerned about the persistent pain and numbness in his lower back and legs"
+        ],
+        "span_offsets": [
+          [
+            507,
+            582
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is concerned about the numbness in his lower back.",
+        "spans": [
+          "concerned about the persistent pain and numbness in his lower back and legs"
+        ],
+        "span_offsets": [
+          [
+            507,
+            582
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is concerned about the numbness in his legs.",
+        "spans": [
+          "concerned about the persistent pain and numbness in his lower back and legs"
+        ],
+        "span_offsets": [
+          [
+            507,
+            582
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed ibuprofen for pain.",
+        "spans": [
+          "I prescribed ibuprofen for pain"
+        ],
+        "span_offsets": [
+          [
+            938,
+            969
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's vital signs are within normal limits.",
+        "spans": [
+          "The patient's vital signs are within normal limits"
+        ],
+        "span_offsets": [
+          [
+            13,
+            63
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's blood pressure is 117/56.",
+        "spans": [
+          "a blood pressure of 117/56"
+        ],
+        "span_offsets": [
+          [
+            70,
+            96
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heart rate is 68.",
+        "spans": [
+          "heart rate of 68"
+        ],
+        "span_offsets": [
+          [
+            98,
+            114
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's oxygen saturation is 95% on room air.",
+        "spans": [
+          "oxygen saturation of 95% on room air"
+        ],
+        "span_offsets": [
+          [
+            120,
+            156
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has bony protuberance of the C5-C6 vertebrae.",
+        "spans": [
+          "bony protuberance of the C5-C6 vertebrae"
+        ],
+        "span_offsets": [
+          [
+            175,
+            215
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no pain to palpation of the C5-C6 vertebrae.",
+        "spans": [
+          "without pain to palpation"
+        ],
+        "span_offsets": [
+          [
+            216,
+            241
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has decreased flexion of the lower back.",
+        "spans": [
+          "decreased flexion and extension of the lower back"
+        ],
+        "span_offsets": [
+          [
+            273,
+            322
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has decreased extension of the lower back.",
+        "spans": [
+          "decreased flexion and extension of the lower back"
+        ],
+        "span_offsets": [
+          [
+            273,
+            322
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a positive straight leg raise.",
+        "spans": [
+          "a positive straight leg raise"
+        ],
+        "span_offsets": [
+          [
+            324,
+            353
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has spasm of the paraspinal muscles of the lumbar spine.",
+        "spans": [
+          "spasm of the paraspinal muscles of the lumbar spine"
+        ],
+        "span_offsets": [
+          [
+            359,
+            410
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has equal strength in the lower extremities.",
+        "spans": [
+          "equal strength in the lower extremities"
+        ],
+        "span_offsets": [
+          [
+            443,
+            482
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient is suspected to have an acute disk herniation in the lumbar spine.",
+        "spans": [
+          "I suspect the patient has an acute disk herniation in the lumbar spine"
+        ],
+        "span_offsets": [
+          [
+            12,
+            82
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a lumbar spine disk herniation.",
+        "spans": [
+          "Lumbar spine disk herniation; active"
+        ],
+        "span_offsets": [
+          [
+            99,
+            135
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was ordered a lumbar spine MRI.",
+        "spans": [
+          "I ordered a lumbar spine MRI to further evaluate the disk herniation"
+        ],
+        "span_offsets": [
+          [
+            0,
+            68
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a disk herniation.",
+        "spans": [
+          "disk herniation"
+        ],
+        "span_offsets": [
+          [
+            53,
+            68
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was referred to a physical therapist.",
+        "spans": [
+          "I referred the patient to a physical therapist through our health system for continued physical therapy"
+        ],
+        "span_offsets": [
+          [
+            70,
+            173
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will continue physical therapy.",
+        "spans": [
+          "continued physical therapy"
+        ],
+        "span_offsets": [
+          [
+            147,
+            173
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed meloxicam.",
+        "spans": [
+          "I prescribed meloxicam 15mg once a day to help with pain management"
+        ],
+        "span_offsets": [
+          [
+            175,
+            242
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's meloxicam dose is 15mg.",
+        "spans": [
+          "meloxicam 15mg"
+        ],
+        "span_offsets": [
+          [
+            188,
+            202
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's meloxicam frequency is once a day.",
+        "spans": [
+          "once a day"
+        ],
+        "span_offsets": [
+          [
+            203,
+            213
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's meloxicam is for pain management.",
+        "spans": [
+          "to help with pain management"
+        ],
+        "span_offsets": [
+          [
+            214,
+            242
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will have a follow-up appointment after the lumbar spine MRI results are available.",
+        "spans": [
+          "I will see the patient again after the results of the lumbar spine MRI are available"
+        ],
+        "span_offsets": [
+          [
+            245,
+            329
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's follow-up appointment will discuss further treatment options.",
+        "spans": [
+          "to discuss further treatment options"
+        ],
+        "span_offsets": [
+          [
+            330,
+            366
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's potential further treatment options include steroid injections.",
+        "spans": [
+          "including potential steroid injections"
+        ],
+        "span_offsets": [
+          [
+            368,
+            406
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

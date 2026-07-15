@@ -1,0 +1,35 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 35-year-old male.,1.0,"[""The patient is a 35-year-old male""]","[[0, 33]]","[""exact""]",True,False
+1,subjective,The patient presented to the office with a right knee injury.,0.0,"[""The patient presented to the office with a right knee injury""]","[[55, 86]]","[""word""]",True,False
+2,subjective,The patient sustained the right knee injury during a soccer game.,0.0,"[""sustained during a soccer game""]","[[87, 117]]","[""exact""]",True,False
+3,subjective,The right knee injury occurred three days ago.,0.0,"[""three days ago""]","[[118, 132]]","[""exact""]",True,False
+4,subjective,The patient reports a sudden pop in his knee.,0.0,"[""a sudden pop in his knee""]","[[145, 169]]","[""exact""]",True,False
+5,subjective,The patient's knee has limited function.,0.0,"[""feeling like his knee is not moving as well as it used to, with limited function""]","[[201, 281]]","[""exact""]",True,False
+6,subjective,The patient rates his pain as a 6-7 out of 10.,0.0,"[""The patient rates his pain as a 6-7 out of 10""]","[[283, 328]]","[""exact""]",True,False
+7,subjective,The patient's pain has decreased to 4-5 with the use of ibuprofen.,1.0,"[""which has decreased to 4-5 with the use of ibuprofen""]","[[330, 382]]","[""exact""]",True,False
+8,subjective,The patient denies any fever.,0.25,"[""He denies any fever""]","[[384, 403]]","[""exact""]",True,False
+9,subjective,The patient is taking ibuprofen for pain relief.,0.0,"[""I prescribed ibuprofen for pain relief""]","[[440, 478]]","[""exact""]",True,False
+10,subjective,The patient is prescribed ibuprofen.,0.75,"[""I prescribed ibuprofen for pain relief""]","[[440, 478]]","[""exact""]",True,False
+11,objective,The patient has a marked limp on the right leg upon ambulation.,0.5,"[""The patient has a marked limp on the right leg upon ambulation""]","[[17, 79]]","[""exact""]",True,False
+12,objective,The patient has significant effusion in the right knee.,0.0,"[""There is significant effusion and a slight bit of ecchymosis in the right knee""]","[[81, 159]]","[""exact""]",True,False
+13,objective,The patient has ecchymosis in the right knee.,0.0,"[""There is significant effusion and a slight bit of ecchymosis in the right knee""]","[[81, 159]]","[""exact""]",True,False
+14,objective,Palpation of the medial joint line of the patient's right knee elicits pain.,0.0,"[""Palpation of the medial joint line elicits pain""]","[[161, 208]]","[""exact""]",True,False
+15,objective,The patient has difficulty with passive range of motion in the right knee.,0.0,"[""The patient has difficulty with passive range of motion""]","[[210, 265]]","[""exact""]",True,False
+16,objective,"The patient lacks a few degrees of terminal extension in the right knee, with a range of motion to 115 degrees.",0.5,"[""lacking a few degrees of terminal extension to 115 degrees""]","[[272, 330]]","[""exact""]",True,False
+17,objective,The patient lacks about 20-30 degrees of terminal flexion in the right knee due to pain.,0.5,"[""lacking about 20-30 degrees of terminal flexion due to pain""]","[[335, 394]]","[""exact""]",True,False
+18,objective,The Lachman exam is positive for the patient's right knee.,0.0,"[""The Lachman exam is positive""]","[[396, 424]]","[""exact""]",True,False
+19,assessment,The patient has a right knee injury.,0.0,"[""The patient's right knee injury""]","[[12, 43]]","[""exact""]",True,False
+20,assessment,The patient's right knee injury is suggestive of an anterior cruciate ligament (ACL) tear.,0.0,"[""The patient's right knee injury is suggestive of an anterior cruciate ligament (ACL) tear""]","[[12, 101]]","[""exact""]",True,False
+21,plan,The patient was ordered an MRI to evaluate the integrity of the ACL.,0.0,"[""I ordered an MRI to evaluate the integrity of the ACL""]","[[0, 53]]","[""exact""]",True,False
+22,plan,The patient was prescribed meloxicam.,0.0,"[""I prescribed meloxicam 50mg a day for anti-inflammatory purposes""]","[[55, 119]]","[""exact""]",True,False
+23,plan,The patient's meloxicam dose is 50mg a day.,0.0,"[""50mg a day""]","[[78, 88]]","[""exact""]",True,False
+24,plan,The patient's meloxicam is for anti-inflammatory purposes.,0.0,"[""for anti-inflammatory purposes""]","[[89, 119]]","[""exact""]",True,False
+25,plan,The patient was advised to ice the knee if needed.,0.0,"[""ice the knee if needed""]","[[146, 168]]","[""exact""]",True,False
+26,plan,The patient was advised to moderate their activities.,0.0,"[""moderate their activities""]","[[170, 195]]","[""exact""]",True,False
+27,plan,The patient was advised to wear a knee immobilizer.,0.0,"[""wear a knee immobilizer""]","[[197, 220]]","[""exact""]",True,False
+28,plan,The patient was advised to use crutches to reduce stress and strain on the knee.,0.0,"[""use crutches to reduce stress and strain on the knee""]","[[226, 278]]","[""exact""]",True,False
+29,plan,The patient was instructed to limit their activities.,0.0,"[""limit their activities""]","[[313, 335]]","[""exact""]",True,False
+30,plan,The patient was instructed to limit their work activities.,0.0,"[""including work activities""]","[[337, 362]]","[""exact""]",True,False
+31,plan,The patient was advised to avoid jogging until the results of the MRI are available.,0.5,"[""avoid jogging until the results of the MRI are available""]","[[371, 427]]","[""exact""]",True,False
+32,plan,The patient will be scheduled for an MRI by the nurse.,1.0,"[""The patient will be scheduled for an MRI by the nurse""]","[[523, 576]]","[""exact""]",True,False
+33,plan,The physician will follow up with the patient as soon as the results of the MRI are available.,0.25,"[""I will get back with the patient as soon as the results of the MRI are available""]","[[441, 521]]","[""exact""]",True,False

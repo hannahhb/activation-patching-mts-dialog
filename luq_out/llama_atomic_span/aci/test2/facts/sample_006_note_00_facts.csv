@@ -1,0 +1,39 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient has a 1-week history of low back pain.,0.0,"[""1-week history of low back pain""]","[[33, 64]]","[""exact""]",True,False
+1,subjective,The patient's low back pain began after twisting and possibly lifting something on the left side.,0.75,"[""twisting and possibly lifting something on the left side""]","[[82, 138]]","[""exact""]",True,False
+2,subjective,The patient's low back pain initially resolved but returned after a few hours.,0.5,"[""which initially resolved but returned after a few hours""]","[[140, 195]]","[""exact""]",True,False
+3,subjective,The patient's pain is located in the middle to lower back.,0.0,"[""The pain is located in the middle to lower back""]","[[197, 244]]","[""exact""]",True,False
+4,subjective,The patient's pain is exacerbated when twisting suddenly to the left.,0.0,"[""with exacerbation when twisting suddenly to the left""]","[[246, 298]]","[""exact""]",True,False
+5,subjective,The patient's pain is worse when pressing down on the low back.,1.0,"[""The pain is worse when pressing down on the low back""]","[[325, 377]]","[""exact""]",True,False
+6,subjective,The patient's pain is particularly worse in the center of the low back when pressing down.,1.0,"[""particularly in the center""]","[[379, 405]]","[""exact""]",True,False
+7,subjective,The patient has a history of diabetes.,0.0,"[""The patient has a history of diabetes""]","[[430, 467]]","[""exact""]",True,False
+8,subjective,The patient is on metformin.,0.0,"[""is on metformin""]","[[472, 487]]","[""exact""]",True,False
+9,subjective,The patient takes metformin twice a day.,0.0,"[""twice a day""]","[[488, 499]]","[""exact""]",True,False
+10,subjective,The patient has a family history of owning a bakery.,0.5,"[""The patient has a family history of owning a bakery""]","[[501, 552]]","[""exact""]",True,False
+11,subjective,The patient occasionally visits the bakery.,0.75,"[""occasionally visits the bakery""]","[[558, 588]]","[""exact""]",True,False
+12,subjective,The patient tries to control their intake of sweets.,0.75,"[""tries to control their intake of sweets""]","[[593, 632]]","[""exact""]",True,False
+13,subjective,The patient reports occasional trouble with the left eye.,0.25,"[""The patient reports occasional trouble with the left eye""]","[[654, 710]]","[""exact""]",True,False
+14,subjective,The patient's left eye trouble is not related to the low back pain.,1.0,"[""but this is not related to the low back pain""]","[[712, 756]]","[""exact""]",True,False
+15,objective,The patient's lungs are clear.,0.0,"[""The patient's lungs are clear""]","[[15, 44]]","[""exact""]",True,False
+16,objective,The patient's heart rate is regular.,0.0,"[""heart rate and rhythm are regular""]","[[46, 79]]","[""exact""]",True,False
+17,objective,The patient's heart rhythm is regular.,0.0,"[""heart rate and rhythm are regular""]","[[46, 79]]","[""exact""]",True,False
+18,objective,There is no pain when pressing down on the upper back.,0.5,"[""there is no pain when pressing down on the upper back""]","[[85, 138]]","[""exact""]",True,False
+19,objective,The patient experiences pain when pressing down on the low back.,0.0,"[""The patient experiences pain when pressing down on the low back""]","[[140, 203]]","[""exact""]",True,False
+20,objective,The patient experiences pain in the center of the low back.,0.25,"[""particularly in the center""]","[[205, 231]]","[""exact""]",True,False
+21,objective,The patient reports pain when lifting the right leg.,0.75,"[""pain when lifting the right and left legs""]","[[253, 294]]","[""exact""]",True,False
+22,objective,The patient reports pain when lifting the left leg.,0.75,"[""pain when lifting the right and left legs""]","[[253, 294]]","[""exact""]",True,False
+23,assessment,The patient has a musculoskeletal low back strain.,0.0,"[""I believe the patient has a musculoskeletal low back strain""]","[[12, 71]]","[""exact""]",True,False
+24,assessment,The patient has musculoskeletal low back strain as a problem.,0.0,"[""Musculoskeletal low back strain; Diabetes; [Unknown]""]","[[88, 140]]","[""exact""]",True,False
+25,assessment,The patient has diabetes as a problem.,0.0,"[""Musculoskeletal low back strain; Diabetes; [Unknown]""]","[[88, 140]]","[""exact""]",True,False
+26,assessment,The patient has an unknown problem.,0.75,"[""Musculoskeletal low back strain; Diabetes; [Unknown]""]","[[88, 140]]","[""exact""]",True,False
+27,plan,The patient was ordered a low back x-ray to evaluate the joint spaces and possible disk issues.,0.25,"[""I ordered a low back x-ray to evaluate the joint spaces and possible disk issues""]","[[0, 80]]","[""exact""]",True,False
+28,plan,The patient was ordered physical therapy to help with pain and strengthen the muscles in the back.,0.0,"[""I also ordered physical therapy to help with pain and strengthen the muscles in the back""]","[[82, 170]]","[""exact""]",True,False
+29,plan,The patient was prescribed 400mg of ibuprofen.,0.0,"[""400mg of ibuprofen""]","[[185, 203]]","[""exact""]",True,False
+30,plan,The patient was prescribed ibuprofen to be taken occasionally with Tylenol for severe pain.,1.0,"[""to be taken occasionally with Tylenol for severe pain""]","[[204, 257]]","[""exact""]",True,False
+31,plan,The patient was prescribed ibuprofen up to 3 times a day.,0.0,"[""up to 3 times a day""]","[[259, 278]]","[""exact""]",True,False
+32,plan,The patient was prescribed one Flexeril per day in the evening.,0.25,"[""one Flexeril per day in the evening""]","[[284, 319]]","[""exact""]",True,False
+33,plan,The patient was instructed to continue with their current diet.,0.25,"[""to continue with their current diet and exercise routine""]","[[346, 402]]","[""exact""]",True,False
+34,plan,The patient was instructed to continue with their current exercise routine.,0.0,"[""to continue with their current diet and exercise routine""]","[[346, 402]]","[""exact""]",True,False
+35,plan,The patient was instructed to continue taking metformin.,0.0,"[""to continue taking metformin""]","[[407, 435]]","[""exact""]",True,False
+36,plan,The patient will return for a follow-up appointment to discuss the results of the x-ray and A1c test.,0.0,"[""The patient will return for a follow-up appointment to discuss the results of the x-ray and A1c test""]","[[449, 549]]","[""exact""]",True,False
+37,plan,The patient will be referred to a pain doctor if the pain persists after the x-ray and physical therapy.,0.75,"[""The patient will also be referred to a pain doctor if the pain persists after the x-ray and physical therapy""]","[[551, 659]]","[""exact""]",True,False

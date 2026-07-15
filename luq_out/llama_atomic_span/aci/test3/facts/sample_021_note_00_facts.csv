@@ -1,0 +1,53 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 65-year-old male.,0.5,"[""a 65-year-old male""]","[[13, 31]]","[""exact""]",True,False
+1,subjective,The patient presents with a complaint of shortness of breath.,0.0,"[""presents with a complaint of shortness of breath""]","[[33, 81]]","[""exact""]",True,False
+2,subjective,The patient's shortness of breath has lasted for approximately one week.,0.0,"[""for approximately one week""]","[[82, 108]]","[""exact""]",True,False
+3,subjective,The patient has a history of symptoms similar to the current complaint.,0.0,"[""a recurrence of symptoms he experienced six months ago""]","[[134, 188]]","[""exact""]",True,False
+4,subjective,The patient's previous symptoms improved with an increase in his Lasix dose.,0.0,"[""which improved with an increase in his Lasix dose""]","[[190, 239]]","[""exact""]",True,False
+5,subjective,The patient has a history of coronary disease.,0.0,"[""a history of coronary disease""]","[[248, 277]]","[""exact""]",True,False
+6,subjective,The patient had a heart attack in 2018.,0.0,"[""a heart attack in 2018""]","[[289, 311]]","[""exact""]",True,False
+7,subjective,The patient had a stent placement in his right coronary artery.,0.0,"[""a stent placement in his right coronary artery""]","[[316, 362]]","[""exact""]",True,False
+8,subjective,The patient's ejection fraction is 35%.,0.0,"[""His ejection fraction was reported to be 35%""]","[[364, 408]]","[""exact""]",True,False
+9,subjective,The patient has stage 3 chronic kidney disease.,0.0,"[""stage 3 chronic kidney disease""]","[[417, 447]]","[""exact""]",True,False
+10,subjective,The patient is taking Lasix 40mg once daily.,0.0,"[""Lasix 40mg once daily""]","[[468, 489]]","[""exact""]",True,False
+11,subjective,The patient's Lasix dose is 40mg.,0.0,"[""Lasix 40mg""]","[[468, 478]]","[""exact""]",True,False
+12,subjective,The patient takes Lasix once daily.,0.0,"[""once daily""]","[[479, 489]]","[""exact""]",True,False
+13,subjective,The patient experiences swelling in his legs.,0.0,"[""swelling in his legs""]","[[502, 522]]","[""exact""]",True,False
+14,subjective,The patient experiences nocturia.,0.0,"[""nocturia""]","[[527, 535]]","[""exact""]",True,False
+15,subjective,The patient denies changes in urination frequency.,0.75,"[""denies changes in urination frequency""]","[[541, 578]]","[""exact""]",True,False
+16,subjective,The patient is taking Motrin for occasional pain.,1.0,"[""He has been taking Motrin for occasional pain""]","[[580, 625]]","[""exact""]",True,False
+17,subjective,The patient has been advised to avoid Motrin due to his kidney function.,0.5,"[""He has been advised to avoid Motrin due to his kidney function""]","[[934, 994]]","[""word""]",True,False
+18,subjective,The patient has been advised to avoid Advil due to his kidney function.,0.5,"[""He has been advised to avoid Motrin and Advil due to his kidney function""]","[[922, 994]]","[""exact""]",True,False
+19,subjective,The patient experiences shortness of breath with walking or stairs.,0.75,"[""shortness of breath, particularly with walking or stairs""]","[[1018, 1074]]","[""exact""]",True,False
+20,subjective,The patient experiences foot pain.,1.0,"[""foot pain""]","[[712, 721]]","[""exact""]",True,False
+21,subjective,The patient attributes his foot pain to a recent episode of pain in both feet.,1.0,"[""which he attributes to a recent episode of pain in both feet""]","[[723, 783]]","[""exact""]",True,False
+22,subjective,The patient's recent episode of foot pain lasted 4-5 days.,1.0,"[""lasting 4-5 days""]","[[785, 801]]","[""exact""]",True,False
+23,objective,The patient's blood pressure is 135/80.,0.25,"[""Blood pressure: 135/80""]","[[2, 24]]","[""exact""]",True,False
+24,objective,The patient has jugular venous distention up to 9cm.,0.0,"[""Jugular venous distention up to 9cm""]","[[29, 64]]","[""exact""]",True,False
+25,objective,The patient has bibasilar crackles with occasional rhonchi on lung exam.,0.0,"[""Bibasilar crackles with occasional rhonchi on lung exam""]","[[67, 122]]","[""exact""]",True,False
+26,objective,The patient has a 3/6 systolic ejection murmur at the left base on heart exam.,0.0,"[""3/6 systolic ejection murmur at the left base on heart exam""]","[[125, 184]]","[""exact""]",True,False
+27,objective,The patient has 1-2+ pitting edema bilaterally on lower extremity exam.,0.0,"[""1-2+ pitting edema bilaterally on lower extremity exam""]","[[187, 241]]","[""exact""]",True,False
+28,assessment,The patient has an acute heart failure exacerbation.,0.0,"[""The patient has an acute heart failure exacerbation, likely due to fluid retention, and stage 3 chronic kidney disease""]","[[12, 130]]","[""exact""]",True,False
+29,assessment,The patient's acute heart failure exacerbation is likely due to fluid retention.,0.75,"[""The patient has an acute heart failure exacerbation, likely due to fluid retention, and stage 3 chronic kidney disease""]","[[12, 130]]","[""exact""]",True,False
+30,assessment,The patient has a heart failure exacerbation.,0.0,"[""Heart failure exacerbation; stage 3 chronic kidney disease; possible gout flare; coronary artery disease; possible kidney dysfunction""]","[[147, 280]]","[""exact""]",True,False
+31,assessment,The patient has a possible gout flare.,0.0,"[""Heart failure exacerbation; stage 3 chronic kidney disease; possible gout flare; coronary artery disease; possible kidney dysfunction""]","[[147, 280]]","[""exact""]",True,False
+32,assessment,The patient has coronary artery disease.,0.0,"[""Heart failure exacerbation; stage 3 chronic kidney disease; possible gout flare; coronary artery disease; possible kidney dysfunction""]","[[147, 280]]","[""exact""]",True,False
+33,assessment,The patient has possible kidney dysfunction.,0.0,"[""Heart failure exacerbation; stage 3 chronic kidney disease; possible gout flare; coronary artery disease; possible kidney dysfunction""]","[[147, 280]]","[""exact""]",True,False
+34,plan,The patient's Lasix dose was increased to 80mg once daily.,0.5,"[""I increased the patient's Lasix dose to 80mg once daily""]","[[0, 55]]","[""exact""]",True,False
+35,plan,The patient's Lasix dose is to be taken in the morning.,0.0,"[""to be taken in the morning""]","[[57, 83]]","[""exact""]",True,False
+36,plan,The patient may take a second dose of Lasix in the afternoon.,0.25,"[""with a possible second dose in the afternoon""]","[[85, 129]]","[""exact""]",True,False
+37,plan,A chest x-ray was ordered for the patient.,0.0,"[""I also ordered a chest x-ray""]","[[131, 159]]","[""exact""]",True,False
+38,plan,An echocardiogram was ordered for the patient.,0.0,"[""an echocardiogram""]","[[164, 181]]","[""exact""]",True,False
+39,plan,The chest x-ray and echocardiogram are to assess the heart murmur.,1.0,"[""to assess the heart murmur""]","[[182, 208]]","[""exact""]",True,False
+40,plan,The chest x-ray and echocardiogram are to assess the ejection fraction.,1.0,"[""and ejection fraction""]","[[209, 230]]","[""exact""]",True,False
+41,plan,The patient was referred to a dietitian.,0.0,"[""I referred the patient to a dietitian""]","[[232, 269]]","[""exact""]",True,False
+42,plan,The patient is to discuss dietary changes with the dietitian to manage his salt intake.,0.5,"[""to discuss dietary changes to manage his salt intake""]","[[270, 322]]","[""exact""]",True,False
+43,plan,The patient was advised to avoid Motrin.,0.0,"[""avoid Motrin""]","[[341, 353]]","[""exact""]",True,False
+44,plan,The patient was advised to avoid Advil.,0.0,"[""avoid Motrin and Advil""]","[[341, 363]]","[""exact""]",True,False
+45,plan,The patient was advised to take Tylenol for pain management.,0.0,"[""stick to Tylenol for pain management""]","[[368, 404]]","[""exact""]",True,False
+46,plan,A complete metabolic panel was ordered for the patient.,0.0,"[""I also ordered a complete metabolic panel""]","[[406, 447]]","[""exact""]",True,False
+47,plan,The complete metabolic panel is to assess the patient's kidney function.,0.0,"[""to assess his kidney function""]","[[448, 477]]","[""exact""]",True,False
+48,plan,The patient will call the doctor in 2 days to report on his weight.,1.0,"[""The patient will call me in 2 days to report on his weight""]","[[481, 539]]","[""exact""]",True,False
+49,plan,The patient will call the doctor in 2 days to report on any changes in symptoms.,1.0,"[""The patient will call me in 2 days to report on his weight and any changes in symptoms""]","[[481, 567]]","[""exact""]",True,False
+50,plan,"The patient will be seen by his nephrologist, Dr. White.",1.0,"[""He will also be seen by his nephrologist, Dr. White""]","[[569, 620]]","[""exact""]",True,False
+51,plan,Dr. White will provide further management of the patient's kidney disease.,0.5,"[""for further management of his kidney disease""]","[[622, 666]]","[""exact""]",True,False

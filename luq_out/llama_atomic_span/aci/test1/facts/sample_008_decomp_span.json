@@ -1,0 +1,828 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a woman.",
+        "spans": [
+          "The patient is a woman"
+        ],
+        "span_offsets": [
+          [
+            5,
+            27
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has been experiencing headaches for years.",
+        "spans": [
+          "has been experiencing headaches for years"
+        ],
+        "span_offsets": [
+          [
+            32,
+            73
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's headaches started in her teenage years.",
+        "spans": [
+          "starting in her teenage years"
+        ],
+        "span_offsets": [
+          [
+            75,
+            104
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's headaches were initially related to her menstrual cycle.",
+        "spans": [
+          "Initially, her headaches were related to her menstrual cycle"
+        ],
+        "span_offsets": [
+          [
+            106,
+            166
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's headaches have become more frequent over time.",
+        "spans": [
+          "they have become more frequent and severe"
+        ],
+        "span_offsets": [
+          [
+            183,
+            224
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's headaches have become more severe over time.",
+        "spans": [
+          "they have become more frequent and severe"
+        ],
+        "span_offsets": [
+          [
+            183,
+            224
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's headaches are typically located on the right side of her head.",
+        "spans": [
+          "they are typically located on the right side of her head"
+        ],
+        "span_offsets": [
+          [
+            243,
+            299
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's headaches are located behind her eye.",
+        "spans": [
+          "behind her eye"
+        ],
+        "span_offsets": [
+          [
+            301,
+            315
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's headaches are described as a pulsing sensation.",
+        "spans": [
+          "are described as a pulsing sensation"
+        ],
+        "span_offsets": [
+          [
+            321,
+            357
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's headaches worsen with exercise.",
+        "spans": [
+          "her headaches worsen with exercise"
+        ],
+        "span_offsets": [
+          [
+            385,
+            419
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's headaches worsen with jogging.",
+        "spans": [
+          "particularly when she starts to jog"
+        ],
+        "span_offsets": [
+          [
+            421,
+            456
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient experiences tinnitus.",
+        "spans": [
+          "tinnitus (ringing in the ears)"
+        ],
+        "span_offsets": [
+          [
+            498,
+            528
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient experiences blurred vision.",
+        "spans": [
+          "blurred vision"
+        ],
+        "span_offsets": [
+          [
+            533,
+            547
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's blurred vision is intermittent.",
+        "spans": [
+          "which is intermittent"
+        ],
+        "span_offsets": [
+          [
+            549,
+            570
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's blurred vision affects the side of her vision.",
+        "spans": [
+          "affects the side of her vision"
+        ],
+        "span_offsets": [
+          [
+            575,
+            605
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies numbness in her hands.",
+        "spans": [
+          "numbness or tingling in her hands or feet"
+        ],
+        "span_offsets": [
+          [
+            618,
+            659
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies numbness in her feet.",
+        "spans": [
+          "numbness or tingling in her hands or feet"
+        ],
+        "span_offsets": [
+          [
+            618,
+            659
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies tingling in her hands.",
+        "spans": [
+          "numbness or tingling in her hands or feet"
+        ],
+        "span_offsets": [
+          [
+            618,
+            659
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies tingling in her feet.",
+        "spans": [
+          "numbness or tingling in her hands or feet"
+        ],
+        "span_offsets": [
+          [
+            618,
+            659
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports tinnitus during the review of systems.",
+        "spans": [
+          "The patient reports tinnitus and blurred vision"
+        ],
+        "span_offsets": [
+          [
+            682,
+            729
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports blurred vision during the review of systems.",
+        "spans": [
+          "The patient reports tinnitus and blurred vision"
+        ],
+        "span_offsets": [
+          [
+            682,
+            729
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's heart exam is normal.",
+        "spans": [
+          "The patient's heart exam is normal"
+        ],
+        "span_offsets": [
+          [
+            15,
+            49
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a normal sinus rhythm.",
+        "spans": [
+          "with a normal sinus rhythm"
+        ],
+        "span_offsets": [
+          [
+            51,
+            77
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no murmurs.",
+        "spans": [
+          "no murmurs"
+        ],
+        "span_offsets": [
+          [
+            82,
+            92
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no rubs.",
+        "spans": [
+          "no murmurs, rubs, or gallops"
+        ],
+        "span_offsets": [
+          [
+            82,
+            110
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no gallops.",
+        "spans": [
+          "no murmurs, rubs, or gallops"
+        ],
+        "span_offsets": [
+          [
+            82,
+            110
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has papilledema.",
+        "spans": [
+          "papilledema"
+        ],
+        "span_offsets": [
+          [
+            141,
+            152
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has swelling behind the eye.",
+        "spans": [
+          "swelling behind the eye"
+        ],
+        "span_offsets": [
+          [
+            163,
+            186
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's neurological exam is normal.",
+        "spans": [
+          "The patient's neurological exam is normal"
+        ],
+        "span_offsets": [
+          [
+            188,
+            229
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has intact cranial nerves.",
+        "spans": [
+          "with intact cranial nerves"
+        ],
+        "span_offsets": [
+          [
+            231,
+            257
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a normal cranial reflex.",
+        "spans": [
+          "a normal cranial reflex"
+        ],
+        "span_offsets": [
+          [
+            262,
+            285
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's gait is normal.",
+        "spans": [
+          "Her gait is normal"
+        ],
+        "span_offsets": [
+          [
+            287,
+            305
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient's symptoms are concerning for idiopathic intracranial hypertension.",
+        "spans": [
+          "The patient's symptoms are concerning for idiopathic intracranial hypertension"
+        ],
+        "span_offsets": [
+          [
+            12,
+            90
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "Idiopathic intracranial hypertension is a condition characterized by increased pressure in the brain without a known cause.",
+        "spans": [
+          "a condition characterized by increased pressure in the brain without a known cause"
+        ],
+        "span_offsets": [
+          [
+            92,
+            174
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has idiopathic intracranial hypertension.",
+        "spans": [
+          "Idiopathic intracranial hypertension; suspected; confirmed"
+        ],
+        "span_offsets": [
+          [
+            191,
+            249
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The diagnosis of idiopathic intracranial hypertension is suspected.",
+        "spans": [
+          "Idiopathic intracranial hypertension; suspected; confirmed"
+        ],
+        "span_offsets": [
+          [
+            191,
+            249
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The diagnosis of idiopathic intracranial hypertension is confirmed.",
+        "spans": [
+          "Idiopathic intracranial hypertension; suspected; confirmed"
+        ],
+        "span_offsets": [
+          [
+            191,
+            249
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed an MRI to confirm the diagnosis.",
+        "spans": [
+          "I prescribed an MRI to confirm the diagnosis"
+        ],
+        "span_offsets": [
+          [
+            0,
+            44
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was prescribed an MRI to evaluate for any other contributing conditions.",
+        "spans": [
+          "I prescribed an MRI to confirm the diagnosis and evaluate for any other contributing conditions"
+        ],
+        "span_offsets": [
+          [
+            0,
+            95
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "A spinal tap is planned to evaluate the pressure in the patient's brain.",
+        "spans": [
+          "to evaluate the pressure in the brain"
+        ],
+        "span_offsets": [
+          [
+            133,
+            170
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "A spinal tap is planned to potentially decrease the pressure in the patient's brain by removing a small amount of fluid.",
+        "spans": [
+          "potentially decrease the pressure by removing a small amount of fluid"
+        ],
+        "span_offsets": [
+          [
+            175,
+            244
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was referred to a neuro-ophthalmologist for a complete eye exam.",
+        "spans": [
+          "I referred the patient to a neuro-ophthalmologist for a complete eye exam"
+        ],
+        "span_offsets": [
+          [
+            260,
+            333
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's insurance company will be worked with to obtain preapproval for the MRI.",
+        "spans": [
+          "I will work with the patient's insurance company to obtain preapproval for the MRI"
+        ],
+        "span_offsets": [
+          [
+            335,
+            417
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The MRI will be scheduled once the insurance preapproval is obtained.",
+        "spans": [
+          "schedule the test once approved"
+        ],
+        "span_offsets": [
+          [
+            422,
+            453
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will be scheduled for an MRI.",
+        "spans": [
+          "The patient will be scheduled for an MRI and spinal tap"
+        ],
+        "span_offsets": [
+          [
+            467,
+            522
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will be scheduled for a spinal tap.",
+        "spans": [
+          "The patient will be scheduled for an MRI and spinal tap"
+        ],
+        "span_offsets": [
+          [
+            467,
+            522
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will be seen by a neuro-ophthalmologist for a complete eye exam.",
+        "spans": [
+          "will be seen by a neuro-ophthalmologist for a complete eye exam"
+        ],
+        "span_offsets": [
+          [
+            528,
+            591
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will be contacted to schedule the MRI once the insurance preapproval is obtained.",
+        "spans": [
+          "The patient will be contacted to schedule the MRI once the insurance preapproval is obtained"
+        ],
+        "span_offsets": [
+          [
+            593,
+            685
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ]
+  }
+]

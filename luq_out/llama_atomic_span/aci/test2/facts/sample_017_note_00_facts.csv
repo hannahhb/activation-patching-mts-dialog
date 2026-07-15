@@ -1,0 +1,50 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 17-year-old non-binary individual.,0.0,"[""a 17-year-old non-binary individual""]","[[18, 53]]","[""exact""]",True,False
+1,subjective,The patient presents for evaluation of newly diagnosed hypercholesterolemia.,0.0,"[""presents for evaluation of newly diagnosed hypercholesterolemia""]","[[55, 118]]","[""exact""]",True,False
+2,subjective,The patient was informed of the elevated cholesterol level after a routine annual checkup.,0.25,"[""were informed of the elevated cholesterol level after a routine annual checkup""]","[[125, 203]]","[""exact""]",True,False
+3,subjective,The patient's cholesterol level is 210.,0.5,"[""a cholesterol level of 210""]","[[240, 266]]","[""exact""]",True,False
+4,subjective,The patient has been told to make lifestyle changes.,1.0,"[""have been told to make lifestyle changes""]","[[307, 347]]","[""exact""]",True,False
+5,subjective,The patient is active.,0.0,"[""The patient is active""]","[[349, 370]]","[""exact""]",True,False
+6,subjective,The patient enjoys riding their bicycle.,0.0,"[""enjoys riding their bicycle""]","[[372, 399]]","[""exact""]",True,False
+7,subjective,The patient tries to eat a relatively clean diet.,0.5,"[""tries to eat a relatively clean diet""]","[[405, 441]]","[""exact""]",True,False
+8,subjective,The patient has a weakness for chocolate chip cookies.,0.5,"[""has a weakness for chocolate chip cookies""]","[[447, 488]]","[""exact""]",True,False
+9,subjective,The patient has no significant past medical history.,0.0,"[""The patient has no significant past medical history""]","[[513, 564]]","[""exact""]",True,False
+10,subjective,The patient's grandparents did not have high cholesterol at a young age.,0.75,"[""their grandparents reported that they did not have high cholesterol at a young age""]","[[570, 652]]","[""exact""]",True,False
+11,subjective,A cousin of the patient died of a heart attack at age 44 or 45.,0.5,"[""a cousin died of a heart attack at age 44 or 45""]","[[695, 742]]","[""exact""]",True,False
+12,subjective,The patient reports feeling healthy.,0.0,"[""The patient reports feeling healthy""]","[[764, 799]]","[""exact""]",True,False
+13,subjective,The patient has not experienced any issues with growing pains or other symptoms.,0.0,"[""has not experienced any issues with growing pains or other symptoms""]","[[804, 871]]","[""exact""]",True,False
+14,objective,The patient's blood pressure is within a normal range.,0.0,"[""The patient's blood pressure is within a normal range""]","[[13, 66]]","[""exact""]",True,False
+15,objective,The patient's physical exam is unremarkable.,0.0,"[""The patient's physical exam is unremarkable""]","[[127, 170]]","[""exact""]",True,False
+16,objective,The patient has no murmurs on the heart exam.,0.0,"[""no murmurs, rubs, or gallops on the heart exam""]","[[177, 223]]","[""exact""]",True,False
+17,objective,The patient has no rubs on the heart exam.,0.0,"[""no murmurs, rubs, or gallops on the heart exam""]","[[177, 223]]","[""exact""]",True,False
+18,objective,The patient has no gallops on the heart exam.,0.0,"[""no murmurs, rubs, or gallops on the heart exam""]","[[177, 223]]","[""exact""]",True,False
+19,objective,The patient's lungs are clear.,0.0,"[""clear lungs""]","[[225, 236]]","[""exact""]",True,False
+20,objective,The patient has no thyroid megalogy.,0.75,"[""no thyroid megalogy""]","[[238, 257]]","[""exact""]",True,False
+21,objective,The patient has no hepatomegaly on the abdominal exam.,0.0,"[""no hepatomegaly or splenomegaly on the abdominal exam""]","[[263, 316]]","[""exact""]",True,False
+22,objective,The patient has no splenomegaly on the abdominal exam.,0.0,"[""no hepatomegaly or splenomegaly on the abdominal exam""]","[[263, 316]]","[""exact""]",True,False
+23,objective,The patient's cholesterol level is elevated at 210.,0.0,"[""The patient's cholesterol level was elevated at 210""]","[[333, 384]]","[""exact""]",True,False
+24,objective,The doctor plans to order a full cholesterol panel.,1.0,"[""full cholesterol panel""]","[[464, 486]]","[""exact""]",True,False
+25,objective,The doctor plans to order glucose testing.,1.0,"[""glucose""]","[[488, 495]]","[""exact""]",True,False
+26,objective,The doctor plans to order a complete metabolic panel.,1.0,"[""complete metabolic panel""]","[[497, 521]]","[""exact""]",True,False
+27,objective,The doctor plans to order thyroid studies.,1.0,"[""thyroid studies""]","[[523, 538]]","[""exact""]",True,False
+28,objective,The doctor plans to order liver panels.,1.0,"[""liver panels""]","[[544, 556]]","[""exact""]",True,False
+29,objective,The doctor plans to order genetic testing.,1.0,"[""genetic testing""]","[[569, 584]]","[""exact""]",True,False
+30,assessment,The patient has elevated cholesterol.,0.0,"[""The patient has elevated cholesterol""]","[[12, 48]]","[""exact""]",True,False
+31,assessment,Elevated cholesterol is a risk factor for premature heart attacks.,0.75,"[""which is a risk factor for premature heart attacks""]","[[50, 100]]","[""exact""]",True,False
+32,assessment,The patient has hypercholesterolemia.,0.0,"[""Hypercholesterolemia""]","[[117, 137]]","[""exact""]",True,False
+33,assessment,The patient has suspected familial hypercholesterolemia.,0.0,"[""Suspected familial hypercholesterolemia""]","[[139, 178]]","[""exact""]",True,False
+34,plan,The patient was ordered a full cholesterol panel.,0.0,"[""I ordered a full cholesterol panel""]","[[0, 34]]","[""exact""]",True,False
+35,plan,The patient was ordered glucose testing.,0.25,"[""I ordered a full cholesterol panel, glucose""]","[[0, 43]]","[""exact""]",True,False
+36,plan,The patient was ordered a complete metabolic panel.,0.0,"[""complete metabolic panel""]","[[45, 69]]","[""exact""]",True,False
+37,plan,The patient was ordered thyroid studies.,0.0,"[""thyroid studies""]","[[71, 86]]","[""exact""]",True,False
+38,plan,The patient was ordered liver panels.,0.0,"[""liver panels""]","[[92, 104]]","[""exact""]",True,False
+39,plan,The purpose of the ordered tests is to investigate the cause of the elevated cholesterol.,0.0,"[""to investigate the cause of the elevated cholesterol""]","[[105, 157]]","[""exact""]",True,False
+40,plan,The patient was recommended genetic testing.,0.25,"[""I also recommended genetic testing""]","[[159, 193]]","[""exact""]",True,False
+41,plan,The purpose of the genetic testing is to determine if the problem is familial or secondary.,0.75,"[""to determine if the problem is familial or secondary""]","[[194, 246]]","[""exact""]",True,False
+42,plan,The patient will meet with a nutritionist.,0.0,"[""The patient will meet with a nutritionist""]","[[248, 289]]","[""exact""]",True,False
+43,plan,The purpose of the meeting with the nutritionist is to learn about a well-balanced diet.,0.0,"[""to learn about a well-balanced diet""]","[[290, 325]]","[""exact""]",True,False
+44,plan,The recommended diet is low in saturated fat and sugars.,0.0,"[""low in saturated fat and sugars""]","[[327, 358]]","[""exact""]",True,False
+45,plan,The patient will continue to be active and exercise regularly.,0.0,"[""They will continue to be active and exercise regularly""]","[[360, 414]]","[""exact""]",True,False
+46,plan,The patient will include bike riding in their exercise routine.,0.0,"[""including bike riding""]","[[416, 437]]","[""exact""]",True,False
+47,plan,The patient will be followed up with in 3-6 months.,0.0,"[""I will follow up with the patient in 3-6 months"", ""The patient will be seen again in 3-6 months""]","[[439, 486], [570, 614]]","[""exact"", ""exact""]",True,True
+48,plan,The purpose of the follow-up is to check the patient's cholesterol level after they have made dietary changes.,0.0,"[""to check their cholesterol level after they have made dietary changes"", ""to check their cholesterol level after they have met with the nutritionist and made dietary changes""]","[[487, 556], [615, 714]]","[""exact"", ""exact""]",True,True

@@ -1,0 +1,46 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 48-year-old female.,0.0,"[""a 48-year-old female""]","[[18, 38]]","[""exact""]",True,False
+1,subjective,The patient has a history of a recent myocardial infarction.,0.0,"[""a history of a recent myocardial infarction""]","[[54, 97]]","[""exact""]",True,False
+2,subjective,The patient underwent a cardiac catheterization and stent placement in the right coronary artery 2 weeks ago.,0.5,"[""underwent a cardiac catheterization and stent placement in the right coronary artery 2 weeks ago""]","[[112, 208]]","[""exact""]",True,False
+3,subjective,The patient's stent placement was in the right coronary artery.,0.0,"[""in the right coronary artery""]","[[168, 196]]","[""exact""]",True,False
+4,subjective,The patient denies chest pain since the stent placement.,0.0,"[""denies chest pain since the stent placement""]","[[391, 434]]","[""exact""]",True,False
+5,subjective,The patient reports occasional shortness of breath when walking up and down stairs.,0.0,"[""occasional shortness of breath when walking up and down stairs"", ""occasional shortness of breath when walking up and down stairs""]","[[447, 509], [447, 509]]","[""exact"", ""exact""]",True,True
+6,subjective,The patient has been taking brilinta.,0.0,"[""brilinta 90mg twice a day""]","[[531, 556]]","[""exact""]",True,False
+7,subjective,The patient's brilinta dose is 90mg.,0.25,"[""90mg""]","[[540, 544]]","[""exact""]",True,False
+8,subjective,The patient takes brilinta twice a day.,0.0,"[""twice a day""]","[[545, 556]]","[""exact""]",True,False
+9,subjective,The patient has been taking baby aspirin.,0.25,"[""Baby aspirin once a day""]","[[936, 959]]","[""exact""]",True,False
+10,subjective,The patient takes baby aspirin once a day.,0.0,"[""once a day""]","[[949, 959]]","[""exact""]",True,False
+11,subjective,The patient has eaten pizza a few times a week.,1.0,"[""eaten pizza a few times a week""]","[[592, 622]]","[""exact""]",True,False
+12,subjective,The patient is trying to watch her salt intake and diet.,0.5,"[""trying to watch her salt intake and diet""]","[[630, 670]]","[""exact""]",True,False
+13,objective,The patient's blood pressure is within normal limits.,0.0,"[""The patient's blood pressure is within normal limits""]","[[15, 67]]","[""exact""]",True,False
+14,objective,The patient's neck exam is unremarkable.,0.25,"[""The neck exam is unremarkable""]","[[69, 98]]","[""exact""]",True,False
+15,objective,The patient has no jugular venous distention.,0.25,"[""no jugular venous distention""]","[[105, 133]]","[""exact""]",True,False
+16,objective,The patient has no carotid bruits.,0.25,"[""no carotid bruits""]","[[137, 151]]","[""word""]",True,False
+17,objective,The patient has a 3/6 systolic ejection murmur at the left base.,0.25,"[""a slight 3/6 systolic ejection murmur at the left base""]","[[176, 230]]","[""exact""]",True,False
+18,objective,The patient's lung exam is clear to auscultation bilaterally.,0.0,"[""The lung exam is clear to auscultation bilaterally""]","[[232, 282]]","[""exact""]",True,False
+19,objective,"The patient's right radial artery cardiac cath site is clean, dry, and intact.",0.25,"[""a clean, dry, and intact right radial artery cardiac cath site""]","[[317, 379]]","[""exact""]",True,False
+20,objective,The patient has a palpable radial pulse.,0.0,"[""a palpable radial pulse""]","[[385, 408]]","[""exact""]",True,False
+21,assessment,The patient has a history of myocardial infarction.,0.0,"[""a history of a recent myocardial infarction""]","[[53, 96]]","[""exact""]",True,False
+22,assessment,The patient has a history of stent placement in the right coronary artery.,0.75,"[""stent placement in the right coronary artery""]","[[101, 145]]","[""exact""]",True,False
+23,assessment,The patient has a slight systolic ejection murmur.,1.0,"[""a slight systolic ejection murmur""]","[[152, 185]]","[""exact""]",True,False
+24,assessment,The patient has mild mitral regurgitation.,0.25,"[""mild mitral regurgitation""]","[[190, 215]]","[""exact""]",True,False
+25,assessment,The patient has myocardial infarction.,0.0,"[""Myocardial infarction""]","[[232, 253]]","[""exact""]",True,False
+26,assessment,The patient has mitral regurgitation.,0.0,"[""Mitral regurgitation""]","[[255, 275]]","[""exact""]",True,False
+27,assessment,The patient has hypertension.,0.5,"[""Hypertension""]","[[277, 289]]","[""exact""]",True,False
+28,assessment,The status of the patient's hypertension is unknown.,0.25,"[""Hypertension (status: unknown)""]","[[277, 307]]","[""exact""]",True,False
+29,assessment,The patient has hyperlipidemia.,0.25,"[""Hyperlipidemia""]","[[309, 323]]","[""exact""]",True,False
+30,assessment,The status of the patient's hyperlipidemia is unknown.,0.75,"[""Hyperlipidemia (status: unknown)""]","[[309, 341]]","[""exact""]",True,False
+31,assessment,The patient has a cardiac catheterization site complication.,1.0,"[""Cardiac catheterization site complication""]","[[343, 384]]","[""exact""]",True,False
+32,assessment,The status of the patient's cardiac catheterization site complication is unknown.,0.5,"[""Cardiac catheterization site complication (status: unknown)""]","[[343, 402]]","[""exact""]",True,False
+33,plan,The patient is taking aspirin once a day.,0.25,"[""aspirin once a day""]","[[27, 45]]","[""exact""]",True,False
+34,plan,The patient is taking brilinta 90mg twice a day.,0.25,"[""brilinta 90mg twice a day""]","[[50, 75]]","[""exact""]",True,False
+35,plan,The patient is taking brilinta for at least one year.,0.25,"[""for at least one year""]","[[76, 97]]","[""exact""]",True,False
+36,plan,The patient is taking crestor 40mg once a day.,0.25,"[""crestor 40mg once a day""]","[[112, 135]]","[""exact""]",True,False
+37,plan,The patient has an echocardiogram ordered in six months.,0.0,"[""I ordered an echocardiogram in six months""]","[[137, 178]]","[""exact""]",True,False
+38,plan,The patient is enrolled in cardiac rehab for dietary education and counseling.,0.25,"[""I enrolled the patient in cardiac rehab for dietary education and counseling""]","[[180, 256]]","[""exact""]",True,False
+39,plan,The patient has liver function studies ordered to follow up in six weeks.,0.25,"[""I ordered liver function studies""]","[[258, 290]]","[""exact""]",True,False
+40,plan,The patient has a lipid panel ordered to follow up in six weeks.,0.5,"[""and a lipid panel""]","[[291, 308]]","[""exact""]",True,False
+41,plan,The patient is advised to resume swimming with caution.,0.75,"[""to resume swimming with caution""]","[[358, 389]]","[""exact""]",True,False
+42,plan,The patient is taking toprol 50mg once a day.,0.0,"[""toprol 50mg once a day""]","[[402, 424]]","[""exact""]",True,False
+43,plan,The patient has a follow-up appointment in six weeks.,0.25,"[""I want to see the patient again in six weeks""]","[[438, 482]]","[""exact""]",True,False
+44,plan,The follow-up appointment is to discuss the echocardiogram and lab results.,0.25,"[""to follow up on the echocardiogram and lab results""]","[[483, 533]]","[""exact""]",True,False

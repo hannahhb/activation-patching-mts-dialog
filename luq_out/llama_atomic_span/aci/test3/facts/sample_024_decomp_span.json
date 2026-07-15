@@ -1,0 +1,761 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Emily.",
+        "spans": [
+          "The patient, Emily,"
+        ],
+        "span_offsets": [
+          [
+            5,
+            24
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presented with sudden visual distortions.",
+        "spans": [
+          "sudden visual distortions"
+        ],
+        "span_offsets": [
+          [
+            40,
+            65
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presented with blurring of her vision.",
+        "spans": [
+          "blurring of her vision"
+        ],
+        "span_offsets": [
+          [
+            70,
+            92
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has difficulty adjusting to dim lighting.",
+        "spans": [
+          "difficulty adjusting to dim lighting"
+        ],
+        "span_offsets": [
+          [
+            106,
+            142
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has difficulty adjusting to dim lighting when dining at restaurants.",
+        "spans": [
+          "specifically when dining at restaurants"
+        ],
+        "span_offsets": [
+          [
+            144,
+            183
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any other symptoms.",
+        "spans": [
+          "She denies any other symptoms"
+        ],
+        "span_offsets": [
+          [
+            185,
+            214
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of macular degeneration.",
+        "spans": [
+          "The patient has a history of macular degeneration"
+        ],
+        "span_offsets": [
+          [
+            239,
+            288
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is a smoker.",
+        "spans": [
+          "She is a smoker"
+        ],
+        "span_offsets": [
+          [
+            290,
+            305
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient consumes one pack of cigarettes per day.",
+        "spans": [
+          "consuming one pack of cigarettes per day"
+        ],
+        "span_offsets": [
+          [
+            307,
+            347
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been trying to quit smoking but has not been successful.",
+        "spans": [
+          "has been trying to quit but has not been successful"
+        ],
+        "span_offsets": [
+          [
+            353,
+            404
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes her blood pressure medication sporadically.",
+        "spans": [
+          "She reports taking her blood pressure medication sporadically"
+        ],
+        "span_offsets": [
+          [
+            406,
+            467
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not keep a regular log of her blood pressure readings.",
+        "spans": [
+          "but does not keep a regular log of her readings"
+        ],
+        "span_offsets": [
+          [
+            469,
+            516
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports no other symptoms outside of her visual disturbances.",
+        "spans": [
+          "The patient reports no other symptoms outside of her visual disturbances"
+        ],
+        "span_offsets": [
+          [
+            538,
+            610
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is prescribed blood pressure medication.",
+        "spans": [
+          "I prescribed blood pressure medication"
+        ],
+        "span_offsets": [
+          [
+            634,
+            672
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has posterior chamber intraocular lenses in both eyes.",
+        "spans": [
+          "posterior chamber intraocular lenses in both eyes"
+        ],
+        "span_offsets": [
+          [
+            57,
+            106
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's corneas are clear.",
+        "spans": [
+          "clear corneas"
+        ],
+        "span_offsets": [
+          [
+            108,
+            121
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no MVI.",
+        "spans": [
+          "no MVI"
+        ],
+        "span_offsets": [
+          [
+            127,
+            133
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's cup-to-disc ratio is 0.2 in the right eye.",
+        "spans": [
+          "The cup-to-disc ratio is 0.2 in the right eye"
+        ],
+        "span_offsets": [
+          [
+            135,
+            180
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's cup-to-disc ratio is 0.3 in the left eye.",
+        "spans": [
+          "The cup-to-disc ratio is 0.3 in the left eye"
+        ],
+        "span_offsets": [
+          [
+            139,
+            156
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's retina is attached in the right eye.",
+        "spans": [
+          "the retina to be attached"
+        ],
+        "span_offsets": [
+          [
+            253,
+            278
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no tears or holes in the right eye.",
+        "spans": [
+          "no tears or holes"
+        ],
+        "span_offsets": [
+          [
+            285,
+            302
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has drusen in the macula of the left eye.",
+        "spans": [
+          "drusen in the macula"
+        ],
+        "span_offsets": [
+          [
+            340,
+            360
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has thickening of the retina in the left eye.",
+        "spans": [
+          "thickening of the retina"
+        ],
+        "span_offsets": [
+          [
+            362,
+            386
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has subretinal fluid in the left eye.",
+        "spans": [
+          "subretinal fluid"
+        ],
+        "span_offsets": [
+          [
+            388,
+            404
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has exudates accumulation in the left eye.",
+        "spans": [
+          "exudates accumulation"
+        ],
+        "span_offsets": [
+          [
+            410,
+            431
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has hemorrhage in the left eye.",
+        "spans": [
+          "positive for hemorrhage in the left eye"
+        ],
+        "span_offsets": [
+          [
+            437,
+            476
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's OCT revealed drusen deposit in the right eye.",
+        "spans": [
+          "drusen deposit",
+          "in the right eye"
+        ],
+        "span_offsets": [
+          [
+            567,
+            581
+          ],
+          [
+            164,
+            180
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient's fluorescein angiography revealed subretinal fluid accumulation in the right eye.",
+        "spans": [
+          "subretinal fluid accumulation",
+          "in the right eye"
+        ],
+        "span_offsets": [
+          [
+            583,
+            612
+          ],
+          [
+            164,
+            180
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient has choroidal neovascular membrane in the right eye.",
+        "spans": [
+          "choroidal neovascular membrane"
+        ],
+        "span_offsets": [
+          [
+            614,
+            644
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has focal areas of leakage in the right eye.",
+        "spans": [
+          "focal areas of leakage"
+        ],
+        "span_offsets": [
+          [
+            650,
+            672
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has neovascular age-related macular degeneration in the right eye.",
+        "spans": [
+          "consistent with neovascular age-related macular degeneration",
+          "in the right eye"
+        ],
+        "span_offsets": [
+          [
+            690,
+            750
+          ],
+          [
+            164,
+            180
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has neovascular age-related macular degeneration.",
+        "spans": [
+          "The patient has neovascular age-related macular degeneration"
+        ],
+        "span_offsets": [
+          [
+            12,
+            72
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Neovascular age-related macular degeneration is a condition that typically leads to severe vision loss.",
+        "spans": [
+          "a condition that typically leads to severe vision loss"
+        ],
+        "span_offsets": [
+          [
+            74,
+            128
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Neovascular age-related macular degeneration is caused by the growth of abnormal blood vessels beneath the retina.",
+        "spans": [
+          "the growth of abnormal blood vessels beneath the retina"
+        ],
+        "span_offsets": [
+          [
+            136,
+            191
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The growth of abnormal blood vessels beneath the retina causes fluid and blood leakage.",
+        "spans": [
+          "causing fluid and blood leakage"
+        ],
+        "span_offsets": [
+          [
+            193,
+            224
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's neovascular age-related macular degeneration is active.",
+        "spans": [
+          "Neovascular age-related macular degeneration; active"
+        ],
+        "span_offsets": [
+          [
+            241,
+            293
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed Lucentis.",
+        "spans": [
+          "I prescribed Lucentis"
+        ],
+        "span_offsets": [
+          [
+            0,
+            21
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Lucentis is administered via injection into the vitreous portion of the eye.",
+        "spans": [
+          "an injection to be administered once a month into the vitreous portion of the eye"
+        ],
+        "span_offsets": [
+          [
+            23,
+            104
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will receive Lucentis injections once a month.",
+        "spans": [
+          "once a month"
+        ],
+        "span_offsets": [
+          [
+            55,
+            67
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of Lucentis is to slow the rate of vision decline or stop further vision loss.",
+        "spans": [
+          "to slow the rate of vision decline or stop further vision loss"
+        ],
+        "span_offsets": [
+          [
+            106,
+            168
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will return for follow-up appointments as needed.",
+        "spans": [
+          "The patient will return for follow-up appointments as needed"
+        ],
+        "span_offsets": [
+          [
+            240,
+            300
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of follow-up appointments is to monitor the progression of the disease.",
+        "spans": [
+          "to monitor the progression of the disease"
+        ],
+        "span_offsets": [
+          [
+            301,
+            342
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Treatment will be adjusted as necessary during follow-up appointments.",
+        "spans": [
+          "and adjust treatment as necessary"
+        ],
+        "span_offsets": [
+          [
+            343,
+            376
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

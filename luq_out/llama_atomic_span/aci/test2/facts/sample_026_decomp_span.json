@@ -1,0 +1,658 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Alexis.",
+        "spans": [
+          "The patient, Alexis,"
+        ],
+        "span_offsets": [
+          [
+            5,
+            25
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing numbness and tingling in her right hand for approximately six months.",
+        "spans": [
+          "numbness and tingling in her right hand for approximately six months"
+        ],
+        "span_offsets": [
+          [
+            73,
+            141
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms have become more persistent over the last month.",
+        "spans": [
+          "with the symptoms becoming more persistent over the last month"
+        ],
+        "span_offsets": [
+          [
+            143,
+            205
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences pain, particularly when typing on a keyboard or using a mouse.",
+        "spans": [
+          "experiencing pain, particularly when typing on a keyboard or using a mouse"
+        ],
+        "span_offsets": [
+          [
+            219,
+            293
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's numbness and tingling are constant.",
+        "spans": [
+          "The numbness and tingling are constant"
+        ],
+        "span_offsets": [
+          [
+            295,
+            333
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is intermittent.",
+        "spans": [
+          "the pain is intermittent"
+        ],
+        "span_offsets": [
+          [
+            343,
+            367
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has found some relief with rest.",
+        "spans": [
+          "some relief with rest"
+        ],
+        "span_offsets": [
+          [
+            383,
+            404
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has found some relief with the use of ibuprofen.",
+        "spans": [
+          "some relief with the use of ibuprofen"
+        ],
+        "span_offsets": [
+          [
+            383,
+            394
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes ibuprofen 600mg four times a day.",
+        "spans": [
+          "600mg four times a day"
+        ],
+        "span_offsets": [
+          [
+            444,
+            466
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's past medical history is not mentioned in the transcript.",
+        "spans": [
+          "Alexis's past medical history is not mentioned in the transcript"
+        ],
+        "span_offsets": [
+          [
+            490,
+            554
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports no pain at night that wakes her up.",
+        "spans": [
+          "no pain at night that wakes her up"
+        ],
+        "span_offsets": [
+          [
+            595,
+            629
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms are not affecting her sleep.",
+        "spans": [
+          "her symptoms are not affecting her sleep"
+        ],
+        "span_offsets": [
+          [
+            635,
+            675
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is prescribed ibuprofen 600mg four times a day for pain.",
+        "spans": [
+          "I prescribed ibuprofen 600mg four times a day for pain"
+        ],
+        "span_offsets": [
+          [
+            698,
+            752
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is not mentioned in the transcript.",
+        "spans": [
+          "Blood pressure, pulse rate, oxygen saturation, and temperature are not mentioned in the transcript"
+        ],
+        "span_offsets": [
+          [
+            13,
+            111
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pulse rate is not mentioned in the transcript.",
+        "spans": [
+          "Blood pressure, pulse rate, oxygen saturation, and temperature are not mentioned in the transcript"
+        ],
+        "span_offsets": [
+          [
+            13,
+            111
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's oxygen saturation is not mentioned in the transcript.",
+        "spans": [
+          "Blood pressure, pulse rate, oxygen saturation, and temperature are not mentioned in the transcript"
+        ],
+        "span_offsets": [
+          [
+            13,
+            111
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's temperature is not mentioned in the transcript.",
+        "spans": [
+          "Blood pressure, pulse rate, oxygen saturation, and temperature are not mentioned in the transcript"
+        ],
+        "span_offsets": [
+          [
+            13,
+            111
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has pain on extension of the wrist.",
+        "spans": [
+          "The patient has pain on extension and flexion of the wrist"
+        ],
+        "span_offsets": [
+          [
+            128,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has pain on flexion of the wrist.",
+        "spans": [
+          "The patient has pain on extension and flexion of the wrist"
+        ],
+        "span_offsets": [
+          [
+            128,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a positive Tinel's sign.",
+        "spans": [
+          "The patient has a positive Tinel's sign"
+        ],
+        "span_offsets": [
+          [
+            198,
+            214
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's test results are not mentioned.",
+        "spans": [
+          "Test Results: [NOT MENTIONED]"
+        ],
+        "span_offsets": [
+          [
+            221,
+            250
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient is suspected to have carpal tunnel syndrome.",
+        "spans": [
+          "I suspect that Alexis has carpal tunnel syndrome"
+        ],
+        "span_offsets": [
+          [
+            12,
+            60
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has carpal tunnel syndrome in their problem list.",
+        "spans": [
+          "Carpal tunnel syndrome; unknown"
+        ],
+        "span_offsets": [
+          [
+            76,
+            107
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has an unknown condition in their problem list.",
+        "spans": [
+          "Carpal tunnel syndrome; unknown"
+        ],
+        "span_offsets": [
+          [
+            76,
+            107
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient will wear a splint at night to help alleviate symptoms.",
+        "spans": [
+          "I would like to put Alexis in a splint to wear at night to help alleviate symptoms"
+        ],
+        "span_offsets": [
+          [
+            0,
+            82
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is prescribed ibuprofen.",
+        "spans": [
+          "I will continue to prescribe ibuprofen"
+        ],
+        "span_offsets": [
+          [
+            84,
+            122
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ibuprofen dose is 600mg.",
+        "spans": [
+          "ibuprofen 600mg"
+        ],
+        "span_offsets": [
+          [
+            113,
+            128
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ibuprofen frequency is four times a day.",
+        "spans": [
+          "four times a day"
+        ],
+        "span_offsets": [
+          [
+            129,
+            145
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ibuprofen indication is pain management.",
+        "spans": [
+          "for pain management"
+        ],
+        "span_offsets": [
+          [
+            146,
+            165
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "An EMG will be ordered for the patient.",
+        "spans": [
+          "I will also order an EMG"
+        ],
+        "span_offsets": [
+          [
+            167,
+            191
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A nerve conduction study will be ordered for the patient.",
+        "spans": [
+          "and nerve conduction study"
+        ],
+        "span_offsets": [
+          [
+            192,
+            218
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has nerve impingement in her wrist.",
+        "spans": [
+          "nerve impingement in her wrist"
+        ],
+        "span_offsets": [
+          [
+            243,
+            273
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will start with conservative treatment.",
+        "spans": [
+          "We will start with conservative treatment"
+        ],
+        "span_offsets": [
+          [
+            275,
+            316
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be reassessed after the test results.",
+        "spans": [
+          "and reassess after the test results"
+        ],
+        "span_offsets": [
+          [
+            317,
+            352
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will have a follow-up after the EMG and nerve conduction study.",
+        "spans": [
+          "I will follow up with Alexis after the EMG and nerve conduction study"
+        ],
+        "span_offsets": [
+          [
+            355,
+            424
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's test results will be discussed during the follow-up.",
+        "spans": [
+          "to discuss the results"
+        ],
+        "span_offsets": [
+          [
+            425,
+            447
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient may be prescribed physical therapy.",
+        "spans": [
+          "which may include physical therapy"
+        ],
+        "span_offsets": [
+          [
+            489,
+            523
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient may be prescribed surgery.",
+        "spans": [
+          "or surgery"
+        ],
+        "span_offsets": [
+          [
+            524,
+            534
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

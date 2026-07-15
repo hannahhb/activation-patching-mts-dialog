@@ -1,0 +1,46 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 37-year-old female.,0.0,"[""a 37-year-old female""]","[[13, 33]]","[""exact""]",True,False
+1,subjective,The patient presents with a complaint of worsening headaches over the past few weeks.,0.0,"[""presents with a complaint of worsening headaches over the past few weeks""]","[[35, 107]]","[""exact""]",True,False
+2,subjective,The patient's blood pressure has been running high.,0.0,"[""her blood pressure has been running high""]","[[121, 161]]","[""exact""]",True,False
+3,subjective,The patient has a blood pressure reading of 160/87.,0.0,"[""readings of 160/87""]","[[168, 186]]","[""exact""]",True,False
+4,subjective,The patient has a blood pressure reading of 175/92.,0.0,"[""readings of 175/92""]","[[191, 197]]","[""word""]",True,False
+5,subjective,The patient has a history of hypertension.,0.0,"[""a history of hypertension""]","[[231, 256]]","[""exact""]",True,False
+6,subjective,The patient has a history of diabetes.,0.0,"[""a history of hypertension and diabetes""]","[[231, 269]]","[""exact""]",True,False
+7,subjective,The patient takes lisinopril 20mg once a day.,0.25,"[""lisinopril 20mg once a day""]","[[291, 317]]","[""exact""]",True,False
+8,subjective,The patient sometimes forgets to take lisinopril.,0.0,"[""admits to sometimes forgetting to take it""]","[[323, 364]]","[""exact""]",True,False
+9,subjective,The patient forgets to take lisinopril particularly on weekends.,0.0,"[""particularly on weekends""]","[[366, 390]]","[""exact""]",True,False
+10,subjective,The patient experiences occasional headaches.,0.25,"[""has been experiencing occasional headaches""]","[[410, 443]]","[""word""]",True,False
+11,subjective,The patient rates the intensity of her headaches as 7 out of 10.,0.25,"[""rates as a 7 out of 10 in intensity""]","[[455, 490]]","[""exact""]",True,False
+12,subjective,The patient manages her headaches with Tylenol.,0.0,"[""has been managing them with Tylenol""]","[[496, 531]]","[""exact""]",True,False
+13,subjective,The patient denies any recent changes in urination.,0.0,"[""denies any recent changes in urination""]","[[537, 575]]","[""exact""]",True,False
+14,subjective,The patient denies any recent cough.,0.25,"[""denies any recent changes in urination, cough""]","[[848, 893]]","[""exact""]",True,False
+15,subjective,The patient denies any recent runny nose.,0.25,"[""denies any recent changes in urination, cough, runny nose""]","[[848, 905]]","[""exact""]",True,False
+16,subjective,The patient denies any recent congestion.,0.25,"[""denies any recent changes in urination, cough, runny nose, or congestion""]","[[848, 920]]","[""exact""]",True,False
+17,subjective,The patient has a family history of migraines.,1.0,"[""a family history of migraines""]","[[607, 636]]","[""exact""]",True,False
+18,subjective,The patient's family history of migraines does not include similar headaches.,1.0,"[""but not similar headaches like the ones she is currently experiencing""]","[[638, 707]]","[""exact""]",True,False
+19,subjective,Lisinopril is prescribed for the patient's hypertension.,0.0,"[""Lisinopril 20mg once a day for hypertension""]","[[923, 966]]","[""exact""]",True,False
+20,subjective,The patient's dose of lisinopril is 20mg.,0.25,"[""lisinopril 20mg""]","[[291, 306]]","[""exact""]",True,False
+21,subjective,The patient's frequency of lisinopril is once a day.,0.0,"[""once a day""]","[[307, 317]]","[""exact""]",True,False
+22,objective,The patient's blood pressure is 160/87.,0.5,"[""Blood pressure 160/87""]","[[13, 34]]","[""exact""]",True,False
+23,objective,The patient's blood pressure is 175/92.,0.5,"[""Blood pressure 160/87 and 175/92""]","[[13, 45]]","[""exact""]",True,False
+24,objective,The patient's previous blood pressure was 124/82.,0.5,"[""but previously was 124/82""]","[[47, 72]]","[""exact""]",True,False
+25,objective,The patient has tenderness to palpation over the frontal sinuses.,0.75,"[""tenderness to palpation over the frontal sinuses""]","[[91, 139]]","[""exact""]",True,False
+26,objective,The patient does not have tenderness over the maxillary sinuses.,0.25,"[""but no tenderness over the maxillary sinuses""]","[[141, 185]]","[""exact""]",True,False
+27,objective,The patient does not have lymphadenopathy.,0.5,"[""or lymphadenopathy""]","[[186, 204]]","[""exact""]",True,False
+28,assessment,The patient presents with worsening headaches.,0.0,"[""worsening headaches""]","[[38, 57]]","[""exact""]",True,False
+29,assessment,The patient has uncontrolled hypertension.,0.0,"[""uncontrolled hypertension""]","[[62, 87]]","[""exact""]",True,False
+30,plan,The patient was prescribed lisinopril.,0.0,"[""I prescribed lisinopril 40mg once a day for hypertension""]","[[0, 56]]","[""exact""]",True,False
+31,plan,The patient's lisinopril dose is 40mg.,0.0,"[""40mg""]","[[24, 28]]","[""exact""]",True,False
+32,plan,The patient's lisinopril frequency is once a day.,0.0,"[""once a day""]","[[29, 39]]","[""exact""]",True,False
+33,plan,The patient's lisinopril indication is hypertension.,0.0,"[""for hypertension""]","[[40, 56]]","[""exact""]",True,False
+34,plan,The patient had blood tests ordered.,0.0,"[""I ordered blood tests""]","[[58, 79]]","[""exact""]",True,False
+35,plan,The patient had hemoglobin A1c tests ordered.,0.0,"[""including hemoglobin A1c""]","[[81, 105]]","[""exact""]",True,False
+36,plan,The patient has diabetes.,0.0,"[""to monitor her diabetes""]","[[134, 157]]","[""exact""]",True,False
+37,plan,The patient has hypertension.,0.0,"[""to monitor her diabetes and hypertension""]","[[134, 174]]","[""exact""]",True,False
+38,plan,The patient was referred to Doctor Ruth.,0.75,"[""I referred her to see Doctor Ruth""]","[[176, 209]]","[""exact""]",True,False
+39,plan,The patient's referral to Doctor Ruth is for further evaluation and education on managing her diabetes.,1.0,"[""for further evaluation and education on managing her diabetes""]","[[210, 271]]","[""exact""]",True,False
+40,plan,The patient was advised to continue taking Tylenol.,0.5,"[""I advised her to continue taking Tylenol""]","[[273, 313]]","[""exact""]",True,False
+41,plan,The patient's Tylenol indication is headaches.,0.5,"[""for her headaches""]","[[314, 331]]","[""exact""]",True,False
+42,plan,The patient was instructed to check her blood pressure.,0.75,"[""to keep checking her blood pressure""]","[[336, 371]]","[""exact""]",True,False
+43,plan,The patient is scheduled for follow-up after her blood tests are complete.,0.0,"[""to return for follow-up after her blood tests are complete""]","[[399, 457]]","[""exact""]",True,False
+44,plan,The patient's follow-up will include reviewing her blood test results.,0.0,"[""to review the results with me or Doctor Ruth""]","[[462, 506]]","[""exact""]",True,False

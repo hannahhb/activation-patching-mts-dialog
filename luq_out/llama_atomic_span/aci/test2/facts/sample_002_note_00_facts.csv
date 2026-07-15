@@ -1,0 +1,48 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Jeremy.,0.0,"[""The patient, Jeremy""]","[[0, 19]]","[""exact""]",True,False
+1,subjective,The patient is a 38-year-old male.,1.0,"[""a 38-year-old male""]","[[21, 39]]","[""exact""]",True,False
+2,subjective,The patient presented to the office with a complaint of lower back pain.,0.0,"[""presented to the office with a complaint of lower back pain""]","[[41, 100]]","[""exact""]",True,False
+3,subjective,The patient's lower back pain started approximately four months ago.,0.0,"[""started approximately four months ago""]","[[106, 143]]","[""exact""]",True,False
+4,subjective,The patient's lower back pain began after lifting heavy boxes during his son's college move-out.,0.25,"[""after lifting heavy boxes during his son's college move-out""]","[[144, 203]]","[""exact""]",True,False
+5,subjective,The patient attempted physical therapy at his gym for lower back pain.,0.75,"[""attempting physical therapy at his gym""]","[[252, 290]]","[""exact""]",True,False
+6,subjective,The patient took over-the-counter pain medications such as Tylenol for lower back pain.,0.0,"[""taking over-the-counter pain medications such as Tylenol""]","[[295, 351]]","[""exact""]",True,False
+7,subjective,The patient took over-the-counter pain medications such as ibuprofen for lower back pain.,0.0,"[""taking over-the-counter pain medications such as Tylenol and ibuprofen""]","[[295, 365]]","[""exact""]",True,False
+8,subjective,The patient denies any fever.,0.0,"[""denies any fever, chills, or other systemic symptoms""]","[[370, 422]]","[""exact""]",True,False
+9,subjective,The patient denies any chills.,0.25,"[""denies any fever, chills, or other systemic symptoms""]","[[370, 422]]","[""exact""]",True,False
+10,subjective,The patient denies any other systemic symptoms.,0.25,"[""denies any fever, chills, or other systemic symptoms""]","[[370, 422]]","[""exact""]",True,False
+11,subjective,The patient has a history of a total knee replacement.,0.0,"[""a history of a total knee replacement""]","[[440, 477]]","[""exact""]",True,False
+12,subjective,The patient's total knee replacement occurred in the spring of 2020.,0.75,"[""in the spring of 2020""]","[[478, 499]]","[""exact""]",True,False
+13,subjective,The patient's total knee replacement was successful.,0.25,"[""which he reports was successful""]","[[662, 693]]","[""exact""]",True,False
+14,subjective,The patient has had no issues since his total knee replacement.,0.5,"[""has had no issues since""]","[[698, 721]]","[""exact""]",True,False
+15,subjective,The patient denies any symptoms of bladder incontinence.,0.0,"[""denies any symptoms of bladder or bowel incontinence""]","[[736, 788]]","[""exact""]",True,False
+16,subjective,The patient denies any symptoms of bowel incontinence.,0.0,"[""denies any symptoms of bladder or bowel incontinence""]","[[736, 788]]","[""exact""]",True,False
+17,subjective,The patient denies any weakness in his legs.,1.0,"[""denies any weakness or numbness in his legs""]","[[816, 859]]","[""exact""]",True,False
+18,subjective,The patient experienced a brief episode of numbness in his toes after the initial injury.,0.5,"[""except for a brief episode of numbness in his toes after the initial injury""]","[[860, 935]]","[""exact""]",True,False
+19,subjective,The patient is concerned about the persistent pain in his lower back.,0.0,"[""concerned about the persistent pain and numbness in his lower back and legs""]","[[507, 582]]","[""exact""]",True,False
+20,subjective,The patient is concerned about the numbness in his lower back.,1.0,"[""concerned about the persistent pain and numbness in his lower back and legs""]","[[507, 582]]","[""exact""]",True,False
+21,subjective,The patient is concerned about the numbness in his legs.,1.0,"[""concerned about the persistent pain and numbness in his lower back and legs""]","[[507, 582]]","[""exact""]",True,False
+22,subjective,The patient was prescribed ibuprofen for pain.,0.75,"[""I prescribed ibuprofen for pain""]","[[938, 969]]","[""exact""]",True,False
+23,objective,The patient's vital signs are within normal limits.,0.0,"[""The patient's vital signs are within normal limits""]","[[13, 63]]","[""exact""]",True,False
+24,objective,The patient's blood pressure is 117/56.,0.0,"[""a blood pressure of 117/56""]","[[70, 96]]","[""exact""]",True,False
+25,objective,The patient's heart rate is 68.,0.0,"[""heart rate of 68""]","[[98, 114]]","[""exact""]",True,False
+26,objective,The patient's oxygen saturation is 95% on room air.,0.0,"[""oxygen saturation of 95% on room air""]","[[120, 156]]","[""exact""]",True,False
+27,objective,The patient has bony protuberance of the C5-C6 vertebrae.,0.0,"[""bony protuberance of the C5-C6 vertebrae""]","[[175, 215]]","[""exact""]",True,False
+28,objective,The patient has no pain to palpation of the C5-C6 vertebrae.,0.0,"[""without pain to palpation""]","[[216, 241]]","[""exact""]",True,False
+29,objective,The patient has decreased flexion of the lower back.,0.0,"[""decreased flexion and extension of the lower back""]","[[273, 322]]","[""exact""]",True,False
+30,objective,The patient has decreased extension of the lower back.,0.0,"[""decreased flexion and extension of the lower back""]","[[273, 322]]","[""exact""]",True,False
+31,objective,The patient has a positive straight leg raise.,0.0,"[""a positive straight leg raise""]","[[324, 353]]","[""exact""]",True,False
+32,objective,The patient has spasm of the paraspinal muscles of the lumbar spine.,0.0,"[""spasm of the paraspinal muscles of the lumbar spine""]","[[359, 410]]","[""exact""]",True,False
+33,objective,The patient has equal strength in the lower extremities.,0.25,"[""equal strength in the lower extremities""]","[[443, 482]]","[""exact""]",True,False
+34,assessment,The patient is suspected to have an acute disk herniation in the lumbar spine.,0.0,"[""I suspect the patient has an acute disk herniation in the lumbar spine""]","[[12, 82]]","[""exact""]",True,False
+35,assessment,The patient has a lumbar spine disk herniation.,0.0,"[""Lumbar spine disk herniation; active""]","[[99, 135]]","[""exact""]",True,False
+36,plan,The patient was ordered a lumbar spine MRI.,0.0,"[""I ordered a lumbar spine MRI to further evaluate the disk herniation""]","[[0, 68]]","[""exact""]",True,False
+37,plan,The patient has a disk herniation.,0.25,"[""disk herniation""]","[[53, 68]]","[""exact""]",True,False
+38,plan,The patient was referred to a physical therapist.,0.0,"[""I referred the patient to a physical therapist through our health system for continued physical therapy""]","[[70, 173]]","[""exact""]",True,False
+39,plan,The patient will continue physical therapy.,0.0,"[""continued physical therapy""]","[[147, 173]]","[""exact""]",True,False
+40,plan,The patient was prescribed meloxicam.,0.0,"[""I prescribed meloxicam 15mg once a day to help with pain management""]","[[175, 242]]","[""exact""]",True,False
+41,plan,The patient's meloxicam dose is 15mg.,0.0,"[""meloxicam 15mg""]","[[188, 202]]","[""exact""]",True,False
+42,plan,The patient's meloxicam frequency is once a day.,0.0,"[""once a day""]","[[203, 213]]","[""exact""]",True,False
+43,plan,The patient's meloxicam is for pain management.,0.0,"[""to help with pain management""]","[[214, 242]]","[""exact""]",True,False
+44,plan,The patient will have a follow-up appointment after the lumbar spine MRI results are available.,0.0,"[""I will see the patient again after the results of the lumbar spine MRI are available""]","[[245, 329]]","[""exact""]",True,False
+45,plan,The patient's follow-up appointment will discuss further treatment options.,0.0,"[""to discuss further treatment options""]","[[330, 366]]","[""exact""]",True,False
+46,plan,The patient's potential further treatment options include steroid injections.,0.0,"[""including potential steroid injections""]","[[368, 406]]","[""exact""]",True,False

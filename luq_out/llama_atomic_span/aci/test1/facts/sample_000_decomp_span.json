@@ -1,0 +1,879 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Charles.",
+        "spans": [
+          "The patient, Charles,"
+        ],
+        "span_offsets": [
+          [
+            5,
+            26
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient presented with a complaint of shortness of breath.",
+        "spans": [
+          "complaint of shortness of breath"
+        ],
+        "span_offsets": [
+          [
+            44,
+            76
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient feels like he catches his breath a lot more than he used to.",
+        "spans": [
+          "he feels like he catches his breath a lot more than he used to"
+        ],
+        "span_offsets": [
+          [
+            91,
+            153
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient considers himself to be pretty healthy.",
+        "spans": [
+          "even considering himself to be pretty healthy"
+        ],
+        "span_offsets": [
+          [
+            155,
+            200
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's symptoms started suddenly.",
+        "spans": [
+          "the symptoms started suddenly"
+        ],
+        "span_offsets": [
+          [
+            219,
+            248
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is unsure why his symptoms started.",
+        "spans": [
+          "and he is not sure why"
+        ],
+        "span_offsets": [
+          [
+            250,
+            272
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denied a rash.",
+        "spans": [
+          "rash"
+        ],
+        "span_offsets": [
+          [
+            313,
+            317
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denied nausea.",
+        "spans": [
+          "nausea"
+        ],
+        "span_offsets": [
+          [
+            319,
+            325
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denied vomiting.",
+        "spans": [
+          "vomiting"
+        ],
+        "span_offsets": [
+          [
+            327,
+            335
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denied lip or throat swelling.",
+        "spans": [
+          "lip or throat swelling"
+        ],
+        "span_offsets": [
+          [
+            337,
+            359
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denied fever.",
+        "spans": [
+          "fever"
+        ],
+        "span_offsets": [
+          [
+            364,
+            369
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a dog with eye discharge.",
+        "spans": [
+          "he has a dog that gets eye discharge"
+        ],
+        "span_offsets": [
+          [
+            389,
+            425
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient does not experience eye discharge.",
+        "spans": [
+          "but he himself does not experience eye discharge"
+        ],
+        "span_offsets": [
+          [
+            427,
+            475
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's symptoms occur in all situations.",
+        "spans": [
+          "the symptoms occur in all situations"
+        ],
+        "span_offsets": [
+          [
+            494,
+            530
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's symptoms occur when he is in the house.",
+        "spans": [
+          "when he is in the house"
+        ],
+        "span_offsets": [
+          [
+            542,
+            565
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's symptoms occur when he is outside.",
+        "spans": [
+          "outside"
+        ],
+        "span_offsets": [
+          [
+            567,
+            574
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's symptoms occur when he is near his cat.",
+        "spans": [
+          "near his cat"
+        ],
+        "span_offsets": [
+          [
+            580,
+            592
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a history of heavy drinking.",
+        "spans": [
+          "he has a history of heavy drinking"
+        ],
+        "span_offsets": [
+          [
+            643,
+            677
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's heavy drinking leads to diarrhea.",
+        "spans": [
+          "which leads to diarrhea"
+        ],
+        "span_offsets": [
+          [
+            679,
+            702
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denied symptoms in other organs.",
+        "spans": [
+          "The patient denied any symptoms in other organs"
+        ],
+        "span_offsets": [
+          [
+            724,
+            771
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has noticed shortness of breath in all situations.",
+        "spans": [
+          "he has noticed the shortness of breath in all situations"
+        ],
+        "span_offsets": [
+          [
+            791,
+            847
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is currently using an albuterol inhaler.",
+        "spans": [
+          "The patient is currently using an albuterol inhaler"
+        ],
+        "span_offsets": [
+          [
+            871,
+            922
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's albuterol inhaler was prescribed by the urgent care.",
+        "spans": [
+          "as prescribed by the urgent care"
+        ],
+        "span_offsets": [
+          [
+            923,
+            955
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's albuterol inhaler is for asthma symptoms.",
+        "spans": [
+          "for asthma symptoms"
+        ],
+        "span_offsets": [
+          [
+            956,
+            975
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's vital signs are normal.",
+        "spans": [
+          "The patient's vital signs are normal"
+        ],
+        "span_offsets": [
+          [
+            13,
+            49
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's pulse is normal.",
+        "spans": [
+          "with a normal pulse"
+        ],
+        "span_offsets": [
+          [
+            51,
+            70
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's pulse ox is normal.",
+        "spans": [
+          "with a normal pulse and pulse ox"
+        ],
+        "span_offsets": [
+          [
+            51,
+            83
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has faint expiratory wheezing bilaterally in all lung fields.",
+        "spans": [
+          "faint expiratory wheezing bilaterally in all lung fields"
+        ],
+        "span_offsets": [
+          [
+            145,
+            201
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient does not have a rash.",
+        "spans": [
+          "There was no rash"
+        ],
+        "span_offsets": [
+          [
+            203,
+            220
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient does not have angioedema.",
+        "spans": [
+          "There was no rash, angioedema, or audible stridor"
+        ],
+        "span_offsets": [
+          [
+            203,
+            252
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient does not have audible stridor.",
+        "spans": [
+          "There was no rash, angioedema, or audible stridor"
+        ],
+        "span_offsets": [
+          [
+            203,
+            252
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's chest X-ray is normal.",
+        "spans": [
+          "The patient's chest X-ray and pulmonary function test were normal"
+        ],
+        "span_offsets": [
+          [
+            269,
+            334
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's pulmonary function test is normal.",
+        "spans": [
+          "The patient's chest X-ray and pulmonary function test were normal"
+        ],
+        "span_offsets": [
+          [
+            269,
+            334
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has allergic asthma.",
+        "spans": [
+          "The patient has newly diagnosed allergic asthma"
+        ],
+        "span_offsets": [
+          [
+            12,
+            59
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has suspected allergy.",
+        "spans": [
+          "suspected allergy"
+        ],
+        "span_offsets": [
+          [
+            93,
+            110
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's past medical history is unknown.",
+        "spans": [
+          "unknown past medical history"
+        ],
+        "span_offsets": [
+          [
+            112,
+            140
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's social history is unknown.",
+        "spans": [
+          "unknown social history"
+        ],
+        "span_offsets": [
+          [
+            142,
+            164
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed albuterol inhaler for asthma symptoms.",
+        "spans": [
+          "I prescribed albuterol inhaler as directed for asthma symptoms"
+        ],
+        "span_offsets": [
+          [
+            0,
+            62
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was prescribed albuterol inhaler as directed.",
+        "spans": [
+          "I prescribed albuterol inhaler as directed for asthma symptoms"
+        ],
+        "span_offsets": [
+          [
+            0,
+            62
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was prescribed Singulair for asthma.",
+        "spans": [
+          "I prescribed Singulair 10mg once daily to help decrease the occurrences of asthma"
+        ],
+        "span_offsets": [
+          [
+            64,
+            145
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was prescribed Singulair 10mg.",
+        "spans": [
+          "Singulair 10mg once daily"
+        ],
+        "span_offsets": [
+          [
+            77,
+            102
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Singulair is prescribed once daily.",
+        "spans": [
+          "once daily"
+        ],
+        "span_offsets": [
+          [
+            92,
+            102
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The purpose of the patient's Singulair is to help decrease the occurrences of asthma.",
+        "spans": [
+          "to help decrease the occurrences of asthma"
+        ],
+        "span_offsets": [
+          [
+            103,
+            145
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is planned to undergo allergy testing.",
+        "spans": [
+          "I also plan to proceed with allergy testing"
+        ],
+        "span_offsets": [
+          [
+            147,
+            190
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's allergy testing will start with skin testing.",
+        "spans": [
+          "starting with skin testing"
+        ],
+        "span_offsets": [
+          [
+            192,
+            218
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The purpose of the patient's skin testing is to target the triggers of the patient's symptoms.",
+        "spans": [
+          "to target the triggers of the patient's symptoms"
+        ],
+        "span_offsets": [
+          [
+            219,
+            267
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's skin testing is scheduled for next week.",
+        "spans": [
+          "We will schedule the skin testing for next week"
+        ],
+        "span_offsets": [
+          [
+            269,
+            316
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is instructed to continue using the albuterol inhaler as soon as symptoms start.",
+        "spans": [
+          "to continue using the albuterol inhaler as soon as symptoms start"
+        ],
+        "span_offsets": [
+          [
+            337,
+            402
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a scheduled appointment for next week.",
+        "spans": [
+          "to come to the office next week for the scheduled appointment"
+        ],
+        "span_offsets": [
+          [
+            407,
+            468
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will be seen for follow-up next week.",
+        "spans": [
+          "I will see the patient next week"
+        ],
+        "span_offsets": [
+          [
+            482,
+            514
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The purpose of the patient's follow-up appointment next week is to schedule the skin testing.",
+        "spans": [
+          "to schedule the skin testing"
+        ],
+        "span_offsets": [
+          [
+            515,
+            543
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ]
+  }
+]

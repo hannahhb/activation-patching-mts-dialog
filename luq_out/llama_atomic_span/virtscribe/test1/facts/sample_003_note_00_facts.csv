@@ -1,0 +1,65 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 25-year-old female.,0.0,"[""a 25-year-old female""]","[[18, 38]]","[""exact""]",True,False
+1,subjective,The patient presents for evaluation of breast reduction.,0.0,"[""presents for evaluation of breast reduction""]","[[40, 83]]","[""exact""]",True,False
+2,subjective,The patient has symptoms of macromastia.,0.0,"[""symptoms of macromastia""]","[[111, 134]]","[""exact""]",True,False
+3,subjective,The patient experiences back pain.,0.0,"[""back pain""]","[[146, 155]]","[""exact""]",True,False
+4,subjective,The patient experiences neck pain.,0.0,"[""neck pain""]","[[157, 166]]","[""exact""]",True,False
+5,subjective,The patient has bra strap indentations.,0.0,"[""bra strap indentations""]","[[172, 194]]","[""exact""]",True,False
+6,subjective,The patient's symptoms have been present for approximately 5-7 years.,0.25,"[""for approximately 5-7 years""]","[[196, 223]]","[""exact""]",True,False
+7,subjective,The patient has been considering breast reduction surgery for about 6-7 years.,0.25,"[""has been considering breast reduction surgery for about 6-7 years""]","[[229, 294]]","[""exact""]",True,False
+8,subjective,The patient has attempted nonsurgical treatments with minimal relief.,0.25,"[""attempted nonsurgical treatments with minimal relief""]","[[303, 355]]","[""exact""]",True,False
+9,subjective,The patient's activities are limited due to the size of her breasts.,0.75,"[""her activities are limited due to the size of her breasts""]","[[374, 431]]","[""exact""]",True,False
+10,subjective,"The patient has difficulty performing exercises like working out, jumping, or running due to the size of her breasts.",1.0,"[""particularly when performing exercises like working out, jumping, or running""]","[[433, 509]]","[""exact""]",True,False
+11,subjective,The patient has a history of chiropractic care for back pain.,0.25,"[""has a history of chiropractic care for back pain""]","[[515, 563]]","[""exact""]",True,False
+12,subjective,The patient does not take pain medication.,0.0,"[""does not take pain medication""]","[[568, 597]]","[""exact""]",True,False
+13,subjective,The patient is a student studying psychology.,0.25,"[""is currently a student studying psychology""]","[[603, 645]]","[""exact""]",True,False
+14,subjective,The patient consumes occasional wine.,0.5,"[""consumes occasional wine""]","[[650, 674]]","[""exact""]",True,False
+15,subjective,The patient denies tobacco use.,0.75,"[""denies tobacco, drug, or alcohol use""]","[[680, 716]]","[""exact""]",True,False
+16,subjective,The patient denies drug use.,0.75,"[""denies tobacco, drug, or alcohol use""]","[[680, 716]]","[""exact""]",True,False
+17,subjective,The patient denies alcohol use.,1.0,"[""denies tobacco, drug, or alcohol use""]","[[680, 716]]","[""exact""]",True,False
+18,subjective,The patient is not interested in breastfeeding.,1.0,"[""is not interested in breastfeeding""]","[[722, 756]]","[""exact""]",True,False
+19,subjective,The patient has a family history of breast cancer.,0.0,"[""a family history of breast cancer""]","[[789, 822]]","[""exact""]",True,False
+20,subjective,The patient's mother was diagnosed with breast cancer at age 40.,0.0,"[""her mother diagnosed at age 40""]","[[829, 859]]","[""exact""]",True,False
+21,subjective,The patient has been recommended to start mammograms at age 30.,1.0,"[""has been recommended to start at age 30""]","[[884, 914]]","[""word""]",True,False
+22,subjective,The patient has lost 10 pounds in the past few months.,0.75,"[""having lost 10 pounds in the past few months""]","[[956, 1000]]","[""exact""]",True,False
+23,subjective,The patient aims to lose 20 more pounds.,0.75,"[""aiming to lose 20 more pounds""]","[[1005, 1034]]","[""exact""]",True,False
+24,subjective,The patient experiences occasional numbness or tingling in her hands.,0.0,"[""occasional numbness or tingling in her hands""]","[[1072, 1116]]","[""exact""]",True,False
+25,subjective,The patient sometimes has nipple pain.,0.0,"[""sometimes has nipple pain""]","[[1121, 1146]]","[""exact""]",True,False
+26,subjective,The patient does not have rashes underneath her breasts.,0.25,"[""does not have rashes underneath her breasts""]","[[1152, 1195]]","[""exact""]",True,False
+27,objective,The patient's breasts are asymmetrical.,0.0,"[""asymmetrical breasts""]","[[45, 65]]","[""exact""]",True,False
+28,objective,The patient has severe ptosis bilaterally.,0.0,"[""severe ptosis bilaterally""]","[[71, 96]]","[""exact""]",True,False
+29,objective,The patient has no nipple retraction.,0.0,"[""no nipple retraction""]","[[98, 118]]","[""exact""]",True,False
+30,objective,The patient has no nipple discharge.,0.0,"[""no nipple retraction or discharge""]","[[98, 131]]","[""exact""]",True,False
+31,objective,The patient has no breast tenderness.,0.0,"[""no breast tenderness""]","[[133, 153]]","[""exact""]",True,False
+32,objective,The patient has no palpable breast masses.,0.0,"[""no breast tenderness, masses""]","[[133, 161]]","[""exact""]",True,False
+33,objective,The patient has no palpable axillary lymphadenopathy.,0.0,"[""no breast tenderness, masses, or axillary lymphadenopathy is palpable""]","[[133, 202]]","[""exact""]",True,False
+34,assessment,The patient is an ideal candidate for bilateral reduction mammoplasty.,0.0,"[""The patient is an ideal candidate for bilateral reduction mammoplasty""]","[[12, 81]]","[""exact""]",True,False
+35,assessment,The patient has symptomatic macromastia.,0.0,"[""symptomatic macromastia""]","[[89, 112]]","[""exact""]",True,False
+36,assessment,The patient has minimal relief from nonsurgical treatments.,1.0,"[""minimal relief from nonsurgical treatments""]","[[117, 159]]","[""exact""]",True,False
+37,assessment,The patient has macromastia.,0.0,"[""Macromastia""]","[[176, 187]]","[""exact""]",True,False
+38,assessment,The patient has back pain.,0.5,"[""Back pain""]","[[189, 198]]","[""exact""]",True,False
+39,assessment,The patient has neck pain.,0.75,"[""Neck pain""]","[[200, 209]]","[""exact""]",True,False
+40,assessment,The patient has nipple pain.,0.5,"[""Nipple pain""]","[[235, 246]]","[""exact""]",True,False
+41,assessment,The patient experiences occasional numbness or tingling in hands.,0.5,"[""Occasional numbness or tingling in hands""]","[[248, 288]]","[""exact""]",True,False
+42,plan,The patient was prescribed Propranolol.,0.75,"[""I prescribed Propranolol""]","[[0, 24]]","[""exact""]",True,False
+43,plan,The patient was prescribed Propranolol as needed.,1.0,"[""as needed""]","[[25, 34]]","[""exact""]",True,False
+44,plan,The patient was prescribed Propranolol for migraines.,0.75,"[""for migraines""]","[[35, 48]]","[""exact""]",True,False
+45,plan,The patient's symptoms and measurements will be documented.,0.5,"[""I will document the patient's symptoms and measurements""]","[[50, 105]]","[""exact""]",True,False
+46,plan,The patient's symptoms and measurements will be sent to the insurance company for approval.,0.5,"[""which will be sent to the insurance company for approval""]","[[107, 163]]","[""exact""]",True,False
+47,plan,The insurance company will approve the patient for surgery.,1.0,"[""Once the insurance company approves""]","[[165, 200]]","[""exact""]",True,False
+48,plan,The patient will undergo surgery.,0.0,"[""we will schedule the patient for surgery""]","[[202, 242]]","[""exact""]",True,False
+49,plan,The surgery will involve removing excess tissue.,0.5,"[""removing excess tissue""]","[[269, 291]]","[""exact""]",True,False
+50,plan,The surgery will involve lifting the breasts.,0.5,"[""lifting the breasts""]","[[296, 315]]","[""exact""]",True,False
+51,plan,The surgery aims to alleviate back pain.,1.0,"[""alleviate back and neck pain""]","[[319, 347]]","[""exact""]",True,False
+52,plan,The surgery aims to alleviate neck pain.,1.0,"[""alleviate back and neck pain""]","[[319, 347]]","[""exact""]",True,False
+53,plan,The patient will have drains in place for about a week.,0.25,"[""The patient will have drains in place for about a week""]","[[349, 403]]","[""exact""]",True,False
+54,plan,The incision will be covered with clear plastic tape.,0.5,"[""the incision will be covered with clear plastic tape""]","[[409, 461]]","[""exact""]",True,False
+55,plan,The patient will be kept overnight in the hospital.,1.0,"[""I will keep the patient overnight in the hospital""]","[[481, 530]]","[""exact""]",True,False
+56,plan,The patient will be kept overnight in the hospital for pain management.,1.0,"[""for pain management""]","[[531, 550]]","[""exact""]",True,False
+57,plan,The patient will be kept overnight in the hospital for nausea control.,1.0,"[""and nausea control""]","[[551, 569]]","[""exact""]",True,False
+58,plan,The patient will have activity restrictions for 6 weeks post-surgery.,0.25,"[""The patient will have activity restrictions for 6 weeks post-surgery""]","[[571, 639]]","[""exact""]",True,False
+59,plan,The patient will have no heavy lifting for 6 weeks post-surgery.,0.25,"[""no heavy lifting""]","[[651, 667]]","[""exact""]",True,False
+60,plan,The patient will have no driving for 2-3 weeks post-surgery.,0.0,"[""no driving for 2-3 weeks""]","[[672, 696]]","[""exact""]",True,False
+61,plan,The patient will meet with the office again before surgery.,0.25,"[""The patient will meet with the office again before surgery""]","[[710, 768]]","[""exact""]",True,False
+62,plan,The patient will review final instructions before surgery.,0.25,"[""to review final instructions""]","[[769, 797]]","[""exact""]",True,False
+63,plan,The patient will have the opportunity to answer last-minute questions before surgery.,0.0,"[""and answer any last-minute questions""]","[[798, 834]]","[""exact""]",True,False

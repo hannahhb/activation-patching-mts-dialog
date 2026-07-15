@@ -1,0 +1,54 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 57-year-old male.,0.0,"[""a 57-year-old male""]","[[18, 36]]","[""exact""]",True,False
+1,subjective,The patient presents with shortness of breath.,0.0,"[""shortness of breath""]","[[73, 92]]","[""exact""]",True,False
+2,subjective,The patient's shortness of breath occurs when he wakes up.,0.0,"[""which occurs when he wakes up""]","[[94, 123]]","[""exact""]",True,False
+3,subjective,The patient's shortness of breath persists throughout the day.,0.75,"[""persists throughout the day""]","[[128, 155]]","[""exact""]",True,False
+4,subjective,The patient has been experiencing shortness of breath for a couple of weeks.,0.0,"[""a couple of weeks of shortness of breath""]","[[52, 92]]","[""exact""]",True,False
+5,subjective,The patient reports coughing up a significant amount of blood.,0.0,"[""coughing up a significant amount of blood""]","[[168, 209]]","[""exact""]",True,False
+6,subjective,The patient coughs up approximately 3-4 cups of blood per day.,0.0,"[""approximately 3-4 cups per day""]","[[211, 241]]","[""exact""]",True,False
+7,subjective,The patient has been coughing up blood for the past three weeks.,0.0,"[""for the past three weeks""]","[[243, 267]]","[""exact""]",True,False
+8,subjective,The patient has a history of diabetes.,0.0,"[""a history of diabetes""]","[[276, 297]]","[""exact""]",True,False
+9,subjective,The patient has a history of hypertension.,0.0,"[""a history of hypertension""]","[[299, 311]]","[""word""]",True,False
+10,subjective,The patient has a history of asthma.,0.0,"[""a history of asthma""]","[[317, 323]]","[""word""]",True,False
+11,subjective,The patient takes metformin 500mg twice a day.,0.0,"[""metformin 500mg twice a day""]","[[344, 371]]","[""exact""]",True,False
+12,subjective,The patient takes metformin for his diabetes.,0.0,"[""for his diabetes""]","[[372, 388]]","[""exact""]",True,False
+13,subjective,The patient takes Norvasc for his hypertension.,0.0,"[""for his hypertension""]","[[401, 421]]","[""exact""]",True,False
+14,subjective,The patient has been experiencing knee pain for an extended period.,1.0,"[""knee pain for an extended period""]","[[453, 485]]","[""exact""]",True,False
+15,subjective,The patient's knee pain is not related to his current symptoms.,1.0,"[""but it is not related to his current symptoms""]","[[487, 532]]","[""exact""]",True,False
+16,subjective,The patient reports coughing up blood.,0.0,"[""coughing up blood""]","[[574, 591]]","[""exact""]",True,False
+17,subjective,The patient denies any fever.,0.0,"[""denies any fever""]","[[597, 613]]","[""exact""]",True,False
+18,subjective,The patient denies any bruising.,0.0,"[""denies any fever, bruising, bleeding, or swelling""]","[[597, 646]]","[""exact""]",True,False
+19,subjective,The patient denies any bleeding.,1.0,"[""denies any fever, bruising, bleeding, or swelling""]","[[597, 646]]","[""exact""]",True,False
+20,subjective,The patient denies any swelling.,0.25,"[""denies any fever, bruising, bleeding, or swelling""]","[[597, 646]]","[""exact""]",True,False
+21,subjective,The patient's current medication includes metformin 500mg twice a day.,0.0,"[""Metformin 500mg twice a day""]","[[670, 697]]","[""exact""]",True,False
+22,subjective,The patient's current medication includes Norvasc for hypertension.,0.0,"[""Norvasc (dosage not specified) for hypertension""]","[[712, 759]]","[""exact""]",True,False
+23,objective,The patient's blood pressure is 120/70.,0.5,"[""Blood pressure 120/70""]","[[13, 34]]","[""exact""]",True,False
+24,objective,The patient's pulse is normal.,0.75,"[""pulse""]","[[36, 41]]","[""exact""]",True,False
+25,objective,The patient's oxygen saturation is 94%.,0.0,"[""94% oxygen saturation""]","[[42, 63]]","[""exact""]",True,False
+26,objective,The patient has no jugular venous distension (JVD).,0.0,"[""No JVD""]","[[81, 87]]","[""exact""]",True,False
+27,objective,The patient has no carotid bruits.,0.0,"[""no carotid bruits""]","[[89, 106]]","[""exact""]",True,False
+28,objective,The patient has rails on the right lung.,0.25,"[""rails and rhonchi on the right lung""]","[[108, 143]]","[""exact""]",True,False
+29,objective,The patient has rhonchi on the right lung.,0.0,"[""rails and rhonchi on the right lung""]","[[108, 143]]","[""exact""]",True,False
+30,objective,The patient has diminished breath sounds on the right side.,0.0,"[""diminished breath sounds on the right side""]","[[145, 187]]","[""exact""]",True,False
+31,objective,The patient has a 2/6 systolic ejection murmur.,0.0,"[""2/6 systolic ejection murmur""]","[[189, 217]]","[""exact""]",True,False
+32,objective,The patient has 1+ nonpitting edema on both lower extremities.,0.0,"[""1+ nonpitting edema on both lower extremities""]","[[219, 264]]","[""exact""]",True,False
+33,assessment,The patient presents with acute shortness of breath.,0.75,"[""acute shortness of breath""]","[[38, 63]]","[""exact""]",True,False
+34,assessment,The patient is coughing up significant amounts of blood.,1.0,"[""coughing up significant amounts of blood""]","[[65, 105]]","[""exact""]",True,False
+35,assessment,Pneumonia is suspected in the patient.,0.5,"[""Pneumonia suspected""]","[[166, 185]]","[""exact""]",True,False
+36,assessment,The patient has uncontrolled diabetes.,0.75,"[""Uncontrolled diabetes""]","[[187, 208]]","[""exact""]",True,False
+37,assessment,The patient has hypertension.,0.0,"[""Hypertension""]","[[210, 222]]","[""exact""]",True,False
+38,plan,The patient has shortness of breath.,0.0,"[""shortness of breath""]","[[8, 27]]","[""exact""]",True,False
+39,plan,The patient is coughing up blood.,0.25,"[""coughing up blood""]","[[32, 49]]","[""exact""]",True,False
+40,plan,The patient will undergo a chest x-ray.,0.0,"[""chest x-ray""]","[[110, 121]]","[""exact""]",True,False
+41,plan,The patient will undergo a CT scan.,0.0,"[""CT scan""]","[[123, 130]]","[""exact""]",True,False
+42,plan,The patient will undergo blood work.,0.0,"[""blood work""]","[[136, 146]]","[""exact""]",True,False
+43,plan,The patient's blood work is to evaluate for a potential blood clot.,0.5,"[""to evaluate for a potential blood clot""]","[[147, 185]]","[""exact""]",True,False
+44,plan,The patient's blood work is to evaluate for other underlying causes.,0.25,"[""or other underlying cause""]","[[186, 211]]","[""exact""]",True,False
+45,plan,The patient will not be prescribed Norvasc until the acute episode is under control.,0.0,"[""I will hold off on prescribing Norvasc for the hypertension until the acute episode is under control""]","[[213, 313]]","[""exact""]",True,False
+46,plan,The patient will undergo a hemoglobin A1c test.,0.25,"[""I will also order a hemoglobin A1c""]","[[315, 349]]","[""exact""]",True,False
+47,plan,The hemoglobin A1c test is to assess the patient's diabetes control.,0.25,"[""to assess the patient's diabetes control""]","[[350, 390]]","[""exact""]",True,False
+48,plan,The patient has diabetes.,0.0,"[""For the diabetes""]","[[393, 409]]","[""exact""]",True,False
+49,plan,The patient's metformin dose will be increased to 750mg twice a day.,0.0,"[""I will increase the patient's metformin dose to 750mg twice a day""]","[[411, 476]]","[""exact""]",True,False
+50,plan,The patient's metformin dose increase is to improve glycemic control.,0.0,"[""to improve glycemic control""]","[[477, 504]]","[""exact""]",True,False
+51,plan,The patient will follow up in three weeks.,0.0,"[""I will schedule a follow-up appointment in three weeks"", ""The patient will follow up in three weeks""]","[[506, 560], [623, 664]]","[""exact"", ""exact""]",True,True
+52,plan,The follow-up appointment is to discuss the patient's diabetes treatment plan.,0.0,"[""to discuss the patient's diabetes treatment plan"", ""to discuss diabetes treatment plan""]","[[561, 609], [665, 699]]","[""exact"", ""exact""]",True,True

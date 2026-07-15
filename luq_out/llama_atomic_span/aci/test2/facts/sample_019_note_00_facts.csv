@@ -1,0 +1,46 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 6th grader.,0.75,"[""a 6th grader at one point""]","[[18, 43]]","[""exact""]",True,False
+1,subjective,The patient presents with a 6-month history of knee pain.,0.0,"[""a 6-month history of knee pain""]","[[59, 89]]","[""exact""]",True,False
+2,subjective,"The patient's knee pain is described as a deep, achy pain behind her kneecaps.",0.25,"[""a deep, achy pain behind her kneecaps""]","[[114, 151]]","[""exact""]",True,False
+3,subjective,The patient experiences occasional creaking sounds in her knees.,0.25,"[""with occasional creaking sounds""]","[[153, 184]]","[""exact""]",True,False
+4,subjective,The patient's knee pain worsens with getting up from a seated position.,0.0,"[""getting up from a seated position""]","[[244, 277]]","[""exact""]",True,False
+5,subjective,The patient's knee pain worsens with walking up and down stairs.,0.0,"[""walking up and down stairs""]","[[279, 305]]","[""exact""]",True,False
+6,subjective,The patient's knee pain worsens with running.,0.0,"[""running""]","[[311, 318]]","[""exact""]",True,False
+7,subjective,The patient's knee pain is alleviated by rest.,0.0,"[""rest typically alleviates the pain""]","[[336, 370]]","[""exact""]",True,False
+8,subjective,The patient has tried ice for her knee pain.,0.0,"[""ice""]","[[386, 389]]","[""exact""]",True,False
+9,subjective,The patient has tried Ace bandages for her knee pain.,0.0,"[""Ace bandages""]","[[391, 403]]","[""exact""]",True,False
+10,subjective,The patient takes ibuprofen for her knee pain.,0.0,"[""ibuprofen or Aleve in the past"", ""ibuprofen or Aleve as needed for pain""]","[[409, 439], [960, 997]]","[""exact"", ""exact""]",True,True
+11,subjective,The patient takes Aleve for her knee pain.,0.25,"[""ibuprofen or Aleve in the past"", ""ibuprofen or Aleve as needed for pain""]","[[409, 439], [960, 997]]","[""exact"", ""exact""]",True,True
+12,subjective,The patient tries to avoid medication.,0.25,"[""tries to avoid medication""]","[[444, 469]]","[""exact""]",True,False
+13,subjective,The patient has decreased her running mileage due to knee pain.,0.25,"[""a significant decrease in her running mileage, from 5-6 miles to less than half a mile, due to knee pain""]","[[483, 587]]","[""exact""]",True,False
+14,subjective,The patient's running mileage has decreased from 5-6 miles to less than half a mile.,0.75,"[""from 5-6 miles to less than half a mile""]","[[530, 569]]","[""exact""]",True,False
+15,subjective,The patient denies swelling in her knees.,0.5,"[""denies swelling or redness in her knees""]","[[593, 632]]","[""exact""]",True,False
+16,subjective,The patient denies redness in her knees.,0.5,"[""denies swelling or redness in her knees""]","[[593, 632]]","[""exact""]",True,False
+17,subjective,The patient has no history of knee injuries.,0.0,"[""no history of knee injuries""]","[[641, 668]]","[""exact""]",True,False
+18,subjective,The patient has a history of breaking her arm in sixth grade.,0.25,"[""a history of breaking her arm in sixth grade""]","[[709, 753]]","[""exact""]",True,False
+19,subjective,The patient denies any other injuries or conditions.,0.0,"[""denies any other injuries or conditions""]","[[758, 797]]","[""exact""]",True,False
+20,subjective,The patient reports no other symptoms in other organs relevant to her initial presentation.,0.25,"[""no other symptoms in other organs that are relevant to her initial presentation""]","[[839, 918]]","[""exact""]",True,False
+21,objective,The patient has a normal gait.,0.0,"[""The patient has a normal gait""]","[[15, 44]]","[""exact""]",True,False
+22,objective,The patient has normal strength in the lower extremities except for abduction.,0.0,"[""with normal strength in the lower extremities except for abduction""]","[[46, 112]]","[""exact""]",True,False
+23,objective,The patient's abduction strength is 3/5 bilaterally.,0.0,"[""which is 3/5 bilaterally""]","[[114, 138]]","[""exact""]",True,False
+24,objective,The patient has tenderness to palpation of the bilateral retinacular retinaculum.,0.0,"[""tenderness to palpation of the bilateral retinacular retinaculum""]","[[162, 226]]","[""exact""]",True,False
+25,objective,The patient has a positive patellar grind test.,0.0,"[""positive patellar grind test""]","[[228, 256]]","[""exact""]",True,False
+26,objective,The patient has pain with squatting.,0.0,"[""pain with squatting""]","[[262, 281]]","[""exact""]",True,False
+27,objective,The patient's Lachman test is negative.,0.0,"[""The Lachman, anterior and posterior drawer, and McMurray tests are all negative""]","[[283, 362]]","[""exact""]",True,False
+28,objective,The patient's anterior drawer test is negative.,0.0,"[""The Lachman, anterior and posterior drawer, and McMurray tests are all negative""]","[[283, 362]]","[""exact""]",True,False
+29,objective,The patient's posterior drawer test is negative.,0.25,"[""The Lachman, anterior and posterior drawer, and McMurray tests are all negative""]","[[283, 362]]","[""exact""]",True,False
+30,objective,The patient's McMurray test is negative.,0.0,"[""The Lachman, anterior and posterior drawer, and McMurray tests are all negative""]","[[283, 362]]","[""exact""]",True,False
+31,objective,The patient's neuro exam is normal.,0.25,"[""The neuro exam is normal""]","[[364, 388]]","[""exact""]",True,False
+32,objective,The patient's X-rays of both knees show no fractures.,0.25,"[""The patient's X-rays of both knees show no fractures or osteoarthritis""]","[[405, 475]]","[""exact""]",True,False
+33,objective,The patient's X-rays of both knees show no osteoarthritis.,0.25,"[""The patient's X-rays of both knees show no fractures or osteoarthritis""]","[[405, 475]]","[""exact""]",True,False
+34,assessment,The patient has patellofemoral pain syndrome.,0.0,"[""The patient's symptoms are consistent with patellofemoral pain syndrome""]","[[12, 83]]","[""exact""]",True,False
+35,assessment,Patellofemoral pain syndrome is a common condition causing knee pain in active young people.,0.5,"[""a common condition causing knee pain in active young people""]","[[85, 144]]","[""exact""]",True,False
+36,assessment,The patient is active.,0.0,"[""active""]","[[125, 131]]","[""exact""]",True,False
+37,plan,The patient was recommended physical therapy to increase lower extremity strength.,0.0,"[""physical therapy to increase lower extremity strength, mobility, and correct any incorrect running mechanics""]","[[14, 122]]","[""exact""]",True,False
+38,plan,The patient was recommended physical therapy to increase lower extremity mobility.,0.0,"[""physical therapy to increase lower extremity strength, mobility, and correct any incorrect running mechanics""]","[[14, 122]]","[""exact""]",True,False
+39,plan,The patient was recommended physical therapy to correct any incorrect running mechanics.,0.0,"[""physical therapy to increase lower extremity strength, mobility, and correct any incorrect running mechanics""]","[[14, 122]]","[""exact""]",True,False
+40,plan,The patient was advised to continue taking ibuprofen for pain.,0.0,"[""ibuprofen or anti-inflammatory medication as needed for pain""]","[[165, 225]]","[""exact""]",True,False
+41,plan,The patient was advised to continue taking anti-inflammatory medication for pain.,0.25,"[""ibuprofen or anti-inflammatory medication as needed for pain""]","[[165, 225]]","[""exact""]",True,False
+42,plan,The patient was instructed to take it easy from running for now.,0.25,"[""take it easy from running for now""]","[[255, 288]]","[""exact""]",True,False
+43,plan,The patient will be followed up with soon to assess her progress.,0.0,"[""I will follow up with the patient soon to assess her progress""]","[[359, 420]]","[""exact""]",True,False
+44,plan,The treatment plan will be adjusted as needed.,0.0,"[""adjust the treatment plan as needed""]","[[425, 460]]","[""exact""]",True,False

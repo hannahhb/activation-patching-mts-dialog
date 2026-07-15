@@ -1,0 +1,658 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient has a 1-week history of low back pain.",
+        "spans": [
+          "1-week history of low back pain"
+        ],
+        "span_offsets": [
+          [
+            33,
+            64
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's low back pain began after twisting and possibly lifting something on the left side.",
+        "spans": [
+          "twisting and possibly lifting something on the left side"
+        ],
+        "span_offsets": [
+          [
+            82,
+            138
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's low back pain initially resolved but returned after a few hours.",
+        "spans": [
+          "which initially resolved but returned after a few hours"
+        ],
+        "span_offsets": [
+          [
+            140,
+            195
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is located in the middle to lower back.",
+        "spans": [
+          "The pain is located in the middle to lower back"
+        ],
+        "span_offsets": [
+          [
+            197,
+            244
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is exacerbated when twisting suddenly to the left.",
+        "spans": [
+          "with exacerbation when twisting suddenly to the left"
+        ],
+        "span_offsets": [
+          [
+            246,
+            298
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is worse when pressing down on the low back.",
+        "spans": [
+          "The pain is worse when pressing down on the low back"
+        ],
+        "span_offsets": [
+          [
+            325,
+            377
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is particularly worse in the center of the low back when pressing down.",
+        "spans": [
+          "particularly in the center"
+        ],
+        "span_offsets": [
+          [
+            379,
+            405
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of diabetes.",
+        "spans": [
+          "The patient has a history of diabetes"
+        ],
+        "span_offsets": [
+          [
+            430,
+            467
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is on metformin.",
+        "spans": [
+          "is on metformin"
+        ],
+        "span_offsets": [
+          [
+            472,
+            487
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes metformin twice a day.",
+        "spans": [
+          "twice a day"
+        ],
+        "span_offsets": [
+          [
+            488,
+            499
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a family history of owning a bakery.",
+        "spans": [
+          "The patient has a family history of owning a bakery"
+        ],
+        "span_offsets": [
+          [
+            501,
+            552
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient occasionally visits the bakery.",
+        "spans": [
+          "occasionally visits the bakery"
+        ],
+        "span_offsets": [
+          [
+            558,
+            588
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient tries to control their intake of sweets.",
+        "spans": [
+          "tries to control their intake of sweets"
+        ],
+        "span_offsets": [
+          [
+            593,
+            632
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports occasional trouble with the left eye.",
+        "spans": [
+          "The patient reports occasional trouble with the left eye"
+        ],
+        "span_offsets": [
+          [
+            654,
+            710
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left eye trouble is not related to the low back pain.",
+        "spans": [
+          "but this is not related to the low back pain"
+        ],
+        "span_offsets": [
+          [
+            712,
+            756
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's lungs are clear.",
+        "spans": [
+          "The patient's lungs are clear"
+        ],
+        "span_offsets": [
+          [
+            15,
+            44
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heart rate is regular.",
+        "spans": [
+          "heart rate and rhythm are regular"
+        ],
+        "span_offsets": [
+          [
+            46,
+            79
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heart rhythm is regular.",
+        "spans": [
+          "heart rate and rhythm are regular"
+        ],
+        "span_offsets": [
+          [
+            46,
+            79
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "There is no pain when pressing down on the upper back.",
+        "spans": [
+          "there is no pain when pressing down on the upper back"
+        ],
+        "span_offsets": [
+          [
+            85,
+            138
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences pain when pressing down on the low back.",
+        "spans": [
+          "The patient experiences pain when pressing down on the low back"
+        ],
+        "span_offsets": [
+          [
+            140,
+            203
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences pain in the center of the low back.",
+        "spans": [
+          "particularly in the center"
+        ],
+        "span_offsets": [
+          [
+            205,
+            231
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports pain when lifting the right leg.",
+        "spans": [
+          "pain when lifting the right and left legs"
+        ],
+        "span_offsets": [
+          [
+            253,
+            294
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports pain when lifting the left leg.",
+        "spans": [
+          "pain when lifting the right and left legs"
+        ],
+        "span_offsets": [
+          [
+            253,
+            294
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has a musculoskeletal low back strain.",
+        "spans": [
+          "I believe the patient has a musculoskeletal low back strain"
+        ],
+        "span_offsets": [
+          [
+            12,
+            71
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has musculoskeletal low back strain as a problem.",
+        "spans": [
+          "Musculoskeletal low back strain; Diabetes; [Unknown]"
+        ],
+        "span_offsets": [
+          [
+            88,
+            140
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has diabetes as a problem.",
+        "spans": [
+          "Musculoskeletal low back strain; Diabetes; [Unknown]"
+        ],
+        "span_offsets": [
+          [
+            88,
+            140
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has an unknown problem.",
+        "spans": [
+          "Musculoskeletal low back strain; Diabetes; [Unknown]"
+        ],
+        "span_offsets": [
+          [
+            88,
+            140
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was ordered a low back x-ray to evaluate the joint spaces and possible disk issues.",
+        "spans": [
+          "I ordered a low back x-ray to evaluate the joint spaces and possible disk issues"
+        ],
+        "span_offsets": [
+          [
+            0,
+            80
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was ordered physical therapy to help with pain and strengthen the muscles in the back.",
+        "spans": [
+          "I also ordered physical therapy to help with pain and strengthen the muscles in the back"
+        ],
+        "span_offsets": [
+          [
+            82,
+            170
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed 400mg of ibuprofen.",
+        "spans": [
+          "400mg of ibuprofen"
+        ],
+        "span_offsets": [
+          [
+            185,
+            203
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed ibuprofen to be taken occasionally with Tylenol for severe pain.",
+        "spans": [
+          "to be taken occasionally with Tylenol for severe pain"
+        ],
+        "span_offsets": [
+          [
+            204,
+            257
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed ibuprofen up to 3 times a day.",
+        "spans": [
+          "up to 3 times a day"
+        ],
+        "span_offsets": [
+          [
+            259,
+            278
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed one Flexeril per day in the evening.",
+        "spans": [
+          "one Flexeril per day in the evening"
+        ],
+        "span_offsets": [
+          [
+            284,
+            319
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to continue with their current diet.",
+        "spans": [
+          "to continue with their current diet and exercise routine"
+        ],
+        "span_offsets": [
+          [
+            346,
+            402
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to continue with their current exercise routine.",
+        "spans": [
+          "to continue with their current diet and exercise routine"
+        ],
+        "span_offsets": [
+          [
+            346,
+            402
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to continue taking metformin.",
+        "spans": [
+          "to continue taking metformin"
+        ],
+        "span_offsets": [
+          [
+            407,
+            435
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will return for a follow-up appointment to discuss the results of the x-ray and A1c test.",
+        "spans": [
+          "The patient will return for a follow-up appointment to discuss the results of the x-ray and A1c test"
+        ],
+        "span_offsets": [
+          [
+            449,
+            549
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be referred to a pain doctor if the pain persists after the x-ray and physical therapy.",
+        "spans": [
+          "The patient will also be referred to a pain doctor if the pain persists after the x-ray and physical therapy"
+        ],
+        "span_offsets": [
+          [
+            551,
+            659
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

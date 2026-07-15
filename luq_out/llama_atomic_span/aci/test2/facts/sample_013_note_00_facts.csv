@@ -1,0 +1,38 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,"The patient, Alexis, has a 6-month history of intermittent numbness and tingling in her right hand.",0.5,"[""a 6-month history of intermittent numbness and tingling in her right hand""]","[[35, 108]]","[""exact""]",True,False
+1,subjective,The patient's numbness and tingling in her right hand have become more persistent over the last month.,0.0,"[""which has become more persistent over the last month""]","[[110, 162]]","[""exact""]",True,False
+2,subjective,"The patient experiences pain in her right hand, primarily when typing on the keyboard.",0.0,"[""some pain, primarily when typing on the keyboard""]","[[176, 224]]","[""exact""]",True,False
+3,subjective,The patient's pain in her right hand is alleviated by ibuprofen and rest.,0.0,"[""ibuprofen and rest help alleviate the symptoms""]","[[244, 290]]","[""exact""]",True,False
+4,subjective,The patient experiences numbness and tingling in her right hand all the time.,0.5,"[""The numbness and tingling are present all the time""]","[[292, 342]]","[""exact""]",True,False
+5,subjective,The patient experiences pain in her right hand when moving her mouse.,0.0,"[""she experiences pain when moving her mouse""]","[[348, 390]]","[""exact""]",True,False
+6,subjective,The patient denies any pain in her right hand at night.,0.25,"[""she denies any pain or numbness at night""]","[[392, 432]]","[""exact""]",True,False
+7,subjective,The patient denies any numbness in her right hand at night.,0.75,"[""she denies any pain or numbness at night""]","[[392, 432]]","[""exact""]",True,False
+8,subjective,The patient's symptoms are not affecting her sleep.,0.25,"[""her symptoms are not affecting her sleep""]","[[438, 478]]","[""exact""]",True,False
+9,subjective,The patient uses ibuprofen for pain management.,0.0,"[""She uses ibuprofen for pain management""]","[[480, 518]]","[""exact""]",True,False
+10,subjective,The patient experiences numbness in her thumb.,0.5,"[""numbness in her thumb, index finger, and middle finger""]","[[532, 586]]","[""exact""]",True,False
+11,subjective,The patient experiences numbness in her index finger.,0.5,"[""numbness in her thumb, index finger, and middle finger""]","[[532, 586]]","[""exact""]",True,False
+12,subjective,The patient experiences numbness in her middle finger.,0.5,"[""numbness in her thumb, index finger, and middle finger""]","[[532, 586]]","[""exact""]",True,False
+13,subjective,The patient's ring finger feels normal.,1.0,"[""with the other two fingers feeling normal""]","[[588, 629]]","[""exact""]",True,False
+14,subjective,The patient's little finger feels normal.,1.0,"[""with the other two fingers feeling normal""]","[[588, 629]]","[""exact""]",True,False
+15,subjective,The patient has less grip strength in her right hand.,0.75,"[""She has less grip strength on the right hand""]","[[631, 675]]","[""exact""]",True,False
+16,subjective,The patient has a positive Tinel's sign.,1.0,"[""a positive Tinel's sign is present""]","[[681, 715]]","[""exact""]",True,False
+17,objective,The patient has pain on extension of the wrist.,0.0,"[""pain on extension and flexion of the wrist""]","[[16, 58]]","[""exact""]",True,False
+18,objective,The patient has pain on flexion of the wrist.,0.0,"[""pain on extension and flexion of the wrist""]","[[16, 58]]","[""exact""]",True,False
+19,objective,The patient has numbness in the thumb.,0.5,"[""numbness in the thumb, index finger, and middle finger""]","[[68, 122]]","[""exact""]",True,False
+20,objective,The patient has numbness in the index finger.,0.5,"[""numbness in the thumb, index finger, and middle finger""]","[[68, 122]]","[""exact""]",True,False
+21,objective,The patient has numbness in the middle finger.,0.5,"[""numbness in the thumb, index finger, and middle finger""]","[[68, 122]]","[""exact""]",True,False
+22,objective,The patient's grip strength is less on the right hand.,0.0,"[""Grip strength is less on the right hand""]","[[200, 239]]","[""exact""]",True,False
+23,assessment,The patient has carpal tunnel syndrome.,0.3333,"[""The patient has carpal tunnel syndrome, likely due to repetitive strain from data entry""]","[[12, 99]]","[""exact""]",True,False
+24,assessment,The patient's carpal tunnel syndrome is likely due to repetitive strain from data entry.,0.6667,"[""likely due to repetitive strain from data entry""]","[[52, 99]]","[""exact""]",True,False
+25,assessment,Carpal tunnel syndrome is active.,0.3333,"[""Carpal tunnel syndrome; active""]","[[115, 145]]","[""exact""]",True,False
+26,assessment,There is suspected nerve compression in the wrist.,0.0,"[""suspected nerve compression in the wrist""]","[[147, 187]]","[""exact""]",True,False
+27,plan,The patient was prescribed ibuprofen for pain management.,0.25,"[""ibuprofen 600 mg four times a day for pain management""]","[[13, 66]]","[""exact""]",True,False
+28,plan,The patient's ibuprofen dose is 600 mg.,0.25,"[""600 mg""]","[[23, 29]]","[""exact""]",True,False
+29,plan,The patient's ibuprofen frequency is four times a day.,0.25,"[""four times a day""]","[[30, 46]]","[""exact""]",True,False
+30,plan,An EMG was ordered for the patient.,0.25,"[""I ordered an EMG and nerve conduction study to confirm the diagnosis""]","[[68, 136]]","[""exact""]",True,False
+31,plan,A nerve conduction study was ordered for the patient.,0.0,"[""I ordered an EMG and nerve conduction study to confirm the diagnosis""]","[[68, 136]]","[""exact""]",True,False
+32,plan,The patient will wear a wrist splint at night.,0.25,"[""I will have the patient wear a wrist splint at night to help alleviate symptoms""]","[[138, 217]]","[""exact""]",True,False
+33,plan,The purpose of the wrist splint is to help alleviate symptoms.,0.75,"[""to help alleviate symptoms""]","[[191, 217]]","[""exact""]",True,False
+34,plan,A follow-up appointment will be scheduled to review the EMG and nerve conduction study results.,0.0,"[""I will schedule a follow-up appointment to review the EMG and nerve conduction study results""]","[[336, 428]]","[""exact""]",True,False
+35,plan,Physical therapy is a potential further treatment option for the patient.,0.25,"[""including physical therapy or surgery""]","[[296, 333]]","[""exact""]",True,False
+36,plan,Surgery is a potential further treatment option for the patient.,0.0,"[""including physical therapy or surgery""]","[[296, 333]]","[""exact""]",True,False

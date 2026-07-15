@@ -1,0 +1,845 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a young adult.",
+        "spans": [
+          "The patient is a young adult"
+        ],
+        "span_offsets": [
+          [
+            5,
+            33
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of recurrent strep throat episodes.",
+        "spans": [
+          "a history of recurrent strep throat episodes"
+        ],
+        "span_offsets": [
+          [
+            50,
+            94
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has had 4 occurrences of strep throat in the last 5 months.",
+        "spans": [
+          "with 4 occurrences in the last 5 months"
+        ],
+        "span_offsets": [
+          [
+            96,
+            135
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with left-sided back pain.",
+        "spans": [
+          "current complaints of left-sided back pain"
+        ],
+        "span_offsets": [
+          [
+            141,
+            183
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left-sided back pain varies in intensity.",
+        "spans": [
+          "which varies in intensity"
+        ],
+        "span_offsets": [
+          [
+            185,
+            210
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was referred by their primary care physician for further evaluation.",
+        "spans": [
+          "The patient's primary care physician referred them to me for further evaluation"
+        ],
+        "span_offsets": [
+          [
+            212,
+            291
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports increased urine output.",
+        "spans": [
+          "The patient reports increased urine output"
+        ],
+        "span_offsets": [
+          [
+            293,
+            335
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's increased urine output is especially noticeable at night.",
+        "spans": [
+          "especially at night"
+        ],
+        "span_offsets": [
+          [
+            337,
+            356
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been drinking more water.",
+        "spans": [
+          "and has been drinking more water"
+        ],
+        "span_offsets": [
+          [
+            358,
+            390
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a brother who smokes at home.",
+        "spans": [
+          "They have a brother who smokes at home"
+        ],
+        "span_offsets": [
+          [
+            392,
+            430
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has tried to discourage their brother from smoking.",
+        "spans": [
+          "and the patient has tried to discourage him from smoking"
+        ],
+        "span_offsets": [
+          [
+            432,
+            488
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's appetite is unchanged.",
+        "spans": [
+          "their appetite is unchanged"
+        ],
+        "span_offsets": [
+          [
+            741,
+            768
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's physical exam does not show erythema in the throat, neck, or abdomen.",
+        "spans": [
+          "absence of erythema, swelling, or tenderness in the throat, neck, or abdomen"
+        ],
+        "span_offsets": [
+          [
+            52,
+            128
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's physical exam does not show swelling in the throat, neck, or abdomen.",
+        "spans": [
+          "absence of erythema, swelling, or tenderness in the throat, neck, or abdomen"
+        ],
+        "span_offsets": [
+          [
+            52,
+            128
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's physical exam does not show tenderness in the throat, neck, or abdomen.",
+        "spans": [
+          "absence of erythema, swelling, or tenderness in the throat, neck, or abdomen"
+        ],
+        "span_offsets": [
+          [
+            52,
+            128
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's tonsils are midline.",
+        "spans": [
+          "The patient's tonsils are midline"
+        ],
+        "span_offsets": [
+          [
+            130,
+            163
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have cervical adenopathy.",
+        "spans": [
+          "no cervical adenopathy or lymphadenopathy"
+        ],
+        "span_offsets": [
+          [
+            178,
+            219
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have lymphadenopathy.",
+        "spans": [
+          "no cervical adenopathy or lymphadenopathy"
+        ],
+        "span_offsets": [
+          [
+            178,
+            219
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lungs are clear.",
+        "spans": [
+          "The lungs are clear"
+        ],
+        "span_offsets": [
+          [
+            221,
+            240
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have wheezes.",
+        "spans": [
+          "no wheezes, rales, or rhonchi"
+        ],
+        "span_offsets": [
+          [
+            247,
+            276
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have rales.",
+        "spans": [
+          "no wheezes, rales, or rhonchi"
+        ],
+        "span_offsets": [
+          [
+            247,
+            276
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have rhonchi.",
+        "spans": [
+          "no wheezes, rales, or rhonchi"
+        ],
+        "span_offsets": [
+          [
+            247,
+            276
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heart sounds are normal.",
+        "spans": [
+          "The heart sounds are normal"
+        ],
+        "span_offsets": [
+          [
+            278,
+            305
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have a heart murmur.",
+        "spans": [
+          "no murmur, rub, or gallop"
+        ],
+        "span_offsets": [
+          [
+            312,
+            337
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have a heart rub.",
+        "spans": [
+          "no murmur, rub, or gallop"
+        ],
+        "span_offsets": [
+          [
+            312,
+            337
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have a heart gallop.",
+        "spans": [
+          "no murmur, rub, or gallop"
+        ],
+        "span_offsets": [
+          [
+            312,
+            337
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's back pain is not reproduced with palpation.",
+        "spans": [
+          "The back pain is not reproduced with palpation"
+        ],
+        "span_offsets": [
+          [
+            339,
+            385
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient is at risk for developing glomerulonephritis.",
+        "spans": [
+          "The patient is at risk for developing glomerulonephritis due to recurrent strep throat episodes, which may lead to chronic kidney disease"
+        ],
+        "span_offsets": [
+          [
+            12,
+            149
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is at risk for developing chronic kidney disease.",
+        "spans": [
+          "The patient is at risk for developing glomerulonephritis due to recurrent strep throat episodes, which may lead to chronic kidney disease"
+        ],
+        "span_offsets": [
+          [
+            12,
+            149
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Glomerulonephritis is suspected in the patient.",
+        "spans": [
+          "Glomerulonephritis; Suspected [Status: suspected]"
+        ],
+        "span_offsets": [
+          [
+            166,
+            215
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's status for glomerulonephritis is suspected.",
+        "spans": [
+          "Glomerulonephritis; Suspected [Status: suspected]"
+        ],
+        "span_offsets": [
+          [
+            166,
+            215
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed a lipid panel.",
+        "spans": [
+          "a lipid panel"
+        ],
+        "span_offsets": [
+          [
+            13,
+            26
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed a urinalysis.",
+        "spans": [
+          "a urinalysis"
+        ],
+        "span_offsets": [
+          [
+            28,
+            40
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed a comprehensive metabolic panel.",
+        "spans": [
+          "a comprehensive metabolic panel"
+        ],
+        "span_offsets": [
+          [
+            42,
+            73
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed a complete blood count.",
+        "spans": [
+          "a complete blood count"
+        ],
+        "span_offsets": [
+          [
+            75,
+            97
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed a vitamin D test.",
+        "spans": [
+          "a vitamin D test"
+        ],
+        "span_offsets": [
+          [
+            99,
+            115
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed a thyroid-stimulating hormone test.",
+        "spans": [
+          "a thyroid-stimulating hormone test"
+        ],
+        "span_offsets": [
+          [
+            121,
+            155
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the prescribed tests is to evaluate the patient's kidney function.",
+        "spans": [
+          "to evaluate the patient's kidney function"
+        ],
+        "span_offsets": [
+          [
+            156,
+            197
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the prescribed tests is to evaluate the patient's hormone levels.",
+        "spans": [
+          "to evaluate the patient's kidney function, hormone levels, and nutritional status"
+        ],
+        "span_offsets": [
+          [
+            156,
+            237
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the prescribed tests is to evaluate the patient's nutritional status.",
+        "spans": [
+          "to evaluate the patient's kidney function, hormone levels, and nutritional status"
+        ],
+        "span_offsets": [
+          [
+            156,
+            237
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was referred to an ear, nose, and throat specialist.",
+        "spans": [
+          "I referred the patient to an ear, nose, and throat specialist"
+        ],
+        "span_offsets": [
+          [
+            239,
+            300
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the referral to the ear, nose, and throat specialist is to consider tonsillectomy.",
+        "spans": [
+          "to consider tonsillectomy"
+        ],
+        "span_offsets": [
+          [
+            301,
+            326
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the tonsillectomy is to alleviate recurrent strep throat episodes.",
+        "spans": [
+          "to alleviate recurrent strep throat episodes"
+        ],
+        "span_offsets": [
+          [
+            327,
+            371
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has recurrent strep throat episodes.",
+        "spans": [
+          "recurrent strep throat episodes"
+        ],
+        "span_offsets": [
+          [
+            340,
+            371
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was referred to a nephrologist.",
+        "spans": [
+          "I also referred the patient to a nephrologist"
+        ],
+        "span_offsets": [
+          [
+            373,
+            418
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the referral to the nephrologist is for further evaluation of glomerulonephritis.",
+        "spans": [
+          "for further evaluation of glomerulonephritis"
+        ],
+        "span_offsets": [
+          [
+            419,
+            463
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has glomerulonephritis.",
+        "spans": [
+          "glomerulonephritis"
+        ],
+        "span_offsets": [
+          [
+            445,
+            463
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is to return in a week.",
+        "spans": [
+          "The patient is to return in a week"
+        ],
+        "span_offsets": [
+          [
+            466,
+            500
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the patient's return in a week is for the results of the tests.",
+        "spans": [
+          "for the results of the tests"
+        ],
+        "span_offsets": [
+          [
+            501,
+            529
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

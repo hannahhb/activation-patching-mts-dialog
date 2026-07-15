@@ -1,0 +1,50 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a young adult.,1.0,"[""The patient is a young adult""]","[[5, 33]]","[""exact""]",True,False
+1,subjective,The patient has a history of recurrent strep throat episodes.,0.0,"[""a history of recurrent strep throat episodes""]","[[50, 94]]","[""exact""]",True,False
+2,subjective,The patient has had 4 occurrences of strep throat in the last 5 months.,0.0,"[""with 4 occurrences in the last 5 months""]","[[96, 135]]","[""exact""]",True,False
+3,subjective,The patient presents with left-sided back pain.,0.0,"[""current complaints of left-sided back pain""]","[[141, 183]]","[""exact""]",True,False
+4,subjective,The patient's left-sided back pain varies in intensity.,0.0,"[""which varies in intensity""]","[[185, 210]]","[""exact""]",True,False
+5,subjective,The patient was referred by their primary care physician for further evaluation.,1.0,"[""The patient's primary care physician referred them to me for further evaluation""]","[[212, 291]]","[""exact""]",True,False
+6,subjective,The patient reports increased urine output.,0.25,"[""The patient reports increased urine output""]","[[293, 335]]","[""exact""]",True,False
+7,subjective,The patient's increased urine output is especially noticeable at night.,0.5,"[""especially at night""]","[[337, 356]]","[""exact""]",True,False
+8,subjective,The patient has been drinking more water.,0.75,"[""and has been drinking more water""]","[[358, 390]]","[""exact""]",True,False
+9,subjective,The patient has a brother who smokes at home.,0.75,"[""They have a brother who smokes at home""]","[[392, 430]]","[""exact""]",True,False
+10,subjective,The patient has tried to discourage their brother from smoking.,1.0,"[""and the patient has tried to discourage him from smoking""]","[[432, 488]]","[""exact""]",True,False
+11,subjective,The patient's appetite is unchanged.,0.0,"[""their appetite is unchanged""]","[[741, 768]]","[""exact""]",True,False
+12,objective,"The patient's physical exam does not show erythema in the throat, neck, or abdomen.",0.75,"[""absence of erythema, swelling, or tenderness in the throat, neck, or abdomen""]","[[52, 128]]","[""exact""]",True,False
+13,objective,"The patient's physical exam does not show swelling in the throat, neck, or abdomen.",0.25,"[""absence of erythema, swelling, or tenderness in the throat, neck, or abdomen""]","[[52, 128]]","[""exact""]",True,False
+14,objective,"The patient's physical exam does not show tenderness in the throat, neck, or abdomen.",0.75,"[""absence of erythema, swelling, or tenderness in the throat, neck, or abdomen""]","[[52, 128]]","[""exact""]",True,False
+15,objective,The patient's tonsils are midline.,0.0,"[""The patient's tonsils are midline""]","[[130, 163]]","[""exact""]",True,False
+16,objective,The patient does not have cervical adenopathy.,0.0,"[""no cervical adenopathy or lymphadenopathy""]","[[178, 219]]","[""exact""]",True,False
+17,objective,The patient does not have lymphadenopathy.,0.0,"[""no cervical adenopathy or lymphadenopathy""]","[[178, 219]]","[""exact""]",True,False
+18,objective,The patient's lungs are clear.,0.0,"[""The lungs are clear""]","[[221, 240]]","[""exact""]",True,False
+19,objective,The patient does not have wheezes.,0.0,"[""no wheezes, rales, or rhonchi""]","[[247, 276]]","[""exact""]",True,False
+20,objective,The patient does not have rales.,0.0,"[""no wheezes, rales, or rhonchi""]","[[247, 276]]","[""exact""]",True,False
+21,objective,The patient does not have rhonchi.,0.0,"[""no wheezes, rales, or rhonchi""]","[[247, 276]]","[""exact""]",True,False
+22,objective,The patient's heart sounds are normal.,0.0,"[""The heart sounds are normal""]","[[278, 305]]","[""exact""]",True,False
+23,objective,The patient does not have a heart murmur.,0.0,"[""no murmur, rub, or gallop""]","[[312, 337]]","[""exact""]",True,False
+24,objective,The patient does not have a heart rub.,0.0,"[""no murmur, rub, or gallop""]","[[312, 337]]","[""exact""]",True,False
+25,objective,The patient does not have a heart gallop.,0.0,"[""no murmur, rub, or gallop""]","[[312, 337]]","[""exact""]",True,False
+26,objective,The patient's back pain is not reproduced with palpation.,0.0,"[""The back pain is not reproduced with palpation""]","[[339, 385]]","[""exact""]",True,False
+27,assessment,The patient is at risk for developing glomerulonephritis.,0.0,"[""The patient is at risk for developing glomerulonephritis due to recurrent strep throat episodes, which may lead to chronic kidney disease""]","[[12, 149]]","[""exact""]",True,False
+28,assessment,The patient is at risk for developing chronic kidney disease.,0.0,"[""The patient is at risk for developing glomerulonephritis due to recurrent strep throat episodes, which may lead to chronic kidney disease""]","[[12, 149]]","[""exact""]",True,False
+29,assessment,Glomerulonephritis is suspected in the patient.,0.0,"[""Glomerulonephritis; Suspected [Status: suspected]""]","[[166, 215]]","[""exact""]",True,False
+30,assessment,The patient's status for glomerulonephritis is suspected.,0.25,"[""Glomerulonephritis; Suspected [Status: suspected]""]","[[166, 215]]","[""exact""]",True,False
+31,plan,The patient was prescribed a lipid panel.,0.0,"[""a lipid panel""]","[[13, 26]]","[""exact""]",True,False
+32,plan,The patient was prescribed a urinalysis.,0.0,"[""a urinalysis""]","[[28, 40]]","[""exact""]",True,False
+33,plan,The patient was prescribed a comprehensive metabolic panel.,0.0,"[""a comprehensive metabolic panel""]","[[42, 73]]","[""exact""]",True,False
+34,plan,The patient was prescribed a complete blood count.,0.0,"[""a complete blood count""]","[[75, 97]]","[""exact""]",True,False
+35,plan,The patient was prescribed a vitamin D test.,0.0,"[""a vitamin D test""]","[[99, 115]]","[""exact""]",True,False
+36,plan,The patient was prescribed a thyroid-stimulating hormone test.,0.0,"[""a thyroid-stimulating hormone test""]","[[121, 155]]","[""exact""]",True,False
+37,plan,The purpose of the prescribed tests is to evaluate the patient's kidney function.,1.0,"[""to evaluate the patient's kidney function""]","[[156, 197]]","[""exact""]",True,False
+38,plan,The purpose of the prescribed tests is to evaluate the patient's hormone levels.,0.75,"[""to evaluate the patient's kidney function, hormone levels, and nutritional status""]","[[156, 237]]","[""exact""]",True,False
+39,plan,The purpose of the prescribed tests is to evaluate the patient's nutritional status.,0.75,"[""to evaluate the patient's kidney function, hormone levels, and nutritional status""]","[[156, 237]]","[""exact""]",True,False
+40,plan,"The patient was referred to an ear, nose, and throat specialist.",0.0,"[""I referred the patient to an ear, nose, and throat specialist""]","[[239, 300]]","[""exact""]",True,False
+41,plan,"The purpose of the referral to the ear, nose, and throat specialist is to consider tonsillectomy.",0.0,"[""to consider tonsillectomy""]","[[301, 326]]","[""exact""]",True,False
+42,plan,The purpose of the tonsillectomy is to alleviate recurrent strep throat episodes.,0.25,"[""to alleviate recurrent strep throat episodes""]","[[327, 371]]","[""exact""]",True,False
+43,plan,The patient has recurrent strep throat episodes.,0.25,"[""recurrent strep throat episodes""]","[[340, 371]]","[""exact""]",True,False
+44,plan,The patient was referred to a nephrologist.,1.0,"[""I also referred the patient to a nephrologist""]","[[373, 418]]","[""exact""]",True,False
+45,plan,The purpose of the referral to the nephrologist is for further evaluation of glomerulonephritis.,1.0,"[""for further evaluation of glomerulonephritis""]","[[419, 463]]","[""exact""]",True,False
+46,plan,The patient has glomerulonephritis.,1.0,"[""glomerulonephritis""]","[[445, 463]]","[""exact""]",True,False
+47,plan,The patient is to return in a week.,0.0,"[""The patient is to return in a week""]","[[466, 500]]","[""exact""]",True,False
+48,plan,The purpose of the patient's return in a week is for the results of the tests.,0.0,"[""for the results of the tests""]","[[501, 529]]","[""exact""]",True,False

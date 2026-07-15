@@ -1,0 +1,53 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 67-year-old male.,0.0,"[""a 67-year-old male""]","[[20, 38]]","[""exact""]",True,False
+1,subjective,The patient sustained a right shoulder injury during a tackle football game.,0.0,"[""sustained a right shoulder injury during a tackle football game""]","[[43, 106]]","[""exact""]",True,False
+2,subjective,The patient's right shoulder injury occurred approximately 4 days ago.,0.0,"[""approximately 4 days ago""]","[[107, 131]]","[""exact""]",True,False
+3,subjective,The patient was tackled and landed on his shoulder.,0.5,"[""he was tackled and landed on his shoulder""]","[[149, 190]]","[""exact""]",True,False
+4,subjective,The patient's shoulder has been bothering him since the injury.,0.0,"[""which has been bothering him since then""]","[[192, 231]]","[""exact""]",True,False
+5,subjective,The patient describes the pain as being on the back side of the shoulder.,0.0,"[""on the back side of the shoulder""]","[[264, 296]]","[""exact""]",True,False
+6,subjective,The patient's pain is located around the acromioclavicular joint.,0.0,"[""around the acromioclavicular joint""]","[[298, 332]]","[""exact""]",True,False
+7,subjective,The patient denies any numbness or tingling in his fingers.,0.0,"[""denies any numbness or tingling in his fingers""]","[[337, 383]]","[""exact""]",True,False
+8,subjective,The patient's arm strength is intact.,0.75,"[""his arm strength is intact""]","[[389, 415]]","[""exact""]",True,False
+9,subjective,The patient has difficulty lifting heavy objects.,0.25,"[""difficulty lifting heavy objects""]","[[433, 465]]","[""exact""]",True,False
+10,subjective,The patient has taken Tylenol for the pain.,0.0,"[""He has taken Tylenol for the pain""]","[[467, 500]]","[""exact""]",True,False
+11,subjective,The patient reports that Tylenol has not provided significant relief for the pain.,0.0,"[""it has not provided significant relief""]","[[518, 556]]","[""exact""]",True,False
+12,subjective,The patient had a past appendectomy approximately 3-4 years ago.,0.0,"[""a past appendectomy approximately 3-4 years ago""]","[[601, 648]]","[""exact""]",True,False
+13,subjective,The patient denies any other medical problems.,0.5,"[""denies any other medical problems""]","[[653, 686]]","[""exact""]",True,False
+14,subjective,The patient denies any other surgeries.,1.0,"[""denies any other medical problems, surgeries, or joint injuries""]","[[653, 716]]","[""exact""]",True,False
+15,subjective,The patient denies any other joint injuries.,0.25,"[""denies any other medical problems, surgeries, or joint injuries""]","[[653, 716]]","[""exact""]",True,False
+16,subjective,The patient denies any fever.,0.0,"[""denies any fever, chills, headache, or neck problems""]","[[750, 802]]","[""exact""]",True,False
+17,subjective,The patient denies any chills.,0.0,"[""denies any fever, chills, headache, or neck problems""]","[[750, 802]]","[""exact""]",True,False
+18,subjective,The patient denies any headache.,0.75,"[""denies any fever, chills, headache, or neck problems""]","[[750, 802]]","[""exact""]",True,False
+19,subjective,The patient denies any neck problems.,0.0,"[""denies any fever, chills, headache, or neck problems""]","[[750, 802]]","[""exact""]",True,False
+20,subjective,The patient denies any elbow pain.,0.0,"[""denies any numbness or tingling in his fingers, elbow, or wrist pain""]","[[812, 880]]","[""exact""]",True,False
+21,subjective,The patient denies any wrist pain.,0.0,"[""denies any numbness or tingling in his fingers, elbow, or wrist pain""]","[[812, 880]]","[""exact""]",True,False
+22,subjective,The patient is currently taking Tylenol.,0.25,"[""The patient is currently taking Tylenol""]","[[904, 943]]","[""exact""]",True,False
+23,subjective,The patient is taking Tylenol for pain.,0.0,"[""The patient is currently taking Tylenol for pain""]","[[904, 952]]","[""exact""]",True,False
+24,objective,The patient's blood pressure is 122/76.,0.0,"[""The patient's blood pressure is 122/76""]","[[13, 51]]","[""exact""]",True,False
+25,objective,The patient's heart rate is 82 beats per minute.,0.0,"[""heart rate is 82 beats per minute""]","[[53, 86]]","[""exact""]",True,False
+26,objective,The patient's oxygen saturation is 95% on room air.,0.0,"[""oxygen saturation is 95% on room air""]","[[92, 128]]","[""exact""]",True,False
+27,objective,The patient's cervical spine exam is unremarkable.,0.5,"[""The patient's cervical spine exam is unremarkable""]","[[146, 195]]","[""exact""]",True,False
+28,objective,The patient's cervical spine exam shows no tenderness to palpation.,0.5,"[""with no tenderness to palpation""]","[[197, 228]]","[""exact""]",True,False
+29,objective,The patient's head exam is unremarkable.,0.75,"[""The head exam is also unremarkable""]","[[230, 264]]","[""exact""]",True,False
+30,objective,The patient's head exam shows no ecchymosis or bruising.,1.0,"[""with no ecchymosis or bruising""]","[[266, 296]]","[""exact""]",True,False
+31,objective,The patient has pain to palpation of the posterior shoulder at the acromioclavicular joint.,0.0,"[""pain to palpation of the posterior shoulder at the acromioclavicular joint""]","[[331, 405]]","[""exact""]",True,False
+32,objective,The patient has decreased abduction and adduction to 90 degrees.,0.0,"[""decreased abduction and adduction to 90 degrees""]","[[407, 454]]","[""exact""]",True,False
+33,objective,The patient has pain with supination and pronation of the right arm.,0.0,"[""pain with supination and pronation of the right arm""]","[[460, 511]]","[""exact""]",True,False
+34,objective,The patient's right shoulder x-ray shows an acute acromioclavicular joint fracture.,0.0,"[""The patient's right shoulder x-ray shows an acute acromioclavicular joint fracture""]","[[528, 610]]","[""exact""]",True,False
+35,assessment,The patient has an acute acromioclavicular joint fracture.,0.0,"[""The patient has an acute acromioclavicular joint fracture""]","[[12, 69]]","[""exact""]",True,False
+36,assessment,The patient has an acromioclavicular joint fracture.,0.0,"[""Acromioclavicular joint fracture""]","[[85, 117]]","[""exact""]",True,False
+37,assessment,The patient has a suspected shoulder injury.,0.0,"[""Suspected shoulder injury""]","[[119, 144]]","[""exact""]",True,False
+38,plan,The patient was prescribed meloxicam for pain management.,0.0,"[""meloxicam 15 milligrams once a day for pain management""]","[[13, 67]]","[""exact""]",True,False
+39,plan,The patient's meloxicam dose is 15 milligrams.,0.0,"[""15 milligrams""]","[[23, 36]]","[""exact""]",True,False
+40,plan,The patient's meloxicam frequency is once a day.,0.0,"[""once a day""]","[[37, 47]]","[""exact""]",True,False
+41,plan,A CT scan of the right shoulder was ordered for the patient.,0.0,"[""I ordered a CT scan of the right shoulder""]","[[69, 110]]","[""exact""]",True,False
+42,plan,The purpose of the CT scan is to further evaluate the joint.,0.0,"[""to further evaluate the joint""]","[[111, 140]]","[""exact""]",True,False
+43,plan,The patient was referred to physical therapy.,0.0,"[""I referred the patient to physical therapy""]","[[142, 184]]","[""exact""]",True,False
+44,plan,The goal of physical therapy is to strengthen the shoulder.,0.0,"[""to strengthen the shoulder""]","[[185, 211]]","[""exact""]",True,False
+45,plan,The goal of physical therapy is to avoid future surgery.,0.0,"[""to avoid future surgery""]","[[216, 236]]","[""word""]",True,False
+46,plan,The patient was instructed to use a sling for the shoulder.,0.25,"[""to use a sling for the shoulder""]","[[263, 294]]","[""exact""]",True,False
+47,plan,The patient was advised to avoid heavy lifting.,0.5,"[""avoid heavy lifting""]","[[299, 318]]","[""exact""]",True,False
+48,plan,The patient was advised to avoid tackle football.,0.75,"[""avoid heavy lifting or tackle football""]","[[299, 337]]","[""exact""]",True,False
+49,plan,The patient will follow up with the physician in a few days.,0.75,"[""The patient will follow up with me in a few days""]","[[370, 418]]","[""exact""]",True,False
+50,plan,The purpose of the follow-up is to review the results of the CT scan.,0.5,"[""to review the results of the CT scan""]","[[419, 455]]","[""exact""]",True,False
+51,plan,The purpose of the follow-up is to assess the patient's progress.,0.0,"[""to review the results of the CT scan and assess the patient's progress""]","[[419, 489]]","[""exact""]",True,False

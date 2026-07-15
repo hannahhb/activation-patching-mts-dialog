@@ -1,0 +1,862 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Larry.",
+        "spans": [
+          "The patient, Larry"
+        ],
+        "span_offsets": [
+          [
+            5,
+            23
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is a 40-year-old male.",
+        "spans": [
+          "a 40-year-old male"
+        ],
+        "span_offsets": [
+          [
+            25,
+            43
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has been experiencing chronic back pain for approximately 2 years.",
+        "spans": [
+          "has been experiencing chronic back pain for approximately 2 years"
+        ],
+        "span_offsets": [
+          [
+            45,
+            110
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient attributes his back pain to moving furniture one weekend.",
+        "spans": [
+          "which he attributes to moving furniture one weekend"
+        ],
+        "span_offsets": [
+          [
+            112,
+            163
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's back pain is sharp and stabbing in nature.",
+        "spans": [
+          "sharp stabbing in nature"
+        ],
+        "span_offsets": [
+          [
+            190,
+            214
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's back pain radiates down to his right leg.",
+        "spans": [
+          "radiating down to his right leg"
+        ],
+        "span_offsets": [
+          [
+            216,
+            247
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's back pain radiates to his big toe.",
+        "spans": [
+          "including his big toe"
+        ],
+        "span_offsets": [
+          [
+            249,
+            270
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's back pain worsens with sitting.",
+        "spans": [
+          "worsens with sitting"
+        ],
+        "span_offsets": [
+          [
+            276,
+            296
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports numbness in his right leg.",
+        "spans": [
+          "numbness and tingling in his right leg"
+        ],
+        "span_offsets": [
+          [
+            314,
+            352
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports tingling in his right leg.",
+        "spans": [
+          "numbness and tingling in his right leg"
+        ],
+        "span_offsets": [
+          [
+            314,
+            352
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports numbness and tingling in his right foot.",
+        "spans": [
+          "particularly in the foot"
+        ],
+        "span_offsets": [
+          [
+            354,
+            378
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies any loss of sensation in the genital area.",
+        "spans": [
+          "denies any loss of sensation in the genital or rectal area"
+        ],
+        "span_offsets": [
+          [
+            383,
+            441
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies any loss of sensation in the rectal area.",
+        "spans": [
+          "denies any loss of sensation in the genital or rectal area"
+        ],
+        "span_offsets": [
+          [
+            383,
+            441
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies any weakness.",
+        "spans": [
+          "weakness"
+        ],
+        "span_offsets": [
+          [
+            443,
+            451
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies any loss of bladder control.",
+        "spans": [
+          "loss of bladder or bowel control"
+        ],
+        "span_offsets": [
+          [
+            456,
+            488
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies any loss of bowel control.",
+        "spans": [
+          "loss of bladder or bowel control"
+        ],
+        "span_offsets": [
+          [
+            456,
+            488
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has tried physical therapy in the past.",
+        "spans": [
+          "has tried physical therapy"
+        ],
+        "span_offsets": [
+          [
+            525,
+            551
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has been prescribed strong pain medications in the past.",
+        "spans": [
+          "has been prescribed strong pain medications"
+        ],
+        "span_offsets": [
+          [
+            556,
+            599
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's past pain medications provided only temporary relief.",
+        "spans": [
+          "but with only temporary relief"
+        ],
+        "span_offsets": [
+          [
+            613,
+            643
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has been considered for surgery in the past.",
+        "spans": [
+          "has also been considered for surgery"
+        ],
+        "span_offsets": [
+          [
+            648,
+            684
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient wishes to avoid surgery.",
+        "spans": [
+          "which he wishes to avoid"
+        ],
+        "span_offsets": [
+          [
+            686,
+            710
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has gained weight over the years.",
+        "spans": [
+          "He has gained weight over the years"
+        ],
+        "span_offsets": [
+          [
+            712,
+            747
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's back pain has limited his activity level.",
+        "spans": [
+          "which has limited his activity level"
+        ],
+        "span_offsets": [
+          [
+            770,
+            806
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a recent interest in golf.",
+        "spans": [
+          "including his recent interest in golf"
+        ],
+        "span_offsets": [
+          [
+            808,
+            845
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports difficulty sleeping due to discomfort.",
+        "spans": [
+          "difficulty sleeping due to discomfort"
+        ],
+        "span_offsets": [
+          [
+            887,
+            924
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient does not report any other symptoms.",
+        "spans": [
+          "but does not mention any other symptoms"
+        ],
+        "span_offsets": [
+          [
+            926,
+            965
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has midline tenderness at the L4-L5 disk space.",
+        "spans": [
+          "midline tenderness at the L4-L5 disk space"
+        ],
+        "span_offsets": [
+          [
+            31,
+            73
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has right-sided lumbar paravertebral tenderness.",
+        "spans": [
+          "right-sided lumbar paravertebral tenderness"
+        ],
+        "span_offsets": [
+          [
+            79,
+            122
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient experiences pain with lumbar flexion.",
+        "spans": [
+          "pain with lumbar flexion"
+        ],
+        "span_offsets": [
+          [
+            133,
+            157
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a positive straight leg test.",
+        "spans": [
+          "a positive straight leg test"
+        ],
+        "span_offsets": [
+          [
+            162,
+            190
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has decreased sensation to light touch at the right lateral thigh at L4 dermatome.",
+        "spans": [
+          "Decreased sensation to light touch at the right lateral thigh at L4 dermatome"
+        ],
+        "span_offsets": [
+          [
+            192,
+            269
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's patellar reflexes are symmetrical.",
+        "spans": [
+          "Patellar and Achilles reflexes are symmetrical"
+        ],
+        "span_offsets": [
+          [
+            271,
+            317
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Achilles reflexes are symmetrical.",
+        "spans": [
+          "Patellar and Achilles reflexes are symmetrical"
+        ],
+        "span_offsets": [
+          [
+            271,
+            317
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's MRI results show disk herniation.",
+        "spans": [
+          "MRI results show disk herniation"
+        ],
+        "span_offsets": [
+          [
+            334,
+            366
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's MRI results show nerve impingement.",
+        "spans": [
+          "MRI results show disk herniation with nerve impingement"
+        ],
+        "span_offsets": [
+          [
+            334,
+            389
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient's symptoms are consistent with an L4-L5 herniated disk with radiculopathy.",
+        "spans": [
+          "The patient's symptoms are consistent with an L4-L5 herniated disk with radiculopathy"
+        ],
+        "span_offsets": [
+          [
+            12,
+            97
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has chronic lumbar back pain.",
+        "spans": [
+          "Chronic lumbar back pain"
+        ],
+        "span_offsets": [
+          [
+            114,
+            138
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has an L4-L5 herniated disk with radiculopathy.",
+        "spans": [
+          "L4-L5 herniated disk with radiculopathy"
+        ],
+        "span_offsets": [
+          [
+            58,
+            97
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "fact": "A spinal injection with a corticosteroid was recommended to the patient.",
+        "spans": [
+          "I recommended a spinal injection with a corticosteroid to reduce inflammation and relieve pain"
+        ],
+        "span_offsets": [
+          [
+            0,
+            94
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The spinal injection will be performed under fluoroscopy.",
+        "spans": [
+          "The procedure will be performed under fluoroscopy to localize the exact area of pain"
+        ],
+        "span_offsets": [
+          [
+            96,
+            180
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The purpose of the spinal injection is to reduce inflammation.",
+        "spans": [
+          "to reduce inflammation and relieve pain"
+        ],
+        "span_offsets": [
+          [
+            55,
+            94
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The purpose of the spinal injection is to relieve pain.",
+        "spans": [
+          "to reduce inflammation and relieve pain"
+        ],
+        "span_offsets": [
+          [
+            55,
+            94
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The procedure will localize the exact area of pain.",
+        "spans": [
+          "to localize the exact area of pain"
+        ],
+        "span_offsets": [
+          [
+            146,
+            180
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's response to the injection will be monitored.",
+        "spans": [
+          "I will monitor the patient's response to the injection"
+        ],
+        "span_offsets": [
+          [
+            182,
+            236
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "Follow-up appointments will be scheduled as needed.",
+        "spans": [
+          "schedule follow-up appointments as needed"
+        ],
+        "span_offsets": [
+          [
+            241,
+            282
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will have no more than four follow-up appointments per year.",
+        "spans": [
+          "not to exceed four times a year"
+        ],
+        "span_offsets": [
+          [
+            284,
+            315
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The procedure is relatively quick.",
+        "spans": [
+          "The procedure is relatively quick"
+        ],
+        "span_offsets": [
+          [
+            317,
+            350
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient should be out of the office within an hour after the procedure.",
+        "spans": [
+          "the patient should be out of the office within an hour"
+        ],
+        "span_offsets": [
+          [
+            355,
+            409
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will be scheduled for the first injection today.",
+        "spans": [
+          "The patient will be scheduled for the first injection today"
+        ],
+        "span_offsets": [
+          [
+            423,
+            482
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "Subsequent follow-ups will be scheduled as needed.",
+        "spans": [
+          "with subsequent follow-ups as needed"
+        ],
+        "span_offsets": [
+          [
+            484,
+            520
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ]
+  }
+]

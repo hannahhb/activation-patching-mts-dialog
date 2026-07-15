@@ -1,0 +1,55 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 30-year-old male.,0.5,"[""a 30-year-old male""]","[[18, 36]]","[""exact""]",True,False
+1,subjective,The patient presents with a 2-week history of right knee pain.,0.25,"[""a 2-week history of right knee pain""]","[[52, 87]]","[""exact""]",True,False
+2,subjective,The patient's right knee pain followed a fall from a tandem bike.,0.25,"[""following a fall from a tandem bike""]","[[88, 123]]","[""exact""]",True,False
+3,subjective,The patient hit his knee on the curb.,0.75,"[""he hit his knee on the curb""]","[[141, 168]]","[""exact""]",True,False
+4,subjective,The patient took ibuprofen for his right knee pain.,0.0,"[""took some ibuprofen""]","[[173, 192]]","[""exact""]",True,False
+5,subjective,The patient's right knee pain was temporarily relieved by ibuprofen.,0.75,"[""which provided temporary relief""]","[[194, 225]]","[""exact""]",True,False
+6,subjective,The patient's right knee pain has persisted.,0.25,"[""the pain has persisted""]","[[236, 258]]","[""exact""]",True,False
+7,subjective,The patient's right knee pain is worsened by walking uphill.,0.5,"[""worsened with activities such as walking uphill""]","[[263, 310]]","[""exact""]",True,False
+8,subjective,The patient denies any previous knee problems.,0.0,"[""denies any previous knee problems""]","[[315, 348]]","[""exact""]",True,False
+9,subjective,The patient has been taking ibuprofen as needed.,0.0,"[""has been taking ibuprofen as needed""]","[[353, 388]]","[""exact""]",True,False
+10,subjective,The patient works as a baby rocker at a children's hospital.,0.0,"[""works as a baby rocker at a children's hospital""]","[[425, 472]]","[""exact""]",True,False
+11,subjective,The patient enjoys walking his dog.,0.5,"[""enjoys walking his dog""]","[[477, 499]]","[""exact""]",True,False
+12,subjective,The patient is physically active.,0.25,"[""He is physically active""]","[[501, 524]]","[""exact""]",True,False
+13,subjective,The patient played sports in high school.,1.0,"[""has played sports in high school""]","[[529, 561]]","[""exact""]",True,False
+14,subjective,The patient has not been involved in any athletic activities since high school.,0.75,"[""but has not been involved in any athletic activities since then""]","[[563, 626]]","[""exact""]",True,False
+15,subjective,The patient denies any history of smoking.,0.75,"[""denies any history of smoking""]","[[631, 660]]","[""exact""]",True,False
+16,subjective,The patient denies any history of alcohol use.,0.75,"[""denies any history of alcohol""]","[[628, 683]]","[""semantic""]",True,False
+17,subjective,The patient denies any history of drug use.,0.75,"[""denies any history of drug use""]","[[674, 682]]","[""word""]",True,False
+18,subjective,The patient reports pain in the right knee.,0.25,"[""The patient reports pain in the right knee""]","[[704, 746]]","[""exact""]",True,False
+19,subjective,The patient's right knee pain is particularly associated with weight-bearing activities.,0.5,"[""particularly with weight-bearing activities""]","[[748, 791]]","[""exact""]",True,False
+20,subjective,The patient denies any other symptoms.,0.5,"[""denies any other symptoms""]","[[797, 822]]","[""exact""]",True,False
+21,objective,The patient's knee was tender to palpation on the medial joint line.,0.0,"[""The patient's knee was tender to palpation on the medial joint line""]","[[15, 82]]","[""exact""]",True,False
+22,objective,The patient had a small abrasion on the medial patella.,0.0,"[""with a small abrasion on the medial patella""]","[[84, 127]]","[""exact""]",True,False
+23,objective,The patient had a slight laxity in the posterior drawer test.,0.0,"[""a slight laxity in the posterior drawer test""]","[[145, 189]]","[""exact""]",True,False
+24,objective,The patient had a positive one-plus posterior drawer sign.,0.5,"[""a positive one-plus posterior drawer sign""]","[[194, 235]]","[""exact""]",True,False
+25,objective,The lateral collateral ligament was intact.,0.25,"[""The lateral collateral ligament and medial collateral ligament were intact""]","[[237, 311]]","[""exact""]",True,False
+26,objective,The medial collateral ligament was intact.,0.25,"[""The lateral collateral ligament and medial collateral ligament were intact""]","[[237, 311]]","[""exact""]",True,False
+27,objective,The patient had full extension in both knees.,0.5,"[""The patient had full extension and flexion in both knees""]","[[313, 369]]","[""exact""]",True,False
+28,objective,The patient had full flexion in both knees.,0.5,"[""The patient had full extension and flexion in both knees""]","[[313, 369]]","[""exact""]",True,False
+29,objective,The patient had no deformities in both knees.,0.75,"[""with no deformities or crepitus""]","[[371, 402]]","[""exact""]",True,False
+30,objective,The patient had no crepitus in both knees.,0.75,"[""with no deformities or crepitus""]","[[371, 402]]","[""exact""]",True,False
+31,objective,The X-rays of the knee showed no obvious fractures.,0.0,"[""X-rays of the knee were reviewed, which showed no obvious fractures or bone spurs""]","[[419, 500]]","[""exact""]",True,False
+32,objective,The X-rays of the knee showed no bone spurs.,0.0,"[""X-rays of the knee were reviewed, which showed no obvious fractures or bone spurs""]","[[419, 500]]","[""exact""]",True,False
+33,objective,The doctor suspects a possible injury to the posterior cruciate ligament (PCL).,0.0,"[""the doctor suspects a possible injury to the posterior cruciate ligament (PCL)""]","[[506, 584]]","[""exact""]",True,False
+34,assessment,The patient has a suspected injury to the posterior cruciate ligament of the right knee.,1.0,"[""The patient has a suspected injury to the posterior cruciate ligament of the right knee""]","[[12, 99]]","[""exact""]",True,False
+35,assessment,The suspected injury to the posterior cruciate ligament of the right knee is likely due to a fall from a tandem bike.,1.0,"[""likely due to a fall from a tandem bike""]","[[101, 140]]","[""exact""]",True,False
+36,assessment,The patient has knee pain.,0.5,"[""Knee pain""]","[[157, 166]]","[""exact""]",True,False
+37,assessment,The patient has a suspected posterior cruciate ligament injury.,0.0,"[""suspected posterior cruciate ligament injury""]","[[168, 212]]","[""exact""]",True,False
+38,assessment,The patient has right knee instability.,1.0,"[""right knee instability""]","[[214, 236]]","[""exact""]",True,False
+39,assessment,The patient has a possible meniscus tear.,0.0,"[""possible meniscus tear or chipped cartilage""]","[[238, 281]]","[""exact""]",True,False
+40,assessment,The patient has possible chipped cartilage.,0.25,"[""possible meniscus tear or chipped cartilage""]","[[238, 281]]","[""exact""]",True,False
+41,plan,The patient was prescribed ibuprofen for pain management.,0.25,"[""ibuprofen 400mg three times a day for pain management""]","[[13, 66]]","[""exact""]",True,False
+42,plan,The patient's ibuprofen dose is 400mg.,1.0,"[""400mg""]","[[23, 28]]","[""exact""]",True,False
+43,plan,The patient's ibuprofen frequency is three times a day.,0.75,"[""three times a day""]","[[29, 46]]","[""exact""]",True,False
+44,plan,The patient was recommended to use ice packs for swelling reduction.,0.5,"[""ice packs a few times a day to reduce swelling""]","[[82, 128]]","[""exact""]",True,False
+45,plan,The patient will be prescribed a different medication for pain management.,0.25,"[""a different medication that may be easier to take""]","[[161, 210]]","[""exact""]",True,False
+46,plan,The patient's new medication frequency will be twice a day.,0.25,"[""twice a day""]","[[239, 250]]","[""exact""]",True,False
+47,plan,The patient will be referred to physical therapy to improve strength and motion.,0.0,"[""physical therapy to improve strength and motion""]","[[289, 336]]","[""exact""]",True,False
+48,plan,The patient will be fitted with a knee brace for temporary support.,0.25,"[""a brace fitted to the patient's knee for temporary support""]","[[354, 412]]","[""exact""]",True,False
+49,plan,The patient will be re-evaluated in 4-6 weeks.,0.0,"[""I will re-evaluate the patient in 4-6 weeks""]","[[414, 457]]","[""exact""]",True,False
+50,plan,The patient's knee will be assessed for progress in 4-6 weeks.,0.0,"[""to assess progress""]","[[458, 476]]","[""exact""]",True,False
+51,plan,The patient will follow up in 4-6 weeks.,0.0,"[""The patient will follow up in 4-6 weeks""]","[[479, 518]]","[""exact""]",True,False
+52,plan,The patient's knee will be re-evaluated in 4-6 weeks.,0.0,"[""to re-evaluate the knee""]","[[519, 542]]","[""exact""]",True,False
+53,plan,"The patient may need further treatment, including possible surgery to repair the PCL.",1.0,"[""possible surgery to repair the PCL""]","[[600, 634]]","[""exact""]",True,False

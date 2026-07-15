@@ -1,0 +1,755 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Matthew.",
+        "spans": [
+          "The patient, Matthew,"
+        ],
+        "span_offsets": [
+          [
+            5,
+            26
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has been experiencing lower back pain for an extended period.",
+        "spans": [
+          "lower back pain for an extended period"
+        ],
+        "span_offsets": [
+          [
+            49,
+            87
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has had a significant exacerbation of lower back pain symptoms over the past month.",
+        "spans": [
+          "a significant exacerbation of symptoms over the past month"
+        ],
+        "span_offsets": [
+          [
+            94,
+            152
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's lower back pain is localized to the lower back area.",
+        "spans": [
+          "The pain is localized to the lower back area"
+        ],
+        "span_offsets": [
+          [
+            154,
+            198
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's lower back pain radiates down the left leg.",
+        "spans": [
+          "radiating down the left leg"
+        ],
+        "span_offsets": [
+          [
+            200,
+            227
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient describes their lower back pain as an electric toothache-like sensation.",
+        "spans": [
+          "an electric toothache-like sensation"
+        ],
+        "span_offsets": [
+          [
+            249,
+            285
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's lower back pain is exacerbated by standing.",
+        "spans": [
+          "exacerbated by standing"
+        ],
+        "span_offsets": [
+          [
+            299,
+            322
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's lower back pain is exacerbated by walking.",
+        "spans": [
+          "exacerbated by standing, walking"
+        ],
+        "span_offsets": [
+          [
+            299,
+            331
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's lower back pain is exacerbated by coughing.",
+        "spans": [
+          "exacerbated by standing, walking, coughing, and sneezing"
+        ],
+        "span_offsets": [
+          [
+            299,
+            355
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's lower back pain is exacerbated by sneezing.",
+        "spans": [
+          "exacerbated by standing, walking, coughing, and sneezing"
+        ],
+        "span_offsets": [
+          [
+            299,
+            355
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's lower back pain is somewhat alleviated by lying down.",
+        "spans": [
+          "but is somewhat alleviated by lying down"
+        ],
+        "span_offsets": [
+          [
+            357,
+            397
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports a current pain level of 6 out of 10.",
+        "spans": [
+          "a pain level of 6 out of 10 currently"
+        ],
+        "span_offsets": [
+          [
+            419,
+            456
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's pain level can reach up to 13 out of 10 when symptoms worsen.",
+        "spans": [
+          "but can reach up to 13 out of 10 when symptoms worsen"
+        ],
+        "span_offsets": [
+          [
+            458,
+            511
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has been unable to perform daily activities due to pain.",
+        "spans": [
+          "The patient has been unable to perform daily activities due to pain"
+        ],
+        "span_offsets": [
+          [
+            513,
+            580
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient requires the use of a cane.",
+        "spans": [
+          "requiring the use of a cane"
+        ],
+        "span_offsets": [
+          [
+            582,
+            609
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a past medical history of a fall off a roof 30 years ago.",
+        "spans": [
+          "a past injury 30 years ago, where they fell off a roof"
+        ],
+        "span_offsets": [
+          [
+            655,
+            709
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's past fall off a roof may have resulted in a fracture or possible nerve damage.",
+        "spans": [
+          "which may have resulted in a fracture or possible nerve damage"
+        ],
+        "span_offsets": [
+          [
+            711,
+            773
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports numbness in both legs.",
+        "spans": [
+          "numbness and tingling in both legs"
+        ],
+        "span_offsets": [
+          [
+            855,
+            889
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports tingling in both legs.",
+        "spans": [
+          "numbness and tingling in both legs"
+        ],
+        "span_offsets": [
+          [
+            855,
+            889
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports weakness in the lower extremities.",
+        "spans": [
+          "weakness in the lower extremities"
+        ],
+        "span_offsets": [
+          [
+            896,
+            929
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's symptoms are exacerbated by coughing.",
+        "spans": [
+          "Coughing and sneezing exacerbate the symptoms"
+        ],
+        "span_offsets": [
+          [
+            931,
+            976
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's symptoms are exacerbated by sneezing.",
+        "spans": [
+          "Coughing and sneezing exacerbate the symptoms"
+        ],
+        "span_offsets": [
+          [
+            931,
+            976
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has positive pain to palpation at the L4 vertebrae.",
+        "spans": [
+          "positive pain to palpation at the L4 vertebrae"
+        ],
+        "span_offsets": [
+          [
+            31,
+            77
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has pain with flexion of the back.",
+        "spans": [
+          "pain with flexion and extension of the back"
+        ],
+        "span_offsets": [
+          [
+            83,
+            126
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has pain with extension of the back.",
+        "spans": [
+          "pain with flexion and extension of the back"
+        ],
+        "span_offsets": [
+          [
+            83,
+            126
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has 4 out of 5 strength in the left leg.",
+        "spans": [
+          "4 out of 5 strength in the left leg"
+        ],
+        "span_offsets": [
+          [
+            144,
+            179
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has 5 out of 5 strength in the right leg.",
+        "spans": [
+          "5 out of 5 strength in the right leg"
+        ],
+        "span_offsets": [
+          [
+            184,
+            220
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's reflexes are brisk.",
+        "spans": [
+          "Reflexes are brisk"
+        ],
+        "span_offsets": [
+          [
+            222,
+            240
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's motor function is intact in both lower extremities.",
+        "spans": [
+          "motor and sensory are intact in both lower extremities"
+        ],
+        "span_offsets": [
+          [
+            245,
+            299
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's sensory function is intact in both lower extremities.",
+        "spans": [
+          "motor and sensory are intact in both lower extremities"
+        ],
+        "span_offsets": [
+          [
+            245,
+            299
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a disk herniation at the level of L4-L5 vertebrae.",
+        "spans": [
+          "a disk herniation at the level of L4-L5 vertebrae"
+        ],
+        "span_offsets": [
+          [
+            330,
+            379
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has nerve root impingement associated with the disk herniation at L4-L5.",
+        "spans": [
+          "associated with nerve root impingement"
+        ],
+        "span_offsets": [
+          [
+            380,
+            418
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has acute disk herniation at L4-L5 with nerve root impingement.",
+        "spans": [
+          "acute disk herniation at L4-L5 with nerve root impingement"
+        ],
+        "span_offsets": [
+          [
+            28,
+            86
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has lower back pain.",
+        "spans": [
+          "lower back pain"
+        ],
+        "span_offsets": [
+          [
+            95,
+            110
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has radiculopathy.",
+        "spans": [
+          "radiculopathy"
+        ],
+        "span_offsets": [
+          [
+            115,
+            128
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has leg pain.",
+        "spans": [
+          "leg pain"
+        ],
+        "span_offsets": [
+          [
+            237,
+            245
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's acute disk herniation at L4-L5 with nerve root impingement causes lower back pain and radiculopathy.",
+        "spans": [
+          "acute disk herniation at L4-L5 with nerve root impingement causing lower back pain and radiculopathy"
+        ],
+        "span_offsets": [
+          [
+            28,
+            128
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was recommended to receive an epidural steroid injection.",
+        "spans": [
+          "I recommended an epidural steroid injection to be administered today"
+        ],
+        "span_offsets": [
+          [
+            0,
+            68
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The purpose of the epidural steroid injection is to alleviate the inflammation and pain.",
+        "spans": [
+          "to alleviate the inflammation and pain"
+        ],
+        "span_offsets": [
+          [
+            69,
+            107
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will be referred to physical therapy.",
+        "spans": [
+          "I will refer the patient to physical therapy"
+        ],
+        "span_offsets": [
+          [
+            109,
+            153
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The purpose of physical therapy is to strengthen the area.",
+        "spans": [
+          "to strengthen the area"
+        ],
+        "span_offsets": [
+          [
+            154,
+            176
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is expected to follow up with the physician in about a month.",
+        "spans": [
+          "The patient is expected to follow up with me in about a month",
+          "The patient will follow up with me in about a month"
+        ],
+        "span_offsets": [
+          [
+            178,
+            239
+          ],
+          [
+            293,
+            344
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": true,
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ]
+      },
+      {
+        "fact": "The follow-up appointment is to assess the efficacy of the treatment.",
+        "spans": [
+          "to assess the efficacy of the treatment",
+          "to assess the efficacy of the treatment"
+        ],
+        "span_offsets": [
+          [
+            240,
+            279
+          ],
+          [
+            240,
+            279
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": true,
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ]
+      }
+    ]
+  }
+]

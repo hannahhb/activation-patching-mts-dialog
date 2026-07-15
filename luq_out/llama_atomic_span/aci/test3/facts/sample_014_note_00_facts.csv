@@ -1,0 +1,54 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Theresa.,0.5,"[""The patient, Theresa,""]","[[0, 21]]","[""exact""]",True,False
+1,subjective,The patient is a 50-year-old female.,1.0,"[""a 50-year-old female""]","[[25, 45]]","[""exact""]",True,False
+2,subjective,The patient presents with a complaint of headaches.,0.0,"[""presents with a complaint of headaches""]","[[50, 88]]","[""exact""]",True,False
+3,subjective,The patient's headaches are characterized by a throbbing sensation at the top of her head.,0.0,"[""a throbbing sensation at the top of her head""]","[[103, 147]]","[""exact""]",True,False
+4,subjective,The patient's headaches have been ongoing for approximately a month.,0.0,"[""have been ongoing for approximately a month""]","[[155, 198]]","[""exact""]",True,False
+5,subjective,The patient's headaches are accompanied by dizziness.,0.25,"[""her headaches are accompanied by dizziness and blurry vision"", ""She reports dizziness and blurry vision with her headaches""]","[[217, 277], [923, 969]]","[""exact"", ""word""]",True,True
+6,subjective,The patient's headaches are accompanied by blurry vision.,0.5,"[""her headaches are accompanied by dizziness and blurry vision"", ""She reports dizziness and blurry vision with her headaches""]","[[217, 277], [923, 969]]","[""exact"", ""word""]",True,True
+7,subjective,The patient has high blood pressure.,0.0,"[""high blood pressure""]","[[328, 347]]","[""exact""]",True,False
+8,subjective,The patient is taking chlorthalidone for hypertension.,0.0,"[""Chlorthalidone for hypertension""]","[[974, 1052]]","[""semantic""]",True,False
+9,subjective,The patient has not been adherent to the chlorthalidone medication regimen.,0.0,"[""but she has not been adherent to the medication regimen""]","[[393, 448]]","[""exact""]",True,False
+10,subjective,The patient experiences gastrointestinal side effects from chlorthalidone.,0.0,"[""due to gastrointestinal side effects""]","[[449, 485]]","[""exact""]",True,False
+11,subjective,"The patient eats a lot of fast food, particularly McDonald's.",0.25,"[""eating a lot of fast food, particularly McDonald's""]","[[501, 551]]","[""exact""]",True,False
+12,subjective,The patient consumed Easter candy over the weekend.,0.75,"[""consuming Easter candy over the weekend""]","[[557, 596]]","[""exact""]",True,False
+13,subjective,The patient believes that her diet may have contributed to her high blood sugar.,0.5,"[""which she believes may have contributed to her high blood sugar""]","[[598, 661]]","[""exact""]",True,False
+14,subjective,The patient has a history of hypertension.,0.0,"[""a history of hypertension""]","[[680, 705]]","[""exact""]",True,False
+15,subjective,The patient has a history of diabetes.,0.0,"[""a history of diabetes""]","[[710, 718]]","[""word""]",True,False
+16,subjective,The patient is taking metformin for diabetes.,0.0,"[""metformin for diabetes""]","[[664, 764]]","[""semantic""]",True,False
+17,subjective,The patient has a family history of obesity.,1.0,"[""a family history of obesity""]","[[773, 800]]","[""exact""]",True,False
+18,subjective,The patient has a history of occasional forgetfulness.,0.75,"[""a history of occasional forgetfulness""]","[[805, 842]]","[""exact""]",True,False
+19,subjective,The patient's history of forgetfulness has led to non-adherence to her medication regimen.,0.75,"[""which has led to non-adherence to her medication regimen""]","[[844, 900]]","[""exact""]",True,False
+20,objective,The patient's blood pressure is 172/98 mmHg.,0.0,"[""Blood pressure: 172/98 mmHg""]","[[2, 29]]","[""exact""]",True,False
+21,objective,The patient's pulse rate is within normal limits.,0.0,"[""Pulse rate: within normal limits""]","[[32, 64]]","[""exact""]",True,False
+22,objective,The patient's oxygen saturation is fine.,0.0,"[""Oxygen saturation: fine""]","[[67, 90]]","[""exact""]",True,False
+23,objective,The patient's blood pressure is elevated.,0.0,"[""Blood pressure is elevated""]","[[123, 149]]","[""exact""]",True,False
+24,objective,The patient's heart rate is within normal limits.,0.0,"[""Heart rate is within normal limits""]","[[152, 186]]","[""exact""]",True,False
+25,objective,The patient's oxygenation is fine.,0.0,"[""Oxygenation is fine""]","[[189, 208]]","[""exact""]",True,False
+26,objective,The patient does not have jugular venous distention.,0.25,"[""Jugular venous distention is not appreciated""]","[[211, 255]]","[""exact""]",True,False
+27,objective,The patient does not have carotid bruits.,0.25,"[""Carotid bruits are not present""]","[[258, 288]]","[""exact""]",True,False
+28,objective,The patient's lungs are clear bilaterally.,0.0,"[""Lungs are clear bilaterally""]","[[291, 318]]","[""exact""]",True,False
+29,objective,The patient has a 2/6 systolic ejection murmur.,0.0,"[""Heart exam reveals a 2/6 systolic ejection murmur, which has not changed from last year""]","[[321, 408]]","[""exact""]",True,False
+30,objective,The patient's 2/6 systolic ejection murmur has not changed from last year.,0.75,"[""Heart exam reveals a 2/6 systolic ejection murmur, which has not changed from last year""]","[[321, 408]]","[""exact""]",True,False
+31,objective,The patient has 1+ pitting edema on both legs.,0.0,"[""1+ pitting edema is noted on both legs""]","[[411, 449]]","[""exact""]",True,False
+32,assessment,The patient is experiencing uncontrolled hypertension.,0.0,"[""uncontrolled hypertension""]","[[40, 65]]","[""exact""]",True,False
+33,assessment,The patient has elevated blood sugar levels.,0.25,"[""elevated blood sugar levels""]","[[70, 97]]","[""exact""]",True,False
+34,assessment,The patient's uncontrolled hypertension is likely due to non-adherence to medication regimen.,0.75,"[""likely due to non-adherence to medication regimen""]","[[99, 148]]","[""exact""]",True,False
+35,assessment,The patient's uncontrolled hypertension is likely due to dietary factors.,0.75,"[""dietary factors""]","[[153, 168]]","[""exact""]",True,False
+36,assessment,The patient's elevated blood sugar levels are likely due to non-adherence to medication regimen.,1.0,"[""likely due to non-adherence to medication regimen""]","[[99, 148]]","[""exact""]",True,False
+37,assessment,The patient's elevated blood sugar levels are likely due to dietary factors.,1.0,"[""dietary factors""]","[[153, 168]]","[""exact""]",True,False
+38,assessment,The patient has hypertension.,0.0,"[""Hypertension""]","[[185, 197]]","[""exact""]",True,False
+39,assessment,The patient's hypertension is active.,0.0,"[""Hypertension; Active""]","[[232, 239]]","[""semantic""]",True,False
+40,assessment,The patient has suspected elevated blood sugar.,0.0,"[""Elevated blood sugar; Suspected""]","[[70, 90]]","[""word""]",True,False
+41,plan,The patient is currently taking chlorthalidone.,0.25,"[""chlorthalidone""]","[[71, 85]]","[""exact""]",True,False
+42,plan,The patient is currently taking metformin.,0.0,"[""metformin""]","[[90, 99]]","[""exact""]",True,False
+43,plan,The patient is advised to take her medication daily.,0.25,"[""take her medication daily""]","[[122, 147]]","[""exact""]",True,False
+44,plan,The patient is recommended to use a blood pressure monitor at home.,0.25,"[""use a blood pressure monitor at home""]","[[170, 206]]","[""exact""]",True,False
+45,plan,The patient is recommended to track her blood pressure three times a week.,0.25,"[""track her blood pressure three times a week""]","[[210, 253]]","[""exact""]",True,False
+46,plan,The patient will be referred to a nutritionist.,0.0,"[""refer her to a nutritionist""]","[[270, 297]]","[""exact""]",True,False
+47,plan,The patient will discuss dietary changes to reduce sodium intake with a nutritionist.,0.0,"[""discuss dietary changes to reduce sodium intake""]","[[301, 348]]","[""exact""]",True,False
+48,plan,The patient's metformin dose will be increased to 1500 mg.,0.0,"[""increase her metformin to 1500 mg""]","[[375, 408]]","[""exact""]",True,False
+49,plan,The patient is advised to continue monitoring her blood sugars.,0.75,"[""continue monitoring her blood sugars""]","[[424, 460]]","[""exact""]",True,False
+50,plan,The patient will have a one-month follow-up appointment.,0.0,"[""one-month follow-up appointment""]","[[499, 530]]","[""exact""]",True,False
+51,plan,The patient's blood pressure will be reassessed at the follow-up appointment.,0.25,"[""reassess her blood pressure""]","[[534, 561]]","[""exact""]",True,False
+52,plan,The patient's blood sugar levels will be reassessed at the follow-up appointment.,0.75,"[""reassess her blood pressure and blood sugar levels""]","[[534, 584]]","[""exact""]",True,False

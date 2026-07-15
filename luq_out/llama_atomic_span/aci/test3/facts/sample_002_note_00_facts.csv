@@ -1,0 +1,52 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Jacqueline.,0.0,"[""The patient, Jacqueline,""]","[[5, 29]]","[""exact""]",True,False
+1,subjective,The patient presented with a complaint of a painful right ankle.,0.0,"[""a complaint of a painful right ankle""]","[[45, 81]]","[""exact""]",True,False
+2,subjective,The patient's right ankle pain was caused by a mountain biking incident.,0.0,"[""a mountain biking incident, where she fell and twisted her ankle outward""]","[[88, 160]]","[""exact""]",True,False
+3,subjective,The patient fell and twisted her ankle outward during the incident.,0.0,"[""where she fell and twisted her ankle outward""]","[[116, 160]]","[""exact""]",True,False
+4,subjective,The patient's pain is located on the outer ankle.,0.0,"[""the pain is located on the outer ankle""]","[[179, 217]]","[""exact""]",True,False
+5,subjective,The patient experiences tingling in her toes.,0.25,"[""some tingling and numbness in her toes""]","[[240, 278]]","[""exact""]",True,False
+6,subjective,The patient experiences numbness in her toes.,0.0,"[""some tingling and numbness in her toes""]","[[240, 278]]","[""exact""]",True,False
+7,subjective,"The patient reported numbness in her heart, but this was not discussed further.",0.25,"[""some tingling and numbness in her toes and heart"", ""although I clarified that I am an orthopedic person and couldn't discuss the numbness in her heart""]","[[240, 288], [290, 388]]","[""exact"", ""exact""]",True,True
+8,subjective,The patient's pain is not relieved by Tylenol.,0.0,"[""the pain is not relieved by Tylenol""]","[[407, 442]]","[""exact""]",True,False
+9,subjective,The patient heard a crack when the injury occurred.,0.75,"[""she heard a crack when the injury occurred""]","[[452, 494]]","[""exact""]",True,False
+10,subjective,The patient denies fever.,0.5,"[""She denies any fever, chills, or other systemic symptoms""]","[[496, 552]]","[""exact""]",True,False
+11,subjective,The patient denies chills.,0.5,"[""She denies any fever, chills, or other systemic symptoms""]","[[496, 552]]","[""exact""]",True,False
+12,subjective,The patient denies other systemic symptoms.,0.5,"[""She denies any fever, chills, or other systemic symptoms""]","[[496, 552]]","[""exact""]",True,False
+13,subjective,"The patient reported a fever of 200 degrees Fahrenheit, but this was clarified as not being a fever.",0.25,"[""but reports having a fever of 200 degrees Fahrenheit"", ""which I clarified is not a fever""]","[[554, 606], [608, 640]]","[""exact"", ""exact""]",True,True
+14,subjective,The patient has been mountain biking for three years.,0.25,"[""She has been mountain biking for three years""]","[[642, 686]]","[""exact""]",True,False
+15,subjective,The patient is unsure of her favorite mountain biking location.,0.75,"[""and is not sure of her favorite location""]","[[687, 727]]","[""exact""]",True,False
+16,objective,The patient's temperature is 98.6 degrees Fahrenheit.,0.0,"[""Her temperature is 98.6 degrees Fahrenheit""]","[[13, 55]]","[""exact""]",True,False
+17,objective,The patient's blood pressure is 118/77.,0.0,"[""blood pressure is 118/77""]","[[57, 81]]","[""exact""]",True,False
+18,objective,The patient's heart rate is 77 beats per minute.,0.0,"[""heart rate is 77 beats per minute""]","[[87, 120]]","[""exact""]",True,False
+19,objective,The patient has edema on the right ankle.,0.0,"[""some edema and erythema on the lateral malleolus""]","[[172, 220]]","[""exact""]",True,False
+20,objective,The patient has erythema on the right ankle.,0.0,"[""some edema and erythema on the lateral malleolus""]","[[172, 220]]","[""exact""]",True,False
+21,objective,The patient has ecchymosis on the right ankle.,0.0,"[""associated ecchymosis""]","[[222, 243]]","[""exact""]",True,False
+22,objective,The patient has excoriations on the right ankle.,0.0,"[""a few excoriations""]","[[249, 267]]","[""exact""]",True,False
+23,objective,The patient has pain to palpation of the right lateral malleolus.,0.0,"[""pain to palpation of the right lateral malleolus""]","[[278, 326]]","[""exact""]",True,False
+24,objective,The patient has decreased flexion of the right ankle.,0.0,"[""decreased flexion and extension of the right ankle""]","[[328, 378]]","[""exact""]",True,False
+25,objective,The patient has decreased extension of the right ankle.,0.0,"[""decreased flexion and extension of the right ankle""]","[[328, 378]]","[""exact""]",True,False
+26,objective,The patient has decreased internal rotation of the right ankle.,0.0,"[""internal and external rotation""]","[[384, 414]]","[""exact""]",True,False
+27,objective,The patient has decreased external rotation of the right ankle.,0.25,"[""internal and external rotation""]","[[384, 414]]","[""exact""]",True,False
+28,objective,The patient does not have an apparent injury to the knee.,0.5,"[""no apparent injury to the knee or the foot""]","[[425, 467]]","[""exact""]",True,False
+29,objective,The patient does not have an apparent injury to the foot.,0.5,"[""no apparent injury to the knee or the foot""]","[[425, 467]]","[""exact""]",True,False
+30,objective,The patient's right ankle x-ray shows no acute fracture.,0.0,"[""The right ankle x-ray shows no acute fracture or bony abnormality""]","[[484, 549]]","[""exact""]",True,False
+31,objective,The patient's right ankle x-ray shows no bony abnormality.,0.0,"[""The right ankle x-ray shows no acute fracture or bony abnormality""]","[[484, 549]]","[""exact""]",True,False
+32,objective,The patient has a soft tissue injury on the right ankle.,0.0,"[""only some soft tissue injury""]","[[551, 579]]","[""exact""]",True,False
+33,assessment,The patient is suspected to have an acute right ankle sprain.,0.0,"[""I believe the patient has an acute right ankle sprain""]","[[12, 65]]","[""exact""]",True,False
+34,assessment,The patient has an ankle sprain in their problem list.,0.0,"[""Ankle sprain; suspected; confirmed; past; unknown""]","[[81, 130]]","[""exact""]",True,False
+35,assessment,The ankle sprain is suspected.,0.5,"[""Ankle sprain; suspected; confirmed; past; unknown""]","[[81, 130]]","[""exact""]",True,False
+36,assessment,The ankle sprain is confirmed.,0.75,"[""Ankle sprain; suspected; confirmed; past; unknown""]","[[81, 130]]","[""exact""]",True,False
+37,assessment,The ankle sprain is in the past.,1.0,"[""Ankle sprain; suspected; confirmed; past; unknown""]","[[81, 130]]","[""exact""]",True,False
+38,assessment,The ankle sprain status is unknown.,1.0,"[""Ankle sprain; suspected; confirmed; past; unknown""]","[[81, 130]]","[""exact""]",True,False
+39,plan,The patient was prescribed meloxicam for pain.,0.0,"[""I prescribed meloxicam 15 milligrams once a day for pain""]","[[0, 56]]","[""exact""]",True,False
+40,plan,The patient's meloxicam dose is 15 milligrams.,0.0,"[""15 milligrams""]","[[23, 36]]","[""exact""]",True,False
+41,plan,The patient's meloxicam frequency is once a day.,0.0,"[""once a day""]","[[37, 47]]","[""exact""]",True,False
+42,plan,"The patient was advised to ice the area for about 20 minutes, five times a day.",0.0,"[""ice the area for about 20 minutes, five times a day""]","[[75, 126]]","[""exact""]",True,False
+43,plan,The patient was advised to weight-bear as tolerated.,0.0,"[""weight-bear as tolerated""]","[[135, 159]]","[""exact""]",True,False
+44,plan,The patient was recommended an air cast.,0.5,"[""an air cast""]","[[175, 186]]","[""exact""]",True,False
+45,plan,The patient was provided crutches.,0.25,"[""provided crutches""]","[[191, 208]]","[""exact""]",True,False
+46,plan,The patient is expected to start feeling better in the next couple of weeks.,0.0,"[""start feeling better in the next couple of weeks""]","[[230, 278]]","[""exact""]",True,False
+47,plan,The patient was instructed to return if she doesn't improve.,0.25,"[""instructed her to return if she doesn't improve""]","[[283, 330]]","[""exact""]",True,False
+48,plan,The patient may be considered for physical therapy if she doesn't improve.,0.25,"[""consider physical therapy or further imaging""]","[[355, 399]]","[""exact""]",True,False
+49,plan,The patient may be considered for further imaging if she doesn't improve.,0.0,"[""consider physical therapy or further imaging""]","[[355, 399]]","[""exact""]",True,False
+50,plan,The patient was instructed to follow up with the physician if she doesn't start feeling better.,0.25,"[""instructed her to follow up with me if she doesn't start feeling better""]","[[415, 486]]","[""exact""]",True,False

@@ -1,0 +1,664 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient presents with right shoulder pain.",
+        "spans": [
+          "right shoulder pain"
+        ],
+        "span_offsets": [
+          [
+            31,
+            50
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right shoulder pain began approximately three weeks ago.",
+        "spans": [
+          "began approximately three weeks ago"
+        ],
+        "span_offsets": [
+          [
+            56,
+            91
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right shoulder pain started after a fall while painting a house.",
+        "spans": [
+          "after a fall while painting a house"
+        ],
+        "span_offsets": [
+          [
+            92,
+            127
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right shoulder pain is intermittent.",
+        "spans": [
+          "intermittent"
+        ],
+        "span_offsets": [
+          [
+            154,
+            166
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right shoulder pain is always present.",
+        "spans": [
+          "always present"
+        ],
+        "span_offsets": [
+          [
+            172,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right shoulder pain is exacerbated by lifting overhead.",
+        "spans": [
+          "exacerbated by lifting overhead"
+        ],
+        "span_offsets": [
+          [
+            195,
+            226
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has taken ibuprofen for pain relief.",
+        "spans": [
+          "ibuprofen and acetaminophen (Tylenol) for pain relief"
+        ],
+        "span_offsets": [
+          [
+            250,
+            303
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has taken acetaminophen (Tylenol) for pain relief.",
+        "spans": [
+          "ibuprofen and acetaminophen (Tylenol) for pain relief"
+        ],
+        "span_offsets": [
+          [
+            250,
+            303
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's reported pain level is 4 out of 10 when taking medication.",
+        "spans": [
+          "reported pain level of 4 out of 10 when taking medication"
+        ],
+        "span_offsets": [
+          [
+            312,
+            369
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's reported pain level is 6 out of 10 without medication.",
+        "spans": [
+          "pain level is 6 out of 10"
+        ],
+        "span_offsets": [
+          [
+            395,
+            420
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient initially reported numbness and tingling in the arm after the injury.",
+        "spans": [
+          "numbness and tingling in the arm initially after the injury"
+        ],
+        "span_offsets": [
+          [
+            442,
+            501
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's numbness and tingling in the arm have resolved.",
+        "spans": [
+          "this symptom has resolved"
+        ],
+        "span_offsets": [
+          [
+            507,
+            532
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no history of previous shoulder pain or injuries.",
+        "spans": [
+          "no history of previous shoulder pain or injuries"
+        ],
+        "span_offsets": [
+          [
+            573,
+            621
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any other symptoms.",
+        "spans": [
+          "denies any other symptoms"
+        ],
+        "span_offsets": [
+          [
+            655,
+            680
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking ibuprofen as needed for pain.",
+        "spans": [
+          "Ibuprofen as needed for pain"
+        ],
+        "span_offsets": [
+          [
+            704,
+            732
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking acetaminophen (Tylenol) as needed for pain.",
+        "spans": [
+          "Acetaminophen (Tylenol) as needed for pain"
+        ],
+        "span_offsets": [
+          [
+            734,
+            776
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has limited active range of motion in the right shoulder.",
+        "spans": [
+          "limited active and passive range of motion in the right shoulder"
+        ],
+        "span_offsets": [
+          [
+            31,
+            95
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has limited passive range of motion in the right shoulder.",
+        "spans": [
+          "limited active and passive range of motion in the right shoulder"
+        ],
+        "span_offsets": [
+          [
+            31,
+            95
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has tenderness to the greater tuberosity of the humerus.",
+        "spans": [
+          "tenderness to the greater tuberosity of the humerus"
+        ],
+        "span_offsets": [
+          [
+            102,
+            153
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has good strong bilateral hand grips.",
+        "spans": [
+          "good strong bilateral hand grips"
+        ],
+        "span_offsets": [
+          [
+            171,
+            203
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has brisk capillary refill of less than three seconds.",
+        "spans": [
+          "brisk capillary refill of less than three seconds"
+        ],
+        "span_offsets": [
+          [
+            205,
+            254
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has equal and bilateral response to sensation.",
+        "spans": [
+          "equal and bilateral response to sensation and touch"
+        ],
+        "span_offsets": [
+          [
+            260,
+            311
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has equal and bilateral response to touch.",
+        "spans": [
+          "equal and bilateral response to sensation and touch"
+        ],
+        "span_offsets": [
+          [
+            260,
+            311
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The right shoulder x-ray reveals no fracture.",
+        "spans": [
+          "The right shoulder x-ray reveals no fracture or bony abnormality"
+        ],
+        "span_offsets": [
+          [
+            328,
+            392
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The right shoulder x-ray reveals no bony abnormality.",
+        "spans": [
+          "The right shoulder x-ray reveals no fracture or bony abnormality"
+        ],
+        "span_offsets": [
+          [
+            328,
+            392
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient's symptoms are most likely due to rotator cuff tendinopathy.",
+        "spans": [
+          "The patient's symptoms are most likely due to rotator cuff tendinopathy"
+        ],
+        "span_offsets": [
+          [
+            12,
+            83
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has rotator cuff tendinopathy.",
+        "spans": [
+          "Rotator cuff tendinopathy; [NOT MENTIONED]"
+        ],
+        "span_offsets": [
+          [
+            100,
+            142
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed ibuprofen as needed for pain.",
+        "spans": [
+          "I prescribed ibuprofen as needed for pain"
+        ],
+        "span_offsets": [
+          [
+            0,
+            41
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ibuprofen dose is as needed.",
+        "spans": [
+          "as needed for pain"
+        ],
+        "span_offsets": [
+          [
+            23,
+            41
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ibuprofen indication is for pain.",
+        "spans": [
+          "for pain"
+        ],
+        "span_offsets": [
+          [
+            33,
+            41
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "An MRI of the right shoulder was ordered for the patient.",
+        "spans": [
+          "I ordered an MRI of the right shoulder"
+        ],
+        "span_offsets": [
+          [
+            43,
+            81
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The MRI is to rule out any other conditions for the patient.",
+        "spans": [
+          "to rule out any other conditions"
+        ],
+        "span_offsets": [
+          [
+            82,
+            114
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was referred to physical therapy.",
+        "spans": [
+          "I referred the patient to physical therapy"
+        ],
+        "span_offsets": [
+          [
+            116,
+            158
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's physical therapy duration is 6-8 weeks.",
+        "spans": [
+          "for 6-8 weeks"
+        ],
+        "span_offsets": [
+          [
+            159,
+            172
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was recommended to take Tylenol for pain relief.",
+        "spans": [
+          "I recommend the patient take Tylenol for pain relief"
+        ],
+        "span_offsets": [
+          [
+            174,
+            226
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient should take Tylenol if they can tolerate it.",
+        "spans": [
+          "if they can tolerate it"
+        ],
+        "span_offsets": [
+          [
+            227,
+            250
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Tylenol indication is for pain relief.",
+        "spans": [
+          "for pain relief"
+        ],
+        "span_offsets": [
+          [
+            211,
+            226
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be seen in two weeks.",
+        "spans": [
+          "I will see the patient in two weeks",
+          "I will see the patient in two weeks"
+        ],
+        "span_offsets": [
+          [
+            252,
+            287
+          ],
+          [
+            252,
+            287
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      }
+    ]
+  }
+]

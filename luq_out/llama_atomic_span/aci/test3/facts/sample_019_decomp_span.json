@@ -1,0 +1,1049 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 45-year-old female.",
+        "spans": [
+          "a 45-year-old female"
+        ],
+        "span_offsets": [
+          [
+            18,
+            38
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a recent diagnosis of stage three nonsmall cell lung cancer.",
+        "spans": [
+          "a recent diagnosis of stage three nonsmall cell lung cancer"
+        ],
+        "span_offsets": [
+          [
+            44,
+            103
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents for follow-up on her neoadjuvant chemotherapy regimen.",
+        "spans": [
+          "presents for follow-up on her neoadjuvant chemotherapy regimen"
+        ],
+        "span_offsets": [
+          [
+            105,
+            167
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports shortness of breath.",
+        "spans": [
+          "shortness of breath"
+        ],
+        "span_offsets": [
+          [
+            181,
+            200
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient attributes her shortness of breath to her decreased physical activity since her diagnosis.",
+        "spans": [
+          "which she attributes to her decreased physical activity since her diagnosis"
+        ],
+        "span_offsets": [
+          [
+            202,
+            277
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient normally walks her dog for a mile-long walk daily.",
+        "spans": [
+          "She normally walks her dog for a mile-long walk daily"
+        ],
+        "span_offsets": [
+          [
+            279,
+            332
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient can only walk down to the end of the street without becoming short of breath.",
+        "spans": [
+          "but now she can only walk down to the end of the street without becoming short of breath"
+        ],
+        "span_offsets": [
+          [
+            334,
+            422
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies coughing.",
+        "spans": [
+          "She denies coughing or phlegm"
+        ],
+        "span_offsets": [
+          [
+            424,
+            453
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies phlegm.",
+        "spans": [
+          "She denies coughing or phlegm"
+        ],
+        "span_offsets": [
+          [
+            424,
+            453
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient admits to a dry cough.",
+        "spans": [
+          "but admits to a dry cough"
+        ],
+        "span_offsets": [
+          [
+            455,
+            480
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports pain with swallowing.",
+        "spans": [
+          "pain with swallowing"
+        ],
+        "span_offsets": [
+          [
+            499,
+            519
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient describes her pain with swallowing as a sharp pain in her chest.",
+        "spans": [
+          "a sharp pain in her chest"
+        ],
+        "span_offsets": [
+          [
+            544,
+            569
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain with swallowing worsens when she swallows.",
+        "spans": [
+          "which worsens when she swallows"
+        ],
+        "span_offsets": [
+          [
+            575,
+            600
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been taking Ensure and other liquids.",
+        "spans": [
+          "She has been taking Ensure and other liquids"
+        ],
+        "span_offsets": [
+          [
+            602,
+            646
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been having trouble taking her hydrocortisone liquids due to the pain.",
+        "spans": [
+          "but has been having trouble taking her hydrocortisone liquids due to the pain"
+        ],
+        "span_offsets": [
+          [
+            648,
+            725
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is on cisplatin chemotherapy.",
+        "spans": [
+          "cisplatin"
+        ],
+        "span_offsets": [
+          [
+            754,
+            763
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is on topotecan chemotherapy.",
+        "spans": [
+          "topotecan"
+        ],
+        "span_offsets": [
+          [
+            768,
+            777
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient started her cisplatin and topotecan chemotherapy a few days ago.",
+        "spans": [
+          "which she started a few days ago"
+        ],
+        "span_offsets": [
+          [
+            792,
+            824
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of stage three nonsmall cell lung cancer.",
+        "spans": [
+          "a history of stage three nonsmall cell lung cancer"
+        ],
+        "span_offsets": [
+          [
+            865,
+            915
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's stage three nonsmall cell lung cancer was diagnosed recently.",
+        "spans": [
+          "diagnosed recently"
+        ],
+        "span_offsets": [
+          [
+            917,
+            935
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports shortness of breath on review of systems.",
+        "spans": [
+          "The patient reports shortness of breath"
+        ],
+        "span_offsets": [
+          [
+            957,
+            996
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports dry cough on review of systems.",
+        "spans": [
+          "dry cough"
+        ],
+        "span_offsets": [
+          [
+            471,
+            480
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports painful swallowing on review of systems.",
+        "spans": [
+          "painful swallowing"
+        ],
+        "span_offsets": [
+          [
+            1013,
+            1031
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking cisplatin.",
+        "spans": [
+          "Cisplatin"
+        ],
+        "span_offsets": [
+          [
+            1055,
+            1064
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking topotecan.",
+        "spans": [
+          "topotecan"
+        ],
+        "span_offsets": [
+          [
+            768,
+            777
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking zofran.",
+        "spans": [
+          "zofran"
+        ],
+        "span_offsets": [
+          [
+            1077,
+            1083
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking hydrocortisone.",
+        "spans": [
+          "hydrocortisone"
+        ],
+        "span_offsets": [
+          [
+            687,
+            701
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's pulse is within normal limits.",
+        "spans": [
+          "The patient's pulse, oxygen saturation, and temperature are within normal limits"
+        ],
+        "span_offsets": [
+          [
+            13,
+            93
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's oxygen saturation is within normal limits.",
+        "spans": [
+          "The patient's pulse, oxygen saturation, and temperature are within normal limits"
+        ],
+        "span_offsets": [
+          [
+            13,
+            93
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's temperature is within normal limits.",
+        "spans": [
+          "The patient's pulse, oxygen saturation, and temperature are within normal limits"
+        ],
+        "span_offsets": [
+          [
+            13,
+            93
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has crackles in the lungs bilaterally.",
+        "spans": [
+          "crackles in the lungs bilaterally"
+        ],
+        "span_offsets": [
+          [
+            154,
+            187
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lung findings could indicate fluid in the lungs.",
+        "spans": [
+          "which could indicate fluid in the lungs"
+        ],
+        "span_offsets": [
+          [
+            189,
+            228
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a lung cancer diagnosis.",
+        "spans": [
+          "consistent with her lung cancer diagnosis"
+        ],
+        "span_offsets": [
+          [
+            230,
+            271
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has erythema on the anterior aspect of the chest on the left side.",
+        "spans": [
+          "erythema on the anterior aspect of the chest on the left side"
+        ],
+        "span_offsets": [
+          [
+            295,
+            356
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's erythema could be due to radiation burns.",
+        "spans": [
+          "which could be due to radiation burns"
+        ],
+        "span_offsets": [
+          [
+            358,
+            395
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no lower extremity edema.",
+        "spans": [
+          "The extremity exam shows no lower extremity edema"
+        ],
+        "span_offsets": [
+          [
+            397,
+            446
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient had a recent chest X-ray.",
+        "spans": [
+          "The patient had a recent chest X-ray"
+        ],
+        "span_offsets": [
+          [
+            463,
+            499
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's chest X-ray showed mild radiation pneumonitis.",
+        "spans": [
+          "which showed mild radiation pneumonitis"
+        ],
+        "span_offsets": [
+          [
+            501,
+            540
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's radiation pneumonitis indicates inflammation of the lungs due to radiation.",
+        "spans": [
+          "indicating inflammation of the lungs due to radiation"
+        ],
+        "span_offsets": [
+          [
+            542,
+            595
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has stage three nonsmall cell lung cancer.",
+        "spans": [
+          "The patient has stage three nonsmall cell lung cancer and radiation pneumonitis"
+        ],
+        "span_offsets": [
+          [
+            12,
+            91
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has radiation pneumonitis.",
+        "spans": [
+          "The patient has stage three nonsmall cell lung cancer and radiation pneumonitis"
+        ],
+        "span_offsets": [
+          [
+            12,
+            91
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's radiation pneumonitis is causing symptoms of shortness of breath.",
+        "spans": [
+          "which is causing her symptoms of shortness of breath"
+        ],
+        "span_offsets": [
+          [
+            93,
+            145
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's radiation pneumonitis is causing symptoms of dry cough.",
+        "spans": [
+          "which is causing her symptoms of dry cough"
+        ],
+        "span_offsets": [
+          [
+            147,
+            156
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's radiation pneumonitis is causing symptoms of painful swallowing.",
+        "spans": [
+          "which is causing her symptoms of painful swallowing"
+        ],
+        "span_offsets": [
+          [
+            162,
+            180
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has nonsmall cell lung cancer as a problem.",
+        "spans": [
+          "Nonsmall cell lung cancer; radiation pneumonitis; painful swallowing"
+        ],
+        "span_offsets": [
+          [
+            197,
+            265
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has radiation pneumonitis as a problem.",
+        "spans": [
+          "Nonsmall cell lung cancer; radiation pneumonitis; painful swallowing"
+        ],
+        "span_offsets": [
+          [
+            197,
+            265
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has painful swallowing as a problem.",
+        "spans": [
+          "Nonsmall cell lung cancer; radiation pneumonitis; painful swallowing"
+        ],
+        "span_offsets": [
+          [
+            197,
+            265
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed prednisone.",
+        "spans": [
+          "I prescribed prednisone 40 mg once daily for 5 days"
+        ],
+        "span_offsets": [
+          [
+            0,
+            51
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's prednisone dose is 40 mg.",
+        "spans": [
+          "40 mg"
+        ],
+        "span_offsets": [
+          [
+            24,
+            29
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's prednisone frequency is once daily.",
+        "spans": [
+          "once daily"
+        ],
+        "span_offsets": [
+          [
+            30,
+            40
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's prednisone duration is 5 days.",
+        "spans": [
+          "for 5 days"
+        ],
+        "span_offsets": [
+          [
+            41,
+            51
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The indication for the patient's prednisone is to reduce inflammation in the lungs.",
+        "spans": [
+          "to reduce inflammation in the lungs"
+        ],
+        "span_offsets": [
+          [
+            52,
+            87
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's prednisone is also intended to alleviate symptoms.",
+        "spans": [
+          "and alleviate symptoms"
+        ],
+        "span_offsets": [
+          [
+            88,
+            110
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed lidocaine spray.",
+        "spans": [
+          "I also prescribed lidocaine spray"
+        ],
+        "span_offsets": [
+          [
+            112,
+            145
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lidocaine spray is intended to help alleviate painful swallowing.",
+        "spans": [
+          "to help alleviate painful swallowing"
+        ],
+        "span_offsets": [
+          [
+            146,
+            182
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lidocaine spray frequency is 4 times a day.",
+        "spans": [
+          "which can be used 4 times a day"
+        ],
+        "span_offsets": [
+          [
+            184,
+            215
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is instructed to take the medication after eating and drinking.",
+        "spans": [
+          "after eating and drinking"
+        ],
+        "span_offsets": [
+          [
+            262,
+            287
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of taking the medication after eating and drinking is to help the patient stay hydrated.",
+        "spans": [
+          "to help her stay hydrated"
+        ],
+        "span_offsets": [
+          [
+            288,
+            313
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will have a follow-up appointment in two weeks.",
+        "spans": [
+          "We will see the patient back in two weeks"
+        ],
+        "span_offsets": [
+          [
+            327,
+            368
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the follow-up appointment is to monitor the patient's progress.",
+        "spans": [
+          "to monitor her progress"
+        ],
+        "span_offsets": [
+          [
+            369,
+            392
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The treatment plan will be adjusted as needed during the follow-up appointment.",
+        "spans": [
+          "and adjust her treatment plan as needed"
+        ],
+        "span_offsets": [
+          [
+            393,
+            432
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

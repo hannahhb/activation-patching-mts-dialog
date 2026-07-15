@@ -1,0 +1,755 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 54-year-old male.",
+        "spans": [
+          "a 54-year-old male"
+        ],
+        "span_offsets": [
+          [
+            18,
+            36
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient presents with stabbing, shooting pain in the right cheekbone area of his face.",
+        "spans": [
+          "stabbing, shooting pain in the right cheekbone area of his face"
+        ],
+        "span_offsets": [
+          [
+            67,
+            130
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's pain in the right cheekbone area has been ongoing for approximately 2-3 months.",
+        "spans": [
+          "which has been ongoing for approximately 2-3 months"
+        ],
+        "span_offsets": [
+          [
+            132,
+            183
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's pain is exacerbated by certain temperatures.",
+        "spans": [
+          "exacerbated by certain temperatures"
+        ],
+        "span_offsets": [
+          [
+            213,
+            248
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's pain can be triggered by cold weather.",
+        "spans": [
+          "can be triggered by cold weather"
+        ],
+        "span_offsets": [
+          [
+            253,
+            285
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies numbness in the affected area.",
+        "spans": [
+          "denies numbness or tingling in the affected area"
+        ],
+        "span_offsets": [
+          [
+            290,
+            338
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies tingling in the affected area.",
+        "spans": [
+          "denies numbness or tingling in the affected area"
+        ],
+        "span_offsets": [
+          [
+            290,
+            338
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's smile is unchanged.",
+        "spans": [
+          "his smile and vision are unchanged"
+        ],
+        "span_offsets": [
+          [
+            356,
+            390
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's vision is unchanged.",
+        "spans": [
+          "his smile and vision are unchanged"
+        ],
+        "span_offsets": [
+          [
+            356,
+            390
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient describes the pain as excruciating.",
+        "spans": [
+          "describes the pain as excruciating"
+        ],
+        "span_offsets": [
+          [
+            395,
+            429
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient rates the pain as a 10 out of 10 in severity.",
+        "spans": [
+          "rates it as a 10 out of 10 in severity"
+        ],
+        "span_offsets": [
+          [
+            434,
+            472
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has tried ibuprofen for pain relief.",
+        "spans": [
+          "He has tried ibuprofen"
+        ],
+        "span_offsets": [
+          [
+            474,
+            496
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has tried Motrin for pain relief.",
+        "spans": [
+          "Motrin"
+        ],
+        "span_offsets": [
+          [
+            498,
+            504
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has tried topical treatments such as tiger balm for pain relief.",
+        "spans": [
+          "topical treatments such as tiger balm"
+        ],
+        "span_offsets": [
+          [
+            510,
+            547
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "Ibuprofen, Motrin, and topical treatments such as tiger balm have provided minimal relief for the patient's pain.",
+        "spans": [
+          "which have provided minimal relief"
+        ],
+        "span_offsets": [
+          [
+            549,
+            583
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a history of occasional headaches.",
+        "spans": [
+          "a history of occasional headaches"
+        ],
+        "span_offsets": [
+          [
+            624,
+            657
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient takes Tylenol for occasional headaches.",
+        "spans": [
+          "he takes Tylenol for occasional headaches"
+        ],
+        "span_offsets": [
+          [
+            840,
+            881
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies a history of migraines.",
+        "spans": [
+          "denies a history of migraines or brain tumors"
+        ],
+        "span_offsets": [
+          [
+            691,
+            736
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies a history of brain tumors.",
+        "spans": [
+          "denies a history of migraines or brain tumors"
+        ],
+        "span_offsets": [
+          [
+            691,
+            736
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports no symptoms in other organs or systems.",
+        "spans": [
+          "The patient reports no symptoms in other organs or systems"
+        ],
+        "span_offsets": [
+          [
+            758,
+            816
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is currently taking Tylenol.",
+        "spans": [
+          "He takes Tylenol for occasional headaches"
+        ],
+        "span_offsets": [
+          [
+            840,
+            881
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient was able to follow the physician's finger in both directions.",
+        "spans": [
+          "The patient was able to follow my finger in both directions"
+        ],
+        "span_offsets": [
+          [
+            15,
+            74
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's smile appeared symmetric.",
+        "spans": [
+          "his smile appeared symmetric"
+        ],
+        "span_offsets": [
+          [
+            80,
+            108
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reported numbness on the right side of his face when his face was rubbed next to his ear.",
+        "spans": [
+          "a little numbness on the right side of his face when I rubbed my fingers next to his ear"
+        ],
+        "span_offsets": [
+          [
+            122,
+            210
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reported feeling numb on the right side of his face when a cotton tape was run along the side of his face.",
+        "spans": [
+          "feeling a little numb on the right side"
+        ],
+        "span_offsets": [
+          [
+            285,
+            324
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reported feeling dull when poked with a needle on the right side of his face.",
+        "spans": [
+          "feeling dull, whereas on the left side, he reported feeling sharp"
+        ],
+        "span_offsets": [
+          [
+            400,
+            465
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reported feeling sharp when poked with a needle on the left side of his face.",
+        "spans": [
+          "feeling dull, whereas on the left side, he reported feeling sharp"
+        ],
+        "span_offsets": [
+          [
+            400,
+            465
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has trigeminal neuralgia.",
+        "spans": [
+          "The patient has trigeminal neuralgia"
+        ],
+        "span_offsets": [
+          [
+            12,
+            48
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "Trigeminal neuralgia is a condition where compression of the trigeminal nerve by a small blood vessel causes shooting, electrical pain in the face.",
+        "spans": [
+          "a condition where compression of the trigeminal nerve by a small blood vessel causes shooting, electrical pain in the face"
+        ],
+        "span_offsets": [
+          [
+            50,
+            172
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed Tegretol.",
+        "spans": [
+          "I prescribed Tegretol 100mg orally 3 times a day"
+        ],
+        "span_offsets": [
+          [
+            0,
+            48
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Tegretol dose is 100mg.",
+        "spans": [
+          "100mg"
+        ],
+        "span_offsets": [
+          [
+            22,
+            27
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Tegretol frequency is 3 times a day.",
+        "spans": [
+          "3 times a day"
+        ],
+        "span_offsets": [
+          [
+            35,
+            48
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Tegretol is taken orally.",
+        "spans": [
+          "orally"
+        ],
+        "span_offsets": [
+          [
+            28,
+            34
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Tegretol is for the treatment of trigeminal neuralgia.",
+        "spans": [
+          "for the treatment of trigeminal neuralgia"
+        ],
+        "span_offsets": [
+          [
+            49,
+            90
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was informed of potential Tegretol side effects, including memory loss.",
+        "spans": [
+          "memory loss"
+        ],
+        "span_offsets": [
+          [
+            160,
+            171
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was informed of potential Tegretol side effects, including tingling.",
+        "spans": [
+          "tingling"
+        ],
+        "span_offsets": [
+          [
+            173,
+            181
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was informed of potential Tegretol side effects, including imbalance.",
+        "spans": [
+          "imbalance"
+        ],
+        "span_offsets": [
+          [
+            183,
+            192
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was informed of potential Tegretol side effects, including dermatologic reactions.",
+        "spans": [
+          "dermatologic reactions"
+        ],
+        "span_offsets": [
+          [
+            198,
+            220
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a potential risk factor for Tegretol side effects, specifically Eustachian tube dysfunction.",
+        "spans": [
+          "particularly in individuals with Eustachian tube dysfunction"
+        ],
+        "span_offsets": [
+          [
+            222,
+            282
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was recommended to undergo genetic testing for Tegretol safety.",
+        "spans": [
+          "I recommended genetic testing to ensure the medication is safe for the patient"
+        ],
+        "span_offsets": [
+          [
+            284,
+            362
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is scheduled to follow up in one month.",
+        "spans": [
+          "I instructed the patient to follow up in one month",
+          "The patient will return in one month"
+        ],
+        "span_offsets": [
+          [
+            364,
+            414
+          ],
+          [
+            523,
+            559
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": true,
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ]
+      },
+      {
+        "fact": "The purpose of the follow-up is to assess the efficacy of the Tegretol.",
+        "spans": [
+          "to assess the efficacy of the medication",
+          "to assess the efficacy of the Tegretol"
+        ],
+        "span_offsets": [
+          [
+            415,
+            455
+          ],
+          [
+            560,
+            598
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": true,
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ]
+      },
+      {
+        "fact": "The purpose of the follow-up is to discuss further treatment options if necessary.",
+        "spans": [
+          "to discuss further treatment options if necessary"
+        ],
+        "span_offsets": [
+          [
+            460,
+            509
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient presents with sudden visual distortions.,0.0,"[""sudden visual distortions""]","[[31, 56]]","[""exact""]",True,False
+1,subjective,The patient presents with blurring of vision.,0.0,"[""blurring of vision""]","[[61, 79]]","[""exact""]",True,False
+2,subjective,The patient sees straight lines and door frames as crooked.,0.0,"[""straight lines and door frames appear crooked to her""]","[[98, 150]]","[""exact""]",True,False
+3,subjective,The patient has trouble adjusting to dim lights.,0.0,"[""trouble adjusting to dim lights""]","[[163, 194]]","[""exact""]",True,False
+4,subjective,The patient has trouble adjusting to dim lights in restaurants.,0.0,"[""trouble adjusting to dim lights, particularly in restaurants"", ""difficulty adjusting to dim lights in restaurants""]","[[163, 223], [522, 571]]","[""exact"", ""exact""]",True,True
+5,subjective,The patient has a history of macular degeneration.,0.0,"[""a history of macular degeneration"", ""The patient has a history of macular degeneration""]","[[233, 266], [431, 480]]","[""exact"", ""exact""]",True,True
+6,subjective,The patient is a smoker.,0.0,"[""is a smoker""]","[[271, 282]]","[""exact""]",True,False
+7,subjective,The patient consumes a pack of cigarettes per day.,0.0,"[""consuming a pack of cigarettes per day""]","[[284, 322]]","[""exact""]",True,False
+8,subjective,The patient has difficulty stopping smoking.,0.25,"[""difficulty stopping smoking""]","[[336, 363]]","[""exact""]",True,False
+9,subjective,The patient infrequently checks her blood pressure.,0.75,"[""infrequently checks her blood pressure""]","[[368, 406]]","[""exact""]",True,False
+10,objective,The patient has posterior chamber intraocular lenses in both eyes.,0.0,"[""posterior chamber intraocular lenses in both eyes""]","[[56, 105]]","[""exact""]",True,False
+11,objective,The patient's corneas are clear.,0.0,"[""clear corneas""]","[[112, 125]]","[""exact""]",True,False
+12,objective,The patient's cup-to-disc ratio is 0.2 in the right eye.,0.25,"[""The cup-to-disc ratio is 0.2 in the right eye""]","[[127, 172]]","[""exact""]",True,False
+13,objective,The patient's cup-to-disc ratio is 0.3 in the left eye.,0.25,"[""The cup-to-disc ratio is 0.3 in the left eye""]","[[131, 148]]","[""word""]",True,False
+14,objective,The patient's retina is attached 360 degrees without tears or holes in the right eye.,0.0,"[""the retina to be attached 360 degrees without tears or holes in the right eye""]","[[227, 304]]","[""exact""]",True,False
+15,objective,The patient has drusen in the macula of the left eye.,1.0,"[""drusen in the macula""]","[[345, 365]]","[""exact""]",True,False
+16,objective,The patient has thickening of the retina in the left eye.,1.0,"[""thickening of the retina""]","[[367, 391]]","[""exact""]",True,False
+17,objective,The patient has subretinal fluid in the left eye.,1.0,"[""presence of subretinal fluid""]","[[393, 421]]","[""exact""]",True,False
+18,objective,The patient has exudates accumulation positive for hemorrhage in the left eye.,1.0,"[""exudates accumulation positive for hemorrhage""]","[[427, 472]]","[""exact""]",True,False
+19,objective,The patient's OCT shows drusen deposit in the right eye.,0.25,"[""drusen deposit""]","[[519, 533]]","[""exact""]",True,False
+20,objective,The patient's OCT shows subretinal fluid accumulation in the right eye.,0.0,"[""subretinal fluid accumulation""]","[[535, 564]]","[""exact""]",True,False
+21,objective,The patient's OCT shows choroidal neovascular membrane in the right eye.,0.25,"[""choroidal neovascular membrane""]","[[566, 596]]","[""exact""]",True,False
+22,objective,The patient's OCT shows focal areas of leakage in the right eye.,0.5,"[""focal areas of leakage""]","[[602, 624]]","[""exact""]",True,False
+23,objective,The patient has neovascular age-related macular degeneration in the right eye.,0.0,"[""consistent with neovascular age-related macular degeneration""]","[[642, 702]]","[""exact""]",True,False
+24,assessment,The patient has neovascular age-related macular degeneration.,0.0,"[""The patient has neovascular age-related macular degeneration""]","[[12, 72]]","[""exact""]",True,False
+25,assessment,The patient's neovascular age-related macular degeneration is at an advanced stage.,0.0,"[""an advanced stage""]","[[74, 91]]","[""exact""]",True,False
+26,assessment,The patient's neovascular age-related macular degeneration typically leads to severe vision loss.,1.0,"[""typically leads to severe vision loss""]","[[97, 134]]","[""exact""]",True,False
+27,assessment,The patient's neovascular age-related macular degeneration is caused by the growth of abnormal blood vessels beneath the retina.,1.0,"[""the growth of abnormal blood vessels beneath the retina""]","[[142, 197]]","[""exact""]",True,False
+28,assessment,The patient's neovascular age-related macular degeneration results in leaking fluid and blood.,1.0,"[""leaking fluid and blood""]","[[199, 222]]","[""exact""]",True,False
+29,assessment,The patient's neovascular age-related macular degeneration creates a large blind spot in the center of the visual field.,1.0,"[""creating a large blind spot in the center of the visual field""]","[[227, 288]]","[""exact""]",True,False
+30,assessment,The patient has age-related macular degeneration as an active problem.,0.0,"[""Age-related macular degeneration; active""]","[[305, 345]]","[""exact""]",True,False
+31,assessment,The patient was prescribed Lucentis injections.,1.0,"[""I prescribed Lucentis injections""]","[[354, 386]]","[""exact""]",True,False
+32,assessment,The patient's Lucentis injections are to be administered once a month.,1.0,"[""once a month""]","[[387, 399]]","[""exact""]",True,False
+33,assessment,The patient's Lucentis injections are to be injected into the vitreous portion of the eye.,0.75,"[""injected into the vitreous portion of the eye""]","[[401, 446]]","[""exact""]",True,False
+34,assessment,The patient's Lucentis injections are to be given after numbing.,1.0,"[""after numbing""]","[[447, 460]]","[""exact""]",True,False
+35,assessment,The patient's Lucentis injections are intended to slow the rate of vision decline or stop further vision loss.,1.0,"[""to slow the rate of vision decline or stop further vision loss""]","[[506, 568]]","[""exact""]",True,False
+36,assessment,The patient should continue to monitor their blood pressure regularly.,1.0,"[""continue to monitor their blood pressure regularly""]","[[589, 639]]","[""exact""]",True,False
+37,assessment,The patient should consider keeping a log of their blood pressure readings.,1.0,"[""consider keeping a log of their readings""]","[[644, 684]]","[""exact""]",True,False
+38,assessment,The patient will be seen again to monitor the effectiveness of the treatment.,1.0,"[""I will see the patient again to monitor the effectiveness of the treatment""]","[[698, 772]]","[""exact""]",True,False
+39,assessment,The patient's treatment plan will be adjusted as needed.,1.0,"[""adjust the plan as needed""]","[[777, 802]]","[""exact""]",True,False

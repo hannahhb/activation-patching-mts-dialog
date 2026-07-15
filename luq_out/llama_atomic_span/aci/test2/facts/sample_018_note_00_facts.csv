@@ -1,0 +1,49 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Elizabeth.,0.5,"[""Elizabeth is a 53-year-old female""]","[[5, 38]]","[""exact""]",True,False
+1,subjective,The patient is 53 years old.,0.0,"[""53-year-old female""]","[[20, 38]]","[""exact""]",True,False
+2,subjective,The patient is female.,0.0,"[""53-year-old female""]","[[20, 38]]","[""exact""]",True,False
+3,subjective,The patient complains of chest pain.,0.0,"[""complaining of chest pain""]","[[39, 64]]","[""exact""]",True,False
+4,subjective,The patient's chest pain started approximately three months ago.,0.0,"[""started approximately three months ago""]","[[70, 108]]","[""exact""]",True,False
+5,subjective,"The patient's chest pain is described as a dull, pressure-like sensation.",0.0,"[""a dull, pressure-like sensation""]","[[135, 166]]","[""exact""]",True,False
+6,subjective,The patient's chest pain occurs mainly when she walks.,0.0,"[""occurs mainly when she walks""]","[[172, 200]]","[""exact""]",True,False
+7,subjective,The patient's chest pain has not been relieved by rest.,1.0,"[""has not been relieved by rest""]","[[205, 234]]","[""exact""]",True,False
+8,subjective,The patient denies any chest pain at the moment.,0.5,"[""She denies any chest pain at the moment""]","[[236, 275]]","[""exact""]",True,False
+9,subjective,The patient has a past medical history of diabetes.,0.0,"[""past medical history of diabetes""]","[[287, 319]]","[""exact""]",True,False
+10,subjective,The patient has a past medical history of high blood pressure.,0.0,"[""high blood pressure""]","[[324, 343]]","[""exact""]",True,False
+11,subjective,The patient was unaware of her high blood pressure until today.,1.0,"[""although she was unaware of her high blood pressure until today""]","[[345, 408]]","[""exact""]",True,False
+12,subjective,The patient is currently on metformin.,0.0,"[""metformin 500mg twice a day""]","[[430, 457]]","[""exact""]",True,False
+13,subjective,The patient's metformin dose is 500mg.,0.0,"[""500mg""]","[[440, 445]]","[""exact""]",True,False
+14,subjective,The patient takes metformin twice a day.,0.0,"[""twice a day""]","[[446, 457]]","[""exact""]",True,False
+15,subjective,The patient's metformin is for her diabetes.,0.0,"[""for her diabetes""]","[[458, 474]]","[""exact""]",True,False
+16,subjective,The patient has a family history of heart disease.,0.25,"[""a family history of heart disease""]","[[597, 630]]","[""exact""]",True,False
+17,subjective,The patient is a smoker.,1.0,"[""She is a smoker""]","[[632, 647]]","[""exact""]",True,False
+18,subjective,The patient denies any shortness of breath.,0.0,"[""denies any shortness of breath""]","[[712, 742]]","[""exact""]",True,False
+19,subjective,The patient denies any sweats.,0.25,"[""sweats""]","[[744, 750]]","[""exact""]",True,False
+20,subjective,The patient denies any clamminess.,0.25,"[""clamminess""]","[[752, 762]]","[""exact""]",True,False
+21,subjective,The patient denies any nausea.,0.5,"[""nausea""]","[[767, 773]]","[""exact""]",True,False
+22,objective,The patient's physical exam is normal except for a few abnormalities.,0.0,"[""The physical exam was normal except for a 2/6 systolic ejection murmur, and 1+ nonpitting edema in the lower legs""]","[[15, 128]]","[""exact""]",True,False
+23,objective,The patient has a 2/6 systolic ejection murmur.,0.25,"[""a 2/6 systolic ejection murmur""]","[[55, 85]]","[""exact""]",True,False
+24,objective,The patient has 1+ nonpitting edema in the lower legs.,0.0,"[""1+ nonpitting edema in the lower legs""]","[[91, 128]]","[""exact""]",True,False
+25,objective,The patient's EKG is normal.,0.0,"[""EKG performed today was normal""]","[[145, 175]]","[""exact""]",True,False
+26,objective,The patient's EKG shows no signs of a heart attack.,0.0,"[""showing no signs of a heart attack""]","[[177, 211]]","[""exact""]",True,False
+27,assessment,The patient is a 53-year-old female.,1.0,"[""a 53-year-old female""]","[[27, 47]]","[""exact""]",True,False
+28,assessment,The patient has suspected unstable angina.,0.0,"[""suspected unstable angina""]","[[53, 78]]","[""exact""]",True,False
+29,assessment,The patient has diabetes.,0.0,"[""diabetes""]","[[80, 88]]","[""exact""]",True,False
+30,assessment,The patient has high blood pressure.,0.5,"[""high blood pressure""]","[[94, 113]]","[""exact""]",True,False
+31,assessment,The patient has suspected heart disease.,0.0,"[""suspected heart disease""]","[[178, 201]]","[""exact""]",True,False
+32,assessment,Unstable angina is a problem for the patient.,0.0,"[""Unstable angina""]","[[130, 145]]","[""exact""]",True,False
+33,assessment,Diabetes is a problem for the patient.,0.0,"[""diabetes""]","[[80, 88]]","[""exact""]",True,False
+34,assessment,High blood pressure is a problem for the patient.,0.0,"[""high blood pressure""]","[[94, 113]]","[""exact""]",True,False
+35,assessment,Suspected heart disease is a problem for the patient.,0.25,"[""suspected heart disease""]","[[178, 201]]","[""exact""]",True,False
+36,plan,The patient was prescribed aspirin.,0.0,"[""aspirin 81mg once a day""]","[[13, 36]]","[""exact""]",True,False
+37,plan,The patient's aspirin dose is 81mg.,0.0,"[""81mg""]","[[21, 25]]","[""exact""]",True,False
+38,plan,The patient's aspirin frequency is once a day.,0.0,"[""once a day""]","[[26, 36]]","[""exact""]",True,False
+39,plan,The patient's aspirin is for chest pain management.,0.0,"[""for chest pain management""]","[[37, 62]]","[""exact""]",True,False
+40,plan,The patient was prescribed nitroglycerin.,0.0,"[""nitroglycerin""]","[[82, 95]]","[""exact""]",True,False
+41,plan,The patient's nitroglycerin is to be taken if the chest pain does not resolve after 1-2 pills.,1.0,"[""for the patient to take if the chest pain does not resolve after 1-2 pills""]","[[96, 170]]","[""exact""]",True,False
+42,plan,The patient was referred to cardiology.,0.0,"[""I referred the patient to cardiology""]","[[172, 208]]","[""exact""]",True,False
+43,plan,The patient's cardiology referral is for further evaluation and stress testing.,0.0,"[""for further evaluation and stress testing""]","[[209, 250]]","[""exact""]",True,False
+44,plan,The patient is to return in two weeks for follow-up.,0.0,"[""I instructed the patient to return in two weeks for follow-up"", ""The patient is to return in two weeks for follow-up""]","[[252, 313], [426, 477]]","[""exact"", ""exact""]",True,True
+45,plan,The patient is to have a stress test.,0.0,"[""and to have a stress test""]","[[478, 503]]","[""exact""]",True,False
+46,plan,The patient was instructed to use a blood pressure cuff at home.,0.0,"[""I also instructed the patient to use a blood pressure cuff at home""]","[[315, 381]]","[""exact""]",True,False
+47,plan,The patient is to enter blood pressure readings in EPIC.,0.0,"[""and enter the readings in EPIC""]","[[382, 412]]","[""exact""]",True,False

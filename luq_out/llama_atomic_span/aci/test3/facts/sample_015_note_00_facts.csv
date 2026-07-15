@@ -1,0 +1,48 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient has a 2-year history of chronic low back pain.,0.25,"[""2-year history of chronic low back pain""]","[[33, 72]]","[""exact""]",True,False
+1,subjective,The patient's chronic low back pain started after a fall while playing basketball.,0.25,"[""which started after a fall while playing basketball""]","[[74, 125]]","[""exact""]",True,False
+2,subjective,The patient's low back pain is sharp.,0.0,"[""The pain is sharp and throbbing""]","[[127, 158]]","[""exact""]",True,False
+3,subjective,The patient's low back pain is throbbing.,0.0,"[""The pain is sharp and throbbing""]","[[127, 158]]","[""exact""]",True,False
+4,subjective,The patient's low back pain radiates down the left leg.,0.0,"[""radiating down the left leg""]","[[160, 187]]","[""exact""]",True,False
+5,subjective,The patient's low back pain is exacerbated by standing.,0.75,"[""exacerbated by standing""]","[[196, 219]]","[""exact""]",True,False
+6,subjective,The patient's low back pain is relieved by lying on the side.,1.0,"[""relieved by lying on the side""]","[[224, 253]]","[""exact""]",True,False
+7,subjective,The patient has experienced numbness in the left leg.,0.0,"[""numbness in the left leg""]","[[283, 307]]","[""exact""]",True,False
+8,subjective,The patient has had one episode of incontinence.,0.0,"[""one episode of incontinence""]","[[320, 347]]","[""exact""]",True,False
+9,subjective,The patient's incontinence was not a consistent issue.,0.0,"[""which was not a consistent issue""]","[[349, 381]]","[""exact""]",True,False
+10,subjective,The patient has tried injections for low back pain.,0.0,"[""The patient has tried injections""]","[[383, 415]]","[""exact""]",True,False
+11,subjective,The patient has tried physical therapy for low back pain.,0.0,"[""physical therapy""]","[[420, 436]]","[""exact""]",True,False
+12,subjective,The patient's injections for low back pain had limited success.,0.0,"[""but with limited success""]","[[438, 462]]","[""exact""]",True,False
+13,subjective,The patient's physical therapy for low back pain had limited success.,0.0,"[""but with limited success""]","[[438, 462]]","[""exact""]",True,False
+14,subjective,The patient has a history of smoking.,0.0,"[""The patient has a history of smoking""]","[[487, 523]]","[""exact""]",True,False
+15,subjective,The patient is currently not smoking.,0.0,"[""but is currently not smoking""]","[[525, 553]]","[""exact""]",True,False
+16,subjective,The patient's father's fourth cousin has scoliosis.,1.0,"[""The patient's father's fourth cousin has scoliosis""]","[[555, 605]]","[""exact""]",True,False
+17,subjective,The patient has gained 80 pounds in the past year.,0.0,"[""The patient has gained 80 pounds in the past year""]","[[607, 656]]","[""exact""]",True,False
+18,subjective,The patient denies fever.,0.5,"[""The patient denies fever, chills, or other symptoms""]","[[678, 729]]","[""exact""]",True,False
+19,subjective,The patient denies chills.,0.75,"[""The patient denies fever, chills, or other symptoms""]","[[678, 729]]","[""exact""]",True,False
+20,subjective,The patient denies other symptoms.,0.75,"[""The patient denies fever, chills, or other symptoms""]","[[678, 729]]","[""exact""]",True,False
+21,objective,The patient's blood pressure was not mentioned.,0.0,"[""Blood pressure, pulse rate, oxygen saturation, and temperature were not mentioned""]","[[13, 94]]","[""exact""]",True,False
+22,objective,The patient's pulse rate was not mentioned.,0.0,"[""Blood pressure, pulse rate, oxygen saturation, and temperature were not mentioned""]","[[13, 94]]","[""exact""]",True,False
+23,objective,The patient's oxygen saturation was not mentioned.,0.0,"[""Blood pressure, pulse rate, oxygen saturation, and temperature were not mentioned""]","[[13, 94]]","[""exact""]",True,False
+24,objective,The patient's temperature was not mentioned.,0.0,"[""Blood pressure, pulse rate, oxygen saturation, and temperature were not mentioned""]","[[13, 94]]","[""exact""]",True,False
+25,objective,The patient had midline tenderness on the L4-L5 disk space.,0.0,"[""The patient had midline tenderness on the L4-L5 disk space""]","[[112, 170]]","[""exact""]",True,False
+26,objective,The patient had right-sided lumbar paravertebral tenderness.,0.0,"[""The patient had midline tenderness on the L4-L5 disk space with right-sided lumbar paravertebral tenderness""]","[[112, 219]]","[""exact""]",True,False
+27,objective,The patient experienced pain with lumbar flexion.,0.75,"[""The patient experienced pain with lumbar flexion and extension""]","[[221, 283]]","[""exact""]",True,False
+28,objective,The patient experienced pain with lumbar extension.,0.75,"[""The patient experienced pain with lumbar flexion and extension""]","[[221, 283]]","[""exact""]",True,False
+29,objective,The patient's straight leg test was positive.,0.25,"[""The straight leg test was positive""]","[[285, 319]]","[""exact""]",True,False
+30,objective,The patient had decreased sensation to light touch at the L4 dermatome.,0.0,"[""The patient had decreased sensation to light touch at the L4 dermatome""]","[[321, 391]]","[""exact""]",True,False
+31,objective,The patient's patella reflexes were symmetrical.,0.0,"[""patella, and Achilles reflexes were symmetrical""]","[[393, 440]]","[""exact""]",True,False
+32,objective,The patient's Achilles reflexes were symmetrical.,0.0,"[""patella, and Achilles reflexes were symmetrical""]","[[393, 440]]","[""exact""]",True,False
+33,objective,The patient's MRI results showed disk desiccation.,0.0,"[""MRI results showed a disk desiccation""]","[[457, 494]]","[""exact""]",True,False
+34,objective,The patient's MRI results showed disk bulge.,0.0,"[""MRI results showed a disk desiccation, disk bulge""]","[[457, 506]]","[""exact""]",True,False
+35,objective,The patient's MRI results showed paracentral disk herniation.,0.0,"[""disk bulge with paracentral disk herniation""]","[[496, 539]]","[""exact""]",True,False
+36,objective,The patient had moderate right foraminal stenosis.,0.0,"[""resulting in moderate right foraminal stenosis""]","[[540, 586]]","[""exact""]",True,False
+37,assessment,The patient has a herniated disk at L4-L5 with radiculopathy.,0.0,"[""The patient has a herniated disk at L4-L5 with radiculopathy""]","[[12, 72]]","[""exact""]",True,False
+38,assessment,The patient has lumbar back pain.,0.0,"[""Lumbar back pain""]","[[89, 105]]","[""exact""]",True,False
+39,assessment,The patient has moderate right foraminal stenosis.,0.75,"[""Moderate right foraminal stenosis""]","[[151, 184]]","[""exact""]",True,False
+40,plan,A spinal injection with a corticosteroid was recommended to the patient.,0.0,"[""I recommended a spinal injection with a corticosteroid""]","[[0, 54]]","[""exact""]",True,False
+41,plan,The purpose of the spinal injection is to help reduce inflammation and target the bulge.,0.25,"[""to help reduce inflammation and target the bulge""]","[[55, 103]]","[""exact""]",True,False
+42,plan,The patient will take a prescription medication for anxiety before the procedure.,0.25,"[""The patient will take a prescription for a medication to help with anxiety before the procedure""]","[[105, 200]]","[""exact""]",True,False
+43,plan,A prescription for pain medication will be written for the patient if needed after the injection.,0.5,"[""I will write a prescription for pain medication, but only if the patient still experiences pain after the injection""]","[[202, 317]]","[""exact""]",True,False
+44,plan,The patient will schedule the injection procedure at the front desk.,0.25,"[""The patient will schedule the injection procedure at the front desk""]","[[331, 398]]","[""exact""]",True,False
+45,plan,The injection procedure is expected to take about an hour.,0.5,"[""which should take about an hour""]","[[400, 431]]","[""exact""]",True,False
+46,plan,The patient may need to repeat the procedure up to 4 times a year if the first one is successful.,0.75,"[""The patient may need to repeat the procedure up to 4 times a year if the first one is successful""]","[[433, 529]]","[""exact""]",True,False

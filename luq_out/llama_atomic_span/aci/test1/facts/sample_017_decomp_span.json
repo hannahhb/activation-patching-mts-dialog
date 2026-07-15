@@ -1,0 +1,891 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Tyler.",
+        "spans": [
+          "Tyler, a 56-year-old male, presents"
+        ],
+        "span_offsets": [
+          [
+            5,
+            40
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is a 56-year-old male.",
+        "spans": [
+          "a 56-year-old male"
+        ],
+        "span_offsets": [
+          [
+            12,
+            30
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a 4-5 week history of difficulty swallowing.",
+        "spans": [
+          "a 4-5 week history of difficulty swallowing"
+        ],
+        "span_offsets": [
+          [
+            46,
+            89
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient describes a sensation of something being stuck in his throat.",
+        "spans": [
+          "describing a sensation of something being stuck in his throat"
+        ],
+        "span_offsets": [
+          [
+            91,
+            152
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The sensation of something being stuck in the patient's throat can be painful.",
+        "spans": [
+          "which can be painful"
+        ],
+        "span_offsets": [
+          [
+            154,
+            174
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient requires washing down solid foods occasionally due to difficulty swallowing.",
+        "spans": [
+          "requires him to wash down solid foods occasionally"
+        ],
+        "span_offsets": [
+          [
+            179,
+            229
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has never fully choked.",
+        "spans": [
+          "He has never fully choked"
+        ],
+        "span_offsets": [
+          [
+            231,
+            256
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has thought about choking.",
+        "spans": [
+          "has thought about it"
+        ],
+        "span_offsets": [
+          [
+            261,
+            281
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's symptoms of difficulty swallowing are more pronounced with solids than liquids.",
+        "spans": [
+          "The symptoms are more pronounced with solids than liquids"
+        ],
+        "span_offsets": [
+          [
+            283,
+            340
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies coughing.",
+        "spans": [
+          "He denies coughing"
+        ],
+        "span_offsets": [
+          [
+            342,
+            360
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies vomiting blood.",
+        "spans": [
+          "vomiting blood"
+        ],
+        "span_offsets": [
+          [
+            362,
+            376
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies any weight loss.",
+        "spans": [
+          "or any weight loss"
+        ],
+        "span_offsets": [
+          [
+            378,
+            396
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has diabetes.",
+        "spans": [
+          "Diabetes"
+        ],
+        "span_offsets": [
+          [
+            421,
+            429
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has high blood pressure.",
+        "spans": [
+          "high blood pressure"
+        ],
+        "span_offsets": [
+          [
+            434,
+            453
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is taking metformin for diabetes.",
+        "spans": [
+          "metformin 500mg twice a day for diabetes"
+        ],
+        "span_offsets": [
+          [
+            478,
+            518
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is taking metformin 500mg twice a day.",
+        "spans": [
+          "metformin 500mg twice a day"
+        ],
+        "span_offsets": [
+          [
+            478,
+            505
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is taking norvasc for high blood pressure.",
+        "spans": [
+          "norvasc for high blood pressure"
+        ],
+        "span_offsets": [
+          [
+            523,
+            554
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's review of systems is negative for other symptoms.",
+        "spans": [
+          "No mention of any other symptoms"
+        ],
+        "span_offsets": [
+          [
+            576,
+            608
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is 120/50.",
+        "spans": [
+          "Blood pressure: 120/50"
+        ],
+        "span_offsets": [
+          [
+            2,
+            24
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's neck exam shows no swelling or masses.",
+        "spans": [
+          "Neck: no swelling or masses"
+        ],
+        "span_offsets": [
+          [
+            62,
+            89
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's thyroid is normal.",
+        "spans": [
+          "Thyroid: normal"
+        ],
+        "span_offsets": [
+          [
+            92,
+            107
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's throat exam shows no masses, swelling, or redness.",
+        "spans": [
+          "Throat: no masses, swelling, or redness"
+        ],
+        "span_offsets": [
+          [
+            110,
+            149
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's lung exam is clear.",
+        "spans": [
+          "Lung exam: clear"
+        ],
+        "span_offsets": [
+          [
+            152,
+            168
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's heart exam is normal.",
+        "spans": [
+          "Heart exam: normal"
+        ],
+        "span_offsets": [
+          [
+            171,
+            189
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has epigastric tenderness on the right side.",
+        "spans": [
+          "Belly exam: epigastric tenderness on the right side"
+        ],
+        "span_offsets": [
+          [
+            192,
+            243
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's back exam is normal.",
+        "spans": [
+          "Back exam: normal"
+        ],
+        "span_offsets": [
+          [
+            246,
+            263
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's extremity exam is normal.",
+        "spans": [
+          "Extremity exam: normal"
+        ],
+        "span_offsets": [
+          [
+            266,
+            288
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's neurological exam is fine.",
+        "spans": [
+          "Neurological exam: fine"
+        ],
+        "span_offsets": [
+          [
+            291,
+            314
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Hemoglobin A1c is 7.4.",
+        "spans": [
+          "Hemoglobin A1c: 7.4"
+        ],
+        "span_offsets": [
+          [
+            318,
+            337
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Hemoglobin A1c result is from a previous visit.",
+        "spans": [
+          "from previous visit"
+        ],
+        "span_offsets": [
+          [
+            339,
+            358
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient is suspected to have a narrowing in his throat.",
+        "spans": [
+          "I suspect that Tyler may have a narrowing in his throat"
+        ],
+        "span_offsets": [
+          [
+            12,
+            67
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's narrowing in his throat is potentially due to a stricture of the esophagus.",
+        "spans": [
+          "potentially due to a stricture of the esophagus"
+        ],
+        "span_offsets": [
+          [
+            69,
+            116
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has difficulty swallowing.",
+        "spans": [
+          "his difficulty swallowing",
+          "Difficulty swallowing"
+        ],
+        "span_offsets": [
+          [
+            135,
+            160
+          ],
+          [
+            176,
+            197
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": true,
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is suspected to have narrowing of the esophagus.",
+        "spans": [
+          "Narrowing of the esophagus (suspected)"
+        ],
+        "span_offsets": [
+          [
+            199,
+            237
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has active diabetes.",
+        "spans": [
+          "Diabetes (active)"
+        ],
+        "span_offsets": [
+          [
+            239,
+            256
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has active high blood pressure.",
+        "spans": [
+          "High blood pressure (active)"
+        ],
+        "span_offsets": [
+          [
+            258,
+            286
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was recommended for a referral to gastroenterology for further evaluation.",
+        "spans": [
+          "I recommended a referral to gastroenterology for further evaluation"
+        ],
+        "span_offsets": [
+          [
+            0,
+            67
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was recommended for a scope to investigate the narrowing of the esophagus.",
+        "spans": [
+          "a scope to investigate the narrowing of the esophagus"
+        ],
+        "span_offsets": [
+          [
+            72,
+            125
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was prescribed Prilosec.",
+        "spans": [
+          "I also prescribed Prilosec"
+        ],
+        "span_offsets": [
+          [
+            127,
+            153
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was prescribed Prilosec 20mg.",
+        "spans": [
+          "Prilosec 20mg"
+        ],
+        "span_offsets": [
+          [
+            145,
+            158
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was prescribed Prilosec once a day.",
+        "spans": [
+          "once a day"
+        ],
+        "span_offsets": [
+          [
+            159,
+            169
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's potential diagnosis includes gastroesophageal reflux disease.",
+        "spans": [
+          "potential gastroesophageal reflux disease"
+        ],
+        "span_offsets": [
+          [
+            174,
+            215
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was advised to chew his foods frequently and slowly.",
+        "spans": [
+          "chew his foods frequently and slowly"
+        ],
+        "span_offsets": [
+          [
+            236,
+            272
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was advised to chew hard or large foods especially frequently and slowly.",
+        "spans": [
+          "especially hard or large foods"
+        ],
+        "span_offsets": [
+          [
+            274,
+            304
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "A repeat hemoglobin A1c was ordered for the patient.",
+        "spans": [
+          "a repeat hemoglobin A1c"
+        ],
+        "span_offsets": [
+          [
+            319,
+            342
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "Kidney function tests were ordered for the patient.",
+        "spans": [
+          "kidney function tests"
+        ],
+        "span_offsets": [
+          [
+            344,
+            365
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was referred to ophthalmology for diabetic retinopathy evaluation.",
+        "spans": [
+          "refer him to ophthalmology for diabetic retinopathy evaluation"
+        ],
+        "span_offsets": [
+          [
+            371,
+            433
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will continue on metformin.",
+        "spans": [
+          "continue him on metformin"
+        ],
+        "span_offsets": [
+          [
+            442,
+            467
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will continue on norvasc.",
+        "spans": [
+          "continue him on norvasc"
+        ],
+        "span_offsets": [
+          [
+            435,
+            480
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "semantic"
+        ]
+      },
+      {
+        "fact": "The patient's norvasc prescription will be refilled.",
+        "spans": [
+          "refill his norvasc prescription"
+        ],
+        "span_offsets": [
+          [
+            590,
+            621
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will return in a month to review the test results and make any necessary adjustments.",
+        "spans": [
+          "I will have him return in a month to review the test results and make any necessary adjustments",
+          "I will see Tyler back in a month to review the test results and make any necessary adjustments"
+        ],
+        "span_offsets": [
+          [
+            481,
+            576
+          ],
+          [
+            624,
+            718
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": true,
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ]
+      }
+    ]
+  }
+]

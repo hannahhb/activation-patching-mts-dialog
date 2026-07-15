@@ -1,0 +1,1004 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 25-year-old male.",
+        "spans": [
+          "a 25-year-old male"
+        ],
+        "span_offsets": [
+          [
+            18,
+            36
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with a 3-week history of severe, squeezing pain on the right-hand side of his belly.",
+        "spans": [
+          "a 3-week history of severe, squeezing pain on the right-hand side of his belly"
+        ],
+        "span_offsets": [
+          [
+            52,
+            130
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is located underneath his ribs.",
+        "spans": [
+          "located underneath his ribs"
+        ],
+        "span_offsets": [
+          [
+            132,
+            159
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient describes the pain as an 8 out of 10 in severity.",
+        "spans": [
+          "an 8 out of 10 in severity"
+        ],
+        "span_offsets": [
+          [
+            186,
+            212
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain comes and goes.",
+        "spans": [
+          "it comes and goes"
+        ],
+        "span_offsets": [
+          [
+            228,
+            245
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is often accompanied by nausea and vomiting.",
+        "spans": [
+          "often accompanied by nausea and vomiting"
+        ],
+        "span_offsets": [
+          [
+            247,
+            287
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is exacerbated by eating.",
+        "spans": [
+          "exacerbated by eating"
+        ],
+        "span_offsets": [
+          [
+            301,
+            322
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is exacerbated by fatty foods.",
+        "spans": [
+          "particularly fatty foods"
+        ],
+        "span_offsets": [
+          [
+            324,
+            348
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is on a keto diet.",
+        "spans": [
+          "his current keto diet"
+        ],
+        "span_offsets": [
+          [
+            371,
+            392
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has lost 25 pounds over the last 3 months.",
+        "spans": [
+          "lost 25 pounds over the last 3 months"
+        ],
+        "span_offsets": [
+          [
+            401,
+            438
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has seen improvement in his blood sugar control since starting the diet.",
+        "spans": [
+          "has seen improvement in his blood sugar control"
+        ],
+        "span_offsets": [
+          [
+            467,
+            514
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has type 2 diabetes.",
+        "spans": [
+          "type 2 diabetes"
+        ],
+        "span_offsets": [
+          [
+            560,
+            575
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient manages his type 2 diabetes with diet and exercise.",
+        "spans": [
+          "which he has managed with diet and exercise"
+        ],
+        "span_offsets": [
+          [
+            577,
+            620
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a family history of gallbladder disease.",
+        "spans": [
+          "a family history of gallbladder disease"
+        ],
+        "span_offsets": [
+          [
+            629,
+            668
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's parents have had their gallbladders removed.",
+        "spans": [
+          "both parents having had their gallbladders removed"
+        ],
+        "span_offsets": [
+          [
+            675,
+            725
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports occasional low-grade fevers.",
+        "spans": [
+          "occasional low-grade fevers"
+        ],
+        "span_offsets": [
+          [
+            767,
+            794
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports nausea.",
+        "spans": [
+          "nausea"
+        ],
+        "span_offsets": [
+          [
+            268,
+            274
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies vomiting at the time of the visit.",
+        "spans": [
+          "no vomiting",
+          "He denies any fever at the time of the visit"
+        ],
+        "span_offsets": [
+          [
+            811,
+            822
+          ],
+          [
+            824,
+            868
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient denies fever at the time of the visit.",
+        "spans": [
+          "He denies any fever at the time of the visit"
+        ],
+        "span_offsets": [
+          [
+            824,
+            868
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is 128/88.",
+        "spans": [
+          "Blood pressure was 128/88"
+        ],
+        "span_offsets": [
+          [
+            13,
+            38
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's respiratory rate is 16.",
+        "spans": [
+          "respiratory rate was 16"
+        ],
+        "span_offsets": [
+          [
+            40,
+            63
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pulse rate is 68.",
+        "spans": [
+          "pulse rate was 68"
+        ],
+        "span_offsets": [
+          [
+            65,
+            82
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's oxygen saturation on room air is 99%.",
+        "spans": [
+          "oxygen saturation on room air was 99%"
+        ],
+        "span_offsets": [
+          [
+            88,
+            125
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a regular heart rhythm.",
+        "spans": [
+          "The patient has a regular heart rhythm"
+        ],
+        "span_offsets": [
+          [
+            143,
+            181
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no murmurs.",
+        "spans": [
+          "no murmurs"
+        ],
+        "span_offsets": [
+          [
+            186,
+            196
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no clicks.",
+        "spans": [
+          "no murmurs, clicks, or rubs"
+        ],
+        "span_offsets": [
+          [
+            186,
+            213
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no rubs.",
+        "spans": [
+          "no murmurs, clicks, or rubs"
+        ],
+        "span_offsets": [
+          [
+            186,
+            213
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lungs are clear.",
+        "spans": [
+          "The lungs are clear and equal bilaterally"
+        ],
+        "span_offsets": [
+          [
+            215,
+            256
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lungs are equal bilaterally.",
+        "spans": [
+          "The lungs are clear and equal bilaterally"
+        ],
+        "span_offsets": [
+          [
+            215,
+            256
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdomen is soft.",
+        "spans": [
+          "The abdomen is soft and nondistended"
+        ],
+        "span_offsets": [
+          [
+            258,
+            294
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdomen is nondistended.",
+        "spans": [
+          "The abdomen is soft and nondistended"
+        ],
+        "span_offsets": [
+          [
+            258,
+            294
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has positive bowel sounds.",
+        "spans": [
+          "with positive bowel sounds"
+        ],
+        "span_offsets": [
+          [
+            296,
+            322
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has slight guarding in the right upper quadrant.",
+        "spans": [
+          "There is slight guarding in the right upper quadrant"
+        ],
+        "span_offsets": [
+          [
+            324,
+            376
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no rebound tenderness.",
+        "spans": [
+          "but no rebound tenderness"
+        ],
+        "span_offsets": [
+          [
+            378,
+            403
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences pain when pressure is applied to the right-hand side of his abdomen.",
+        "spans": [
+          "The patient experiences pain when pressure is applied to the right-hand side of his abdomen"
+        ],
+        "span_offsets": [
+          [
+            405,
+            496
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdominal exam is consistent with Murphy's sign.",
+        "spans": [
+          "consistent with Murphy's sign"
+        ],
+        "span_offsets": [
+          [
+            498,
+            527
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has multiple gallstones in the gallbladder.",
+        "spans": [
+          "Abdominal ultrasound shows multiple gallstones in the gallbladder"
+        ],
+        "span_offsets": [
+          [
+            544,
+            609
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has mild thickening of the gallbladder wall.",
+        "spans": [
+          "with mild thickening of the gallbladder wall"
+        ],
+        "span_offsets": [
+          [
+            611,
+            655
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's common bile duct size is within normal limits.",
+        "spans": [
+          "The common bile duct size is within normal limits"
+        ],
+        "span_offsets": [
+          [
+            657,
+            706
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's common bile duct size is 4.1 mm.",
+        "spans": [
+          "at 4.1 mm"
+        ],
+        "span_offsets": [
+          [
+            707,
+            716
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has mild cholecystitis.",
+        "spans": [
+          "The patient has mild cholecystitis with gallstones, with a possible obstruction not appreciated"
+        ],
+        "span_offsets": [
+          [
+            12,
+            107
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has gallstones.",
+        "spans": [
+          "The patient has mild cholecystitis with gallstones, with a possible obstruction not appreciated"
+        ],
+        "span_offsets": [
+          [
+            12,
+            107
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient may have a possible obstruction.",
+        "spans": [
+          "with a possible obstruction not appreciated"
+        ],
+        "span_offsets": [
+          [
+            64,
+            107
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has cholecystitis.",
+        "spans": [
+          "Cholecystitis"
+        ],
+        "span_offsets": [
+          [
+            124,
+            137
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has Type 2 diabetes.",
+        "spans": [
+          "Type 2 diabetes (status: confirmed)"
+        ],
+        "span_offsets": [
+          [
+            151,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Type 2 diabetes is confirmed.",
+        "spans": [
+          "(status: confirmed)"
+        ],
+        "span_offsets": [
+          [
+            167,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed a medication.",
+        "spans": [
+          "I prescribed [NOT MENTIONED] for [NOT MENTIONED]"
+        ],
+        "span_offsets": [
+          [
+            0,
+            48
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was recommended to undergo a laparoscopic cholecystectomy.",
+        "spans": [
+          "I recommended a laparoscopic cholecystectomy to remove the gallbladder"
+        ],
+        "span_offsets": [
+          [
+            50,
+            120
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The laparoscopic cholecystectomy is expected to take about an hour to an hour and a half.",
+        "spans": [
+          "with a surgery time of about an hour to an hour and a half"
+        ],
+        "span_offsets": [
+          [
+            122,
+            180
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will spend the night in the hospital for monitoring post-procedure.",
+        "spans": [
+          "The patient will spend the night in the hospital for monitoring post-procedure"
+        ],
+        "span_offsets": [
+          [
+            182,
+            260
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be advised to avoid high-fat foods after surgery.",
+        "spans": [
+          "will be advised to avoid high-fat foods"
+        ],
+        "span_offsets": [
+          [
+            265,
+            304
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be advised to eat high-fiber foods after surgery.",
+        "spans": [
+          "eat high-fiber foods"
+        ],
+        "span_offsets": [
+          [
+            309,
+            329
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be encouraged to get up and move around on solid ground within a day or two after surgery.",
+        "spans": [
+          "will be encouraged to get up and move around on solid ground within a day or two after surgery"
+        ],
+        "span_offsets": [
+          [
+            357,
+            451
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will have a follow-up appointment in a week.",
+        "spans": [
+          "I will see the patient in a week"
+        ],
+        "span_offsets": [
+          [
+            465,
+            497
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the follow-up appointment is to monitor the patient's progress.",
+        "spans": [
+          "to monitor his progress"
+        ],
+        "span_offsets": [
+          [
+            498,
+            521
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be released to return to normal activities at the follow-up appointment.",
+        "spans": [
+          "and release him to return to normal activities"
+        ],
+        "span_offsets": [
+          [
+            522,
+            568
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's normal activities include hiking.",
+        "spans": [
+          "including hiking"
+        ],
+        "span_offsets": [
+          [
+            570,
+            586
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's normal activities include photography.",
+        "spans": [
+          "including hiking and photography"
+        ],
+        "span_offsets": [
+          [
+            570,
+            602
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

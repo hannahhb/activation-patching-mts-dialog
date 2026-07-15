@@ -1,0 +1,919 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 30-year-old female.",
+        "spans": [
+          "a 30-year-old female"
+        ],
+        "span_offsets": [
+          [
+            18,
+            38
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a chronic history of asthma.",
+        "spans": [
+          "a chronic history of asthma"
+        ],
+        "span_offsets": [
+          [
+            54,
+            81
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient experiences frequent exacerbations of asthma when she gets sick with a cold.",
+        "spans": [
+          "experiencing frequent exacerbations, particularly when she gets sick with a cold"
+        ],
+        "span_offsets": [
+          [
+            83,
+            163
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient experiences exacerbations of asthma when exposed to her aunt's cat.",
+        "spans": [
+          "occasionally when exposed to her aunt's cat"
+        ],
+        "span_offsets": [
+          [
+            169,
+            212
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient uses her albuterol inhaler daily.",
+        "spans": [
+          "using her albuterol inhaler daily"
+        ],
+        "span_offsets": [
+          [
+            226,
+            259
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient takes two puffs of albuterol every 4-6 hours as needed.",
+        "spans": [
+          "taking two puffs every 4-6 hours as needed"
+        ],
+        "span_offsets": [
+          [
+            261,
+            303
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient occasionally uses steroids after urgent care visits.",
+        "spans": [
+          "occasionally using steroids after urgent care visits"
+        ],
+        "span_offsets": [
+          [
+            314,
+            366
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has had several urgent care visits in the past year.",
+        "spans": [
+          "several urgent care visits and one emergency department visit in the past year"
+        ],
+        "span_offsets": [
+          [
+            380,
+            458
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has had one emergency department visit in the past year.",
+        "spans": [
+          "several urgent care visits and one emergency department visit in the past year"
+        ],
+        "span_offsets": [
+          [
+            380,
+            458
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's most recent exacerbation occurred about a month ago.",
+        "spans": [
+          "the most recent exacerbation occurring about a month ago"
+        ],
+        "span_offsets": [
+          [
+            465,
+            521
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies smoking.",
+        "spans": [
+          "denies smoking, vaping, or marijuana use"
+        ],
+        "span_offsets": [
+          [
+            527,
+            567
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies vaping.",
+        "spans": [
+          "denies smoking, vaping, or marijuana use"
+        ],
+        "span_offsets": [
+          [
+            527,
+            567
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient denies marijuana use.",
+        "spans": [
+          "denies smoking, vaping, or marijuana use"
+        ],
+        "span_offsets": [
+          [
+            527,
+            567
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no history of seasonal allergies.",
+        "spans": [
+          "no history of seasonal allergies"
+        ],
+        "span_offsets": [
+          [
+            576,
+            608
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient enjoys hiking and outdoor activities.",
+        "spans": [
+          "enjoys hiking and outdoor activities"
+        ],
+        "span_offsets": [
+          [
+            614,
+            650
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has to be careful with outdoor activities due to her asthma symptoms.",
+        "spans": [
+          "has to be careful due to her asthma symptoms"
+        ],
+        "span_offsets": [
+          [
+            655,
+            699
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a past hospitalization for asthma at age 8.",
+        "spans": [
+          "a past hospitalization at age 8 due to asthma symptoms"
+        ],
+        "span_offsets": [
+          [
+            766,
+            820
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has had multiple urgent care visits in the past year.",
+        "spans": [
+          "multiple urgent care visits and one emergency department visit in the past year"
+        ],
+        "span_offsets": [
+          [
+            834,
+            913
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports coughing symptoms.",
+        "spans": [
+          "coughing and wheezing symptoms"
+        ],
+        "span_offsets": [
+          [
+            955,
+            985
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient reports wheezing symptoms.",
+        "spans": [
+          "coughing and wheezing symptoms"
+        ],
+        "span_offsets": [
+          [
+            955,
+            985
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is prescribed Ventolin (albuterol) for asthma.",
+        "spans": [
+          "Ventolin (albuterol) 2 puffs every 4-6 hours p.r.n. for asthma"
+        ],
+        "span_offsets": [
+          [
+            1027,
+            1089
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is prescribed 2 puffs of Ventolin (albuterol) every 4-6 hours as needed for asthma.",
+        "spans": [
+          "2 puffs every 4-6 hours p.r.n. for asthma"
+        ],
+        "span_offsets": [
+          [
+            1048,
+            1089
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is prescribed Flovent (fluticasone) for asthma.",
+        "spans": [
+          "Flovent (fluticasone) 110 micrograms 1 puff twice per day for asthma"
+        ],
+        "span_offsets": [
+          [
+            1090,
+            1158
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is prescribed 1 puff of Flovent (fluticasone) twice per day for asthma.",
+        "spans": [
+          "1 puff twice per day for asthma"
+        ],
+        "span_offsets": [
+          [
+            1127,
+            1158
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient is prescribed 110 micrograms of Flovent (fluticasone) for asthma.",
+        "spans": [
+          "110 micrograms"
+        ],
+        "span_offsets": [
+          [
+            1112,
+            1126
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is 128/82.",
+        "spans": [
+          "Blood pressure: 128/82"
+        ],
+        "span_offsets": [
+          [
+            0,
+            22
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's pulse rate is 16.",
+        "spans": [
+          "Pulse rate: 16"
+        ],
+        "span_offsets": [
+          [
+            23,
+            37
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's oxygen saturation is 99% on room air.",
+        "spans": [
+          "Oxygen saturation: 99% on room air"
+        ],
+        "span_offsets": [
+          [
+            38,
+            72
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's respiratory rate is 16.",
+        "spans": [
+          "Respiratory rate: 16"
+        ],
+        "span_offsets": [
+          [
+            73,
+            93
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has diminished lung sounds throughout.",
+        "spans": [
+          "Diminished lung sounds throughout with occasional slight expiratory wheeze bilaterally"
+        ],
+        "span_offsets": [
+          [
+            95,
+            181
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has occasional slight expiratory wheeze bilaterally.",
+        "spans": [
+          "Diminished lung sounds throughout with occasional slight expiratory wheeze bilaterally"
+        ],
+        "span_offsets": [
+          [
+            95,
+            181
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's trachea is midline.",
+        "spans": [
+          "Trachea is midline"
+        ],
+        "span_offsets": [
+          [
+            182,
+            200
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no lymphadenopathy.",
+        "spans": [
+          "No lymphadenopathy"
+        ],
+        "span_offsets": [
+          [
+            201,
+            219
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no carotid bruit.",
+        "spans": [
+          "No carotid bruit"
+        ],
+        "span_offsets": [
+          [
+            220,
+            236
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has strong bilateral pulses.",
+        "spans": [
+          "Strong bilateral pulses"
+        ],
+        "span_offsets": [
+          [
+            237,
+            260
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has no clubbing on fingertips.",
+        "spans": [
+          "No clubbing on fingertips"
+        ],
+        "span_offsets": [
+          [
+            261,
+            286
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has brisk capillary refill.",
+        "spans": [
+          "Brisk capillary refill"
+        ],
+        "span_offsets": [
+          [
+            287,
+            309
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's pulmonary function test results are consistent with asthma.",
+        "spans": [
+          "Pulmonary function test results consistent with asthma"
+        ],
+        "span_offsets": [
+          [
+            311,
+            365
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has moderate intermittent asthma.",
+        "spans": [
+          "The patient has moderate intermittent asthma"
+        ],
+        "span_offsets": [
+          [
+            12,
+            56
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's asthma is confirmed by pulmonary function test results and clinical presentation.",
+        "spans": [
+          "which is confirmed by pulmonary function test results and clinical presentation"
+        ],
+        "span_offsets": [
+          [
+            58,
+            137
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has active asthma.",
+        "spans": [
+          "Asthma (active)"
+        ],
+        "span_offsets": [
+          [
+            154,
+            169
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a history of asthma hospitalization.",
+        "spans": [
+          "History of asthma hospitalization (past)"
+        ],
+        "span_offsets": [
+          [
+            171,
+            211
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient has a history of active asthma exacerbations.",
+        "spans": [
+          "History of asthma exacerbations (active)"
+        ],
+        "span_offsets": [
+          [
+            213,
+            253
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed Flovent (fluticasone).",
+        "spans": [
+          "I prescribed Flovent (fluticasone)"
+        ],
+        "span_offsets": [
+          [
+            0,
+            34
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Flovent (fluticasone) dose is 110 micrograms.",
+        "spans": [
+          "110 micrograms"
+        ],
+        "span_offsets": [
+          [
+            35,
+            49
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Flovent (fluticasone) frequency is 1 puff twice per day.",
+        "spans": [
+          "1 puff twice per day"
+        ],
+        "span_offsets": [
+          [
+            50,
+            70
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The purpose of the patient's Flovent (fluticasone) is to help prevent daily symptoms and reduce the need for rescue inhaler use.",
+        "spans": [
+          "to help prevent daily symptoms and reduce the need for rescue inhaler use"
+        ],
+        "span_offsets": [
+          [
+            71,
+            144
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient was advised to continue using Ventolin (albuterol).",
+        "spans": [
+          "I advised the patient to continue using Ventolin (albuterol)"
+        ],
+        "span_offsets": [
+          [
+            146,
+            206
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Ventolin (albuterol) dose is 2 puffs.",
+        "spans": [
+          "2 puffs"
+        ],
+        "span_offsets": [
+          [
+            207,
+            214
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient's Ventolin (albuterol) frequency is every 4-6 hours as needed.",
+        "spans": [
+          "every 4-6 hours as needed"
+        ],
+        "span_offsets": [
+          [
+            215,
+            240
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The purpose of the patient's Ventolin (albuterol) is for acute exacerbations.",
+        "spans": [
+          "for acute exacerbations"
+        ],
+        "span_offsets": [
+          [
+            241,
+            264
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "An asthma action plan will be put together to help manage symptoms and identify triggers.",
+        "spans": [
+          "I will put together an asthma action plan to help manage symptoms and identify triggers"
+        ],
+        "span_offsets": [
+          [
+            266,
+            353
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": false,
+        "span_match_methods": [
+          "exact"
+        ]
+      },
+      {
+        "fact": "The patient will be seen in 30 days to reassess symptoms and adjust treatment as needed.",
+        "spans": [
+          "I will see the patient in 30 days to reassess symptoms and adjust treatment as needed",
+          "The patient will be seen in 30 days to reassess symptoms and adjust treatment as needed"
+        ],
+        "span_offsets": [
+          [
+            355,
+            440
+          ],
+          [
+            454,
+            541
+          ]
+        ],
+        "span_verified": true,
+        "synthesized": true,
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ]
+      }
+    ]
+  }
+]

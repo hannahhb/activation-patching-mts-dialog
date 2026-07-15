@@ -1,0 +1,39 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient presents with right shoulder pain.,0.0,"[""right shoulder pain""]","[[31, 50]]","[""exact""]",True,False
+1,subjective,The patient's right shoulder pain began approximately three weeks ago.,0.0,"[""began approximately three weeks ago""]","[[56, 91]]","[""exact""]",True,False
+2,subjective,The patient's right shoulder pain started after a fall while painting a house.,0.0,"[""after a fall while painting a house""]","[[92, 127]]","[""exact""]",True,False
+3,subjective,The patient's right shoulder pain is intermittent.,0.0,"[""intermittent""]","[[154, 166]]","[""exact""]",True,False
+4,subjective,The patient's right shoulder pain is always present.,0.75,"[""always present""]","[[172, 186]]","[""exact""]",True,False
+5,subjective,The patient's right shoulder pain is exacerbated by lifting overhead.,0.75,"[""exacerbated by lifting overhead""]","[[195, 226]]","[""exact""]",True,False
+6,subjective,The patient has taken ibuprofen for pain relief.,0.0,"[""ibuprofen and acetaminophen (Tylenol) for pain relief""]","[[250, 303]]","[""exact""]",True,False
+7,subjective,The patient has taken acetaminophen (Tylenol) for pain relief.,0.25,"[""ibuprofen and acetaminophen (Tylenol) for pain relief""]","[[250, 303]]","[""exact""]",True,False
+8,subjective,The patient's reported pain level is 4 out of 10 when taking medication.,0.0,"[""reported pain level of 4 out of 10 when taking medication""]","[[312, 369]]","[""exact""]",True,False
+9,subjective,The patient's reported pain level is 6 out of 10 without medication.,0.0,"[""pain level is 6 out of 10""]","[[395, 420]]","[""exact""]",True,False
+10,subjective,The patient initially reported numbness and tingling in the arm after the injury.,0.5,"[""numbness and tingling in the arm initially after the injury""]","[[442, 501]]","[""exact""]",True,False
+11,subjective,The patient's numbness and tingling in the arm have resolved.,0.25,"[""this symptom has resolved""]","[[507, 532]]","[""exact""]",True,False
+12,subjective,The patient has no history of previous shoulder pain or injuries.,0.5,"[""no history of previous shoulder pain or injuries""]","[[573, 621]]","[""exact""]",True,False
+13,subjective,The patient denies any other symptoms.,1.0,"[""denies any other symptoms""]","[[655, 680]]","[""exact""]",True,False
+14,subjective,The patient is taking ibuprofen as needed for pain.,0.0,"[""Ibuprofen as needed for pain""]","[[704, 732]]","[""exact""]",True,False
+15,subjective,The patient is taking acetaminophen (Tylenol) as needed for pain.,0.25,"[""Acetaminophen (Tylenol) as needed for pain""]","[[734, 776]]","[""exact""]",True,False
+16,objective,The patient has limited active range of motion in the right shoulder.,0.0,"[""limited active and passive range of motion in the right shoulder""]","[[31, 95]]","[""exact""]",True,False
+17,objective,The patient has limited passive range of motion in the right shoulder.,0.0,"[""limited active and passive range of motion in the right shoulder""]","[[31, 95]]","[""exact""]",True,False
+18,objective,The patient has tenderness to the greater tuberosity of the humerus.,0.0,"[""tenderness to the greater tuberosity of the humerus""]","[[102, 153]]","[""exact""]",True,False
+19,objective,The patient has good strong bilateral hand grips.,0.0,"[""good strong bilateral hand grips""]","[[171, 203]]","[""exact""]",True,False
+20,objective,The patient has brisk capillary refill of less than three seconds.,0.0,"[""brisk capillary refill of less than three seconds""]","[[205, 254]]","[""exact""]",True,False
+21,objective,The patient has equal and bilateral response to sensation.,0.0,"[""equal and bilateral response to sensation and touch""]","[[260, 311]]","[""exact""]",True,False
+22,objective,The patient has equal and bilateral response to touch.,0.0,"[""equal and bilateral response to sensation and touch""]","[[260, 311]]","[""exact""]",True,False
+23,objective,The right shoulder x-ray reveals no fracture.,0.0,"[""The right shoulder x-ray reveals no fracture or bony abnormality""]","[[328, 392]]","[""exact""]",True,False
+24,objective,The right shoulder x-ray reveals no bony abnormality.,0.0,"[""The right shoulder x-ray reveals no fracture or bony abnormality""]","[[328, 392]]","[""exact""]",True,False
+25,assessment,The patient's symptoms are most likely due to rotator cuff tendinopathy.,0.0,"[""The patient's symptoms are most likely due to rotator cuff tendinopathy""]","[[12, 83]]","[""exact""]",True,False
+26,assessment,The patient has rotator cuff tendinopathy.,0.0,"[""Rotator cuff tendinopathy; [NOT MENTIONED]""]","[[100, 142]]","[""exact""]",True,False
+27,plan,The patient was prescribed ibuprofen as needed for pain.,0.3333,"[""I prescribed ibuprofen as needed for pain""]","[[0, 41]]","[""exact""]",True,False
+28,plan,The patient's ibuprofen dose is as needed.,0.6667,"[""as needed for pain""]","[[23, 41]]","[""exact""]",True,False
+29,plan,The patient's ibuprofen indication is for pain.,0.0,"[""for pain""]","[[33, 41]]","[""exact""]",True,False
+30,plan,An MRI of the right shoulder was ordered for the patient.,0.0,"[""I ordered an MRI of the right shoulder""]","[[43, 81]]","[""exact""]",True,False
+31,plan,The MRI is to rule out any other conditions for the patient.,0.0,"[""to rule out any other conditions""]","[[82, 114]]","[""exact""]",True,False
+32,plan,The patient was referred to physical therapy.,0.0,"[""I referred the patient to physical therapy""]","[[116, 158]]","[""exact""]",True,False
+33,plan,The patient's physical therapy duration is 6-8 weeks.,0.0,"[""for 6-8 weeks""]","[[159, 172]]","[""exact""]",True,False
+34,plan,The patient was recommended to take Tylenol for pain relief.,0.0,"[""I recommend the patient take Tylenol for pain relief""]","[[174, 226]]","[""exact""]",True,False
+35,plan,The patient should take Tylenol if they can tolerate it.,0.3333,"[""if they can tolerate it""]","[[227, 250]]","[""exact""]",True,False
+36,plan,The patient's Tylenol indication is for pain relief.,0.0,"[""for pain relief""]","[[211, 226]]","[""exact""]",True,False
+37,plan,The patient will be seen in two weeks.,0.0,"[""I will see the patient in two weeks"", ""I will see the patient in two weeks""]","[[252, 287], [252, 287]]","[""exact"", ""exact""]",True,True

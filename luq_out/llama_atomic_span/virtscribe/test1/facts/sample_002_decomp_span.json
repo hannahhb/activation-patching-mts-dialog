@@ -1,0 +1,811 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Kayla Ward.",
+        "spans": [
+          "Kayla Ward"
+        ],
+        "span_offsets": [
+          [
+            5,
+            15
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is a 7th-grade student.",
+        "spans": [
+          "a 7th-grade student"
+        ],
+        "span_offsets": [
+          [
+            17,
+            36
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a 2-year history of acne on her face.",
+        "spans": [
+          "a 2-year history of acne on her face"
+        ],
+        "span_offsets": [
+          [
+            52,
+            88
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's acne is present most every day.",
+        "spans": [
+          "which is present most every day"
+        ],
+        "span_offsets": [
+          [
+            90,
+            121
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been using Persa-Gel for acne treatment.",
+        "spans": [
+          "She has been using Persa-Gel"
+        ],
+        "span_offsets": [
+          [
+            123,
+            151
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient washes her face regularly for acne treatment.",
+        "spans": [
+          "washing regularly"
+        ],
+        "span_offsets": [
+          [
+            156,
+            173
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Using Persa-Gel and washing regularly is somewhat helpful for the patient's acne.",
+        "spans": [
+          "which is somewhat helpful"
+        ],
+        "span_offsets": [
+          [
+            175,
+            200
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have itching associated with her acne.",
+        "spans": [
+          "including itching"
+        ],
+        "span_offsets": [
+          [
+            235,
+            252
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have bleeding associated with her acne.",
+        "spans": [
+          "including bleeding"
+        ],
+        "span_offsets": [
+          [
+            235,
+            262
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have pain associated with her acne.",
+        "spans": [
+          "or pain"
+        ],
+        "span_offsets": [
+          [
+            264,
+            271
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no additional past medical history.",
+        "spans": [
+          "No additional past medical history"
+        ],
+        "span_offsets": [
+          [
+            273,
+            307
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient lives with her parents.",
+        "spans": [
+          "She lives with her parents"
+        ],
+        "span_offsets": [
+          [
+            309,
+            335
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient lives with her sister.",
+        "spans": [
+          "and sister"
+        ],
+        "span_offsets": [
+          [
+            336,
+            346
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a dog.",
+        "spans": [
+          "dog"
+        ],
+        "span_offsets": [
+          [
+            357,
+            360
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a bird.",
+        "spans": [
+          "bird"
+        ],
+        "span_offsets": [
+          [
+            362,
+            366
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has bunnies.",
+        "spans": [
+          "bunnies"
+        ],
+        "span_offsets": [
+          [
+            372,
+            379
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient wears sunscreen in the summer.",
+        "spans": [
+          "She wears sunscreen in the summer"
+        ],
+        "span_offsets": [
+          [
+            381,
+            414
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's sunscreen has an SPF of 30.",
+        "spans": [
+          "SPF 30"
+        ],
+        "span_offsets": [
+          [
+            420,
+            426
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no additional symptoms in other organs.",
+        "spans": [
+          "No additional symptoms in other organs"
+        ],
+        "span_offsets": [
+          [
+            507,
+            545
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient had a full physical exam performed today, except for under the underwear and under the bra.",
+        "spans": [
+          "Full exam is performed today, except for under the underwear and under the bra"
+        ],
+        "span_offsets": [
+          [
+            15,
+            93
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has multiple benign nevi on the trunk and extremities.",
+        "spans": [
+          "Multiple benign nevi on the trunk and extremities"
+        ],
+        "span_offsets": [
+          [
+            95,
+            144
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has scattered skin-colored papules.",
+        "spans": [
+          "Scattered skin-colored papules"
+        ],
+        "span_offsets": [
+          [
+            146,
+            176
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has open and closed comedones.",
+        "spans": [
+          "Open and closed comedones"
+        ],
+        "span_offsets": [
+          [
+            178,
+            203
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has erythematous papules on the face.",
+        "spans": [
+          "Erythematous papules on the face, primarily on the forehead and with also some on the central cheeks and chin"
+        ],
+        "span_offsets": [
+          [
+            205,
+            314
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's erythematous papules are primarily located on the forehead.",
+        "spans": [
+          "Erythematous papules on the face, primarily on the forehead and with also some on the central cheeks and chin"
+        ],
+        "span_offsets": [
+          [
+            205,
+            314
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has erythematous papules on the central cheeks.",
+        "spans": [
+          "Erythematous papules on the face, primarily on the forehead and with also some on the central cheeks and chin"
+        ],
+        "span_offsets": [
+          [
+            205,
+            314
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has erythematous papules on the chin.",
+        "spans": [
+          "Erythematous papules on the face, primarily on the forehead and with also some on the central cheeks and chin"
+        ],
+        "span_offsets": [
+          [
+            205,
+            314
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's chest is relatively spared.",
+        "spans": [
+          "The chest and back are relatively spared"
+        ],
+        "span_offsets": [
+          [
+            316,
+            356
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's back is relatively spared.",
+        "spans": [
+          "The chest and back are relatively spared"
+        ],
+        "span_offsets": [
+          [
+            316,
+            356
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The remainder of the patient's examination is normal.",
+        "spans": [
+          "The remainder of the examination is normal"
+        ],
+        "span_offsets": [
+          [
+            358,
+            400
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has mild to moderate acne.",
+        "spans": [
+          "Mild to moderate acne"
+        ],
+        "span_offsets": [
+          [
+            12,
+            33
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's acne is mostly comedonal.",
+        "spans": [
+          "mostly comedonal"
+        ],
+        "span_offsets": [
+          [
+            35,
+            51
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's acne has a small inflammatory component.",
+        "spans": [
+          "small inflammatory component"
+        ],
+        "span_offsets": [
+          [
+            57,
+            85
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed adapalene 0.1% cream.",
+        "spans": [
+          "adapalene 0.1% cream"
+        ],
+        "span_offsets": [
+          [
+            13,
+            33
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's adapalene 0.1% cream is to be applied in a thin layer.",
+        "spans": [
+          "to be applied in a thin layer"
+        ],
+        "span_offsets": [
+          [
+            34,
+            63
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's adapalene 0.1% cream is to be applied to the areas she generally gets acne.",
+        "spans": [
+          "to the areas she generally gets acne"
+        ],
+        "span_offsets": [
+          [
+            64,
+            100
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's adapalene 0.1% cream is to be started with a few nights a week and slowly worked up to every night.",
+        "spans": [
+          "starting with a few nights a week and slowly working up to every night"
+        ],
+        "span_offsets": [
+          [
+            102,
+            172
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will use a mild cleanser.",
+        "spans": [
+          "a mild cleanser"
+        ],
+        "span_offsets": [
+          [
+            192,
+            207
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will use a non-comedogenic moisturizer with sunscreen SPF 30 or higher in the morning.",
+        "spans": [
+          "a non-comedogenic moisturizer with sunscreen SPF 30 or higher in the morning"
+        ],
+        "span_offsets": [
+          [
+            212,
+            288
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will wash her face with the same cleanser at night.",
+        "spans": [
+          "wash her face with the same cleanser and apply a non-comedogenic moisturizer at night"
+        ],
+        "span_offsets": [
+          [
+            294,
+            379
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will apply a non-comedogenic moisturizer at night.",
+        "spans": [
+          "wash her face with the same cleanser and apply a non-comedogenic moisturizer at night"
+        ],
+        "span_offsets": [
+          [
+            294,
+            379
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed Clean and Clear Persa-Gel.",
+        "spans": [
+          "Clean and Clear Persa-Gel"
+        ],
+        "span_offsets": [
+          [
+            399,
+            424
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Clean and Clear Persa-Gel is to be applied in a thin layer.",
+        "spans": [
+          "in a thin layer on the areas she generally gets acne"
+        ],
+        "span_offsets": [
+          [
+            425,
+            477
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Clean and Clear Persa-Gel is to be applied to the areas she generally gets acne.",
+        "spans": [
+          "in a thin layer on the areas she generally gets acne"
+        ],
+        "span_offsets": [
+          [
+            425,
+            477
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to wear sunscreen when outside.",
+        "spans": [
+          "wear sunscreen when outside"
+        ],
+        "span_offsets": [
+          [
+            496,
+            523
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient may experience potential sensitivity and dryness or irritation from the adapalene.",
+        "spans": [
+          "due to potential sensitivity and dryness or irritation from the adapalene"
+        ],
+        "span_offsets": [
+          [
+            524,
+            597
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will have a follow-up appointment in six months.",
+        "spans": [
+          "I plan to see Kayla in six months to assess her progress"
+        ],
+        "span_offsets": [
+          [
+            611,
+            667
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]
