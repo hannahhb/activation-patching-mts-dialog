@@ -462,7 +462,8 @@ def run_probe(
                          "c": mean_coef})
            .sort_values("c", ascending=False).head(10))
     for _, r in top.iterrows():
-        report.append(f"  L{int(r.layer):02d}.H{int(r.head):02d}  {r.c:.3f}")
+        report.append(
+            f"  L{int(r['layer']):02d}.H{int(r['head']):02d}  {r['c']:.3f}")
     text = "\n".join(report)
     (out_dir / "cv_report.txt").write_text(text + "\n")
     print("\n" + text)
