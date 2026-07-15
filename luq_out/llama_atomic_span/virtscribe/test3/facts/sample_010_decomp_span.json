@@ -1,0 +1,981 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Mrs. King.",
+        "spans": [
+          "The patient, Mrs. King,"
+        ],
+        "span_offsets": [
+          [
+            0,
+            23
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is a 36-year-old female.",
+        "spans": [
+          "a 36-year-old female"
+        ],
+        "span_offsets": [
+          [
+            27,
+            47
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's date of birth is 1/5/1986.",
+        "spans": [
+          "date of birth 1/5/1986"
+        ],
+        "span_offsets": [
+          [
+            49,
+            71
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's medical record number is Q227631.",
+        "spans": [
+          "medical record number of Q227631"
+        ],
+        "span_offsets": [
+          [
+            80,
+            112
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presented for evaluation of acid reflux.",
+        "spans": [
+          "presented for evaluation of acid reflux"
+        ],
+        "span_offsets": [
+          [
+            118,
+            157
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of anxiety.",
+        "spans": [
+          "a history of anxiety"
+        ],
+        "span_offsets": [
+          [
+            171,
+            191
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of seasonal allergies.",
+        "spans": [
+          "seasonal allergies"
+        ],
+        "span_offsets": [
+          [
+            196,
+            214
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was referred by Dr. Scott.",
+        "spans": [
+          "her primary doctor, Dr. Scott, referred her to my office"
+        ],
+        "span_offsets": [
+          [
+            232,
+            288
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing acid reflux since she was around 12 years old.",
+        "spans": [
+          "She has been experiencing acid reflux since she was around 12 years old"
+        ],
+        "span_offsets": [
+          [
+            290,
+            361
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's acid reflux has worsened over the past few years.",
+        "spans": [
+          "it has worsened over the past few years"
+        ],
+        "span_offsets": [
+          [
+            367,
+            406
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking omeprazole.",
+        "spans": [
+          "omeprazole"
+        ],
+        "span_offsets": [
+          [
+            441,
+            451
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking 40 mg of omeprazole.",
+        "spans": [
+          "40 mg of omeprazole"
+        ],
+        "span_offsets": [
+          [
+            432,
+            451
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes omeprazole twice daily.",
+        "spans": [
+          "twice daily"
+        ],
+        "span_offsets": [
+          [
+            452,
+            463
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences variable severity of acid reflux symptoms.",
+        "spans": [
+          "some days she feels fine, but others are severely affected"
+        ],
+        "span_offsets": [
+          [
+            482,
+            540
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient describes her acid reflux sensation as burning in her chest and throat.",
+        "spans": [
+          "burning in her chest and throat"
+        ],
+        "span_offsets": [
+          [
+            573,
+            604
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies difficulty swallowing.",
+        "spans": [
+          "denies difficulty swallowing"
+        ],
+        "span_offsets": [
+          [
+            610,
+            638
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies abdominal pain.",
+        "spans": [
+          "abdominal pain"
+        ],
+        "span_offsets": [
+          [
+            640,
+            654
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies nausea.",
+        "spans": [
+          "nausea"
+        ],
+        "span_offsets": [
+          [
+            656,
+            662
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies vomiting.",
+        "spans": [
+          "vomiting"
+        ],
+        "span_offsets": [
+          [
+            664,
+            672
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies changes in bowel movements.",
+        "spans": [
+          "changes in bowel movements"
+        ],
+        "span_offsets": [
+          [
+            674,
+            700
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies constipation.",
+        "spans": [
+          "constipation"
+        ],
+        "span_offsets": [
+          [
+            702,
+            714
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies diarrhea.",
+        "spans": [
+          "diarrhea"
+        ],
+        "span_offsets": [
+          [
+            716,
+            724
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies rectal bleeding.",
+        "spans": [
+          "rectal bleeding"
+        ],
+        "span_offsets": [
+          [
+            730,
+            745
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient attributes her symptoms to stress.",
+        "spans": [
+          "stress"
+        ],
+        "span_offsets": [
+          [
+            778,
+            784
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient attributes her symptoms to food choices.",
+        "spans": [
+          "food choices"
+        ],
+        "span_offsets": [
+          [
+            789,
+            801
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms are exacerbated by spicy foods.",
+        "spans": [
+          "spicy foods"
+        ],
+        "span_offsets": [
+          [
+            816,
+            827
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms are exacerbated by carbonated beverages.",
+        "spans": [
+          "carbonated beverages"
+        ],
+        "span_offsets": [
+          [
+            829,
+            849
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms are exacerbated by citrus.",
+        "spans": [
+          "citrus"
+        ],
+        "span_offsets": [
+          [
+            851,
+            857
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms are exacerbated by tomato-based foods.",
+        "spans": [
+          "tomato-based foods"
+        ],
+        "span_offsets": [
+          [
+            863,
+            881
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has a well-healed abdominal surgical scar.",
+        "spans": [
+          "A well-healed abdominal surgical scar is noted"
+        ],
+        "span_offsets": [
+          [
+            15,
+            61
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's physical exam is normal.",
+        "spans": [
+          "The patient has a normal physical exam per my new patient template"
+        ],
+        "span_offsets": [
+          [
+            63,
+            129
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient is suspected to have gastroesophageal reflux disease (GERD).",
+        "spans": [
+          "I suspect that the patient likely has gastroesophageal reflux disease (GERD)"
+        ],
+        "span_offsets": [
+          [
+            12,
+            88
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a suspected functional etiology.",
+        "spans": [
+          "with underlying functional etiology"
+        ],
+        "span_offsets": [
+          [
+            89,
+            124
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Gastroesophageal reflux disease (GERD) is on the patient's problem list.",
+        "spans": [
+          "GERD; suspected functional etiology"
+        ],
+        "span_offsets": [
+          [
+            141,
+            176
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A functional etiology is suspected and on the patient's problem list.",
+        "spans": [
+          "GERD; suspected functional etiology"
+        ],
+        "span_offsets": [
+          [
+            141,
+            176
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was recommended to change her diet to avoid trigger foods.",
+        "spans": [
+          "change her diet to avoid trigger foods like spicy foods, carbonated beverages, citrus, and tomato-based foods"
+        ],
+        "span_offsets": [
+          [
+            31,
+            140
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid spicy foods.",
+        "spans": [
+          "spicy foods"
+        ],
+        "span_offsets": [
+          [
+            75,
+            86
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid carbonated beverages.",
+        "spans": [
+          "carbonated beverages"
+        ],
+        "span_offsets": [
+          [
+            88,
+            108
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid citrus.",
+        "spans": [
+          "citrus"
+        ],
+        "span_offsets": [
+          [
+            110,
+            116
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid tomato-based foods.",
+        "spans": [
+          "tomato-based foods"
+        ],
+        "span_offsets": [
+          [
+            122,
+            140
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to work on stress management to address her anxiety.",
+        "spans": [
+          "work on stress management to address her anxiety"
+        ],
+        "span_offsets": [
+          [
+            164,
+            212
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed Nexium.",
+        "spans": [
+          "Nexium 40 mg twice daily"
+        ],
+        "span_offsets": [
+          [
+            227,
+            251
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Nexium dose is 40 mg.",
+        "spans": [
+          "40 mg"
+        ],
+        "span_offsets": [
+          [
+            234,
+            239
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Nexium frequency is twice daily.",
+        "spans": [
+          "twice daily"
+        ],
+        "span_offsets": [
+          [
+            240,
+            251
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's omeprazole was replaced with Nexium.",
+        "spans": [
+          "to replace her current omeprazole"
+        ],
+        "span_offsets": [
+          [
+            252,
+            285
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was recommended to undergo an upper endoscopy (EGD) procedure.",
+        "spans": [
+          "an upper endoscopy (EGD) procedure"
+        ],
+        "span_offsets": [
+          [
+            306,
+            340
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The EGD procedure will involve sedation.",
+        "spans": [
+          "sedation"
+        ],
+        "span_offsets": [
+          [
+            410,
+            418
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The EGD procedure will involve a small camera passed through her mouth.",
+        "spans": [
+          "a small camera passed through her mouth"
+        ],
+        "span_offsets": [
+          [
+            423,
+            462
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The EGD procedure will involve examination of her throat.",
+        "spans": [
+          "down her throat"
+        ],
+        "span_offsets": [
+          [
+            463,
+            478
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The EGD procedure will involve examination of her stomach.",
+        "spans": [
+          "through her stomach"
+        ],
+        "span_offsets": [
+          [
+            480,
+            499
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The EGD procedure will involve examination of her small intestines.",
+        "spans": [
+          "into the small intestines"
+        ],
+        "span_offsets": [
+          [
+            505,
+            530
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the EGD procedure is to look for potential causes of her GERD.",
+        "spans": [
+          "to look for potential causes of her GERD"
+        ],
+        "span_offsets": [
+          [
+            341,
+            381
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The EGD procedure may involve biopsies if anything suspicious is found.",
+        "spans": [
+          "Biopsies will be taken if anything suspicious is found"
+        ],
+        "span_offsets": [
+          [
+            600,
+            654
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to schedule the EGD procedure at the checkout desk.",
+        "spans": [
+          "to schedule the procedure at the checkout desk"
+        ],
+        "span_offsets": [
+          [
+            673,
+            719
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to follow up with the doctor in the office after the EGD procedure.",
+        "spans": [
+          "to follow up with me in the office"
+        ],
+        "span_offsets": [
+          [
+            724,
+            758
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to discuss the results of the EGD procedure with the doctor during the follow-up appointment.",
+        "spans": [
+          "to discuss the results and the effectiveness of the dietary and stress management changes"
+        ],
+        "span_offsets": [
+          [
+            759,
+            848
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to call the doctor's office if anything changes or if she has problems before the EGD and follow-up appointment.",
+        "spans": [
+          "to call my office if anything changes or if she has problems before the EGd and follow-up appointment"
+        ],
+        "span_offsets": [
+          [
+            872,
+            973
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

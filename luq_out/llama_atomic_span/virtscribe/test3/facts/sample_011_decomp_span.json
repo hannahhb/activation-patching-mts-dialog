@@ -1,0 +1,540 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 39-year-old female.",
+        "spans": [
+          "a 39-year-old female"
+        ],
+        "span_offsets": [
+          [
+            20,
+            40
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of quadriplegia.",
+        "spans": [
+          "a history of quadriplegia due to a prior spinal cord injury",
+          "Quadriplegia due to spinal cord injury"
+        ],
+        "span_offsets": [
+          [
+            46,
+            105
+          ],
+          [
+            512,
+            550
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient's quadriplegia is due to a prior spinal cord injury.",
+        "spans": [
+          "a history of quadriplegia due to a prior spinal cord injury",
+          "Quadriplegia due to spinal cord injury"
+        ],
+        "span_offsets": [
+          [
+            46,
+            105
+          ],
+          [
+            512,
+            550
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient presents with concerns for spasms.",
+        "spans": [
+          "increasing concerns for spasms"
+        ],
+        "span_offsets": [
+          [
+            123,
+            153
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with concerns for lightheadedness.",
+        "spans": [
+          "increasing concerns for spasms, lightheadedness"
+        ],
+        "span_offsets": [
+          [
+            123,
+            170
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with significant constipation.",
+        "spans": [
+          "significant constipation"
+        ],
+        "span_offsets": [
+          [
+            172,
+            196
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with diaphoresis.",
+        "spans": [
+          "diaphoresis"
+        ],
+        "span_offsets": [
+          [
+            202,
+            213
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient feels better after a massive bowel movement.",
+        "spans": [
+          "feeling better after a massive bowel movement at home"
+        ],
+        "span_offsets": [
+          [
+            227,
+            280
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient believes her hospitalization was likely due to autonomic dysreflexia.",
+        "spans": [
+          "believes her hospitalization was likely due to her autonomic dysreflexia"
+        ],
+        "span_offsets": [
+          [
+            286,
+            358
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of autonomic dysreflexia.",
+        "spans": [
+          "a history of autonomic dysreflexia",
+          "autonomic dysreflexia"
+        ],
+        "span_offsets": [
+          [
+            337,
+            358
+          ],
+          [
+            337,
+            358
+          ]
+        ],
+        "span_match_methods": [
+          "word",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "Autonomic dysreflexia can cause blood pressure fluctuations in the patient.",
+        "spans": [
+          "which can cause blood pressure fluctuations"
+        ],
+        "span_offsets": [
+          [
+            360,
+            403
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes miralax regularly.",
+        "spans": [
+          "miralax regularly"
+        ],
+        "span_offsets": [
+          [
+            415,
+            432
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes miralax for constipation.",
+        "spans": [
+          "miralax regularly for constipation"
+        ],
+        "span_offsets": [
+          [
+            415,
+            449
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes lactulose.",
+        "spans": [
+          "lactulose for severe constipation"
+        ],
+        "span_offsets": [
+          [
+            454,
+            487
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes lactulose for severe constipation.",
+        "spans": [
+          "lactulose for severe constipation"
+        ],
+        "span_offsets": [
+          [
+            454,
+            487
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has a normal physical examination.",
+        "spans": [
+          "The patient has a normal examination"
+        ],
+        "span_offsets": [
+          [
+            15,
+            51
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has acute to chronic constipation.",
+        "spans": [
+          "The patient has acute to chronic constipation"
+        ],
+        "span_offsets": [
+          [
+            12,
+            57
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has quadriplegia.",
+        "spans": [
+          "Quadriplegia"
+        ],
+        "span_offsets": [
+          [
+            74,
+            86
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has constipation.",
+        "spans": [
+          "Constipation"
+        ],
+        "span_offsets": [
+          [
+            88,
+            100
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has an elevated white blood cell count.",
+        "spans": [
+          "Elevated white blood cell count"
+        ],
+        "span_offsets": [
+          [
+            102,
+            133
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's COVID-19 vaccine status is unknown.",
+        "spans": [
+          "COVID-19 vaccine status: unknown"
+        ],
+        "span_offsets": [
+          [
+            135,
+            167
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient is recommended to return in 2-3 weeks for updated fasting labs.",
+        "spans": [
+          "I recommended that the patient return in 2-3 weeks for updated fasting labs"
+        ],
+        "span_offsets": [
+          [
+            0,
+            75
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's updated fasting labs will include a CBC.",
+        "spans": [
+          "including a CBC"
+        ],
+        "span_offsets": [
+          [
+            77,
+            92
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the CBC is to ensure the patient's white blood cell count trends downward.",
+        "spans": [
+          "to ensure her white blood cell count trends downward"
+        ],
+        "span_offsets": [
+          [
+            93,
+            145
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to get vaccinated against COVID-19.",
+        "spans": [
+          "I also discussed the importance of getting vaccinated against COVID-19"
+        ],
+        "span_offsets": [
+          [
+            147,
+            217
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The COVID-19 vaccine is considered the only true preventative mechanism against the virus.",
+        "spans": [
+          "citing the vaccine as the only true preventative mechanism against the virus"
+        ],
+        "span_offsets": [
+          [
+            219,
+            295
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has concerns about COVID-19 vaccine side effects.",
+        "spans": [
+          "I acknowledged her concerns about vaccine side effects"
+        ],
+        "span_offsets": [
+          [
+            297,
+            351
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is at high risk due to her quadriplegia status.",
+        "spans": [
+          "she is at high risk due to her quadriplegia status"
+        ],
+        "span_offsets": [
+          [
+            383,
+            433
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will return in 2-3 weeks for follow-up labs.",
+        "spans": [
+          "The patient will return in 2-3 weeks for follow-up labs"
+        ],
+        "span_offsets": [
+          [
+            447,
+            502
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will discuss her COVID-19 vaccine status at the follow-up visit.",
+        "spans": [
+          "and to discuss her COVID-19 vaccine status"
+        ],
+        "span_offsets": [
+          [
+            503,
+            545
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

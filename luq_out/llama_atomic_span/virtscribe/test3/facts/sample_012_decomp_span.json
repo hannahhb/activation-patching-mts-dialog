@@ -1,0 +1,811 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Ashley James.",
+        "spans": [
+          "Ashley James"
+        ],
+        "span_offsets": [
+          [
+            5,
+            17
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is a 14-year-old female.",
+        "spans": [
+          "a 14-year-old female"
+        ],
+        "span_offsets": [
+          [
+            19,
+            39
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with abdominal pain.",
+        "spans": [
+          "abdominal pain"
+        ],
+        "span_offsets": [
+          [
+            68,
+            82
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with vomiting.",
+        "spans": [
+          "vomiting"
+        ],
+        "span_offsets": [
+          [
+            87,
+            95
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was initially thought to have appendicitis.",
+        "spans": [
+          "initially thought to be appendicitis"
+        ],
+        "span_offsets": [
+          [
+            97,
+            133
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has an atrophic right kidney on ultrasound.",
+        "spans": [
+          "atrophic right kidney on ultrasound"
+        ],
+        "span_offsets": [
+          [
+            162,
+            197
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of recurrent infections as a child.",
+        "spans": [
+          "history of recurrent infections as a child"
+        ],
+        "span_offsets": [
+          [
+            209,
+            251
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was hospitalized at 4 years old for 3-4 times.",
+        "spans": [
+          "hospitalizations at 4 years old for 3-4 times"
+        ],
+        "span_offsets": [
+          [
+            258,
+            303
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient had symptoms of fever as a child.",
+        "spans": [
+          "symptoms of fever and vomiting"
+        ],
+        "span_offsets": [
+          [
+            310,
+            340
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient had symptoms of vomiting as a child.",
+        "spans": [
+          "symptoms of fever and vomiting"
+        ],
+        "span_offsets": [
+          [
+            310,
+            340
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes Pepcid 40mg daily.",
+        "spans": [
+          "Pepcid 40mg daily"
+        ],
+        "span_offsets": [
+          [
+            394,
+            411
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes Pepcid for symptoms.",
+        "spans": [
+          "Pepcid 40mg daily for symptoms"
+        ],
+        "span_offsets": [
+          [
+            394,
+            424
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes Claritin for allergies.",
+        "spans": [
+          "Claritin for allergies"
+        ],
+        "span_offsets": [
+          [
+            429,
+            451
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's family history includes renal disease.",
+        "spans": [
+          "renal disease"
+        ],
+        "span_offsets": [
+          [
+            481,
+            494
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's father had a kidney transplant.",
+        "spans": [
+          "father having a kidney transplant"
+        ],
+        "span_offsets": [
+          [
+            505,
+            538
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's aunt has end-stage renal disease.",
+        "spans": [
+          "aunt with end-stage renal disease"
+        ],
+        "span_offsets": [
+          [
+            540,
+            573
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's mother has breast cancer.",
+        "spans": [
+          "mother with breast cancer"
+        ],
+        "span_offsets": [
+          [
+            579,
+            604
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's father died at 47 due to a massive heart attack while on dialysis.",
+        "spans": [
+          "father died at 47 due to a massive heart attack while on dialysis"
+        ],
+        "span_offsets": [
+          [
+            615,
+            680
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient complains of abdominal pain.",
+        "spans": [
+          "Ashley complains of abdominal pain"
+        ],
+        "span_offsets": [
+          [
+            1104,
+            1138
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient complains of vomiting.",
+        "spans": [
+          "vomiting"
+        ],
+        "span_offsets": [
+          [
+            87,
+            95
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient complains of a burning sensation when urinating.",
+        "spans": [
+          "burning sensation when urinating"
+        ],
+        "span_offsets": [
+          [
+            1154,
+            1186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences a burning sensation when urinating after consuming certain drinks like soda.",
+        "spans": [
+          "burning sensation when urinating, especially after consuming certain drinks like soda"
+        ],
+        "span_offsets": [
+          [
+            1154,
+            1239
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient is a female.",
+        "spans": [
+          "well-appearing female"
+        ],
+        "span_offsets": [
+          [
+            27,
+            48
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is well-appearing.",
+        "spans": [
+          "well-appearing female"
+        ],
+        "span_offsets": [
+          [
+            27,
+            48
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is alert.",
+        "spans": [
+          "alert and oriented"
+        ],
+        "span_offsets": [
+          [
+            50,
+            68
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is oriented.",
+        "spans": [
+          "alert and oriented"
+        ],
+        "span_offsets": [
+          [
+            50,
+            68
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no acute distress.",
+        "spans": [
+          "with no acute distress"
+        ],
+        "span_offsets": [
+          [
+            70,
+            92
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's physical exam is within normal limits.",
+        "spans": [
+          "Her physical exam is within normal limits"
+        ],
+        "span_offsets": [
+          [
+            94,
+            135
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "Ashley has a history of recurrent infections.",
+        "spans": [
+          "a history of recurrent infections"
+        ],
+        "span_offsets": [
+          [
+            23,
+            56
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley has an atrophic right kidney.",
+        "spans": [
+          "an atrophic right kidney"
+        ],
+        "span_offsets": [
+          [
+            61,
+            85
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley has a family history of renal disease.",
+        "spans": [
+          "a family history of renal disease"
+        ],
+        "span_offsets": [
+          [
+            92,
+            125
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley has atrophic right kidney.",
+        "spans": [
+          "Atrophic right kidney"
+        ],
+        "span_offsets": [
+          [
+            142,
+            163
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley has recurrent infections.",
+        "spans": [
+          "Recurrent infections"
+        ],
+        "span_offsets": [
+          [
+            165,
+            185
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley has end-stage renal disease.",
+        "spans": [
+          "End-stage renal disease"
+        ],
+        "span_offsets": [
+          [
+            187,
+            210
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley has chronic kidney disease.",
+        "spans": [
+          "Chronic kidney disease"
+        ],
+        "span_offsets": [
+          [
+            212,
+            234
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley's chronic kidney disease is at stage V.",
+        "spans": [
+          "Stage V"
+        ],
+        "span_offsets": [
+          [
+            236,
+            243
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley has diabetes.",
+        "spans": [
+          "Diabetes"
+        ],
+        "span_offsets": [
+          [
+            245,
+            253
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley has hypertension.",
+        "spans": [
+          "Hypertension"
+        ],
+        "span_offsets": [
+          [
+            255,
+            267
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "Ashley is recommended to undergo an annual ultrasound to monitor the size of her kidneys and their overall function.",
+        "spans": [
+          "I recommended that Ashley undergo an annual ultrasound to monitor the size of her kidneys and their overall function"
+        ],
+        "span_offsets": [
+          [
+            0,
+            116
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley is recommended to complete a urinalysis to ensure that protein and blood are not present in her urine.",
+        "spans": [
+          "I also suggested completing a urinalysis to ensure that protein and blood are not present in her urine"
+        ],
+        "span_offsets": [
+          [
+            118,
+            220
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley is recommended to have a blood pressure check.",
+        "spans": [
+          "and a blood pressure check"
+        ],
+        "span_offsets": [
+          [
+            222,
+            248
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley is advised to avoid nonsteroidal anti-inflammatory medicines like ibuprofen.",
+        "spans": [
+          "avoiding nonsteroidal anti-inflammatory medicines like ibuprofen"
+        ],
+        "span_offsets": [
+          [
+            260,
+            324
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley is advised to take Tylenol instead of nonsteroidal anti-inflammatory medicines.",
+        "spans": [
+          "opting for Tylenol instead"
+        ],
+        "span_offsets": [
+          [
+            329,
+            355
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley is recommended to stay well-hydrated, drinking at least 2L of water per day.",
+        "spans": [
+          "drinking at least 2L of water per day"
+        ],
+        "span_offsets": [
+          [
+            408,
+            445
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley is recommended to maintain a healthy diet to support her kidney health.",
+        "spans": [
+          "maintain a healthy diet to support her kidney health"
+        ],
+        "span_offsets": [
+          [
+            451,
+            503
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley can schedule an appointment with her primary care physician.",
+        "spans": [
+          "Ashley can schedule an appointment with her primary care physician or an adult nephrologist closer to her home"
+        ],
+        "span_offsets": [
+          [
+            506,
+            616
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ashley can schedule an appointment with an adult nephrologist closer to her home.",
+        "spans": [
+          "Ashley can schedule an appointment with her primary care physician or an adult nephrologist closer to her home"
+        ],
+        "span_offsets": [
+          [
+            506,
+            616
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

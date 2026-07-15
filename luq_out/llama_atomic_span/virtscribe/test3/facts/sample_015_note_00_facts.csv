@@ -1,0 +1,43 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Stephanie Morales.,0.0,"[""Stephanie Morales""]","[[5, 22]]","[""exact""]",True,False
+1,subjective,The patient is a 44-year-old female.,0.0,"[""a 44-year-old female""]","[[24, 44]]","[""exact""]",True,False
+2,subjective,The patient is 6 weeks status post right medial unicompartmental arthroplasty.,0.0,"[""6 weeks status post right medial unicompartmental arthroplasty""]","[[61, 123]]","[""exact""]",True,False
+3,subjective,The patient reports no problems with the knee.,0.25,"[""reports no problems with the knee""]","[[125, 158]]","[""exact""]",True,False
+4,subjective,The patient experiences numbness on the side of the knee.,0.0,"[""numbness on the side of the knee""]","[[173, 205]]","[""exact""]",True,False
+5,subjective,The numbness on the side of the knee will improve as the nerves heal.,0.0,"[""numbness on the side of the knee that will improve as the nerves heal""]","[[173, 242]]","[""exact""]",True,False
+6,subjective,The patient is happy with the surgery.,0.0,"[""The patient is happy with the surgery""]","[[244, 281]]","[""exact""]",True,False
+7,subjective,The patient has no pain.,0.25,"[""has no pain""]","[[286, 297]]","[""exact""]",True,False
+8,objective,The patient's gait is antalgic.,0.0,"[""The patient's gait was antalgic""]","[[15, 46]]","[""exact""]",True,False
+9,objective,The patient's gait has a slight limp.,0.0,"[""with a slight limp""]","[[47, 65]]","[""exact""]",True,False
+10,objective,The patient's gait has decreased velocity.,0.0,"[""decreased velocity""]","[[70, 88]]","[""exact""]",True,False
+11,objective,The patient does not use an assistive device for ambulation.,0.0,"[""not using an assistive device""]","[[90, 119]]","[""exact""]",True,False
+12,objective,The patient has a healed surgical scar on the right knee.,0.0,"[""a healed surgical scar""]","[[148, 170]]","[""exact""]",True,False
+13,objective,The patient has mild swelling of the right knee.,0.0,"[""mild swelling""]","[[172, 185]]","[""exact""]",True,False
+14,objective,The patient has tenderness along the area of the incision on the right knee.,0.0,"[""tenderness along the area of the incision""]","[[187, 228]]","[""exact""]",True,False
+15,objective,The patient's right knee range of motion is 0 to 120 degrees.,0.0,"[""range of motion of 0 to 120 degrees""]","[[234, 269]]","[""exact""]",True,False
+16,objective,The patient's right knee exam is otherwise normal.,0.5,"[""with everything else normal""]","[[271, 298]]","[""exact""]",True,False
+17,objective,The patient had radiographs of the right knee taken today.,0.75,"[""Radiographs of the right knee, taken today""]","[[315, 357]]","[""exact""]",True,False
+18,objective,The implants in the patient's right knee are in a stable position.,0.0,"[""implants in a stable position""]","[[364, 393]]","[""exact""]",True,False
+19,objective,There is no evidence of loosening of the implants in the patient's right knee.,0.0,"[""no evidence of loosening""]","[[399, 423]]","[""exact""]",True,False
+20,objective,There are no early complications of the implants in the patient's right knee.,0.0,"[""no evidence of ... early complications""]","[[427, 446]]","[""word""]",True,False
+21,assessment,The patient is 6 weeks postoperative.,0.0,"[""6 weeks postoperative""]","[[27, 48]]","[""exact""]",True,False
+22,assessment,The patient has a stable unicompartmental arthroplasty.,0.75,"[""stable and healing unicompartmental arthroplasty""]","[[56, 104]]","[""exact""]",True,False
+23,assessment,The patient's unicompartmental arthroplasty is healing.,0.0,"[""stable and healing unicompartmental arthroplasty""]","[[56, 104]]","[""exact""]",True,False
+24,assessment,The patient has some expected numbness on the side of the knee.,0.0,"[""some expected numbness on the side of the knee""]","[[111, 157]]","[""exact""]",True,False
+25,assessment,The patient's numbness on the side of the knee will improve with time.,0.5,"[""some expected numbness on the side of the knee that will improve with time""]","[[111, 185]]","[""exact""]",True,False
+26,plan,The patient was prescribed no new medications.,0.0,"[""I prescribed no new medications""]","[[0, 31]]","[""exact""]",True,False
+27,plan,The patient was instructed to continue with physical therapy.,0.0,"[""I instructed the patient to continue with physical therapy""]","[[33, 91]]","[""exact""]",True,False
+28,plan,The goal of the patient's physical therapy is to work on strength.,0.0,"[""to work on strength, range of motion, and endurance""]","[[92, 143]]","[""exact""]",True,False
+29,plan,The goal of the patient's physical therapy is to work on range of motion.,0.0,"[""to work on strength, range of motion, and endurance""]","[[92, 143]]","[""exact""]",True,False
+30,plan,The goal of the patient's physical therapy is to work on endurance.,0.0,"[""to work on strength, range of motion, and endurance""]","[[92, 143]]","[""exact""]",True,False
+31,plan,The patient may experience aches and pains occasionally.,0.25,"[""it's common to experience aches and pains occasionally""]","[[174, 228]]","[""exact""]",True,False
+32,plan,The patient's aches and pains should improve over the next 2-3 months.,0.25,"[""but they should improve over the next 2-3 months""]","[[230, 278]]","[""exact""]",True,False
+33,plan,The patient will be excused from work for another 6 weeks.,0.0,"[""I will write a note to excuse the patient from work for another 6 weeks""]","[[280, 351]]","[""exact""]",True,False
+34,plan,The patient is limited to lifting less than 5-10 pounds.,1.0,"[""limiting lifting to less than 5-10 pounds""]","[[353, 394]]","[""exact""]",True,False
+35,plan,The patient should avoid standing for more than 30 minutes.,1.0,"[""avoiding standing or sitting for more than 30 minutes""]","[[399, 452]]","[""exact""]",True,False
+36,plan,The patient should avoid sitting for more than 30 minutes.,1.0,"[""avoiding standing or sitting for more than 30 minutes""]","[[399, 452]]","[""exact""]",True,False
+37,plan,The patient's job will be discussed further in 6 weeks.,0.5,"[""I will discuss the patient's job further in 6 weeks""]","[[454, 505]]","[""exact""]",True,False
+38,plan,The patient is cleared to drive when they feel safe and ready.,0.5,"[""The patient is cleared to drive when they feel safe and ready""]","[[507, 568]]","[""exact""]",True,False
+39,plan,The patient will return for a telemedicine visit in 6 weeks.,0.0,"[""The patient will return for a telemedicine visit in 6 weeks""]","[[582, 641]]","[""exact""]",True,False
+40,plan,The purpose of the patient's follow-up telemedicine visit is to check on progress.,0.0,"[""to check on progress and make sure everything is okay""]","[[642, 695]]","[""exact""]",True,False
+41,plan,The purpose of the patient's follow-up telemedicine visit is to make sure everything is okay.,0.0,"[""to check on progress and make sure everything is okay""]","[[642, 695]]","[""exact""]",True,False

@@ -1,0 +1,48 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Ashley James.,0.5,"[""Ashley James""]","[[5, 17]]","[""exact""]",True,False
+1,subjective,The patient is a 14-year-old female.,0.0,"[""a 14-year-old female""]","[[19, 39]]","[""exact""]",True,False
+2,subjective,The patient presents with abdominal pain.,0.0,"[""abdominal pain""]","[[68, 82]]","[""exact""]",True,False
+3,subjective,The patient presents with vomiting.,0.25,"[""vomiting""]","[[87, 95]]","[""exact""]",True,False
+4,subjective,The patient was initially thought to have appendicitis.,1.0,"[""initially thought to be appendicitis""]","[[97, 133]]","[""exact""]",True,False
+5,subjective,The patient has an atrophic right kidney on ultrasound.,0.0,"[""atrophic right kidney on ultrasound""]","[[162, 197]]","[""exact""]",True,False
+6,subjective,The patient has a history of recurrent infections as a child.,0.0,"[""history of recurrent infections as a child""]","[[209, 251]]","[""exact""]",True,False
+7,subjective,The patient was hospitalized at 4 years old for 3-4 times.,1.0,"[""hospitalizations at 4 years old for 3-4 times""]","[[258, 303]]","[""exact""]",True,False
+8,subjective,The patient had symptoms of fever as a child.,0.25,"[""symptoms of fever and vomiting""]","[[310, 340]]","[""exact""]",True,False
+9,subjective,The patient had symptoms of vomiting as a child.,0.5,"[""symptoms of fever and vomiting""]","[[310, 340]]","[""exact""]",True,False
+10,subjective,The patient takes Pepcid 40mg daily.,0.0,"[""Pepcid 40mg daily""]","[[394, 411]]","[""exact""]",True,False
+11,subjective,The patient takes Pepcid for symptoms.,0.5,"[""Pepcid 40mg daily for symptoms""]","[[394, 424]]","[""exact""]",True,False
+12,subjective,The patient takes Claritin for allergies.,0.0,"[""Claritin for allergies""]","[[429, 451]]","[""exact""]",True,False
+13,subjective,The patient's family history includes renal disease.,0.0,"[""renal disease""]","[[481, 494]]","[""exact""]",True,False
+14,subjective,The patient's father had a kidney transplant.,0.0,"[""father having a kidney transplant""]","[[505, 538]]","[""exact""]",True,False
+15,subjective,The patient's aunt has end-stage renal disease.,0.0,"[""aunt with end-stage renal disease""]","[[540, 573]]","[""exact""]",True,False
+16,subjective,The patient's mother has breast cancer.,0.75,"[""mother with breast cancer""]","[[579, 604]]","[""exact""]",True,False
+17,subjective,The patient's father died at 47 due to a massive heart attack while on dialysis.,1.0,"[""father died at 47 due to a massive heart attack while on dialysis""]","[[615, 680]]","[""exact""]",True,False
+18,subjective,The patient complains of abdominal pain.,0.0,"[""Ashley complains of abdominal pain""]","[[1104, 1138]]","[""exact""]",True,False
+19,subjective,The patient complains of vomiting.,0.5,"[""vomiting""]","[[87, 95]]","[""exact""]",True,False
+20,subjective,The patient complains of a burning sensation when urinating.,0.25,"[""burning sensation when urinating""]","[[1154, 1186]]","[""exact""]",True,False
+21,subjective,The patient experiences a burning sensation when urinating after consuming certain drinks like soda.,0.5,"[""burning sensation when urinating, especially after consuming certain drinks like soda""]","[[1154, 1239]]","[""exact""]",True,False
+22,objective,The patient is a female.,0.0,"[""well-appearing female""]","[[27, 48]]","[""exact""]",True,False
+23,objective,The patient is well-appearing.,0.0,"[""well-appearing female""]","[[27, 48]]","[""exact""]",True,False
+24,objective,The patient is alert.,0.0,"[""alert and oriented""]","[[50, 68]]","[""exact""]",True,False
+25,objective,The patient is oriented.,0.0,"[""alert and oriented""]","[[50, 68]]","[""exact""]",True,False
+26,objective,The patient has no acute distress.,0.0,"[""with no acute distress""]","[[70, 92]]","[""exact""]",True,False
+27,objective,The patient's physical exam is within normal limits.,0.0,"[""Her physical exam is within normal limits""]","[[94, 135]]","[""exact""]",True,False
+28,assessment,Ashley has a history of recurrent infections.,0.5,"[""a history of recurrent infections""]","[[23, 56]]","[""exact""]",True,False
+29,assessment,Ashley has an atrophic right kidney.,0.0,"[""an atrophic right kidney""]","[[61, 85]]","[""exact""]",True,False
+30,assessment,Ashley has a family history of renal disease.,0.0,"[""a family history of renal disease""]","[[92, 125]]","[""exact""]",True,False
+31,assessment,Ashley has atrophic right kidney.,0.0,"[""Atrophic right kidney""]","[[142, 163]]","[""exact""]",True,False
+32,assessment,Ashley has recurrent infections.,0.5,"[""Recurrent infections""]","[[165, 185]]","[""exact""]",True,False
+33,assessment,Ashley has end-stage renal disease.,0.75,"[""End-stage renal disease""]","[[187, 210]]","[""exact""]",True,False
+34,assessment,Ashley has chronic kidney disease.,0.5,"[""Chronic kidney disease""]","[[212, 234]]","[""exact""]",True,False
+35,assessment,Ashley's chronic kidney disease is at stage V.,0.75,"[""Stage V""]","[[236, 243]]","[""exact""]",True,False
+36,assessment,Ashley has diabetes.,0.75,"[""Diabetes""]","[[245, 253]]","[""exact""]",True,False
+37,assessment,Ashley has hypertension.,0.5,"[""Hypertension""]","[[255, 267]]","[""exact""]",True,False
+38,plan,Ashley is recommended to undergo an annual ultrasound to monitor the size of her kidneys and their overall function.,0.0,"[""I recommended that Ashley undergo an annual ultrasound to monitor the size of her kidneys and their overall function""]","[[0, 116]]","[""exact""]",True,False
+39,plan,Ashley is recommended to complete a urinalysis to ensure that protein and blood are not present in her urine.,0.0,"[""I also suggested completing a urinalysis to ensure that protein and blood are not present in her urine""]","[[118, 220]]","[""exact""]",True,False
+40,plan,Ashley is recommended to have a blood pressure check.,0.0,"[""and a blood pressure check""]","[[222, 248]]","[""exact""]",True,False
+41,plan,Ashley is advised to avoid nonsteroidal anti-inflammatory medicines like ibuprofen.,0.0,"[""avoiding nonsteroidal anti-inflammatory medicines like ibuprofen""]","[[260, 324]]","[""exact""]",True,False
+42,plan,Ashley is advised to take Tylenol instead of nonsteroidal anti-inflammatory medicines.,0.0,"[""opting for Tylenol instead""]","[[329, 355]]","[""exact""]",True,False
+43,plan,"Ashley is recommended to stay well-hydrated, drinking at least 2L of water per day.",0.0,"[""drinking at least 2L of water per day""]","[[408, 445]]","[""exact""]",True,False
+44,plan,Ashley is recommended to maintain a healthy diet to support her kidney health.,0.0,"[""maintain a healthy diet to support her kidney health""]","[[451, 503]]","[""exact""]",True,False
+45,plan,Ashley can schedule an appointment with her primary care physician.,0.0,"[""Ashley can schedule an appointment with her primary care physician or an adult nephrologist closer to her home""]","[[506, 616]]","[""exact""]",True,False
+46,plan,Ashley can schedule an appointment with an adult nephrologist closer to her home.,0.0,"[""Ashley can schedule an appointment with her primary care physician or an adult nephrologist closer to her home""]","[[506, 616]]","[""exact""]",True,False

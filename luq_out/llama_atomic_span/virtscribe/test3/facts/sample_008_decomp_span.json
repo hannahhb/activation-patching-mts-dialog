@@ -1,0 +1,636 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's acne is improving.",
+        "spans": [
+          "his acne is doing better",
+          "he feels that the acne on his face is improving"
+        ],
+        "span_offsets": [
+          [
+            25,
+            49
+          ],
+          [
+            673,
+            720
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient is using benzoyl peroxide wash.",
+        "spans": [
+          "benzoyl peroxide wash"
+        ],
+        "span_offsets": [
+          [
+            88,
+            109
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is using antibiotic lotion.",
+        "spans": [
+          "antibiotic lotion"
+        ],
+        "span_offsets": [
+          [
+            111,
+            128
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is using tretinoin cream.",
+        "spans": [
+          "tretinoin cream"
+        ],
+        "span_offsets": [
+          [
+            130,
+            145
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is using sunscreen moisture stuff.",
+        "spans": [
+          "sunscreen moisture stuff"
+        ],
+        "span_offsets": [
+          [
+            151,
+            175
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not experienced redness with the use of these medications.",
+        "spans": [
+          "he has not experienced any redness"
+        ],
+        "span_offsets": [
+          [
+            189,
+            223
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not experienced peeling with the use of these medications.",
+        "spans": [
+          "he has not experienced any peeling"
+        ],
+        "span_offsets": [
+          [
+            200,
+            232
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not experienced dryness with the use of these medications.",
+        "spans": [
+          "he has not experienced any dryness"
+        ],
+        "span_offsets": [
+          [
+            200,
+            241
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not experienced irritation with the use of these medications.",
+        "spans": [
+          "he has not experienced any irritation"
+        ],
+        "span_offsets": [
+          [
+            200,
+            215
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient washes his face with 4-5% benzoyl peroxide wash.",
+        "spans": [
+          "washing his face with the 4-5% benzoyl peroxide wash"
+        ],
+        "span_offsets": [
+          [
+            304,
+            356
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient applies tretinoin cream at night.",
+        "spans": [
+          "applying the tretinoin cream at night"
+        ],
+        "span_offsets": [
+          [
+            358,
+            395
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient uses sunscreen moisture stuff twice daily.",
+        "spans": [
+          "using the sunscreen moisture stuff twice daily"
+        ],
+        "span_offsets": [
+          [
+            401,
+            447
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is not prioritizing washing his chest and back with a higher strength benzoyl peroxide wash.",
+        "spans": [
+          "washing his chest and back with a higher strength benzoyl peroxide wash is not a priority"
+        ],
+        "span_offsets": [
+          [
+            466,
+            555
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient may consider washing his chest and back with a higher strength benzoyl peroxide wash in the summer.",
+        "spans": [
+          "may be something he is more interested in pursuing as he moves into the summer"
+        ],
+        "span_offsets": [
+          [
+            593,
+            671
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has scattered inflammatory papules and pustules across the upper back.",
+        "spans": [
+          "scattered inflammatory papules and pustules across the upper back and posterior shoulders"
+        ],
+        "span_offsets": [
+          [
+            25,
+            114
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has scattered inflammatory papules and pustules across the posterior shoulders.",
+        "spans": [
+          "scattered inflammatory papules and pustules across the upper back and posterior shoulders"
+        ],
+        "span_offsets": [
+          [
+            25,
+            114
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has less than five inflammatory papules on the forehead.",
+        "spans": [
+          "with less than five inflammatory papules on the forehead, cheeks, and chin"
+        ],
+        "span_offsets": [
+          [
+            116,
+            190
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has less than five inflammatory papules on the cheeks.",
+        "spans": [
+          "with less than five inflammatory papules on the forehead, cheeks, and chin"
+        ],
+        "span_offsets": [
+          [
+            116,
+            190
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has less than five inflammatory papules on the chin.",
+        "spans": [
+          "with less than five inflammatory papules on the forehead, cheeks, and chin"
+        ],
+        "span_offsets": [
+          [
+            116,
+            190
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient's acne vulgaris is improved and well-controlled on the face.",
+        "spans": [
+          "acne vulgaris is improved and well-controlled on the face"
+        ],
+        "span_offsets": [
+          [
+            26,
+            83
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a mild flare of acne vulgaris on the back.",
+        "spans": [
+          "has a mild flare on the back"
+        ],
+        "span_offsets": [
+          [
+            88,
+            116
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has acne vulgaris.",
+        "spans": [
+          "Acne vulgaris"
+        ],
+        "span_offsets": [
+          [
+            132,
+            145
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's acne vulgaris on the back is active.",
+        "spans": [
+          "Acne vulgaris (back) status: active"
+        ],
+        "span_offsets": [
+          [
+            147,
+            182
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's acne vulgaris on the face is active.",
+        "spans": [
+          "Acne vulgaris (face) status: active"
+        ],
+        "span_offsets": [
+          [
+            184,
+            219
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient is currently using benzoyl peroxide wash.",
+        "spans": [
+          "benzoyl peroxide wash"
+        ],
+        "span_offsets": [
+          [
+            85,
+            106
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is currently using antibiotic lotion.",
+        "spans": [
+          "antibiotic lotion"
+        ],
+        "span_offsets": [
+          [
+            108,
+            125
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is currently using tretinoin cream.",
+        "spans": [
+          "tretinoin cream"
+        ],
+        "span_offsets": [
+          [
+            131,
+            146
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's treatment plan for the face includes benzoyl peroxide wash, antibiotic lotion, and tretinoin cream.",
+        "spans": [
+          "which includes the benzoyl peroxide wash, antibiotic lotion, and tretinoin cream"
+        ],
+        "span_offsets": [
+          [
+            66,
+            146
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed Panoxyl 10% foaming wash.",
+        "spans": [
+          "Panoxyl 10% foaming wash"
+        ],
+        "span_offsets": [
+          [
+            178,
+            202
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to use Panoxyl 10% foaming wash daily.",
+        "spans": [
+          "initiating treatment with Panoxyl 10% foaming wash on the back in the shower daily",
+          "with instructions to use it daily"
+        ],
+        "span_offsets": [
+          [
+            152,
+            234
+          ],
+          [
+            282,
+            315
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient was prescribed Panoxyl 10%.",
+        "spans": [
+          "I also prescribed Panoxyl 10% to the patient"
+        ],
+        "span_offsets": [
+          [
+            236,
+            280
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's prescription for clindamycin was refilled with 11 refills.",
+        "spans": [
+          "refilled the patient's prescription for clindamycin with 11 refills"
+        ],
+        "span_offsets": [
+          [
+            390,
+            457
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's prescription for tretinoin cream was refilled with 3 refills.",
+        "spans": [
+          "tretinoin cream with 3 refills"
+        ],
+        "span_offsets": [
+          [
+            462,
+            492
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was sent home with samples and coupons for the Panoxyl 10%.",
+        "spans": [
+          "I sent the patient home with samples and coupons for the Panoxyl 10%"
+        ],
+        "span_offsets": [
+          [
+            317,
+            385
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is scheduled to return in one year for a follow-up appointment.",
+        "spans": [
+          "to return in one year for a follow-up appointment"
+        ],
+        "span_offsets": [
+          [
+            520,
+            569
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the follow-up appointment is to review the patient's treatment plan and refill prescriptions as needed.",
+        "spans": [
+          "to review his treatment plan and refill his prescriptions as needed"
+        ],
+        "span_offsets": [
+          [
+            570,
+            637
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

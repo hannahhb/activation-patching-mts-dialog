@@ -1,0 +1,37 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's acne is improving.,0.0,"[""his acne is doing better"", ""he feels that the acne on his face is improving""]","[[25, 49], [673, 720]]","[""exact"", ""exact""]",True,True
+1,subjective,The patient is using benzoyl peroxide wash.,0.0,"[""benzoyl peroxide wash""]","[[88, 109]]","[""exact""]",True,False
+2,subjective,The patient is using antibiotic lotion.,0.0,"[""antibiotic lotion""]","[[111, 128]]","[""exact""]",True,False
+3,subjective,The patient is using tretinoin cream.,0.0,"[""tretinoin cream""]","[[130, 145]]","[""exact""]",True,False
+4,subjective,The patient is using sunscreen moisture stuff.,0.0,"[""sunscreen moisture stuff""]","[[151, 175]]","[""exact""]",True,False
+5,subjective,The patient has not experienced redness with the use of these medications.,0.0,"[""he has not experienced any redness""]","[[189, 223]]","[""exact""]",True,False
+6,subjective,The patient has not experienced peeling with the use of these medications.,0.0,"[""he has not experienced any peeling""]","[[200, 232]]","[""word""]",True,False
+7,subjective,The patient has not experienced dryness with the use of these medications.,0.0,"[""he has not experienced any dryness""]","[[200, 241]]","[""word""]",True,False
+8,subjective,The patient has not experienced irritation with the use of these medications.,0.0,"[""he has not experienced any irritation""]","[[200, 215]]","[""word""]",True,False
+9,subjective,The patient washes his face with 4-5% benzoyl peroxide wash.,0.75,"[""washing his face with the 4-5% benzoyl peroxide wash""]","[[304, 356]]","[""exact""]",True,False
+10,subjective,The patient applies tretinoin cream at night.,0.75,"[""applying the tretinoin cream at night""]","[[358, 395]]","[""exact""]",True,False
+11,subjective,The patient uses sunscreen moisture stuff twice daily.,1.0,"[""using the sunscreen moisture stuff twice daily""]","[[401, 447]]","[""exact""]",True,False
+12,subjective,The patient is not prioritizing washing his chest and back with a higher strength benzoyl peroxide wash.,0.25,"[""washing his chest and back with a higher strength benzoyl peroxide wash is not a priority""]","[[466, 555]]","[""exact""]",True,False
+13,subjective,The patient may consider washing his chest and back with a higher strength benzoyl peroxide wash in the summer.,0.5,"[""may be something he is more interested in pursuing as he moves into the summer""]","[[593, 671]]","[""exact""]",True,False
+14,objective,The patient has scattered inflammatory papules and pustules across the upper back.,0.0,"[""scattered inflammatory papules and pustules across the upper back and posterior shoulders""]","[[25, 114]]","[""exact""]",True,False
+15,objective,The patient has scattered inflammatory papules and pustules across the posterior shoulders.,0.0,"[""scattered inflammatory papules and pustules across the upper back and posterior shoulders""]","[[25, 114]]","[""exact""]",True,False
+16,objective,The patient has less than five inflammatory papules on the forehead.,0.0,"[""with less than five inflammatory papules on the forehead, cheeks, and chin""]","[[116, 190]]","[""exact""]",True,False
+17,objective,The patient has less than five inflammatory papules on the cheeks.,0.0,"[""with less than five inflammatory papules on the forehead, cheeks, and chin""]","[[116, 190]]","[""exact""]",True,False
+18,objective,The patient has less than five inflammatory papules on the chin.,0.0,"[""with less than five inflammatory papules on the forehead, cheeks, and chin""]","[[116, 190]]","[""exact""]",True,False
+19,assessment,The patient's acne vulgaris is improved and well-controlled on the face.,0.0,"[""acne vulgaris is improved and well-controlled on the face""]","[[26, 83]]","[""exact""]",True,False
+20,assessment,The patient has a mild flare of acne vulgaris on the back.,0.0,"[""has a mild flare on the back""]","[[88, 116]]","[""exact""]",True,False
+21,assessment,The patient has acne vulgaris.,0.0,"[""Acne vulgaris""]","[[132, 145]]","[""exact""]",True,False
+22,assessment,The patient's acne vulgaris on the back is active.,0.0,"[""Acne vulgaris (back) status: active""]","[[147, 182]]","[""exact""]",True,False
+23,assessment,The patient's acne vulgaris on the face is active.,0.5,"[""Acne vulgaris (face) status: active""]","[[184, 219]]","[""exact""]",True,False
+24,plan,The patient is currently using benzoyl peroxide wash.,0.0,"[""benzoyl peroxide wash""]","[[85, 106]]","[""exact""]",True,False
+25,plan,The patient is currently using antibiotic lotion.,0.75,"[""antibiotic lotion""]","[[108, 125]]","[""exact""]",True,False
+26,plan,The patient is currently using tretinoin cream.,0.5,"[""tretinoin cream""]","[[131, 146]]","[""exact""]",True,False
+27,plan,"The patient's treatment plan for the face includes benzoyl peroxide wash, antibiotic lotion, and tretinoin cream.",0.75,"[""which includes the benzoyl peroxide wash, antibiotic lotion, and tretinoin cream""]","[[66, 146]]","[""exact""]",True,False
+28,plan,The patient was prescribed Panoxyl 10% foaming wash.,0.25,"[""Panoxyl 10% foaming wash""]","[[178, 202]]","[""exact""]",True,False
+29,plan,The patient was instructed to use Panoxyl 10% foaming wash daily.,0.0,"[""initiating treatment with Panoxyl 10% foaming wash on the back in the shower daily"", ""with instructions to use it daily""]","[[152, 234], [282, 315]]","[""exact"", ""exact""]",True,True
+30,plan,The patient was prescribed Panoxyl 10%.,0.25,"[""I also prescribed Panoxyl 10% to the patient""]","[[236, 280]]","[""exact""]",True,False
+31,plan,The patient's prescription for clindamycin was refilled with 11 refills.,0.5,"[""refilled the patient's prescription for clindamycin with 11 refills""]","[[390, 457]]","[""exact""]",True,False
+32,plan,The patient's prescription for tretinoin cream was refilled with 3 refills.,0.5,"[""tretinoin cream with 3 refills""]","[[462, 492]]","[""exact""]",True,False
+33,plan,The patient was sent home with samples and coupons for the Panoxyl 10%.,0.5,"[""I sent the patient home with samples and coupons for the Panoxyl 10%""]","[[317, 385]]","[""exact""]",True,False
+34,plan,The patient is scheduled to return in one year for a follow-up appointment.,0.0,"[""to return in one year for a follow-up appointment""]","[[520, 569]]","[""exact""]",True,False
+35,plan,The purpose of the follow-up appointment is to review the patient's treatment plan and refill prescriptions as needed.,0.75,"[""to review his treatment plan and refill his prescriptions as needed""]","[[570, 637]]","[""exact""]",True,False

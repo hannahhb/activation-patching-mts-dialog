@@ -1,0 +1,65 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Maria Martin.,0.0,"[""Maria Martin""]","[[13, 25]]","[""exact""]",True,False
+1,subjective,The patient is a 76-year-old female.,0.5,"[""a 76-year-old female""]","[[27, 47]]","[""exact""]",True,False
+2,subjective,The patient reports feeling pretty good.,0.25,"[""feeling \""pretty good\""""]","[[85, 106]]","[""exact""]",True,False
+3,subjective,The patient has peripheral neuropathy in her feet.,0.25,"[""peripheral neuropathy in her feet""]","[[133, 166]]","[""exact""]",True,False
+4,subjective,The patient's peripheral neuropathy in her feet feels like hell all the time.,1.0,"[""feeling \""like hell\"" all the time""]","[[191, 223]]","[""exact""]",True,False
+5,subjective,The patient has pain in her hips and upper legs.,0.25,"[""pain in her hips and upper legs""]","[[242, 273]]","[""exact""]",True,False
+6,subjective,The patient denies headaches.,0.0,"[""denies headaches, dizziness, shortness of breath, coughing, chest pains, pressure, or tightness""]","[[279, 374]]","[""exact""]",True,False
+7,subjective,The patient denies dizziness.,0.0,"[""denies headaches, dizziness, shortness of breath, coughing, chest pains, pressure, or tightness""]","[[279, 374]]","[""exact""]",True,False
+8,subjective,The patient denies shortness of breath.,0.0,"[""denies headaches, dizziness, shortness of breath, coughing, chest pains, pressure, or tightness""]","[[279, 374]]","[""exact""]",True,False
+9,subjective,The patient denies coughing.,0.25,"[""denies headaches, dizziness, shortness of breath, coughing, chest pains, pressure, or tightness""]","[[279, 374]]","[""exact""]",True,False
+10,subjective,The patient denies chest pains.,0.0,"[""denies headaches, dizziness, shortness of breath, coughing, chest pains, pressure, or tightness""]","[[279, 374]]","[""exact""]",True,False
+11,subjective,The patient denies pressure.,0.25,"[""denies headaches, dizziness, shortness of breath, coughing, chest pains, pressure, or tightness""]","[[279, 374]]","[""exact""]",True,False
+12,subjective,The patient denies tightness.,0.25,"[""denies headaches, dizziness, shortness of breath, coughing, chest pains, pressure, or tightness""]","[[279, 374]]","[""exact""]",True,False
+13,subjective,The patient is constipated.,1.0,"[""being constipated""]","[[388, 405]]","[""exact""]",True,False
+14,subjective,The patient has a slow stream of urine.,1.0,"[""a slow stream of urine""]","[[417, 439]]","[""exact""]",True,False
+15,subjective,The patient's constipation and slow stream of urine are stable.,1.0,"[""but states it is stable""]","[[441, 464]]","[""exact""]",True,False
+16,subjective,The patient has had cataract surgery.,0.0,"[""has had cataract surgery""]","[[470, 494]]","[""exact""]",True,False
+17,subjective,The patient's cataract surgery has improved her vision.,0.5,"[""which has improved her vision""]","[[496, 525]]","[""exact""]",True,False
+18,subjective,The patient is not satisfied with the new lens.,1.0,"[""but is not satisfied with the new lens""]","[[527, 565]]","[""exact""]",True,False
+19,subjective,The patient denies fever.,0.0,"[""has not had a fever, chills, or nausea""]","[[571, 609]]","[""exact""]",True,False
+20,subjective,The patient denies chills.,0.5,"[""has not had a fever, chills, or nausea""]","[[571, 609]]","[""exact""]",True,False
+21,subjective,The patient denies nausea.,0.0,"[""has not had a fever, chills, or nausea""]","[[571, 609]]","[""exact""]",True,False
+22,subjective,The patient has a history of diabetes.,0.0,"[""a history of diabetes""]","[[628, 649]]","[""exact""]",True,False
+23,subjective,The patient has a history of hypertension.,0.0,"[""a history of hypertension""]","[[651, 663]]","[""word""]",True,False
+24,subjective,The patient has a history of high cholesterol.,0.0,"[""a history of high cholesterol""]","[[665, 681]]","[""word""]",True,False
+25,subjective,The patient has a history of vascular disease in her legs.,0.0,"[""vascular disease in her legs""]","[[687, 715]]","[""exact""]",True,False
+26,subjective,The patient is taking glimepiride.,0.0,"[""glimepiride 2mg twice a day""]","[[737, 764]]","[""exact""]",True,False
+27,subjective,The patient's glimepiride dose is 2mg twice a day.,0.25,"[""glimepiride 2mg twice a day""]","[[737, 764]]","[""exact""]",True,False
+28,subjective,The patient is taking metoprolol.,0.0,"[""metoprolol 50mg once a day""]","[[766, 792]]","[""exact""]",True,False
+29,subjective,The patient's metoprolol dose is 50mg once a day.,0.0,"[""metoprolol 50mg once a day""]","[[766, 792]]","[""exact""]",True,False
+30,subjective,The patient is taking lisinopril with hydrochlorothiazide.,0.0,"[""lisinopril with hydrochlorothiazide 20/25mg once a day""]","[[794, 848]]","[""exact""]",True,False
+31,subjective,The patient's lisinopril with hydrochlorothiazide dose is 20/25mg once a day.,0.0,"[""lisinopril with hydrochlorothiazide 20/25mg once a day""]","[[794, 848]]","[""exact""]",True,False
+32,subjective,The patient is taking amlodipine.,0.0,"[""amlodipine 10mg once a day""]","[[850, 876]]","[""exact""]",True,False
+33,subjective,The patient's amlodipine dose is 10mg once a day.,0.0,"[""amlodipine 10mg once a day""]","[[850, 876]]","[""exact""]",True,False
+34,subjective,The patient is taking atorvastatin.,0.0,"[""atorvastatin""]","[[882, 894]]","[""exact""]",True,False
+35,subjective,The patient is a smoker.,0.0,"[""She is a smoker""]","[[896, 911]]","[""exact""]",True,False
+36,objective,The patient's blood pressure is 140/60.,0.25,"[""140/60s (rechecked)""]","[[18, 37]]","[""exact""]",True,False
+37,objective,The patient's carotids are normal.,0.0,"[""Carotids are normal""]","[[139, 158]]","[""exact""]",True,False
+38,objective,The patient has palpable pulses on the dorsalis pedis.,0.0,"[""Pulses are palpable on the dorsalis pedis, posterior tibial""]","[[162, 221]]","[""exact""]",True,False
+39,objective,The patient has palpable pulses on the posterior tibial.,0.0,"[""Pulses are palpable on the dorsalis pedis, posterior tibial""]","[[162, 221]]","[""exact""]",True,False
+40,objective,The patient's extremities are without edema.,0.0,"[""Extremities are without edema""]","[[225, 254]]","[""exact""]",True,False
+41,objective,The patient has mildly dry skin.,0.0,"[""Mildly dry skin, no skin breakdown""]","[[258, 292]]","[""exact""]",True,False
+42,objective,The patient has no skin breakdown.,0.25,"[""Mildly dry skin, no skin breakdown""]","[[258, 292]]","[""exact""]",True,False
+43,objective,The patient has mildly decreased sensation in the tips of the first toe.,0.0,"[""Mildly decreased sensation in the tips of the first and second toes""]","[[296, 363]]","[""exact""]",True,False
+44,objective,The patient has mildly decreased sensation in the tips of the second toe.,0.0,"[""Mildly decreased sensation in the tips of the first and second toes""]","[[296, 363]]","[""exact""]",True,False
+45,objective,The patient has thickened nails.,0.0,"[""Thickened nails""]","[[367, 382]]","[""exact""]",True,False
+46,assessment,The patient has poorly controlled diabetes.,0.25,"[""poorly controlled diabetes""]","[[16, 42]]","[""exact""]",True,False
+47,assessment,The patient has hypertension.,0.0,"[""hypertension""]","[[44, 56]]","[""exact""]",True,False
+48,assessment,The patient has high cholesterol.,0.0,"[""high cholesterol""]","[[58, 74]]","[""exact""]",True,False
+49,assessment,The patient has vascular disease in her legs.,0.0,"[""vascular disease in her legs""]","[[80, 108]]","[""exact""]",True,False
+50,assessment,The patient has diabetes mellitus.,0.0,"[""Diabetes mellitus""]","[[204, 221]]","[""exact""]",True,False
+51,assessment,The patient has hypercholesterolemia.,0.0,"[""hypercholesterolemia""]","[[237, 257]]","[""exact""]",True,False
+52,assessment,The patient has peripheral vascular disease.,0.25,"[""peripheral vascular disease""]","[[259, 286]]","[""exact""]",True,False
+53,assessment,The patient has peripheral neuropathy.,0.0,"[""peripheral neuropathy""]","[[118, 139]]","[""exact""]",True,False
+54,assessment,The patient has constipation.,1.0,"[""constipation""]","[[311, 323]]","[""exact""]",True,False
+55,plan,The patient is to increase her glimepiride to 4mg twice a day.,0.0,"[""increase her glimepiride to 4mg twice a day""]","[[22, 65]]","[""exact""]",True,False
+56,plan,The patient is to take two of the 2mg glimepiride pills until she gets the new prescription.,0.25,"[""take two of the 2mg pills until she gets the new prescription""]","[[73, 134]]","[""exact""]",True,False
+57,plan,The patient is to continue taking metformin.,0.0,"[""continue taking metformin""]","[[155, 180]]","[""exact""]",True,False
+58,plan,The patient's blood pressure will be rechecked.,0.75,"[""recheck her blood pressure""]","[[189, 215]]","[""exact""]",True,False
+59,plan,The patient's kidney function will be checked.,0.0,"[""check her kidney function""]","[[220, 245]]","[""exact""]",True,False
+60,plan,The patient will continue on the high dose of atorvastatin.,0.5,"[""continue her on the high dose of atorvastatin""]","[[254, 299]]","[""exact""]",True,False
+61,plan,The patient's atorvastatin is for protecting her arteries.,0.5,"[""to protect her arteries""]","[[300, 323]]","[""exact""]",True,False
+62,plan,The patient's labs will be obtained today.,0.5,"[""get the labs today""]","[[332, 350]]","[""exact""]",True,False
+63,plan,The patient will be seen back in 4 months.,0.0,"[""see her back in 4 months"", ""see the patient back in 4 months""]","[[355, 379], [390, 422]]","[""exact"", ""exact""]",True,True

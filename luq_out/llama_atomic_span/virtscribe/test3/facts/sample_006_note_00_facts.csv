@@ -1,0 +1,32 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 44-year-old female.,0.0,"[""a 44-year-old female""]","[[20, 40]]","[""exact""]",True,False
+1,subjective,The patient presents six weeks status post right medial unicompartmental arthroplasty.,0.0,"[""six weeks status post right medial unicompartmental arthroplasty""]","[[54, 118]]","[""exact""]",True,False
+2,subjective,The patient reports no problems with her knee.,0.75,"[""no problems with her knee""]","[[132, 157]]","[""exact""]",True,False
+3,subjective,The patient experiences numbness on the same side as the surgery.,0.0,"[""numbness on the same side as the surgery""]","[[170, 210]]","[""exact""]",True,False
+4,subjective,The patient believes the numbness will improve as the nerves heal.,0.25,"[""which she states will improve as the nerves heal""]","[[212, 260]]","[""exact""]",True,False
+5,subjective,The patient expresses satisfaction with the surgery.,0.0,"[""expresses satisfaction with the surgery""]","[[266, 305]]","[""exact""]",True,False
+6,subjective,The patient reports no pain.,0.0,"[""reports no pain""]","[[310, 325]]","[""exact""]",True,False
+7,subjective,The patient's employer is UPS.,0.75,"[""her employer, UPS""]","[[350, 367]]","[""exact""]",True,False
+8,subjective,The patient's employer is asking her to return to work with certain restrictions.,1.0,"[""is asking her to return to work with certain restrictions""]","[[369, 426]]","[""exact""]",True,False
+9,objective,The patient's gait is antalgic.,0.0,"[""The patient's gait was antalgic""]","[[15, 46]]","[""exact""]",True,False
+10,objective,The patient's gait has a slight limp.,0.0,"[""with a slight limp""]","[[47, 65]]","[""exact""]",True,False
+11,objective,The patient's gait has decreased velocity.,0.0,"[""decreased velocity""]","[[70, 88]]","[""exact""]",True,False
+12,objective,The patient does not use an assistive device for ambulation.,0.0,"[""without an assistive device""]","[[90, 117]]","[""exact""]",True,False
+13,objective,The patient has a healed surgical scar on the right knee.,0.0,"[""a healed surgical scar""]","[[148, 170]]","[""exact""]",True,False
+14,objective,The patient's right knee has mild swelling.,0.0,"[""mild swelling""]","[[172, 185]]","[""exact""]",True,False
+15,objective,The patient's right knee has tenderness on the area of the incision.,0.0,"[""tenderness on the area of the incision""]","[[191, 229]]","[""exact""]",True,False
+16,objective,The patient's right knee range of motion is 0 to 120 degrees.,0.0,"[""Range of motion was 0 to 120 degrees""]","[[231, 267]]","[""exact""]",True,False
+17,objective,The rest of the patient's physical exam is normal.,0.25,"[""with everything else normal""]","[[269, 296]]","[""exact""]",True,False
+18,assessment,The patient is six weeks post-operative from right medial unicompartmental arthroplasty.,0.0,"[""six weeks post-operative from right medial unicompartmental arthroplasty""]","[[55, 127]]","[""exact""]",True,False
+19,assessment,The patient has a healed surgical scar.,0.75,"[""a healed surgical scar""]","[[133, 155]]","[""exact""]",True,False
+20,assessment,The patient has mild swelling.,1.0,"[""mild swelling""]","[[157, 170]]","[""exact""]",True,False
+21,assessment,The patient has tenderness on the area of the incision.,1.0,"[""tenderness on the area of the incision""]","[[176, 214]]","[""exact""]",True,False
+22,assessment,The patient is recovering well.,0.0,"[""is recovering well""]","[[220, 238]]","[""exact""]",True,False
+23,plan,"The patient was advised to continue with physical therapy to work on strength, range of motion, and endurance.",0.0,"[""continue with physical therapy to work on strength, range of motion, and endurance""]","[[25, 107]]","[""exact""]",True,False
+24,plan,The patient was instructed to avoid lifting greater than 5-10 pounds.,0.0,"[""avoid lifting greater than 5-10 pounds""]","[[134, 172]]","[""exact""]",True,False
+25,plan,The patient was instructed to avoid standing for longer than 30 minutes.,0.0,"[""avoid standing or sitting for longer than 30 minutes""]","[[180, 232]]","[""exact""]",True,False
+26,plan,The patient was instructed to avoid sitting for longer than 30 minutes.,0.0,"[""avoid standing or sitting for longer than 30 minutes""]","[[180, 232]]","[""exact""]",True,False
+27,plan,The patient will be excused from work for another six weeks.,0.0,"[""excuse her from work for another six weeks""]","[[276, 318]]","[""exact""]",True,False
+28,plan,The patient will have a telemedicine visit in six weeks to check in with the physician and discuss her progress.,0.0,"[""I will check in with her via telemedicine in six weeks to discuss her progress and potential return to work"", ""I will schedule a telemedicine visit in six weeks to check in with the patient and discuss her progress""]","[[320, 427], [430, 533]]","[""exact"", ""exact""]",True,True
+29,plan,The patient's progress will be discussed during the telemedicine visit in six weeks.,0.0,"[""I will check in with her via telemedicine in six weeks to discuss her progress and potential return to work"", ""I will schedule a telemedicine visit in six weeks to check in with the patient and discuss her progress""]","[[320, 427], [430, 533]]","[""exact"", ""exact""]",True,True
+30,plan,The patient's potential return to work will be discussed during the telemedicine visit in six weeks.,0.5,"[""I will check in with her via telemedicine in six weeks to discuss her progress and potential return to work""]","[[320, 427]]","[""exact""]",True,False

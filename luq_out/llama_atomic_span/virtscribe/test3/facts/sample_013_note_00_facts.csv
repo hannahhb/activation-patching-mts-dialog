@@ -1,0 +1,58 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 60-year-old male.,0.0,"[""a 60-year-old right-handed male""]","[[18, 49]]","[""exact""]",True,False
+1,subjective,The patient is right-handed.,0.0,"[""a 60-year-old right-handed male""]","[[18, 49]]","[""exact""]",True,False
+2,subjective,The patient presents with a 2-week history of numbness and tingling in both hands.,1.0,"[""a 2-week history of numbness and tingling in both hands""]","[[65, 120]]","[""exact""]",True,False
+3,subjective,The patient's numbness and tingling in both hands started after a car accident in December where he broke both wrists.,0.0,"[""which started after a car accident in December where he broke both wrists""]","[[122, 195]]","[""exact""]",True,False
+4,subjective,The patient broke both wrists in a car accident in December.,0.25,"[""which started after a car accident in December where he broke both wrists""]","[[122, 195]]","[""exact""]",True,False
+5,subjective,The patient's symptoms have worsened over the last month.,0.0,"[""worsening symptoms over the last month""]","[[208, 246]]","[""exact""]",True,False
+6,subjective,"The patient experiences increased numbness and tingling, particularly at night.",0.0,"[""increased numbness and tingling, particularly at night""]","[[253, 307]]","[""exact""]",True,False
+7,subjective,The patient experiences occasional pain or throbbing sensations in his hands.,0.0,"[""occasional pain or throbbing sensations in his hands""]","[[313, 365]]","[""exact""]",True,False
+8,subjective,The patient experiences mild stiffness in his neck.,0.0,"[""mild stiffness in his neck""]","[[387, 413]]","[""exact""]",True,False
+9,subjective,The patient denies any loss of sensation in his hands or fingers.,0.5,"[""denies any loss of sensation in his hands or fingers""]","[[427, 479]]","[""exact""]",True,False
+10,subjective,The patient's hands or fingers may be less sensitive than usual.,0.0,"[""they may be less sensitive than usual""]","[[496, 533]]","[""exact""]",True,False
+11,subjective,The patient has a history of hypertension.,0.0,"[""a history of hypertension""]","[[574, 599]]","[""exact""]",True,False
+12,subjective,The patient's hypertension is treated with Coreg.,0.0,"[""The patient has a history of hypertension, treated with Coreg""]","[[558, 619]]","[""exact""]",True,False
+13,subjective,The patient has a history of anxiety.,0.0,"[""and anxiety""]","[[621, 632]]","[""exact""]",True,False
+14,subjective,The patient's anxiety is treated with Lexapro.,0.0,"[""treated with Lexapro""]","[[634, 654]]","[""exact""]",True,False
+15,subjective,The patient has a history of prediabetes.,0.0,"[""He has also had prediabetes""]","[[656, 683]]","[""exact""]",True,False
+16,subjective,The patient controlled his prediabetes through dietary changes.,0.0,"[""which he controlled through dietary changes""]","[[685, 728]]","[""exact""]",True,False
+17,subjective,The patient denies any history of thyroid issues.,0.25,"[""He denies any history of thyroid issues""]","[[730, 769]]","[""exact""]",True,False
+18,subjective,The patient reports fatigue.,0.0,"[""The patient reports fatigue""]","[[791, 818]]","[""exact""]",True,False
+19,subjective,The patient reports weight gain.,0.0,"[""weight gain""]","[[820, 831]]","[""exact""]",True,False
+20,subjective,The patient reports excessive appetite.,0.0,"[""excessive appetite""]","[[833, 851]]","[""exact""]",True,False
+21,subjective,The patient reports bloating.,0.0,"[""bloating""]","[[853, 861]]","[""exact""]",True,False
+22,subjective,The patient reports shortness of breath.,0.0,"[""shortness of breath""]","[[863, 882]]","[""exact""]",True,False
+23,subjective,The patient reports leg swelling.,0.0,"[""leg swelling""]","[[884, 896]]","[""exact""]",True,False
+24,subjective,The patient reports hunger.,0.0,"[""hunger""]","[[898, 904]]","[""exact""]",True,False
+25,subjective,The patient reports nailbed changes.,0.0,"[""nailbed changes""]","[[906, 921]]","[""exact""]",True,False
+26,subjective,The patient reports dryness.,0.0,"[""dryness""]","[[923, 930]]","[""exact""]",True,False
+27,subjective,The patient reports itching.,0.0,"[""itching""]","[[936, 943]]","[""exact""]",True,False
+28,subjective,The patient has a history of gout.,0.0,"[""a history of gout""]","[[957, 974]]","[""exact""]",True,False
+29,subjective,The patient has muscle pain.,0.0,"[""muscle pain""]","[[979, 990]]","[""exact""]",True,False
+30,subjective,The patient is currently taking Coreg for hypertension.,0.0,"[""Coreg for hypertension""]","[[1014, 1036]]","[""exact""]",True,False
+31,subjective,The patient is currently taking Lexapro for anxiety.,0.0,"[""Lexapro for anxiety""]","[[1038, 1057]]","[""exact""]",True,False
+32,objective,The patient's sensation is normal in the right hand.,1.0,"[""The patient's sensation is normal in the right hand, except for diminished pinprick sensation in the third and fourth fingers""]","[[15, 140]]","[""exact""]",True,False
+33,objective,The patient has diminished pinprick sensation in the third and fourth fingers of the right hand.,0.0,"[""diminished pinprick sensation in the third and fourth fingers""]","[[79, 140]]","[""exact""]",True,False
+34,objective,The patient's sensation is decreased in the fourth and fifth fingers on the left.,0.0,"[""The sensation is decreased in the fourth and fifth fingers on the left""]","[[142, 212]]","[""exact""]",True,False
+35,objective,The patient's reflexes are 1+.,0.0,"[""Reflexes are 1+ and symmetric""]","[[214, 243]]","[""exact""]",True,False
+36,objective,The patient's reflexes are symmetric.,0.0,"[""Reflexes are 1+ and symmetric""]","[[214, 243]]","[""exact""]",True,False
+37,objective,The patient's Tinel's sign is positive at both wrists.,0.0,"[""Tinel's sign is positive at both wrists and elbows""]","[[245, 295]]","[""exact""]",True,False
+38,objective,The patient's Tinel's sign is positive at both elbows.,0.0,"[""Tinel's sign is positive at both wrists and elbows""]","[[245, 295]]","[""exact""]",True,False
+39,assessment,The patient has bilateral carpal tunnel syndrome.,0.25,"[""The patient has bilateral carpal tunnel syndrome""]","[[12, 60]]","[""exact""]",True,False
+40,assessment,The patient's bilateral carpal tunnel syndrome is potentially caused by nerve irritation from past trauma.,0.25,"[""potentially caused by nerve irritation from past trauma""]","[[62, 117]]","[""exact""]",True,False
+41,assessment,The patient has carpal tunnel syndrome.,0.0,"[""Carpal tunnel syndrome""]","[[134, 156]]","[""exact""]",True,False
+42,assessment,The patient has cubital tunnel syndrome.,0.25,"[""cubital tunnel syndrome""]","[[158, 181]]","[""exact""]",True,False
+43,assessment,The patient has prediabetes.,0.25,"[""prediabetes""]","[[183, 194]]","[""exact""]",True,False
+44,assessment,The patient has hypertension.,0.25,"[""hypertension""]","[[196, 208]]","[""exact""]",True,False
+45,assessment,The patient has anxiety.,0.25,"[""anxiety""]","[[210, 217]]","[""exact""]",True,False
+46,assessment,The patient has gout.,0.5,"[""gout""]","[[219, 223]]","[""exact""]",True,False
+47,plan,The patient was prescribed a nerve test.,0.0,"[""I prescribed a nerve test, an EMG, to determine the exact location of the nerve irritation""]","[[0, 90]]","[""exact""]",True,False
+48,plan,The patient was prescribed an EMG.,0.75,"[""I prescribed a nerve test, an EMG, to determine the exact location of the nerve irritation""]","[[0, 90]]","[""exact""]",True,False
+49,plan,The purpose of the EMG is to determine the exact location of the nerve irritation.,0.0,"[""to determine the exact location of the nerve irritation""]","[[35, 90]]","[""exact""]",True,False
+50,plan,The patient was instructed to continue wearing his splints.,0.25,"[""to continue wearing his splints""]","[[117, 148]]","[""exact""]",True,False
+51,plan,The patient will return for a follow-up visit after the tests are complete.,0.0,"[""to return for a follow-up visit after the tests are complete""]","[[153, 213]]","[""exact""]",True,False
+52,plan,The patient will return for a follow-up visit after the EMG test results are available.,0.0,"[""The patient will return for a follow-up visit after the EMG test results are available""]","[[388, 474]]","[""exact""]",True,False
+53,plan,"If symptoms persist, the patient may be referred to the hand clinic.",0.0,"[""If symptoms persist, we will consider a referral to the hand clinic""]","[[215, 282]]","[""exact""]",True,False
+54,plan,"If symptoms persist, the patient may receive injections at the hand clinic.",0.0,"[""for injections or carpal tunnel release surgery""]","[[283, 330]]","[""exact""]",True,False
+55,plan,"If symptoms persist, the patient may undergo carpal tunnel release surgery at the hand clinic.",0.0,"[""for injections or carpal tunnel release surgery""]","[[283, 330]]","[""exact""]",True,False
+56,plan,"If symptoms persist, the patient may be referred to an orthopedist.",0.0,"[""or to an orthopedist for further treatment""]","[[332, 374]]","[""exact""]",True,False

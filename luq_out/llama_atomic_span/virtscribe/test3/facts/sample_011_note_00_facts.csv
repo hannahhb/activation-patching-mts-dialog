@@ -1,0 +1,31 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 39-year-old female.,0.0,"[""a 39-year-old female""]","[[20, 40]]","[""exact""]",True,False
+1,subjective,The patient has a history of quadriplegia.,0.0,"[""a history of quadriplegia due to a prior spinal cord injury"", ""Quadriplegia due to spinal cord injury""]","[[46, 105], [512, 550]]","[""exact"", ""exact""]",True,True
+2,subjective,The patient's quadriplegia is due to a prior spinal cord injury.,0.0,"[""a history of quadriplegia due to a prior spinal cord injury"", ""Quadriplegia due to spinal cord injury""]","[[46, 105], [512, 550]]","[""exact"", ""exact""]",True,True
+3,subjective,The patient presents with concerns for spasms.,0.0,"[""increasing concerns for spasms""]","[[123, 153]]","[""exact""]",True,False
+4,subjective,The patient presents with concerns for lightheadedness.,0.0,"[""increasing concerns for spasms, lightheadedness""]","[[123, 170]]","[""exact""]",True,False
+5,subjective,The patient presents with significant constipation.,0.0,"[""significant constipation""]","[[172, 196]]","[""exact""]",True,False
+6,subjective,The patient presents with diaphoresis.,0.0,"[""diaphoresis""]","[[202, 213]]","[""exact""]",True,False
+7,subjective,The patient feels better after a massive bowel movement.,0.5,"[""feeling better after a massive bowel movement at home""]","[[227, 280]]","[""exact""]",True,False
+8,subjective,The patient believes her hospitalization was likely due to autonomic dysreflexia.,0.25,"[""believes her hospitalization was likely due to her autonomic dysreflexia""]","[[286, 358]]","[""exact""]",True,False
+9,subjective,The patient has a history of autonomic dysreflexia.,0.5,"[""a history of autonomic dysreflexia"", ""autonomic dysreflexia""]","[[337, 358], [337, 358]]","[""word"", ""exact""]",True,True
+10,subjective,Autonomic dysreflexia can cause blood pressure fluctuations in the patient.,0.5,"[""which can cause blood pressure fluctuations""]","[[360, 403]]","[""exact""]",True,False
+11,subjective,The patient takes miralax regularly.,0.0,"[""miralax regularly""]","[[415, 432]]","[""exact""]",True,False
+12,subjective,The patient takes miralax for constipation.,0.0,"[""miralax regularly for constipation""]","[[415, 449]]","[""exact""]",True,False
+13,subjective,The patient takes lactulose.,0.0,"[""lactulose for severe constipation""]","[[454, 487]]","[""exact""]",True,False
+14,subjective,The patient takes lactulose for severe constipation.,0.0,"[""lactulose for severe constipation""]","[[454, 487]]","[""exact""]",True,False
+15,objective,The patient has a normal physical examination.,0.75,"[""The patient has a normal examination""]","[[15, 51]]","[""exact""]",True,False
+16,assessment,The patient has acute to chronic constipation.,0.0,"[""The patient has acute to chronic constipation""]","[[12, 57]]","[""exact""]",True,False
+17,assessment,The patient has quadriplegia.,0.0,"[""Quadriplegia""]","[[74, 86]]","[""exact""]",True,False
+18,assessment,The patient has constipation.,0.0,"[""Constipation""]","[[88, 100]]","[""exact""]",True,False
+19,assessment,The patient has an elevated white blood cell count.,0.0,"[""Elevated white blood cell count""]","[[102, 133]]","[""exact""]",True,False
+20,assessment,The patient's COVID-19 vaccine status is unknown.,0.0,"[""COVID-19 vaccine status: unknown""]","[[135, 167]]","[""exact""]",True,False
+21,plan,The patient is recommended to return in 2-3 weeks for updated fasting labs.,0.0,"[""I recommended that the patient return in 2-3 weeks for updated fasting labs""]","[[0, 75]]","[""exact""]",True,False
+22,plan,The patient's updated fasting labs will include a CBC.,0.0,"[""including a CBC""]","[[77, 92]]","[""exact""]",True,False
+23,plan,The purpose of the CBC is to ensure the patient's white blood cell count trends downward.,0.0,"[""to ensure her white blood cell count trends downward""]","[[93, 145]]","[""exact""]",True,False
+24,plan,The patient was advised to get vaccinated against COVID-19.,0.0,"[""I also discussed the importance of getting vaccinated against COVID-19""]","[[147, 217]]","[""exact""]",True,False
+25,plan,The COVID-19 vaccine is considered the only true preventative mechanism against the virus.,0.25,"[""citing the vaccine as the only true preventative mechanism against the virus""]","[[219, 295]]","[""exact""]",True,False
+26,plan,The patient has concerns about COVID-19 vaccine side effects.,0.75,"[""I acknowledged her concerns about vaccine side effects""]","[[297, 351]]","[""exact""]",True,False
+27,plan,The patient is at high risk due to her quadriplegia status.,0.75,"[""she is at high risk due to her quadriplegia status""]","[[383, 433]]","[""exact""]",True,False
+28,plan,The patient will return in 2-3 weeks for follow-up labs.,0.0,"[""The patient will return in 2-3 weeks for follow-up labs""]","[[447, 502]]","[""exact""]",True,False
+29,plan,The patient will discuss her COVID-19 vaccine status at the follow-up visit.,0.75,"[""and to discuss her COVID-19 vaccine status""]","[[503, 545]]","[""exact""]",True,False

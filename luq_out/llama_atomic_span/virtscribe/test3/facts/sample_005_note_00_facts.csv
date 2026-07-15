@@ -1,0 +1,30 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Matthew Rogers.,0.0,"[""Matthew Rogers""]","[[18, 32]]","[""exact""]",True,False
+1,subjective,The patient presents for an acne follow-up appointment.,0.0,"[""presents for an acne follow-up appointment""]","[[34, 76]]","[""exact""]",True,False
+2,subjective,The patient's acne is doing better since the last visit on 3/3/21.,0.0,"[""acne is doing better since the last visit on 3/3/21""]","[[98, 149]]","[""exact""]",True,False
+3,subjective,The patient has been using clindamycin lotion.,0.0,"[""clindamycin lotion""]","[[207, 225]]","[""exact""]",True,False
+4,subjective,The patient has been using tretinoin cream.,0.0,"[""tretinoin cream""]","[[227, 242]]","[""exact""]",True,False
+5,subjective,The patient has been using 4-5% benzoyl peroxide wash for the face.,0.0,"[""4-5% benzoyl peroxide wash for the face""]","[[244, 283]]","[""exact""]",True,False
+6,subjective,The patient has been using 5-10% benzoyl peroxide wash for the chest and back.,0.5,"[""5-10% benzoyl peroxide wash for the chest and back""]","[[289, 339]]","[""exact""]",True,False
+7,subjective,The patient has not experienced redness with the use of these medications.,0.0,"[""not experienced any redness, peeling, dryness, or irritation with the use of these medications""]","[[348, 442]]","[""exact""]",True,False
+8,subjective,The patient has not experienced peeling with the use of these medications.,0.0,"[""not experienced any redness, peeling, dryness, or irritation with the use of these medications""]","[[348, 442]]","[""exact""]",True,False
+9,subjective,The patient has not experienced dryness with the use of these medications.,0.0,"[""not experienced any redness, peeling, dryness, or irritation with the use of these medications""]","[[348, 442]]","[""exact""]",True,False
+10,subjective,The patient has not experienced irritation with the use of these medications.,0.0,"[""not experienced any redness, peeling, dryness, or irritation with the use of these medications""]","[[348, 442]]","[""exact""]",True,False
+11,subjective,The patient's last visit was on 3/3/21.,0.25,"[""last visit on 3/3/21""]","[[129, 149]]","[""exact""]",True,False
+12,objective,The patient has scattered inflammatory papules and pustules across the upper back and posterior shoulders.,0.0,"[""Scattered inflammatory papules and pustules across the upper back and posterior shoulders""]","[[15, 104]]","[""exact""]",True,False
+13,objective,"The patient has less than 5 inflammatory papules on the forehead, cheeks, and chin.",0.0,"[""less than 5 inflammatory papules on the forehead, cheeks, and chin""]","[[106, 172]]","[""exact""]",True,False
+14,objective,The patient's acne vulgaris is improved and well-controlled on the face.,0.25,"[""Acne vulgaris is improved and well-controlled on the face""]","[[174, 231]]","[""exact""]",True,False
+15,objective,The patient has a mild flare of acne vulgaris on the back.,0.0,"[""there is a mild flare on the back""]","[[237, 270]]","[""exact""]",True,False
+16,assessment,The patient has a mild acne flare on the back.,0.0,"[""there is a mild flare on the back""]","[[89, 122]]","[""exact""]",True,False
+17,assessment,The patient has acne vulgaris.,0.0,"[""Acne vulgaris""]","[[138, 151]]","[""exact""]",True,False
+18,assessment,The patient has an acne flare on the back.,0.0,"[""Acne flare on the back""]","[[153, 175]]","[""exact""]",True,False
+19,plan,The patient is currently using clindamycin lotion as part of their treatment plan for the face.,0.25,"[""clindamycin lotion""]","[[81, 99]]","[""exact""]",True,False
+20,plan,The patient is currently using tretinoin cream 4-5% as part of their treatment plan for the face.,0.75,"[""tretinoin cream 4-5%""]","[[101, 121]]","[""exact""]",True,False
+21,plan,The patient is currently using 4-5% benzoyl peroxide wash as part of their treatment plan for the face.,0.25,"[""4-5% benzoyl peroxide wash""]","[[127, 153]]","[""exact""]",True,False
+22,plan,The patient was prescribed PanOxyl 10% foaming wash for the back.,0.25,"[""PanOxyl 10% foaming wash for the back""]","[[187, 224]]","[""exact""]",True,False
+23,plan,The patient was instructed to use PanOxyl 10% foaming wash daily in the shower.,0.0,"[""to be used daily in the shower""]","[[226, 256]]","[""exact""]",True,False
+24,plan,The patient has a mild flare on the back.,1.0,"[""mild flare on the back""]","[[316, 338]]","[""exact""]",True,False
+25,plan,The patient's treatment plan includes using PanOxyl 10% foaming wash to help control the mild flare on the back.,0.0,"[""I prescribed PanOxyl 10% foaming wash to help control the mild flare on the back""]","[[258, 338]]","[""exact""]",True,False
+26,plan,The patient is scheduled for a follow-up appointment in one year.,0.0,"[""I will see the patient in one year for a follow-up appointment""]","[[352, 414]]","[""exact""]",True,False
+27,plan,The purpose of the follow-up appointment is to review the patient's acne treatment plan.,0.25,"[""to review his acne treatment plan""]","[[415, 448]]","[""exact""]",True,False
+28,plan,The purpose of the follow-up appointment is to ensure the patient has enough medication.,0.5,"[""and ensure that he has enough medication""]","[[449, 489]]","[""exact""]",True,False

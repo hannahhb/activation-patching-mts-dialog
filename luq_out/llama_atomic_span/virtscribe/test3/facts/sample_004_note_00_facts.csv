@@ -1,0 +1,49 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 39-year-old female.,0.0,"[""a 39-year-old female""]","[[18, 38]]","[""exact""]",True,False
+1,subjective,The patient has a history of quadriplegia.,0.0,"[""a history of quadriplegia due to a prior spinal cord injury""]","[[44, 103]]","[""exact""]",True,False
+2,subjective,The patient's quadriplegia is due to a prior spinal cord injury.,0.0,"[""due to a prior spinal cord injury""]","[[70, 103]]","[""exact""]",True,False
+3,subjective,The patient presented with concerns for spasms.,0.0,"[""concerns for spasms""]","[[131, 150]]","[""exact""]",True,False
+4,subjective,The patient presented with concerns for lightheadedness.,0.0,"[""concerns for lightheadedness""]",[null],"[""unmatched""]",False,False
+5,subjective,The patient presented with significant constipation.,0.0,"[""significant constipation""]","[[172, 196]]","[""exact""]",True,False
+6,subjective,The patient reported diaphoresis.,0.0,"[""reported diaphoresis""]","[[202, 222]]","[""exact""]",True,False
+7,subjective,The patient was evaluated in the emergency department.,1.0,"[""She was evaluated in the emergency department""]","[[224, 269]]","[""exact""]",True,False
+8,subjective,The patient was treated with IV antibiotic therapy.,0.25,"[""treated with IV antibiotic therapy""]","[[274, 308]]","[""exact""]",True,False
+9,subjective,The patient's IV antibiotic therapy was for a suspected urinary tract infection.,0.5,"[""for a suspected urinary tract infection""]","[[309, 348]]","[""exact""]",True,False
+10,subjective,The patient believes her hospitalization was more likely due to her dysreflexia.,0.25,"[""she believes this was less likely and thinks her hospitalization was more likely due to her dysreflexia""]","[[354, 457]]","[""exact""]",True,False
+11,subjective,The patient takes miralax daily.,0.0,"[""She takes miralax daily""]","[[459, 482]]","[""exact""]",True,False
+12,subjective,The patient takes miralax as a primary treatment for constipation.,0.25,"[""as a primary treatment for constipation""]","[[483, 522]]","[""exact""]",True,False
+13,subjective,The patient takes lactulose.,0.25,"[""lactulose""]","[[527, 536]]","[""exact""]",True,False
+14,subjective,The patient takes lactulose for severe constipation.,0.25,"[""lactulose for severe constipation""]","[[527, 560]]","[""exact""]",True,False
+15,subjective,The patient has not had a regular bowel movement in a while.,0.5,"[""has not had a regular bowel movement in a while""]","[[566, 613]]","[""exact""]",True,False
+16,subjective,The patient is hesitant to get the COVID-19 vaccine.,0.75,"[""She is hesitant to get the COVID-19 vaccine""]","[[615, 658]]","[""exact""]",True,False
+17,subjective,The patient's hesitation to get the COVID-19 vaccine is due to concerns about side effects.,1.0,"[""due to concerns about side effects""]","[[659, 693]]","[""exact""]",True,False
+18,subjective,The patient has a past medical history of quadriplegia.,0.0,"[""Quadriplegia due to a prior spinal cord injury""]","[[718, 764]]","[""exact""]",True,False
+19,subjective,The patient has a past medical history of constipation.,1.0,"[""history of constipation""]","[[766, 789]]","[""exact""]",True,False
+20,subjective,The patient possibly has dysreflexia.,0.25,"[""possibly dysreflexia""]","[[795, 815]]","[""exact""]",True,False
+21,subjective,The patient's symptoms of spasms have resolved.,1.0,"[""The patient's symptoms of spasms, lightheadedness, and diaphoresis have resolved""]","[[837, 917]]","[""exact""]",True,False
+22,subjective,The patient's symptoms of lightheadedness have resolved.,0.75,"[""The patient's symptoms of spasms, lightheadedness, and diaphoresis have resolved""]","[[837, 917]]","[""exact""]",True,False
+23,subjective,The patient's symptoms of diaphoresis have resolved.,0.75,"[""The patient's symptoms of spasms, lightheadedness, and diaphoresis have resolved""]","[[837, 917]]","[""exact""]",True,False
+24,subjective,The patient is concerned about the potential for future urinary tract infections.,1.0,"[""concerned about the potential for future urinary tract infections""]","[[930, 995]]","[""exact""]",True,False
+25,subjective,The patient is concerned about COVID-19.,0.75,"[""concerned about the potential for future urinary tract infections and COVID-19""]","[[930, 1008]]","[""exact""]",True,False
+26,objective,The patient's vital signs were not taken during the visit.,1.0,"[""The patient's vital signs were not taken during the visit""]","[[15, 72]]","[""exact""]",True,False
+27,objective,The patient did not report any pain during the examination.,0.0,"[""she did not report any pain or discomfort during the examination""]","[[78, 142]]","[""exact""]",True,False
+28,objective,The patient did not report any discomfort during the examination.,0.25,"[""she did not report any pain or discomfort during the examination""]","[[78, 142]]","[""exact""]",True,False
+29,assessment,The patient has symptoms of spasms.,0.75,"[""symptoms of spasms, lightheadedness, and diaphoresis""]","[[26, 78]]","[""exact""]",True,False
+30,assessment,The patient has symptoms of lightheadedness.,0.75,"[""symptoms of spasms, lightheadedness, and diaphoresis""]","[[26, 78]]","[""exact""]",True,False
+31,assessment,The patient has symptoms of diaphoresis.,0.75,"[""symptoms of spasms, lightheadedness, and diaphoresis""]","[[26, 78]]","[""exact""]",True,False
+32,assessment,The patient's symptoms are likely due to dysreflexia.,0.75,"[""were likely due to her dysreflexia""]","[[79, 113]]","[""exact""]",True,False
+33,assessment,Dysreflexia is a common complication of the patient's quadriplegia.,0.5,"[""which is a common complication of quadriplegia""]","[[115, 161]]","[""exact""]",True,False
+34,assessment,The patient has quadriplegia.,0.0,"[""Quadriplegia""]","[[178, 190]]","[""exact""]",True,False
+35,assessment,The patient has constipation.,0.0,"[""Constipation""]","[[192, 204]]","[""exact""]",True,False
+36,assessment,The patient has dysreflexia.,0.5,"[""Dysreflexia""]","[[206, 217]]","[""exact""]",True,False
+37,assessment,The patient has leukocytosis.,0.0,"[""Leukocytosis (status: confirmed)""]","[[219, 251]]","[""exact""]",True,False
+38,assessment,The patient's leukocytosis is confirmed.,0.25,"[""Leukocytosis (status: confirmed)""]","[[219, 251]]","[""exact""]",True,False
+39,assessment,The patient's COVID-19 vaccine status is unknown.,0.25,"[""COVID-19 vaccine status (status: unknown)""]","[[253, 294]]","[""exact""]",True,False
+40,plan,The patient is recommended to return in three to four weeks for updated fasting labs.,0.5,"[""I recommended that the patient return in three to four weeks for updated fasting labs""]","[[0, 85]]","[""exact""]",True,False
+41,plan,The patient's updated fasting labs will include a CBC.,0.0,"[""including a CBC""]","[[87, 102]]","[""exact""]",True,False
+42,plan,The purpose of the updated fasting labs is to ensure her white blood cell count is normalizing.,0.5,"[""to ensure her white blood cell count is normalizing""]","[[104, 155]]","[""exact""]",True,False
+43,plan,The patient was advised to get the COVID-19 vaccine.,0.0,"[""I also discussed the importance of getting the COVID-19 vaccine with her""]","[[157, 229]]","[""exact""]",True,False
+44,plan,The COVID-19 vaccine is believed to be the best preventative measure against COVID-19 for the patient.,0.5,"[""as I believe it is the best preventative measure against COVID-19""]","[[231, 296]]","[""exact""]",True,False
+45,plan,The patient will return in two to three weeks for a follow-up appointment.,0.0,"[""The patient will return in two to three weeks for a follow-up appointment""]","[[352, 425]]","[""exact""]",True,False
+46,plan,The follow-up appointment will check the patient's CBC.,0.25,"[""to check her CBC""]","[[426, 442]]","[""exact""]",True,False
+47,plan,The follow-up appointment will check the patient's fasting labs.,0.25,"[""to check her CBC and fasting labs""]","[[426, 459]]","[""exact""]",True,False

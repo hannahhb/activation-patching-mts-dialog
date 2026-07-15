@@ -1,0 +1,58 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Mrs. King.,0.5,"[""The patient, Mrs. King,""]","[[0, 23]]","[""exact""]",True,False
+1,subjective,The patient is a 36-year-old female.,0.5,"[""a 36-year-old female""]","[[27, 47]]","[""exact""]",True,False
+2,subjective,The patient's date of birth is 1/5/1986.,1.0,"[""date of birth 1/5/1986""]","[[49, 71]]","[""exact""]",True,False
+3,subjective,The patient's medical record number is Q227631.,1.0,"[""medical record number of Q227631""]","[[80, 112]]","[""exact""]",True,False
+4,subjective,The patient presented for evaluation of acid reflux.,0.0,"[""presented for evaluation of acid reflux""]","[[118, 157]]","[""exact""]",True,False
+5,subjective,The patient has a history of anxiety.,0.0,"[""a history of anxiety""]","[[171, 191]]","[""exact""]",True,False
+6,subjective,The patient has a history of seasonal allergies.,0.0,"[""seasonal allergies""]","[[196, 214]]","[""exact""]",True,False
+7,subjective,The patient was referred by Dr. Scott.,1.0,"[""her primary doctor, Dr. Scott, referred her to my office""]","[[232, 288]]","[""exact""]",True,False
+8,subjective,The patient has been experiencing acid reflux since she was around 12 years old.,0.5,"[""She has been experiencing acid reflux since she was around 12 years old""]","[[290, 361]]","[""exact""]",True,False
+9,subjective,The patient's acid reflux has worsened over the past few years.,0.0,"[""it has worsened over the past few years""]","[[367, 406]]","[""exact""]",True,False
+10,subjective,The patient is taking omeprazole.,0.0,"[""omeprazole""]","[[441, 451]]","[""exact""]",True,False
+11,subjective,The patient is taking 40 mg of omeprazole.,0.0,"[""40 mg of omeprazole""]","[[432, 451]]","[""exact""]",True,False
+12,subjective,The patient takes omeprazole twice daily.,0.0,"[""twice daily""]","[[452, 463]]","[""exact""]",True,False
+13,subjective,The patient experiences variable severity of acid reflux symptoms.,0.5,"[""some days she feels fine, but others are severely affected""]","[[482, 540]]","[""exact""]",True,False
+14,subjective,The patient describes her acid reflux sensation as burning in her chest and throat.,0.25,"[""burning in her chest and throat""]","[[573, 604]]","[""exact""]",True,False
+15,subjective,The patient denies difficulty swallowing.,0.25,"[""denies difficulty swallowing""]","[[610, 638]]","[""exact""]",True,False
+16,subjective,The patient denies abdominal pain.,0.0,"[""abdominal pain""]","[[640, 654]]","[""exact""]",True,False
+17,subjective,The patient denies nausea.,0.0,"[""nausea""]","[[656, 662]]","[""exact""]",True,False
+18,subjective,The patient denies vomiting.,0.0,"[""vomiting""]","[[664, 672]]","[""exact""]",True,False
+19,subjective,The patient denies changes in bowel movements.,0.0,"[""changes in bowel movements""]","[[674, 700]]","[""exact""]",True,False
+20,subjective,The patient denies constipation.,0.0,"[""constipation""]","[[702, 714]]","[""exact""]",True,False
+21,subjective,The patient denies diarrhea.,0.0,"[""diarrhea""]","[[716, 724]]","[""exact""]",True,False
+22,subjective,The patient denies rectal bleeding.,0.25,"[""rectal bleeding""]","[[730, 745]]","[""exact""]",True,False
+23,subjective,The patient attributes her symptoms to stress.,0.5,"[""stress""]","[[778, 784]]","[""exact""]",True,False
+24,subjective,The patient attributes her symptoms to food choices.,0.0,"[""food choices""]","[[789, 801]]","[""exact""]",True,False
+25,subjective,The patient's symptoms are exacerbated by spicy foods.,0.0,"[""spicy foods""]","[[816, 827]]","[""exact""]",True,False
+26,subjective,The patient's symptoms are exacerbated by carbonated beverages.,0.0,"[""carbonated beverages""]","[[829, 849]]","[""exact""]",True,False
+27,subjective,The patient's symptoms are exacerbated by citrus.,0.0,"[""citrus""]","[[851, 857]]","[""exact""]",True,False
+28,subjective,The patient's symptoms are exacerbated by tomato-based foods.,0.0,"[""tomato-based foods""]","[[863, 881]]","[""exact""]",True,False
+29,objective,The patient has a well-healed abdominal surgical scar.,0.0,"[""A well-healed abdominal surgical scar is noted""]","[[15, 61]]","[""exact""]",True,False
+30,objective,The patient's physical exam is normal.,0.25,"[""The patient has a normal physical exam per my new patient template""]","[[63, 129]]","[""exact""]",True,False
+31,assessment,The patient is suspected to have gastroesophageal reflux disease (GERD).,0.0,"[""I suspect that the patient likely has gastroesophageal reflux disease (GERD)""]","[[12, 88]]","[""exact""]",True,False
+32,assessment,The patient has a suspected functional etiology.,0.0,"[""with underlying functional etiology""]","[[89, 124]]","[""exact""]",True,False
+33,assessment,Gastroesophageal reflux disease (GERD) is on the patient's problem list.,0.0,"[""GERD; suspected functional etiology""]","[[141, 176]]","[""exact""]",True,False
+34,assessment,A functional etiology is suspected and on the patient's problem list.,0.75,"[""GERD; suspected functional etiology""]","[[141, 176]]","[""exact""]",True,False
+35,plan,The patient was recommended to change her diet to avoid trigger foods.,0.25,"[""change her diet to avoid trigger foods like spicy foods, carbonated beverages, citrus, and tomato-based foods""]","[[31, 140]]","[""exact""]",True,False
+36,plan,The patient was advised to avoid spicy foods.,0.5,"[""spicy foods""]","[[75, 86]]","[""exact""]",True,False
+37,plan,The patient was advised to avoid carbonated beverages.,0.5,"[""carbonated beverages""]","[[88, 108]]","[""exact""]",True,False
+38,plan,The patient was advised to avoid citrus.,0.5,"[""citrus""]","[[110, 116]]","[""exact""]",True,False
+39,plan,The patient was advised to avoid tomato-based foods.,0.5,"[""tomato-based foods""]","[[122, 140]]","[""exact""]",True,False
+40,plan,The patient was advised to work on stress management to address her anxiety.,0.25,"[""work on stress management to address her anxiety""]","[[164, 212]]","[""exact""]",True,False
+41,plan,The patient was prescribed Nexium.,0.0,"[""Nexium 40 mg twice daily""]","[[227, 251]]","[""exact""]",True,False
+42,plan,The patient's Nexium dose is 40 mg.,0.0,"[""40 mg""]","[[234, 239]]","[""exact""]",True,False
+43,plan,The patient's Nexium frequency is twice daily.,0.0,"[""twice daily""]","[[240, 251]]","[""exact""]",True,False
+44,plan,The patient's omeprazole was replaced with Nexium.,0.25,"[""to replace her current omeprazole""]","[[252, 285]]","[""exact""]",True,False
+45,plan,The patient was recommended to undergo an upper endoscopy (EGD) procedure.,0.0,"[""an upper endoscopy (EGD) procedure""]","[[306, 340]]","[""exact""]",True,False
+46,plan,The EGD procedure will involve sedation.,0.25,"[""sedation""]","[[410, 418]]","[""exact""]",True,False
+47,plan,The EGD procedure will involve a small camera passed through her mouth.,0.25,"[""a small camera passed through her mouth""]","[[423, 462]]","[""exact""]",True,False
+48,plan,The EGD procedure will involve examination of her throat.,0.5,"[""down her throat""]","[[463, 478]]","[""exact""]",True,False
+49,plan,The EGD procedure will involve examination of her stomach.,0.0,"[""through her stomach""]","[[480, 499]]","[""exact""]",True,False
+50,plan,The EGD procedure will involve examination of her small intestines.,0.25,"[""into the small intestines""]","[[505, 530]]","[""exact""]",True,False
+51,plan,The purpose of the EGD procedure is to look for potential causes of her GERD.,0.0,"[""to look for potential causes of her GERD""]","[[341, 381]]","[""exact""]",True,False
+52,plan,The EGD procedure may involve biopsies if anything suspicious is found.,0.75,"[""Biopsies will be taken if anything suspicious is found""]","[[600, 654]]","[""exact""]",True,False
+53,plan,The patient was instructed to schedule the EGD procedure at the checkout desk.,0.5,"[""to schedule the procedure at the checkout desk""]","[[673, 719]]","[""exact""]",True,False
+54,plan,The patient was instructed to follow up with the doctor in the office after the EGD procedure.,0.0,"[""to follow up with me in the office""]","[[724, 758]]","[""exact""]",True,False
+55,plan,The patient was instructed to discuss the results of the EGD procedure with the doctor during the follow-up appointment.,0.25,"[""to discuss the results and the effectiveness of the dietary and stress management changes""]","[[759, 848]]","[""exact""]",True,False
+56,plan,The patient was instructed to call the doctor's office if anything changes or if she has problems before the EGD and follow-up appointment.,0.75,"[""to call my office if anything changes or if she has problems before the EGd and follow-up appointment""]","[[872, 973]]","[""exact""]",True,False

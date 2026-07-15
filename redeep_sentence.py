@@ -355,12 +355,19 @@ def compute_ecs_pks_single_pass(
     top_k_frac: float = 0.10,
     copying_mask: Optional[np.ndarray] = None,
     word_spans: Optional[np.ndarray] = None,   # (n_words, 2) int32 token spans in note coords
+    return_head_ecs: bool = False,             # also return per-head word ECS (n_layers, n_heads, n_words)
 ) -> Tuple[np.ndarray, np.ndarray, np.ndarray,
            np.ndarray, np.ndarray, np.ndarray]:
     """
     Single forward pass.
 
-    Returns (ecs_mean, ecs_copy, pks, pks_tok, ecs_word, ecs_word_copy):
+    Returns (ecs_mean, ecs_copy, pks, pks_tok, ecs_word, ecs_word_copy)
+    -- or, if return_head_ecs=True, that tuple plus a 7th element
+    ecs_word_head (n_layers, n_heads, n_words): the per-head, per-word ECS
+    BEFORE the head-averaging that produces ecs_word/ecs_word_copy. Used to
+    (re)select Copying Heads by their runtime label-discriminability rather
+    than the static OV-eigenvalue proxy -- see select_copying_heads_ecs.py.
+
       ecs_mean, ecs_copy, pks  — (n_layers, n_sents)        sentence-level
       pks_tok                  — (n_layers, n_note_tokens)  token-level PKS
       ecs_word, ecs_word_copy  — (n_layers, n_words)        word-level ECS
@@ -584,16 +591,27 @@ def compute_ecs_pks_single_pass(
                             ecs_word_lh[l, h_idx], dim=0)
         ecs_word      = ecs_word_t.cpu().numpy()
         ecs_word_copy = ecs_word_copy_t.cpu().numpy()
+        # (n_layers, n_heads, n_words) per-head ECS, before head-averaging --
+        # only materialised to CPU when the caller asks, to avoid the extra
+        # copy on the common path.
+        ecs_word_head = (ecs_word_lh.cpu().numpy()
+                         if return_head_ecs else None)
     else:
         ecs_word      = np.zeros((n_layers, 0), dtype=np.float64)
         ecs_word_copy = np.zeros((n_layers, 0), dtype=np.float64)
+        ecs_word_head = (np.zeros((n_layers, n_heads, 0), dtype=np.float32)
+                         if return_head_ecs else None)
 
-    return (np.clip(ecs_mean,      -1.0, 1.0),
-            np.clip(ecs_copy,      -1.0, 1.0),
-            pks_all,
-            pks_tok,
-            np.clip(ecs_word,      -1.0, 1.0),
-            np.clip(ecs_word_copy, -1.0, 1.0))
+    out = (np.clip(ecs_mean,      -1.0, 1.0),
+           np.clip(ecs_copy,      -1.0, 1.0),
+           pks_all,
+           pks_tok,
+           np.clip(ecs_word,      -1.0, 1.0),
+           np.clip(ecs_word_copy, -1.0, 1.0))
+    if return_head_ecs:
+        # 7th element: per-head word ECS clipped to [-1, 1] like the aggregates.
+        return out + (np.clip(ecs_word_head, -1.0, 1.0),)
+    return out
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1303,12 +1321,13 @@ def main() -> None:
                     print(f"ECS={np.nanmean(ecs_l):.3f}  PKS={pks_l.mean():.3f}  (cached)")
             if not cached_ok:
                 try:
-                    ecs_l, ecscopy_l, pks_l, pks_tok_l, ecs_word_l, ecs_word_copy_l = \
+                    ecs_l, ecscopy_l, pks_l, pks_tok_l, ecs_word_l, ecs_word_copy_l, ecs_word_head_l = \
                         compute_ecs_pks_single_pass(
                             model, tokens, transcript_len, spans,
                             device=args.device, top_k_frac=args.top_k_frac,
                             copying_mask=copying_mask,
                             word_spans=word_spans_arr,
+                            return_head_ecs=True,
                         )
                 except Exception as exc:
                     print(f"forward ERROR: {exc}")
@@ -1344,6 +1363,12 @@ def main() -> None:
                     pks_word      = pks_word_l.astype(np.float32),      # (n_layers, n_words) MEAN
                     ecs_word      = ecs_word_l.astype(np.float32),      # (n_layers, n_words)
                     ecs_word_copy = ecs_word_copy_l.astype(np.float32), # (n_layers, n_words)
+                    # Per-head word ECS (n_layers, n_heads, n_words), float16 to
+                    # keep the file small -- consumed only by
+                    # select_copying_heads_ecs.py to rank heads by runtime
+                    # label-discriminability. float16's ~3-decimal precision is
+                    # ample for a cosine similarity already in [-1, 1].
+                    ecs_word_head = ecs_word_head_l.astype(np.float16),
                     token_strs    = np.array(tok_strs, dtype=object),
                     word_spans    = word_spans_arr,
                     word_strs     = np.array(word_strs, dtype=object),

@@ -1,0 +1,505 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Matthew Rogers.",
+        "spans": [
+          "Matthew Rogers"
+        ],
+        "span_offsets": [
+          [
+            18,
+            32
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents for an acne follow-up appointment.",
+        "spans": [
+          "presents for an acne follow-up appointment"
+        ],
+        "span_offsets": [
+          [
+            34,
+            76
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's acne is doing better since the last visit on 3/3/21.",
+        "spans": [
+          "acne is doing better since the last visit on 3/3/21"
+        ],
+        "span_offsets": [
+          [
+            98,
+            149
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been using clindamycin lotion.",
+        "spans": [
+          "clindamycin lotion"
+        ],
+        "span_offsets": [
+          [
+            207,
+            225
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been using tretinoin cream.",
+        "spans": [
+          "tretinoin cream"
+        ],
+        "span_offsets": [
+          [
+            227,
+            242
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been using 4-5% benzoyl peroxide wash for the face.",
+        "spans": [
+          "4-5% benzoyl peroxide wash for the face"
+        ],
+        "span_offsets": [
+          [
+            244,
+            283
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been using 5-10% benzoyl peroxide wash for the chest and back.",
+        "spans": [
+          "5-10% benzoyl peroxide wash for the chest and back"
+        ],
+        "span_offsets": [
+          [
+            289,
+            339
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not experienced redness with the use of these medications.",
+        "spans": [
+          "not experienced any redness, peeling, dryness, or irritation with the use of these medications"
+        ],
+        "span_offsets": [
+          [
+            348,
+            442
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not experienced peeling with the use of these medications.",
+        "spans": [
+          "not experienced any redness, peeling, dryness, or irritation with the use of these medications"
+        ],
+        "span_offsets": [
+          [
+            348,
+            442
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not experienced dryness with the use of these medications.",
+        "spans": [
+          "not experienced any redness, peeling, dryness, or irritation with the use of these medications"
+        ],
+        "span_offsets": [
+          [
+            348,
+            442
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not experienced irritation with the use of these medications.",
+        "spans": [
+          "not experienced any redness, peeling, dryness, or irritation with the use of these medications"
+        ],
+        "span_offsets": [
+          [
+            348,
+            442
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's last visit was on 3/3/21.",
+        "spans": [
+          "last visit on 3/3/21"
+        ],
+        "span_offsets": [
+          [
+            129,
+            149
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has scattered inflammatory papules and pustules across the upper back and posterior shoulders.",
+        "spans": [
+          "Scattered inflammatory papules and pustules across the upper back and posterior shoulders"
+        ],
+        "span_offsets": [
+          [
+            15,
+            104
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has less than 5 inflammatory papules on the forehead, cheeks, and chin.",
+        "spans": [
+          "less than 5 inflammatory papules on the forehead, cheeks, and chin"
+        ],
+        "span_offsets": [
+          [
+            106,
+            172
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's acne vulgaris is improved and well-controlled on the face.",
+        "spans": [
+          "Acne vulgaris is improved and well-controlled on the face"
+        ],
+        "span_offsets": [
+          [
+            174,
+            231
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a mild flare of acne vulgaris on the back.",
+        "spans": [
+          "there is a mild flare on the back"
+        ],
+        "span_offsets": [
+          [
+            237,
+            270
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has a mild acne flare on the back.",
+        "spans": [
+          "there is a mild flare on the back"
+        ],
+        "span_offsets": [
+          [
+            89,
+            122
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has acne vulgaris.",
+        "spans": [
+          "Acne vulgaris"
+        ],
+        "span_offsets": [
+          [
+            138,
+            151
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has an acne flare on the back.",
+        "spans": [
+          "Acne flare on the back"
+        ],
+        "span_offsets": [
+          [
+            153,
+            175
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient is currently using clindamycin lotion as part of their treatment plan for the face.",
+        "spans": [
+          "clindamycin lotion"
+        ],
+        "span_offsets": [
+          [
+            81,
+            99
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is currently using tretinoin cream 4-5% as part of their treatment plan for the face.",
+        "spans": [
+          "tretinoin cream 4-5%"
+        ],
+        "span_offsets": [
+          [
+            101,
+            121
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is currently using 4-5% benzoyl peroxide wash as part of their treatment plan for the face.",
+        "spans": [
+          "4-5% benzoyl peroxide wash"
+        ],
+        "span_offsets": [
+          [
+            127,
+            153
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed PanOxyl 10% foaming wash for the back.",
+        "spans": [
+          "PanOxyl 10% foaming wash for the back"
+        ],
+        "span_offsets": [
+          [
+            187,
+            224
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to use PanOxyl 10% foaming wash daily in the shower.",
+        "spans": [
+          "to be used daily in the shower"
+        ],
+        "span_offsets": [
+          [
+            226,
+            256
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a mild flare on the back.",
+        "spans": [
+          "mild flare on the back"
+        ],
+        "span_offsets": [
+          [
+            316,
+            338
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's treatment plan includes using PanOxyl 10% foaming wash to help control the mild flare on the back.",
+        "spans": [
+          "I prescribed PanOxyl 10% foaming wash to help control the mild flare on the back"
+        ],
+        "span_offsets": [
+          [
+            258,
+            338
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is scheduled for a follow-up appointment in one year.",
+        "spans": [
+          "I will see the patient in one year for a follow-up appointment"
+        ],
+        "span_offsets": [
+          [
+            352,
+            414
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the follow-up appointment is to review the patient's acne treatment plan.",
+        "spans": [
+          "to review his acne treatment plan"
+        ],
+        "span_offsets": [
+          [
+            415,
+            448
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the follow-up appointment is to ensure the patient has enough medication.",
+        "spans": [
+          "and ensure that he has enough medication"
+        ],
+        "span_offsets": [
+          [
+            449,
+            489
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,1106 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Maria Martin.",
+        "spans": [
+          "Maria Martin"
+        ],
+        "span_offsets": [
+          [
+            13,
+            25
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is a 76-year-old female.",
+        "spans": [
+          "a 76-year-old female"
+        ],
+        "span_offsets": [
+          [
+            27,
+            47
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports feeling pretty good.",
+        "spans": [
+          "feeling \"pretty good\""
+        ],
+        "span_offsets": [
+          [
+            85,
+            106
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has peripheral neuropathy in her feet.",
+        "spans": [
+          "peripheral neuropathy in her feet"
+        ],
+        "span_offsets": [
+          [
+            133,
+            166
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's peripheral neuropathy in her feet feels like hell all the time.",
+        "spans": [
+          "feeling \"like hell\" all the time"
+        ],
+        "span_offsets": [
+          [
+            191,
+            223
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has pain in her hips and upper legs.",
+        "spans": [
+          "pain in her hips and upper legs"
+        ],
+        "span_offsets": [
+          [
+            242,
+            273
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies headaches.",
+        "spans": [
+          "denies headaches, dizziness, shortness of breath, coughing, chest pains, pressure, or tightness"
+        ],
+        "span_offsets": [
+          [
+            279,
+            374
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies dizziness.",
+        "spans": [
+          "denies headaches, dizziness, shortness of breath, coughing, chest pains, pressure, or tightness"
+        ],
+        "span_offsets": [
+          [
+            279,
+            374
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies shortness of breath.",
+        "spans": [
+          "denies headaches, dizziness, shortness of breath, coughing, chest pains, pressure, or tightness"
+        ],
+        "span_offsets": [
+          [
+            279,
+            374
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies coughing.",
+        "spans": [
+          "denies headaches, dizziness, shortness of breath, coughing, chest pains, pressure, or tightness"
+        ],
+        "span_offsets": [
+          [
+            279,
+            374
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies chest pains.",
+        "spans": [
+          "denies headaches, dizziness, shortness of breath, coughing, chest pains, pressure, or tightness"
+        ],
+        "span_offsets": [
+          [
+            279,
+            374
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies pressure.",
+        "spans": [
+          "denies headaches, dizziness, shortness of breath, coughing, chest pains, pressure, or tightness"
+        ],
+        "span_offsets": [
+          [
+            279,
+            374
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies tightness.",
+        "spans": [
+          "denies headaches, dizziness, shortness of breath, coughing, chest pains, pressure, or tightness"
+        ],
+        "span_offsets": [
+          [
+            279,
+            374
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is constipated.",
+        "spans": [
+          "being constipated"
+        ],
+        "span_offsets": [
+          [
+            388,
+            405
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a slow stream of urine.",
+        "spans": [
+          "a slow stream of urine"
+        ],
+        "span_offsets": [
+          [
+            417,
+            439
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's constipation and slow stream of urine are stable.",
+        "spans": [
+          "but states it is stable"
+        ],
+        "span_offsets": [
+          [
+            441,
+            464
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has had cataract surgery.",
+        "spans": [
+          "has had cataract surgery"
+        ],
+        "span_offsets": [
+          [
+            470,
+            494
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's cataract surgery has improved her vision.",
+        "spans": [
+          "which has improved her vision"
+        ],
+        "span_offsets": [
+          [
+            496,
+            525
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is not satisfied with the new lens.",
+        "spans": [
+          "but is not satisfied with the new lens"
+        ],
+        "span_offsets": [
+          [
+            527,
+            565
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies fever.",
+        "spans": [
+          "has not had a fever, chills, or nausea"
+        ],
+        "span_offsets": [
+          [
+            571,
+            609
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies chills.",
+        "spans": [
+          "has not had a fever, chills, or nausea"
+        ],
+        "span_offsets": [
+          [
+            571,
+            609
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies nausea.",
+        "spans": [
+          "has not had a fever, chills, or nausea"
+        ],
+        "span_offsets": [
+          [
+            571,
+            609
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of diabetes.",
+        "spans": [
+          "a history of diabetes"
+        ],
+        "span_offsets": [
+          [
+            628,
+            649
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of hypertension.",
+        "spans": [
+          "a history of hypertension"
+        ],
+        "span_offsets": [
+          [
+            651,
+            663
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of high cholesterol.",
+        "spans": [
+          "a history of high cholesterol"
+        ],
+        "span_offsets": [
+          [
+            665,
+            681
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of vascular disease in her legs.",
+        "spans": [
+          "vascular disease in her legs"
+        ],
+        "span_offsets": [
+          [
+            687,
+            715
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking glimepiride.",
+        "spans": [
+          "glimepiride 2mg twice a day"
+        ],
+        "span_offsets": [
+          [
+            737,
+            764
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's glimepiride dose is 2mg twice a day.",
+        "spans": [
+          "glimepiride 2mg twice a day"
+        ],
+        "span_offsets": [
+          [
+            737,
+            764
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking metoprolol.",
+        "spans": [
+          "metoprolol 50mg once a day"
+        ],
+        "span_offsets": [
+          [
+            766,
+            792
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's metoprolol dose is 50mg once a day.",
+        "spans": [
+          "metoprolol 50mg once a day"
+        ],
+        "span_offsets": [
+          [
+            766,
+            792
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking lisinopril with hydrochlorothiazide.",
+        "spans": [
+          "lisinopril with hydrochlorothiazide 20/25mg once a day"
+        ],
+        "span_offsets": [
+          [
+            794,
+            848
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lisinopril with hydrochlorothiazide dose is 20/25mg once a day.",
+        "spans": [
+          "lisinopril with hydrochlorothiazide 20/25mg once a day"
+        ],
+        "span_offsets": [
+          [
+            794,
+            848
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking amlodipine.",
+        "spans": [
+          "amlodipine 10mg once a day"
+        ],
+        "span_offsets": [
+          [
+            850,
+            876
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's amlodipine dose is 10mg once a day.",
+        "spans": [
+          "amlodipine 10mg once a day"
+        ],
+        "span_offsets": [
+          [
+            850,
+            876
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking atorvastatin.",
+        "spans": [
+          "atorvastatin"
+        ],
+        "span_offsets": [
+          [
+            882,
+            894
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is a smoker.",
+        "spans": [
+          "She is a smoker"
+        ],
+        "span_offsets": [
+          [
+            896,
+            911
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is 140/60.",
+        "spans": [
+          "140/60s (rechecked)"
+        ],
+        "span_offsets": [
+          [
+            18,
+            37
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's carotids are normal.",
+        "spans": [
+          "Carotids are normal"
+        ],
+        "span_offsets": [
+          [
+            139,
+            158
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has palpable pulses on the dorsalis pedis.",
+        "spans": [
+          "Pulses are palpable on the dorsalis pedis, posterior tibial"
+        ],
+        "span_offsets": [
+          [
+            162,
+            221
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has palpable pulses on the posterior tibial.",
+        "spans": [
+          "Pulses are palpable on the dorsalis pedis, posterior tibial"
+        ],
+        "span_offsets": [
+          [
+            162,
+            221
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's extremities are without edema.",
+        "spans": [
+          "Extremities are without edema"
+        ],
+        "span_offsets": [
+          [
+            225,
+            254
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has mildly dry skin.",
+        "spans": [
+          "Mildly dry skin, no skin breakdown"
+        ],
+        "span_offsets": [
+          [
+            258,
+            292
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no skin breakdown.",
+        "spans": [
+          "Mildly dry skin, no skin breakdown"
+        ],
+        "span_offsets": [
+          [
+            258,
+            292
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has mildly decreased sensation in the tips of the first toe.",
+        "spans": [
+          "Mildly decreased sensation in the tips of the first and second toes"
+        ],
+        "span_offsets": [
+          [
+            296,
+            363
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has mildly decreased sensation in the tips of the second toe.",
+        "spans": [
+          "Mildly decreased sensation in the tips of the first and second toes"
+        ],
+        "span_offsets": [
+          [
+            296,
+            363
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has thickened nails.",
+        "spans": [
+          "Thickened nails"
+        ],
+        "span_offsets": [
+          [
+            367,
+            382
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has poorly controlled diabetes.",
+        "spans": [
+          "poorly controlled diabetes"
+        ],
+        "span_offsets": [
+          [
+            16,
+            42
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has hypertension.",
+        "spans": [
+          "hypertension"
+        ],
+        "span_offsets": [
+          [
+            44,
+            56
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has high cholesterol.",
+        "spans": [
+          "high cholesterol"
+        ],
+        "span_offsets": [
+          [
+            58,
+            74
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has vascular disease in her legs.",
+        "spans": [
+          "vascular disease in her legs"
+        ],
+        "span_offsets": [
+          [
+            80,
+            108
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has diabetes mellitus.",
+        "spans": [
+          "Diabetes mellitus"
+        ],
+        "span_offsets": [
+          [
+            204,
+            221
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has hypercholesterolemia.",
+        "spans": [
+          "hypercholesterolemia"
+        ],
+        "span_offsets": [
+          [
+            237,
+            257
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has peripheral vascular disease.",
+        "spans": [
+          "peripheral vascular disease"
+        ],
+        "span_offsets": [
+          [
+            259,
+            286
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has peripheral neuropathy.",
+        "spans": [
+          "peripheral neuropathy"
+        ],
+        "span_offsets": [
+          [
+            118,
+            139
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has constipation.",
+        "spans": [
+          "constipation"
+        ],
+        "span_offsets": [
+          [
+            311,
+            323
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient is to increase her glimepiride to 4mg twice a day.",
+        "spans": [
+          "increase her glimepiride to 4mg twice a day"
+        ],
+        "span_offsets": [
+          [
+            22,
+            65
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is to take two of the 2mg glimepiride pills until she gets the new prescription.",
+        "spans": [
+          "take two of the 2mg pills until she gets the new prescription"
+        ],
+        "span_offsets": [
+          [
+            73,
+            134
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is to continue taking metformin.",
+        "spans": [
+          "continue taking metformin"
+        ],
+        "span_offsets": [
+          [
+            155,
+            180
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's blood pressure will be rechecked.",
+        "spans": [
+          "recheck her blood pressure"
+        ],
+        "span_offsets": [
+          [
+            189,
+            215
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's kidney function will be checked.",
+        "spans": [
+          "check her kidney function"
+        ],
+        "span_offsets": [
+          [
+            220,
+            245
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will continue on the high dose of atorvastatin.",
+        "spans": [
+          "continue her on the high dose of atorvastatin"
+        ],
+        "span_offsets": [
+          [
+            254,
+            299
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's atorvastatin is for protecting her arteries.",
+        "spans": [
+          "to protect her arteries"
+        ],
+        "span_offsets": [
+          [
+            300,
+            323
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's labs will be obtained today.",
+        "spans": [
+          "get the labs today"
+        ],
+        "span_offsets": [
+          [
+            332,
+            350
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be seen back in 4 months.",
+        "spans": [
+          "see her back in 4 months",
+          "see the patient back in 4 months"
+        ],
+        "span_offsets": [
+          [
+            355,
+            379
+          ],
+          [
+            390,
+            422
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      }
+    ]
+  }
+]

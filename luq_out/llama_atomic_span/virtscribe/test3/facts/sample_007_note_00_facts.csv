@@ -1,0 +1,59 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,"The patient, Ashley, is a 14-year-old female.",0.0,"[""Ashley, a 14-year-old female""]","[[5, 33]]","[""exact""]",True,False
+1,subjective,The patient was previously healthy.,0.25,"[""was previously healthy""]","[[35, 57]]","[""exact""]",True,False
+2,subjective,The patient is here for evaluation of abnormal renal ultrasound with an atrophic right kidney.,0.25,"[""for evaluation of abnormal renal ultrasound with an atrophic right kidney""]","[[74, 147]]","[""exact""]",True,False
+3,subjective,The patient has a small kidney on one side.,0.0,"[""a small kidney on one side""]","[[171, 197]]","[""exact""]",True,False
+4,subjective,The patient's parents reported that she was sick with stomach pain on the right side.,0.75,"[""her parents reported that she was sick with stomach pain on the right side""]","[[203, 277]]","[""exact""]",True,False
+5,subjective,The patient's symptoms were initially treated as a stomach virus.,0.5,"[""which was initially treated as a stomach virus""]","[[279, 325]]","[""exact""]",True,False
+6,subjective,The patient's symptoms worsened.,0.5,"[""but her symptoms worsened""]","[[327, 352]]","[""exact""]",True,False
+7,subjective,An ultrasound revealed that one kidney was bigger.,1.0,"[""An ultrasound revealed that one kidney was bigger""]","[[354, 403]]","[""exact""]",True,False
+8,subjective,The patient was later diagnosed with atrophic kidney.,0.0,"[""later diagnosed with atrophic kidney and cysts on her kidney and ovaries""]","[[417, 489]]","[""exact""]",True,False
+9,subjective,The patient was later diagnosed with cysts on her kidney and ovaries.,1.0,"[""later diagnosed with atrophic kidney and cysts on her kidney and ovaries""]","[[417, 489]]","[""exact""]",True,False
+10,subjective,The patient was later diagnosed with swollen lymph nodes.,1.0,"[""swollen lymph nodes and infection""]","[[502, 535]]","[""exact""]",True,False
+11,subjective,The patient was later diagnosed with infection.,0.75,"[""swollen lymph nodes and infection""]","[[502, 535]]","[""exact""]",True,False
+12,subjective,The patient has been experiencing stomach pain.,0.0,"[""She has been experiencing stomach pain and burning sensations when eating""]","[[537, 610]]","[""exact""]",True,False
+13,subjective,The patient has been experiencing burning sensations when eating.,0.75,"[""She has been experiencing stomach pain and burning sensations when eating""]","[[537, 610]]","[""exact""]",True,False
+14,subjective,The patient's parents suspect that she may have had a severe infection that affected her kidney at some point in the past.,0.5,"[""her parents suspect that she may have had a severe infection that affected her kidney at some point in the past""]","[[616, 727]]","[""exact""]",True,False
+15,subjective,The patient has a family history of renal disease.,0.0,"[""a family history of renal disease""]","[[789, 822]]","[""exact""]",True,False
+16,subjective,The patient's father had a kidney transplant due to obstructive neuropathy.,0.5,"[""her father having a kidney transplant due to obstructive neuropathy""]","[[829, 896]]","[""exact""]",True,False
+17,subjective,The patient's aunt had end-stage renal disease.,0.5,"[""her aunt having end-stage renal disease, chronic kidney disease stage 5, diabetes, and hypertension""]","[[902, 1001]]","[""exact""]",True,False
+18,subjective,The patient's aunt had chronic kidney disease stage 5.,0.5,"[""her aunt having end-stage renal disease, chronic kidney disease stage 5, diabetes, and hypertension""]","[[902, 1001]]","[""exact""]",True,False
+19,subjective,The patient's aunt had diabetes.,0.75,"[""her aunt having end-stage renal disease, chronic kidney disease stage 5, diabetes, and hypertension""]","[[902, 1001]]","[""exact""]",True,False
+20,subjective,The patient's aunt had hypertension.,0.75,"[""her aunt having end-stage renal disease, chronic kidney disease stage 5, diabetes, and hypertension""]","[[902, 1001]]","[""exact""]",True,False
+21,subjective,The patient's grandfather had posterior urethral valves.,0.25,"[""her grandfather had posterior urethral valves and obstructive neuropathy""]","[[1012, 1080]]","[""word""]",True,False
+22,subjective,The patient's grandfather had obstructive neuropathy.,0.25,"[""her grandfather had posterior urethral valves and obstructive neuropathy""]","[[1012, 1080]]","[""word""]",True,False
+23,subjective,The patient's grandfather had chronic kidney disease.,0.25,"[""which led to chronic kidney disease and dialysis dependence""]","[[1082, 1141]]","[""exact""]",True,False
+24,subjective,The patient's grandfather was dialysis dependent.,0.25,"[""which led to chronic kidney disease and dialysis dependence""]","[[1082, 1141]]","[""exact""]",True,False
+25,subjective,The patient's grandfather died in his 40s on dialysis.,0.75,"[""and he died in his 40s on dialysis""]","[[1143, 1177]]","[""exact""]",True,False
+26,subjective,The patient's mother has breast cancer.,0.5,"[""Ashley's mother also has breast cancer""]","[[1179, 1217]]","[""exact""]",True,False
+27,subjective,The patient is taking Pepcid.,0.0,"[""Ashley is taking 40mg of Pepcid daily for her stomach issues""]","[[1242, 1302]]","[""exact""]",True,False
+28,subjective,The patient is taking 40mg of Pepcid daily.,0.0,"[""40mg of Pepcid daily""]","[[1259, 1279]]","[""exact""]",True,False
+29,subjective,The patient is taking Pepcid for stomach issues.,0.25,"[""for her stomach issues""]","[[1280, 1302]]","[""exact""]",True,False
+30,subjective,The patient is taking Claritin.,0.0,"[""1 dose of Claritin for allergies""]","[[1307, 1339]]","[""exact""]",True,False
+31,subjective,The patient is taking 1 dose of Claritin.,0.75,"[""1 dose of Claritin""]","[[1307, 1325]]","[""exact""]",True,False
+32,subjective,The patient is taking Claritin for allergies.,0.0,"[""for allergies""]","[[1326, 1339]]","[""exact""]",True,False
+33,objective,Ashley is a well-appearing female.,0.5,"[""Ashley is a well-appearing female""]","[[15, 48]]","[""exact""]",True,False
+34,objective,Ashley is alert and oriented.,0.5,"[""alert and oriented""]","[[50, 68]]","[""exact""]",True,False
+35,objective,Ashley is sitting comfortably without acute distress.,0.75,"[""sitting comfortably without acute distress""]","[[70, 112]]","[""exact""]",True,False
+36,objective,Ashley's physical exam is within normal limits.,0.25,"[""Her physical exam is within normal limits""]","[[114, 155]]","[""exact""]",True,False
+37,objective,Ashley's lungs sound great.,0.25,"[""her lungs and heart sound great""]","[[161, 192]]","[""exact""]",True,False
+38,objective,Ashley's heart sounds great.,0.75,"[""her lungs and heart sound great""]","[[161, 192]]","[""exact""]",True,False
+39,objective,Ashley's right kidney is smaller.,1.0,"[""Her right kidney is smaller""]","[[194, 221]]","[""exact""]",True,False
+40,objective,Ashley's left kidney appears bigger.,1.0,"[""causing it to appear bigger""]","[[272, 299]]","[""exact""]",True,False
+41,assessment,Ashley has an atrophic right kidney.,0.0,"[""Ashley has an atrophic right kidney""]","[[12, 47]]","[""exact""]",True,False
+42,assessment,Ashley's kidney functions appear to be good.,1.0,"[""her kidney functions appear to be good""]","[[53, 91]]","[""exact""]",True,False
+43,assessment,Ashley is at a higher risk for developing high blood pressure.,0.0,"[""she is at a higher risk for developing high blood pressure""]","[[97, 155]]","[""exact""]",True,False
+44,assessment,Ashley is at a higher risk for developing proteinuria.,0.0,"[""she is at a higher risk for developing high blood pressure and proteinuria""]","[[97, 171]]","[""exact""]",True,False
+45,assessment,Ashley has atrophic right kidney.,0.0,"[""Atrophic right kidney""]","[[188, 209]]","[""exact""]",True,False
+46,assessment,Ashley has kidney disease.,0.25,"[""Kidney disease""]","[[211, 225]]","[""exact""]",True,False
+47,assessment,Ashley has hypertension.,0.75,"[""Hypertension""]","[[227, 239]]","[""exact""]",True,False
+48,assessment,Ashley has proteinuria.,1.0,"[""Proteinuria""]","[[241, 252]]","[""exact""]",True,False
+49,plan,Ashley was recommended to have an ultrasound to monitor the size of her kidneys and their overall function.,0.0,"[""I recommended that Ashley have an ultrasound to monitor the size of her kidneys and their overall function""]","[[0, 106]]","[""exact""]",True,False
+50,plan,Ashley was recommended to complete a urinalysis to check for protein and blood in her urine.,0.0,"[""complete a urinalysis to check for protein and blood in her urine""]","[[108, 173]]","[""exact""]",True,False
+51,plan,Ashley was recommended to have a blood pressure check annually.,0.75,"[""and do a blood pressure check annually""]","[[175, 213]]","[""exact""]",True,False
+52,plan,Ashley was advised to stay hydrated by drinking at least two liters of water per day.,0.25,"[""to stay hydrated by drinking at least two liters of water per day""]","[[234, 299]]","[""exact""]",True,False
+53,plan,Ashley was advised to avoid non-steroidal anti-inflammatory medicines like ibuprofen.,0.0,"[""to avoid non-steroidal anti-inflammatory medicines like ibuprofen""]","[[304, 369]]","[""exact""]",True,False
+54,plan,Ashley was recommended to maintain a healthy diet.,0.0,"[""to maintain a healthy diet""]","[[402, 425]]","[""word""]",True,False
+55,plan,Ashley was recommended to continue her active lifestyle.,0.0,"[""continue her active lifestyle""]","[[430, 459]]","[""exact""]",True,False
+56,plan,Ashley can meet with her primary care physician for her next appointment.,0.0,"[""Ashley can either meet with her primary care physician or an adult nephrologist closer to her home for her next appointment""]","[[523, 646]]","[""exact""]",True,False
+57,plan,Ashley can meet with an adult nephrologist for her next appointment.,0.0,"[""Ashley can either meet with her primary care physician or an adult nephrologist closer to her home for her next appointment""]","[[523, 646]]","[""exact""]",True,False

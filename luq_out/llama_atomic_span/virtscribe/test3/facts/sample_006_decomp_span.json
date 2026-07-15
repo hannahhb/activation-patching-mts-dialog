@@ -1,0 +1,551 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 44-year-old female.",
+        "spans": [
+          "a 44-year-old female"
+        ],
+        "span_offsets": [
+          [
+            20,
+            40
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents six weeks status post right medial unicompartmental arthroplasty.",
+        "spans": [
+          "six weeks status post right medial unicompartmental arthroplasty"
+        ],
+        "span_offsets": [
+          [
+            54,
+            118
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports no problems with her knee.",
+        "spans": [
+          "no problems with her knee"
+        ],
+        "span_offsets": [
+          [
+            132,
+            157
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences numbness on the same side as the surgery.",
+        "spans": [
+          "numbness on the same side as the surgery"
+        ],
+        "span_offsets": [
+          [
+            170,
+            210
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient believes the numbness will improve as the nerves heal.",
+        "spans": [
+          "which she states will improve as the nerves heal"
+        ],
+        "span_offsets": [
+          [
+            212,
+            260
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient expresses satisfaction with the surgery.",
+        "spans": [
+          "expresses satisfaction with the surgery"
+        ],
+        "span_offsets": [
+          [
+            266,
+            305
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports no pain.",
+        "spans": [
+          "reports no pain"
+        ],
+        "span_offsets": [
+          [
+            310,
+            325
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's employer is UPS.",
+        "spans": [
+          "her employer, UPS"
+        ],
+        "span_offsets": [
+          [
+            350,
+            367
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's employer is asking her to return to work with certain restrictions.",
+        "spans": [
+          "is asking her to return to work with certain restrictions"
+        ],
+        "span_offsets": [
+          [
+            369,
+            426
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's gait is antalgic.",
+        "spans": [
+          "The patient's gait was antalgic"
+        ],
+        "span_offsets": [
+          [
+            15,
+            46
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's gait has a slight limp.",
+        "spans": [
+          "with a slight limp"
+        ],
+        "span_offsets": [
+          [
+            47,
+            65
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's gait has decreased velocity.",
+        "spans": [
+          "decreased velocity"
+        ],
+        "span_offsets": [
+          [
+            70,
+            88
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not use an assistive device for ambulation.",
+        "spans": [
+          "without an assistive device"
+        ],
+        "span_offsets": [
+          [
+            90,
+            117
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a healed surgical scar on the right knee.",
+        "spans": [
+          "a healed surgical scar"
+        ],
+        "span_offsets": [
+          [
+            148,
+            170
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right knee has mild swelling.",
+        "spans": [
+          "mild swelling"
+        ],
+        "span_offsets": [
+          [
+            172,
+            185
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right knee has tenderness on the area of the incision.",
+        "spans": [
+          "tenderness on the area of the incision"
+        ],
+        "span_offsets": [
+          [
+            191,
+            229
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right knee range of motion is 0 to 120 degrees.",
+        "spans": [
+          "Range of motion was 0 to 120 degrees"
+        ],
+        "span_offsets": [
+          [
+            231,
+            267
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The rest of the patient's physical exam is normal.",
+        "spans": [
+          "with everything else normal"
+        ],
+        "span_offsets": [
+          [
+            269,
+            296
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient is six weeks post-operative from right medial unicompartmental arthroplasty.",
+        "spans": [
+          "six weeks post-operative from right medial unicompartmental arthroplasty"
+        ],
+        "span_offsets": [
+          [
+            55,
+            127
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a healed surgical scar.",
+        "spans": [
+          "a healed surgical scar"
+        ],
+        "span_offsets": [
+          [
+            133,
+            155
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has mild swelling.",
+        "spans": [
+          "mild swelling"
+        ],
+        "span_offsets": [
+          [
+            157,
+            170
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has tenderness on the area of the incision.",
+        "spans": [
+          "tenderness on the area of the incision"
+        ],
+        "span_offsets": [
+          [
+            176,
+            214
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is recovering well.",
+        "spans": [
+          "is recovering well"
+        ],
+        "span_offsets": [
+          [
+            220,
+            238
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was advised to continue with physical therapy to work on strength, range of motion, and endurance.",
+        "spans": [
+          "continue with physical therapy to work on strength, range of motion, and endurance"
+        ],
+        "span_offsets": [
+          [
+            25,
+            107
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to avoid lifting greater than 5-10 pounds.",
+        "spans": [
+          "avoid lifting greater than 5-10 pounds"
+        ],
+        "span_offsets": [
+          [
+            134,
+            172
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to avoid standing for longer than 30 minutes.",
+        "spans": [
+          "avoid standing or sitting for longer than 30 minutes"
+        ],
+        "span_offsets": [
+          [
+            180,
+            232
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to avoid sitting for longer than 30 minutes.",
+        "spans": [
+          "avoid standing or sitting for longer than 30 minutes"
+        ],
+        "span_offsets": [
+          [
+            180,
+            232
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be excused from work for another six weeks.",
+        "spans": [
+          "excuse her from work for another six weeks"
+        ],
+        "span_offsets": [
+          [
+            276,
+            318
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will have a telemedicine visit in six weeks to check in with the physician and discuss her progress.",
+        "spans": [
+          "I will check in with her via telemedicine in six weeks to discuss her progress and potential return to work",
+          "I will schedule a telemedicine visit in six weeks to check in with the patient and discuss her progress"
+        ],
+        "span_offsets": [
+          [
+            320,
+            427
+          ],
+          [
+            430,
+            533
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient's progress will be discussed during the telemedicine visit in six weeks.",
+        "spans": [
+          "I will check in with her via telemedicine in six weeks to discuss her progress and potential return to work",
+          "I will schedule a telemedicine visit in six weeks to check in with the patient and discuss her progress"
+        ],
+        "span_offsets": [
+          [
+            320,
+            427
+          ],
+          [
+            430,
+            533
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient's potential return to work will be discussed during the telemedicine visit in six weeks.",
+        "spans": [
+          "I will check in with her via telemedicine in six weeks to discuss her progress and potential return to work"
+        ],
+        "span_offsets": [
+          [
+            320,
+            427
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]
