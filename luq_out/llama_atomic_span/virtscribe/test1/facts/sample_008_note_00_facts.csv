@@ -1,0 +1,52 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Melissa Sanchez.,0.25,"[""Melissa Sanchez""]","[[13, 28]]","[""exact""]",True,False
+1,subjective,The patient is a 59-year-old female.,0.0,"[""59-year-old female""]","[[35, 53]]","[""exact""]",True,False
+2,subjective,The patient has a history of mitral regurgitation.,0.0,"[""history of mitral regurgitation""]","[[61, 92]]","[""exact""]",True,False
+3,subjective,The patient has a history of atrial fibrillation.,0.0,"[""history of mitral regurgitation and atrial fibrillation""]","[[61, 116]]","[""exact""]",True,False
+4,subjective,The patient has a history of diabetes.,0.0,"[""diabetes""]","[[118, 126]]","[""exact""]",True,False
+5,subjective,The patient has a history of asthma.,0.0,"[""asthma""]","[[128, 134]]","[""exact""]",True,False
+6,subjective,The patient has a history of recurrent chest discomfort.,0.25,"[""recurrent chest discomfort""]","[[140, 166]]","[""exact""]",True,False
+7,subjective,The patient had a negative cardiac work-up for coronary artery disease.,0.25,"[""negative cardiac work-up for coronary artery disease""]","[[174, 226]]","[""exact""]",True,False
+8,subjective,The patient underwent mitral valve repair surgery on 8/3/2020.,0.0,"[""mitral valve repair surgery on 8/3/2020""]","[[273, 312]]","[""exact""]",True,False
+9,subjective,The patient reports feeling better overall since her mitral valve repair surgery.,0.25,"[""feeling better overall since her mitral valve repair surgery""]","[[240, 300]]","[""exact""]",True,False
+10,subjective,The patient experiences occasional chest pain.,0.0,"[""occasional chest pain""]","[[336, 357]]","[""exact""]",True,False
+11,subjective,The patient experiences shallow breathing.,0.0,"[""shallow breathing""]","[[362, 379]]","[""exact""]",True,False
+12,subjective,The patient's chest pain and shallow breathing are particularly exacerbated by exertion.,0.0,"[""particularly with exertion""]","[[381, 407]]","[""exact""]",True,False
+13,subjective,The patient manages her symptoms by slowing down.,0.5,"[""slowing down""]","[[449, 461]]","[""exact""]",True,False
+14,subjective,The patient manages her symptoms by taking medication as prescribed.,0.0,"[""taking medication as prescribed""]","[[466, 497]]","[""exact""]",True,False
+15,subjective,The patient is taking Coumadin.,0.0,"[""Coumadin 4 mg""]","[[519, 532]]","[""exact""]",True,False
+16,subjective,The patient is taking Coumadin 4 mg.,0.0,"[""Coumadin 4 mg""]","[[519, 532]]","[""exact""]",True,False
+17,subjective,The patient is taking Lasix.,0.0,"[""Lasix 4 mg daily""]","[[534, 550]]","[""exact""]",True,False
+18,subjective,The patient is taking Lasix 4 mg daily.,0.0,"[""Lasix 4 mg daily""]","[[534, 550]]","[""exact""]",True,False
+19,subjective,The patient is taking Atenolol.,0.0,"[""Atenolol 50 mg daily""]","[[556, 576]]","[""exact""]",True,False
+20,subjective,The patient is taking Atenolol 50 mg daily.,0.0,"[""Atenolol 50 mg daily""]","[[556, 576]]","[""exact""]",True,False
+21,subjective,The patient initially experienced irritability with Atenolol.,0.25,"[""some irritability initially with the Atenolol""]","[[604, 649]]","[""exact""]",True,False
+22,subjective,The patient's irritability with Atenolol has subsided.,0.25,"[""it has subsided""]","[[667, 682]]","[""exact""]",True,False
+23,objective,The patient has no jugular venous distension (JVD).,0.0,"[""No JVD detected""]","[[135, 150]]","[""exact""]",True,False
+24,objective,The patient's lungs have reduced breath sounds.,0.0,"[""Lungs: reduced breath sounds, but auscultation and percussion are clear""]","[[154, 225]]","[""exact""]",True,False
+25,objective,The patient's lungs have clear auscultation.,0.0,"[""Lungs: reduced breath sounds, but auscultation and percussion are clear""]","[[154, 225]]","[""exact""]",True,False
+26,objective,The patient's lungs have clear percussion.,0.0,"[""Lungs: reduced breath sounds, but auscultation and percussion are clear""]","[[154, 225]]","[""exact""]",True,False
+27,objective,The patient's heart has an irregularly irregular rhythm.,0.0,"[""Heart: irregularly irregular rhythm, but no mass detected; S1 slightly accentuated, no S3; no pain on palpation""]","[[229, 340]]","[""exact""]",True,False
+28,objective,The patient's heart has no mass detected.,1.0,"[""Heart: irregularly irregular rhythm, but no mass detected; S1 slightly accentuated, no S3; no pain on palpation""]","[[229, 340]]","[""exact""]",True,False
+29,objective,The patient's heart has S1 slightly accentuated.,0.0,"[""Heart: irregularly irregular rhythm, but no mass detected; S1 slightly accentuated, no S3; no pain on palpation""]","[[229, 340]]","[""exact""]",True,False
+30,objective,The patient's heart has no S3.,0.0,"[""Heart: irregularly irregular rhythm, but no mass detected; S1 slightly accentuated, no S3; no pain on palpation""]","[[229, 340]]","[""exact""]",True,False
+31,objective,The patient's heart has no pain on palpation.,1.0,"[""Heart: irregularly irregular rhythm, but no mass detected; S1 slightly accentuated, no S3; no pain on palpation""]","[[229, 340]]","[""exact""]",True,False
+32,objective,The patient's abdomen has no tenderness.,0.25,"[""Abdomen: no tenderness""]","[[344, 366]]","[""exact""]",True,False
+33,objective,The patient has trace peripheral edema.,0.0,"[""Extremities: trace peripheral edema""]","[[370, 405]]","[""exact""]",True,False
+34,objective,The patient's ECG shows atrial fibrillation.,0.0,"[""ECG taken on 12/26/2020 shows atrial fibrillation with a controlled ventricular response, T wave inversion anteriorly""]","[[410, 527]]","[""exact""]",True,False
+35,objective,The patient's ECG shows a controlled ventricular response.,0.25,"[""ECG taken on 12/26/2020 shows atrial fibrillation with a controlled ventricular response, T wave inversion anteriorly""]","[[410, 527]]","[""exact""]",True,False
+36,objective,The patient's ECG shows T wave inversion anteriorly.,0.5,"[""ECG taken on 12/26/2020 shows atrial fibrillation with a controlled ventricular response, T wave inversion anteriorly""]","[[410, 527]]","[""exact""]",True,False
+37,objective,The patient's ECG was taken on 12/26/2020.,0.25,"[""ECG taken on 12/26/2020 shows atrial fibrillation with a controlled ventricular response, T wave inversion anteriorly""]","[[410, 527]]","[""exact""]",True,False
+38,assessment,The patient's heart valves are working well.,1.0,"[""The patient's heart valves are working well""]","[[12, 55]]","[""exact""]",True,False
+39,assessment,The patient is recovering from the mitral valve repair surgery.,0.5,"[""she is recovering from the mitral valve repair surgery""]","[[60, 114]]","[""exact""]",True,False
+40,assessment,The patient has ongoing atrial fibrillation.,0.0,"[""she has ongoing atrial fibrillation""]","[[120, 155]]","[""exact""]",True,False
+41,assessment,The patient's atrial fibrillation is being well controlled with medication.,0.25,"[""that is being well controlled with medication""]","[[156, 201]]","[""exact""]",True,False
+42,assessment,The patient has atrial fibrillation.,0.0,"[""Atrial fibrillation""]","[[218, 237]]","[""exact""]",True,False
+43,assessment,The patient has mitral regurgitation.,0.25,"[""mitral regurgitation""]","[[239, 259]]","[""exact""]",True,False
+44,assessment,The patient has diabetes.,0.0,"[""diabetes""]","[[261, 269]]","[""exact""]",True,False
+45,assessment,The patient has asthma.,0.0,"[""asthma""]","[[271, 277]]","[""exact""]",True,False
+46,assessment,The patient has recurrent chest discomfort.,0.5,"[""recurrent chest discomfort""]","[[279, 305]]","[""exact""]",True,False
+47,assessment,The patient has a history of coronary artery disease.,0.25,"[""history of coronary artery disease (past)""]","[[307, 348]]","[""exact""]",True,False
+48,plan,The patient was advised to slow down and avoid overexertion.,1.0,"[""slowing down and avoiding overexertion""]","[[190, 228]]","[""exact""]",True,False
+49,plan,The patient was recommended to stay active and maintain a healthy lifestyle.,0.25,"[""try to stay active and maintain a healthy lifestyle""]","[[253, 304]]","[""exact""]",True,False
+50,plan,A follow-up appointment is scheduled in 6-9 months to check on the patient's cardiac status.,0.5,"[""I scheduled a follow-up appointment in 6-9 months to check on her cardiac status""]","[[318, 398]]","[""exact""]",True,False

@@ -1,0 +1,44 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Mr. James.,0.25,"[""The patient, Mr. James""]","[[0, 22]]","[""exact""]",True,False
+1,subjective,The patient is a 63-year-old male.,1.0,"[""a 63-year-old male""]","[[27, 45]]","[""exact""]",True,False
+2,subjective,The patient has a history of pain in his left shoulder.,0.0,"[""a history of pain in his left shoulder and elbow""]","[[51, 99]]","[""exact""]",True,False
+3,subjective,The patient has a history of pain in his left elbow.,0.0,"[""a history of pain in his left shoulder and elbow""]","[[51, 99]]","[""exact""]",True,False
+4,subjective,The patient's pain began 5 months ago.,0.0,"[""which began 5 months ago""]","[[101, 125]]","[""exact""]",True,False
+5,subjective,The patient's pain started after a fall on icy stairs.,0.75,"[""after a fall on icy stairs""]","[[126, 152]]","[""exact""]",True,False
+6,subjective,The patient reports constant pain.,0.0,"[""He reports constant pain""]","[[154, 178]]","[""exact""]",True,False
+7,subjective,The patient's pain worsens with lifting.,0.0,"[""which worsens with lifting""]","[[180, 206]]","[""exact""]",True,False
+8,subjective,The patient's pain has prevented him from continuing his regular exercise routine at the gym.,0.5,"[""has prevented him from continuing his regular exercise routine at the gym""]","[[211, 284]]","[""exact""]",True,False
+9,subjective,The patient denies numbness in his arm.,0.0,"[""He denies numbness or tingling in his arm""]","[[286, 327]]","[""exact""]",True,False
+10,subjective,The patient denies tingling in his arm.,0.0,"[""He denies numbness or tingling in his arm""]","[[286, 327]]","[""exact""]",True,False
+11,subjective,The patient has been trying to manage the pain with ice.,0.25,"[""He has been trying to manage the pain with ice""]","[[329, 375]]","[""exact""]",True,False
+12,subjective,The patient has not taken any medication for the pain.,0.75,"[""has not taken any medication""]","[[380, 408]]","[""exact""]",True,False
+13,subjective,The patient has a past medical history of a fall 5 months ago.,0.0,"[""a past medical history of a fall 5 months ago""]","[[427, 472]]","[""exact""]",True,False
+14,subjective,The patient recently retired from an office job.,0.75,"[""a recent retirement from an office job""]","[[477, 515]]","[""exact""]",True,False
+15,subjective,The patient denies any symptoms in other organs relevant to his initial presentation.,0.5,"[""The patient denies any symptoms in other organs that are relevant to his initial presentation""]","[[518, 611]]","[""exact""]",True,False
+16,objective,The patient's left shoulder was tender to palpation.,0.0,"[""The left shoulder and elbow were tender to palpation""]","[[0, 52]]","[""exact""]",True,False
+17,objective,The patient's left elbow was tender to palpation.,0.0,"[""The left shoulder and elbow were tender to palpation""]","[[0, 52]]","[""exact""]",True,False
+18,objective,The patient had a positive Neer's test.,0.0,"[""with a positive Neer's test""]","[[54, 81]]","[""exact""]",True,False
+19,objective,The patient had a positive kiss test.,0.5,"[""with a positive Neer's test and a positive kiss""]","[[54, 101]]","[""exact""]",True,False
+20,objective,There was no warmth in the patient's left shoulder and elbow.,0.25,"[""There was no warmth""]","[[103, 122]]","[""exact""]",True,False
+21,objective,There was no erythema in the patient's left shoulder and elbow.,0.25,"[""no warmth, erythema, or deformity""]","[[113, 146]]","[""exact""]",True,False
+22,objective,There was no deformity in the patient's left shoulder and elbow.,0.25,"[""no warmth, erythema, or deformity""]","[[113, 146]]","[""exact""]",True,False
+23,objective,The patient had normal proximal upper extremity strength.,0.0,"[""normal proximal and distal upper extremity strength""]","[[164, 215]]","[""exact""]",True,False
+24,objective,The patient had normal distal upper extremity strength.,0.0,"[""normal proximal and distal upper extremity strength""]","[[164, 215]]","[""exact""]",True,False
+25,objective,The patient had intact median sensation.,0.0,"[""intact median, radial, and ulnar sensation""]","[[217, 259]]","[""exact""]",True,False
+26,objective,The patient had intact radial sensation.,0.0,"[""intact median, radial, and ulnar sensation""]","[[217, 259]]","[""exact""]",True,False
+27,objective,The patient had intact ulnar sensation.,0.0,"[""intact median, radial, and ulnar sensation""]","[[217, 259]]","[""exact""]",True,False
+28,objective,The patient's abduction was to 90 degrees.,0.0,"[""abduction to 90 degrees""]","[[265, 288]]","[""exact""]",True,False
+29,objective,The patient had a normal empty can test.,0.0,"[""The empty can test was normal""]","[[290, 319]]","[""exact""]",True,False
+30,assessment,The patient is experiencing impingement syndrome of the left shoulder.,0.0,"[""The patient is experiencing impingement syndrome of the left shoulder""]","[[12, 81]]","[""exact""]",True,False
+31,assessment,The patient has impingement syndrome of the left shoulder as an active problem.,0.0,"[""Impingement syndrome of left shoulder; Active""]","[[97, 142]]","[""exact""]",True,False
+32,plan,Mr. James was prescribed to continue icing his shoulder.,0.0,"[""continue icing his shoulder""]","[[26, 53]]","[""exact""]",True,False
+33,plan,Mr. James was prescribed to rest as much as possible.,0.25,"[""rest as much as possible""]","[[58, 82]]","[""exact""]",True,False
+34,plan,A referral for physical therapy was ordered for Mr. James.,0.75,"[""I ordered a referral for physical therapy""]","[[84, 125]]","[""exact""]",True,False
+35,plan,Mr. James's physical therapy will be with Dr. Martha Rivera.,0.0,"[""with Dr. Martha Rivera""]","[[126, 148]]","[""exact""]",True,False
+36,plan,Mr. James's physical therapy will be 2 days a week.,0.0,"[""2 days a week""]","[[150, 163]]","[""exact""]",True,False
+37,plan,The physical therapy office will contact Mr. James within the next day or two to schedule an appointment.,1.0,"[""I will have the physical therapy office contact Mr. James within the next day or two to schedule an appointment""]","[[165, 276]]","[""exact""]",True,False
+38,plan,Mr. James will follow up with the physician if his symptoms worsen.,0.25,"[""if his symptoms worsen or do not improve with therapy""]","[[323, 376]]","[""exact""]",True,False
+39,plan,Mr. James will follow up with the physician if his symptoms do not improve with therapy.,0.25,"[""if his symptoms worsen or do not improve with therapy""]","[[323, 376]]","[""exact""]",True,False
+40,plan,A follow-up appointment with Mr. James will be scheduled in 2-3 weeks.,1.0,"[""I will schedule a follow-up appointment with Mr. James in 2-3 weeks""]","[[379, 446]]","[""exact""]",True,False
+41,plan,The follow-up appointment will assess the effectiveness of the physical therapy.,0.75,"[""to assess the effectiveness of the physical therapy""]","[[447, 498]]","[""exact""]",True,False
+42,plan,The follow-up appointment will discuss further management if necessary.,0.5,"[""to discuss further management if necessary""]","[[503, 545]]","[""exact""]",True,False

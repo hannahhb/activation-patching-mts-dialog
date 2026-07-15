@@ -1,0 +1,726 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 2-year-old male.",
+        "spans": [
+          "a 2-year-old male"
+        ],
+        "span_offsets": [
+          [
+            13,
+            30
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing symptoms of a runny nose.",
+        "spans": [
+          "symptoms of a runny nose"
+        ],
+        "span_offsets": [
+          [
+            54,
+            78
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing symptoms of stuffiness.",
+        "spans": [
+          "symptoms of a runny nose, stuffiness"
+        ],
+        "span_offsets": [
+          [
+            54,
+            90
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing symptoms of cough.",
+        "spans": [
+          "symptoms of a runny nose, stuffiness, cough"
+        ],
+        "span_offsets": [
+          [
+            54,
+            97
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been pulling on his ears.",
+        "spans": [
+          "pulling on his ears"
+        ],
+        "span_offsets": [
+          [
+            103,
+            122
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been rubbing his nose excessively.",
+        "spans": [
+          "rubbing his nose excessively"
+        ],
+        "span_offsets": [
+          [
+            158,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a low-grade fever of 100.3\u00b0F.",
+        "spans": [
+          "a low-grade fever of 100.3\u00b0F"
+        ],
+        "span_offsets": [
+          [
+            204,
+            232
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's appetite has been decreased.",
+        "spans": [
+          "his appetite has been decreased"
+        ],
+        "span_offsets": [
+          [
+            238,
+            269
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient ate only 7 ounces of formula from a bottle this morning.",
+        "spans": [
+          "eating only 7 ounces of formula from a bottle this morning"
+        ],
+        "span_offsets": [
+          [
+            271,
+            329
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient refused to eat cereal.",
+        "spans": [
+          "refusing to eat cereal"
+        ],
+        "span_offsets": [
+          [
+            334,
+            356
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's energy level is described as irritable.",
+        "spans": [
+          "his energy level is described as irritable"
+        ],
+        "span_offsets": [
+          [
+            372,
+            410
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is having difficulty sleeping.",
+        "spans": [
+          "having difficulty sleeping"
+        ],
+        "span_offsets": [
+          [
+            422,
+            448
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's older sister has been sick.",
+        "spans": [
+          "The patient's older sister has been sick"
+        ],
+        "span_offsets": [
+          [
+            450,
+            490
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's family has been exposed to a nephew with a sinus infection.",
+        "spans": [
+          "the patient's family has been exposed to a nephew with a sinus infection"
+        ],
+        "span_offsets": [
+          [
+            496,
+            568
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed acetaminophen (Tylenol).",
+        "spans": [
+          "I prescribed acetaminophen (Tylenol) for fever reduction"
+        ],
+        "span_offsets": [
+          [
+            571,
+            627
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed acetaminophen (Tylenol) for fever reduction.",
+        "spans": [
+          "I prescribed acetaminophen (Tylenol) for fever reduction"
+        ],
+        "span_offsets": [
+          [
+            571,
+            627
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of cradle cap.",
+        "spans": [
+          "The patient has a history of cradle cap"
+        ],
+        "span_offsets": [
+          [
+            630,
+            669
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing symptoms of a respiratory infection.",
+        "spans": [
+          "The patient has been experiencing symptoms of a respiratory infection"
+        ],
+        "span_offsets": [
+          [
+            672,
+            741
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's respiratory infection includes a runny nose.",
+        "spans": [
+          "a runny nose, stuffiness, and cough"
+        ],
+        "span_offsets": [
+          [
+            753,
+            788
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's respiratory infection includes stuffiness.",
+        "spans": [
+          "a runny nose, stuffiness, and cough"
+        ],
+        "span_offsets": [
+          [
+            753,
+            788
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's respiratory infection includes cough.",
+        "spans": [
+          "a runny nose, stuffiness, and cough"
+        ],
+        "span_offsets": [
+          [
+            753,
+            788
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's respiratory infection includes pulling on his ears.",
+        "spans": [
+          "He also has been pulling on his ears"
+        ],
+        "span_offsets": [
+          [
+            790,
+            826
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's respiratory infection includes rubbing his nose excessively.",
+        "spans": [
+          "He also has been rubbing his nose excessively"
+        ],
+        "span_offsets": [
+          [
+            141,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's rectal temperature is 100.3\u00b0F.",
+        "spans": [
+          "The patient's rectal temperature was 100.3\u00b0F"
+        ],
+        "span_offsets": [
+          [
+            0,
+            44
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ears appear normal.",
+        "spans": [
+          "The patient's ears looked okay during the examination"
+        ],
+        "span_offsets": [
+          [
+            47,
+            100
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has a viral upper respiratory infection.",
+        "spans": [
+          "The patient has a viral upper respiratory infection;"
+        ],
+        "span_offsets": [
+          [
+            0,
+            52
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's viral upper respiratory infection is active.",
+        "spans": [
+          "viral upper respiratory infection: active"
+        ],
+        "span_offsets": [
+          [
+            53,
+            94
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has cradle cap.",
+        "spans": [
+          "cradle cap: active"
+        ],
+        "span_offsets": [
+          [
+            96,
+            114
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's cradle cap is active.",
+        "spans": [
+          "cradle cap: active"
+        ],
+        "span_offsets": [
+          [
+            96,
+            114
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient's family was advised to continue with fluids.",
+        "spans": [
+          "continue with fluids and rest"
+        ],
+        "span_offsets": [
+          [
+            34,
+            63
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's family was advised to continue with rest.",
+        "spans": [
+          "continue with fluids and rest"
+        ],
+        "span_offsets": [
+          [
+            34,
+            63
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's family was recommended to watch for a barky cough.",
+        "spans": [
+          "watching for a barky cough"
+        ],
+        "span_offsets": [
+          [
+            79,
+            105
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient may be given his sister's medicine if a barky cough develops.",
+        "spans": [
+          "which would necessitate giving the patient a half teaspoon of his sister's medicine"
+        ],
+        "span_offsets": [
+          [
+            107,
+            190
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The dose of his sister's medicine for the patient is a half teaspoon.",
+        "spans": [
+          "a half teaspoon of his sister's medicine"
+        ],
+        "span_offsets": [
+          [
+            150,
+            190
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's family was suggested to use Zarbee's for the stuffy nose.",
+        "spans": [
+          "using Zarbee's for the stuffy nose"
+        ],
+        "span_offsets": [
+          [
+            209,
+            243
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's family was suggested to use a dose of Zarbee's for children under a year of age.",
+        "spans": [
+          "a dose of Zarbee's for children under a year of age"
+        ],
+        "span_offsets": [
+          [
+            248,
+            299
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's family was instructed to use the regular strength of Head and Shoulders shampoo for the cradle cap.",
+        "spans": [
+          "use the regular strength of Head and Shoulders, Selsun Blue, or Nizoral A.D. shampoo for the cradle cap"
+        ],
+        "span_offsets": [
+          [
+            330,
+            433
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's family was instructed to use the regular strength of Selsun Blue shampoo for the cradle cap.",
+        "spans": [
+          "use the regular strength of Head and Shoulders, Selsun Blue, or Nizoral A.D. shampoo for the cradle cap"
+        ],
+        "span_offsets": [
+          [
+            330,
+            433
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's family was instructed to use the regular strength of Nizoral A.D. shampoo for the cradle cap.",
+        "spans": [
+          "use the regular strength of Head and Shoulders, Selsun Blue, or Nizoral A.D. shampoo for the cradle cap"
+        ],
+        "span_offsets": [
+          [
+            330,
+            433
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's family was instructed to continue using the soft brush for the cradle cap.",
+        "spans": [
+          "continue using the soft brush and baby oil to remove scales"
+        ],
+        "span_offsets": [
+          [
+            442,
+            501
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's family was instructed to continue using baby oil for the cradle cap.",
+        "spans": [
+          "continue using the soft brush and baby oil to remove scales"
+        ],
+        "span_offsets": [
+          [
+            442,
+            501
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be seen again in one week.",
+        "spans": [
+          "The patient will be seen again in one week"
+        ],
+        "span_offsets": [
+          [
+            504,
+            546
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

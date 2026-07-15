@@ -1,0 +1,879 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Melissa Sanchez.",
+        "spans": [
+          "Melissa Sanchez"
+        ],
+        "span_offsets": [
+          [
+            13,
+            28
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is a 59-year-old female.",
+        "spans": [
+          "59-year-old female"
+        ],
+        "span_offsets": [
+          [
+            35,
+            53
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of mitral regurgitation.",
+        "spans": [
+          "history of mitral regurgitation"
+        ],
+        "span_offsets": [
+          [
+            61,
+            92
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of atrial fibrillation.",
+        "spans": [
+          "history of mitral regurgitation and atrial fibrillation"
+        ],
+        "span_offsets": [
+          [
+            61,
+            116
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of diabetes.",
+        "spans": [
+          "diabetes"
+        ],
+        "span_offsets": [
+          [
+            118,
+            126
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of asthma.",
+        "spans": [
+          "asthma"
+        ],
+        "span_offsets": [
+          [
+            128,
+            134
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of recurrent chest discomfort.",
+        "spans": [
+          "recurrent chest discomfort"
+        ],
+        "span_offsets": [
+          [
+            140,
+            166
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient had a negative cardiac work-up for coronary artery disease.",
+        "spans": [
+          "negative cardiac work-up for coronary artery disease"
+        ],
+        "span_offsets": [
+          [
+            174,
+            226
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient underwent mitral valve repair surgery on 8/3/2020.",
+        "spans": [
+          "mitral valve repair surgery on 8/3/2020"
+        ],
+        "span_offsets": [
+          [
+            273,
+            312
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports feeling better overall since her mitral valve repair surgery.",
+        "spans": [
+          "feeling better overall since her mitral valve repair surgery"
+        ],
+        "span_offsets": [
+          [
+            240,
+            300
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences occasional chest pain.",
+        "spans": [
+          "occasional chest pain"
+        ],
+        "span_offsets": [
+          [
+            336,
+            357
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences shallow breathing.",
+        "spans": [
+          "shallow breathing"
+        ],
+        "span_offsets": [
+          [
+            362,
+            379
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's chest pain and shallow breathing are particularly exacerbated by exertion.",
+        "spans": [
+          "particularly with exertion"
+        ],
+        "span_offsets": [
+          [
+            381,
+            407
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient manages her symptoms by slowing down.",
+        "spans": [
+          "slowing down"
+        ],
+        "span_offsets": [
+          [
+            449,
+            461
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient manages her symptoms by taking medication as prescribed.",
+        "spans": [
+          "taking medication as prescribed"
+        ],
+        "span_offsets": [
+          [
+            466,
+            497
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Coumadin.",
+        "spans": [
+          "Coumadin 4 mg"
+        ],
+        "span_offsets": [
+          [
+            519,
+            532
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Coumadin 4 mg.",
+        "spans": [
+          "Coumadin 4 mg"
+        ],
+        "span_offsets": [
+          [
+            519,
+            532
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Lasix.",
+        "spans": [
+          "Lasix 4 mg daily"
+        ],
+        "span_offsets": [
+          [
+            534,
+            550
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Lasix 4 mg daily.",
+        "spans": [
+          "Lasix 4 mg daily"
+        ],
+        "span_offsets": [
+          [
+            534,
+            550
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Atenolol.",
+        "spans": [
+          "Atenolol 50 mg daily"
+        ],
+        "span_offsets": [
+          [
+            556,
+            576
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Atenolol 50 mg daily.",
+        "spans": [
+          "Atenolol 50 mg daily"
+        ],
+        "span_offsets": [
+          [
+            556,
+            576
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient initially experienced irritability with Atenolol.",
+        "spans": [
+          "some irritability initially with the Atenolol"
+        ],
+        "span_offsets": [
+          [
+            604,
+            649
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's irritability with Atenolol has subsided.",
+        "spans": [
+          "it has subsided"
+        ],
+        "span_offsets": [
+          [
+            667,
+            682
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has no jugular venous distension (JVD).",
+        "spans": [
+          "No JVD detected"
+        ],
+        "span_offsets": [
+          [
+            135,
+            150
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lungs have reduced breath sounds.",
+        "spans": [
+          "Lungs: reduced breath sounds, but auscultation and percussion are clear"
+        ],
+        "span_offsets": [
+          [
+            154,
+            225
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lungs have clear auscultation.",
+        "spans": [
+          "Lungs: reduced breath sounds, but auscultation and percussion are clear"
+        ],
+        "span_offsets": [
+          [
+            154,
+            225
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lungs have clear percussion.",
+        "spans": [
+          "Lungs: reduced breath sounds, but auscultation and percussion are clear"
+        ],
+        "span_offsets": [
+          [
+            154,
+            225
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heart has an irregularly irregular rhythm.",
+        "spans": [
+          "Heart: irregularly irregular rhythm, but no mass detected; S1 slightly accentuated, no S3; no pain on palpation"
+        ],
+        "span_offsets": [
+          [
+            229,
+            340
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heart has no mass detected.",
+        "spans": [
+          "Heart: irregularly irregular rhythm, but no mass detected; S1 slightly accentuated, no S3; no pain on palpation"
+        ],
+        "span_offsets": [
+          [
+            229,
+            340
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heart has S1 slightly accentuated.",
+        "spans": [
+          "Heart: irregularly irregular rhythm, but no mass detected; S1 slightly accentuated, no S3; no pain on palpation"
+        ],
+        "span_offsets": [
+          [
+            229,
+            340
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heart has no S3.",
+        "spans": [
+          "Heart: irregularly irregular rhythm, but no mass detected; S1 slightly accentuated, no S3; no pain on palpation"
+        ],
+        "span_offsets": [
+          [
+            229,
+            340
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heart has no pain on palpation.",
+        "spans": [
+          "Heart: irregularly irregular rhythm, but no mass detected; S1 slightly accentuated, no S3; no pain on palpation"
+        ],
+        "span_offsets": [
+          [
+            229,
+            340
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdomen has no tenderness.",
+        "spans": [
+          "Abdomen: no tenderness"
+        ],
+        "span_offsets": [
+          [
+            344,
+            366
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has trace peripheral edema.",
+        "spans": [
+          "Extremities: trace peripheral edema"
+        ],
+        "span_offsets": [
+          [
+            370,
+            405
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ECG shows atrial fibrillation.",
+        "spans": [
+          "ECG taken on 12/26/2020 shows atrial fibrillation with a controlled ventricular response, T wave inversion anteriorly"
+        ],
+        "span_offsets": [
+          [
+            410,
+            527
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ECG shows a controlled ventricular response.",
+        "spans": [
+          "ECG taken on 12/26/2020 shows atrial fibrillation with a controlled ventricular response, T wave inversion anteriorly"
+        ],
+        "span_offsets": [
+          [
+            410,
+            527
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ECG shows T wave inversion anteriorly.",
+        "spans": [
+          "ECG taken on 12/26/2020 shows atrial fibrillation with a controlled ventricular response, T wave inversion anteriorly"
+        ],
+        "span_offsets": [
+          [
+            410,
+            527
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ECG was taken on 12/26/2020.",
+        "spans": [
+          "ECG taken on 12/26/2020 shows atrial fibrillation with a controlled ventricular response, T wave inversion anteriorly"
+        ],
+        "span_offsets": [
+          [
+            410,
+            527
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient's heart valves are working well.",
+        "spans": [
+          "The patient's heart valves are working well"
+        ],
+        "span_offsets": [
+          [
+            12,
+            55
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is recovering from the mitral valve repair surgery.",
+        "spans": [
+          "she is recovering from the mitral valve repair surgery"
+        ],
+        "span_offsets": [
+          [
+            60,
+            114
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has ongoing atrial fibrillation.",
+        "spans": [
+          "she has ongoing atrial fibrillation"
+        ],
+        "span_offsets": [
+          [
+            120,
+            155
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's atrial fibrillation is being well controlled with medication.",
+        "spans": [
+          "that is being well controlled with medication"
+        ],
+        "span_offsets": [
+          [
+            156,
+            201
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has atrial fibrillation.",
+        "spans": [
+          "Atrial fibrillation"
+        ],
+        "span_offsets": [
+          [
+            218,
+            237
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has mitral regurgitation.",
+        "spans": [
+          "mitral regurgitation"
+        ],
+        "span_offsets": [
+          [
+            239,
+            259
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has diabetes.",
+        "spans": [
+          "diabetes"
+        ],
+        "span_offsets": [
+          [
+            261,
+            269
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has asthma.",
+        "spans": [
+          "asthma"
+        ],
+        "span_offsets": [
+          [
+            271,
+            277
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has recurrent chest discomfort.",
+        "spans": [
+          "recurrent chest discomfort"
+        ],
+        "span_offsets": [
+          [
+            279,
+            305
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of coronary artery disease.",
+        "spans": [
+          "history of coronary artery disease (past)"
+        ],
+        "span_offsets": [
+          [
+            307,
+            348
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was advised to slow down and avoid overexertion.",
+        "spans": [
+          "slowing down and avoiding overexertion"
+        ],
+        "span_offsets": [
+          [
+            190,
+            228
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was recommended to stay active and maintain a healthy lifestyle.",
+        "spans": [
+          "try to stay active and maintain a healthy lifestyle"
+        ],
+        "span_offsets": [
+          [
+            253,
+            304
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A follow-up appointment is scheduled in 6-9 months to check on the patient's cardiac status.",
+        "spans": [
+          "I scheduled a follow-up appointment in 6-9 months to check on her cardiac status"
+        ],
+        "span_offsets": [
+          [
+            318,
+            398
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

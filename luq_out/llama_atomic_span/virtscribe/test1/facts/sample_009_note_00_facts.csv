@@ -1,0 +1,60 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Diana Scott.,0.0,"[""Diana Scott""]","[[18, 29]]","[""exact""]",True,False
+1,subjective,The patient is a 100-year-old woman.,0.0,"[""a 100-year-old woman""]","[[34, 54]]","[""exact""]",True,False
+2,subjective,The patient has a new diagnosis of a heart murmur.,0.0,"[""a new diagnosis of a heart murmur""]","[[73, 106]]","[""exact""]",True,False
+3,subjective,The patient's previous doctor described the heart murmur as a worrisome condition.,0.5,"[""which her previous doctor described as a \""worrisome\"" condition""]","[[108, 170]]","[""exact""]",True,False
+4,subjective,The patient reports severe pains in her legs.,0.0,"[""severe pains in her legs""]","[[184, 208]]","[""exact""]",True,False
+5,subjective,The patient has been taking pain pills for leg pain.,0.25,"[""has been taking pain pills for this issue""]","[[213, 254]]","[""exact""]",True,False
+6,subjective,The patient gets short of breath when walking too fast or too long.,0.0,"[""gets short of breath when walking too fast or too long""]","[[283, 337]]","[""exact""]",True,False
+7,subjective,The patient gets short of breath when drinking a full glass of water without stopping.,0.5,"[""or when drinking a full glass of water without stopping""]","[[339, 394]]","[""exact""]",True,False
+8,subjective,The patient uses a walker due to fatigue.,1.0,"[""using a walker due to fatigue""]","[[408, 437]]","[""exact""]",True,False
+9,subjective,The patient has a history of surgeries.,0.0,"[""a history of surgeries""]","[[446, 468]]","[""exact""]",True,False
+10,subjective,The patient denies chest pain.,0.0,"[""denies chest pain""]","[[474, 491]]","[""exact""]",True,False
+11,subjective,The patient has not noticed irregular heartbeats.,0.75,"[""has not noticed irregular heartbeats""]","[[496, 532]]","[""exact""]",True,False
+12,subjective,The patient reports swelling in her ankles.,0.5,"[""swelling in her ankles""]","[[547, 569]]","[""exact""]",True,False
+13,subjective,The patient's ankle swelling has been going on for 6 months.,0.75,"[""which has been going on for 6 months""]","[[571, 607]]","[""exact""]",True,False
+14,subjective,The patient has lost weight gradually over the past year.,1.0,"[""has lost weight gradually over the past year""]","[[613, 657]]","[""exact""]",True,False
+15,subjective,The patient denies fevers.,0.0,"[""denies fevers, chills, or other symptoms""]","[[662, 702]]","[""exact""]",True,False
+16,subjective,The patient denies chills.,0.25,"[""denies fevers, chills, or other symptoms""]","[[662, 702]]","[""exact""]",True,False
+17,subjective,The patient denies other symptoms.,0.25,"[""denies fevers, chills, or other symptoms""]","[[662, 702]]","[""exact""]",True,False
+18,subjective,The patient has a family history of heart problems.,0.0,"[""a family history of heart problems""]","[[769, 803]]","[""exact""]",True,False
+19,subjective,The patient's son had a heart attack.,0.25,"[""a son who had a heart attack""]","[[815, 843]]","[""exact""]",True,False
+20,subjective,The patient's brother had a stroke due to diabetes.,0.5,"[""a brother who had a stroke due to diabetes""]","[[848, 890]]","[""exact""]",True,False
+21,subjective,The patient has never smoked.,0.25,"[""has never smoked""]","[[896, 912]]","[""exact""]",True,False
+22,subjective,The patient has no known allergies to medications.,0.25,"[""has no known allergies to medications""]","[[917, 954]]","[""exact""]",True,False
+23,subjective,The patient reports being overly tired due to medication.,0.75,"[""being overly tired due to medication""]","[[995, 1031]]","[""exact""]",True,False
+24,subjective,The patient has difficulty walking due to leg pain.,0.5,"[""difficulty walking due to leg pain""]","[[1040, 1074]]","[""exact""]",True,False
+25,subjective,The patient is taking Amlodipine.,0.0,"[""Amlodipine""]","[[1077, 1087]]","[""exact""]",True,False
+26,subjective,The patient is taking lisinopril.,0.0,"[""lisinopril""]","[[1089, 1099]]","[""exact""]",True,False
+27,subjective,The patient is taking simvastatin.,0.0,"[""simvastatin""]","[[1101, 1112]]","[""exact""]",True,False
+28,subjective,The patient's simvastatin dose is 20mg.,0.0,"[""simvastatin 20mg""]","[[1101, 1117]]","[""exact""]",True,False
+29,subjective,The patient is taking simvastatin for lipids.,0.75,"[""simvastatin 20mg (lipids)""]","[[1101, 1126]]","[""exact""]",True,False
+30,subjective,The patient is taking meclizine.,0.25,"[""meclizine""]","[[1128, 1137]]","[""exact""]",True,False
+31,subjective,The patient is taking meclizine for lightheadedness and dizziness.,0.75,"[""meclizine (for lightheadedness and dizziness)""]","[[1128, 1173]]","[""exact""]",True,False
+32,subjective,The patient is taking levothyroxine.,0.0,"[""levothyroxine""]","[[1175, 1188]]","[""exact""]",True,False
+33,subjective,The patient is taking levothyroxine for hypothyroidism.,0.75,"[""levothyroxine (for hypothyroidism)""]","[[1175, 1209]]","[""exact""]",True,False
+34,objective,The patient has a systolic murmur.,0.0,"[""The patient has a 4 out of 6 systolic murmur at the right upper sternal border with mild radiation to the carotids""]","[[15, 129]]","[""exact""]",True,False
+35,objective,The patient's systolic murmur is located at the right upper sternal border.,0.0,"[""The patient has a 4 out of 6 systolic murmur at the right upper sternal border with mild radiation to the carotids""]","[[15, 129]]","[""exact""]",True,False
+36,objective,The patient's systolic murmur has mild radiation to the carotids.,0.0,"[""The patient has a 4 out of 6 systolic murmur at the right upper sternal border with mild radiation to the carotids""]","[[15, 129]]","[""exact""]",True,False
+37,objective,The patient's systolic murmur is graded 4 out of 6.,0.0,"[""The patient has a 4 out of 6 systolic murmur at the right upper sternal border with mild radiation to the carotids""]","[[15, 129]]","[""exact""]",True,False
+38,assessment,The patient has a cardiac murmur.,0.0,"[""a cardiac murmur""]","[[53, 69]]","[""exact""]",True,False
+39,assessment,The patient likely has aortic stenosis.,0.0,"[""likely representing aortic stenosis""]","[[71, 106]]","[""exact""]",True,False
+40,assessment,The patient's symptoms are possibly due to severe aortic stenosis.,0.75,"[""symptoms possibly due to severe aortic stenosis""]","[[112, 159]]","[""exact""]",True,False
+41,assessment,The patient has a relatively preserved S2.,1.0,"[""a relatively preserved S2""]","[[170, 195]]","[""exact""]",True,False
+42,assessment,The patient's aortic stenosis is more consistent with moderate stenosis.,1.0,"[""more consistent with moderate stenosis""]","[[197, 235]]","[""exact""]",True,False
+43,assessment,The patient has aortic stenosis.,0.25,"[""Aortic stenosis""]","[[252, 267]]","[""exact""]",True,False
+44,assessment,The patient has possible severe aortic stenosis.,0.75,"[""possible severe aortic stenosis""]","[[269, 300]]","[""exact""]",True,False
+45,assessment,The patient has PVCS.,0.0,"[""PVCS""]","[[302, 306]]","[""exact""]",True,False
+46,assessment,The patient has tachycardia.,1.0,"[""tachycardia""]","[[308, 319]]","[""exact""]",True,False
+47,assessment,The patient has hyperlipidemia.,0.0,"[""hyperlipidemia""]","[[321, 335]]","[""exact""]",True,False
+48,assessment,The patient has lightheadedness/dizziness.,0.0,"[""lightheadedness/dizziness""]","[[337, 362]]","[""exact""]",True,False
+49,plan,The patient was prescribed to undergo an echocardiogram.,0.0,"[""I prescribed the patient to undergo an echocardiogram""]","[[0, 53]]","[""exact""]",True,False
+50,plan,The purpose of the echocardiogram is to assess the patient's overall cardiac structure and function.,0.0,"[""to assess her overall cardiac structure and function""]","[[54, 106]]","[""exact""]",True,False
+51,plan,The patient may undergo an ischemic evaluation.,0.5,"[""I will also consider an ischemic evaluation""]","[[108, 151]]","[""exact""]",True,False
+52,plan,The patient may undergo further assessment with a heart monitor.,0.5,"[""or further assessment with a heart monitor""]","[[152, 194]]","[""exact""]",True,False
+53,plan,The results of the echocardiogram will be sent to the patient's primary care physician.,0.75,"[""I will send the results and recommendations to her primary care physician""]","[[243, 316]]","[""exact""]",True,False
+54,plan,The patient's primary care physician will discuss the possibility of stopping her statin medication.,0.0,"[""to discuss the possibility of stopping her statin medication""]","[[323, 383]]","[""exact""]",True,False
+55,plan,The patient is currently taking statin medication.,0.0,"[""stopping her statin medication""]","[[353, 383]]","[""exact""]",True,False
+56,plan,The patient will continue taking her current medications as prescribed.,0.5,"[""I will also recommend that she continue taking her current medications as prescribed""]","[[385, 469]]","[""exact""]",True,False
+57,plan,The patient will follow up in 3-4 weeks.,0.0,"[""I will follow up with her in 3-4 weeks"", ""I will see the patient in 3-4 weeks""]","[[471, 509], [550, 585]]","[""exact"", ""exact""]",True,True
+58,plan,The purpose of the follow-up is to discuss the results and next steps.,0.0,"[""to discuss the results and next steps"", ""to discuss the results of the echocardiogram and determine the next course of action""]","[[510, 547], [586, 670]]","[""exact"", ""exact""]",True,True

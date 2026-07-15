@@ -1,0 +1,43 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 2-year-old male.,0.75,"[""a 2-year-old male""]","[[13, 30]]","[""exact""]",True,False
+1,subjective,The patient has been experiencing symptoms of a runny nose.,0.0,"[""symptoms of a runny nose""]","[[54, 78]]","[""exact""]",True,False
+2,subjective,The patient has been experiencing symptoms of stuffiness.,0.0,"[""symptoms of a runny nose, stuffiness""]","[[54, 90]]","[""exact""]",True,False
+3,subjective,The patient has been experiencing symptoms of cough.,0.0,"[""symptoms of a runny nose, stuffiness, cough""]","[[54, 97]]","[""exact""]",True,False
+4,subjective,The patient has been pulling on his ears.,0.0,"[""pulling on his ears""]","[[103, 122]]","[""exact""]",True,False
+5,subjective,The patient has been rubbing his nose excessively.,0.25,"[""rubbing his nose excessively""]","[[158, 186]]","[""exact""]",True,False
+6,subjective,The patient has a low-grade fever of 100.3°F.,0.0,"[""a low-grade fever of 100.3\u00b0F""]","[[204, 232]]","[""exact""]",True,False
+7,subjective,The patient's appetite has been decreased.,0.0,"[""his appetite has been decreased""]","[[238, 269]]","[""exact""]",True,False
+8,subjective,The patient ate only 7 ounces of formula from a bottle this morning.,0.5,"[""eating only 7 ounces of formula from a bottle this morning""]","[[271, 329]]","[""exact""]",True,False
+9,subjective,The patient refused to eat cereal.,0.25,"[""refusing to eat cereal""]","[[334, 356]]","[""exact""]",True,False
+10,subjective,The patient's energy level is described as irritable.,0.75,"[""his energy level is described as irritable""]","[[372, 410]]","[""word""]",True,False
+11,subjective,The patient is having difficulty sleeping.,0.25,"[""having difficulty sleeping""]","[[422, 448]]","[""exact""]",True,False
+12,subjective,The patient's older sister has been sick.,0.0,"[""The patient's older sister has been sick""]","[[450, 490]]","[""exact""]",True,False
+13,subjective,The patient's family has been exposed to a nephew with a sinus infection.,0.25,"[""the patient's family has been exposed to a nephew with a sinus infection""]","[[496, 568]]","[""exact""]",True,False
+14,subjective,The patient was prescribed acetaminophen (Tylenol).,1.0,"[""I prescribed acetaminophen (Tylenol) for fever reduction""]","[[571, 627]]","[""exact""]",True,False
+15,subjective,The patient was prescribed acetaminophen (Tylenol) for fever reduction.,0.75,"[""I prescribed acetaminophen (Tylenol) for fever reduction""]","[[571, 627]]","[""exact""]",True,False
+16,subjective,The patient has a history of cradle cap.,0.5,"[""The patient has a history of cradle cap""]","[[630, 669]]","[""exact""]",True,False
+17,subjective,The patient has been experiencing symptoms of a respiratory infection.,0.0,"[""The patient has been experiencing symptoms of a respiratory infection""]","[[672, 741]]","[""exact""]",True,False
+18,subjective,The patient's respiratory infection includes a runny nose.,0.0,"[""a runny nose, stuffiness, and cough""]","[[753, 788]]","[""exact""]",True,False
+19,subjective,The patient's respiratory infection includes stuffiness.,0.0,"[""a runny nose, stuffiness, and cough""]","[[753, 788]]","[""exact""]",True,False
+20,subjective,The patient's respiratory infection includes cough.,0.0,"[""a runny nose, stuffiness, and cough""]","[[753, 788]]","[""exact""]",True,False
+21,subjective,The patient's respiratory infection includes pulling on his ears.,0.0,"[""He also has been pulling on his ears""]","[[790, 826]]","[""exact""]",True,False
+22,subjective,The patient's respiratory infection includes rubbing his nose excessively.,0.0,"[""He also has been rubbing his nose excessively""]","[[141, 186]]","[""exact""]",True,False
+23,objective,The patient's rectal temperature is 100.3°F.,0.75,"[""The patient's rectal temperature was 100.3\u00b0F""]","[[0, 44]]","[""exact""]",True,False
+24,objective,The patient's ears appear normal.,0.25,"[""The patient's ears looked okay during the examination""]","[[47, 100]]","[""exact""]",True,False
+25,assessment,The patient has a viral upper respiratory infection.,0.0,"[""The patient has a viral upper respiratory infection;""]","[[0, 52]]","[""exact""]",True,False
+26,assessment,The patient's viral upper respiratory infection is active.,0.0,"[""viral upper respiratory infection: active""]","[[53, 94]]","[""exact""]",True,False
+27,assessment,The patient has cradle cap.,0.5,"[""cradle cap: active""]","[[96, 114]]","[""exact""]",True,False
+28,assessment,The patient's cradle cap is active.,1.0,"[""cradle cap: active""]","[[96, 114]]","[""exact""]",True,False
+29,plan,The patient's family was advised to continue with fluids.,0.25,"[""continue with fluids and rest""]","[[34, 63]]","[""exact""]",True,False
+30,plan,The patient's family was advised to continue with rest.,0.25,"[""continue with fluids and rest""]","[[34, 63]]","[""exact""]",True,False
+31,plan,The patient's family was recommended to watch for a barky cough.,0.0,"[""watching for a barky cough""]","[[79, 105]]","[""exact""]",True,False
+32,plan,The patient may be given his sister's medicine if a barky cough develops.,0.0,"[""which would necessitate giving the patient a half teaspoon of his sister's medicine""]","[[107, 190]]","[""exact""]",True,False
+33,plan,The dose of his sister's medicine for the patient is a half teaspoon.,0.0,"[""a half teaspoon of his sister's medicine""]","[[150, 190]]","[""exact""]",True,False
+34,plan,The patient's family was suggested to use Zarbee's for the stuffy nose.,0.0,"[""using Zarbee's for the stuffy nose""]","[[209, 243]]","[""exact""]",True,False
+35,plan,The patient's family was suggested to use a dose of Zarbee's for children under a year of age.,0.25,"[""a dose of Zarbee's for children under a year of age""]","[[248, 299]]","[""exact""]",True,False
+36,plan,The patient's family was instructed to use the regular strength of Head and Shoulders shampoo for the cradle cap.,1.0,"[""use the regular strength of Head and Shoulders, Selsun Blue, or Nizoral A.D. shampoo for the cradle cap""]","[[330, 433]]","[""exact""]",True,False
+37,plan,The patient's family was instructed to use the regular strength of Selsun Blue shampoo for the cradle cap.,1.0,"[""use the regular strength of Head and Shoulders, Selsun Blue, or Nizoral A.D. shampoo for the cradle cap""]","[[330, 433]]","[""exact""]",True,False
+38,plan,The patient's family was instructed to use the regular strength of Nizoral A.D. shampoo for the cradle cap.,1.0,"[""use the regular strength of Head and Shoulders, Selsun Blue, or Nizoral A.D. shampoo for the cradle cap""]","[[330, 433]]","[""exact""]",True,False
+39,plan,The patient's family was instructed to continue using the soft brush for the cradle cap.,1.0,"[""continue using the soft brush and baby oil to remove scales""]","[[442, 501]]","[""exact""]",True,False
+40,plan,The patient's family was instructed to continue using baby oil for the cradle cap.,1.0,"[""continue using the soft brush and baby oil to remove scales""]","[[442, 501]]","[""exact""]",True,False
+41,plan,The patient will be seen again in one week.,0.0,"[""The patient will be seen again in one week""]","[[504, 546]]","[""exact""]",True,False

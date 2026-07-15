@@ -731,14 +731,19 @@ def plot_dose_response(df: pd.DataFrame, out_path: Path):
 def parse_args():
     p = argparse.ArgumentParser(description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--mode", choices=["ablation", "patch"], default="ablation",
+    p.add_argument("--mode", choices=["ablation", "patch", "replot"], default="ablation",
                    help="'ablation' (default): Design 1, necessity test -- zero the "
                         "pathway at each word's own position. Cheap, no pairing or "
                         "activation caching needed; run this first. "
                         "'patch': Design 2, real clean/corrupt activation patching "
                         "(denoise + noise + interpolation) between within-note "
                         "hallucinated/faithful word pairs. More expensive; run as a "
-                        "confirmatory follow-up once ablation shows a signal.")
+                        "confirmatory follow-up once ablation shows a signal. "
+                        "'replot': re-generate fig_ablation.png from an existing "
+                        "--out/ablation_results.csv with NO model loading, no "
+                        "Bedrock/GPU work at all -- use this after only the plotting "
+                        "code changed (e.g. a matplotlib crash fix) so a completed "
+                        "ablation run's results.csv doesn't need to be recomputed.")
     p.add_argument("--model", default="meta-llama/Llama-3.1-8B-Instruct")
     p.add_argument("--device", default=(
         "cuda" if torch.cuda.is_available() else
@@ -767,10 +772,27 @@ def parse_args():
     return p.parse_args()
 
 
+def run_replot(args):
+    """Re-generate fig_ablation.png from an already-saved ablation_results.csv
+    -- no model load, no Bedrock/GPU work, just pandas + matplotlib. For
+    re-running plot_ablation() after a plotting-only code fix (e.g. the NaN
+    yerr crash) without recomputing an expensive completed ablation sweep."""
+    out_dir  = Path(args.out)
+    csv_path = out_dir / "ablation_results.csv"
+    if not csv_path.exists():
+        print(f"No results file at {csv_path} -- run --mode ablation first.")
+        return
+    results = pd.read_csv(csv_path)
+    print(f"Loaded {len(results)} rows from {csv_path}")
+    plot_ablation(results, out_dir / "fig_ablation.png")
+
+
 def main():
     args = parse_args()
     if args.mode == "ablation":
         run_ablation_test(args)
+    elif args.mode == "replot":
+        run_replot(args)
     else:
         run_patch_sweep(args)
 
