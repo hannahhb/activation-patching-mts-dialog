@@ -188,7 +188,7 @@ def select_word_targets(
         sdf = pd.read_csv(span_csv)
         note_spans = [s for s in sdf.get("note_span", pd.Series([], dtype=str)).fillna("").tolist()
                       if str(s).strip()]
-        labels, valid, _, _ = build_word_labels(word_strs, note_spans)
+        labels, valid, _, _, _ = build_word_labels(word_strs, note_spans)
 
         n_words = len(word_spans)
         valid = valid[:n_words]

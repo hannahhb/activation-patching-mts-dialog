@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LLM-as-Judge Span-Level Faithfulness Annotations</title>
+  <style>
+    body { font-family: -apple-system, "Segoe UI", sans-serif;
+           max-width: 1100px; margin: 0 auto; padding: 24px;
+           background: #eee; color: #222; }
+    h1 { margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+  <h1>LLM-as-Judge Span-Level Faithfulness Annotations</h1>
+  <p style="color:#555;margin-bottom:10px;">
+    CREOLA taxonomy (Faithful / Fabrication / Negation / Causality / Contextual).
+    Each sentence is coloured by its judge label; the specific flagged span within
+    a non-faithful sentence is <span style="text-decoration:underline;font-weight:700;">underlined and bold</span>.
+  </p>
+  <div style="margin-bottom:24px;"><span style="display:inline-block;margin-right:14px;"><span style="display:inline-block;width:12px;height:12px;background:#ffffff;border:1px solid #ccc;border-radius:3px;margin-right:4px;vertical-align:middle;"></span>Faithful</span><span style="display:inline-block;margin-right:14px;"><span style="display:inline-block;width:12px;height:12px;background:#f8b4b4;border:1px solid #c0392b;border-radius:3px;margin-right:4px;vertical-align:middle;"></span>Fabrication</span><span style="display:inline-block;margin-right:14px;"><span style="display:inline-block;width:12px;height:12px;background:#a8d5ff;border:1px solid #2980b9;border-radius:3px;margin-right:4px;vertical-align:middle;"></span>Negation</span><span style="display:inline-block;margin-right:14px;"><span style="display:inline-block;width:12px;height:12px;background:#ffd28a;border:1px solid #d68910;border-radius:3px;margin-right:4px;vertical-align:middle;"></span>Causality</span><span style="display:inline-block;margin-right:14px;"><span style="display:inline-block;width:12px;height:12px;background:#d7b8f5;border:1px solid #8e44ad;border-radius:3px;margin-right:4px;vertical-align:middle;"></span>Contextual</span></div>
+  
+<div style="margin-bottom:44px;border:1px solid #ddd;border-radius:8px;padding:20px;background:#f5f5f5;">
+  <h2 style="margin-top:0;">Sample 1 · Note 2
+    <span style="font-size:14px;font-weight:normal;color:#666;">
+      &nbsp;·&nbsp; aci/test1 &nbsp;·&nbsp; halluc_rate = 17.65%
+      &nbsp;·&nbsp; 3/17 sentences flagged
+    </span>
+  </h2>
+  
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    HPI: The patient presented with a 2-hour history of low back pain and tingling sensation in the right leg, which started after raking leaves in the yard.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #d68910;
+     background:#ffd28a;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#d68910;text-transform:uppercase;letter-spacing:0.05em;">Causality</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    The pain was <span style="text-decoration:underline;font-weight:700;">exacerbated by standing</span> and improved with rest and a hot shower.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    The patient had a similar episode 3 years ago that resolved on its own.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Past medical history: The patient has a history of similar low back pain 3 years ago, which resolved on its own.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    No other relevant medical history was mentioned.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Review of systems: The patient reports tingling sensation in the right leg.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Current medications: None mentioned.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #c0392b;
+     background:#f8b4b4;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#c0392b;text-transform:uppercase;letter-spacing:0.05em;">Fabrication</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    <span style="text-decoration:underline;font-weight:700;">Vital signs</span>: [NOT MENTIONED]
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Physical exam: The patient had pain on flexion, palpation at the L5 level, and normal dorsiflexion.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    The pulses were equal in all extremities.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Test Results: X-ray of the low back showed normal results.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Assessment: The patient likely sprained their low back, causing the current symptoms.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Problem list: Low back sprain; Tingling sensation in the right leg; Back pain.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #d68910;
+     background:#ffd28a;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#d68910;text-transform:uppercase;letter-spacing:0.05em;">Causality</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I prescribed meloxicam <span style="text-decoration:underline;font-weight:700;">15 mg orally daily</span> for pain management.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I also prescribed physical therapy to help with stretches and exercises to improve the patient's condition.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I instructed the patient to rest and follow up with me in two weeks if the symptoms do not improve, at which point we will consider an MRI.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Follow-up: The patient will follow up with me in two weeks to reassess the condition and consider further testing, including an MRI if necessary.
+  </div>
+</div>
+
+</div>
+
+
+<div style="margin-bottom:44px;border:1px solid #ddd;border-radius:8px;padding:20px;background:#f5f5f5;">
+  <h2 style="margin-top:0;">Sample 2 · Note 2
+    <span style="font-size:14px;font-weight:normal;color:#666;">
+      &nbsp;·&nbsp; aci/test1 &nbsp;·&nbsp; halluc_rate = 19.05%
+      &nbsp;·&nbsp; 4/21 sentences flagged
+    </span>
+  </h2>
+  
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    HPI: The patient, Gregory, is a 2-month-old nonhealing foot ulcer on the dorsal aspect of the lateral right foot, which has recently become red and is draining.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    He reports that the wound throbs occasionally, but he does not have specific pain.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    His biggest concern is the redness and drainage.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    He mentions that he got the wound from walking barefoot on the beach at Dewey Beach.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Past medical history: The patient has diabetes, for which he takes medication but does not regularly check his blood sugar levels.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    His last A1c is around 10%, which is considered high.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #d68910;
+     background:#ffd28a;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#d68910;text-transform:uppercase;letter-spacing:0.05em;">Causality</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    He has not seen his PCP in a while <span style="text-decoration:underline;font-weight:700;">and has not filled his prescribed antibiotics</span>.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Review of systems: The patient reports occasional throbbing pain in the affected foot.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #c0392b;
+     background:#f8b4b4;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#c0392b;text-transform:uppercase;letter-spacing:0.05em;">Fabrication</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    <span style="text-decoration:underline;font-weight:700;">Current medications: [NOT MENTIONED]</span>
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Vital signs: The patient's vital signs are normal, with no fever.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Physical exam: The physical exam reveals a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, proximal to the fifth MTP joint, with redness, drainage, edema, and fluid present.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    The patient reports increased pressure when the wound is touched, but no distinct pain.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Test Results: An X-ray of the right foot shows no evidence of osteomyelitis.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Assessment: The patient has a diabetic foot ulcer with a suspected infection.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #d68910;
+     background:#ffd28a;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#d68910;text-transform:uppercase;letter-spacing:0.05em;">Causality</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Problem list: Diabetic foot ulcer; Suspected infection; Uncontrolled diabetes; <span style="text-decoration:underline;font-weight:700;">Poor wound care and lack of follow-up with PCP</span>.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I prescribed clindamycin 400mg twice daily for 7 days to treat the suspected infection.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I will perform a debridement to remove dead tissue from the wound.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I will also order an ABI to determine the blood supply to the foot.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    The patient will need to wear a surgical shoe to reduce pressure on the affected foot.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I will see the patient back in 2 weeks for follow-up and possible repeat debridement.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #c0392b;
+     background:#f8b4b4;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#c0392b;text-transform:uppercase;letter-spacing:0.05em;">Fabrication</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    <span style="text-decoration:underline;font-weight:700;">Follow-up: The patient will be seen back in 2 weeks for follow-up and possible repeat debridement</span>.
+  </div>
+</div>
+
+</div>
+
+
+<div style="margin-bottom:44px;border:1px solid #ddd;border-radius:8px;padding:20px;background:#f5f5f5;">
+  <h2 style="margin-top:0;">Sample 4 · Note 2
+    <span style="font-size:14px;font-weight:normal;color:#666;">
+      &nbsp;·&nbsp; aci/test1 &nbsp;·&nbsp; halluc_rate = 11.54%
+      &nbsp;·&nbsp; 3/26 sentences flagged
+    </span>
+  </h2>
+  
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    HPI: The patient presents with a non-healing wound on his right foot, which he reports has been present for 2-3 weeks.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    He initially thought it was a blister from a new pair of shoes, but it progressed to a larger wound.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    The patient denies any trauma to the foot and has not experienced any pain or discomfort.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    He reports that the wound does not hurt when he touches it.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    The patient also mentions that he has diabetes, with a last HbA1c of 8.1%.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Past medical history: The patient has diabetes, and his last HbA1c was 8.1%.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    He also mentions that he used to see a podiatrist, but they moved and he was unable to find a new one.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Review of systems: The patient denies any other symptoms such as fever, chills, drainage from the wound, or odor.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #c0392b;
+     background:#f8b4b4;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#c0392b;text-transform:uppercase;letter-spacing:0.05em;">Fabrication</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    <span style="text-decoration:underline;font-weight:700;">Current medications: [NOT MENTIONED]</span>
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Vital signs: The patient's temperature is 98.1°F, heart rate is 72, respirations are 16, and blood pressure is 110/65.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Physical exam: There is a 1x2 inch circular wound on the dorsal aspect of the lateral right foot, proximal to the right fifth MTP joint.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    The wound has yellow slough with minimal granulation tissue, but no surrounding erythema or cellulitis.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    There is no fluid collection, necrosis, or odor.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    The vascular exam shows palpable bilateral femoral and popliteal pulses, but no palpable DP or PT pulses.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Doppler signs are present.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Test Results: The right foot X-ray shows no evidence of osteomyelitis.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #d68910;
+     background:#ffd28a;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#d68910;text-transform:uppercase;letter-spacing:0.05em;">Causality</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Assessment: The patient has a diabetic foot ulcer <span style="text-decoration:underline;font-weight:700;">with inadequate blood supply, which is not allowing the wound to heal</span>.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #c0392b;
+     background:#f8b4b4;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#c0392b;text-transform:uppercase;letter-spacing:0.05em;">Fabrication</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Problem list: Diabetic foot ulcer; <span style="text-decoration:underline;font-weight:700;">Insufficient blood supply</span>; Diabetes mellitus.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I prescribed collagenase ointment to be applied to the wound once daily, covered with a dry sterile dressing.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I also ordered an Ankle Brachial Index (ABI) to determine the blood supply to the foot.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    A debridement will be performed in the office to remove dead tissue.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    The patient will wear a surgical shoe to take pressure off the area.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I will see the patient again in two weeks to reassess the wound.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    If the ABI indicates poor blood supply, a vascular specialist may be referred.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I will also discuss with the patient the importance of getting their diabetes under control to aid in wound healing.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Follow-up: The patient will be seen again in two weeks.
+  </div>
+</div>
+
+</div>
+
+
+<div style="margin-bottom:44px;border:1px solid #ddd;border-radius:8px;padding:20px;background:#f5f5f5;">
+  <h2 style="margin-top:0;">Sample 10 · Note 0
+    <span style="font-size:14px;font-weight:normal;color:#666;">
+      &nbsp;·&nbsp; aci/test1 &nbsp;·&nbsp; halluc_rate = 15.00%
+      &nbsp;·&nbsp; 3/20 sentences flagged
+    </span>
+  </h2>
+  
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    HPI: The patient presents with right shoulder pain that has been ongoing for a few weeks, initially appearing after working on various projects in his backyard.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    The pain is located on the outside of the shoulder and is tender to the touch when raising the arm.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    He denies any numbness in the arm or hands.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    The pain is worse with movement and is alleviated by rest and over-the-counter medication.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    He has a history of similar pain in the same shoulder from a past injury playing baseball.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Past medical history: The patient has a history of right shoulder pain from a past injury, which has always been a bit of an issue.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #c0392b;
+     background:#f8b4b4;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#c0392b;text-transform:uppercase;letter-spacing:0.05em;">Fabrication</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Review of systems: The patient denies <span style="text-decoration:underline;font-weight:700;">any additional symptoms in other organs</span>.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Current medications: The patient has been taking Advil for pain relief and icing the affected area.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Vital signs: The patient's temperature is 97.8°F, heart rate is 62, respirations are 16, blood pressure is 116/84, and oxygen saturation is 99%.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Physical exam: The patient has limited active and passive range of motion in the right shoulder, with tenderness at the greater tuberosity of the humerus.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    The patient has a good hand grip and intact sensation to touch in the right arm.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Test Results: The patient's shoulder X-ray shows no fracture.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Assessment: The patient's symptoms are most likely due to rotator cuff tendinopathy, a condition in which the tendons of the muscles that help make the shoulder muscles are injured.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Problem list: Rotator cuff tendinopathy; Sore feet.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I plan to refer the patient to physical therapy for approximately six to eight weeks to address the rotator cuff tendinopathy.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I will also order an MRI to rule out any other conditions.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #d68910;
+     background:#ffd28a;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#d68910;text-transform:uppercase;letter-spacing:0.05em;">Causality</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    During this time, the patient should continue <span style="text-decoration:underline;font-weight:700;">taking Tylenol</span> and icing the affected area.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    If symptoms do not improve, we will consider a steroid injection into the shoulder for relief.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I also recommend that the patient tries soaking his feet in Epsom salts to alleviate soreness.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #c0392b;
+     background:#f8b4b4;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#c0392b;text-transform:uppercase;letter-spacing:0.05em;">Fabrication</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Follow-up: The patient will follow up with physical therapy and <span style="text-decoration:underline;font-weight:700;">return for a follow-up appointment to reassess symptoms</span>.
+  </div>
+</div>
+
+</div>
+
+
+<div style="margin-bottom:44px;border:1px solid #ddd;border-radius:8px;padding:20px;background:#f5f5f5;">
+  <h2 style="margin-top:0;">Sample 19 · Note 0
+    <span style="font-size:14px;font-weight:normal;color:#666;">
+      &nbsp;·&nbsp; aci/test1 &nbsp;·&nbsp; halluc_rate = 20.00%
+      &nbsp;·&nbsp; 4/20 sentences flagged
+    </span>
+  </h2>
+  
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    HPI: The patient, a 54-year-old male, presents with a complaint of stabbing, shooting pain in the right cheekbone area of his face, which has been ongoing for approximately 2-3 months.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    He reports that the pain is exacerbated by certain temperatures and can be triggered by cold weather.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    He denies numbness or tingling in the affected area and reports that his smile and vision are unchanged.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    He describes the pain as excruciating and rates it as a 10 out of 10 in severity.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    He has tried ibuprofen, Motrin, and topical treatments such as tiger balm, which have provided minimal relief.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Past medical history: The patient has a history of occasional headaches, for which he takes Tylenol, but denies a history of migraines or brain tumors.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Review of systems: The patient reports no symptoms in other organs or systems.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Current medications: He takes Tylenol for occasional headaches.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Vital signs: Not mentioned.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Physical exam: The patient was able to follow my finger in both directions, and his smile appeared symmetric.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #8e44ad;
+     background:#d7b8f5;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#8e44ad;text-transform:uppercase;letter-spacing:0.05em;">Contextual</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    <span style="text-decoration:underline;font-weight:700;">He reported a little numbness on the right side of his face</span> when I rubbed my fingers next to his ear.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #8e44ad;
+     background:#d7b8f5;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#8e44ad;text-transform:uppercase;letter-spacing:0.05em;">Contextual</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    When I used a cotton tape to run along the side of his face, <span style="text-decoration:underline;font-weight:700;">he reported feeling a little numb on the right side</span>.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #8e44ad;
+     background:#d7b8f5;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#8e44ad;text-transform:uppercase;letter-spacing:0.05em;">Contextual</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    When I poked him with a needle on the right side of his face, <span style="text-decoration:underline;font-weight:700;">he reported feeling dull, whereas on the left side, he reported feeling sharp</span>.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Assessment: The patient has trigeminal neuralgia, a condition where compression of the trigeminal nerve by a small blood vessel causes shooting, electrical pain in the face.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #c0392b;
+     background:#f8b4b4;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#c0392b;text-transform:uppercase;letter-spacing:0.05em;">Fabrication</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    Problem list: Trigeminal neuralgia; <span style="text-decoration:underline;font-weight:700;">confirmed</span>.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I prescribed Tegretol 100mg orally 3 times a day for the treatment of trigeminal neuralgia.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I explained the potential side effects of the medication, including memory loss, tingling, imbalance, and dermatologic reactions, particularly in individuals with Eustachian tube dysfunction.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I recommended genetic testing to ensure the medication is safe for the patient.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    I instructed the patient to follow up in one month to assess the efficacy of the medication and to discuss further treatment options if necessary.
+  </div>
+</div>
+
+
+<div style="margin-bottom:8px;padding:8px 12px;border-left:4px solid #ccc;
+     background:#ffffff;border-radius:0 6px 6px 0;">
+  <div style="margin-bottom:3px;"><span style="font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.05em;">Faithful</span></div>
+  <div style="font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#222;">
+    The patient will return in one month to assess the efficacy of the Tegretol and to discuss further treatment options if necessary.
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>

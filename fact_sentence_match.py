@@ -39,7 +39,10 @@ this project's default environment -- only in a sibling conda env
 Outputs:
   <out>/sample_NNN_note_KK_facts_matched.csv
       fact_idx, section, fact, uncertainty, match_sent_idx, sentence_text,
-      precision, matched_by ("entity" | "lcs" | None), clean_match
+      precision, matched_by ("entity" | "lcs" | None), clean_match,
+      span_start, span_end, span_text (char offsets into sentence_text for
+      the specific phrase the fact was decomposed from; empty if no
+      contiguous phrase could be located -- see _locate_span())
   <out>/fact_sentence_match_summary.csv
       one row per note: n_facts, n_clean, n_entity, n_lcs, clean_rate
 
@@ -92,6 +95,16 @@ _LEMMA_STOP = {
     "current", "medication", "history", "review", "system", "assessment",
     "problem", "list", "objective", "subjective", "plan", "follow", "followup",
     "test", "result", "physical", "exam", "vital", "sign", "issue",
+    "deny", "note", "admit", "endorse", "complain",
+}
+# Dosing-frequency/timing words spaCy's generic English stopword list flags as
+# low-content adverbs (e.g. "once"), but which carry real clinical meaning in
+# a medication fact ("once daily", "twice weekly"). Never treat these as stop
+# tokens, even when tok.is_stop is True, so they remain eligible span-hits.
+_FREQUENCY_OVERRIDE = {
+    "once", "twice", "thrice", "daily", "weekly", "monthly", "nightly",
+    "hourly", "bid", "tid", "qid", "qhs", "qd", "prn", "morning", "evening",
+    "bedtime", "night",
 }
 _HEADER_RE = re.compile(
     r"^(?:here is the soap note based on the transcript:|subjective:|objective:|assessment(?: / problem list)?:|problem list:|plan:|follow-?up:|instructions:)\s*$",
@@ -163,6 +176,16 @@ def extract_names(text: str) -> set:
     return out
 
 
+def extract_name_spans(text: str) -> List[Tuple[str, int, int]]:
+    """Same criteria as extract_names(), but with char offsets for span location."""
+    out = []
+    for m in _CAP_WORD_RE.finditer(text):
+        clean = m.group(0)
+        if clean.lower() not in _CAP_STOPWORDS:
+            out.append((clean.lower(), m.start(), m.end()))
+    return out
+
+
 # ── Numeric / measurement matching (vitals, doses, labs -- as distinctive as
 # a drug name, but not covered by entity matching) ─────────────────────────────
 _NUM_RE = re.compile(r"\d+(?:[./]\d+)?(?:mg|mcg|ml|kg|lb|bpm|%)?", re.IGNORECASE)
@@ -172,20 +195,32 @@ def extract_numbers(text: str) -> set:
     return set(m.group(0).lower() for m in _NUM_RE.finditer(text))
 
 
+def extract_number_spans(text: str) -> List[Tuple[str, int, int]]:
+    """Same criteria as extract_numbers(), but with char offsets for span location."""
+    return [(m.group(0).lower(), m.start(), m.end()) for m in _NUM_RE.finditer(text)]
+
+
 def analyze_batch(nlp, texts: List[str]) -> List[dict]:
     rows = []
     for doc in nlp.pipe(texts, batch_size=64):
         ents = {ent.text.lower().strip() for ent in doc.ents if ent.text.strip()}
+        ent_spans = [
+            (ent.text.lower().strip(), ent.start_char, ent.end_char)
+            for ent in doc.ents if ent.text.strip()
+        ]
         lemmas: List[str] = []
         content_seq: List[str] = []
         salient: Set[str] = set()
+        tokens: List[Tuple[str, int, int, str, bool]] = []  # text, start, end, lemma, is_stop
         for tok in doc:
             if tok.is_space or tok.is_punct:
                 continue
             base = (tok.lemma_ or tok.text).strip().lower()
             if not base:
                 continue
-            if not tok.is_stop and base not in _LEMMA_STOP:
+            is_stop_tok = (tok.is_stop or base in _LEMMA_STOP) and base not in _FREQUENCY_OVERRIDE
+            tokens.append((tok.text, tok.idx, tok.idx + len(tok.text), base, is_stop_tok))
+            if not is_stop_tok:
                 lemmas.append(base)
                 content_seq.append(base)
             if (
@@ -199,12 +234,14 @@ def analyze_batch(nlp, texts: List[str]) -> List[dict]:
 
         rows.append({
             "ents": ents,
+            "ent_spans": ent_spans,
             "names": extract_names(doc.text),
             "nums": extract_numbers(doc.text),
             "lemmas": lemmas,
             "content_seq": content_seq,
             "salient": salient,
             "neg": _is_negated(doc.text),
+            "tokens": tokens,
         })
     return rows
 
@@ -227,6 +264,87 @@ def _entity_overlap_score(fact_ents: Set[str], sent_ents: Set[str]) -> float:
 
 def _overlap_count(a: Sequence[str] | Set[str], b: Sequence[str] | Set[str]) -> int:
     return len(set(a) & set(b))
+
+
+# ── Span location (which phrase in the winning sentence did this fact come from) ──
+# Reuses the same entity/name/number/lemma signals already computed for scoring:
+# entities, names, and numbers give literal char offsets directly (from spaCy's
+# doc.ents and the regex extractors); lemma-matched content tokens are combined
+# into the longest contiguous run to cover paraphrased-but-adjacent phrases,
+# bridging up to 2 connector words (e.g. "in the") but never crossing a clause
+# or list-item boundary (;/./:).
+_SPAN_GAP_TOLERANCE = 2
+_SPAN_HARD_BOUNDARY = re.compile(r"[;.:]")
+
+
+def _locate_span(fact_info: dict, sent_info: dict, sentence_text: str) -> Optional[Tuple[int, int]]:
+    tokens = sent_info["tokens"]
+    if not tokens:
+        return None
+
+    f_ents = fact_info["ents"]
+    f_names = fact_info["names"]
+    f_nums = fact_info["nums"]
+    f_lem_set = set(fact_info["lemmas"]) | set(fact_info["content_seq"]) | set(fact_info["salient"])
+
+    hit_ranges: List[Tuple[int, int]] = []
+    for ent_text, es, ee in sent_info.get("ent_spans", []):
+        if ent_text in f_ents:
+            hit_ranges.append((es, ee))
+    for name_text, ns, ne in extract_name_spans(sentence_text):
+        if name_text in f_names:
+            hit_ranges.append((ns, ne))
+    for num_text, nns, nne in extract_number_spans(sentence_text):
+        if num_text in f_nums:
+            hit_ranges.append((nns, nne))
+
+    hits = [False] * len(tokens)
+    for i, (_, ts, te, lemma, is_stop_tok) in enumerate(tokens):
+        if any(ts < he and te > hs for hs, he in hit_ranges):
+            hits[i] = True
+        elif not is_stop_tok and lemma in f_lem_set:
+            hits[i] = True
+
+    if not any(hits):
+        return None
+
+    n = len(tokens)
+
+    def _crosses_boundary(a: int, b: int) -> bool:
+        gap_text = sentence_text[tokens[a][2]:tokens[b][1]]
+        return bool(_SPAN_HARD_BOUNDARY.search(gap_text))
+
+    best: Optional[Tuple[int, int, int]] = None  # (run_len, start_idx, end_idx)
+    i = 0
+    while i < n:
+        if not hits[i]:
+            i += 1
+            continue
+        j = i
+        while True:
+            next_hit = None
+            for g in range(1, _SPAN_GAP_TOLERANCE + 2):
+                if j + g < n and hits[j + g] and not _crosses_boundary(j, j + g):
+                    next_hit = j + g
+                    break
+            if next_hit is None:
+                break
+            j = next_hit
+        run_len = sum(1 for k in range(i, j + 1) if hits[k])
+        if best is None or run_len > best[0]:
+            best = (run_len, i, j)
+        i = j + 1
+
+    if best is None:
+        return None
+
+    _, start_idx, end_idx = best
+    while end_idx > start_idx and not hits[end_idx]:
+        end_idx -= 1
+    while start_idx < end_idx and not hits[start_idx]:
+        start_idx += 1
+
+    return tokens[start_idx][1], tokens[end_idx][2]
 
 
 def load_nlp():
@@ -362,6 +480,12 @@ def best_match(
         )
     ):
         matched_by = "lcs"
+
+    span = _locate_span(fact_info, sent_info_list[best_i], sentences[best_i]) if matched_by else None
+    best_meta["span_start"] = span[0] if span else None
+    best_meta["span_end"]   = span[1] if span else None
+    best_meta["span_text"]  = sentences[best_i][span[0]:span[1]] if span else None
+
     return best_i, best_score, matched_by, best_meta
 
 

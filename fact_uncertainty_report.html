@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Atomic Fact Uncertainty — Transcript vs. Decomposed Facts</title>
+  <style>
+    body { font-family: -apple-system, "Segoe UI", sans-serif;
+           max-width: 1400px; margin: 0 auto; padding: 24px;
+           background: #eee; color: #222; }
+    h1 { margin-bottom: 6px; }
+    ruby { ruby-position: over; ruby-align: center; }
+    rt { line-height: 1; }
+  </style>
+</head>
+<body>
+  <h1>Atomic Fact Uncertainty — Transcript vs. Span-Level Note</h1>
+  <p style="color:#555;margin-bottom:24px;">
+    Left: source transcript. Right: the note rendered sentence-by-sentence.
+    Each sentence-span shows its mean uncertainty on top (green = certain,
+    red = uncertain); within the sentence, the specific phrase each atomic
+    fact decomposed from is highlighted and coloured by that fact's own
+    uncertainty score, with the score displayed directly above the highlight
+    (hover a highlight for the full fact text). Facts with no distinct
+    matching phrase are listed underneath instead.
+  </p>
+  
+<div style="margin-bottom:44px;border:1px solid #ddd;border-radius:8px;padding:20px;background:#f5f5f5;">
+  <h2 style="margin-top:0;">Sample 1 · Note 2
+    <span style="font-size:14px;font-weight:normal;color:#666;">
+      &nbsp;·&nbsp; aci/test1 &nbsp;·&nbsp; mean fact uncertainty = 0.2018
+      &nbsp;·&nbsp; 38 facts &nbsp;·&nbsp; 21 sentence-spans
+    </span>
+  </h2>
+  <div style="display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:1;min-width:0;position:sticky;top:12px;">
+      <h3 style="margin-top:0;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;color:#666;">
+        Transcript
+      </h3>
+      <div style="background:#fff;border:1px solid #e0e0e0;border-radius:6px;padding:14px;
+           font-family:monospace;font-size:12.5px;line-height:1.6;white-space:pre-wrap;
+           max-height:640px;overflow-y:auto;color:#333;">[doctor] so bryan it's nice to see you again in the office today what's going on
+[patient] i was in my yard yesterday and i was raking leaves and i felt fine and then when i got into my house about two hours later my back started tightening up and i started getting pins and needles in my right foot
+[doctor] alright have you ever had this type of back pain before
+[patient] i had it once about three years ago but it went away after a day
+[doctor] okay and did you try anything for the pain yet did you take anything or have you have you tried icing
+[patient] put some ice on it and i tried two advils and it did n't help
+[doctor] okay does it get better when you're laying down sitting standing
+[patient] yeah i think the only thing that helped was a hot shower and it feels a little better when i sit
+[doctor] okay alright so you said you were raking leaves and now it's been kind of that weather outside for cleaning out the yard have you been doing a lot of yard work lately
+[patient] i i i normally do n't do any physical activity
+[doctor] yeah i hear you i make a i make my husband do all the yard work too so alright let me take a look at that low back if if you bend over does that hurt
+[patient] it hurts a little bit when i bend over yes
+[doctor] okay how about when you stand back up
+[patient] no pain
+[doctor] okay so no pain on extension some pain on flexion how about when i push right here on your back
+[patient] yeah that hurts
+[doctor] okay so some pain to palpation right around the l5 can i have that
+[patient] what happens when family members chime in like i'm doing right now because i actually think it was it hurts more when he stands up because i've watched him bend over but it's when he stands up that it really hurts
+[doctor] okay and and what's your relationship
+[patient] partners
+[doctor] okay so your partner is here with you today and reports that he is also having pain when you are standing up
+[patient] i've spent so many times you know who i am
+[doctor] so that's right you always come in together have you noticed anything else partner when when he is
+[patient] i'm worried about it because he is you know his pain tolerance is so high and he would n't be saying anything if it really was n't a problem because it's not at all like last week when he thought about raking leaves but did n't actually rake leaves but then his back did n't hurt as much but this time it really hurts
+[doctor] okay so you think this is more of a long term injury
+[patient] no he was just thinking about it hurting when he thought about raking but it did n't
+[doctor] okay alright and have you noticed any any prior pain with with the back
+[patient] i do n't want to take this away you better go back to talking to him
+[doctor] that's alright let's see how it turns out okay so how about if you if i push down on both your feet like this can you push back up on my hands
+[patient] can you repeat that
+[doctor] if i'm pushing down on your feet can you push push your feet back
+[patient] i
+[doctor] alright so your dorsiflexion is normal looks like pulses are equal in all extremities you said you had a little bit of a tingling sensation in which leg
+[patient] that would be my right leg
+[doctor] okay so some tingling in your right leg alright so i know that you had an x-ray when you came in because we always do x-rays when we have our patients come in of your low back and everything looks normal from that perspective so for your back pain sounds like you probably sprained your low back so i what i want you to do is let's rest it i'm going to prescribe some meloxicam have you taken that before
+[patient] i have not taken meloxicam
+[doctor] alright so i'll prescribe that i'm also gon na prescribe some physical therapy i know you said you have n't been overly active and your partner reported the same thing for a long time so we might wan na get you into some pt and hopefully get you back back in shape get you some stretches that you can do and some exercises and then you know if it's not improving i want you to send me a message and we can possibly look into see if there is anything else going on potentially an mri if it's still not improving does that sound like an okay plan
+[patient] it sounds reasonable
+[doctor] alright
+[patient] i think he should have an mri now i think he had surgery yesterday i think he should have an mri now this it's been hurting for like six hours now and she had an mri we are really worried about it
+[doctor] alright you know let's give it a couple of weeks and let's give it two weeks and then call me back and we'll get you an mri if it's still not improving
+[patient] good answer
+[doctor] alright alright hope you feel better</div>
+    </div>
+    <div style="flex:1;min-width:0;">
+      <h3 style="margin-top:0;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;color:#666;">
+        Note (span-level, facts mapped per sentence)
+      </h3>
+      <div style="max-height:640px;overflow-y:auto;padding-right:4px;">
+        
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Subjective:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      HPI: The patient presented with a <ruby title="The low back pain lasted for 2 hours."><mark style="background:rgb(255,99,37);padding:1px 3px;border-radius:3px;">2-hour history of low back pain</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,99,37);padding:0 5px;border-radius:6px;">0.78</rt></ruby> and <ruby title="The tingling sensation in the right leg started after raking leaves in the yard."><mark style="background:rgb(255,179,55);padding:1px 3px;border-radius:3px;">tingling sensation in the right leg, which started after raking leaves in the yard</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,179,55);padding:0 5px;border-radius:6px;">0.56</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The patient had a similar episode of low back pain 3 years ago.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The patient presented with a tingling sensation in the right leg.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The patient reports a tingling sensation in the right leg.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The patient presented with low back pain.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient's previous episode of low back pain resolved on its own.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The low back pain started after raking leaves in the yard.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient has a history of low back pain.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,139,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.667
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      The <ruby title="The pain is exacerbated by standing."><mark style="background:rgb(72,137,28);padding:1px 3px;border-radius:3px;">pain was exacerbated</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(72,137,28);padding:0 5px;border-radius:6px;">0.11</rt></ruby> by standing and <ruby title="The pain is improved with rest."><mark style="background:rgb(255,179,55);padding:1px 3px;border-radius:3px;">improved with rest</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,179,55);padding:0 5px;border-radius:6px;">0.56</rt></ruby> and a <ruby title="The pain is improved with a hot shower."><mark style="background:rgb(255,139,46);padding:1px 3px;border-radius:3px;">hot shower</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,139,46);padding:0 5px;border-radius:6px;">0.67</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(72,137,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.111
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      The patient had a similar episode 3 years ago that resolved on its own.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(124,155,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.222
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Past medical history: The patient has a history of similar low back pain 3 years ago, which resolved on its own.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(228,191,55);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.444
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      No other <ruby title="The patient denied other relevant medical history."><mark style="background:rgb(255,99,37);padding:1px 3px;border-radius:3px;">relevant medical</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,99,37);padding:0 5px;border-radius:6px;">0.78</rt></ruby> history was mentioned.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Review of systems: The patient reports tingling sensation in the right leg.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Current medications: None mentioned.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Objective:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Vital signs: [NOT MENTIONED]
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Physical exam: The patient had <ruby title="The patient had pain on palpation at the L5 level."><mark style="background:rgb(72,137,28);padding:1px 3px;border-radius:3px;">pain on flexion, palpation at the L5 level</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(72,137,28);padding:0 5px;border-radius:6px;">0.11</rt></ruby>, and <ruby title="The patient had normal dorsiflexion."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">normal dorsiflexion</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient had pain on flexion.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      The <ruby title="The pulses were equal in all extremities."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">pulses were equal in all extremities</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(72,137,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.111
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Test Results: <ruby title="The X-ray of the low back showed normal results."><mark style="background:rgb(228,191,55);padding:1px 3px;border-radius:3px;">X-ray of the low back showed normal</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(228,191,55);padding:0 5px;border-radius:6px;">0.44</rt></ruby> results.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(228,191,55);color:#111;">0.44</span><span style="font-size:13px;color:#333;">An X-ray of the low back was performed.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Assessment / Problem List:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(228,191,55);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.444
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Assessment: The patient likely sprained their low back, causing the current symptoms.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,20,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 1.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Problem list: <ruby title="The patient has a low back sprain."><mark style="background:rgb(228,191,55);padding:1px 3px;border-radius:3px;">Low back sprain</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(228,191,55);padding:0 5px;border-radius:6px;">0.44</rt></ruby>; <ruby title="The patient has a tingling sensation in the right leg."><mark style="background:rgb(255,99,37);padding:1px 3px;border-radius:3px;">Tingling sensation in the right leg</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,99,37);padding:0 5px;border-radius:6px;">0.78</rt></ruby>; Back <ruby title="The patient has back pain."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">pain</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(124,155,37);color:#111;">0.22</span><span style="font-size:13px;color:#333;">The low back sprain is likely causing the current symptoms.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Plan:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I prescribed <ruby title="Meloxicam is taken orally."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">meloxicam 15 mg orally</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> daily for pain management.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,179,55);color:#111;">0.56</span><span style="font-size:13px;color:#333;">The meloxicam dose is 15 mg.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">Meloxicam is taken daily.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The doctor prescribed meloxicam.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">Meloxicam is prescribed for pain management.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I also <ruby title="The doctor prescribed physical therapy."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">prescribed physical therapy</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> to help with stretches and exercises to improve the patient's condition.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(124,155,37);color:#111;">0.22</span><span style="font-size:13px;color:#333;">Physical therapy is for stretches.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">Physical therapy is for exercises.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">Physical therapy is to improve the patient's condition.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I <ruby title="The doctor instructed the patient to rest."><mark style="background:rgb(124,155,37);padding:1px 3px;border-radius:3px;">instructed</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(124,155,37);padding:0 5px;border-radius:6px;">0.22</rt></ruby> the patient to rest and follow up with me in two <ruby title="The patient will follow up with the doctor in two weeks."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">weeks</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> if the symptoms do not improve, at which point we will <ruby title="The doctor will consider an MRI if necessary."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">consider an MRI</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(124,155,37);color:#111;">0.22</span><span style="font-size:13px;color:#333;">The follow-up is in two weeks to consider an MRI.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,179,55);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.556
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Follow-up: The patient will follow up with me in two weeks to <ruby title="The follow-up is to reassess the condition."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">reassess the condition</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> and <ruby title="The doctor will consider further testing if necessary."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">consider further testing</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, including an MRI if necessary.
+    </div>
+    
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div style="margin-bottom:44px;border:1px solid #ddd;border-radius:8px;padding:20px;background:#f5f5f5;">
+  <h2 style="margin-top:0;">Sample 2 · Note 2
+    <span style="font-size:14px;font-weight:normal;color:#666;">
+      &nbsp;·&nbsp; aci/test1 &nbsp;·&nbsp; mean fact uncertainty = 0.1749
+      &nbsp;·&nbsp; 61 facts &nbsp;·&nbsp; 26 sentence-spans
+    </span>
+  </h2>
+  <div style="display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:1;min-width:0;position:sticky;top:12px;">
+      <h3 style="margin-top:0;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;color:#666;">
+        Transcript
+      </h3>
+      <div style="background:#fff;border:1px solid #e0e0e0;border-radius:6px;padding:14px;
+           font-family:monospace;font-size:12.5px;line-height:1.6;white-space:pre-wrap;
+           max-height:640px;overflow-y:auto;color:#333;">[doctor] hey gregory good to see you today so take a look at my notes and i see that you're here you've had a nonhealing foot ulcer so can you tell me how you're doing how long have you had it what's going on with it
+[patient] sure so i've had it for about two months now and it's recently become red and is draining so i was concerned about how it's healed
+[doctor] okay and when you when you got it would you have any trauma to your foot or it just just did it pop up all of a sudden
+[patient] i think i may have gotten it from walking barefoot on the beach
+[doctor] okay alright and i saw you you did see your pcp before you came in did they put you on antibiotics
+[patient] they did start me on some medication but i did n't i did n't pick them up from the pharmacy yet
+[doctor] okay do you know which ones that they prescribed for you
+[patient] i do n't recall the name exactly
+[doctor] do n't recall alright
+[patient] something i had taken it before
+[doctor] okay so when you what beach did you go to when you you hurt it
+[patient] i'm sorry
+[doctor] so i was asking which beach did you did you go to when you hurt your foot
+[patient] at i was at dewey beach in my ambulance
+[doctor] dewey beach wow that sounds like fun i wish i could be a mab right now but all or as lucky as i guess as you are to go to dewey beach okay so does it hurt
+[patient] it sometimes it throbs does n't i do n't have specific pain but sometimes it does feel like there is some throbbing going on and again my my biggest concern is the it started to drain and it looks a little red
+[doctor] okay
+[patient] i have n't had that before
+[doctor] okay and that makes sense alright so as far as your diabetes you know and i think that's probably a a major cause of this not being able to heal how well are how well is that controlled
+[patient] i take my medication but i do n't check my sugar all the time
+[doctor] okay do you
+[patient] i'm not really sure how
+[doctor] okay do you know what your last a1c is i'm pretty sure you doc talk to you about it
+[patient] i think they told me it was around ten
+[doctor] around ten okay yeah that that's that's definitely pretty high yeah you definitely if your if your pcp has n't gotten created treatment plan for you definitely need to go back and see them so you can get that controlled alright so let me do a quick physical exam on your foot here today your vital signs look normal you do n't have a fever so let me just take a look at your foot so on your foot exam there is a one by two inch circular wound on the dorsal aspect of the lateral right foot so it's just proximal to the fifth mtp joint there is some redness some drainage present you have some edema around it there is fluid like you said that's coming out of it i do n't see any necrosis you do n't have any odor and i do n't appreciate any bony exposure so it pretty much is like you said it's it's red it's swollen i think you have an infection in there as well so when i touch it does that hurt
+[patient] no i i feel like increased pressure but it's not distinct
+[doctor] okay alright that's good so before you came in we did get an x-ray of your right foot and there is no evidence of osteomyelitis that means that luckily you do n't have a bone infection so that's great i think it's just in your skin so let's talk a little bit about your assessment and plan so you do have that diabetic foot ulcer and what i wan na do is i wan na order an abi ankle brachial index just to determine the blood supply in your foot to see if we can actually heal that ulcer i'm gon na also perform a debridement here just to take off some of that dead tissue and then i'm gon na prescribe you some clindamycin you can do that four hundred milligrams you take that for seven days take that twice a day just to try to get rid of that infection which you currently do have and that will get rid of some of that that redness and and drainage that that's happening right now did your doc did your pcp give you a surgical shoe something that you would wear while this is happening
+[patient] they did n't they mentioned that you may be able to give it to me
+[doctor] okay yeah we could definitely get you a a shoe because if you wear your regular shoes that pressure on that foot can really irritate it and take you backwards so i'll get you a shoe where you can wear that for the next month you know we just wan na make sure that it does heal and then i wan na see you back again in two weeks and we can we'll possibly do another debridement at that time we'll just take a look and see how the tissue is doing so how does that sound
+[patient] that sounds great
+[doctor] alright do you have any other question
+[patient] i do if anything happens in between
+[doctor] please feel free to call the office yeah please feel free to call you call the office we can definitely get you in you know if you are having any other issues and if it's an emergency if you feel like you're getting a fever feeling well please go to the urgent care or the er if you feel getting black or anything like that but otherwise we'll see you back in two weeks
+[patient] okay sounds great thanks document
+[doctor] alright great</div>
+    </div>
+    <div style="flex:1;min-width:0;">
+      <h3 style="margin-top:0;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;color:#666;">
+        Note (span-level, facts mapped per sentence)
+      </h3>
+      <div style="max-height:640px;overflow-y:auto;padding-right:4px;">
+        
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Here is the SOAP note based on the provided transcript:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Subjective:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      HPI: The patient, <ruby title="The patient's name is Gregory."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">Gregory</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, is a 2-month-old nonhealing <ruby title="The foot ulcer is located on the dorsal aspect of the lateral right foot."><mark style="background:rgb(176,173,46);padding:1px 3px;border-radius:3px;">foot ulcer on the dorsal aspect of the lateral right foot</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(176,173,46);padding:0 5px;border-radius:6px;">0.33</rt></ruby>, which has recently become red and is draining.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,20,20);color:#111;">1.00</span><span style="font-size:13px;color:#333;">The patient is 2 months old.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(228,191,55);color:#111;">0.44</span><span style="font-size:13px;color:#333;">The patient's biggest concern is the drainage of the foot ulcer.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The patient experiences throbbing pain in the foot ulcer occasionally.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The foot ulcer has recently become red.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient has a nonhealing foot ulcer.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The foot ulcer is draining.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(72,137,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.111
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      He reports that the wound throbs occasionally, but he does not have <ruby title="The patient does not have specific pain."><mark style="background:rgb(72,137,28);padding:1px 3px;border-radius:3px;">specific pain</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(72,137,28);padding:0 5px;border-radius:6px;">0.11</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(124,155,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.222
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      His <ruby title="The patient's biggest concern is the redness of the foot ulcer."><mark style="background:rgb(255,179,55);padding:1px 3px;border-radius:3px;">biggest concern is the redness</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,179,55);padding:0 5px;border-radius:6px;">0.56</rt></ruby> and drainage.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      He mentions that he <ruby title="The patient got the wound from walking barefoot on the beach."><mark style="background:rgb(255,179,55);padding:1px 3px;border-radius:3px;">got the wound from walking barefoot on the beach at Dewey Beach</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,179,55);padding:0 5px;border-radius:6px;">0.56</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,139,46);color:#111;">0.67</span><span style="font-size:13px;color:#333;">The patient got the wound at Dewey Beach.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Past medical history: The patient has <ruby title="The patient has diabetes."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">diabetes</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, for which he takes medication but does not <ruby title="The patient does not regularly check his blood sugar levels."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">regularly check his blood sugar levels</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(176,173,46);color:#111;">0.33</span><span style="font-size:13px;color:#333;">The patient takes medication for diabetes.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(124,155,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.222
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      His last <ruby title="The patient's last A1c is around 10%."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">A1c is around 10</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>%, which is <ruby title="The patient's last A1c is considered high."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">considered high</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,59,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.889
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      He has not <ruby title="The patient has not seen his PCP in a while."><mark style="background:rgb(255,99,37);padding:1px 3px;border-radius:3px;">seen his PCP</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,99,37);padding:0 5px;border-radius:6px;">0.78</rt></ruby> in a while and has not <ruby title="The patient has not filled his prescribed antibiotics."><mark style="background:rgb(255,179,55);padding:1px 3px;border-radius:3px;">filled his prescribed antibiotics</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,179,55);padding:0 5px;border-radius:6px;">0.56</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Review of systems: The patient reports <ruby title="The patient reports occasional throbbing pain in the affected foot."><mark style="background:rgb(72,137,28);padding:1px 3px;border-radius:3px;">occasional throbbing pain in the affected foot</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(72,137,28);padding:0 5px;border-radius:6px;">0.11</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Current medications: [NOT MENTIONED]
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Objective:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Vital signs: The patient's vital signs are <ruby title="The patient's vital signs are normal."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">normal</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, with no <ruby title="The patient has no fever."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">fever</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Physical exam: The physical exam reveals a 1x2 inch circular <ruby title="There is a wound on the dorsal aspect of the lateral right foot."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">wound on the dorsal aspect of the lateral right foot</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, <ruby title="The wound is proximal to the fifth MTP joint."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">proximal to the fifth MTP joint</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, with redness, drainage, edema, and fluid present.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The wound is circular in shape.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The wound is 1x2 inches in size.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The wound has redness.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The wound has drainage.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The wound has edema.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The wound has fluid present.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(228,191,55);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.444
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      The patient reports <ruby title="The patient reports increased pressure when the wound is touched."><mark style="background:rgb(228,191,55);padding:1px 3px;border-radius:3px;">increased pressure when the wound is touched</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(228,191,55);padding:0 5px;border-radius:6px;">0.44</rt></ruby>, but no <ruby title="The patient reports no distinct pain."><mark style="background:rgb(228,191,55);padding:1px 3px;border-radius:3px;">distinct pain</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(228,191,55);padding:0 5px;border-radius:6px;">0.44</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Test Results: <ruby title="An X-ray was taken of the right foot."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">An X-ray of the right foot</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> <ruby title="The X-ray shows no evidence of osteomyelitis."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">shows no evidence of osteomyelitis</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Assessment / Problem List:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Assessment: The patient has a <ruby title="The patient has a diabetic foot ulcer."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">diabetic foot ulcer</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> with a <ruby title="The patient has a suspected infection."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">suspected infection</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The diabetic foot ulcer is a problem.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The suspected infection is a problem.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,20,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 1.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Problem list: Diabetic foot ulcer; Suspected infection; <ruby title="The patient has uncontrolled diabetes."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">Uncontrolled diabetes</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>; <ruby title="The patient has poor wound care."><mark style="background:rgb(255,20,20);padding:1px 3px;border-radius:3px;">Poor wound care</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,20,20);padding:0 5px;border-radius:6px;">1.00</rt></ruby> and <ruby title="The patient has a lack of follow-up with PCP."><mark style="background:rgb(255,20,20);padding:1px 3px;border-radius:3px;">lack of follow-up with PCP</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,20,20);padding:0 5px;border-radius:6px;">1.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,20,20);color:#111;">1.00</span><span style="font-size:13px;color:#333;">The lack of follow-up with PCP is a problem.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,20,20);color:#111;">1.00</span><span style="font-size:13px;color:#333;">The poor wound care is a problem.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The uncontrolled diabetes is a problem.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Plan:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,139,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.667
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I prescribed <ruby title="Clindamycin is taken twice daily."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">clindamycin 400mg twice daily</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> for 7 days to <ruby title="Clindamycin is prescribed to treat the suspected infection."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">treat the suspected infection</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The doctor prescribed clindamycin.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">Clindamycin is prescribed for 7 days.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The clindamycin dose is 400mg.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,179,55);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.556
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I will perform a <ruby title="The debridement is to remove dead tissue from the wound."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">debridement to remove dead tissue from the wound</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The debridement is to remove dead tissue.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The doctor will perform a debridement.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient will be seen back for possible repeat debridement.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I will also order an <ruby title="The ABI is to determine the blood supply to the foot."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">ABI to determine the blood supply to the foot</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The ABI is to determine the blood supply.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The doctor will order an ABI.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      The patient will need to wear a <ruby title="The surgical shoe is to reduce pressure on the affected foot."><mark style="background:rgb(72,137,28);padding:1px 3px;border-radius:3px;">surgical shoe to reduce pressure on the affected foot</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(72,137,28);padding:0 5px;border-radius:6px;">0.11</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The surgical shoe is to reduce pressure.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient will wear a surgical shoe.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(124,155,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.222
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I will see the patient back in <ruby title="The patient will be seen back in 2 weeks."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">2 weeks</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> for <ruby title="The patient will be seen back for follow-up."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">follow-up</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> and possible repeat debridement.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,99,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.778
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Follow-up: The patient will be seen back in 2 weeks for follow-up and possible repeat debridement.
+    </div>
+    
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div style="margin-bottom:44px;border:1px solid #ddd;border-radius:8px;padding:20px;background:#f5f5f5;">
+  <h2 style="margin-top:0;">Sample 4 · Note 2
+    <span style="font-size:14px;font-weight:normal;color:#666;">
+      &nbsp;·&nbsp; aci/test1 &nbsp;·&nbsp; mean fact uncertainty = 0.1487
+      &nbsp;·&nbsp; 71 facts &nbsp;·&nbsp; 30 sentence-spans
+    </span>
+  </h2>
+  <div style="display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:1;min-width:0;position:sticky;top:12px;">
+      <h3 style="margin-top:0;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;color:#666;">
+        Transcript
+      </h3>
+      <div style="background:#fff;border:1px solid #e0e0e0;border-radius:6px;padding:14px;
+           font-family:monospace;font-size:12.5px;line-height:1.6;white-space:pre-wrap;
+           max-height:640px;overflow-y:auto;color:#333;">[doctor] okay hi wayne well i understand you're here for you've got a sore on your foot that's not healing is that right
+[patient] yes
+[doctor] so can you tell me about that how are you doing
+[patient] well i've been doing okay but i've had this wound on my right foot for a couple of weeks and it's not getting better i saw my pcp and they referred me to you i i used to see a podiatrist and a couple of years ago but they moved and i was n't able to get another one
+[doctor] okay and how long have you had the wound
+[patient] about two to three weeks
+[doctor] okay have you had any kind of trauma to that foot
+[patient] no i bought a new pair of shoes to travel with and the neuropathy i guess i did n't feel that they were too tight at first it was just a blister but it looked a lot worse now i've been putting a band-aid on it and
+[doctor] okay and so did your doctor put you on any antibiotics when they they saw your foot
+[patient] yes i finished the course yesterday the wound looked about the same though
+[doctor] okay now does it hurt
+[patient] no i ca n't feel it
+[doctor] okay now have you had any other symptoms like fever chills drainage from the wound or anything along those lines
+[patient] no but when i take my sock off sometimes it sticks to the wound even when i put a band-aid on
+[doctor] okay well are you still wearing those same shoes that cause the problem
+[patient] no i'm upset
+[doctor] i'm so upset too i love those shoes
+[patient] no i'm so upset i i love those shoes
+[doctor] okay so what kind of shoes are they
+[patient] they're hoka's
+[doctor] ah so where did you get them
+[patient] i got them at rei couple of years ago
+[doctor] they're pretty good about helping you to fit your fit you in a shoe are n't they
+[patient] yeah
+[doctor] so what do you like about them
+[patient] they are comfortable they are easy to take on and off and they provide good stability
+[doctor] that's good so you've had some issues with stability sometimes or
+[patient] yes
+[doctor] okay okay well another question i want to ask you is how is your diabetes doing
+[patient] i do n't think it's too bad my last hgb a1c was a little over eight
+[doctor] okay alright well let me just do a quick physical exam okay for vital signs your temperature is ninety eight . one your vital signs look good your heart rate is seventy two respirations sixteen blood pressure is one ten over sixty five okay so on your foot exam let's see there is a one by two inch circular wound on the dorsal aspect of the lateral right foot it is just proximal to the right fifth to the fifth mtp joint and there is some yellow slough present with minimal granulation tissue there's no surrounding erythema or cellulitis and there's no evidence of fluid collection there's no necrosis there is no odor i do not appreciate any bony exposure on on vascular exam there are palpable bilateral femoral and popliteal pulses there are no palpable dp or pt pulses but doppler signs are present okay so does this hurt when i touch it here
+[patient] no it's okay
+[doctor] okay alright so i've reviewed the results your right foot x-ray that we did before you i came in the room and this shows no evidence of osteomyelitis which means there is no evidence of bone infection so that's really good so let me tell you a little about my assessment and plan for you so for your first problem your diabetic foot ulcer so i want to order an ankle brachial index abi to determine the blood supply to your foot to see if you can heal this wound i'm also gon na perform a debridement here in the office to take off some of the dead tissue and then next i'm going to prescribe a collagenase ointment to be applied to the wound once daily and then cover with a dry sterile dressing now we will continue this until we see the wound shrinking and a nice pink tissue is present and i want you to wear a surgical shoe to take pressure off of the area okay so i do n't think any more antibiotics are needed at this time and i want to see you again in two weeks so we may need to refer you to a vascular specialist if the abi indicates your blood supply is not optimal for wound healing okay
+[patient] okay
+[doctor] okay so for your diabetes it's gon na be very important to get your diabetes under control in order to get the wound to heal so we might even go ahead and get a diabetic consult so that we can go over some some maybe some ways you can modify your diet without a being too much but maybe that can bring down your hemoglobin a1c into a little bit better level okay
+[patient] okay
+[doctor] alright do you have any other questions
+[patient] no
+[doctor] okay</div>
+    </div>
+    <div style="flex:1;min-width:0;">
+      <h3 style="margin-top:0;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;color:#666;">
+        Note (span-level, facts mapped per sentence)
+      </h3>
+      <div style="max-height:640px;overflow-y:auto;padding-right:4px;">
+        
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Subjective:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      HPI: The patient presents with a non-healing <ruby title="The wound is located on the patient's right foot."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">wound on his right foot</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, which he reports has been present for <ruby title="The wound has been present for 2-3 weeks."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">2-3 weeks</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient presents with a non-healing wound.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,59,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.889
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      He <ruby title="The patient initially thought the wound was a blister."><mark style="background:rgb(228,191,55);padding:1px 3px;border-radius:3px;">initially thought</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(228,191,55);padding:0 5px;border-radius:6px;">0.44</rt></ruby> it was a <ruby title="The blister was from a new pair of shoes."><mark style="background:rgb(255,179,55);padding:1px 3px;border-radius:3px;">blister from a new pair of shoes</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,179,55);padding:0 5px;border-radius:6px;">0.56</rt></ruby>, but it <ruby title="The wound progressed to a larger wound."><mark style="background:rgb(255,20,20);padding:1px 3px;border-radius:3px;">progressed to a larger wound</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,20,20);padding:0 5px;border-radius:6px;">1.00</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(228,191,55);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.444
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      The patient denies any <ruby title="The patient denies any trauma to the foot."><mark style="background:rgb(176,173,46);padding:1px 3px;border-radius:3px;">trauma to the foot</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(176,173,46);padding:0 5px;border-radius:6px;">0.33</rt></ruby> and has not <ruby title="The patient has not experienced any pain."><mark style="background:rgb(124,155,37);padding:1px 3px;border-radius:3px;">experienced any pain</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(124,155,37);padding:0 5px;border-radius:6px;">0.22</rt></ruby> or discomfort.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The patient has not experienced any discomfort.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(72,137,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.111
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      He reports that the <ruby title="The wound does not hurt when touched."><mark style="background:rgb(72,137,28);padding:1px 3px;border-radius:3px;">wound does not hurt when he touches</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(72,137,28);padding:0 5px;border-radius:6px;">0.11</rt></ruby> it.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,139,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.667
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      The patient also mentions that he has <ruby title="The patient has diabetes."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">diabetes</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, with a last <ruby title="The patient's last HbA1c was 8.1%."><mark style="background:rgb(255,59,28);padding:1px 3px;border-radius:3px;">HbA1c of 8.1</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,59,28);padding:0 5px;border-radius:6px;">0.89</rt></ruby>%.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,59,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.889
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Past medical history: The patient has diabetes, and his last HbA1c was 8.1%.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(228,191,55);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.444
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      He also mentions that he used to see a <ruby title="The podiatrist moved."><mark style="background:rgb(176,173,46);padding:1px 3px;border-radius:3px;">podiatrist, but they moved</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(176,173,46);padding:0 5px;border-radius:6px;">0.33</rt></ruby> and he was <ruby title="The patient was unable to find a new podiatrist."><mark style="background:rgb(228,191,55);padding:1px 3px;border-radius:3px;">unable to find a new</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(228,191,55);padding:0 5px;border-radius:6px;">0.44</rt></ruby> one.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The patient used to see a podiatrist.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,99,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.778
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Review of systems: The patient denies any other symptoms such as <ruby title="The patient denies fever."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">fever</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, <ruby title="The patient denies chills."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">chills</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, <ruby title="The patient denies drainage from the wound."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">drainage from the wound</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, or odor.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,59,28);color:#111;">0.89</span><span style="font-size:13px;color:#333;">The patient denies odor from the wound.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Current medications: [NOT MENTIONED]
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Objective:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Vital signs: The patient's <ruby title="The patient's temperature is 98.1°F."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">temperature is 98.1°F</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, <ruby title="The patient's heart rate is 72."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">heart rate is 72</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, <ruby title="The patient's respirations are 16."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">respirations are 16</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, and <ruby title="The patient's blood pressure is 110/65."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">blood pressure is 110/65</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Physical exam: <ruby title="There is no fluid collection in the wound."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">There</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> is a 1x2 inch circular <ruby title="There is a wound on the dorsal aspect of the lateral right foot."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">wound on the dorsal aspect of the lateral right foot</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, proximal to the right fifth MTP joint.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(176,173,46);color:#111;">0.33</span><span style="font-size:13px;color:#333;">The wound is proximal to the right fifth MTP joint.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The wound is circular in shape.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The wound is 1x2 inches in size.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      The <ruby title="The wound has yellow slough."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">wound has yellow slough</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> with <ruby title="The wound has minimal granulation tissue."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">minimal granulation tissue</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, but no <ruby title="The wound has no surrounding cellulitis."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">surrounding erythema or cellulitis</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The wound has no odor.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The wound has no surrounding erythema.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(72,137,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.111
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      <ruby title="There is no necrosis in the wound."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">There</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> is no fluid collection, necrosis, or odor.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      The vascular exam shows <ruby title="The patient has palpable bilateral femoral pulses."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">palpable bilateral femoral and popliteal pulses, but no palpable</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> DP or PT pulses.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient has palpable bilateral popliteal pulses.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient has no palpable DP pulses.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient has no palpable PT pulses.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      <ruby title="Doppler signs are present."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">Doppler</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> signs are present.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Test Results: The <ruby title="The right foot X-ray shows no evidence of osteomyelitis."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">right foot X-ray shows no evidence of osteomyelitis</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The right foot X-ray was performed.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Assessment / Problem List:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,99,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.778
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Assessment: The patient has a <ruby title="The patient has a diabetic foot ulcer."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">diabetic foot ulcer</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> with <ruby title="The inadequate blood supply is not allowing the wound to heal."><mark style="background:rgb(255,179,55);padding:1px 3px;border-radius:3px;">inadequate blood supply</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,179,55);padding:0 5px;border-radius:6px;">0.56</rt></ruby>, which is not allowing the wound to heal.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">Diabetic foot ulcer is a problem.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,179,55);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.556
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Problem list: Diabetic foot ulcer; <ruby title="The patient has insufficient blood supply."><mark style="background:rgb(255,59,28);padding:1px 3px;border-radius:3px;">Insufficient blood supply</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,59,28);padding:0 5px;border-radius:6px;">0.89</rt></ruby>; <ruby title="The patient has diabetes mellitus."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">Diabetes mellitus</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,179,55);color:#111;">0.56</span><span style="font-size:13px;color:#333;">The patient has inadequate blood supply.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(228,191,55);color:#111;">0.44</span><span style="font-size:13px;color:#333;">Insufficient blood supply is a problem.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">Diabetes mellitus is a problem.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Plan:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I prescribed <ruby title="Collagenase ointment is applied once daily."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">collagenase ointment to be applied</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> to the <ruby title="The wound is covered with a dry sterile dressing."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">wound once daily, covered with a dry sterile dressing</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The wound is on the foot.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">Collagenase ointment is applied to the wound.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The doctor prescribed collagenase ointment.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The collagenase ointment dose is not specified.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient has a wound.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I also ordered an Ankle Brachial Index (<ruby title="The ABI is to determine the blood supply to the foot."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">ABI) to determine the blood supply to the foot</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The doctor ordered an Ankle Brachial Index (ABI).</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The ABI may indicate poor blood supply.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(72,137,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.111
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      A <ruby title="The debridement will be performed in the office."><mark style="background:rgb(72,137,28);padding:1px 3px;border-radius:3px;">debridement will be performed in the office</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(72,137,28);padding:0 5px;border-radius:6px;">0.11</rt></ruby> to <ruby title="The debridement is to remove dead tissue."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">remove dead tissue</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">A debridement will be performed.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(124,155,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.222
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      The patient will wear a <ruby title="The surgical shoe is to take pressure off the area."><mark style="background:rgb(124,155,37);padding:1px 3px;border-radius:3px;">surgical shoe to take pressure off the area</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(124,155,37);padding:0 5px;border-radius:6px;">0.22</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(124,155,37);color:#111;">0.22</span><span style="font-size:13px;color:#333;">The patient will wear a surgical shoe.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I will see the patient again in two <ruby title="The patient will be reassessed in two weeks."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">weeks to reassess</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> the wound.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The doctor will see the patient again in two weeks.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The follow-up appointment is in two weeks.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(72,137,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.111
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      If the ABI indicates poor blood supply, a <ruby title="A vascular specialist may be referred."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">vascular specialist may be referred</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,139,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.667
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I will also discuss with the patient the importance of getting their <ruby title="The doctor will discuss diabetes control with the patient."><mark style="background:rgb(228,191,55);padding:1px 3px;border-radius:3px;">diabetes under control</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(228,191,55);padding:0 5px;border-radius:6px;">0.44</rt></ruby> to aid in wound healing.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(228,191,55);color:#111;">0.44</span><span style="font-size:13px;color:#333;">Diabetes control is important for wound healing.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(228,191,55);color:#111;">0.44</span><span style="font-size:13px;color:#333;">The patient has diabetes.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(124,155,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.222
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Follow-up: The patient will be seen again in two weeks.
+    </div>
+    
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div style="margin-bottom:44px;border:1px solid #ddd;border-radius:8px;padding:20px;background:#f5f5f5;">
+  <h2 style="margin-top:0;">Sample 10 · Note 0
+    <span style="font-size:14px;font-weight:normal;color:#666;">
+      &nbsp;·&nbsp; aci/test1 &nbsp;·&nbsp; mean fact uncertainty = 0.2163
+      &nbsp;·&nbsp; 56 facts &nbsp;·&nbsp; 24 sentence-spans
+    </span>
+  </h2>
+  <div style="display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:1;min-width:0;position:sticky;top:12px;">
+      <h3 style="margin-top:0;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;color:#666;">
+        Transcript
+      </h3>
+      <div style="background:#fff;border:1px solid #e0e0e0;border-radius:6px;padding:14px;
+           font-family:monospace;font-size:12.5px;line-height:1.6;white-space:pre-wrap;
+           max-height:640px;overflow-y:auto;color:#333;">[doctor] hey hi bobby how are you doing
+[patient] i'm doing good how are you
+[doctor] i'm doing fine so i understand you're here having some left or some right shoulder pain that you've had for a few weeks now
+[patient] yeah it was i was doing some work in my backyard and a lot of different projects going on and you know i was obviously sore all over the next couple of days but my my right shoulder just keeps on bothering me and it keeps it's just really sore and it just has n't been going away
+[doctor] okay so have you had ever had any pain in that shoulder before
+[patient] a little bit i you know i i hurt that same shoulder because it's my my dominant hand my right hand i hurt it playing baseball when i was younger
+[doctor] mm-hmm
+[patient] so i've always had a little bit issues but this is it's does n't feel like it's in the rotator cuff it's it's kinda more on the outside and it's kinda like it's more tender on the outside when i raise my arm up so
+[doctor] okay yeah are you able to move your arm very well or not
+[patient] yeah there is no restriction with my arm it just i definitely feel some pain on the outside of it
+[doctor] okay and are you having pain all the time or just or does it come and go
+[patient] just whenever i move it if i'm sitting still i really do n't notice anything but whenever i move it then i can definitely feel some pain
+[doctor] okay how about at night is it bothering you at night also
+[patient] a little bit because i sleep on that side so
+[doctor] okay
+[patient] of course
+[doctor] okay and i may miss did you say what have you been taking for pain for that
+[patient] i just been taking some advil and then icing as much as i can so that's about it
+[doctor] okay and does that seem to help or
+[patient] a little bit yeah a little bit i mean it's it's still like you know sore to touch but it definitely dulls it a little bit
+[doctor] well sounds like you have quite a few projects going on what all what all are you doing for for your yard and
+[patient] i well let's see i've been putting an outdoor shower in we're extending our patio putting making some flower boxes putting down some you know for stone and all the flower beds so my wife's really put me to work i got a laundry lift
+[doctor] wow it sounds like a variety of projects but if you're putting down stone you're probably lifting those as well and then
+[patient] yeah
+[doctor] yeah i bet that is sore now tell me this have you experienced any numbness in your arm or your hands or
+[patient] no not really no numbness that i can think of
+[doctor] okay alright so see i'm gon na i'd like to do just a quick physical exam and i've reviewed your vitals those look good your no fever so that's good you're ninety seven . eight and your heart rate looks good at sixty two respirations sixteen your blood pressures one sixteen over eighty four that looks fine your oxygen saturation is real good at ninety nine percent so that all looks good so let's take a look at your left at your right shoulder so you have limited active and passive range of motion and there is some tenderness at the great tuberosity of the humerus there is no tenderness at the sternoclavicular or acro acromioclavicular joints you do have a good hand grip okay and on neurovascular exam of your right arm your capillary refill is less than three seconds and your sensation to touch is intact so i've reviewed the results of your shoulder x-ray and there is no fracture so that's good so let me tell you a little bit about my assessment and plan so for your first problem the left shoulder pain your symptoms are most likely due to this rotator cuff rotator cuff tendinopathy that means you that you injured injured the tendons of the muscles that help make your shoulder muscles i think we had to go ahead and order just an mri since you have had some problems before as well to make sure there's nothing else going on with it and i also want to refer you to physical therapy for approximately six to eight weeks and so during that time continue the tylenol and if your symptoms do n't improve we can go ahead and consider a steroid injection of your shoulder which could provide some relief do you have any questions about your plan
+[patient] no that sounds good
+[doctor] okay alright yeah a lot of patients it's very successful with the physical therapy so i really hope that will do it and so we'll just start there okay
+[patient] sounds great
+[doctor] okay thanks
+[patient] thanks
+[doctor] did you have any other any other problems any other injuries that that went along with this or
+[patient] my both my my feet are actually really sore too i obviously have been doing a lot of other yard work so you know it's kinda it's really stiff and stuff and they you know my ankle joints as well my wife seems to think that i do n't drink enough water so it could be something along that lines but i do n't know they're kinda this they just they're really sore and stuff so i've been trying to put them up and kinda put ice on them keep them elevated and it seems to be helping out a little bit but
+[doctor] yeah so if you do n't feel that you did anything to injure it we might start just maybe do some epsom salts have you tried soaking your feet in epsom salts that will tend to kinda pull out what's going on in there and just help your those muscles to relax and the soreness to to go away you might try that
+[patient] okay that sounds like a plan that sounds good</div>
+    </div>
+    <div style="flex:1;min-width:0;">
+      <h3 style="margin-top:0;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;color:#666;">
+        Note (span-level, facts mapped per sentence)
+      </h3>
+      <div style="max-height:640px;overflow-y:auto;padding-right:4px;">
+        
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Subjective:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(124,155,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.222
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      HPI: The patient presents with <ruby title="The patient presents with right shoulder pain."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">right shoulder pain</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> that has been ongoing for a few weeks, initially appearing after working on various projects in his backyard.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,179,55);color:#111;">0.56</span><span style="font-size:13px;color:#333;">The patient has a past medical history of right shoulder pain.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(124,155,37);color:#111;">0.22</span><span style="font-size:13px;color:#333;">The right shoulder pain started after working on various projects in his backyard.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The past right shoulder pain was from a past injury.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The right shoulder pain has been ongoing for a few weeks.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,99,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.778
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      The pain is located on the outside of the <ruby title="The shoulder is tender to the touch when raising the arm."><mark style="background:rgb(255,59,28);padding:1px 3px;border-radius:3px;">shoulder and is tender to the touch when raising the arm</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,59,28);padding:0 5px;border-radius:6px;">0.89</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The pain is located on the outside of the shoulder.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      He denies any <ruby title="The patient denied numbness in the arm."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">numbness in the arm</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> or hands.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient denied numbness in the hands.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,99,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.778
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      The <ruby title="The pain is worse with movement."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">pain is worse with movement</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> and is <ruby title="The pain is alleviated by rest."><mark style="background:rgb(255,99,37);padding:1px 3px;border-radius:3px;">alleviated by rest</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,99,37);padding:0 5px;border-radius:6px;">0.78</rt></ruby> and over-the-counter medication.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(124,155,37);color:#111;">0.22</span><span style="font-size:13px;color:#333;">The pain is alleviated by over-the-counter medication.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(72,137,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.111
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      He has a history of <ruby title="The patient has a history of similar pain in the same shoulder."><mark style="background:rgb(176,173,46);padding:1px 3px;border-radius:3px;">similar pain</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(176,173,46);padding:0 5px;border-radius:6px;">0.33</rt></ruby> in the same shoulder from a <ruby title="The patient's past injury was from playing baseball."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">past injury playing baseball</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,59,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.889
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Past medical history: The patient has a history of right shoulder pain from a past injury, which has always been a bit of an issue.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,139,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.667
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Review of systems: The patient denies any <ruby title="The patient denies any additional symptoms in other organs."><mark style="background:rgb(255,139,46);padding:1px 3px;border-radius:3px;">additional</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,139,46);padding:0 5px;border-radius:6px;">0.67</rt></ruby> symptoms in other organs.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Current medications: The patient has been <ruby title="The Advil is taken for pain relief."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">taking Advil for pain relief</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> and <ruby title="The patient is icing the affected area."><mark style="background:rgb(124,155,37);padding:1px 3px;border-radius:3px;">icing the affected area</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(124,155,37);padding:0 5px;border-radius:6px;">0.22</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(124,155,37);color:#111;">0.22</span><span style="font-size:13px;color:#333;">The patient is taking Advil.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Objective:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Vital signs: The patient's <ruby title="The patient's temperature is 97.8°F."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">temperature is 97.8°F</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, <ruby title="The patient's heart rate is 62."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">heart rate is 62</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, <ruby title="The patient's respirations are 16."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">respirations are 16</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, <ruby title="The patient's blood pressure is 116/84."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">blood pressure is 116/84</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, and <ruby title="The patient's oxygen saturation is 99%."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">oxygen saturation is 99</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>%.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Physical exam: The patient has <ruby title="The patient has limited active range of motion in the right shoulder."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">limited active and passive range of motion in the right shoulder</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, with <ruby title="The patient has tenderness at the greater tuberosity of the humerus."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">tenderness at the greater tuberosity of the humerus</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient has limited passive range of motion in the right shoulder.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(124,155,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.222
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      The patient has a <ruby title="The patient has a good hand grip."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">good hand grip</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> and <ruby title="The patient has intact sensation to touch in the right arm."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">intact sensation to touch in the right arm</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Test Results: The patient's <ruby title="The patient's shoulder X-ray shows no fracture."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">shoulder X-ray shows no fracture</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient's shoulder X-ray was performed.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Assessment / Problem List:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(124,155,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.222
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Assessment: The patient's symptoms are most <ruby title="The patient's symptoms are most likely due to rotator cuff tendinopathy."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">likely due to rotator cuff tendinopathy</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, a condition in which the <ruby title="Rotator cuff tendinopathy is a condition in which the tendons of the muscles that help make the shoulder muscles are injured."><mark style="background:rgb(176,173,46);padding:1px 3px;border-radius:3px;">tendons of the muscles that help make the shoulder muscles are injured</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(176,173,46);padding:0 5px;border-radius:6px;">0.33</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient has rotator cuff tendinopathy.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">Rotator cuff tendinopathy is on the patient's problem list.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,59,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.889
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Problem list: Rotator cuff tendinopathy; <ruby title="The patient has sore feet."><mark style="background:rgb(255,139,46);padding:1px 3px;border-radius:3px;">Sore feet</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,139,46);padding:0 5px;border-radius:6px;">0.67</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,59,28);color:#111;">0.89</span><span style="font-size:13px;color:#333;">Sore feet is on the patient's problem list.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Plan:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I plan to <ruby title="The doctor plans to refer the patient to physical therapy."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">refer</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> the patient to physical <ruby title="The physical therapy is expected to last approximately six to eight weeks."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">therapy for approximately</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> six to eight weeks to address the <ruby title="The patient has rotator cuff tendinopathy."><mark style="background:rgb(196,180,50);padding:1px 3px;border-radius:3px;">rotator cuff tendinopathy</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(196,180,50);padding:0 5px;border-radius:6px;">0.38</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,155,50);color:#111;">0.62</span><span style="font-size:13px;color:#333;">The patient will follow up with physical therapy.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,200,60);color:#111;">0.50</span><span style="font-size:13px;color:#333;">The Tylenol is prescribed for rotator cuff tendinopathy.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(137,160,40);color:#111;">0.25</span><span style="font-size:13px;color:#333;">The physical therapy is for rotator cuff tendinopathy.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,179,55);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.556
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I will also <ruby title="The doctor will order an MRI."><mark style="background:rgb(196,180,50);padding:1px 3px;border-radius:3px;">order an MRI</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(196,180,50);padding:0 5px;border-radius:6px;">0.38</rt></ruby> to rule out any other conditions.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,65,30);color:#111;">0.88</span><span style="font-size:13px;color:#333;">The MRI is to rule out other conditions.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,59,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.889
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      During this time, the patient should <ruby title="The patient should continue taking Tylenol."><mark style="background:rgb(78,140,30);padding:1px 3px;border-radius:3px;">continue taking Tylenol</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(78,140,30);padding:0 5px;border-radius:6px;">0.12</rt></ruby> and <ruby title="The patient should ice the affected area."><mark style="background:rgb(255,20,20);padding:1px 3px;border-radius:3px;">icing the affected area</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,20,20);padding:0 5px;border-radius:6px;">1.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(78,140,30);color:#111;">0.12</span><span style="font-size:13px;color:#333;">The Tylenol is taken at an unspecified frequency.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(78,140,30);color:#111;">0.12</span><span style="font-size:13px;color:#333;">The affected area is the shoulder.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The Tylenol dose is not specified.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(72,137,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.111
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      If symptoms do not improve, we will <ruby title="A steroid injection into the shoulder is considered."><mark style="background:rgb(78,140,30);padding:1px 3px;border-radius:3px;">consider a steroid injection into the shoulder</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(78,140,30);padding:0 5px;border-radius:6px;">0.12</rt></ruby> for relief.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(196,180,50);color:#111;">0.38</span><span style="font-size:13px;color:#333;">The steroid injection is for the shoulder.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(78,140,30);color:#111;">0.12</span><span style="font-size:13px;color:#333;">The steroid injection is for relief.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I also recommend that the patient tries soaking his feet in <ruby title="The Epsom salts are to alleviate soreness."><mark style="background:rgb(196,180,50);padding:1px 3px;border-radius:3px;">Epsom salts to alleviate soreness</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(196,180,50);padding:0 5px;border-radius:6px;">0.38</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(196,180,50);color:#111;">0.38</span><span style="font-size:13px;color:#333;">The patient is recommended to soak his feet in Epsom salts.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,59,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.889
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Follow-up: The patient will follow up with physical therapy and <ruby title="The patient will return for a follow-up appointment."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">return for a follow-up appointment</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> to reassess symptoms.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(137,160,40);color:#111;">0.25</span><span style="font-size:13px;color:#333;">The follow-up appointment is to reassess symptoms.</span></div></div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div style="margin-bottom:44px;border:1px solid #ddd;border-radius:8px;padding:20px;background:#f5f5f5;">
+  <h2 style="margin-top:0;">Sample 19 · Note 0
+    <span style="font-size:14px;font-weight:normal;color:#666;">
+      &nbsp;·&nbsp; aci/test1 &nbsp;·&nbsp; mean fact uncertainty = 0.2407
+      &nbsp;·&nbsp; 66 facts &nbsp;·&nbsp; 24 sentence-spans
+    </span>
+  </h2>
+  <div style="display:flex;gap:20px;align-items:flex-start;">
+    <div style="flex:1;min-width:0;position:sticky;top:12px;">
+      <h3 style="margin-top:0;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;color:#666;">
+        Transcript
+      </h3>
+      <div style="background:#fff;border:1px solid #e0e0e0;border-radius:6px;padding:14px;
+           font-family:monospace;font-size:12.5px;line-height:1.6;white-space:pre-wrap;
+           max-height:640px;overflow-y:auto;color:#333;">[patient] miss edwards is here for evaluation of facial pain this is a 54 -year-old male
+[doctor] how're you doing doctor cruz nice to see you today
+[patient] good to see you mister edwards i'm doctor
+[doctor] tell me what's been going on yeah so i've got this stabbing shooting pain i've had for a while you know and it it especially right here in my right face right in that cheek bone area it's sometimes it gets super hot i've had it for i think a couple of months now and i went to my family doctor and they said i should come see you
+[patient] okay great i would like to ask you a little bit more about that
+[doctor] had in your face do you remember how long that you had it probably for about two or three months just just came on slowly i started noticing it but now it's i have episodes where just shooting stabbing kind of a pain in my right cheek bone right face area
+[patient] mm-hmm do you have any sensory loss meaning like numbness or tingling in that part of your face
+[doctor] not that i've noticed no okay do you have any symptoms like this anywhere else on your face including the other side of your face
+[patient] no it's just on the right side mostly not on the left side just on the right side of my face
+[doctor] have you noticed any weakness on that side of the face like when you smile or while you're doing other things any weakness there not really i mean i've i've i've tried to you know when i smile my smile seems equal on both sides my eyes i do n't have any weakness there my vision seems to be unchanged but just this stabbing severe pain it's just like excruciating pain that i get sometimes does it happen on its own or there are certain things that trigger it
+[patient] sometimes if i'm if certain temperatures seem to trigger it sometimes or if it's super where it's cold i get a trigger sometimes
+[doctor] sometimes certain kind of sensory outside of the wind sometimes that seems to trigger it but that's about it
+[patient] okay and anything that you've done to to that helps for a little bit when you
+[doctor] pain excess
+[patient] you know i've tried ibuprofen and motrin that had really has n't helped it just comes on suddenly and then it's kinda stabbing excruciating pain i've tried rubbing some you know some tiger balm on it that did n't work
+[doctor] but that's you know so i i went to my family doctor and he said you know i really need to see a neurosurgeon
+[patient] got it how long do these episodes last these pain
+[doctor] you know it can last for anywhere from a few minutes to sometimes about an hour but generally generally a few minutes
+[patient] any history of something like multiple sclerosis or any brain tumors that you know
+[doctor] no nothing like that alright any other kinda headache symptoms that have anything like you had migraines or anything related to the headaches i mean i get occasional headaches but not really i do n't have a history of migraines but i occasionally get headaches like everybody else i take some tylenol that usually goes away but this is different
+[patient] how severe is the pain on a scale of one to ten
+[doctor] when it comes on it's like a ten it's like somebody is stabbing you with an ice pick and but usually you know after a few minutes usually it goes away but sometimes it can last up to an hour great so mister i would like to do a physical exam if that's okay with you
+[patient] sure
+[doctor] i would like you to follow my finger here and i see that you're following my finger in in both directions can you show me your teeth
+[patient] that looks nice and symmetric i'm gon na rub my fingers next to your ear can you hear that
+[doctor] yep
+[patient] you can hear it on the other side as well
+[doctor] yep
+[patient] okay
+[doctor] i'm gon na take this cotton tape and run it along the side of your face can you feel that okay
+[patient] yeah it's a little bit numb on my right side not so much on my left side
+[doctor] okay alright i'm gon na use this little needle here and i'm gon na poke here and i wan na see if you feel like it's being sharp or dull on that part of your face does that feel different or normal
+[patient] it feels a little bit dull on my left on my right side my left side it feels sharp
+[doctor] alright good well i had a chance to look at your mri
+[patient] okay
+[doctor] and i looked at your mri and it appears to have small blood vessel that is abutting and perhaps even pinching the trigeminal nerve the trigeminal nerve is nerve that comes from the brainstem that goes out to the face and provides the sensory inflammation from the face and you may have a condition called trigeminal neuralgia
+[patient] okay
+[doctor] where the nerve compression causes this kind of shooting electrical pain in the face how do we treat it
+[patient] well the first line would be to try some medications usually we start with medications that are called gabapentin
+[doctor] or tegretol these are medications that really help reduce the excitability of the nerve
+[patient] okay
+[doctor] most people can get the pain control with that but there are some people where the medications are n't gon na be enough and in that situation we would consider surgery i would n't i would n't recommend that now we usually try the medications first
+[patient] for considering a surgery to decompress the nerve the root cause of the problem is the compression of the blood vessel against the nerve
+[doctor] okay so we should be tried which one would you recommend the tegretol or yeah i think we could start with the tegretol to start with i just want to make sure that you understand some of the potential side effects that you can have with this
+[patient] sure
+[doctor] it's always a little bit of trial and error to figure out what the right dosing that would work for you but some common side effects can include you know memory loss tingling imbalance some people can actually have like dermatologic
+[patient] skin reaction to this medication and particularly people who have eustachian descent so that we may do some genetic testing just to make sure that it will be safe for you
+[doctor] okay sounds good let's do it
+[patient] okay so i will prescribe that for you and then we will see how that goes and if your pain continues we can talk about different surgical options to treat the pain
+[doctor] yeah i think i would like to try the tegretol first and if that does n't work then i can come back and so once should i come back and just to kinda check back with you and see if you know if it's had enough time for a fact or not
+[patient] i think one month would be a great time to follow up
+[doctor] okay sounds good so if you want to send that prescription over to my pharmacy that would be fine and then why do n't i come back in about a month and we'll go from there
+[patient] great i'll see you then
+[doctor] alright</div>
+    </div>
+    <div style="flex:1;min-width:0;">
+      <h3 style="margin-top:0;font-size:13px;text-transform:uppercase;letter-spacing:0.04em;color:#666;">
+        Note (span-level, facts mapped per sentence)
+      </h3>
+      <div style="max-height:640px;overflow-y:auto;padding-right:4px;">
+        
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Subjective:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      HPI: The patient, a <ruby title="The patient is a 54-year-old male."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">54-year-old male</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, presents with a complaint of stabbing, shooting <ruby title="The pain is located in the right cheekbone area of the face."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">pain in the right cheekbone area of his face</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, which has been <ruby title="The pain has been ongoing for 2-3 months."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">ongoing for approximately 2-3 months</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient presents with shooting pain.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient presents with stabbing pain.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      He reports that the <ruby title="The pain is exacerbated by certain temperatures."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">pain is exacerbated by certain temperatures</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> and can be <ruby title="The pain is triggered by cold weather."><mark style="background:rgb(72,137,28);padding:1px 3px;border-radius:3px;">triggered by cold weather</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(72,137,28);padding:0 5px;border-radius:6px;">0.11</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,99,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.778
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      He denies numbness or <ruby title="The patient denies tingling in the affected area."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">tingling in the affected area</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> and reports that his <ruby title="The patient's smile is unchanged."><mark style="background:rgb(255,179,55);padding:1px 3px;border-radius:3px;">smile</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,179,55);padding:0 5px;border-radius:6px;">0.56</rt></ruby> and <ruby title="The patient's vision is unchanged."><mark style="background:rgb(255,99,37);padding:1px 3px;border-radius:3px;">vision are unchanged</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,99,37);padding:0 5px;border-radius:6px;">0.78</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient denies numbness in the affected area.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      He <ruby title="The patient describes the pain as excruciating."><mark style="background:rgb(72,137,28);padding:1px 3px;border-radius:3px;">describes the pain as excruciating</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(72,137,28);padding:0 5px;border-radius:6px;">0.11</rt></ruby> and rates it as a <ruby title="The patient rates the pain as 10 out of 10 in severity."><mark style="background:rgb(124,155,37);padding:1px 3px;border-radius:3px;">10 out of 10 in severity</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(124,155,37);padding:0 5px;border-radius:6px;">0.22</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(124,155,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.222
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      He has <ruby title="The patient has tried Motrin."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">tried ibuprofen, Motrin</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, and topical treatments such as <ruby title="The patient has tried tiger balm."><mark style="background:rgb(72,137,28);padding:1px 3px;border-radius:3px;">tiger balm</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(72,137,28);padding:0 5px;border-radius:6px;">0.11</rt></ruby>, which have provided minimal relief.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">Tiger balm is taken for pain.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The ibuprofen dose is not specified.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">Ibuprofen is taken at a frequency that is not specified.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">Ibuprofen is taken for pain.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The patient has tried ibuprofen.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The tiger balm dose is not specified.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The Motrin dose is not specified.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">Motrin is taken at a frequency that is not specified.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">Motrin is taken for pain.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(228,191,55);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.444
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Past medical history: The patient has a history of <ruby title="The patient has a history of occasional headaches."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">occasional headaches</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>, for which he <ruby title="The patient takes Tylenol."><mark style="background:rgb(228,191,55);padding:1px 3px;border-radius:3px;">takes Tylenol</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(228,191,55);padding:0 5px;border-radius:6px;">0.44</rt></ruby>, but denies a history of <ruby title="The patient denies a history of migraines."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">migraines</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> or <ruby title="The patient denies a history of brain tumors."><mark style="background:rgb(72,137,28);padding:1px 3px;border-radius:3px;">brain tumors</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(72,137,28);padding:0 5px;border-radius:6px;">0.11</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,179,55);color:#111;">0.56</span><span style="font-size:13px;color:#333;">Tylenol is taken at a frequency that is not specified.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(176,173,46);color:#111;">0.33</span><span style="font-size:13px;color:#333;">Tylenol is taken for occasional headaches.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">Tiger balm is taken at a frequency that is not specified.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The Tylenol dose is not specified.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Review of systems: The patient reports no symptoms in other <ruby title="The patient reports no symptoms in other organs or systems."><mark style="background:rgb(124,155,37);padding:1px 3px;border-radius:3px;">organs</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(124,155,37);padding:0 5px;border-radius:6px;">0.22</rt></ruby> or systems.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(176,173,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.333
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Current medications: He takes Tylenol for occasional headaches.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Objective:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Vital signs: Not mentioned.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,139,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.667
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Physical exam: The patient was able to follow my <ruby title="The patient was able to follow the physician's finger in both directions."><mark style="background:rgb(124,155,37);padding:1px 3px;border-radius:3px;">finger in both directions</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(124,155,37);padding:0 5px;border-radius:6px;">0.22</rt></ruby>, and his <ruby title="The patient's smile appeared symmetric."><mark style="background:rgb(255,179,55);padding:1px 3px;border-radius:3px;">smile appeared symmetric</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,179,55);padding:0 5px;border-radius:6px;">0.56</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,20,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 1.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      He reported a little <ruby title="The patient reported numbness on the right side of his face."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">numbness on the right</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> side of his <ruby title="The numbness on the right side of the face was detected by rubbing fingers."><mark style="background:rgb(255,20,20);padding:1px 3px;border-radius:3px;">face when I rubbed my fingers</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,20,20);padding:0 5px;border-radius:6px;">1.00</rt></ruby> next to his ear.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,20,20);color:#111;">1.00</span><span style="font-size:13px;color:#333;">The numbness occurred when the physician rubbed fingers next to the patient's ear.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,179,55);color:#111;">0.56</span><span style="font-size:13px;color:#333;">The numbness on the right side of the face was detected by poking with a needle.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The patient reported numbness on the right side of his face when a cotton tape was used.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The numbness on the right side of the face was detected by using a cotton tape.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(72,137,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.111
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      When I used a cotton tape to run along the side of his face, he reported feeling a little numb on the right side.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(72,137,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.111
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      When I poked him with a needle on the right side of his <ruby title="The patient felt dull when poked with a needle on the right side of his face."><mark style="background:rgb(72,137,28);padding:1px 3px;border-radius:3px;">face, he reported feeling dull</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(72,137,28);padding:0 5px;border-radius:6px;">0.11</rt></ruby>, whereas on the left side, he reported feeling sharp.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The patient felt sharp when poked with a needle on the left side of his face.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Assessment / Problem List:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,99,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.778
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Assessment: The patient has <ruby title="The condition involves compression of the trigeminal nerve."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">trigeminal neuralgia, a condition where compression of the trigeminal nerve</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> by a small blood vessel causes shooting, electrical <ruby title="The pain is located in the face."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">pain in the face</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,139,46);color:#111;">0.67</span><span style="font-size:13px;color:#333;">The trigeminal nerve is compressed by a small blood vessel.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(124,155,37);color:#111;">0.22</span><span style="font-size:13px;color:#333;">The patient has trigeminal neuralgia.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The pain is electrical.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The pain is shooting.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The compression of the trigeminal nerve causes pain.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">Trigeminal neuralgia is a condition.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,139,46);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.667
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Problem list: Trigeminal neuralgia; confirmed.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Plan:
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,59,28);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.889
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I prescribed <ruby title="Tegretol is taken orally."><mark style="background:rgb(255,139,46);padding:1px 3px;border-radius:3px;">Tegretol 100mg orally</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,139,46);padding:0 5px;border-radius:6px;">0.67</rt></ruby> <ruby title="Tegretol is taken 3 times a day."><mark style="background:rgb(255,59,28);padding:1px 3px;border-radius:3px;">3 times a day</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(255,59,28);padding:0 5px;border-radius:6px;">0.89</rt></ruby> for the treatment of trigeminal neuralgia.
+    </div>
+    <div style="padding-left:8px;margin-top:6px;border-left:2px solid #eee;"><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,20,20);color:#111;">1.00</span><span style="font-size:13px;color:#333;">Tegretol may cause adverse effects in individuals with Eustachian tube dysfunction.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,20,20);color:#111;">1.00</span><span style="font-size:13px;color:#333;">The patient may experience memory loss from Tegretol.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,20,20);color:#111;">1.00</span><span style="font-size:13px;color:#333;">The patient may experience tingling from Tegretol.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,20,20);color:#111;">1.00</span><span style="font-size:13px;color:#333;">The patient may experience imbalance from Tegretol.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(255,20,20);color:#111;">1.00</span><span style="font-size:13px;color:#333;">The patient may experience dermatologic reactions from Tegretol.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(228,191,55);color:#111;">0.44</span><span style="font-size:13px;color:#333;">The Tegretol dose is 100mg.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">The purpose of genetic testing is to ensure Tegretol is safe for the patient.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(72,137,28);color:#111;">0.11</span><span style="font-size:13px;color:#333;">Tegretol is prescribed for trigeminal neuralgia.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The doctor prescribed Tegretol.</span></div><div style="display:flex;align-items:baseline;gap:6px;margin:3px 0;"><span style="flex-shrink:0;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;background:rgb(20,120,20);color:#111;">0.00</span><span style="font-size:13px;color:#333;">The follow-up is to assess the efficacy of Tegretol.</span></div></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,20,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 1.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I explained the potential side effects of the medication, including memory loss, tingling, imbalance, and dermatologic reactions, particularly in individuals with Eustachian tube dysfunction.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(20,120,20);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.000
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I <ruby title="The doctor recommended genetic testing for the patient."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">recommended genetic testing</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> to ensure the medication is safe for the patient.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,179,55);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.556
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      I instructed the patient to follow up in one <ruby title="The patient will follow up in one month."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">month</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby> to assess the efficacy of the medication and to discuss further treatment options if necessary.
+    </div>
+    
+  </div>
+</div>
+
+<div style="margin-bottom:10px;border-radius:6px;overflow:hidden;
+     border:1px solid rgba(0,0,0,0.12);">
+  <div style="background:rgb(255,99,37);padding:3px 10px;font-size:11px;font-weight:700;color:#111;">
+    span uncertainty = 0.778
+  </div>
+  <div style="background:#fff;padding:8px 10px;">
+    <div style="font-family:Georgia,serif;font-size:14px;line-height:2.6;color:#222;padding-top:6px;">
+      Follow-up: The patient will return in one month to assess the efficacy of the Tegretol and to <ruby title="The follow-up is to discuss further treatment options if necessary."><mark style="background:rgb(20,120,20);padding:1px 3px;border-radius:3px;">discuss further treatment options if necessary</mark><rt style="font-size:11px;font-weight:700;color:#111;background:rgb(20,120,20);padding:0 5px;border-radius:6px;">0.00</rt></ruby>.
+    </div>
+    
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

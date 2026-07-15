@@ -1,0 +1,7 @@
+All conditions equalised to 1008 tokens (length-confound fix).
+M_corrupted (real transcript, real prefix, no patch) = +3.8750
+  Interpretation: model prefers y_H ('denies') — reproduces the hallucination, as expected.
+Direction restore: M_source = +4.5000 (expected < M_corrupted, M_corrupted = +3.8750) -- sanity check [!!] FAILED — reconsider the transcript edit
+  Peak layer 22: resid_pre Δ=-0.625, attn-all Δ=-0.062, mlp Δ=-0.062, max |per-head Δ|=+0.188
+Direction sensitivity: M_source = +4.6875 (expected > M_corrupted, M_corrupted = +3.8750) -- sanity check PASSED
+  Peak layer 20: resid_pre Δ=-1.250, attn-all Δ=+0.188, mlp Δ=-0.062, max |per-head Δ|=+0.250

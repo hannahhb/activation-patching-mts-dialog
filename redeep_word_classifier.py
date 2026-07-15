@@ -103,7 +103,7 @@ def load_all_words(act_dir: Path, span_dir: Path):
         sdf = pd.read_csv(span_csv)
         note_spans = [s for s in sdf.get("note_span", pd.Series([], dtype=str)).fillna("").tolist()
                       if str(s).strip()]
-        labels, valid, _, _ = build_word_labels(word_strs, note_spans)
+        labels, valid, _, _, _ = build_word_labels(word_strs, note_spans)
 
         n_words = ecs_w.shape[1]
         keep = valid[:n_words]

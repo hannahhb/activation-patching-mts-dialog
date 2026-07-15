@@ -149,52 +149,95 @@ def _mean_std_per_layer(score_l: np.ndarray, mask: np.ndarray) -> Tuple[np.ndarr
     return np.nanmean(sub, axis=1), np.nanstd(sub, axis=1)
 
 
+def _plot_mean_std_by_layer(metric_all, lab_all, out_path, ylabel,
+                            show_title=True, title=None, fontsize=12):
+    """Standalone mean±std-by-layer line plot, Hallucinated vs Faithful
+    (equivalent to panel 2 of _plot_cohens_d_with_metric_bar, on its own)."""
+    n_layers = metric_all.shape[0]
+    layers   = np.arange(n_layers)
+    hallu_mask = lab_all.astype(bool)
+    hallu_mean, hallu_std = _mean_std_per_layer(metric_all, hallu_mask)
+    faith_mean, faith_std = _mean_std_per_layer(metric_all, ~hallu_mask)
+
+    fig, ax = plt.subplots(figsize=(10, 5))
+    ax.plot(layers, hallu_mean, color="tomato", lw=2, marker="s", ms=3, label="Hallucinated")
+    ax.fill_between(layers, hallu_mean - hallu_std, hallu_mean + hallu_std, color="tomato", alpha=0.15)
+    ax.plot(layers, faith_mean, color="grey", lw=2, marker="o", ms=3, label="Faithful")
+    ax.fill_between(layers, faith_mean - faith_std, faith_mean + faith_std, color="grey", alpha=0.15)
+    ax.set_xlabel("Layer index", fontsize=fontsize)
+    ax.set_ylabel(ylabel, fontsize=fontsize)
+    if show_title and title:
+        ax.set_title(title)
+    ax.tick_params(axis="both", labelsize=fontsize - 1)
+    ax.legend(fontsize=fontsize - 1)
+    ax.grid(alpha=0.3)
+    plt.tight_layout()
+    plt.savefig(out_path, dpi=150)
+    plt.close()
+    print(f"  Saved {out_path}")
+
+
 def _plot_cohens_d_with_metric_bar(metric_d, metric_all, lab_all,
                                    out_path, title_suffix, metric_name="PKS",
-                                   metric_color="tomato", granularity="Word-level"):
-    """Three-panel figure:
+                                   metric_color="tomato", granularity="Word-level",
+                                   show_title=True, only_cohens_d=False, fontsize=12):
+    """Figure showing:
        1) metric-only Cohen's d as a uni-color bar chart (ReDeEP-paper style,
           standardized: mean difference / pooled std)
        2) actual (raw, unstandardized) metric scores per layer, mean±std,
-          hallucinated vs faithful units
+          hallucinated vs faithful units  [skipped if only_cohens_d]
        3) raw (unstandardized) mean difference per layer, hallucinated −
           faithful, as a bar chart -- same units as panel 2, no std scaling
+          [skipped if only_cohens_d]
     """
     n_layers = len(metric_d)
     layers   = np.arange(n_layers)
-    fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(10, 11), sharex=True,
-                                        gridspec_kw={"height_ratios": [1, 1, 1]})
+
+    if only_cohens_d:
+        fig, ax1 = plt.subplots(figsize=(10, 5))
+    else:
+        fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(10, 11), sharex=True,
+                                            gridspec_kw={"height_ratios": [1, 1, 1]})
 
     ax1.bar(layers, metric_d, color=metric_color, width=0.8)
     ax1.axhline(0.0, color="grey", ls="--", lw=0.8)
-    ax1.set_ylabel(f"{metric_name} Cohen's d")
-    ax1.set_title(f"{granularity} {metric_name} Cohen's d by layer\n{title_suffix}")
+    ax1.set_ylabel(f"{metric_name} Cohen's d", fontsize=fontsize)
+    if show_title:
+        ax1.set_title(f"{granularity} {metric_name} Cohen's d by layer\n{title_suffix}")
+    if only_cohens_d:
+        ax1.set_xlabel("Layer index", fontsize=fontsize)
+    ax1.tick_params(axis="both", labelsize=fontsize - 1)
     ax1.grid(alpha=0.3, axis="y")
 
-    hallu_mask = lab_all.astype(bool)
-    metric_hallu_mean, metric_hallu_std = _mean_std_per_layer(metric_all, hallu_mask)
-    metric_faith_mean, metric_faith_std = _mean_std_per_layer(metric_all, ~hallu_mask)
-    ax2.plot(layers, metric_hallu_mean, color="tomato", lw=2, marker="s", ms=3, label="Hallucinated")
-    ax2.fill_between(layers, metric_hallu_mean - metric_hallu_std, metric_hallu_mean + metric_hallu_std,
-                     color="tomato", alpha=0.15)
-    ax2.plot(layers, metric_faith_mean, color="grey", lw=2, marker="o", ms=3, label="Faithful")
-    ax2.fill_between(layers, metric_faith_mean - metric_faith_std, metric_faith_mean + metric_faith_std,
-                     color="grey", alpha=0.15)
-    ax2.set_ylabel(metric_name)
-    ax2.set_title(f"{granularity} actual {metric_name} scores by layer (mean ± std)")
-    ax2.legend(fontsize=9)
-    ax2.grid(alpha=0.3)
+    if not only_cohens_d:
+        hallu_mask = lab_all.astype(bool)
+        metric_hallu_mean, metric_hallu_std = _mean_std_per_layer(metric_all, hallu_mask)
+        metric_faith_mean, metric_faith_std = _mean_std_per_layer(metric_all, ~hallu_mask)
+        ax2.plot(layers, metric_hallu_mean, color="tomato", lw=2, marker="s", ms=3, label="Hallucinated")
+        ax2.fill_between(layers, metric_hallu_mean - metric_hallu_std, metric_hallu_mean + metric_hallu_std,
+                         color="tomato", alpha=0.15)
+        ax2.plot(layers, metric_faith_mean, color="grey", lw=2, marker="o", ms=3, label="Faithful")
+        ax2.fill_between(layers, metric_faith_mean - metric_faith_std, metric_faith_mean + metric_faith_std,
+                         color="grey", alpha=0.15)
+        ax2.set_ylabel(metric_name, fontsize=fontsize)
+        if show_title:
+            ax2.set_title(f"{granularity} actual {metric_name} scores by layer (mean ± std)")
+        ax2.tick_params(axis="both", labelsize=fontsize - 1)
+        ax2.legend(fontsize=fontsize - 1)
+        ax2.grid(alpha=0.3)
 
-    diff = metric_hallu_mean - metric_faith_mean
-    avg_diff = np.nanmean(diff)
-    ax3.bar(layers, diff, color=metric_color, width=0.8)
-    ax3.axhline(0.0, color="grey", lw=0.8)
-    ax3.axhline(avg_diff, color="red", ls="--", lw=1.2, label=f"Average: {avg_diff:.3f}")
-    ax3.set_xlabel("Layer index")
-    ax3.set_ylabel(f"{metric_name} mean difference\n(Hallucinated − Faithful)")
-    ax3.set_title(f"{granularity} raw {metric_name} mean difference by layer (unstandardized)")
-    ax3.legend(fontsize=9)
-    ax3.grid(alpha=0.3, axis="y")
+        diff = metric_hallu_mean - metric_faith_mean
+        avg_diff = np.nanmean(diff)
+        ax3.bar(layers, diff, color=metric_color, width=0.8)
+        ax3.axhline(0.0, color="grey", lw=0.8)
+        ax3.axhline(avg_diff, color="red", ls="--", lw=1.2, label=f"Average: {avg_diff:.3f}")
+        ax3.set_xlabel("Layer index", fontsize=fontsize)
+        ax3.set_ylabel(f"{metric_name} mean difference\n(Hallucinated − Faithful)", fontsize=fontsize)
+        if show_title:
+            ax3.set_title(f"{granularity} raw {metric_name} mean difference by layer (unstandardized)")
+        ax3.tick_params(axis="both", labelsize=fontsize - 1)
+        ax3.legend(fontsize=fontsize - 1)
+        ax3.grid(alpha=0.3, axis="y")
 
     plt.tight_layout()
     plt.savefig(out_path, dpi=150)
@@ -255,7 +298,8 @@ def _plot_pks_paper_style(pks_all: np.ndarray, lab_all: np.ndarray, out_path,
     print(f"  Saved {out_path}")
 
 
-def _plot_layer_lines(series, out_path, ylabel, title, hline, ylim=None):
+def _plot_layer_lines(series, out_path, ylabel, title, hline, ylim=None,
+                      show_title=True, fontsize=12):
     """series: list of (avg, std|None, color, marker, label). (n_layers,) each."""
     n_layers = len(series[0][0])
     layers   = np.arange(n_layers)
@@ -266,12 +310,14 @@ def _plot_layer_lines(series, out_path, ylabel, title, hline, ylim=None):
             ax.fill_between(layers, avg - std, avg + std, color=color, alpha=0.15)
     if hline is not None:
         ax.axhline(hline, color="grey", ls="--", lw=0.8)
-    ax.set_xlabel("Layer index")
-    ax.set_ylabel(ylabel)
-    ax.set_title(title)
+    ax.set_xlabel("Layer index", fontsize=fontsize)
+    ax.set_ylabel(ylabel, fontsize=fontsize)
+    if show_title:
+        ax.set_title(title)
     if ylim is not None:
         ax.set_ylim(ylim)
-    ax.legend(fontsize=9)
+    ax.tick_params(axis="both", labelsize=fontsize - 1)
+    ax.legend(fontsize=fontsize - 1)
     ax.grid(alpha=0.3)
     plt.tight_layout()
     plt.savefig(out_path, dpi=150)
@@ -281,7 +327,8 @@ def _plot_layer_lines(series, out_path, ylabel, title, hline, ylim=None):
 
 def _plot_auroc_by_group(group_all: np.ndarray, ecs_all: np.ndarray, ecscopy_all: np.ndarray,
                          pks_all: np.ndarray, n_layers: int, fig_path, csv_path, suptitle: str,
-                         faithful_label: str = "Faithful") -> None:
+                         faithful_label: str = "Faithful", show_suptitle: bool = True,
+                         include_raw_ecs: bool = True, fontsize: int = 12) -> None:
     """Grid of per-layer AUROC subplots, one per non-faithful value of
     `group_all` (a str label per word), each vs `faithful_label` words.
     `ecs_all`/`ecscopy_all`/`pks_all` must already be subset to match
@@ -311,16 +358,18 @@ def _plot_auroc_by_group(group_all: np.ndarray, ecs_all: np.ndarray, ecscopy_all
         ecs_auroc     = auroc_per_layer_single(ecs_all[:, mask],     y, hallu_high=True)
         ecscopy_auroc = auroc_per_layer_single(ecscopy_all[:, mask], y, hallu_high=True)
         pks_auroc     = auroc_per_layer_single(pks_all[:, mask],     y, hallu_high=True)
-        ax.plot(layers, ecs_auroc,     color="steelblue", lw=2, marker="o", ms=3, label="ECS (all heads)")
+        if include_raw_ecs:
+            ax.plot(layers, ecs_auroc, color="steelblue", lw=2, marker="o", ms=3, label="ECS (all heads)")
         ax.plot(layers, ecscopy_auroc, color="seagreen",  lw=2, marker="^", ms=3, label="ECS (copying heads)")
         ax.plot(layers, pks_auroc,     color="tomato",    lw=2, marker="s", ms=3, label="PKS (per-token mean)")
         ax.axhline(0.5, color="grey", ls="--", lw=0.8)
-        ax.set_title(f"{group}  (n={n_group} vs {n_faith_cmp} {faithful_label.lower()})")
-        ax.set_xlabel("Layer index")
-        ax.set_ylabel("AUROC")
+        ax.set_title(f"{group}  (n={n_group} vs {n_faith_cmp} {faithful_label.lower()})", fontsize=fontsize)
+        ax.set_xlabel("Layer index", fontsize=fontsize)
+        ax.set_ylabel("AUROC", fontsize=fontsize)
         ax.set_ylim(0.3, 1.0)
+        ax.tick_params(axis="both", labelsize=fontsize - 1)
         ax.grid(alpha=0.3)
-        ax.legend(fontsize=8)
+        ax.legend(fontsize=fontsize - 2)
         for layer_i in range(n_layers):
             rows.append({
                 "group":          group,
@@ -333,7 +382,8 @@ def _plot_auroc_by_group(group_all: np.ndarray, ecs_all: np.ndarray, ecscopy_all
             })
     for j in range(len(groups_present), n_rows * n_cols):
         axes[j // n_cols][j % n_cols].axis("off")
-    fig.suptitle(suptitle)
+    if show_suptitle:
+        fig.suptitle(suptitle)
     plt.tight_layout()
     plt.savefig(fig_path, dpi=150)
     plt.close(fig)
@@ -1057,6 +1107,13 @@ def main():
             title_suffix=f"content words only (pooled: {n_content} content words, "
                          f"{n_hallu_content} hallucinated)",
             metric_name="PKS (per-token mean)",
+            show_title=False, only_cohens_d=True, fontsize=16,
+        )
+        _plot_mean_std_by_layer(
+            pks_all[:, content_all], lab_all[content_all],
+            out_dir / "fig_word_actual_pks_content_only.png",
+            ylabel="PKS (per-token mean)",
+            show_title=False, fontsize=16,
         )
     _plot_pks_paper_style(
         pks_all, lab_all,
@@ -1070,6 +1127,13 @@ def main():
         title_suffix=f"(pooled: {n_total} words, {n_hallu} hallucinated)",
         metric_name="ECS (copying heads)",
         metric_color="seagreen",
+        show_title=False, only_cohens_d=True, fontsize=16,
+    )
+    _plot_mean_std_by_layer(
+        ecscopy_all, lab_all,
+        out_dir / "fig_word_actual_ecs.png",
+        ylabel="ECS (copying heads)",
+        show_title=False, fontsize=16,
     )
     if n_content > 0 and n_hallu_content > 0 and (n_content - n_hallu_content) > 0:
         ecscopy_d_c = cohens_d_per_layer_single(ecscopy_all[:, content_all], lab_all[content_all])
@@ -1080,6 +1144,19 @@ def main():
                          f"{n_hallu_content} hallucinated)",
             metric_name="ECS (copying heads)",
             metric_color="seagreen",
+            show_title=False, only_cohens_d=True, fontsize=16,
+        )
+        pd.DataFrame({
+            "layer": np.arange(n_layers),
+            "pks_cohens_d_content_only": pks_d_c,
+            "ecs_copy_cohens_d_content_only": ecscopy_d_c,
+        }).to_csv(out_dir / "layer_word_cohens_d_content_only.csv", index=False)
+        print(f"  Saved {out_dir / 'layer_word_cohens_d_content_only.csv'}")
+        _plot_mean_std_by_layer(
+            ecscopy_all[:, content_all], lab_all[content_all],
+            out_dir / "fig_word_actual_ecs_content_only.png",
+            ylabel="ECS (copying heads)",
+            show_title=False, fontsize=16,
         )
 
     # ── Per-group AUROC, content words only (stopwords/punctuation excluded
@@ -1092,6 +1169,16 @@ def main():
     pks_all_cw     = pks_all[:, content_all]
     n_content = int(content_all.sum())
 
+    # All-words (not content-filtered) version, styled for the paper: no
+    # descriptive suptitle, raw ECS (all heads) curve dropped, larger axis text.
+    _plot_auroc_by_group(
+        cat_all, ecs_all, ecscopy_all, pks_all, n_layers,
+        out_dir / "fig_word_auroc_by_category.png",
+        out_dir / "layer_word_metrics_by_category.csv",
+        suptitle=f"Word-level AUROC by LLM-judge category vs Faithful — ECS & PKS\n"
+                 f"(pooled: {n_total} words)",
+        show_suptitle=False, include_raw_ecs=False, fontsize=14,
+    )
     _plot_auroc_by_group(
         cat_all[content_all], ecs_all_cw, ecscopy_all_cw, pks_all_cw, n_layers,
         out_dir / "fig_word_auroc_by_category_content_only.png",
@@ -1166,7 +1253,6 @@ def main():
             # (not just visual clarity) is a straight side-by-side comparison.
             _plot_layer_lines(
                 [
-                    (ecs_c_auroc,     None, "steelblue", "o", "ECS (all heads)"),
                     (ecscopy_c_auroc, None, "seagreen",  "^", "ECS (copying heads)"),
                     (pks_c_auroc,     None, "tomato",    "s", "PKS (per-token mean)"),
                 ],
@@ -1177,6 +1263,7 @@ def main():
                       f"compare against fig_word_auroc_content_only.png)",
                 hline=0.5,
                 ylim=[0.3, 1.0],
+                show_title=False, fontsize=16,
             )
             pd.DataFrame({
                 "layer":           np.arange(n_layers),
