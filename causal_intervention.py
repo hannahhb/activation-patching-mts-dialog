@@ -483,10 +483,12 @@ def run_ablation_test(args):
 
     gen_dir = Path(args.gen_dir)
     rows = []
+    n_no_gen_json = 0
     grouped = targets.groupby(["sample_idx", "gen_idx"])
     for (si, k), group in grouped:
         gen_path = gen_dir / f"sample_{si:03d}_generations.json"
         if not gen_path.exists():
+            n_no_gen_json += 1
             continue
         with open(gen_path) as f:
             gen_data = json.load(f)
@@ -519,6 +521,10 @@ def run_ablation_test(args):
                 })
         print(f"  sample {si} gen {k}: {len(group)} words x 4 conditions done")
 
+    if n_no_gen_json:
+        print(f"  [warn] {n_no_gen_json}/{grouped.ngroups} note groups skipped: "
+             f"no sample_NNN_generations.json under --gen-dir {gen_dir}")
+
     results = pd.DataFrame(rows)
     results.to_csv(out_dir / "ablation_results.csv", index=False)
     print(f"\nSaved {len(results)} rows -> {out_dir / 'ablation_results.csv'}")
@@ -541,13 +547,20 @@ def plot_ablation(df: pd.DataFrame, out_path: Path):
         bar_data, bar_labels, bar_colors, bar_err = [], [], [], []
         for kind in ["real", "placebo"]:
             for label in [1, 0]:
-                s = sub[(sub["kind"] == kind) & (sub["label"] == label)]
+                s = sub[(sub["kind"] == kind) & (sub["label"] == label)]["delta_logit_diff"].dropna()
                 if s.empty:
                     continue
-                bar_data.append(s["delta_logit_diff"].mean())
-                bar_err.append(s["delta_logit_diff"].std() / np.sqrt(len(s)))
+                # std() is NaN for n=1 (ddof=1, sample std undefined) -- matplotlib's
+                # axis-tick locator crashes on a NaN yerr, so fall back to 0 rather
+                # than silently propagating NaN into the plot.
+                sem = s.std() / np.sqrt(len(s)) if len(s) > 1 else 0.0
+                bar_data.append(s.mean())
+                bar_err.append(0.0 if np.isnan(sem) else sem)
                 bar_labels.append(f"{labels_map[label]}\n({kind}, n={len(s)})")
                 bar_colors.append(colors[(kind, label)])
+                if len(s) < 5:
+                    print(f"  [plot_ablation] small subgroup: pathway={pathway} kind={kind} "
+                         f"label={labels_map[label]} n={len(s)}")
         x = np.arange(len(bar_data))
         ax.bar(x, bar_data, yerr=bar_err, color=bar_colors, capsize=4)
         ax.set_xticks(x)
