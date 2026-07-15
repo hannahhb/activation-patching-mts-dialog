@@ -169,6 +169,15 @@ def select_word_targets(
     if max_notes is not None:
         tok_files = tok_files[:max_notes]
 
+    # Per-stage skip counters -- printed unconditionally below so a "No word
+    # targets found" outcome is immediately diagnosable without re-running
+    # with extra instrumentation bolted on after the fact.
+    n_no_span_csv        = 0  # (sample,gen) has no matching span_judge.csv at all
+    n_missing_npz_keys   = 0  # tokens.npz missing word_strs/word_spans (re-run redeep_sentence.py)
+    n_zero_flagged_spans = 0  # span_judge.csv exists but every sentence is Faithful (no note_span)
+    n_zero_hallu_or_faith = 0  # spans present but none/all overlapped a content word after matching
+    n_matched_notes       = 0
+
     rows = []
     for tp in tok_files:
         m = re.search(r"sample_(\d+)_gen_(\d+)_tokens", tp.stem)
@@ -177,10 +186,12 @@ def select_word_targets(
         si, k = int(m.group(1)), int(m.group(2))
         span_csv = span_lookup.get((si, k))
         if span_csv is None:
+            n_no_span_csv += 1
             continue
 
         d = np.load(str(tp), allow_pickle=True)
         if not all(key in d for key in ("word_strs", "word_spans")):
+            n_missing_npz_keys += 1
             continue
         word_strs  = d["word_strs"]
         word_spans = d["word_spans"]
@@ -188,6 +199,9 @@ def select_word_targets(
         sdf = pd.read_csv(span_csv)
         note_spans = [s for s in sdf.get("note_span", pd.Series([], dtype=str)).fillna("").tolist()
                       if str(s).strip()]
+        if not note_spans:
+            n_zero_flagged_spans += 1
+            continue
         labels, valid, _, _, _ = build_word_labels(word_strs, note_spans)
 
         n_words = len(word_spans)
@@ -196,7 +210,9 @@ def select_word_targets(
         hallu_idx   = content_idx[labels[content_idx] == 1]
         faith_idx   = content_idx[labels[content_idx] == 0]
         if len(hallu_idx) == 0 or len(faith_idx) == 0:
+            n_zero_hallu_or_faith += 1
             continue
+        n_matched_notes += 1
 
         n_take = min(max_words_per_note, len(hallu_idx), len(faith_idx))
         hallu_pick = rng.choice(hallu_idx, size=n_take, replace=False)
@@ -211,6 +227,12 @@ def select_word_targets(
                     "word_tok_start": int(ws), "word_tok_end": int(we),
                     "label": label,
                 })
+
+    print(f"  [select_word_targets] {len(tok_files)} tok_files, {len(span_lookup)} span files "
+         f"found under {span_dir}")
+    print(f"  [select_word_targets] matched {n_matched_notes} notes; skipped: "
+         f"{n_no_span_csv} no-span-csv, {n_missing_npz_keys} missing-npz-keys, "
+         f"{n_zero_flagged_spans} zero-flagged-spans, {n_zero_hallu_or_faith} zero-hallu-or-faith")
 
     return pd.DataFrame(rows)
 
