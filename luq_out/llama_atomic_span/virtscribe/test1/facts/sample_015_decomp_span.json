@@ -1,0 +1,845 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Mrs. Wood.",
+        "spans": [
+          "Mrs. Wood"
+        ],
+        "span_offsets": [
+          [
+            18,
+            27
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presented with hematuria.",
+        "spans": [
+          "presented with hematuria"
+        ],
+        "span_offsets": [
+          [
+            29,
+            53
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of passing small stones.",
+        "spans": [
+          "history of passing two small stones"
+        ],
+        "span_offsets": [
+          [
+            60,
+            95
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient passed two small stones last week.",
+        "spans": [
+          "passing two small stones last week"
+        ],
+        "span_offsets": [
+          [
+            71,
+            105
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has had episodes of bright red urine for the past 6 weeks.",
+        "spans": [
+          "episodes of bright red urine for the past 6 weeks"
+        ],
+        "span_offsets": [
+          [
+            112,
+            161
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a constant urge to urinate.",
+        "spans": [
+          "constant urge to urinate"
+        ],
+        "span_offsets": [
+          [
+            166,
+            190
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is experiencing severe pain.",
+        "spans": [
+          "severe pain"
+        ],
+        "span_offsets": [
+          [
+            195,
+            206
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is rated an 8 out of 10.",
+        "spans": [
+          "rated an 8 out of 10"
+        ],
+        "span_offsets": [
+          [
+            208,
+            228
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Alavert.",
+        "spans": [
+          "taking Alavert"
+        ],
+        "span_offsets": [
+          [
+            243,
+            257
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Alavert 10 mg daily.",
+        "spans": [
+          "Alavert 10 mg daily"
+        ],
+        "span_offsets": [
+          [
+            250,
+            269
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's dose of Alavert is 10 mg.",
+        "spans": [
+          "10 mg"
+        ],
+        "span_offsets": [
+          [
+            258,
+            263
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's frequency of Alavert is daily.",
+        "spans": [
+          "daily"
+        ],
+        "span_offsets": [
+          [
+            264,
+            269
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no drug allergies.",
+        "spans": [
+          "no drug allergies"
+        ],
+        "span_offsets": [
+          [
+            275,
+            292
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's abdomen is normal.",
+        "spans": [
+          "The patient's abdomen was normal"
+        ],
+        "span_offsets": [
+          [
+            15,
+            47
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no flank pain.",
+        "spans": [
+          "with no flank pain"
+        ],
+        "span_offsets": [
+          [
+            49,
+            67
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's GU exam is normal.",
+        "spans": [
+          "the GU exam was normal"
+        ],
+        "span_offsets": [
+          [
+            73,
+            95
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's urine dipstick is negative for leukocytes.",
+        "spans": [
+          "negative for leukocytes"
+        ],
+        "span_offsets": [
+          [
+            135,
+            158
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's urine dipstick is negative for nitrates.",
+        "spans": [
+          "negative for nitrates"
+        ],
+        "span_offsets": [
+          [
+            135,
+            168
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's urine dipstick is negative for protein.",
+        "spans": [
+          "negative for protein"
+        ],
+        "span_offsets": [
+          [
+            98,
+            272
+          ]
+        ],
+        "span_match_methods": [
+          "semantic"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's urine dipstick is negative for ketones.",
+        "spans": [
+          "negative for ketones"
+        ],
+        "span_offsets": [
+          [
+            98,
+            272
+          ]
+        ],
+        "span_match_methods": [
+          "semantic"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's urine dipstick is negative for bilirubin.",
+        "spans": [
+          "negative for bilirubin"
+        ],
+        "span_offsets": [
+          [
+            98,
+            272
+          ]
+        ],
+        "span_match_methods": [
+          "semantic"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's urine pH is 5.5.",
+        "spans": [
+          "a pH of 5.5"
+        ],
+        "span_offsets": [
+          [
+            208,
+            219
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's urine specific gravity is 1.020.",
+        "spans": [
+          "specific gravity of 1.020"
+        ],
+        "span_offsets": [
+          [
+            221,
+            246
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's urine urobilinogen is 0.2.",
+        "spans": [
+          "urobilinogen of 0.2"
+        ],
+        "span_offsets": [
+          [
+            252,
+            271
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a 6 mm left renal stone.",
+        "spans": [
+          "a 6 mm left renal stone"
+        ],
+        "span_offsets": [
+          [
+            301,
+            324
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no stones in the right kidney.",
+        "spans": [
+          "no stones, masses, or hydronephrosis in the right kidney"
+        ],
+        "span_offsets": [
+          [
+            326,
+            382
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no masses in the right kidney.",
+        "spans": [
+          "no stones, masses, or hydronephrosis in the right kidney"
+        ],
+        "span_offsets": [
+          [
+            326,
+            382
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no hydronephrosis in the right kidney.",
+        "spans": [
+          "no stones, masses, or hydronephrosis in the right kidney"
+        ],
+        "span_offsets": [
+          [
+            326,
+            382
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's left kidney length is 10 cm x 5 cm.",
+        "spans": [
+          "a kidney length of 10 cm x 5 cm in the left kidney"
+        ],
+        "span_offsets": [
+          [
+            388,
+            438
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has hematuria.",
+        "spans": [
+          "The patient has hematuria due to a 6 mm nonobstructing left renal stone"
+        ],
+        "span_offsets": [
+          [
+            12,
+            83
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a 6 mm nonobstructing left renal stone.",
+        "spans": [
+          "a 6 mm nonobstructing left renal stone"
+        ],
+        "span_offsets": [
+          [
+            45,
+            83
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's hematuria is due to a left renal stone.",
+        "spans": [
+          "The patient has hematuria due to a 6 mm nonobstructing left renal stone"
+        ],
+        "span_offsets": [
+          [
+            12,
+            83
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has chronic urolithiasis.",
+        "spans": [
+          "Chronic urolithiasis"
+        ],
+        "span_offsets": [
+          [
+            111,
+            131
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was advised to drink 125 ounces of water per day.",
+        "spans": [
+          "drink 125 ounces of water per day"
+        ],
+        "span_offsets": [
+          [
+            25,
+            58
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid sugary drinks like Mountain Dew.",
+        "spans": [
+          "avoid sugary drinks like Mountain Dew"
+        ],
+        "span_offsets": [
+          [
+            63,
+            100
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid salty, processed foods high in sodium.",
+        "spans": [
+          "salty, processed foods high in sodium"
+        ],
+        "span_offsets": [
+          [
+            102,
+            139
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid foods rich in oxalate.",
+        "spans": [
+          "foods rich in oxalate"
+        ],
+        "span_offsets": [
+          [
+            145,
+            166
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid spinach.",
+        "spans": [
+          "spinach"
+        ],
+        "span_offsets": [
+          [
+            176,
+            183
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid chocolate.",
+        "spans": [
+          "chocolate"
+        ],
+        "span_offsets": [
+          [
+            185,
+            194
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid beets.",
+        "spans": [
+          "beets"
+        ],
+        "span_offsets": [
+          [
+            196,
+            201
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid rhubarb.",
+        "spans": [
+          "rhubarb"
+        ],
+        "span_offsets": [
+          [
+            203,
+            210
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to avoid soy products.",
+        "spans": [
+          "soy products"
+        ],
+        "span_offsets": [
+          [
+            216,
+            228
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was given a handout with dietary recommendations.",
+        "spans": [
+          "I also gave her a handout with dietary recommendations"
+        ],
+        "span_offsets": [
+          [
+            230,
+            284
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to call the office if she experiences any more issues.",
+        "spans": [
+          "instructed her to call the office if she experiences any more issues"
+        ],
+        "span_offsets": [
+          [
+            289,
+            357
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to go to the emergency room if she experiences severe pain.",
+        "spans": [
+          "to go to the emergency room if she experiences severe pain"
+        ],
+        "span_offsets": [
+          [
+            363,
+            421
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to go to the emergency room if she experiences bright red blood in her urine.",
+        "spans": [
+          "to go to the emergency room if she experiences severe pain or bright red blood in her urine"
+        ],
+        "span_offsets": [
+          [
+            363,
+            454
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "No medication was prescribed for the patient.",
+        "spans": [
+          "I prescribed no medication"
+        ],
+        "span_offsets": [
+          [
+            456,
+            482
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to follow up in a year unless she experiences any more issues.",
+        "spans": [
+          "to follow up in a year unless she experiences any more issues"
+        ],
+        "span_offsets": [
+          [
+            521,
+            582
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to call the office if she has any questions or concerns.",
+        "spans": [
+          "to call the office if she has any questions or concerns"
+        ],
+        "span_offsets": [
+          [
+            588,
+            643
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

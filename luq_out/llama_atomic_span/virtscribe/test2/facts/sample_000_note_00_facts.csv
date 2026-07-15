@@ -1,0 +1,34 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 20-year-old female.,0.0,"[""20-year-old female""]","[[10, 28]]","[""exact""]",True,False
+1,subjective,The patient has asthma.,0.0,"[""asthma""]","[[71, 77]]","[""exact""]",True,False
+2,subjective,The patient has allergic rhinitis.,0.0,"[""allergic rhinitis""]","[[79, 96]]","[""exact""]",True,False
+3,subjective,The patient has a food allergy.,0.0,"[""food allergy""]","[[102, 114]]","[""exact""]",True,False
+4,subjective,The patient is taking Wixela 250/50 twice a day.,0.5,"[""Wixela 250/50, twice a day""]","[[619, 645]]","[""exact""]",True,False
+5,subjective,The patient is taking Zyrtec as needed.,0.25,"[""Zyrtec, as needed""]","[[648, 665]]","[""exact""]",True,False
+6,subjective,The patient has a known peanut allergy.,0.0,"[""known peanut allergy""]","[[289, 309]]","[""exact""]",True,False
+7,subjective,The patient tolerates almonds.,0.0,"[""tolerates almonds and cashews""]","[[314, 343]]","[""exact""]",True,False
+8,subjective,The patient tolerates cashews.,0.0,"[""tolerates almonds and cashews""]","[[314, 343]]","[""exact""]",True,False
+9,subjective,The patient has been trying to reduce her use of her albuterol inhaler.,0.25,"[""has been trying to reduce her use of her albuterol inhaler""]","[[349, 407]]","[""exact""]",True,False
+10,subjective,The patient takes her albuterol inhaler only for strenuous activities.,0.5,"[""taking it only for strenuous activities""]","[[409, 448]]","[""exact""]",True,False
+11,subjective,The patient has a history of vaping.,0.5,"[""history of vaping and smoking""]","[[460, 489]]","[""exact""]",True,False
+12,subjective,The patient has a history of smoking.,0.5,"[""history of vaping and smoking""]","[[460, 489]]","[""exact""]",True,False
+13,subjective,The patient is currently trying to quit smoking and vaping.,0.5,"[""is currently trying to quit""]","[[494, 521]]","[""exact""]",True,False
+14,subjective,The patient's current medication regimen is well-tolerated.,0.0,"[""has been tolerating her current medication regimen well""]","[[137, 192]]","[""exact""]",True,False
+15,objective,The patient's ears had a little bit of wax on both sides.,0.25,"[""The patient's ears had a little bit of wax on both sides""]","[[15, 71]]","[""exact""]",True,False
+16,objective,The patient's lungs sounded terrific.,0.0,"[""her lungs sounded terrific""]","[[77, 103]]","[""exact""]",True,False
+17,objective,The patient's breathing test results are about the same as they were a couple of years ago.,0.5,"[""Her breathing test results are about the same as they were a couple of years ago""]","[[105, 185]]","[""exact""]",True,False
+18,objective,The patient's breathing test results look a little bit better.,0.75,"[""look a little bit better""]","[[190, 214]]","[""exact""]",True,False
+19,assessment,The patient's asthma is well-controlled.,0.0,"[""The patient's asthma is well-controlled, and she is tolerating her current medication regimen well""]","[[12, 110]]","[""exact""]",True,False
+20,assessment,The patient is tolerating her current medication regimen well.,0.5,"[""The patient's asthma is well-controlled, and she is tolerating her current medication regimen well""]","[[12, 110]]","[""exact""]",True,False
+21,assessment,The patient has a peanut allergy.,0.25,"[""Asthma; Allergic rhinitis; Food allergy; Peanut allergy.""]","[[126, 182]]","[""exact""]",True,False
+22,plan,The patient will be prescribed Alvesco 80 mcg.,0.0,"[""Alvesco 80 mcg""]","[[38, 52]]","[""exact""]",True,False
+23,plan,The patient's Alvesco prescription will be for two puffs twice a day.,0.0,"[""two puffs twice a day""]","[[54, 75]]","[""exact""]",True,False
+24,plan,The patient will continue using her albuterol inhaler as needed.,0.0,"[""continue using her albuterol inhaler as needed""]","[[105, 151]]","[""exact""]",True,False
+25,plan,The patient's albuterol inhaler prescription will be continued.,0.0,"[""continue using her albuterol inhaler as needed""]","[[105, 151]]","[""exact""]",True,False
+26,plan,The patient will have her epipen prescription renewed.,0.0,"[""renew her epipen""]","[[165, 181]]","[""exact""]",True,False
+27,plan,The patient will have her Zyrtec prescription renewed.,1.0,"[""renew her Zyrtec prescription""]","[[186, 205]]","[""word""]",True,False
+28,plan,The patient is advised to avoid peanuts.,0.0,"[""stay away from peanuts and tree nuts""]","[[250, 286]]","[""exact""]",True,False
+29,plan,The patient is advised to avoid tree nuts.,0.0,"[""stay away from peanuts and tree nuts""]","[[250, 286]]","[""exact""]",True,False
+30,plan,The patient will return in four months for a follow-up appointment.,0.0,"[""The patient will return in four months for a follow-up appointment""]","[[300, 366]]","[""exact""]",True,False
+31,plan,The patient's breathing test will be repeated at the follow-up appointment.,0.0,"[""repeat her breathing test""]","[[370, 395]]","[""exact""]",True,False
+32,plan,The patient's asthma control will be assessed at the follow-up appointment.,0.0,"[""assess her asthma control""]","[[400, 425]]","[""exact""]",True,False

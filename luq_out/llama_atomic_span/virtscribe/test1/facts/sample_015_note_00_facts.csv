@@ -1,0 +1,50 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Mrs. Wood.,0.25,"[""Mrs. Wood""]","[[18, 27]]","[""exact""]",True,False
+1,subjective,The patient presented with hematuria.,0.0,"[""presented with hematuria""]","[[29, 53]]","[""exact""]",True,False
+2,subjective,The patient has a history of passing small stones.,0.0,"[""history of passing two small stones""]","[[60, 95]]","[""exact""]",True,False
+3,subjective,The patient passed two small stones last week.,0.0,"[""passing two small stones last week""]","[[71, 105]]","[""exact""]",True,False
+4,subjective,The patient has had episodes of bright red urine for the past 6 weeks.,0.0,"[""episodes of bright red urine for the past 6 weeks""]","[[112, 161]]","[""exact""]",True,False
+5,subjective,The patient has a constant urge to urinate.,0.5,"[""constant urge to urinate""]","[[166, 190]]","[""exact""]",True,False
+6,subjective,The patient is experiencing severe pain.,0.0,"[""severe pain""]","[[195, 206]]","[""exact""]",True,False
+7,subjective,The patient's pain is rated an 8 out of 10.,0.0,"[""rated an 8 out of 10""]","[[208, 228]]","[""exact""]",True,False
+8,subjective,The patient is taking Alavert.,0.0,"[""taking Alavert""]","[[243, 257]]","[""exact""]",True,False
+9,subjective,The patient is taking Alavert 10 mg daily.,0.0,"[""Alavert 10 mg daily""]","[[250, 269]]","[""exact""]",True,False
+10,subjective,The patient's dose of Alavert is 10 mg.,0.0,"[""10 mg""]","[[258, 263]]","[""exact""]",True,False
+11,subjective,The patient's frequency of Alavert is daily.,0.0,"[""daily""]","[[264, 269]]","[""exact""]",True,False
+12,subjective,The patient has no drug allergies.,0.5,"[""no drug allergies""]","[[275, 292]]","[""exact""]",True,False
+13,objective,The patient's abdomen is normal.,0.0,"[""The patient's abdomen was normal""]","[[15, 47]]","[""exact""]",True,False
+14,objective,The patient has no flank pain.,0.0,"[""with no flank pain""]","[[49, 67]]","[""exact""]",True,False
+15,objective,The patient's GU exam is normal.,0.5,"[""the GU exam was normal""]","[[73, 95]]","[""exact""]",True,False
+16,objective,The patient's urine dipstick is negative for leukocytes.,0.0,"[""negative for leukocytes""]","[[135, 158]]","[""exact""]",True,False
+17,objective,The patient's urine dipstick is negative for nitrates.,0.0,"[""negative for nitrates""]","[[135, 168]]","[""word""]",True,False
+18,objective,The patient's urine dipstick is negative for protein.,0.0,"[""negative for protein""]","[[98, 272]]","[""semantic""]",True,False
+19,objective,The patient's urine dipstick is negative for ketones.,0.0,"[""negative for ketones""]","[[98, 272]]","[""semantic""]",True,False
+20,objective,The patient's urine dipstick is negative for bilirubin.,0.0,"[""negative for bilirubin""]","[[98, 272]]","[""semantic""]",True,False
+21,objective,The patient's urine pH is 5.5.,0.0,"[""a pH of 5.5""]","[[208, 219]]","[""exact""]",True,False
+22,objective,The patient's urine specific gravity is 1.020.,0.0,"[""specific gravity of 1.020""]","[[221, 246]]","[""exact""]",True,False
+23,objective,The patient's urine urobilinogen is 0.2.,0.0,"[""urobilinogen of 0.2""]","[[252, 271]]","[""exact""]",True,False
+24,objective,The patient has a 6 mm left renal stone.,0.0,"[""a 6 mm left renal stone""]","[[301, 324]]","[""exact""]",True,False
+25,objective,The patient has no stones in the right kidney.,0.0,"[""no stones, masses, or hydronephrosis in the right kidney""]","[[326, 382]]","[""exact""]",True,False
+26,objective,The patient has no masses in the right kidney.,0.0,"[""no stones, masses, or hydronephrosis in the right kidney""]","[[326, 382]]","[""exact""]",True,False
+27,objective,The patient has no hydronephrosis in the right kidney.,0.5,"[""no stones, masses, or hydronephrosis in the right kidney""]","[[326, 382]]","[""exact""]",True,False
+28,objective,The patient's left kidney length is 10 cm x 5 cm.,1.0,"[""a kidney length of 10 cm x 5 cm in the left kidney""]","[[388, 438]]","[""exact""]",True,False
+29,assessment,The patient has hematuria.,0.0,"[""The patient has hematuria due to a 6 mm nonobstructing left renal stone""]","[[12, 83]]","[""exact""]",True,False
+30,assessment,The patient has a 6 mm nonobstructing left renal stone.,0.75,"[""a 6 mm nonobstructing left renal stone""]","[[45, 83]]","[""exact""]",True,False
+31,assessment,The patient's hematuria is due to a left renal stone.,0.25,"[""The patient has hematuria due to a 6 mm nonobstructing left renal stone""]","[[12, 83]]","[""exact""]",True,False
+32,assessment,The patient has chronic urolithiasis.,0.0,"[""Chronic urolithiasis""]","[[111, 131]]","[""exact""]",True,False
+33,plan,The patient was advised to drink 125 ounces of water per day.,0.0,"[""drink 125 ounces of water per day""]","[[25, 58]]","[""exact""]",True,False
+34,plan,The patient was advised to avoid sugary drinks like Mountain Dew.,0.0,"[""avoid sugary drinks like Mountain Dew""]","[[63, 100]]","[""exact""]",True,False
+35,plan,"The patient was advised to avoid salty, processed foods high in sodium.",0.0,"[""salty, processed foods high in sodium""]","[[102, 139]]","[""exact""]",True,False
+36,plan,The patient was advised to avoid foods rich in oxalate.,0.0,"[""foods rich in oxalate""]","[[145, 166]]","[""exact""]",True,False
+37,plan,The patient was advised to avoid spinach.,0.25,"[""spinach""]","[[176, 183]]","[""exact""]",True,False
+38,plan,The patient was advised to avoid chocolate.,0.75,"[""chocolate""]","[[185, 194]]","[""exact""]",True,False
+39,plan,The patient was advised to avoid beets.,0.5,"[""beets""]","[[196, 201]]","[""exact""]",True,False
+40,plan,The patient was advised to avoid rhubarb.,0.25,"[""rhubarb""]","[[203, 210]]","[""exact""]",True,False
+41,plan,The patient was advised to avoid soy products.,0.75,"[""soy products""]","[[216, 228]]","[""exact""]",True,False
+42,plan,The patient was given a handout with dietary recommendations.,0.0,"[""I also gave her a handout with dietary recommendations""]","[[230, 284]]","[""exact""]",True,False
+43,plan,The patient was instructed to call the office if she experiences any more issues.,0.0,"[""instructed her to call the office if she experiences any more issues""]","[[289, 357]]","[""exact""]",True,False
+44,plan,The patient was instructed to go to the emergency room if she experiences severe pain.,0.5,"[""to go to the emergency room if she experiences severe pain""]","[[363, 421]]","[""exact""]",True,False
+45,plan,The patient was instructed to go to the emergency room if she experiences bright red blood in her urine.,0.75,"[""to go to the emergency room if she experiences severe pain or bright red blood in her urine""]","[[363, 454]]","[""exact""]",True,False
+46,plan,No medication was prescribed for the patient.,0.0,"[""I prescribed no medication""]","[[456, 482]]","[""exact""]",True,False
+47,plan,The patient was instructed to follow up in a year unless she experiences any more issues.,0.0,"[""to follow up in a year unless she experiences any more issues""]","[[521, 582]]","[""exact""]",True,False
+48,plan,The patient was instructed to call the office if she has any questions or concerns.,1.0,"[""to call the office if she has any questions or concerns""]","[[588, 643]]","[""exact""]",True,False

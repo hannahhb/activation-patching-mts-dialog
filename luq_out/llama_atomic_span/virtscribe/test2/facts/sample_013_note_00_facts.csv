@@ -1,0 +1,66 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Emily Hernandez.,0.75,"[""Emily Hernandez""]","[[5, 20]]","[""exact""]",True,False
+1,subjective,The patient is a 20-year-old female.,0.0,"[""a 20-year-old female""]","[[22, 42]]","[""exact""]",True,False
+2,subjective,The patient presents for her yearly follow-up for asthma.,0.0,"[""for her yearly follow-up for asthma, allergic rhinitis, and food allergy""]","[[53, 125]]","[""exact""]",True,False
+3,subjective,The patient presents for her yearly follow-up for allergic rhinitis.,0.0,"[""for her yearly follow-up for asthma, allergic rhinitis, and food allergy""]","[[53, 125]]","[""exact""]",True,False
+4,subjective,The patient presents for her yearly follow-up for food allergy.,0.0,"[""for her yearly follow-up for asthma, allergic rhinitis, and food allergy""]","[[53, 125]]","[""exact""]",True,False
+5,subjective,The patient uses Wixela 250/50 dose.,0.0,"[""Wixela 250/50 dose""]","[[146, 164]]","[""exact""]",True,False
+6,subjective,The patient takes one puff of Wixela in the morning.,1.0,"[""one puff in the morning""]","[[166, 189]]","[""exact""]",True,False
+7,subjective,The patient takes one puff of Wixela at night.,0.75,"[""one puff at night""]","[[194, 211]]","[""exact""]",True,False
+8,subjective,The patient uses Wixela 3-4 days a week.,0.75,"[""for approximately 3-4 days a week""]","[[213, 246]]","[""exact""]",True,False
+9,subjective,"The patient uses Wixela on the remaining days, taking one puff.",0.75,"[""with the remaining days taking one puff""]","[[248, 287]]","[""exact""]",True,False
+10,subjective,The patient uses her albuterol inhaler rarely.,0.75,"[""She uses her albuterol inhaler rarely""]","[[289, 326]]","[""exact""]",True,False
+11,subjective,The patient uses her albuterol inhaler for exertional activities.,0.75,"[""only for exertional activities""]","[[328, 358]]","[""exact""]",True,False
+12,subjective,The patient has a known peanut allergy.,0.0,"[""a known peanut allergy""]","[[368, 390]]","[""exact""]",True,False
+13,subjective,The patient tolerates almonds.,0.0,"[""tolerates almonds and cashews""]","[[396, 425]]","[""exact""]",True,False
+14,subjective,The patient tolerates cashews.,0.0,"[""tolerates almonds and cashews""]","[[396, 425]]","[""exact""]",True,False
+15,subjective,The patient uses Zyrtec as needed.,0.0,"[""She has been using Zyrtec as needed""]","[[427, 462]]","[""exact""]",True,False
+16,subjective,The patient uses Zyrtec particularly during the spring and fall.,0.0,"[""particularly during the spring and fall""]","[[464, 503]]","[""exact""]",True,False
+17,subjective,The patient uses Zyrtec for seasonal allergy symptoms.,0.0,"[""for seasonal allergy symptoms""]","[[505, 534]]","[""exact""]",True,False
+18,subjective,The patient has a history of vaping.,0.5,"[""a history of vaping and smoking""]","[[544, 575]]","[""exact""]",True,False
+19,subjective,The patient has a history of smoking.,0.5,"[""a history of vaping and smoking""]","[[544, 575]]","[""exact""]",True,False
+20,subjective,The patient has been trying to cut back on vaping and smoking.,0.5,"[""but has been trying to cut back""]","[[577, 608]]","[""exact""]",True,False
+21,subjective,The patient has an Epipen for emergencies.,0.25,"[""She has an Epipen for emergencies""]","[[610, 643]]","[""exact""]",True,False
+22,subjective,The patient has a history of asthma.,0.0,"[""a history of asthma, allergic rhinitis, and food allergy""]","[[678, 734]]","[""exact""]",True,False
+23,subjective,The patient has a history of allergic rhinitis.,0.0,"[""a history of asthma, allergic rhinitis, and food allergy""]","[[678, 734]]","[""exact""]",True,False
+24,subjective,The patient has a history of food allergy.,0.0,"[""a history of asthma, allergic rhinitis, and food allergy""]","[[678, 734]]","[""exact""]",True,False
+25,subjective,The patient was switched from Symbicort to Wixela due to insurance changes.,0.0,"[""She was switched from Symbicort to Wixela due to insurance changes""]","[[736, 802]]","[""exact""]",True,False
+26,subjective,The patient was switched from Symbicort to Wixela in April 2020.,0.25,"[""in April 2020""]","[[803, 816]]","[""exact""]",True,False
+27,subjective,The patient has been using Zyrtec for seasonal allergy symptoms.,0.0,"[""She has been using Zyrtec for seasonal allergy symptoms""]","[[818, 873]]","[""exact""]",True,False
+28,subjective,The patient has not had any urgent care or ER visits for breathing issues in the past year.,0.25,"[""Emily has not had any urgent care or ER visits for breathing issues in the past year""]","[[895, 979]]","[""exact""]",True,False
+29,subjective,The patient's current medication is Wixela 250/50 dose.,0.0,"[""Wixela 250/50 dose, one puff in the morning and one puff at night, 3-4 days a week""]","[[1003, 1085]]","[""exact""]",True,False
+30,subjective,The patient's current medication is albuterol inhaler as needed.,0.75,"[""albuterol inhaler as needed""]","[[1087, 1114]]","[""exact""]",True,False
+31,subjective,The patient's current medication is Zyrtec as needed for seasonal allergy symptoms.,0.0,"[""Zyrtec as needed for seasonal allergy symptoms""]","[[1116, 1162]]","[""exact""]",True,False
+32,subjective,The patient's current medication is Epipen for emergencies.,0.5,"[""Epipen for emergencies""]","[[621, 643]]","[""exact""]",True,False
+33,objective,The patient's ears looked good.,0.5,"[""The patient's ears looked good""]","[[15, 45]]","[""exact""]",True,False
+34,objective,The patient has some wax on both sides of her ears.,0.5,"[""some wax on both sides""]","[[51, 73]]","[""exact""]",True,False
+35,objective,The patient's lungs sounded terrific.,0.0,"[""they sounded terrific""]","[[112, 133]]","[""exact""]",True,False
+36,objective,The patient's heart was examined.,0.75,"[""The doctor also listened to her heart""]","[[135, 172]]","[""exact""]",True,False
+37,objective,The patient's breathing test results were similar to those from 2 years ago.,0.25,"[""her breathing test results were similar to those from 2 years ago""]","[[188, 253]]","[""exact""]",True,False
+38,objective,The patient's breathing test results were slightly better than those from 2 years ago.,0.25,"[""but slightly better""]","[[255, 274]]","[""exact""]",True,False
+39,assessment,The patient's asthma appears to be well-controlled.,0.0,"[""The patient's asthma appears to be well-controlled""]","[[12, 62]]","[""exact""]",True,False
+40,assessment,The patient has minimal symptoms of asthma.,0.0,"[""with minimal symptoms""]","[[64, 85]]","[""exact""]",True,False
+41,assessment,The patient has not had any urgent care visits for asthma in the past year.,1.0,"[""no urgent care or ER visits in the past year""]","[[90, 134]]","[""exact""]",True,False
+42,assessment,The patient has not had any ER visits for asthma in the past year.,1.0,"[""no urgent care or ER visits in the past year""]","[[90, 134]]","[""exact""]",True,False
+43,assessment,The patient has asthma.,0.0,"[""Asthma, active""]","[[151, 165]]","[""exact""]",True,False
+44,assessment,The patient's asthma is active.,1.0,"[""Asthma, active""]","[[151, 165]]","[""exact""]",True,False
+45,assessment,The patient has allergic rhinitis.,0.0,"[""Allergic rhinitis, active""]","[[167, 192]]","[""exact""]",True,False
+46,assessment,The patient's allergic rhinitis is active.,1.0,"[""Allergic rhinitis, active""]","[[167, 192]]","[""exact""]",True,False
+47,assessment,The patient has a food allergy.,0.0,"[""Food allergy, active""]","[[194, 214]]","[""exact""]",True,False
+48,assessment,The patient's food allergy is active.,0.5,"[""Food allergy, active""]","[[194, 214]]","[""exact""]",True,False
+49,plan,The patient was prescribed Alvesco.,0.0,"[""I prescribed Alvesco 80 mcg, two puffs twice a day, to be used as a step-down therapy""]","[[0, 85]]","[""exact""]",True,False
+50,plan,The patient's Alvesco dose is 80 mcg.,0.0,"[""80 mcg""]","[[21, 27]]","[""exact""]",True,False
+51,plan,The patient's Alvesco frequency is two puffs twice a day.,0.0,"[""two puffs twice a day""]","[[29, 50]]","[""exact""]",True,False
+52,plan,The patient's Alvesco indication is as a step-down therapy.,1.0,"[""to be used as a step-down therapy""]","[[52, 85]]","[""exact""]",True,False
+53,plan,The patient will continue to use her albuterol inhaler.,0.0,"[""The patient will continue to use her albuterol inhaler as needed""]","[[87, 151]]","[""exact""]",True,False
+54,plan,The patient's albuterol inhaler is used as needed.,0.5,"[""as needed""]","[[142, 151]]","[""exact""]",True,False
+55,plan,The patient will continue to use Zyrtec.,0.0,"[""Zyrtec as needed for seasonal allergy symptoms""]","[[156, 202]]","[""exact""]",True,False
+56,plan,The patient's Zyrtec is used as needed.,0.0,"[""as needed""]","[[142, 151]]","[""exact""]",True,False
+57,plan,The patient's Zyrtec indication is for seasonal allergy symptoms.,0.0,"[""for seasonal allergy symptoms""]","[[173, 202]]","[""exact""]",True,False
+58,plan,The patient will continue to avoid peanuts.,0.25,"[""avoid peanuts and tree nuts""]","[[230, 257]]","[""exact""]",True,False
+59,plan,The patient will continue to avoid tree nuts.,0.25,"[""avoid peanuts and tree nuts""]","[[230, 257]]","[""exact""]",True,False
+60,plan,The patient's Epipen will be refilled.,0.0,"[""I will refill her Epipen""]","[[259, 283]]","[""exact""]",True,False
+61,plan,The patient's albuterol inhaler will be refilled.,0.0,"[""I will refill her Epipen and albuterol inhaler""]","[[259, 305]]","[""exact""]",True,False
+62,plan,The patient will return in 4 months for a follow-up.,0.0,"[""The patient will return in 4 months""]","[[319, 354]]","[""exact""]",True,False
+63,plan,The patient's follow-up will include a repeat breathing test.,0.0,"[""for a repeat breathing test""]","[[355, 382]]","[""exact""]",True,False
+64,plan,The patient's follow-up will assess her response to the Alvesco therapy.,0.0,"[""to assess her response to the Alvesco therapy""]","[[387, 432]]","[""exact""]",True,False

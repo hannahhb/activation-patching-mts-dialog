@@ -1,0 +1,38 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,"The patient, Mr. Roberts, is a 49-year-old male.",0.0,"[""Mr. Roberts is a 49-year-old male""]","[[5, 38]]","[""exact""]",True,False
+1,subjective,The patient has a history of hypertension.,0.0,"[""a history of hypertension""]","[[44, 69]]","[""exact""]",True,False
+2,subjective,The patient has a history of palpitations.,0.0,"[""a history of hypertension and palpitations""]","[[44, 86]]","[""exact""]",True,False
+3,subjective,The patient presented to the emergency room in March with high blood pressure.,0.75,"[""presented to the emergency room in March with high blood pressure""]","[[91, 156]]","[""exact""]",True,False
+4,subjective,The patient presented to the emergency room in March with palpitations.,0.75,"[""presented to the emergency room in March with high blood pressure and palpitations""]","[[91, 173]]","[""exact""]",True,False
+5,subjective,The patient attributed his symptoms to a panic attack triggered by caffeine consumption.,0.0,"[""attributed to a panic attack triggered by caffeine consumption""]","[[184, 246]]","[""exact""]",True,False
+6,subjective,The patient attributed his symptoms to a panic attack triggered by lack of breakfast.,0.0,"[""attributed to a panic attack triggered by caffeine consumption and lack of breakfast""]","[[184, 268]]","[""exact""]",True,False
+7,subjective,The patient has a family history of hypertension.,0.0,"[""a family history of hypertension""]","[[277, 309]]","[""exact""]",True,False
+8,subjective,The patient is taking Benicar HCT (hydrochlorothiazide).,0.0,"[""Benicar HCT (hydrochlorothiazide)""]","[[368, 401]]","[""exact""]",True,False
+9,subjective,The patient is taking amlodipine.,0.0,"[""amlodipine""]","[[406, 416]]","[""exact""]",True,False
+10,subjective,The patient's blood pressure has been running at 146-155 mmHg.,0.25,"[""His blood pressure has been running at 146-155 mmHg""]","[[418, 469]]","[""exact""]",True,False
+11,subjective,The patient takes his medications as prescribed.,0.25,"[""despite taking his medications as prescribed""]","[[471, 515]]","[""exact""]",True,False
+12,subjective,The patient's current medication is Amlodipine.,0.25,"[""Amlodipine 10 milligrams daily""]","[[649, 679]]","[""exact""]",True,False
+13,subjective,The patient's Amlodipine dose is 10 milligrams daily.,0.0,"[""10 milligrams daily""]","[[660, 679]]","[""exact""]",True,False
+14,subjective,The patient's current medication is Benicar HCT (hydrochlorothiazide).,0.25,"[""Benicar HCT (hydrochlorothiazide) 40-25 milligrams daily""]","[[681, 737]]","[""exact""]",True,False
+15,subjective,The patient's Benicar HCT (hydrochlorothiazide) dose is 40-25 milligrams daily.,0.5,"[""40-25 milligrams daily""]","[[715, 737]]","[""exact""]",True,False
+16,objective,The patient's heart sounds are good.,0.0,"[""The patient's heart and lungs sound good""]","[[15, 55]]","[""exact""]",True,False
+17,objective,The patient's lungs sound good.,0.0,"[""The patient's heart and lungs sound good""]","[[15, 55]]","[""exact""]",True,False
+18,objective,The patient has no swelling in the ankles.,0.25,"[""No swelling in the ankles and feet""]","[[57, 91]]","[""exact""]",True,False
+19,objective,The patient has no swelling in the feet.,0.25,"[""No swelling in the ankles and feet""]","[[57, 91]]","[""exact""]",True,False
+20,assessment,Mr. Roberts presents with resistant hypertension.,0.0,"[""Mr. Roberts presents with resistant hypertension""]","[[12, 60]]","[""exact""]",True,False
+21,assessment,Mr. Roberts is being treated with maximum doses of three medications for hypertension.,1.0,"[""despite being on maximum doses of three medications""]","[[62, 113]]","[""exact""]",True,False
+22,assessment,The patient has hypertension.,0.0,"[""Hypertension""]","[[130, 142]]","[""exact""]",True,False
+23,assessment,The patient has resistant hypertension.,0.0,"[""Resistant Hypertension""]","[[144, 166]]","[""exact""]",True,False
+24,plan,The patient has been prescribed spironolactone.,0.0,"[""I have added spironolactone to his medication regimen""]","[[0, 53]]","[""exact""]",True,False
+25,plan,The patient is taking spironolactone to address potential aldosterone-driven hypertension.,1.0,"[""to address potential aldosterone-driven hypertension""]","[[54, 106]]","[""exact""]",True,False
+26,plan,"The patient has been informed of the potential risks of spironolactone, including electrolyte disturbances.",0.25,"[""electrolyte disturbances""]","[[191, 215]]","[""exact""]",True,False
+27,plan,"The patient has been informed of the potential risks of spironolactone, including dehydration.",0.75,"[""dehydration""]","[[217, 228]]","[""exact""]",True,False
+28,plan,"The patient has been informed of the potential risks of spironolactone, including gynecomastia.",0.25,"[""gynecomastia""]","[[234, 246]]","[""exact""]",True,False
+29,plan,The patient has been instructed to hydrate regularly.,0.5,"[""hydrate regularly""]","[[278, 295]]","[""exact""]",True,False
+30,plan,The patient has been instructed to monitor his electrolyte levels.,0.0,"[""monitor his electrolyte levels""]","[[300, 330]]","[""exact""]",True,False
+31,plan,The patient is scheduled for a follow-up appointment in two weeks.,0.0,"[""We will schedule a follow-up appointment in two weeks""]","[[332, 385]]","[""exact""]",True,False
+32,plan,The patient's blood pressure will be checked at the follow-up appointment.,0.0,"[""check his blood pressure""]","[[389, 413]]","[""exact""]",True,False
+33,plan,The patient's electrolytes will be checked at the follow-up appointment.,0.0,"[""check his blood pressure and electrolytes""]","[[389, 430]]","[""exact""]",True,False
+34,plan,"If spironolactone does not work, the patient will be considered for referral to the resistant hypertension clinic.",0.25,"[""If the medication does not work, we will consider referring him to the resistant hypertension clinic""]","[[432, 532]]","[""exact""]",True,False
+35,plan,The patient may undergo further evaluation at the resistant hypertension clinic.,0.25,"[""further evaluation and potential treatment""]","[[537, 579]]","[""exact""]",True,False
+36,plan,The patient may undergo the renal denervation procedure as a potential treatment.,0.75,"[""the renal denervation procedure""]","[[591, 622]]","[""exact""]",True,False

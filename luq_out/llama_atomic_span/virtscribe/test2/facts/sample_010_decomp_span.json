@@ -1,0 +1,675 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "Miss Ross is a 25-year-old female.",
+        "spans": [
+          "25-year-old female"
+        ],
+        "span_offsets": [
+          [
+            20,
+            38
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Miss Ross presents with symptoms of discomfort in her vaginal region.",
+        "spans": [
+          "symptoms of discomfort, change in discharge, and odor in her vaginal region"
+        ],
+        "span_offsets": [
+          [
+            55,
+            130
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Miss Ross presents with a change in discharge in her vaginal region.",
+        "spans": [
+          "symptoms of discomfort, change in discharge, and odor in her vaginal region"
+        ],
+        "span_offsets": [
+          [
+            55,
+            130
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Miss Ross presents with odor in her vaginal region.",
+        "spans": [
+          "symptoms of discomfort, change in discharge, and odor in her vaginal region"
+        ],
+        "span_offsets": [
+          [
+            55,
+            130
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The right side of Miss Ross's vagina has become painful.",
+        "spans": [
+          "the right side of her vagina has become painful"
+        ],
+        "span_offsets": [
+          [
+            149,
+            196
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Miss Ross denies any fevers.",
+        "spans": [
+          "She denies any fevers or chills"
+        ],
+        "span_offsets": [
+          [
+            198,
+            229
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Miss Ross denies any chills.",
+        "spans": [
+          "She denies any fevers or chills"
+        ],
+        "span_offsets": [
+          [
+            198,
+            229
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Miss Ross's partner has been in sexual encounters with other people.",
+        "spans": [
+          "her partner has been in sexual encounters with other people"
+        ],
+        "span_offsets": [
+          [
+            257,
+            316
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Miss Ross is seeking evaluation for all STDs.",
+        "spans": [
+          "prompting her to seek evaluation for all STDs"
+        ],
+        "span_offsets": [
+          [
+            318,
+            363
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Miss Ross has a past abnormal pap smear.",
+        "spans": [
+          "past abnormal pap smear"
+        ],
+        "span_offsets": [
+          [
+            406,
+            429
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Miss Ross's past abnormal pap smear occurred at age 20.",
+        "spans": [
+          "at age 20"
+        ],
+        "span_offsets": [
+          [
+            430,
+            439
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Miss Ross has not had a pap smear since age 20.",
+        "spans": [
+          "but has not had a pap smear since then"
+        ],
+        "span_offsets": [
+          [
+            441,
+            479
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's pelvic exam demonstrates no external lesions.",
+        "spans": [
+          "no external lesions"
+        ],
+        "span_offsets": [
+          [
+            44,
+            63
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has normal labia majora.",
+        "spans": [
+          "normal labia majora and minora"
+        ],
+        "span_offsets": [
+          [
+            65,
+            95
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has normal labia minora.",
+        "spans": [
+          "normal labia majora and minora"
+        ],
+        "span_offsets": [
+          [
+            65,
+            95
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has normal physiological discharge.",
+        "spans": [
+          "normal physiological discharge"
+        ],
+        "span_offsets": [
+          [
+            97,
+            127
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's physiological discharge has a normal color.",
+        "spans": [
+          "normal color"
+        ],
+        "span_offsets": [
+          [
+            133,
+            145
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's physiological discharge has a normal smell.",
+        "spans": [
+          "normal smell"
+        ],
+        "span_offsets": [
+          [
+            133,
+            155
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's cervix is normal.",
+        "spans": [
+          "The cervix is normal"
+        ],
+        "span_offsets": [
+          [
+            157,
+            177
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's vaginal wall is normal.",
+        "spans": [
+          "vaginal wall is normal"
+        ],
+        "span_offsets": [
+          [
+            179,
+            201
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no cervical motion tenderness.",
+        "spans": [
+          "no cervical motion tenderness"
+        ],
+        "span_offsets": [
+          [
+            203,
+            232
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no adnexal tenderness.",
+        "spans": [
+          "no adnexal tenderness or masses noted"
+        ],
+        "span_offsets": [
+          [
+            238,
+            275
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no adnexal masses.",
+        "spans": [
+          "no adnexal tenderness or masses noted"
+        ],
+        "span_offsets": [
+          [
+            238,
+            275
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient is at high risk for STDs.",
+        "spans": [
+          "The patient is at high risk for STDs due to an abnormal past pap smear and her partner's history of multiple sexual partners"
+        ],
+        "span_offsets": [
+          [
+            12,
+            136
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has an abnormal past pap smear.",
+        "spans": [
+          "an abnormal past pap smear"
+        ],
+        "span_offsets": [
+          [
+            56,
+            82
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's partner has a history of multiple sexual partners.",
+        "spans": [
+          "her partner's history of multiple sexual partners"
+        ],
+        "span_offsets": [
+          [
+            87,
+            136
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's problem list includes STD risk.",
+        "spans": [
+          "STD risk; abnormal past pap smear; high risk for STDs"
+        ],
+        "span_offsets": [
+          [
+            153,
+            206
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's problem list includes abnormal past pap smear.",
+        "spans": [
+          "STD risk; abnormal past pap smear; high risk for STDs"
+        ],
+        "span_offsets": [
+          [
+            153,
+            206
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's problem list includes high risk for STDs.",
+        "spans": [
+          "STD risk; abnormal past pap smear; high risk for STDs"
+        ],
+        "span_offsets": [
+          [
+            153,
+            206
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was ordered STD testing for gonorrhea.",
+        "spans": [
+          "STD testing for gonorrhea, chlamydia, trichomonas, and blood tests for syphilis, HIV, and hepatitis C"
+        ],
+        "span_offsets": [
+          [
+            42,
+            143
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was ordered STD testing for chlamydia.",
+        "spans": [
+          "STD testing for gonorrhea, chlamydia, trichomonas, and blood tests for syphilis, HIV, and hepatitis C"
+        ],
+        "span_offsets": [
+          [
+            42,
+            143
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was ordered STD testing for trichomonas.",
+        "spans": [
+          "STD testing for gonorrhea, chlamydia, trichomonas, and blood tests for syphilis, HIV, and hepatitis C"
+        ],
+        "span_offsets": [
+          [
+            42,
+            143
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was ordered blood tests for syphilis.",
+        "spans": [
+          "STD testing for gonorrhea, chlamydia, trichomonas, and blood tests for syphilis, HIV, and hepatitis C"
+        ],
+        "span_offsets": [
+          [
+            42,
+            143
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was ordered blood tests for HIV.",
+        "spans": [
+          "STD testing for gonorrhea, chlamydia, trichomonas, and blood tests for syphilis, HIV, and hepatitis C"
+        ],
+        "span_offsets": [
+          [
+            42,
+            143
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was ordered blood tests for hepatitis C.",
+        "spans": [
+          "STD testing for gonorrhea, chlamydia, trichomonas, and blood tests for syphilis, HIV, and hepatitis C"
+        ],
+        "span_offsets": [
+          [
+            42,
+            143
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to call the office in 3 days for results.",
+        "spans": [
+          "to call the office in 3 days for results"
+        ],
+        "span_offsets": [
+          [
+            170,
+            210
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to call the office earlier if she receives a call from the office.",
+        "spans": [
+          "or earlier if she receives a call from the office"
+        ],
+        "span_offsets": [
+          [
+            212,
+            261
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will follow up in 3 days for results.",
+        "spans": [
+          "The patient will follow up in 3 days for results"
+        ],
+        "span_offsets": [
+          [
+            275,
+            323
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will follow up at her next annual checkup if all results are normal.",
+        "spans": [
+          "or at her next annual checkup if all results are normal"
+        ],
+        "span_offsets": [
+          [
+            325,
+            380
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,54 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Mr. Nelson.,0.25,"[""Mr. Nelson""]","[[18, 28]]","[""exact""]",True,False
+1,subjective,The patient is a 73-year-old male.,0.75,"[""a 73-year-old male""]","[[30, 48]]","[""exact""]",True,False
+2,subjective,The patient has rheumatoid arthritis.,0.0,"[""rheumatoid arthritis""]","[[86, 106]]","[""exact""]",True,False
+3,subjective,The patient's right knee has been swollen for approximately 2 months.,0.5,"[""his right knee has been swollen for approximately 2 months""]","[[124, 182]]","[""exact""]",True,False
+4,subjective,The patient's pain level ranges from 3 to 6 out of 10.,0.25,"[""pain level ranging from 3 to 6 out of 10""]","[[189, 229]]","[""exact""]",True,False
+5,subjective,The patient has tried compression socks.,0.25,"[""He has tried compression socks""]","[[231, 261]]","[""exact""]",True,False
+6,subjective,Compression socks provide some relief to the patient but not complete resolution.,0.5,"[""which provide some relief but not complete resolution""]","[[263, 316]]","[""exact""]",True,False
+7,subjective,The patient experiences stiffness.,0.0,"[""He experiences stiffness""]","[[318, 342]]","[""exact""]",True,False
+8,subjective,The patient experiences stiffness particularly when getting up from a seated position.,0.0,"[""particularly when getting up from a seated position""]","[[344, 395]]","[""exact""]",True,False
+9,subjective,The patient requires a cane for support.,0.0,"[""and requires a cane for support""]","[[397, 428]]","[""exact""]",True,False
+10,subjective,The patient takes Xeljanz.,0.0,"[""Xeljanz (11 mg daily)""]","[[449, 470]]","[""exact""]",True,False
+11,subjective,The patient takes Xeljanz 11 mg daily.,0.0,"[""11 mg daily""]","[[458, 469]]","[""exact""]",True,False
+12,subjective,The patient takes Xeljanz for the treatment of rheumatoid arthritis.,0.0,"[""Xeljanz (11 mg daily)""]","[[449, 470]]","[""exact""]",True,False
+13,subjective,The patient takes Celebrex.,0.0,"[""Celebrex (200 mg daily)""]","[[475, 498]]","[""exact""]",True,False
+14,subjective,The patient takes Celebrex 200 mg daily.,0.0,"[""200 mg daily""]","[[485, 497]]","[""exact""]",True,False
+15,subjective,The patient takes Celebrex for the treatment of rheumatoid arthritis.,0.0,"[""Celebrex (200 mg daily)""]","[[475, 498]]","[""exact""]",True,False
+16,subjective,The patient has been taking Xeljanz and Celebrex for 2 months.,0.5,"[""for 2 months""]","[[499, 511]]","[""exact""]",True,False
+17,subjective,The patient has experienced some improvement in symptoms before the recent increase in swelling.,0.5,"[""with some improvement in symptoms before the recent increase in swelling""]","[[513, 585]]","[""exact""]",True,False
+18,subjective,The patient has a history of rheumatoid arthritis.,0.0,"[""The patient has a history of rheumatoid arthritis""]","[[610, 659]]","[""exact""]",True,False
+19,subjective,The patient has been receiving treatment for rheumatoid arthritis.,0.0,"[""for which he has been receiving treatment""]","[[661, 702]]","[""exact""]",True,False
+20,subjective,The patient reports no other symptoms related to his rheumatoid arthritis.,0.5,"[""The patient reports no other symptoms related to his rheumatoid arthritis""]","[[724, 797]]","[""exact""]",True,False
+21,objective,The patient's knee is swollen.,0.25,"[""The patient's knee is swollen""]","[[15, 44]]","[""exact""]",True,False
+22,objective,There is pitting around the patient's knee and ankle.,0.25,"[""with pitting around the knee and ankle""]","[[46, 84]]","[""exact""]",True,False
+23,objective,The patient reports pain in the knee.,0.75,"[""The patient reports pain and stiffness""]","[[86, 124]]","[""exact""]",True,False
+24,objective,The patient reports stiffness in the knee.,1.0,"[""The patient reports pain and stiffness""]","[[86, 124]]","[""exact""]",True,False
+25,objective,The patient's knee pain is exacerbated by straightening the knee.,0.75,"[""particularly when straightening the knee""]","[[126, 166]]","[""exact""]",True,False
+26,objective,The patient has normal capillary refill in the toes.,0.25,"[""Normal capillary refill in the toes""]","[[168, 203]]","[""exact""]",True,False
+27,assessment,The patient has recurrent swelling in his right knee.,0.75,"[""recurrent swelling and pain in his right knee""]","[[28, 73]]","[""exact""]",True,False
+28,assessment,The patient has recurrent pain in his right knee.,1.0,"[""recurrent swelling and pain in his right knee""]","[[28, 73]]","[""exact""]",True,False
+29,assessment,The patient's right knee swelling is likely related to his rheumatoid arthritis.,0.25,"[""likely related to his rheumatoid arthritis""]","[[75, 117]]","[""exact""]",True,False
+30,assessment,The patient's right knee pain is likely related to his rheumatoid arthritis.,0.25,"[""likely related to his rheumatoid arthritis""]","[[75, 117]]","[""exact""]",True,False
+31,assessment,The patient has swelling of the right knee.,0.25,"[""swelling of the right knee""]","[[156, 182]]","[""exact""]",True,False
+32,assessment,The patient has pain of the right knee.,0.75,"[""pain of the right knee""]","[[184, 206]]","[""exact""]",True,False
+33,assessment,The patient has stiffness of the right knee.,1.0,"[""stiffness of the right knee""]","[[208, 235]]","[""exact""]",True,False
+34,plan,The patient was prescribed a steroid injection.,0.0,"[""I prescribed a steroid injection""]","[[0, 32]]","[""exact""]",True,False
+35,plan,The patient's steroid injection contains 80 mg of triamcinolone.,0.25,"[""80 mg of triamcinolone""]","[[34, 56]]","[""exact""]",True,False
+36,plan,The patient's steroid injection contains 1 ml of lidocaine.,0.25,"[""1 ml of lidocaine""]","[[61, 78]]","[""exact""]",True,False
+37,plan,The patient's steroid injection is for the right knee.,0.25,"[""for the patient's right knee""]","[[80, 108]]","[""exact""]",True,False
+38,plan,The patient was ordered an x-ray of the knee.,0.25,"[""I also ordered an x-ray of the knee""]","[[110, 145]]","[""exact""]",True,False
+39,plan,The x-ray of the knee is to investigate the cause of the swelling.,0.25,"[""to investigate the cause of the swelling""]","[[146, 186]]","[""exact""]",True,False
+40,plan,The patient has swelling in the knee.,0.0,"[""the cause of the swelling""]","[[161, 186]]","[""exact""]",True,False
+41,plan,The patient will be referred to physical therapy.,0.75,"[""I will refer the patient to physical therapy""]","[[188, 232]]","[""exact""]",True,False
+42,plan,The physical therapy is to address the patient's stiffness.,1.0,"[""to address his stiffness""]","[[233, 257]]","[""exact""]",True,False
+43,plan,The physical therapy is to address the patient's mobility issues.,1.0,"[""and mobility issues""]","[[258, 277]]","[""exact""]",True,False
+44,plan,The patient has stiffness.,1.0,"[""his stiffness""]","[[244, 257]]","[""exact""]",True,False
+45,plan,The patient has mobility issues.,0.75,"[""mobility issues""]","[[262, 277]]","[""exact""]",True,False
+46,plan,A surgery consult will be considered if the current treatment plan does not improve the patient's symptoms.,0.75,"[""If the current treatment plan does not improve his symptoms, I will consider a surgery consult""]","[[279, 373]]","[""exact""]",True,False
+47,plan,The patient will have a follow-up appointment in 2-3 months.,0.75,"[""I will see the patient again in 2-3 months""]","[[425, 467]]","[""exact""]",True,False
+48,plan,The follow-up appointment is to reassess the patient's symptoms.,1.0,"[""to reassess his symptoms""]","[[468, 492]]","[""exact""]",True,False
+49,plan,The patient's treatment plan will be adjusted as needed.,0.25,"[""and adjust his treatment plan as needed""]","[[493, 532]]","[""exact""]",True,False
+50,plan,The patient was instructed to follow up with his primary care physician.,0.0,"[""I also instructed the patient to follow up with his primary care physician""]","[[534, 608]]","[""exact""]",True,False
+51,plan,The patient's primary care physician will monitor his CMP levels.,0.5,"[""for routine monitoring of his CMP levels""]","[[609, 649]]","[""exact""]",True,False
+52,plan,The patient's CMP levels are currently within normal limits.,0.75,"[""which are currently within normal limits""]","[[651, 691]]","[""exact""]",True,False

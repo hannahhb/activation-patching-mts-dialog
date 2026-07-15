@@ -1,0 +1,1055 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Christopher Watson.",
+        "spans": [
+          "Christopher Watson"
+        ],
+        "span_offsets": [
+          [
+            5,
+            23
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is an 86-year-old male.",
+        "spans": [
+          "an 86-year-old male"
+        ],
+        "span_offsets": [
+          [
+            25,
+            44
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of adult hydrocephalus.",
+        "spans": [
+          "adult hydrocephalus"
+        ],
+        "span_offsets": [
+          [
+            71,
+            90
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of progressive gait impairment.",
+        "spans": [
+          "progressive gait impairment"
+        ],
+        "span_offsets": [
+          [
+            122,
+            149
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of cognitive impairment.",
+        "spans": [
+          "cognitive impairment"
+        ],
+        "span_offsets": [
+          [
+            151,
+            171
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of decreased bladder control.",
+        "spans": [
+          "decreased bladder control"
+        ],
+        "span_offsets": [
+          [
+            177,
+            202
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms have been present for 8-10 years.",
+        "spans": [
+          "for 8-10 years"
+        ],
+        "span_offsets": [
+          [
+            203,
+            217
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient underwent shunt surgery on August 1st, 2020.",
+        "spans": [
+          "He underwent shunt surgery on August 1st, 2020"
+        ],
+        "span_offsets": [
+          [
+            219,
+            265
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a Medtronic Strata programmable shunt.",
+        "spans": [
+          "Medtronic Strata programmable shunt"
+        ],
+        "span_offsets": [
+          [
+            274,
+            309
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's shunt is in the ventricular peritoneal configuration.",
+        "spans": [
+          "ventricular peritoneal configuration"
+        ],
+        "span_offsets": [
+          [
+            317,
+            353
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's shunt is set at a level 2.0.",
+        "spans": [
+          "set at a level 2.0"
+        ],
+        "span_offsets": [
+          [
+            354,
+            372
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has experienced some improvements in gait since surgery.",
+        "spans": [
+          "some improvements in gait"
+        ],
+        "span_offsets": [
+          [
+            408,
+            433
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has experienced some improvements in bladder control since surgery.",
+        "spans": [
+          "some improvements in bladder control"
+        ],
+        "span_offsets": [
+          [
+            187,
+            202
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient still requires assistance with walking.",
+        "spans": [
+          "still requires assistance with walking"
+        ],
+        "span_offsets": [
+          [
+            459,
+            497
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has urinary incontinence.",
+        "spans": [
+          "urinary incontinence"
+        ],
+        "span_offsets": [
+          [
+            506,
+            526
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies headaches.",
+        "spans": [
+          "denies headaches"
+        ],
+        "span_offsets": [
+          [
+            531,
+            547
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies fever.",
+        "spans": [
+          "denies fever"
+        ],
+        "span_offsets": [
+          [
+            549,
+            554
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies unintentional weight loss.",
+        "spans": [
+          "denies unintentional weight loss"
+        ],
+        "span_offsets": [
+          [
+            559,
+            584
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has gait impairment.",
+        "spans": [
+          "Gait impairment"
+        ],
+        "span_offsets": [
+          [
+            607,
+            622
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has cognitive impairment.",
+        "spans": [
+          "cognitive impairment"
+        ],
+        "span_offsets": [
+          [
+            151,
+            171
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient wears a diaper.",
+        "spans": [
+          "wearing a diaper"
+        ],
+        "span_offsets": [
+          [
+            672,
+            688
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have fever.",
+        "spans": [
+          "No fever"
+        ],
+        "span_offsets": [
+          [
+            690,
+            698
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have unintentional weight loss.",
+        "spans": [
+          "No unintentional weight loss"
+        ],
+        "span_offsets": [
+          [
+            559,
+            584
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have genital sores.",
+        "spans": [
+          "No genital sores"
+        ],
+        "span_offsets": [
+          [
+            727,
+            740
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have decreased or painful urination.",
+        "spans": [
+          "No decreased or painful urination"
+        ],
+        "span_offsets": [
+          [
+            742,
+            772
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have headaches.",
+        "spans": [
+          "No headaches"
+        ],
+        "span_offsets": [
+          [
+            538,
+            547
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have recent falls.",
+        "spans": [
+          "No recent falls"
+        ],
+        "span_offsets": [
+          [
+            785,
+            797
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have hallucinations.",
+        "spans": [
+          "No hallucinations"
+        ],
+        "span_offsets": [
+          [
+            802,
+            816
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's blood pressure is 124/80.",
+        "spans": [
+          "Blood pressure 124/80"
+        ],
+        "span_offsets": [
+          [
+            13,
+            34
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's heart rate is 64.",
+        "spans": [
+          "heart rate 64"
+        ],
+        "span_offsets": [
+          [
+            36,
+            49
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's respirations are 18.",
+        "spans": [
+          "respirations 18"
+        ],
+        "span_offsets": [
+          [
+            51,
+            66
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's weight is 174 pounds.",
+        "spans": [
+          "weight 174 pounds"
+        ],
+        "span_offsets": [
+          [
+            68,
+            85
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain is 0 out of 10.",
+        "spans": [
+          "pain 0 out of 10"
+        ],
+        "span_offsets": [
+          [
+            91,
+            107
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The shunt site is clean, dry, and intact.",
+        "spans": [
+          "The shunt site was clean, dry, and intact"
+        ],
+        "span_offsets": [
+          [
+            125,
+            166
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The shunt setting is 2.0.",
+        "spans": [
+          "a confirmed setting of 2.0"
+        ],
+        "span_offsets": [
+          [
+            172,
+            198
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's gait score is 6-8 out of 12.",
+        "spans": [
+          "a score of 6-8 out of 12"
+        ],
+        "span_offsets": [
+          [
+            254,
+            278
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's balance score is 12 out of 16.",
+        "spans": [
+          "a balance score of 12 out of 16"
+        ],
+        "span_offsets": [
+          [
+            283,
+            314
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's total score is 18-20 out of 28.",
+        "spans": [
+          "a total score of 18-20 out of 28"
+        ],
+        "span_offsets": [
+          [
+            319,
+            351
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's cranial nerves are intact.",
+        "spans": [
+          "Cranial nerves, pupils, and eoms were intact"
+        ],
+        "span_offsets": [
+          [
+            353,
+            397
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pupils are intact.",
+        "spans": [
+          "Cranial nerves, pupils, and eoms were intact"
+        ],
+        "span_offsets": [
+          [
+            353,
+            397
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's eoms are intact.",
+        "spans": [
+          "Cranial nerves, pupils, and eoms were intact"
+        ],
+        "span_offsets": [
+          [
+            353,
+            397
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's face is symmetric.",
+        "spans": [
+          "Face was symmetric"
+        ],
+        "span_offsets": [
+          [
+            399,
+            417
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's motor bulk is normal.",
+        "spans": [
+          "Motor was normal for bulk and strength"
+        ],
+        "span_offsets": [
+          [
+            419,
+            457
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's motor strength is normal.",
+        "spans": [
+          "Motor was normal for bulk and strength"
+        ],
+        "span_offsets": [
+          [
+            419,
+            457
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's coordination is slow from finger to nose.",
+        "spans": [
+          "coordination was slow from finger to nose"
+        ],
+        "span_offsets": [
+          [
+            463,
+            504
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's CT scan from 10/15/2020 showed a frontal horn span at the level of foramen of Monro of 4.6 centimeters.",
+        "spans": [
+          "CT scan from 10/15/2020 showed a frontal horn span at the level of foramen of Monro of 4.6 centimeters"
+        ],
+        "span_offsets": [
+          [
+            506,
+            608
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's CT scan from 10/15/2020 showed a third ventricular contour that is flat with a span of 10 millimeters.",
+        "spans": [
+          "a third ventricular contour that is flat with a span of 10 millimeters"
+        ],
+        "span_offsets": [
+          [
+            614,
+            684
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a tiny amount of blood in the right front region.",
+        "spans": [
+          "a tiny amount of blood in the right front region"
+        ],
+        "span_offsets": [
+          [
+            696,
+            744
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a tiny subdermal collection.",
+        "spans": [
+          "a tiny subdermal collection"
+        ],
+        "span_offsets": [
+          [
+            750,
+            777
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has substantial small vessel ischemic change.",
+        "spans": [
+          "substantial small vessel ischemic change"
+        ],
+        "span_offsets": [
+          [
+            783,
+            823
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has adult hydrocephalus.",
+        "spans": [
+          "adult hydrocephalus"
+        ],
+        "span_offsets": [
+          [
+            76,
+            95
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has urinary urgency.",
+        "spans": [
+          "urinary incontinence and urgency"
+        ],
+        "span_offsets": [
+          [
+            114,
+            146
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's adult hydrocephalus is confirmed.",
+        "spans": [
+          "Adult hydrocephalus; Gait impairment; Urinary incontinence and urgency; Cognitive impairment; Status: confirmed"
+        ],
+        "span_offsets": [
+          [
+            189,
+            300
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's gait impairment is confirmed.",
+        "spans": [
+          "Adult hydrocephalus; Gait impairment; Urinary incontinence and urgency; Cognitive impairment; Status: confirmed"
+        ],
+        "span_offsets": [
+          [
+            189,
+            300
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's urinary incontinence is confirmed.",
+        "spans": [
+          "Adult hydrocephalus; Gait impairment; Urinary incontinence and urgency; Cognitive impairment; Status: confirmed"
+        ],
+        "span_offsets": [
+          [
+            189,
+            300
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's urinary urgency is confirmed.",
+        "spans": [
+          "Adult hydrocephalus; Gait impairment; Urinary incontinence and urgency; Cognitive impairment; Status: confirmed"
+        ],
+        "span_offsets": [
+          [
+            189,
+            300
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's cognitive impairment is confirmed.",
+        "spans": [
+          "Adult hydrocephalus; Gait impairment; Urinary incontinence and urgency; Cognitive impairment; Status: confirmed"
+        ],
+        "span_offsets": [
+          [
+            189,
+            300
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The shunt will be left in place for another 2-3 months to monitor for any changes.",
+        "spans": [
+          "I will leave the shunt set for another 2-3 months to monitor for any changes"
+        ],
+        "span_offsets": [
+          [
+            0,
+            76
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will return in 3 months for follow-up.",
+        "spans": [
+          "The patient will return in 3 months for follow-up",
+          "The patient will return in 3 months for follow-up"
+        ],
+        "span_offsets": [
+          [
+            78,
+            127
+          ],
+          [
+            78,
+            127
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient can enroll in the driver's safety program without the physician's recommendation.",
+        "spans": [
+          "and he can enroll in it without my recommendation"
+        ],
+        "span_offsets": [
+          [
+            210,
+            259
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The physician will discuss the possibility of the driver's safety program with the patient.",
+        "spans": [
+          "I will also discuss the possibility of driver's safety program with the patient"
+        ],
+        "span_offsets": [
+          [
+            129,
+            208
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

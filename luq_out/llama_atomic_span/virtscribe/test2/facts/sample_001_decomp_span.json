@@ -1,0 +1,641 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient, Mr. Roberts, is a 49-year-old male.",
+        "spans": [
+          "Mr. Roberts is a 49-year-old male"
+        ],
+        "span_offsets": [
+          [
+            5,
+            38
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of hypertension.",
+        "spans": [
+          "a history of hypertension"
+        ],
+        "span_offsets": [
+          [
+            44,
+            69
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of palpitations.",
+        "spans": [
+          "a history of hypertension and palpitations"
+        ],
+        "span_offsets": [
+          [
+            44,
+            86
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presented to the emergency room in March with high blood pressure.",
+        "spans": [
+          "presented to the emergency room in March with high blood pressure"
+        ],
+        "span_offsets": [
+          [
+            91,
+            156
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presented to the emergency room in March with palpitations.",
+        "spans": [
+          "presented to the emergency room in March with high blood pressure and palpitations"
+        ],
+        "span_offsets": [
+          [
+            91,
+            173
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient attributed his symptoms to a panic attack triggered by caffeine consumption.",
+        "spans": [
+          "attributed to a panic attack triggered by caffeine consumption"
+        ],
+        "span_offsets": [
+          [
+            184,
+            246
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient attributed his symptoms to a panic attack triggered by lack of breakfast.",
+        "spans": [
+          "attributed to a panic attack triggered by caffeine consumption and lack of breakfast"
+        ],
+        "span_offsets": [
+          [
+            184,
+            268
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a family history of hypertension.",
+        "spans": [
+          "a family history of hypertension"
+        ],
+        "span_offsets": [
+          [
+            277,
+            309
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Benicar HCT (hydrochlorothiazide).",
+        "spans": [
+          "Benicar HCT (hydrochlorothiazide)"
+        ],
+        "span_offsets": [
+          [
+            368,
+            401
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking amlodipine.",
+        "spans": [
+          "amlodipine"
+        ],
+        "span_offsets": [
+          [
+            406,
+            416
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's blood pressure has been running at 146-155 mmHg.",
+        "spans": [
+          "His blood pressure has been running at 146-155 mmHg"
+        ],
+        "span_offsets": [
+          [
+            418,
+            469
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes his medications as prescribed.",
+        "spans": [
+          "despite taking his medications as prescribed"
+        ],
+        "span_offsets": [
+          [
+            471,
+            515
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's current medication is Amlodipine.",
+        "spans": [
+          "Amlodipine 10 milligrams daily"
+        ],
+        "span_offsets": [
+          [
+            649,
+            679
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Amlodipine dose is 10 milligrams daily.",
+        "spans": [
+          "10 milligrams daily"
+        ],
+        "span_offsets": [
+          [
+            660,
+            679
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's current medication is Benicar HCT (hydrochlorothiazide).",
+        "spans": [
+          "Benicar HCT (hydrochlorothiazide) 40-25 milligrams daily"
+        ],
+        "span_offsets": [
+          [
+            681,
+            737
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Benicar HCT (hydrochlorothiazide) dose is 40-25 milligrams daily.",
+        "spans": [
+          "40-25 milligrams daily"
+        ],
+        "span_offsets": [
+          [
+            715,
+            737
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's heart sounds are good.",
+        "spans": [
+          "The patient's heart and lungs sound good"
+        ],
+        "span_offsets": [
+          [
+            15,
+            55
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lungs sound good.",
+        "spans": [
+          "The patient's heart and lungs sound good"
+        ],
+        "span_offsets": [
+          [
+            15,
+            55
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no swelling in the ankles.",
+        "spans": [
+          "No swelling in the ankles and feet"
+        ],
+        "span_offsets": [
+          [
+            57,
+            91
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no swelling in the feet.",
+        "spans": [
+          "No swelling in the ankles and feet"
+        ],
+        "span_offsets": [
+          [
+            57,
+            91
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "Mr. Roberts presents with resistant hypertension.",
+        "spans": [
+          "Mr. Roberts presents with resistant hypertension"
+        ],
+        "span_offsets": [
+          [
+            12,
+            60
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Mr. Roberts is being treated with maximum doses of three medications for hypertension.",
+        "spans": [
+          "despite being on maximum doses of three medications"
+        ],
+        "span_offsets": [
+          [
+            62,
+            113
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has hypertension.",
+        "spans": [
+          "Hypertension"
+        ],
+        "span_offsets": [
+          [
+            130,
+            142
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has resistant hypertension.",
+        "spans": [
+          "Resistant Hypertension"
+        ],
+        "span_offsets": [
+          [
+            144,
+            166
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient has been prescribed spironolactone.",
+        "spans": [
+          "I have added spironolactone to his medication regimen"
+        ],
+        "span_offsets": [
+          [
+            0,
+            53
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking spironolactone to address potential aldosterone-driven hypertension.",
+        "spans": [
+          "to address potential aldosterone-driven hypertension"
+        ],
+        "span_offsets": [
+          [
+            54,
+            106
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been informed of the potential risks of spironolactone, including electrolyte disturbances.",
+        "spans": [
+          "electrolyte disturbances"
+        ],
+        "span_offsets": [
+          [
+            191,
+            215
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been informed of the potential risks of spironolactone, including dehydration.",
+        "spans": [
+          "dehydration"
+        ],
+        "span_offsets": [
+          [
+            217,
+            228
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been informed of the potential risks of spironolactone, including gynecomastia.",
+        "spans": [
+          "gynecomastia"
+        ],
+        "span_offsets": [
+          [
+            234,
+            246
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been instructed to hydrate regularly.",
+        "spans": [
+          "hydrate regularly"
+        ],
+        "span_offsets": [
+          [
+            278,
+            295
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been instructed to monitor his electrolyte levels.",
+        "spans": [
+          "monitor his electrolyte levels"
+        ],
+        "span_offsets": [
+          [
+            300,
+            330
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is scheduled for a follow-up appointment in two weeks.",
+        "spans": [
+          "We will schedule a follow-up appointment in two weeks"
+        ],
+        "span_offsets": [
+          [
+            332,
+            385
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's blood pressure will be checked at the follow-up appointment.",
+        "spans": [
+          "check his blood pressure"
+        ],
+        "span_offsets": [
+          [
+            389,
+            413
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's electrolytes will be checked at the follow-up appointment.",
+        "spans": [
+          "check his blood pressure and electrolytes"
+        ],
+        "span_offsets": [
+          [
+            389,
+            430
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "If spironolactone does not work, the patient will be considered for referral to the resistant hypertension clinic.",
+        "spans": [
+          "If the medication does not work, we will consider referring him to the resistant hypertension clinic"
+        ],
+        "span_offsets": [
+          [
+            432,
+            532
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient may undergo further evaluation at the resistant hypertension clinic.",
+        "spans": [
+          "further evaluation and potential treatment"
+        ],
+        "span_offsets": [
+          [
+            537,
+            579
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient may undergo the renal denervation procedure as a potential treatment.",
+        "spans": [
+          "the renal denervation procedure"
+        ],
+        "span_offsets": [
+          [
+            591,
+            622
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

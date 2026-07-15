@@ -1,0 +1,65 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Amanda Taylor.,0.25,"[""Amanda Taylor""]","[[18, 31]]","[""exact""]",True,False
+1,subjective,The patient is a 72-year-old woman.,0.0,"[""a 72-year-old woman""]","[[33, 52]]","[""exact""]",True,False
+2,subjective,The patient presents for follow-up for hypertension.,0.0,"[""presents for follow-up for hypertension""]","[[54, 93]]","[""exact""]",True,False
+3,subjective,The patient has a history of significant alcohol use disorder.,0.0,"[""a history of significant alcohol use disorder""]","[[103, 148]]","[""exact""]",True,False
+4,subjective,The patient has a history of mild hypercholesterolemia.,0.0,"[""mild hypercholesterolemia""]","[[153, 178]]","[""exact""]",True,False
+5,subjective,The patient's last visit was on April 16.,0.75,"[""Her last visit was on April 16""]","[[180, 210]]","[""exact""]",True,False
+6,subjective,The patient's blood pressure was 130/90 at the last visit.,0.25,"[""a blood pressure of 130/90""]","[[217, 243]]","[""exact""]",True,False
+7,subjective,The patient has been drinking 4 to 5 days a week.,0.25,"[""drinking 4 to 5 days a week""]","[[312, 339]]","[""exact""]",True,False
+8,subjective,The patient consumes hard alcohol.,0.5,"[""consuming hard alcohol""]","[[341, 363]]","[""exact""]",True,False
+9,subjective,The patient has tried to stop drinking.,0.25,"[""has tried to stop drinking""]","[[369, 395]]","[""exact""]",True,False
+10,subjective,The patient is experiencing withdrawal symptoms.,1.0,"[""has been experiencing withdrawal symptoms""]","[[401, 442]]","[""exact""]",True,False
+11,subjective,The patient is taking lisinopril.,0.0,"[""lisinopril 10 mg daily""]","[[468, 490]]","[""exact""]",True,False
+12,subjective,The patient's lisinopril dose is 10 mg daily.,0.25,"[""10 mg daily""]","[[479, 490]]","[""exact""]",True,False
+13,subjective,The patient is taking hydrochlorothiazide.,0.25,"[""hydrochlorothiazide 12.5 mg daily""]","[[495, 528]]","[""exact""]",True,False
+14,subjective,The patient's hydrochlorothiazide dose is 12.5 mg daily.,0.0,"[""12.5 mg daily""]","[[515, 528]]","[""exact""]",True,False
+15,subjective,The patient has a history of alcohol use disorder.,0.0,"[""a history of alcohol use disorder""]","[[569, 602]]","[""exact""]",True,False
+16,subjective,The patient received the coronavirus vaccine on February 9.,0.5,"[""received the coronavirus vaccine on February 9""]","[[642, 688]]","[""exact""]",True,False
+17,subjective,The patient denies fever.,0.0,"[""denies fever""]","[[722, 734]]","[""exact""]",True,False
+18,subjective,The patient denies cough.,0.0,"[""denies cough""]","[[736, 741]]","[""word""]",True,False
+19,subjective,The patient denies shortness of breath.,0.0,"[""denies shortness of breath""]","[[743, 762]]","[""word""]",True,False
+20,subjective,The patient denies sore throat.,0.0,"[""denies sore throat""]","[[767, 778]]","[""word""]",True,False
+21,subjective,The patient has not had recent travel.,0.25,"[""has not had recent travel""]","[[784, 809]]","[""exact""]",True,False
+22,subjective,The patient has not had contact with the coronavirus.,0.25,"[""has not had contact with the coronavirus""]","[[813, 841]]","[""word""]",True,False
+23,objective,The patient is alert.,0.0,"[""The patient is alert, pleasant, and in no acute distress""]","[[15, 71]]","[""exact""]",True,False
+24,objective,The patient is pleasant.,0.0,"[""The patient is alert, pleasant, and in no acute distress""]","[[15, 71]]","[""exact""]",True,False
+25,objective,The patient is in no acute distress.,0.0,"[""The patient is alert, pleasant, and in no acute distress""]","[[15, 71]]","[""exact""]",True,False
+26,objective,The patient's skin is moist.,0.25,"[""Her skin is moist""]","[[73, 90]]","[""exact""]",True,False
+27,objective,The patient is not diabetic.,0.75,"[""She is not diabetic""]","[[92, 111]]","[""exact""]",True,False
+28,objective,The patient has no tremor.,0.25,"[""There is no tremor""]","[[113, 131]]","[""exact""]",True,False
+29,objective,The patient has no CVA tenderness.,0.25,"[""No CVA tenderness""]","[[133, 150]]","[""exact""]",True,False
+30,objective,The patient's chest is clear to percussion.,0.25,"[""Her chest is clear to percussion and auscultation""]","[[152, 201]]","[""exact""]",True,False
+31,objective,The patient's chest is clear to auscultation.,0.25,"[""Her chest is clear to percussion and auscultation""]","[[152, 201]]","[""exact""]",True,False
+32,objective,The patient's breathing is unlabored.,0.0,"[""Her breathing is unlabored""]","[[203, 229]]","[""exact""]",True,False
+33,objective,The patient's cardiac rhythm is regular.,0.0,"[""Her cardiac rhythm is regular""]","[[231, 260]]","[""exact""]",True,False
+34,objective,The patient has no murmur.,0.0,"[""No murmur or gallop""]","[[262, 281]]","[""exact""]",True,False
+35,objective,The patient has no gallop.,0.0,"[""No murmur or gallop""]","[[262, 281]]","[""exact""]",True,False
+36,objective,The patient's JVP is flat with a head at 90 degrees.,0.0,"[""Her JVP is flat with a head at 90 degrees""]","[[283, 324]]","[""exact""]",True,False
+37,objective,The patient does not appear anxious.,0.0,"[""She does not appear anxious, agitated, or depressed""]","[[326, 377]]","[""exact""]",True,False
+38,objective,The patient does not appear agitated.,0.0,"[""She does not appear anxious, agitated, or depressed""]","[[326, 377]]","[""exact""]",True,False
+39,objective,The patient does not appear depressed.,0.0,"[""She does not appear anxious, agitated, or depressed""]","[[326, 377]]","[""exact""]",True,False
+40,assessment,The patient has alcohol use disorder.,0.0,"[""The patient has alcohol use disorder""]","[[12, 48]]","[""exact""]",True,False
+41,assessment,The patient's alcohol use disorder is confirmed by her history of drinking 4 to 5 days a week.,1.0,"[""which is confirmed by her history of drinking 4 to 5 days a week""]","[[50, 114]]","[""exact""]",True,False
+42,assessment,The patient's alcohol use disorder is confirmed by her struggles with withdrawal symptoms.,1.0,"[""which is confirmed by her history of drinking 4 to 5 days a week and her struggles with withdrawal symptoms""]","[[50, 157]]","[""exact""]",True,False
+43,assessment,The patient drinks alcohol 4 to 5 days a week.,1.0,"[""drinking 4 to 5 days a week""]","[[87, 114]]","[""exact""]",True,False
+44,assessment,The patient struggles with withdrawal symptoms.,1.0,"[""her struggles with withdrawal symptoms""]","[[119, 157]]","[""exact""]",True,False
+45,assessment,The patient would like to start naltrexone.,1.0,"[""The patient would like to start naltrexone""]","[[159, 201]]","[""exact""]",True,False
+46,assessment,The patient wants to use naltrexone for alcohol cessation.,1.0,"[""to help with alcohol cessation""]","[[202, 232]]","[""exact""]",True,False
+47,assessment,The patient has hypertension.,0.0,"[""Alcohol use disorder; Hypertension""]","[[248, 282]]","[""exact""]",True,False
+48,assessment,The patient has hypercholesterolemia.,0.5,"[""Alcohol use disorder; Hypertension; Hypercholesterolemia""]","[[248, 304]]","[""exact""]",True,False
+49,assessment,The patient has no other medical problems.,1.0,"[""None other""]","[[306, 316]]","[""exact""]",True,False
+50,plan,The patient was prescribed naltrexone.,0.0,"[""I prescribed naltrexone""]","[[0, 23]]","[""exact""]",True,False
+51,plan,The patient's naltrexone will be administered via injection.,0.0,"[""which will be administered via injection""]","[[25, 65]]","[""exact""]",True,False
+52,plan,The patient's first naltrexone injection is scheduled for May 17.,0.0,"[""on May 17""]","[[66, 75]]","[""exact""]",True,False
+53,plan,The patient may experience nausea as a side effect of naltrexone.,1.0,"[""nausea""]","[[158, 164]]","[""exact""]",True,False
+54,plan,The patient may experience headache as a side effect of naltrexone.,1.0,"[""headache""]","[[166, 174]]","[""exact""]",True,False
+55,plan,The patient may experience dizziness as a side effect of naltrexone.,1.0,"[""dizziness""]","[[176, 185]]","[""exact""]",True,False
+56,plan,The patient may experience anxiety as a side effect of naltrexone.,1.0,"[""anxiety""]","[[187, 194]]","[""exact""]",True,False
+57,plan,The patient may experience tiredness as a side effect of naltrexone.,1.0,"[""tiredness""]","[[196, 205]]","[""exact""]",True,False
+58,plan,The patient may experience trouble sleeping as a side effect of naltrexone.,1.0,"[""trouble sleeping""]","[[211, 227]]","[""exact""]",True,False
+59,plan,The patient was recommended to upgrade her influenza vaccination.,0.25,"[""upgrading her influenza vaccination""]","[[248, 283]]","[""exact""]",True,False
+60,plan,The patient was recommended to receive Shingrix.,0.25,"[""Shingrix""]","[[288, 296]]","[""exact""]",True,False
+61,plan,The patient deferred the influenza vaccination and Shingrix.,0.25,"[""which she deferred""]","[[298, 316]]","[""exact""]",True,False
+62,plan,The patient will have a follow-up appointment on June 14.,0.75,"[""I will see her back on June 14 for a follow-up""]","[[318, 364]]","[""exact""]",True,False
+63,plan,The patient's second naltrexone injection is likely to be around June 14.,0.5,"[""which is likely around the time of her second naltrexone injection""]","[[366, 432]]","[""exact""]",True,False

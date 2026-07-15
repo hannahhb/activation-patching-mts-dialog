@@ -1,0 +1,40 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,Miss Ross is a 25-year-old female.,0.5,"[""25-year-old female""]","[[20, 38]]","[""exact""]",True,False
+1,subjective,Miss Ross presents with symptoms of discomfort in her vaginal region.,0.0,"[""symptoms of discomfort, change in discharge, and odor in her vaginal region""]","[[55, 130]]","[""exact""]",True,False
+2,subjective,Miss Ross presents with a change in discharge in her vaginal region.,0.0,"[""symptoms of discomfort, change in discharge, and odor in her vaginal region""]","[[55, 130]]","[""exact""]",True,False
+3,subjective,Miss Ross presents with odor in her vaginal region.,0.0,"[""symptoms of discomfort, change in discharge, and odor in her vaginal region""]","[[55, 130]]","[""exact""]",True,False
+4,subjective,The right side of Miss Ross's vagina has become painful.,0.0,"[""the right side of her vagina has become painful""]","[[149, 196]]","[""exact""]",True,False
+5,subjective,Miss Ross denies any fevers.,0.0,"[""She denies any fevers or chills""]","[[198, 229]]","[""exact""]",True,False
+6,subjective,Miss Ross denies any chills.,0.0,"[""She denies any fevers or chills""]","[[198, 229]]","[""exact""]",True,False
+7,subjective,Miss Ross's partner has been in sexual encounters with other people.,0.0,"[""her partner has been in sexual encounters with other people""]","[[257, 316]]","[""exact""]",True,False
+8,subjective,Miss Ross is seeking evaluation for all STDs.,0.25,"[""prompting her to seek evaluation for all STDs""]","[[318, 363]]","[""exact""]",True,False
+9,subjective,Miss Ross has a past abnormal pap smear.,0.5,"[""past abnormal pap smear""]","[[406, 429]]","[""exact""]",True,False
+10,subjective,Miss Ross's past abnormal pap smear occurred at age 20.,0.25,"[""at age 20""]","[[430, 439]]","[""exact""]",True,False
+11,subjective,Miss Ross has not had a pap smear since age 20.,0.75,"[""but has not had a pap smear since then""]","[[441, 479]]","[""exact""]",True,False
+12,objective,The patient's pelvic exam demonstrates no external lesions.,0.0,"[""no external lesions""]","[[44, 63]]","[""exact""]",True,False
+13,objective,The patient has normal labia majora.,0.0,"[""normal labia majora and minora""]","[[65, 95]]","[""exact""]",True,False
+14,objective,The patient has normal labia minora.,0.0,"[""normal labia majora and minora""]","[[65, 95]]","[""exact""]",True,False
+15,objective,The patient has normal physiological discharge.,0.0,"[""normal physiological discharge""]","[[97, 127]]","[""exact""]",True,False
+16,objective,The patient's physiological discharge has a normal color.,0.0,"[""normal color""]","[[133, 145]]","[""exact""]",True,False
+17,objective,The patient's physiological discharge has a normal smell.,0.0,"[""normal smell""]","[[133, 155]]","[""word""]",True,False
+18,objective,The patient's cervix is normal.,0.0,"[""The cervix is normal""]","[[157, 177]]","[""exact""]",True,False
+19,objective,The patient's vaginal wall is normal.,0.0,"[""vaginal wall is normal""]","[[179, 201]]","[""exact""]",True,False
+20,objective,The patient has no cervical motion tenderness.,0.0,"[""no cervical motion tenderness""]","[[203, 232]]","[""exact""]",True,False
+21,objective,The patient has no adnexal tenderness.,0.0,"[""no adnexal tenderness or masses noted""]","[[238, 275]]","[""exact""]",True,False
+22,objective,The patient has no adnexal masses.,0.0,"[""no adnexal tenderness or masses noted""]","[[238, 275]]","[""exact""]",True,False
+23,assessment,The patient is at high risk for STDs.,0.0,"[""The patient is at high risk for STDs due to an abnormal past pap smear and her partner's history of multiple sexual partners""]","[[12, 136]]","[""exact""]",True,False
+24,assessment,The patient has an abnormal past pap smear.,0.0,"[""an abnormal past pap smear""]","[[56, 82]]","[""exact""]",True,False
+25,assessment,The patient's partner has a history of multiple sexual partners.,0.5,"[""her partner's history of multiple sexual partners""]","[[87, 136]]","[""exact""]",True,False
+26,assessment,The patient's problem list includes STD risk.,0.0,"[""STD risk; abnormal past pap smear; high risk for STDs""]","[[153, 206]]","[""exact""]",True,False
+27,assessment,The patient's problem list includes abnormal past pap smear.,0.0,"[""STD risk; abnormal past pap smear; high risk for STDs""]","[[153, 206]]","[""exact""]",True,False
+28,assessment,The patient's problem list includes high risk for STDs.,0.0,"[""STD risk; abnormal past pap smear; high risk for STDs""]","[[153, 206]]","[""exact""]",True,False
+29,plan,The patient was ordered STD testing for gonorrhea.,0.0,"[""STD testing for gonorrhea, chlamydia, trichomonas, and blood tests for syphilis, HIV, and hepatitis C""]","[[42, 143]]","[""exact""]",True,False
+30,plan,The patient was ordered STD testing for chlamydia.,0.0,"[""STD testing for gonorrhea, chlamydia, trichomonas, and blood tests for syphilis, HIV, and hepatitis C""]","[[42, 143]]","[""exact""]",True,False
+31,plan,The patient was ordered STD testing for trichomonas.,0.0,"[""STD testing for gonorrhea, chlamydia, trichomonas, and blood tests for syphilis, HIV, and hepatitis C""]","[[42, 143]]","[""exact""]",True,False
+32,plan,The patient was ordered blood tests for syphilis.,0.0,"[""STD testing for gonorrhea, chlamydia, trichomonas, and blood tests for syphilis, HIV, and hepatitis C""]","[[42, 143]]","[""exact""]",True,False
+33,plan,The patient was ordered blood tests for HIV.,0.0,"[""STD testing for gonorrhea, chlamydia, trichomonas, and blood tests for syphilis, HIV, and hepatitis C""]","[[42, 143]]","[""exact""]",True,False
+34,plan,The patient was ordered blood tests for hepatitis C.,0.0,"[""STD testing for gonorrhea, chlamydia, trichomonas, and blood tests for syphilis, HIV, and hepatitis C""]","[[42, 143]]","[""exact""]",True,False
+35,plan,The patient was instructed to call the office in 3 days for results.,0.5,"[""to call the office in 3 days for results""]","[[170, 210]]","[""exact""]",True,False
+36,plan,The patient was instructed to call the office earlier if she receives a call from the office.,1.0,"[""or earlier if she receives a call from the office""]","[[212, 261]]","[""exact""]",True,False
+37,plan,The patient will follow up in 3 days for results.,0.25,"[""The patient will follow up in 3 days for results""]","[[275, 323]]","[""exact""]",True,False
+38,plan,The patient will follow up at her next annual checkup if all results are normal.,0.25,"[""or at her next annual checkup if all results are normal""]","[[325, 380]]","[""exact""]",True,False

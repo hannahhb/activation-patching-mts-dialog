@@ -1,0 +1,62 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Christopher Watson.,0.75,"[""Christopher Watson""]","[[5, 23]]","[""exact""]",True,False
+1,subjective,The patient is an 86-year-old male.,0.0,"[""an 86-year-old male""]","[[25, 44]]","[""exact""]",True,False
+2,subjective,The patient has a history of adult hydrocephalus.,0.0,"[""adult hydrocephalus""]","[[71, 90]]","[""exact""]",True,False
+3,subjective,The patient has a history of progressive gait impairment.,0.25,"[""progressive gait impairment""]","[[122, 149]]","[""exact""]",True,False
+4,subjective,The patient has a history of cognitive impairment.,0.0,"[""cognitive impairment""]","[[151, 171]]","[""exact""]",True,False
+5,subjective,The patient has a history of decreased bladder control.,0.0,"[""decreased bladder control""]","[[177, 202]]","[""exact""]",True,False
+6,subjective,The patient's symptoms have been present for 8-10 years.,0.25,"[""for 8-10 years""]","[[203, 217]]","[""exact""]",True,False
+7,subjective,"The patient underwent shunt surgery on August 1st, 2020.",0.0,"[""He underwent shunt surgery on August 1st, 2020""]","[[219, 265]]","[""exact""]",True,False
+8,subjective,The patient has a Medtronic Strata programmable shunt.,0.0,"[""Medtronic Strata programmable shunt""]","[[274, 309]]","[""exact""]",True,False
+9,subjective,The patient's shunt is in the ventricular peritoneal configuration.,0.0,"[""ventricular peritoneal configuration""]","[[317, 353]]","[""exact""]",True,False
+10,subjective,The patient's shunt is set at a level 2.0.,0.25,"[""set at a level 2.0""]","[[354, 372]]","[""exact""]",True,False
+11,subjective,The patient has experienced some improvements in gait since surgery.,0.0,"[""some improvements in gait""]","[[408, 433]]","[""exact""]",True,False
+12,subjective,The patient has experienced some improvements in bladder control since surgery.,0.25,"[""some improvements in bladder control""]","[[187, 202]]","[""word""]",True,False
+13,subjective,The patient still requires assistance with walking.,0.0,"[""still requires assistance with walking""]","[[459, 497]]","[""exact""]",True,False
+14,subjective,The patient has urinary incontinence.,0.0,"[""urinary incontinence""]","[[506, 526]]","[""exact""]",True,False
+15,subjective,The patient denies headaches.,0.25,"[""denies headaches""]","[[531, 547]]","[""exact""]",True,False
+16,subjective,The patient denies fever.,0.5,"[""denies fever""]","[[549, 554]]","[""word""]",True,False
+17,subjective,The patient denies unintentional weight loss.,0.5,"[""denies unintentional weight loss""]","[[559, 584]]","[""word""]",True,False
+18,subjective,The patient has gait impairment.,0.0,"[""Gait impairment""]","[[607, 622]]","[""exact""]",True,False
+19,subjective,The patient has cognitive impairment.,0.0,"[""cognitive impairment""]","[[151, 171]]","[""exact""]",True,False
+20,subjective,The patient wears a diaper.,0.0,"[""wearing a diaper""]","[[672, 688]]","[""exact""]",True,False
+21,subjective,The patient does not have fever.,0.5,"[""No fever""]","[[690, 698]]","[""exact""]",True,False
+22,subjective,The patient does not have unintentional weight loss.,0.5,"[""No unintentional weight loss""]","[[559, 584]]","[""word""]",True,False
+23,subjective,The patient does not have genital sores.,0.25,"[""No genital sores""]","[[727, 740]]","[""word""]",True,False
+24,subjective,The patient does not have decreased or painful urination.,0.5,"[""No decreased or painful urination""]","[[742, 772]]","[""word""]",True,False
+25,subjective,The patient does not have headaches.,0.25,"[""No headaches""]","[[538, 547]]","[""word""]",True,False
+26,subjective,The patient does not have recent falls.,0.75,"[""No recent falls""]","[[785, 797]]","[""word""]",True,False
+27,subjective,The patient does not have hallucinations.,0.5,"[""No hallucinations""]","[[802, 816]]","[""word""]",True,False
+28,objective,The patient's blood pressure is 124/80.,0.0,"[""Blood pressure 124/80""]","[[13, 34]]","[""exact""]",True,False
+29,objective,The patient's heart rate is 64.,0.0,"[""heart rate 64""]","[[36, 49]]","[""exact""]",True,False
+30,objective,The patient's respirations are 18.,0.0,"[""respirations 18""]","[[51, 66]]","[""exact""]",True,False
+31,objective,The patient's weight is 174 pounds.,0.0,"[""weight 174 pounds""]","[[68, 85]]","[""exact""]",True,False
+32,objective,The patient's pain is 0 out of 10.,0.0,"[""pain 0 out of 10""]","[[91, 107]]","[""exact""]",True,False
+33,objective,"The shunt site is clean, dry, and intact.",0.0,"[""The shunt site was clean, dry, and intact""]","[[125, 166]]","[""exact""]",True,False
+34,objective,The shunt setting is 2.0.,0.0,"[""a confirmed setting of 2.0""]","[[172, 198]]","[""exact""]",True,False
+35,objective,The patient's gait score is 6-8 out of 12.,0.5,"[""a score of 6-8 out of 12""]","[[254, 278]]","[""exact""]",True,False
+36,objective,The patient's balance score is 12 out of 16.,0.5,"[""a balance score of 12 out of 16""]","[[283, 314]]","[""exact""]",True,False
+37,objective,The patient's total score is 18-20 out of 28.,0.25,"[""a total score of 18-20 out of 28""]","[[319, 351]]","[""exact""]",True,False
+38,objective,The patient's cranial nerves are intact.,0.5,"[""Cranial nerves, pupils, and eoms were intact""]","[[353, 397]]","[""exact""]",True,False
+39,objective,The patient's pupils are intact.,0.5,"[""Cranial nerves, pupils, and eoms were intact""]","[[353, 397]]","[""exact""]",True,False
+40,objective,The patient's eoms are intact.,0.5,"[""Cranial nerves, pupils, and eoms were intact""]","[[353, 397]]","[""exact""]",True,False
+41,objective,The patient's face is symmetric.,0.75,"[""Face was symmetric""]","[[399, 417]]","[""exact""]",True,False
+42,objective,The patient's motor bulk is normal.,0.75,"[""Motor was normal for bulk and strength""]","[[419, 457]]","[""exact""]",True,False
+43,objective,The patient's motor strength is normal.,0.5,"[""Motor was normal for bulk and strength""]","[[419, 457]]","[""exact""]",True,False
+44,objective,The patient's coordination is slow from finger to nose.,0.75,"[""coordination was slow from finger to nose""]","[[463, 504]]","[""exact""]",True,False
+45,objective,The patient's CT scan from 10/15/2020 showed a frontal horn span at the level of foramen of Monro of 4.6 centimeters.,0.0,"[""CT scan from 10/15/2020 showed a frontal horn span at the level of foramen of Monro of 4.6 centimeters""]","[[506, 608]]","[""exact""]",True,False
+46,objective,The patient's CT scan from 10/15/2020 showed a third ventricular contour that is flat with a span of 10 millimeters.,0.0,"[""a third ventricular contour that is flat with a span of 10 millimeters""]","[[614, 684]]","[""exact""]",True,False
+47,objective,The patient has a tiny amount of blood in the right front region.,0.0,"[""a tiny amount of blood in the right front region""]","[[696, 744]]","[""exact""]",True,False
+48,objective,The patient has a tiny subdermal collection.,0.25,"[""a tiny subdermal collection""]","[[750, 777]]","[""exact""]",True,False
+49,objective,The patient has substantial small vessel ischemic change.,0.5,"[""substantial small vessel ischemic change""]","[[783, 823]]","[""exact""]",True,False
+50,assessment,The patient has adult hydrocephalus.,0.0,"[""adult hydrocephalus""]","[[76, 95]]","[""exact""]",True,False
+51,assessment,The patient has urinary urgency.,0.0,"[""urinary incontinence and urgency""]","[[114, 146]]","[""exact""]",True,False
+52,assessment,The patient's adult hydrocephalus is confirmed.,0.0,"[""Adult hydrocephalus; Gait impairment; Urinary incontinence and urgency; Cognitive impairment; Status: confirmed""]","[[189, 300]]","[""exact""]",True,False
+53,assessment,The patient's gait impairment is confirmed.,0.0,"[""Adult hydrocephalus; Gait impairment; Urinary incontinence and urgency; Cognitive impairment; Status: confirmed""]","[[189, 300]]","[""exact""]",True,False
+54,assessment,The patient's urinary incontinence is confirmed.,0.0,"[""Adult hydrocephalus; Gait impairment; Urinary incontinence and urgency; Cognitive impairment; Status: confirmed""]","[[189, 300]]","[""exact""]",True,False
+55,assessment,The patient's urinary urgency is confirmed.,0.0,"[""Adult hydrocephalus; Gait impairment; Urinary incontinence and urgency; Cognitive impairment; Status: confirmed""]","[[189, 300]]","[""exact""]",True,False
+56,assessment,The patient's cognitive impairment is confirmed.,0.0,"[""Adult hydrocephalus; Gait impairment; Urinary incontinence and urgency; Cognitive impairment; Status: confirmed""]","[[189, 300]]","[""exact""]",True,False
+57,plan,The shunt will be left in place for another 2-3 months to monitor for any changes.,0.5,"[""I will leave the shunt set for another 2-3 months to monitor for any changes""]","[[0, 76]]","[""exact""]",True,False
+58,plan,The patient will return in 3 months for follow-up.,0.0,"[""The patient will return in 3 months for follow-up"", ""The patient will return in 3 months for follow-up""]","[[78, 127], [78, 127]]","[""exact"", ""exact""]",True,True
+59,plan,The patient can enroll in the driver's safety program without the physician's recommendation.,0.75,"[""and he can enroll in it without my recommendation""]","[[210, 259]]","[""exact""]",True,False
+60,plan,The physician will discuss the possibility of the driver's safety program with the patient.,0.0,"[""I will also discuss the possibility of driver's safety program with the patient""]","[[129, 208]]","[""exact""]",True,False

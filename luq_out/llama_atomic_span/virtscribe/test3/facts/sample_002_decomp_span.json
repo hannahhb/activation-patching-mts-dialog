@@ -1,0 +1,1219 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 60-year-old right-handed female.",
+        "spans": [
+          "a 60-year-old right-handed female"
+        ],
+        "span_offsets": [
+          [
+            18,
+            51
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with a 3-week history of bilateral hand numbness and tingling.",
+        "spans": [
+          "bilateral hand numbness and tingling"
+        ],
+        "span_offsets": [
+          [
+            87,
+            123
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms started after a car accident in December where she broke both wrists.",
+        "spans": [
+          "which started after a car accident in December where she broke both wrists"
+        ],
+        "span_offsets": [
+          [
+            125,
+            199
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms worsened over the last month.",
+        "spans": [
+          "the symptoms worsened over the last month"
+        ],
+        "span_offsets": [
+          [
+            218,
+            259
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right wrist is worse than the left.",
+        "spans": [
+          "the right wrist being worse than the left"
+        ],
+        "span_offsets": [
+          [
+            266,
+            307
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has mild stiffness in her neck.",
+        "spans": [
+          "mild stiffness in her neck"
+        ],
+        "span_offsets": [
+          [
+            327,
+            353
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a contusion to the head during the accident.",
+        "spans": [
+          "a contusion to the head during the accident"
+        ],
+        "span_offsets": [
+          [
+            358,
+            401
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any pain.",
+        "spans": [
+          "She denies any pain"
+        ],
+        "span_offsets": [
+          [
+            403,
+            422
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient describes the numbness and tingling as sore and throbbing, especially when using her hands.",
+        "spans": [
+          "the numbness and tingling as sore and throbbing, especially when using her hands"
+        ],
+        "span_offsets": [
+          [
+            438,
+            518
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms are more pronounced at night.",
+        "spans": [
+          "the symptoms are more pronounced at night"
+        ],
+        "span_offsets": [
+          [
+            537,
+            578
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms can come and go throughout the day.",
+        "spans": [
+          "can come and go throughout the day"
+        ],
+        "span_offsets": [
+          [
+            583,
+            617
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any loss of sensation in her hands or fingers.",
+        "spans": [
+          "denies any loss of sensation in her hands or fingers"
+        ],
+        "span_offsets": [
+          [
+            623,
+            675
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's hands or fingers might be less sensitive than usual.",
+        "spans": [
+          "they might be less sensitive than usual"
+        ],
+        "span_offsets": [
+          [
+            692,
+            731
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing fatigue.",
+        "spans": [
+          "fatigue"
+        ],
+        "span_offsets": [
+          [
+            759,
+            766
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing weight gain.",
+        "spans": [
+          "weight gain"
+        ],
+        "span_offsets": [
+          [
+            768,
+            779
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing excessive appetite.",
+        "spans": [
+          "excessive appetite"
+        ],
+        "span_offsets": [
+          [
+            781,
+            799
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing bloating.",
+        "spans": [
+          "bloating"
+        ],
+        "span_offsets": [
+          [
+            801,
+            809
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing shortness of breath.",
+        "spans": [
+          "shortness of breath"
+        ],
+        "span_offsets": [
+          [
+            811,
+            830
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing leg swelling.",
+        "spans": [
+          "leg swelling"
+        ],
+        "span_offsets": [
+          [
+            832,
+            844
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing dryness, itching, and nail bed trenches on her skin.",
+        "spans": [
+          "dryness, itching, and nail bed trenches on her skin"
+        ],
+        "span_offsets": [
+          [
+            850,
+            901
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of chronic kidney disease.",
+        "spans": [
+          "chronic kidney disease"
+        ],
+        "span_offsets": [
+          [
+            924,
+            946
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of gout.",
+        "spans": [
+          "gout"
+        ],
+        "span_offsets": [
+          [
+            948,
+            952
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of hypertension.",
+        "spans": [
+          "hypertension"
+        ],
+        "span_offsets": [
+          [
+            954,
+            966
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of anxiety.",
+        "spans": [
+          "anxiety"
+        ],
+        "span_offsets": [
+          [
+            968,
+            975
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of GERD.",
+        "spans": [
+          "GERD"
+        ],
+        "span_offsets": [
+          [
+            977,
+            981
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of pre-diabetes.",
+        "spans": [
+          "pre-diabetes"
+        ],
+        "span_offsets": [
+          [
+            987,
+            999
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has managed her conditions with dietary changes.",
+        "spans": [
+          "which she has managed with dietary changes"
+        ],
+        "span_offsets": [
+          [
+            1001,
+            1043
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking carvedilol.",
+        "spans": [
+          "carvedilol"
+        ],
+        "span_offsets": [
+          [
+            1069,
+            1079
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking carvedilol 25 milligrams twice a day.",
+        "spans": [
+          "carvedilol 25 milligrams twice a day"
+        ],
+        "span_offsets": [
+          [
+            1069,
+            1105
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking carvedilol for hypertension.",
+        "spans": [
+          "for hypertension"
+        ],
+        "span_offsets": [
+          [
+            1106,
+            1122
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking lexapro.",
+        "spans": [
+          "lexapro"
+        ],
+        "span_offsets": [
+          [
+            1124,
+            1131
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking lexapro 10 milligrams a day.",
+        "spans": [
+          "lexapro 10 milligrams a day"
+        ],
+        "span_offsets": [
+          [
+            1124,
+            1151
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking lexapro for anxiety.",
+        "spans": [
+          "for anxiety"
+        ],
+        "span_offsets": [
+          [
+            1152,
+            1163
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a known allergy to sulfa drugs.",
+        "spans": [
+          "a known allergy to sulfa drugs"
+        ],
+        "span_offsets": [
+          [
+            1173,
+            1203
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has diminished pin prick sensation in the third finger on the right.",
+        "spans": [
+          "diminished pin prick sensation in the third and fourth fingers on the right"
+        ],
+        "span_offsets": [
+          [
+            49,
+            124
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has diminished pin prick sensation in the fourth finger on the right.",
+        "spans": [
+          "diminished pin prick sensation in the third and fourth fingers on the right"
+        ],
+        "span_offsets": [
+          [
+            49,
+            124
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has diminished pin prick sensation in the fourth finger on the left.",
+        "spans": [
+          "diminished pin prick sensation in the fourth and fifth fingers on the left"
+        ],
+        "span_offsets": [
+          [
+            49,
+            79
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has diminished pin prick sensation in the fifth finger on the left.",
+        "spans": [
+          "diminished pin prick sensation in the fourth and fifth fingers on the left"
+        ],
+        "span_offsets": [
+          [
+            49,
+            79
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's reflexes are one plus and symmetric.",
+        "spans": [
+          "Reflexes were one plus and symmetric"
+        ],
+        "span_offsets": [
+          [
+            171,
+            207
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's knee reflexes are two plus.",
+        "spans": [
+          "with two plus knees"
+        ],
+        "span_offsets": [
+          [
+            209,
+            228
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's reflexes are down-going bilaterally.",
+        "spans": [
+          "and down-going bilaterally"
+        ],
+        "span_offsets": [
+          [
+            230,
+            256
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Tinel's sign is positive at the right wrist.",
+        "spans": [
+          "Tinel's sign was positive at both wrists"
+        ],
+        "span_offsets": [
+          [
+            258,
+            298
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Tinel's sign is positive at the left wrist.",
+        "spans": [
+          "Tinel's sign was positive at both wrists"
+        ],
+        "span_offsets": [
+          [
+            258,
+            298
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Tinel's sign is positive at the right elbow.",
+        "spans": [
+          "Tinel's sign was positive at both elbows"
+        ],
+        "span_offsets": [
+          [
+            258,
+            314
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Tinel's sign is positive at the left elbow.",
+        "spans": [
+          "Tinel's sign was positive at both elbows"
+        ],
+        "span_offsets": [
+          [
+            258,
+            314
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's CT brain scan from 2/5/21 shows no metastatic disease.",
+        "spans": [
+          "No metastatic disease"
+        ],
+        "span_offsets": [
+          [
+            367,
+            388
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's CT brain scan from 2/5/21 shows no acute intracranial abnormalities.",
+        "spans": [
+          "no acute intracranial abnormalities"
+        ],
+        "span_offsets": [
+          [
+            390,
+            425
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient is 60 years old.",
+        "spans": [
+          "60-year-old"
+        ],
+        "span_offsets": [
+          [
+            29,
+            40
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is right-handed.",
+        "spans": [
+          "right-handed"
+        ],
+        "span_offsets": [
+          [
+            41,
+            53
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is female.",
+        "spans": [
+          "female"
+        ],
+        "span_offsets": [
+          [
+            54,
+            60
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has bilateral carpal tunnel syndrome.",
+        "spans": [
+          "bilateral carpal tunnel syndrome"
+        ],
+        "span_offsets": [
+          [
+            66,
+            98
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has possible bilateral cubital tunnel syndrome.",
+        "spans": [
+          "possible bilateral cubital tunnel syndrome"
+        ],
+        "span_offsets": [
+          [
+            103,
+            145
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has carpal tunnel syndrome.",
+        "spans": [
+          "Carpal tunnel syndrome"
+        ],
+        "span_offsets": [
+          [
+            162,
+            184
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has cubital tunnel syndrome.",
+        "spans": [
+          "Cubital tunnel syndrome"
+        ],
+        "span_offsets": [
+          [
+            186,
+            209
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has chronic kidney disease.",
+        "spans": [
+          "Chronic kidney disease"
+        ],
+        "span_offsets": [
+          [
+            211,
+            233
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has gout.",
+        "spans": [
+          "Gout"
+        ],
+        "span_offsets": [
+          [
+            235,
+            239
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has hypertension.",
+        "spans": [
+          "Hypertension"
+        ],
+        "span_offsets": [
+          [
+            241,
+            253
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has anxiety.",
+        "spans": [
+          "Anxiety"
+        ],
+        "span_offsets": [
+          [
+            255,
+            262
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has GERD.",
+        "spans": [
+          "GERD"
+        ],
+        "span_offsets": [
+          [
+            264,
+            268
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has pre-diabetes.",
+        "spans": [
+          "Pre-diabetes"
+        ],
+        "span_offsets": [
+          [
+            270,
+            282
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a sulfa allergy.",
+        "spans": [
+          "Sulfa allergy"
+        ],
+        "span_offsets": [
+          [
+            284,
+            297
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient is scheduled for EMG.",
+        "spans": [
+          "scheduled her for EMG and NCV"
+        ],
+        "span_offsets": [
+          [
+            47,
+            76
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is scheduled for NCV.",
+        "spans": [
+          "scheduled her for EMG and NCV"
+        ],
+        "span_offsets": [
+          [
+            47,
+            76
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms may not resolve.",
+        "spans": [
+          "If her symptoms do not resolve"
+        ],
+        "span_offsets": [
+          [
+            78,
+            108
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient may be referred to a hand clinic.",
+        "spans": [
+          "hand clinic referral"
+        ],
+        "span_offsets": [
+          [
+            126,
+            146
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient may receive symptomatic injections.",
+        "spans": [
+          "possible symptomatic injections"
+        ],
+        "span_offsets": [
+          [
+            151,
+            182
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient may undergo carpal tunnel release surgery.",
+        "spans": [
+          "carpal tunnel release surgery"
+        ],
+        "span_offsets": [
+          [
+            186,
+            215
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient can pursue further management through her current orthopedist.",
+        "spans": [
+          "she can pursue these through her current orthopedist"
+        ],
+        "span_offsets": [
+          [
+            226,
+            278
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was encouraged to wear her splints.",
+        "spans": [
+          "I encouraged her to wear her splints"
+        ],
+        "span_offsets": [
+          [
+            280,
+            316
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will return for EMG and NCV.",
+        "spans": [
+          "The patient will return for EMG and NCV"
+        ],
+        "span_offsets": [
+          [
+            357,
+            396
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Further management will be discussed if necessary.",
+        "spans": [
+          "if necessary, further management will be discussed"
+        ],
+        "span_offsets": [
+          [
+            402,
+            452
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

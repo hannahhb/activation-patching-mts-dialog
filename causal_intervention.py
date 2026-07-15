@@ -305,21 +305,35 @@ def make_ablation_hooks(layer_spec, pathway: str, position: int):
     make_patch_hooks below), but it's cheap: one forward pass, no second
     run needed to source a "clean" activation from. Used as the fast
     exploratory necessity screen that runs first.
+
+    `position` is the index of the target word's own last token (matching
+    get_baseline_pair/logit_diff's `position` argument), NOT the index the
+    hook itself writes to. Callers read the model's prediction FOR that
+    token from logits[position - 1] (standard causal-LM shift: logits[i]
+    predicts token[i+1]), so the intervention must modify the residual
+    stream AT position - 1 -- that's the position whose forward computation
+    actually produces logits[position - 1]. Ablating `position` itself is
+    causally invisible to that logit (attention is causal; a position's own
+    activations can only affect logits at or after itself), which silently
+    made every ablation a no-op (delta_logit_diff == 0.0 for every row) --
+    confirmed by inspecting a completed run's ablation_results.csv where
+    ablated_logit_diff was bit-identical to baseline_logit_diff throughout.
     """
+    hook_pos = position - 1
     hooks = []
     if pathway == "attn":
         for layer, heads in layer_spec.items():
             head_idx = torch.as_tensor(heads, dtype=torch.long)
 
-            def fn(value, hook, head_idx=head_idx):
-                value[0, position, head_idx, :] = 0.0
+            def fn(value, hook, head_idx=head_idx, hook_pos=hook_pos):
+                value[0, hook_pos, head_idx, :] = 0.0
                 return value
 
             hooks.append((f"blocks.{layer}.attn.hook_z", fn))
     else:  # ffn
         for layer in layer_spec:
-            def fn(value, hook):
-                value[0, position, :] = 0.0
+            def fn(value, hook, hook_pos=hook_pos):
+                value[0, hook_pos, :] = 0.0
                 return value
 
             hooks.append((f"blocks.{layer}.hook_mlp_out", fn))
@@ -364,31 +378,46 @@ def cache_positionwise_activations(model, full_ids: torch.Tensor,
 def make_patch_hooks(cache: dict, layer_spec, pathway: str,
                      src_pos: int, dst_pos: int, interp: float):
     """
-    Soft-patch hook(s): at `dst_pos`, overwrite the activation with
-    (1-interp)*original + interp*cached[src_pos]. interp=0 is a no-op
+    Soft-patch hook(s): overwrite the activation with
+    (1-interp)*original + interp*cached[src]. interp=0 is a no-op
     (baseline); interp=1 is a full patch (Heimersheim & Nanda's standard
     denoising/noising); intermediate values interpolate between the two
     REAL activations rather than scaling a single run synthetically.
+
+    `src_pos`/`dst_pos` are the index of each word's own last token
+    (matching logit_diff's `position` convention: the caller reads that
+    word's predicted logit from logits[position - 1]). Both the cache read
+    and the write therefore use position - 1, not position itself --
+    logits[dst_pos - 1] is produced by the forward computation AT
+    dst_pos - 1, so that's the position that must carry the patched value
+    for the intervention to be causally visible to the measured logit at
+    all (attention is causal; writing at dst_pos would only affect logits
+    at dst_pos or later, never dst_pos - 1). Same fix as make_ablation_hooks
+    -- see that function's docstring for how this was diagnosed (a
+    completed run's ablation_results.csv had ablated_logit_diff bit-
+    identical to baseline_logit_diff for every single row).
     """
+    src = src_pos - 1
+    dst = dst_pos - 1
     hooks = []
     if pathway == "attn":
         for layer, heads in layer_spec.items():
             head_idx = torch.as_tensor(heads, dtype=torch.long)
-            src_val = cache["z"][layer][src_pos, head_idx, :]  # (n_heads_flagged, d_head)
+            src_val = cache["z"][layer][src, head_idx, :]  # (n_heads_flagged, d_head)
 
-            def fn(value, hook, head_idx=head_idx, src_val=src_val):
-                orig = value[0, dst_pos, head_idx, :]
-                value[0, dst_pos, head_idx, :] = (1.0 - interp) * orig + interp * src_val
+            def fn(value, hook, head_idx=head_idx, src_val=src_val, dst=dst):
+                orig = value[0, dst, head_idx, :]
+                value[0, dst, head_idx, :] = (1.0 - interp) * orig + interp * src_val
                 return value
 
             hooks.append((f"blocks.{layer}.attn.hook_z", fn))
     else:  # ffn
         for layer in layer_spec:
-            src_val = cache["mlp"][layer][src_pos, :]  # (d_model,)
+            src_val = cache["mlp"][layer][src, :]  # (d_model,)
 
-            def fn(value, hook, src_val=src_val):
-                orig = value[0, dst_pos, :]
-                value[0, dst_pos, :] = (1.0 - interp) * orig + interp * src_val
+            def fn(value, hook, src_val=src_val, dst=dst):
+                orig = value[0, dst, :]
+                value[0, dst, :] = (1.0 - interp) * orig + interp * src_val
                 return value
 
             hooks.append((f"blocks.{layer}.hook_mlp_out", fn))
@@ -568,6 +597,15 @@ def plot_ablation(df: pd.DataFrame, out_path: Path):
         ax.axhline(0.0, color="grey", lw=0.8)
         ax.set_title(title, fontsize=10)
         ax.grid(alpha=0.3, axis="y")
+        # A fully flat/zero-variance subplot (every bar 0, every yerr 0) gives
+        # matplotlib a zero-width y-range to autoscale, which has crashed with
+        # a NaN in the tick locator on some matplotlib versions (not
+        # reproduced locally, but seen on a cluster run against real all-zero
+        # data -- see make_ablation_hooks' docstring for why the data was
+        # degenerate in the first place). Force a sane range rather than rely
+        # on autoscale for this edge case.
+        if bar_data and max(bar_data) == min(bar_data) == 0 and (not bar_err or max(bar_err) == 0):
+            ax.set_ylim(-1.0, 1.0)
     axes[0].set_ylabel(r"$\Delta$ logit diff (ablated $-$ baseline)")
     plt.tight_layout()
     plt.savefig(out_path, dpi=150)

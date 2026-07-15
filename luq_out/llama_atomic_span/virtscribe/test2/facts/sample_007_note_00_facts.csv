@@ -1,0 +1,44 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Jacqueline Miller.,0.0,"[""Jacqueline Miller""]","[[13, 30]]","[""exact""]",True,False
+1,subjective,The patient reports being pretty good.,1.0,"[""being pretty good""]","[[40, 57]]","[""exact""]",True,False
+2,subjective,The patient has a chronic skin condition.,0.25,"[""chronic skin condition""]","[[66, 88]]","[""exact""]",True,False
+3,subjective,The patient's chronic skin condition has been improving.,0.75,"[""has been improving""]","[[94, 112]]","[""exact""]",True,False
+4,subjective,The patient has a small residual rash.,0.25,"[""small residual rash""]","[[129, 148]]","[""exact""]",True,False
+5,subjective,The patient's rash has plateaued in improvement since switching from taking doxycycline twice a day to once a day.,0.25,"[""which has plateaued in improvement since switching from taking doxycycline twice a day to once a day""]","[[150, 250]]","[""exact""]",True,False
+6,subjective,The patient was previously taking doxycycline twice a day.,0.25,"[""taking doxycycline twice a day""]","[[206, 236]]","[""exact""]",True,False
+7,subjective,The patient is now taking doxycycline once a day.,0.0,"[""to once a day""]","[[237, 250]]","[""exact""]",True,False
+8,subjective,The patient is concerned about using the Elidel cream due to its association with cancer risk in high doses.,1.0,"[""which she had previously researched and found concerning due to its association with cancer risk in high doses""]","[[309, 419]]","[""exact""]",True,False
+9,subjective,The patient has stopped using the Elidel cream.,1.0,"[""confirms she has stopped using the Elidel cream""]","[[450, 497]]","[""exact""]",True,False
+10,subjective,The patient denies breastfeeding.,0.5,"[""denies breastfeeding""]","[[425, 445]]","[""exact""]",True,False
+11,subjective,The patient uses sulfacetamide wash twice a day.,0.5,"[""sulfacetamide wash twice a day""]","[[518, 548]]","[""exact""]",True,False
+12,subjective,The patient uses metro cream after washing her face.,0.75,"[""metro cream after washing her face""]","[[553, 587]]","[""exact""]",True,False
+13,subjective,The patient has not been using any other lotions or cleansers.,1.0,"[""She has not been using any other lotions or cleansers""]","[[589, 642]]","[""exact""]",True,False
+14,objective,The patient has Fitzpatrick skin type IV to V.,0.5,"[""Fitzpatrick skin type IV to V""]","[[31, 60]]","[""exact""]",True,False
+15,objective,The patient has faint erythematous papules on bilateral medial cheeks.,0.0,"[""a few faint erythematous papules and redness on bilateral medial cheeks and around the nostrils""]","[[67, 162]]","[""exact""]",True,False
+16,objective,The patient has redness on bilateral medial cheeks.,0.0,"[""a few faint erythematous papules and redness on bilateral medial cheeks and around the nostrils""]","[[67, 162]]","[""exact""]",True,False
+17,objective,The patient has faint erythematous papules around the nostrils.,0.0,"[""a few faint erythematous papules and redness on bilateral medial cheeks and around the nostrils""]","[[67, 162]]","[""exact""]",True,False
+18,objective,The patient has redness around the nostrils.,0.0,"[""a few faint erythematous papules and redness on bilateral medial cheeks and around the nostrils""]","[[67, 162]]","[""exact""]",True,False
+19,assessment,The patient has perioral dermatitis.,0.0,"[""The patient has perioral dermatitis, rosacea, and ocular rosacea""]","[[12, 76]]","[""exact""]",True,False
+20,assessment,The patient has rosacea.,0.0,"[""The patient has perioral dermatitis, rosacea, and ocular rosacea""]","[[12, 76]]","[""exact""]",True,False
+21,assessment,The patient has ocular rosacea.,0.0,"[""The patient has perioral dermatitis, rosacea, and ocular rosacea""]","[[12, 76]]","[""exact""]",True,False
+22,assessment,The patient's perioral dermatitis is confirmed.,0.0,"[""Perioral dermatitis; Rosacea; Ocular rosacea; Status: confirmed""]","[[92, 155]]","[""exact""]",True,False
+23,assessment,The patient's rosacea is confirmed.,0.0,"[""Perioral dermatitis; Rosacea; Ocular rosacea; Status: confirmed""]","[[92, 155]]","[""exact""]",True,False
+24,assessment,The patient's ocular rosacea is confirmed.,0.0,"[""Perioral dermatitis; Rosacea; Ocular rosacea; Status: confirmed""]","[[92, 155]]","[""exact""]",True,False
+25,plan,The patient was instructed to continue using the sulfacetamide wash once a day.,0.5,"[""continue using the sulfacetamide wash once a day""]","[[28, 76]]","[""exact""]",True,False
+26,plan,The patient was instructed to continue using the metro cream.,0.0,"[""continue with the metro cream""]","[[78, 107]]","[""exact""]",True,False
+27,plan,The patient's doxycycline dosage was increased to twice a day.,0.5,"[""increase the use of doxycycline to twice a day""]","[[113, 159]]","[""exact""]",True,False
+28,plan,The patient was recommended to use the tacrolimus ointment twice a day until the rash is gone.,0.0,"[""using the tacrolimus ointment (tacrolimus) twice a day until the rash is gone""]","[[175, 252]]","[""exact""]",True,False
+29,plan,The patient was recommended to use the tacrolimus ointment once a day for a week after the rash is gone.,0.0,"[""then once a day for a week before stopping""]","[[254, 296]]","[""exact""]",True,False
+30,plan,The patient was instructed to stop using the doxycycline after a week.,1.0,"[""stop using the doxycycline after a week""]","[[326, 365]]","[""exact""]",True,False
+31,plan,The patient was instructed to continue using the sulfacetamide wash after stopping the doxycycline.,1.0,"[""continue with the wash""]","[[370, 392]]","[""exact""]",True,False
+32,plan,The patient was instructed to continue using the metro cream after stopping the doxycycline.,0.75,"[""continue with the metro cream""]","[[78, 107]]","[""exact""]",True,False
+33,plan,The patient was instructed to hold off on starting her old products until the follow-up appointment.,0.75,"[""hold off on starting her old products until the follow-up appointment""]","[[430, 499]]","[""exact""]",True,False
+34,plan,The patient was prescribed a refill of doxycycline.,1.0,"[""I prescribed a refill of doxycycline""]","[[501, 537]]","[""exact""]",True,False
+35,plan,The Elidel cream was cancelled.,0.75,"[""cancelled the Elidel cream""]","[[542, 568]]","[""exact""]",True,False
+36,plan,The clindamycin was cancelled.,0.75,"[""cancelled the clindamycin""]","[[577, 602]]","[""exact""]",True,False
+37,plan,The patient was recommended vanicream or petroleum jelly as a moisturizer.,0.5,"[""vanicream or petroleum jelly as a moisturizer""]","[[618, 663]]","[""exact""]",True,False
+38,plan,The patient was provided samples of vanicream or petroleum jelly.,0.5,"[""provided samples""]","[[668, 684]]","[""exact""]",True,False
+39,plan,The patient was instructed to follow up in four weeks.,0.0,"[""follow up in four weeks""]","[[706, 729]]","[""exact""]",True,False
+40,plan,A follow-up appointment was scheduled in four weeks to assess the patient's condition.,0.0,"[""I scheduled a follow-up appointment in four weeks to assess the patient's condition""]","[[732, 815]]","[""exact""]",True,False
+41,plan,The follow-up appointment is to provide further guidance on managing the patient's rosacea.,0.75,"[""provide further guidance on managing her rosacea""]","[[820, 868]]","[""exact""]",True,False
+42,plan,The follow-up appointment is to provide further guidance on managing the patient's ocular rosacea.,1.0,"[""provide further guidance on managing her ocular rosacea""]","[[820, 887]]","[""word""]",True,False

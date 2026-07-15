@@ -1,0 +1,913 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Mr. Nelson.",
+        "spans": [
+          "Mr. Nelson"
+        ],
+        "span_offsets": [
+          [
+            18,
+            28
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is a 73-year-old male.",
+        "spans": [
+          "a 73-year-old male"
+        ],
+        "span_offsets": [
+          [
+            30,
+            48
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has rheumatoid arthritis.",
+        "spans": [
+          "rheumatoid arthritis"
+        ],
+        "span_offsets": [
+          [
+            86,
+            106
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right knee has been swollen for approximately 2 months.",
+        "spans": [
+          "his right knee has been swollen for approximately 2 months"
+        ],
+        "span_offsets": [
+          [
+            124,
+            182
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's pain level ranges from 3 to 6 out of 10.",
+        "spans": [
+          "pain level ranging from 3 to 6 out of 10"
+        ],
+        "span_offsets": [
+          [
+            189,
+            229
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has tried compression socks.",
+        "spans": [
+          "He has tried compression socks"
+        ],
+        "span_offsets": [
+          [
+            231,
+            261
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Compression socks provide some relief to the patient but not complete resolution.",
+        "spans": [
+          "which provide some relief but not complete resolution"
+        ],
+        "span_offsets": [
+          [
+            263,
+            316
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences stiffness.",
+        "spans": [
+          "He experiences stiffness"
+        ],
+        "span_offsets": [
+          [
+            318,
+            342
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences stiffness particularly when getting up from a seated position.",
+        "spans": [
+          "particularly when getting up from a seated position"
+        ],
+        "span_offsets": [
+          [
+            344,
+            395
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient requires a cane for support.",
+        "spans": [
+          "and requires a cane for support"
+        ],
+        "span_offsets": [
+          [
+            397,
+            428
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes Xeljanz.",
+        "spans": [
+          "Xeljanz (11 mg daily)"
+        ],
+        "span_offsets": [
+          [
+            449,
+            470
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes Xeljanz 11 mg daily.",
+        "spans": [
+          "11 mg daily"
+        ],
+        "span_offsets": [
+          [
+            458,
+            469
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes Xeljanz for the treatment of rheumatoid arthritis.",
+        "spans": [
+          "Xeljanz (11 mg daily)"
+        ],
+        "span_offsets": [
+          [
+            449,
+            470
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes Celebrex.",
+        "spans": [
+          "Celebrex (200 mg daily)"
+        ],
+        "span_offsets": [
+          [
+            475,
+            498
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes Celebrex 200 mg daily.",
+        "spans": [
+          "200 mg daily"
+        ],
+        "span_offsets": [
+          [
+            485,
+            497
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes Celebrex for the treatment of rheumatoid arthritis.",
+        "spans": [
+          "Celebrex (200 mg daily)"
+        ],
+        "span_offsets": [
+          [
+            475,
+            498
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been taking Xeljanz and Celebrex for 2 months.",
+        "spans": [
+          "for 2 months"
+        ],
+        "span_offsets": [
+          [
+            499,
+            511
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has experienced some improvement in symptoms before the recent increase in swelling.",
+        "spans": [
+          "with some improvement in symptoms before the recent increase in swelling"
+        ],
+        "span_offsets": [
+          [
+            513,
+            585
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of rheumatoid arthritis.",
+        "spans": [
+          "The patient has a history of rheumatoid arthritis"
+        ],
+        "span_offsets": [
+          [
+            610,
+            659
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been receiving treatment for rheumatoid arthritis.",
+        "spans": [
+          "for which he has been receiving treatment"
+        ],
+        "span_offsets": [
+          [
+            661,
+            702
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports no other symptoms related to his rheumatoid arthritis.",
+        "spans": [
+          "The patient reports no other symptoms related to his rheumatoid arthritis"
+        ],
+        "span_offsets": [
+          [
+            724,
+            797
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's knee is swollen.",
+        "spans": [
+          "The patient's knee is swollen"
+        ],
+        "span_offsets": [
+          [
+            15,
+            44
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "There is pitting around the patient's knee and ankle.",
+        "spans": [
+          "with pitting around the knee and ankle"
+        ],
+        "span_offsets": [
+          [
+            46,
+            84
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports pain in the knee.",
+        "spans": [
+          "The patient reports pain and stiffness"
+        ],
+        "span_offsets": [
+          [
+            86,
+            124
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports stiffness in the knee.",
+        "spans": [
+          "The patient reports pain and stiffness"
+        ],
+        "span_offsets": [
+          [
+            86,
+            124
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's knee pain is exacerbated by straightening the knee.",
+        "spans": [
+          "particularly when straightening the knee"
+        ],
+        "span_offsets": [
+          [
+            126,
+            166
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has normal capillary refill in the toes.",
+        "spans": [
+          "Normal capillary refill in the toes"
+        ],
+        "span_offsets": [
+          [
+            168,
+            203
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has recurrent swelling in his right knee.",
+        "spans": [
+          "recurrent swelling and pain in his right knee"
+        ],
+        "span_offsets": [
+          [
+            28,
+            73
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has recurrent pain in his right knee.",
+        "spans": [
+          "recurrent swelling and pain in his right knee"
+        ],
+        "span_offsets": [
+          [
+            28,
+            73
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right knee swelling is likely related to his rheumatoid arthritis.",
+        "spans": [
+          "likely related to his rheumatoid arthritis"
+        ],
+        "span_offsets": [
+          [
+            75,
+            117
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's right knee pain is likely related to his rheumatoid arthritis.",
+        "spans": [
+          "likely related to his rheumatoid arthritis"
+        ],
+        "span_offsets": [
+          [
+            75,
+            117
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has swelling of the right knee.",
+        "spans": [
+          "swelling of the right knee"
+        ],
+        "span_offsets": [
+          [
+            156,
+            182
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has pain of the right knee.",
+        "spans": [
+          "pain of the right knee"
+        ],
+        "span_offsets": [
+          [
+            184,
+            206
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has stiffness of the right knee.",
+        "spans": [
+          "stiffness of the right knee"
+        ],
+        "span_offsets": [
+          [
+            208,
+            235
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed a steroid injection.",
+        "spans": [
+          "I prescribed a steroid injection"
+        ],
+        "span_offsets": [
+          [
+            0,
+            32
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's steroid injection contains 80 mg of triamcinolone.",
+        "spans": [
+          "80 mg of triamcinolone"
+        ],
+        "span_offsets": [
+          [
+            34,
+            56
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's steroid injection contains 1 ml of lidocaine.",
+        "spans": [
+          "1 ml of lidocaine"
+        ],
+        "span_offsets": [
+          [
+            61,
+            78
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's steroid injection is for the right knee.",
+        "spans": [
+          "for the patient's right knee"
+        ],
+        "span_offsets": [
+          [
+            80,
+            108
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was ordered an x-ray of the knee.",
+        "spans": [
+          "I also ordered an x-ray of the knee"
+        ],
+        "span_offsets": [
+          [
+            110,
+            145
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The x-ray of the knee is to investigate the cause of the swelling.",
+        "spans": [
+          "to investigate the cause of the swelling"
+        ],
+        "span_offsets": [
+          [
+            146,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has swelling in the knee.",
+        "spans": [
+          "the cause of the swelling"
+        ],
+        "span_offsets": [
+          [
+            161,
+            186
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will be referred to physical therapy.",
+        "spans": [
+          "I will refer the patient to physical therapy"
+        ],
+        "span_offsets": [
+          [
+            188,
+            232
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The physical therapy is to address the patient's stiffness.",
+        "spans": [
+          "to address his stiffness"
+        ],
+        "span_offsets": [
+          [
+            233,
+            257
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The physical therapy is to address the patient's mobility issues.",
+        "spans": [
+          "and mobility issues"
+        ],
+        "span_offsets": [
+          [
+            258,
+            277
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has stiffness.",
+        "spans": [
+          "his stiffness"
+        ],
+        "span_offsets": [
+          [
+            244,
+            257
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has mobility issues.",
+        "spans": [
+          "mobility issues"
+        ],
+        "span_offsets": [
+          [
+            262,
+            277
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "A surgery consult will be considered if the current treatment plan does not improve the patient's symptoms.",
+        "spans": [
+          "If the current treatment plan does not improve his symptoms, I will consider a surgery consult"
+        ],
+        "span_offsets": [
+          [
+            279,
+            373
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will have a follow-up appointment in 2-3 months.",
+        "spans": [
+          "I will see the patient again in 2-3 months"
+        ],
+        "span_offsets": [
+          [
+            425,
+            467
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The follow-up appointment is to reassess the patient's symptoms.",
+        "spans": [
+          "to reassess his symptoms"
+        ],
+        "span_offsets": [
+          [
+            468,
+            492
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's treatment plan will be adjusted as needed.",
+        "spans": [
+          "and adjust his treatment plan as needed"
+        ],
+        "span_offsets": [
+          [
+            493,
+            532
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to follow up with his primary care physician.",
+        "spans": [
+          "I also instructed the patient to follow up with his primary care physician"
+        ],
+        "span_offsets": [
+          [
+            534,
+            608
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's primary care physician will monitor his CMP levels.",
+        "spans": [
+          "for routine monitoring of his CMP levels"
+        ],
+        "span_offsets": [
+          [
+            609,
+            649
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's CMP levels are currently within normal limits.",
+        "spans": [
+          "which are currently within normal limits"
+        ],
+        "span_offsets": [
+          [
+            651,
+            691
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

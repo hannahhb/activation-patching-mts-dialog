@@ -1,0 +1,33 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Judy Gomez.,0.0,"[""Judy Gomez""]","[[18, 28]]","[""exact""]",True,False
+1,subjective,The patient is a 61-year-old woman.,0.25,"[""61-year-old woman""]","[[35, 52]]","[""exact""]",True,False
+2,subjective,The patient has psoriatic arthritis.,0.0,"[""psoriatic arthritis""]","[[80, 99]]","[""exact""]",True,False
+3,subjective,The patient is on a decreased dose of prednisone.,0.5,"[""on a decreased dose of prednisone""]","[[119, 152]]","[""exact""]",True,False
+4,subjective,The patient experiences occasional pain in her feet.,0.0,"[""experiencing occasional pain in her feet""]","[[166, 206]]","[""exact""]",True,False
+5,subjective,The patient's foot pain is worse after days off from work where she is moving around more.,0.5,"[""particularly after days off from work where she is moving around more""]","[[208, 277]]","[""exact""]",True,False
+6,subjective,The patient takes an extra dose of prednisone once a week due to increased pain.,0.25,"[""taking an extra dose of prednisone once a week due to increased pain""]","[[292, 360]]","[""exact""]",True,False
+7,subjective,The patient feels horrible after taking methotrexate with the COVID-19 vaccine.,1.0,"[""feeling horrible after taking methotrexate with the COVID-19 vaccine""]","[[379, 447]]","[""exact""]",True,False
+8,subjective,The patient noted an improvement after taking methotrexate again a week later.,0.75,"[""noted an improvement after taking it again a week later""]","[[453, 508]]","[""exact""]",True,False
+9,subjective,The patient is concerned about bruising on her skin.,0.0,"[""concern about bruising on her skin""]","[[524, 558]]","[""exact""]",True,False
+10,subjective,The patient experiences bruising on her skin without feeling pain.,1.0,"[""bruising on her skin without feeling pain""]","[[618, 659]]","[""exact""]",True,False
+11,subjective,The patient has a history of psoriasis.,1.0,"[""history of psoriasis""]","[[671, 691]]","[""exact""]",True,False
+12,subjective,The patient's psoriasis is causing ridges and nail changes.,1.0,"[""causing ridges and nail changes""]","[[702, 733]]","[""exact""]",True,False
+13,subjective,The patient has a history of psoriatic arthritis.,0.0,"[""history of psoriatic arthritis""]","[[776, 806]]","[""exact""]",True,False
+14,subjective,The patient is currently on prednisone.,0.0,"[""currently on prednisone""]","[[815, 838]]","[""exact""]",True,False
+15,subjective,The patient is currently on methotrexate.,0.25,"[""currently on methotrexate""]","[[1057, 1093]]","[""semantic""]",True,False
+16,subjective,The patient experiences occasional pain in her feet and joints.,0.25,"[""occasional pain in her feet and joints""]","[[897, 935]]","[""exact""]",True,False
+17,subjective,The patient notes an improvement after increasing the methotrexate dose.,1.0,"[""improvement after increasing the methotrexate dose""]","[[950, 1000]]","[""exact""]",True,False
+18,subjective,The patient takes prednisone 1 tablet daily.,0.25,"[""Prednisone 1 tablet daily""]","[[1005, 1030]]","[""exact""]",True,False
+19,subjective,The patient takes prednisone for psoriatic arthritis.,0.0,"[""for psoriatic arthritis""]","[[1031, 1054]]","[""exact""]",True,False
+20,subjective,The patient takes methotrexate for psoriatic arthritis.,0.25,"[""Methotrexate for psoriatic arthritis""]","[[1057, 1093]]","[""exact""]",True,False
+21,objective,The patient has good range of motion in her toes.,0.0,"[""The patient has good range of motion in her toes""]","[[140, 188]]","[""exact""]",True,False
+22,objective,The patient has ridges due to psoriasis.,0.0,"[""She has ridges and nail changes due to psoriasis""]","[[190, 238]]","[""exact""]",True,False
+23,objective,The patient has nail changes due to psoriasis.,0.0,"[""She has ridges and nail changes due to psoriasis""]","[[190, 238]]","[""exact""]",True,False
+24,assessment,The patient's foot pain is exacerbated by increased activity.,1.0,"[""particularly after increased activity""]","[[160, 197]]","[""exact""]",True,False
+25,assessment,The patient has a problem of psoriatic arthritis.,0.0,"[""Psoriatic arthritis; Active;""]","[[214, 242]]","[""exact""]",True,False
+26,assessment,The patient has a suspected problem of methotrexate interaction with COVID-19 vaccine.,0.5,"[""Methotrexate interaction with COVID-19 vaccine; Suspected;""]","[[243, 301]]","[""exact""]",True,False
+27,assessment,The patient has an active problem of bruising due to prednisone.,0.75,"[""Bruising due to prednisone; Active;""]","[[302, 337]]","[""exact""]",True,False
+28,assessment,The patient's prednisone will be discontinued.,1.0,"[""I will discontinue the patient's prednisone""]","[[346, 389]]","[""exact""]",True,False
+29,assessment,The patient will continue with methotrexate.,0.5,"[""continue with the methotrexate""]","[[394, 424]]","[""exact""]",True,False
+30,assessment,The patient will schedule an appointment for blood work.,1.0,"[""instruct the patient to schedule an appointment for blood work""]","[[433, 495]]","[""exact""]",True,False
+31,assessment,The patient will have a follow-up appointment in 3 months.,1.0,"[""I will see the patient in 3 months for follow-up""]","[[497, 545]]","[""exact""]",True,False

@@ -1,0 +1,555 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Judy Gomez.",
+        "spans": [
+          "Judy Gomez"
+        ],
+        "span_offsets": [
+          [
+            18,
+            28
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is a 61-year-old woman.",
+        "spans": [
+          "61-year-old woman"
+        ],
+        "span_offsets": [
+          [
+            35,
+            52
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has psoriatic arthritis.",
+        "spans": [
+          "psoriatic arthritis"
+        ],
+        "span_offsets": [
+          [
+            80,
+            99
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is on a decreased dose of prednisone.",
+        "spans": [
+          "on a decreased dose of prednisone"
+        ],
+        "span_offsets": [
+          [
+            119,
+            152
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences occasional pain in her feet.",
+        "spans": [
+          "experiencing occasional pain in her feet"
+        ],
+        "span_offsets": [
+          [
+            166,
+            206
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's foot pain is worse after days off from work where she is moving around more.",
+        "spans": [
+          "particularly after days off from work where she is moving around more"
+        ],
+        "span_offsets": [
+          [
+            208,
+            277
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes an extra dose of prednisone once a week due to increased pain.",
+        "spans": [
+          "taking an extra dose of prednisone once a week due to increased pain"
+        ],
+        "span_offsets": [
+          [
+            292,
+            360
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient feels horrible after taking methotrexate with the COVID-19 vaccine.",
+        "spans": [
+          "feeling horrible after taking methotrexate with the COVID-19 vaccine"
+        ],
+        "span_offsets": [
+          [
+            379,
+            447
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient noted an improvement after taking methotrexate again a week later.",
+        "spans": [
+          "noted an improvement after taking it again a week later"
+        ],
+        "span_offsets": [
+          [
+            453,
+            508
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is concerned about bruising on her skin.",
+        "spans": [
+          "concern about bruising on her skin"
+        ],
+        "span_offsets": [
+          [
+            524,
+            558
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences bruising on her skin without feeling pain.",
+        "spans": [
+          "bruising on her skin without feeling pain"
+        ],
+        "span_offsets": [
+          [
+            618,
+            659
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of psoriasis.",
+        "spans": [
+          "history of psoriasis"
+        ],
+        "span_offsets": [
+          [
+            671,
+            691
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's psoriasis is causing ridges and nail changes.",
+        "spans": [
+          "causing ridges and nail changes"
+        ],
+        "span_offsets": [
+          [
+            702,
+            733
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of psoriatic arthritis.",
+        "spans": [
+          "history of psoriatic arthritis"
+        ],
+        "span_offsets": [
+          [
+            776,
+            806
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is currently on prednisone.",
+        "spans": [
+          "currently on prednisone"
+        ],
+        "span_offsets": [
+          [
+            815,
+            838
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is currently on methotrexate.",
+        "spans": [
+          "currently on methotrexate"
+        ],
+        "span_offsets": [
+          [
+            1057,
+            1093
+          ]
+        ],
+        "span_match_methods": [
+          "semantic"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences occasional pain in her feet and joints.",
+        "spans": [
+          "occasional pain in her feet and joints"
+        ],
+        "span_offsets": [
+          [
+            897,
+            935
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient notes an improvement after increasing the methotrexate dose.",
+        "spans": [
+          "improvement after increasing the methotrexate dose"
+        ],
+        "span_offsets": [
+          [
+            950,
+            1000
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes prednisone 1 tablet daily.",
+        "spans": [
+          "Prednisone 1 tablet daily"
+        ],
+        "span_offsets": [
+          [
+            1005,
+            1030
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes prednisone for psoriatic arthritis.",
+        "spans": [
+          "for psoriatic arthritis"
+        ],
+        "span_offsets": [
+          [
+            1031,
+            1054
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes methotrexate for psoriatic arthritis.",
+        "spans": [
+          "Methotrexate for psoriatic arthritis"
+        ],
+        "span_offsets": [
+          [
+            1057,
+            1093
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient has good range of motion in her toes.",
+        "spans": [
+          "The patient has good range of motion in her toes"
+        ],
+        "span_offsets": [
+          [
+            140,
+            188
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has ridges due to psoriasis.",
+        "spans": [
+          "She has ridges and nail changes due to psoriasis"
+        ],
+        "span_offsets": [
+          [
+            190,
+            238
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has nail changes due to psoriasis.",
+        "spans": [
+          "She has ridges and nail changes due to psoriasis"
+        ],
+        "span_offsets": [
+          [
+            190,
+            238
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient's foot pain is exacerbated by increased activity.",
+        "spans": [
+          "particularly after increased activity"
+        ],
+        "span_offsets": [
+          [
+            160,
+            197
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a problem of psoriatic arthritis.",
+        "spans": [
+          "Psoriatic arthritis; Active;"
+        ],
+        "span_offsets": [
+          [
+            214,
+            242
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a suspected problem of methotrexate interaction with COVID-19 vaccine.",
+        "spans": [
+          "Methotrexate interaction with COVID-19 vaccine; Suspected;"
+        ],
+        "span_offsets": [
+          [
+            243,
+            301
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has an active problem of bruising due to prednisone.",
+        "spans": [
+          "Bruising due to prednisone; Active;"
+        ],
+        "span_offsets": [
+          [
+            302,
+            337
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's prednisone will be discontinued.",
+        "spans": [
+          "I will discontinue the patient's prednisone"
+        ],
+        "span_offsets": [
+          [
+            346,
+            389
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will continue with methotrexate.",
+        "spans": [
+          "continue with the methotrexate"
+        ],
+        "span_offsets": [
+          [
+            394,
+            424
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will schedule an appointment for blood work.",
+        "spans": [
+          "instruct the patient to schedule an appointment for blood work"
+        ],
+        "span_offsets": [
+          [
+            433,
+            495
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will have a follow-up appointment in 3 months.",
+        "spans": [
+          "I will see the patient in 3 months for follow-up"
+        ],
+        "span_offsets": [
+          [
+            497,
+            545
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": []
+  }
+]

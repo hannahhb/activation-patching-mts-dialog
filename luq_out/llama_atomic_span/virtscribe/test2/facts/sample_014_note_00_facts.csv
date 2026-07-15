@@ -1,0 +1,73 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is an 86-year-old male.,0.0,"[""an 86-year-old male""]","[[17, 36]]","[""exact""]",True,False
+1,subjective,"The patient underwent shunt surgery on August 1, 2020, for adult hydrocephalus.",0.0,"[""undergoing shunt surgery on August 1, 2020, for adult hydrocephalus""]","[[66, 133]]","[""exact""]",True,False
+2,subjective,The patient initially presented with progressive gait impairment.,0.0,"[""progressive gait impairment""]","[[177, 204]]","[""exact""]",True,False
+3,subjective,The patient initially presented with cognitive impairment.,0.0,"[""cognitive impairment""]","[[206, 226]]","[""exact""]",True,False
+4,subjective,The patient initially presented with decreased bladder control.,0.0,"[""decreased bladder control""]","[[232, 257]]","[""exact""]",True,False
+5,subjective,The patient's walking has improved since surgery.,0.0,"[""his walking now improved""]","[[327, 351]]","[""exact""]",True,False
+6,subjective,The patient can walk to the dining room without assistance.,0.25,"[""walk to the dining room without assistance""]","[[378, 420]]","[""exact""]",True,False
+7,subjective,The patient still requires occasional help with walking.,0.0,"[""still requires occasional help""]","[[434, 464]]","[""exact""]",True,False
+8,subjective,The patient's bladder control has improved since surgery.,1.0,"[""His bladder control has also improved""]","[[466, 503]]","[""exact""]",True,False
+9,subjective,The patient wears diapers.,0.25,"[""he now wears diapers""]","[[509, 529]]","[""exact""]",True,False
+10,subjective,The patient reports no issues with sores.,0.5,"[""no issues with sores""]","[[542, 562]]","[""exact""]",True,False
+11,subjective,The patient reports no issues with painful urination.,0.5,"[""no issues with painful urination""]","[[566, 583]]","[""word""]",True,False
+12,subjective,The patient's cognitive function has improved since surgery.,0.0,"[""improved cognitive function""]","[[601, 628]]","[""exact""]",True,False
+13,subjective,The patient no longer feels lost when conversing with others.,0.25,"[""he no longer feels lost when conversing with others""]","[[638, 689]]","[""exact""]",True,False
+14,subjective,"The patient's daughter, Theresa, corroborates the patient's improvement.",0.75,"[""His daughter, Theresa, corroborates this improvement""]","[[691, 743]]","[""exact""]",True,False
+15,subjective,The patient has a past medical history of adult hydrocephalus.,0.0,"[""Adult hydrocephalus with spinal catheter protocol since June 2020""]","[[768, 833]]","[""exact""]",True,False
+16,subjective,The patient has a spinal catheter protocol since June 2020.,0.75,"[""Adult hydrocephalus with spinal catheter protocol since June 2020""]","[[768, 833]]","[""exact""]",True,False
+17,subjective,"The patient had shunt surgery on August 1, 2020.",0.0,"[""shunt surgery on August 1, 2020""]","[[77, 108]]","[""exact""]",True,False
+18,subjective,The patient is negative for headaches.,0.25,"[""Negative for headaches""]","[[888, 910]]","[""exact""]",True,False
+19,subjective,The patient is negative for pain.,0.25,"[""Negative for headaches, pain""]","[[888, 916]]","[""exact""]",True,False
+20,subjective,The patient is negative for fever.,0.5,"[""Negative for headaches, pain, fever""]","[[888, 923]]","[""exact""]",True,False
+21,subjective,The patient is negative for unintentional weight loss.,0.5,"[""Negative for headaches, pain, fever, unintentional weight loss""]","[[888, 950]]","[""exact""]",True,False
+22,subjective,The patient is negative for recent falls.,0.75,"[""Negative for headaches, pain, fever, unintentional weight loss, recent falls""]","[[888, 964]]","[""exact""]",True,False
+23,subjective,The patient is negative for hallucinations.,0.75,"[""Negative for headaches, pain, fever, unintentional weight loss, recent falls, hallucinations""]","[[888, 980]]","[""exact""]",True,False
+24,subjective,The patient is negative for depression.,1.0,"[""Negative for headaches, pain, fever, unintentional weight loss, recent falls, hallucinations, depression""]","[[888, 992]]","[""exact""]",True,False
+25,subjective,The patient is negative for excessive worrying.,1.0,"[""Negative for headaches, pain, fever, unintentional weight loss, recent falls, hallucinations, depression, excessive worrying""]","[[888, 1012]]","[""exact""]",True,False
+26,subjective,The patient is negative for mood swings.,1.0,"[""Negative for headaches, pain, fever, unintentional weight loss, recent falls, hallucinations, depression, excessive worrying, or mood swings""]","[[888, 1028]]","[""exact""]",True,False
+27,subjective,The patient has impaired ability to carry out daily functions.,0.0,"[""Positive for impaired ability to carry out daily functions""]","[[1030, 1088]]","[""exact""]",True,False
+28,subjective,The patient has urinary incontinence.,0.0,"[""Positive for impaired ability to carry out daily functions, urinary incontinence""]","[[1030, 1110]]","[""exact""]",True,False
+29,subjective,The patient wears a diaper.,0.25,"[""Positive for impaired ability to carry out daily functions, urinary incontinence, and wearing a diaper""]","[[1030, 1132]]","[""exact""]",True,False
+30,objective,The patient's blood pressure is 124/80.,0.0,"[""Blood pressure 124/80""]","[[13, 34]]","[""exact""]",True,False
+31,objective,The patient's heart rate is 64.,0.0,"[""heart rate 64""]","[[36, 49]]","[""exact""]",True,False
+32,objective,The patient's respirations are 18.,0.0,"[""respirations 18""]","[[51, 66]]","[""exact""]",True,False
+33,objective,The patient's weight is 174 pounds.,0.0,"[""weight 174 pounds""]","[[68, 85]]","[""exact""]",True,False
+34,objective,The patient's pain is 0 out of 10.,0.0,"[""pain 0 out of 10""]","[[91, 107]]","[""exact""]",True,False
+35,objective,"The shunt site is clean, dry, and intact.",0.0,"[""The shunt site was clean, dry, and intact""]","[[125, 166]]","[""exact""]",True,False
+36,objective,The shunt setting is 2.0.,0.0,"[""a confirmed setting of 2.0""]","[[172, 198]]","[""exact""]",True,False
+37,objective,The patient is able to converse easily.,0.25,"[""able to converse easily""]","[[252, 275]]","[""exact""]",True,False
+38,objective,The patient's cranial nerves are normal.,0.0,"[""Cranial nerves""]","[[318, 332]]","[""exact""]",True,False
+39,objective,The patient's pupils are equal.,0.0,"[""pupils are equal""]","[[334, 350]]","[""exact""]",True,False
+40,objective,The patient's extraocular movements are intact.,0.0,"[""eoms are intact""]","[[352, 367]]","[""exact""]",True,False
+41,objective,The patient's face is symmetric.,0.0,"[""face symmetric""]","[[369, 383]]","[""exact""]",True,False
+42,objective,The patient has no dysarthria.,0.0,"[""no dysarthria""]","[[385, 398]]","[""exact""]",True,False
+43,objective,The patient's motor function is normal for bulk and strength.,0.0,"[""motor normal for bulk and strength""]","[[400, 434]]","[""exact""]",True,False
+44,objective,The patient's coordination is slow from finger-to-nose.,0.25,"[""coordination slow from finger-to-nose""]","[[436, 473]]","[""exact""]",True,False
+45,objective,The patient's MMSE score on the spelling test is 26 out of 30.,0.5,"[""The MMSE score was 26 out of 30 on the spelling test""]","[[490, 542]]","[""exact""]",True,False
+46,objective,The patient's MMSE score on the calculation test is 25 out of 30.,0.5,"[""25 out of 30 on the calculation test""]","[[547, 583]]","[""exact""]",True,False
+47,objective,The patient's MMSE score shows slight improvement from his initial score.,0.75,"[""with slight improvement from his initial score""]","[[585, 631]]","[""exact""]",True,False
+48,objective,The patient's gait score using the Tinetti assessment tool is 6-8 out of 12.,0.0,"[""a score of 6-8 out of 12 for gait""]","[[691, 724]]","[""exact""]",True,False
+49,objective,The patient's balance score using the Tinetti assessment tool is 12 out of 16.,0.0,"[""12 out of 16 for balance""]","[[729, 753]]","[""exact""]",True,False
+50,objective,The patient's total Tinetti assessment tool score is 18-20 out of 28.,0.0,"[""for a total score of 18-20 out of 28""]","[[755, 791]]","[""exact""]",True,False
+51,objective,The patient's Tinetti assessment tool score shows slight improvement from his initial score.,0.75,"[""which is slightly improved from his initial score""]","[[793, 842]]","[""exact""]",True,False
+52,objective,The patient's CT scan from 10/15/2020 shows a frontal hornstan at the level of firm and of menroma of 4.6 cm.,0.0,"[""a frontal hornstan at the level of firm and of menroma of 4.6 cm""]","[[878, 942]]","[""exact""]",True,False
+53,objective,The patient's CT scan from 10/15/2020 shows a third ventricular contour that is flat with a span of 10 mm.,0.0,"[""a third ventricular contour that is flat with a span of 10 mm""]","[[948, 1009]]","[""exact""]",True,False
+54,objective,The patient's CT scan from 10/15/2020 shows a tiny amount of blood in the right frontal region.,0.0,"[""a tiny amount of blood in the right frontal region""]","[[1016, 1066]]","[""exact""]",True,False
+55,objective,The patient's CT scan from 10/15/2020 shows a tiny subdermal collection.,0.0,"[""a tiny subdermal collection""]","[[1071, 1098]]","[""exact""]",True,False
+56,assessment,Mr. Watson is an 86-year-old male.,1.0,"[""86-year-old male""]","[[28, 44]]","[""exact""]",True,False
+57,assessment,Mr. Watson has adult hydrocephalus.,0.0,"[""adult hydrocephalus""]","[[50, 69]]","[""exact""]",True,False
+58,assessment,Mr. Watson has experienced significant improvement in his symptoms since shunt surgery.,0.0,"[""experienced significant improvement in his symptoms since shunt surgery""]","[[78, 149]]","[""exact""]",True,False
+59,assessment,Mr. Watson has improved gait.,0.25,"[""improved gait""]","[[156, 169]]","[""exact""]",True,False
+60,assessment,Mr. Watson has improved cognitive function.,0.5,"[""improved cognitive function""]","[[156, 192]]","[""word""]",True,False
+61,assessment,Mr. Watson still requires occasional assistance.,0.75,"[""still requires occasional assistance""]","[[206, 242]]","[""exact""]",True,False
+62,assessment,Mr. Watson wears diapers for bladder control.,0.75,"[""wears diapers for bladder control""]","[[247, 280]]","[""exact""]",True,False
+63,assessment,Mr. Watson has gait impairment.,0.0,"[""Gait impairment""]","[[318, 333]]","[""exact""]",True,False
+64,assessment,Mr. Watson has urinary incontinence.,0.0,"[""Urinary incontinence""]","[[335, 355]]","[""exact""]",True,False
+65,assessment,Mr. Watson has cognitive impairment.,0.0,"[""Cognitive impairment""]","[[357, 377]]","[""exact""]",True,False
+66,plan,"The patient, Mr. Watson, will be monitored continuously.",1.0,"[""I plan to continue monitoring Mr. Watson's condition""]","[[0, 52]]","[""exact""]",True,False
+67,plan,A follow-up appointment for Mr. Watson is scheduled in 3 months.,0.0,"[""schedule a follow-up appointment in 3 months""]","[[57, 101]]","[""exact""]",True,False
+68,plan,The purpose of the follow-up appointment is to reassess Mr. Watson's progress.,0.0,"[""to reassess his progress"", ""to reassess Mr. Watson's progress""]","[[102, 126], [290, 323]]","[""exact"", ""exact""]",True,True
+69,plan,"The patient, Mr. Watson, will be recommended to enroll in a driver's safety program.",0.5,"[""recommend that he enroll in a driver's safety program""]","[[140, 193]]","[""exact""]",True,False
+70,plan,The driver's safety program is to assess Mr. Watson's ability to drive safely.,0.5,"[""to assess his ability to drive safely""]","[[194, 231]]","[""exact""]",True,False
+71,plan,The possibility of Mr. Watson driving again will be discussed at the follow-up appointment.,0.5,"[""discuss the possibility of him driving again""]","[[328, 372]]","[""exact""]",True,False

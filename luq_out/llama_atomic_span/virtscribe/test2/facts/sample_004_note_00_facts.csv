@@ -1,0 +1,45 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 72-year-old woman.,0.0,"[""The patient is a 72-year-old woman""]","[[0, 34]]","[""exact""]",True,False
+1,subjective,The patient presents for follow-up for hypertension.,0.25,"[""presents for follow-up for hypertension""]","[[39, 78]]","[""exact""]",True,False
+2,subjective,The patient has been drinking four to five times a week.,0.25,"[""has been drinking four to five times a week""]","[[125, 168]]","[""exact""]",True,False
+3,subjective,The patient has been taking half the dose of lisinopril.,0.25,"[""has been taking half the dose of lisinopril""]","[[174, 217]]","[""exact""]",True,False
+4,subjective,The patient has been taking lisinopril due to side effects.,0.5,"[""due to side effects""]","[[218, 237]]","[""exact""]",True,False
+5,subjective,The patient has not experienced any symptoms on the full dose of hydrochlorothiazide.,0.75,"[""has not experienced any symptoms on the full dose of hydrochlorothiazide""]","[[243, 315]]","[""exact""]",True,False
+6,subjective,The patient is taking hydrochlorothiazide.,0.25,"[""full dose of hydrochlorothiazide""]","[[283, 315]]","[""exact""]",True,False
+7,subjective,The patient denies chest tightness.,0.5,"[""denies chest tightness""]","[[321, 343]]","[""exact""]",True,False
+8,subjective,The patient denies shortness of breath.,0.0,"[""denies shortness of breath""]","[[345, 364]]","[""word""]",True,False
+9,subjective,The patient denies any other symptoms.,0.5,"[""denies chest tightness, shortness of breath, or any other symptoms""]","[[321, 387]]","[""exact""]",True,False
+10,subjective,The patient is taking her blood pressure medications as prescribed.,1.0,"[""is taking her blood pressure medications as prescribed""]","[[393, 447]]","[""exact""]",True,False
+11,subjective,The patient is taking her blood pressure medications in the morning instead of the evening.,0.25,"[""is taking them in the morning instead of the evening""]","[[453, 505]]","[""exact""]",True,False
+12,subjective,The patient has seen lower blood pressure readings in the morning compared to the evening.,0.25,"[""has seen lower blood pressure readings in the morning compared to the evening""]","[[511, 588]]","[""exact""]",True,False
+13,subjective,The patient has been vaccinated against the coronavirus.,0.25,"[""has been vaccinated against the coronavirus""]","[[594, 637]]","[""exact""]",True,False
+14,objective,The patient's blood pressure was not measured during the visit.,1.0,"[""The patient's blood pressure was not measured during the visit""]","[[13, 75]]","[""exact""]",True,False
+15,objective,The patient's morning blood pressure readings are 130-145 over 95-100.,0.75,"[""130-145 over 95-100 in the morning""]","[[112, 146]]","[""exact""]",True,False
+16,objective,The patient's evening blood pressure reading is 150 over 100.,1.0,"[""150 over 100 in the evening""]","[[151, 178]]","[""exact""]",True,False
+17,objective,The patient has a regular cardiac rhythm.,0.0,"[""a regular cardiac rhythm""]","[[188, 212]]","[""exact""]",True,False
+18,objective,The patient has no murmur.,0.0,"[""no murmur or gallop""]","[[217, 236]]","[""exact""]",True,False
+19,objective,The patient has no gallop.,0.0,"[""no murmur or gallop""]","[[217, 236]]","[""exact""]",True,False
+20,objective,The patient's skin is moist.,0.0,"[""Her skin is moist and good""]","[[238, 264]]","[""exact""]",True,False
+21,objective,The patient's skin is good.,0.0,"[""Her skin is moist and good""]","[[238, 264]]","[""exact""]",True,False
+22,objective,The patient's head is at 90 degrees.,0.25,"[""Her head is at 90 degrees""]","[[266, 291]]","[""exact""]",True,False
+23,objective,The patient has a flat JVP.,0.0,"[""a flat JVP""]","[[297, 307]]","[""exact""]",True,False
+24,objective,The patient's CMP was essentially unremarkable at her last visit.,0.0,"[""CMP and CBC were essentially unremarkable at her last visit""]","[[310, 369]]","[""exact""]",True,False
+25,objective,The patient's CBC was essentially unremarkable at her last visit.,0.0,"[""CMP and CBC were essentially unremarkable at her last visit""]","[[310, 369]]","[""exact""]",True,False
+26,assessment,The patient has alcohol use disorder.,0.0,"[""The patient has alcohol use disorder""]","[[12, 48]]","[""exact""]",True,False
+27,assessment,The patient's alcohol use disorder is contributing to her hypertension.,0.75,"[""which is contributing to her hypertension""]","[[50, 91]]","[""exact""]",True,False
+28,assessment,The patient has hypertension.,0.0,"[""Hypertension""]","[[130, 142]]","[""exact""]",True,False
+29,assessment,The patient's hypertension is active.,0.0,"[""Active""]","[[144, 150]]","[""exact""]",True,False
+30,assessment,The patient has an active condition.,0.0,"[""Active""]","[[144, 150]]","[""exact""]",True,False
+31,assessment,The patient had mild hypercholesterolemia in the past.,0.75,"[""Past: Mild hypercholesterolemia""]","[[160, 191]]","[""exact""]",True,False
+32,plan,The patient was prescribed naltrexone.,0.0,"[""I prescribed naltrexone""]","[[0, 23]]","[""exact""]",True,False
+33,plan,The patient's naltrexone is in an injectable form.,0.0,"[""as an injectable form""]","[[24, 45]]","[""exact""]",True,False
+34,plan,The patient's naltrexone is administered once a month.,0.0,"[""to be administered once a month""]","[[46, 77]]","[""exact""]",True,False
+35,plan,The patient's naltrexone is intended to help with alcohol cessation.,0.25,"[""to help with alcohol cessation""]","[[78, 108]]","[""exact""]",True,False
+36,plan,Alcohol cessation may improve the patient's blood pressure control.,0.75,"[""The potential benefits of alcohol cessation include improved blood pressure control""]","[[110, 193]]","[""exact""]",True,False
+37,plan,The patient is scheduled for a follow-up appointment in the week of June 14th.,0.0,"[""I will see her back in the week of June 14th"", ""I will see the patient again in the week of June 14th""]","[[195, 239], [408, 461]]","[""exact"", ""exact""]",True,True
+38,plan,The patient's second naltrexone injection is expected around the time of the follow-up appointment.,0.0,"[""which is likely around the time of her second naltrexone injection""]","[[241, 307]]","[""exact""]",True,False
+39,plan,The patient's influenza vaccination is due for an upgrade.,0.0,"[""upgrading her influenza vaccination""]","[[321, 356]]","[""exact""]",True,False
+40,plan,The patient's Shingrix vaccination is due for an upgrade.,0.0,"[""upgrading her ... Shingrix vaccination""]","[[321, 381]]","[""word""]",True,False
+41,plan,The patient has deferred her influenza vaccination and Shingrix vaccination.,0.25,"[""which she has deferred""]","[[383, 405]]","[""exact""]",True,False
+42,plan,The patient's progress with naltrexone will be followed up during the next appointment.,0.0,"[""to follow up on her progress with naltrexone""]","[[462, 506]]","[""exact""]",True,False
+43,plan,The patient's blood pressure will be checked during the next appointment.,1.0,"[""to check her blood pressure""]","[[511, 538]]","[""exact""]",True,False

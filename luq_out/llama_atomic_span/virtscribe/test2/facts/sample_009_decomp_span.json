@@ -1,0 +1,817 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Jacqueline Miller.",
+        "spans": [
+          "Jacqueline Miller"
+        ],
+        "span_offsets": [
+          [
+            18,
+            35
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with a rash on her face.",
+        "spans": [
+          "a rash on her face"
+        ],
+        "span_offsets": [
+          [
+            51,
+            69
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient describes the rash as a small bit left over.",
+        "spans": [
+          "a small bit left over"
+        ],
+        "span_offsets": [
+          [
+            94,
+            115
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was taking doxycycline twice a day for the first two weeks.",
+        "spans": [
+          "had been taking doxycycline twice a day for the first two weeks"
+        ],
+        "span_offsets": [
+          [
+            138,
+            201
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reduced the dose of doxycycline to once a day.",
+        "spans": [
+          "reduced the dose to once a day"
+        ],
+        "span_offsets": [
+          [
+            212,
+            242
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient believes the reduced dose of doxycycline has resulted in a plateau in her improvement.",
+        "spans": [
+          "which she believes has resulted in a plateau in her improvement"
+        ],
+        "span_offsets": [
+          [
+            244,
+            307
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient denies any fever.",
+        "spans": [
+          "denies any fever"
+        ],
+        "span_offsets": [
+          [
+            313,
+            329
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is not breast-feeding.",
+        "spans": [
+          "The patient is not breast-feeding"
+        ],
+        "span_offsets": [
+          [
+            331,
+            364
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's past medical history is not mentioned.",
+        "spans": [
+          "Past medical history is not mentioned"
+        ],
+        "span_offsets": [
+          [
+            366,
+            403
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's review of systems is not mentioned.",
+        "spans": [
+          "Review of systems is not mentioned"
+        ],
+        "span_offsets": [
+          [
+            405,
+            439
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking doxycycline.",
+        "spans": [
+          "doxycycline"
+        ],
+        "span_offsets": [
+          [
+            154,
+            165
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking sulfacetamide wash.",
+        "spans": [
+          "sulfacetamide wash"
+        ],
+        "span_offsets": [
+          [
+            482,
+            500
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking metrocream.",
+        "spans": [
+          "metrocream"
+        ],
+        "span_offsets": [
+          [
+            506,
+            516
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's Fitzpatrick skin type is IV.",
+        "spans": [
+          "The patient's Fitzpatrick skin type is IV"
+        ],
+        "span_offsets": [
+          [
+            15,
+            56
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will not burn.",
+        "spans": [
+          "indicating she will not burn"
+        ],
+        "span_offsets": [
+          [
+            58,
+            86
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will suntan easily.",
+        "spans": [
+          "will suntan easily"
+        ],
+        "span_offsets": [
+          [
+            91,
+            109
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has faint erythematous papules on her bilateral medial cheeks.",
+        "spans": [
+          "a few faint erythematous papules and redness on her bilateral medial cheeks and around her nostrils"
+        ],
+        "span_offsets": [
+          [
+            121,
+            220
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has redness on her bilateral medial cheeks.",
+        "spans": [
+          "a few faint erythematous papules and redness on her bilateral medial cheeks and around her nostrils"
+        ],
+        "span_offsets": [
+          [
+            121,
+            220
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has faint erythematous papules around her nostrils.",
+        "spans": [
+          "a few faint erythematous papules and redness on her bilateral medial cheeks and around her nostrils"
+        ],
+        "span_offsets": [
+          [
+            121,
+            220
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has redness around her nostrils.",
+        "spans": [
+          "a few faint erythematous papules and redness on her bilateral medial cheeks and around her nostrils"
+        ],
+        "span_offsets": [
+          [
+            121,
+            220
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has perioral dermatitis.",
+        "spans": [
+          "The patient has perioral dermatitis, rosacea, including ocular rosacea"
+        ],
+        "span_offsets": [
+          [
+            12,
+            82
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has rosacea.",
+        "spans": [
+          "The patient has perioral dermatitis, rosacea, including ocular rosacea"
+        ],
+        "span_offsets": [
+          [
+            12,
+            82
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has ocular rosacea.",
+        "spans": [
+          "The patient has perioral dermatitis, rosacea, including ocular rosacea"
+        ],
+        "span_offsets": [
+          [
+            12,
+            82
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's perioral dermatitis is of unknown status.",
+        "spans": [
+          "unknown status on all three"
+        ],
+        "span_offsets": [
+          [
+            144,
+            171
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's rosacea is of unknown status.",
+        "spans": [
+          "unknown status on all three"
+        ],
+        "span_offsets": [
+          [
+            144,
+            171
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's ocular rosacea is of unknown status.",
+        "spans": [
+          "unknown status on all three"
+        ],
+        "span_offsets": [
+          [
+            144,
+            171
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Perioral dermatitis is on the patient's problem list.",
+        "spans": [
+          "Perioral dermatitis; rosacea; ocular rosacea; unknown status on all three"
+        ],
+        "span_offsets": [
+          [
+            98,
+            171
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Rosacea is on the patient's problem list.",
+        "spans": [
+          "Perioral dermatitis; rosacea; ocular rosacea; unknown status on all three"
+        ],
+        "span_offsets": [
+          [
+            98,
+            171
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Ocular rosacea is on the patient's problem list.",
+        "spans": [
+          "Perioral dermatitis; rosacea; ocular rosacea; unknown status on all three"
+        ],
+        "span_offsets": [
+          [
+            98,
+            171
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed doxycycline.",
+        "spans": [
+          "I prescribed doxycycline 100mg twice a day for the rash"
+        ],
+        "span_offsets": [
+          [
+            0,
+            55
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's doxycycline dose is 100mg.",
+        "spans": [
+          "100mg"
+        ],
+        "span_offsets": [
+          [
+            25,
+            30
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's doxycycline frequency is twice a day.",
+        "spans": [
+          "twice a day"
+        ],
+        "span_offsets": [
+          [
+            31,
+            42
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's doxycycline indication is for the rash.",
+        "spans": [
+          "for the rash"
+        ],
+        "span_offsets": [
+          [
+            43,
+            55
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to continue using the sulfacetamide wash.",
+        "spans": [
+          "I instructed the patient to continue using the sulfacetamide wash and metrocream"
+        ],
+        "span_offsets": [
+          [
+            57,
+            137
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to continue using metrocream.",
+        "spans": [
+          "I instructed the patient to continue using the sulfacetamide wash and metrocream"
+        ],
+        "span_offsets": [
+          [
+            57,
+            137
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was recommended to apply tacrolimus ointment to the rash area.",
+        "spans": [
+          "I recommended that she apply tacrolimus ointment to the rash area twice a day until it is resolved, and then once a day for a week before stopping"
+        ],
+        "span_offsets": [
+          [
+            139,
+            285
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's tacrolimus ointment frequency is twice a day until the rash is resolved.",
+        "spans": [
+          "twice a day until it is resolved"
+        ],
+        "span_offsets": [
+          [
+            205,
+            237
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's tacrolimus ointment frequency is once a day for a week after the rash is resolved.",
+        "spans": [
+          "and then once a day for a week before stopping"
+        ],
+        "span_offsets": [
+          [
+            239,
+            285
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to continue doxycycline for another week after the rash is gone.",
+        "spans": [
+          "I instructed her to continue doxycycline for another week after the rash is gone, and then stop it"
+        ],
+        "span_offsets": [
+          [
+            287,
+            385
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to stop doxycycline after the rash is gone and one week has passed.",
+        "spans": [
+          "and then stop it"
+        ],
+        "span_offsets": [
+          [
+            369,
+            385
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to continue using the wash and metrocream after stopping doxycycline.",
+        "spans": [
+          "I told her to continue using the wash and metrocream after stopping doxycycline"
+        ],
+        "span_offsets": [
+          [
+            387,
+            466
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to hold off on using her old products until her next follow-up appointment.",
+        "spans": [
+          "I instructed her to hold off on using her old products until her next follow-up appointment"
+        ],
+        "span_offsets": [
+          [
+            468,
+            559
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is scheduled for a follow-up appointment in 4 weeks.",
+        "spans": [
+          "I provided her with a follow-up appointment in 4 weeks",
+          "The patient is scheduled for a follow-up appointment in 4 weeks"
+        ],
+        "span_offsets": [
+          [
+            561,
+            615
+          ],
+          [
+            812,
+            875
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient was recommended to use a basic moisturizer like vanicream or petroleum jelly.",
+        "spans": [
+          "I recommended that she use a basic moisturizer like vanicream or petroleum jelly, and provided her with samples"
+        ],
+        "span_offsets": [
+          [
+            617,
+            728
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was provided with samples of vanicream or petroleum jelly.",
+        "spans": [
+          "and provided her with samples"
+        ],
+        "span_offsets": [
+          [
+            699,
+            728
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to stay away from anti-aging products.",
+        "spans": [
+          "I instructed her to stay away from anti-aging products and plant-based products"
+        ],
+        "span_offsets": [
+          [
+            730,
+            809
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to stay away from plant-based products.",
+        "spans": [
+          "I instructed her to stay away from anti-aging products and plant-based products"
+        ],
+        "span_offsets": [
+          [
+            730,
+            809
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

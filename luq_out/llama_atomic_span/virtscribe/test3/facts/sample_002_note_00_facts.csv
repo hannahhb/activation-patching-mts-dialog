@@ -1,0 +1,72 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 60-year-old right-handed female.,0.0,"[""a 60-year-old right-handed female""]","[[18, 51]]","[""exact""]",True,False
+1,subjective,The patient presents with a 3-week history of bilateral hand numbness and tingling.,1.0,"[""bilateral hand numbness and tingling""]","[[87, 123]]","[""exact""]",True,False
+2,subjective,The patient's symptoms started after a car accident in December where she broke both wrists.,0.0,"[""which started after a car accident in December where she broke both wrists""]","[[125, 199]]","[""exact""]",True,False
+3,subjective,The patient's symptoms worsened over the last month.,0.0,"[""the symptoms worsened over the last month""]","[[218, 259]]","[""exact""]",True,False
+4,subjective,The patient's right wrist is worse than the left.,1.0,"[""the right wrist being worse than the left""]","[[266, 307]]","[""exact""]",True,False
+5,subjective,The patient has mild stiffness in her neck.,0.0,"[""mild stiffness in her neck""]","[[327, 353]]","[""exact""]",True,False
+6,subjective,The patient has a contusion to the head during the accident.,0.75,"[""a contusion to the head during the accident""]","[[358, 401]]","[""exact""]",True,False
+7,subjective,The patient denies any pain.,1.0,"[""She denies any pain""]","[[403, 422]]","[""exact""]",True,False
+8,subjective,"The patient describes the numbness and tingling as sore and throbbing, especially when using her hands.",0.25,"[""the numbness and tingling as sore and throbbing, especially when using her hands""]","[[438, 518]]","[""exact""]",True,False
+9,subjective,The patient's symptoms are more pronounced at night.,0.75,"[""the symptoms are more pronounced at night""]","[[537, 578]]","[""exact""]",True,False
+10,subjective,The patient's symptoms can come and go throughout the day.,0.5,"[""can come and go throughout the day""]","[[583, 617]]","[""exact""]",True,False
+11,subjective,The patient denies any loss of sensation in her hands or fingers.,0.5,"[""denies any loss of sensation in her hands or fingers""]","[[623, 675]]","[""exact""]",True,False
+12,subjective,The patient's hands or fingers might be less sensitive than usual.,0.0,"[""they might be less sensitive than usual""]","[[692, 731]]","[""exact""]",True,False
+13,subjective,The patient has been experiencing fatigue.,0.0,"[""fatigue""]","[[759, 766]]","[""exact""]",True,False
+14,subjective,The patient has been experiencing weight gain.,0.0,"[""weight gain""]","[[768, 779]]","[""exact""]",True,False
+15,subjective,The patient has been experiencing excessive appetite.,0.0,"[""excessive appetite""]","[[781, 799]]","[""exact""]",True,False
+16,subjective,The patient has been experiencing bloating.,0.0,"[""bloating""]","[[801, 809]]","[""exact""]",True,False
+17,subjective,The patient has been experiencing shortness of breath.,0.0,"[""shortness of breath""]","[[811, 830]]","[""exact""]",True,False
+18,subjective,The patient has been experiencing leg swelling.,0.0,"[""leg swelling""]","[[832, 844]]","[""exact""]",True,False
+19,subjective,"The patient has been experiencing dryness, itching, and nail bed trenches on her skin.",0.0,"[""dryness, itching, and nail bed trenches on her skin""]","[[850, 901]]","[""exact""]",True,False
+20,subjective,The patient has a history of chronic kidney disease.,0.0,"[""chronic kidney disease""]","[[924, 946]]","[""exact""]",True,False
+21,subjective,The patient has a history of gout.,0.0,"[""gout""]","[[948, 952]]","[""exact""]",True,False
+22,subjective,The patient has a history of hypertension.,0.0,"[""hypertension""]","[[954, 966]]","[""exact""]",True,False
+23,subjective,The patient has a history of anxiety.,0.0,"[""anxiety""]","[[968, 975]]","[""exact""]",True,False
+24,subjective,The patient has a history of GERD.,0.0,"[""GERD""]","[[977, 981]]","[""exact""]",True,False
+25,subjective,The patient has a history of pre-diabetes.,0.25,"[""pre-diabetes""]","[[987, 999]]","[""exact""]",True,False
+26,subjective,The patient has managed her conditions with dietary changes.,0.5,"[""which she has managed with dietary changes""]","[[1001, 1043]]","[""exact""]",True,False
+27,subjective,The patient is taking carvedilol.,0.0,"[""carvedilol""]","[[1069, 1079]]","[""exact""]",True,False
+28,subjective,The patient is taking carvedilol 25 milligrams twice a day.,0.0,"[""carvedilol 25 milligrams twice a day""]","[[1069, 1105]]","[""exact""]",True,False
+29,subjective,The patient is taking carvedilol for hypertension.,0.0,"[""for hypertension""]","[[1106, 1122]]","[""exact""]",True,False
+30,subjective,The patient is taking lexapro.,0.0,"[""lexapro""]","[[1124, 1131]]","[""exact""]",True,False
+31,subjective,The patient is taking lexapro 10 milligrams a day.,0.0,"[""lexapro 10 milligrams a day""]","[[1124, 1151]]","[""exact""]",True,False
+32,subjective,The patient is taking lexapro for anxiety.,0.0,"[""for anxiety""]","[[1152, 1163]]","[""exact""]",True,False
+33,subjective,The patient has a known allergy to sulfa drugs.,0.0,"[""a known allergy to sulfa drugs""]","[[1173, 1203]]","[""exact""]",True,False
+34,objective,The patient has diminished pin prick sensation in the third finger on the right.,0.0,"[""diminished pin prick sensation in the third and fourth fingers on the right""]","[[49, 124]]","[""exact""]",True,False
+35,objective,The patient has diminished pin prick sensation in the fourth finger on the right.,0.0,"[""diminished pin prick sensation in the third and fourth fingers on the right""]","[[49, 124]]","[""exact""]",True,False
+36,objective,The patient has diminished pin prick sensation in the fourth finger on the left.,0.0,"[""diminished pin prick sensation in the fourth and fifth fingers on the left""]","[[49, 79]]","[""word""]",True,False
+37,objective,The patient has diminished pin prick sensation in the fifth finger on the left.,0.0,"[""diminished pin prick sensation in the fourth and fifth fingers on the left""]","[[49, 79]]","[""word""]",True,False
+38,objective,The patient's reflexes are one plus and symmetric.,0.0,"[""Reflexes were one plus and symmetric""]","[[171, 207]]","[""exact""]",True,False
+39,objective,The patient's knee reflexes are two plus.,0.0,"[""with two plus knees""]","[[209, 228]]","[""exact""]",True,False
+40,objective,The patient's reflexes are down-going bilaterally.,0.5,"[""and down-going bilaterally""]","[[230, 256]]","[""exact""]",True,False
+41,objective,The patient's Tinel's sign is positive at the right wrist.,0.0,"[""Tinel's sign was positive at both wrists""]","[[258, 298]]","[""exact""]",True,False
+42,objective,The patient's Tinel's sign is positive at the left wrist.,0.0,"[""Tinel's sign was positive at both wrists""]","[[258, 298]]","[""exact""]",True,False
+43,objective,The patient's Tinel's sign is positive at the right elbow.,0.0,"[""Tinel's sign was positive at both elbows""]","[[258, 314]]","[""word""]",True,False
+44,objective,The patient's Tinel's sign is positive at the left elbow.,0.0,"[""Tinel's sign was positive at both elbows""]","[[258, 314]]","[""word""]",True,False
+45,objective,The patient's CT brain scan from 2/5/21 shows no metastatic disease.,0.5,"[""No metastatic disease""]","[[367, 388]]","[""exact""]",True,False
+46,objective,The patient's CT brain scan from 2/5/21 shows no acute intracranial abnormalities.,0.5,"[""no acute intracranial abnormalities""]","[[390, 425]]","[""exact""]",True,False
+47,assessment,The patient is 60 years old.,1.0,"[""60-year-old""]","[[29, 40]]","[""exact""]",True,False
+48,assessment,The patient is right-handed.,1.0,"[""right-handed""]","[[41, 53]]","[""exact""]",True,False
+49,assessment,The patient is female.,1.0,"[""female""]","[[54, 60]]","[""exact""]",True,False
+50,assessment,The patient has bilateral carpal tunnel syndrome.,0.0,"[""bilateral carpal tunnel syndrome""]","[[66, 98]]","[""exact""]",True,False
+51,assessment,The patient has possible bilateral cubital tunnel syndrome.,0.0,"[""possible bilateral cubital tunnel syndrome""]","[[103, 145]]","[""exact""]",True,False
+52,assessment,The patient has carpal tunnel syndrome.,0.0,"[""Carpal tunnel syndrome""]","[[162, 184]]","[""exact""]",True,False
+53,assessment,The patient has cubital tunnel syndrome.,0.0,"[""Cubital tunnel syndrome""]","[[186, 209]]","[""exact""]",True,False
+54,assessment,The patient has chronic kidney disease.,0.0,"[""Chronic kidney disease""]","[[211, 233]]","[""exact""]",True,False
+55,assessment,The patient has gout.,0.0,"[""Gout""]","[[235, 239]]","[""exact""]",True,False
+56,assessment,The patient has hypertension.,0.0,"[""Hypertension""]","[[241, 253]]","[""exact""]",True,False
+57,assessment,The patient has anxiety.,0.0,"[""Anxiety""]","[[255, 262]]","[""exact""]",True,False
+58,assessment,The patient has GERD.,0.0,"[""GERD""]","[[264, 268]]","[""exact""]",True,False
+59,assessment,The patient has pre-diabetes.,0.3333,"[""Pre-diabetes""]","[[270, 282]]","[""exact""]",True,False
+60,assessment,The patient has a sulfa allergy.,0.6667,"[""Sulfa allergy""]","[[284, 297]]","[""exact""]",True,False
+61,plan,The patient is scheduled for EMG.,0.0,"[""scheduled her for EMG and NCV""]","[[47, 76]]","[""exact""]",True,False
+62,plan,The patient is scheduled for NCV.,0.0,"[""scheduled her for EMG and NCV""]","[[47, 76]]","[""exact""]",True,False
+63,plan,The patient's symptoms may not resolve.,0.0,"[""If her symptoms do not resolve""]","[[78, 108]]","[""exact""]",True,False
+64,plan,The patient may be referred to a hand clinic.,0.0,"[""hand clinic referral""]","[[126, 146]]","[""exact""]",True,False
+65,plan,The patient may receive symptomatic injections.,0.0,"[""possible symptomatic injections""]","[[151, 182]]","[""exact""]",True,False
+66,plan,The patient may undergo carpal tunnel release surgery.,0.0,"[""carpal tunnel release surgery""]","[[186, 215]]","[""exact""]",True,False
+67,plan,The patient can pursue further management through her current orthopedist.,0.3333,"[""she can pursue these through her current orthopedist""]","[[226, 278]]","[""exact""]",True,False
+68,plan,The patient was encouraged to wear her splints.,0.0,"[""I encouraged her to wear her splints""]","[[280, 316]]","[""exact""]",True,False
+69,plan,The patient will return for EMG and NCV.,0.0,"[""The patient will return for EMG and NCV""]","[[357, 396]]","[""exact""]",True,False
+70,plan,Further management will be discussed if necessary.,0.0,"[""if necessary, further management will be discussed""]","[[402, 452]]","[""exact""]",True,False

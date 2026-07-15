@@ -1,0 +1,1100 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 32-year-old female.",
+        "spans": [
+          "a 32-year-old female"
+        ],
+        "span_offsets": [
+          [
+            18,
+            38
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents with symptoms of irritable bowel syndrome (IBS).",
+        "spans": [
+          "symptoms of irritable bowel syndrome (IBS)"
+        ],
+        "span_offsets": [
+          [
+            54,
+            96
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's irritable bowel syndrome (IBS) is characterized by functional abdominal pain.",
+        "spans": [
+          "functional abdominal pain"
+        ],
+        "span_offsets": [
+          [
+            114,
+            139
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's irritable bowel syndrome (IBS) is characterized by nausea.",
+        "spans": [
+          "nausea"
+        ],
+        "span_offsets": [
+          [
+            141,
+            147
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's irritable bowel syndrome (IBS) is characterized by vomiting.",
+        "spans": [
+          "vomiting"
+        ],
+        "span_offsets": [
+          [
+            153,
+            161
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of flares of abdominal pain.",
+        "spans": [
+          "a history of flares of abdominal pain"
+        ],
+        "span_offsets": [
+          [
+            171,
+            208
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was previously diagnosed with IBS.",
+        "spans": [
+          "previously diagnosed with IBS"
+        ],
+        "span_offsets": [
+          [
+            220,
+            249
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was previously treated with bentyl for IBS.",
+        "spans": [
+          "treated with bentyl"
+        ],
+        "span_offsets": [
+          [
+            254,
+            273
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms are exacerbated by consuming spicy foods.",
+        "spans": [
+          "worsening symptoms after consuming spicy foods"
+        ],
+        "span_offsets": [
+          [
+            300,
+            346
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms are exacerbated by consuming shrimp.",
+        "spans": [
+          "particularly shrimp"
+        ],
+        "span_offsets": [
+          [
+            348,
+            367
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms are exacerbated by eating out.",
+        "spans": [
+          "exacerbated by eating out"
+        ],
+        "span_offsets": [
+          [
+            407,
+            432
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms are exacerbated by drinking alcohol.",
+        "spans": [
+          "exacerbated by drinking alcohol"
+        ],
+        "span_offsets": [
+          [
+            437,
+            453
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing diarrhea.",
+        "spans": [
+          "experiencing diarrhea"
+        ],
+        "span_offsets": [
+          [
+            468,
+            489
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing abdominal pain.",
+        "spans": [
+          "experiencing abdominal pain"
+        ],
+        "span_offsets": [
+          [
+            468,
+            508
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing cramping.",
+        "spans": [
+          "cramping"
+        ],
+        "span_offsets": [
+          [
+            515,
+            523
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing sharp pains.",
+        "spans": [
+          "sharp pains"
+        ],
+        "span_offsets": [
+          [
+            528,
+            539
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been avoiding heavy foods.",
+        "spans": [
+          "avoiding heavy foods"
+        ],
+        "span_offsets": [
+          [
+            554,
+            574
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not been using the prescribed fiber supplement, citrucel, regularly.",
+        "spans": [
+          "has not been using the prescribed fiber supplement, citrucel, regularly"
+        ],
+        "span_offsets": [
+          [
+            597,
+            668
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a past medical history of IBS.",
+        "spans": [
+          "a history of IBS"
+        ],
+        "span_offsets": [
+          [
+            708,
+            724
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's IBS was diagnosed in 2019.",
+        "spans": [
+          "which was diagnosed in 2019"
+        ],
+        "span_offsets": [
+          [
+            726,
+            753
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports symptoms of diarrhea.",
+        "spans": [
+          "symptoms of diarrhea"
+        ],
+        "span_offsets": [
+          [
+            794,
+            814
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports symptoms of nausea.",
+        "spans": [
+          "nausea"
+        ],
+        "span_offsets": [
+          [
+            141,
+            147
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reports symptoms of abdominal pain.",
+        "spans": [
+          "abdominal pain"
+        ],
+        "span_offsets": [
+          [
+            125,
+            139
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Bentyl.",
+        "spans": [
+          "Bentyl 20 milligrams as needed for intestinal cramping"
+        ],
+        "span_offsets": [
+          [
+            865,
+            919
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Bentyl dose is 20 milligrams.",
+        "spans": [
+          "20 milligrams"
+        ],
+        "span_offsets": [
+          [
+            872,
+            885
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes Bentyl as needed.",
+        "spans": [
+          "as needed"
+        ],
+        "span_offsets": [
+          [
+            886,
+            895
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes Bentyl for intestinal cramping.",
+        "spans": [
+          "for intestinal cramping"
+        ],
+        "span_offsets": [
+          [
+            896,
+            919
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Zofran.",
+        "spans": [
+          "Zofran as needed for nausea"
+        ],
+        "span_offsets": [
+          [
+            921,
+            948
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes Zofran as needed.",
+        "spans": [
+          "as needed"
+        ],
+        "span_offsets": [
+          [
+            886,
+            895
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes Zofran for nausea.",
+        "spans": [
+          "for nausea"
+        ],
+        "span_offsets": [
+          [
+            938,
+            948
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's abdomen is soft.",
+        "spans": [
+          "The patient's abdomen is soft, non-tender, with no masses or organomegaly"
+        ],
+        "span_offsets": [
+          [
+            15,
+            88
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's abdomen is non-tender.",
+        "spans": [
+          "The patient's abdomen is soft, non-tender, with no masses or organomegaly"
+        ],
+        "span_offsets": [
+          [
+            15,
+            88
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no abdominal masses.",
+        "spans": [
+          "The patient's abdomen is soft, non-tender, with no masses or organomegaly"
+        ],
+        "span_offsets": [
+          [
+            15,
+            88
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no organomegaly.",
+        "spans": [
+          "The patient's abdomen is soft, non-tender, with no masses or organomegaly"
+        ],
+        "span_offsets": [
+          [
+            15,
+            88
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has normal active bowel sounds.",
+        "spans": [
+          "Normal active bowel sounds"
+        ],
+        "span_offsets": [
+          [
+            90,
+            116
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient's name is Brittany Edwards.",
+        "spans": [
+          "Brittany Edwards"
+        ],
+        "span_offsets": [
+          [
+            12,
+            28
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is a female.",
+        "spans": [
+          "female"
+        ],
+        "span_offsets": [
+          [
+            43,
+            49
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has IBS.",
+        "spans": [
+          "IBS"
+        ],
+        "span_offsets": [
+          [
+            55,
+            58
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has functional abdominal pain.",
+        "spans": [
+          "functional abdominal pain"
+        ],
+        "span_offsets": [
+          [
+            63,
+            88
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "IBS is confirmed in the patient.",
+        "spans": [
+          "IBS confirmed"
+        ],
+        "span_offsets": [
+          [
+            104,
+            117
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Abdominal pain is suspected in the patient.",
+        "spans": [
+          "abdominal pain suspected"
+        ],
+        "span_offsets": [
+          [
+            119,
+            143
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Diarrhea is suspected in the patient.",
+        "spans": [
+          "diarrhea suspected"
+        ],
+        "span_offsets": [
+          [
+            145,
+            163
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Nausea is suspected in the patient.",
+        "spans": [
+          "nausea suspected"
+        ],
+        "span_offsets": [
+          [
+            165,
+            181
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed citrucel.",
+        "spans": [
+          "I prescribed citrucel"
+        ],
+        "span_offsets": [
+          [
+            0,
+            21
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed citrucel 2 tablets daily.",
+        "spans": [
+          "citrucel 2 tablets daily"
+        ],
+        "span_offsets": [
+          [
+            13,
+            37
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed citrucel for regularity.",
+        "spans": [
+          "for regularity"
+        ],
+        "span_offsets": [
+          [
+            38,
+            52
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to take citrucel twice daily.",
+        "spans": [
+          "to start taking it twice daily"
+        ],
+        "span_offsets": [
+          [
+            80,
+            110
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed bentyl.",
+        "spans": [
+          "I instructed the patient to use bentyl"
+        ],
+        "span_offsets": [
+          [
+            112,
+            150
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed bentyl 20 milligrams.",
+        "spans": [
+          "bentyl 20 milligrams"
+        ],
+        "span_offsets": [
+          [
+            144,
+            164
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to take bentyl 30 to 45 minutes prior to eating out at a restaurant.",
+        "spans": [
+          "30 to 45 minutes prior to eating out at a restaurant"
+        ],
+        "span_offsets": [
+          [
+            165,
+            217
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to take a second bentyl tablet at the restaurant.",
+        "spans": [
+          "to take a second tablet at the restaurant"
+        ],
+        "span_offsets": [
+          [
+            222,
+            263
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to repeat bentyl as needed.",
+        "spans": [
+          "and to repeat as needed"
+        ],
+        "span_offsets": [
+          [
+            265,
+            288
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed Zofran.",
+        "spans": [
+          "I prescribed Zofran"
+        ],
+        "span_offsets": [
+          [
+            290,
+            309
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed Zofran as needed for nausea.",
+        "spans": [
+          "as needed for nausea"
+        ],
+        "span_offsets": [
+          [
+            310,
+            330
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was encouraged to reduce triggers such as greasy and fatty foods.",
+        "spans": [
+          "reduce triggers such as greasy and fatty foods"
+        ],
+        "span_offsets": [
+          [
+            362,
+            408
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was encouraged to reduce alcohol consumption.",
+        "spans": [
+          "alcohol consumption"
+        ],
+        "span_offsets": [
+          [
+            413,
+            432
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was discussed for starting elavil.",
+        "spans": [
+          "discussed starting a neuromodulator, elavil"
+        ],
+        "span_offsets": [
+          [
+            441,
+            484
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed elavil 25 milligrams.",
+        "spans": [
+          "elavil 25 milligrams"
+        ],
+        "span_offsets": [
+          [
+            478,
+            498
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was instructed to take elavil at bedtime.",
+        "spans": [
+          "at bedtime"
+        ],
+        "span_offsets": [
+          [
+            500,
+            510
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was prescribed elavil for IBS.",
+        "spans": [
+          "for IBS"
+        ],
+        "span_offsets": [
+          [
+            511,
+            518
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will follow up in one month.",
+        "spans": [
+          "The patient will follow up in one month"
+        ],
+        "span_offsets": [
+          [
+            521,
+            560
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will follow up via email through mychart.",
+        "spans": [
+          "via email through mychart"
+        ],
+        "span_offsets": [
+          [
+            561,
+            586
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will discuss any side effects or issues with elavil during follow-up.",
+        "spans": [
+          "to discuss any side effects or issues with elavil"
+        ],
+        "span_offsets": [
+          [
+            587,
+            636
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will discuss adjustments to elavil as needed during follow-up.",
+        "spans": [
+          "or if adjustments are needed"
+        ],
+        "span_offsets": [
+          [
+            637,
+            665
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

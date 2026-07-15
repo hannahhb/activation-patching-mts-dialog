@@ -1,0 +1,825 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 39-year-old female.",
+        "spans": [
+          "a 39-year-old female"
+        ],
+        "span_offsets": [
+          [
+            18,
+            38
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of quadriplegia.",
+        "spans": [
+          "a history of quadriplegia due to a prior spinal cord injury"
+        ],
+        "span_offsets": [
+          [
+            44,
+            103
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's quadriplegia is due to a prior spinal cord injury.",
+        "spans": [
+          "due to a prior spinal cord injury"
+        ],
+        "span_offsets": [
+          [
+            70,
+            103
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presented with concerns for spasms.",
+        "spans": [
+          "concerns for spasms"
+        ],
+        "span_offsets": [
+          [
+            131,
+            150
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presented with concerns for lightheadedness.",
+        "spans": [
+          "concerns for lightheadedness"
+        ],
+        "span_offsets": [
+          null
+        ],
+        "span_match_methods": [
+          "unmatched"
+        ],
+        "span_verified": false,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presented with significant constipation.",
+        "spans": [
+          "significant constipation"
+        ],
+        "span_offsets": [
+          [
+            172,
+            196
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient reported diaphoresis.",
+        "spans": [
+          "reported diaphoresis"
+        ],
+        "span_offsets": [
+          [
+            202,
+            222
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was evaluated in the emergency department.",
+        "spans": [
+          "She was evaluated in the emergency department"
+        ],
+        "span_offsets": [
+          [
+            224,
+            269
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was treated with IV antibiotic therapy.",
+        "spans": [
+          "treated with IV antibiotic therapy"
+        ],
+        "span_offsets": [
+          [
+            274,
+            308
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's IV antibiotic therapy was for a suspected urinary tract infection.",
+        "spans": [
+          "for a suspected urinary tract infection"
+        ],
+        "span_offsets": [
+          [
+            309,
+            348
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient believes her hospitalization was more likely due to her dysreflexia.",
+        "spans": [
+          "she believes this was less likely and thinks her hospitalization was more likely due to her dysreflexia"
+        ],
+        "span_offsets": [
+          [
+            354,
+            457
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes miralax daily.",
+        "spans": [
+          "She takes miralax daily"
+        ],
+        "span_offsets": [
+          [
+            459,
+            482
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes miralax as a primary treatment for constipation.",
+        "spans": [
+          "as a primary treatment for constipation"
+        ],
+        "span_offsets": [
+          [
+            483,
+            522
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes lactulose.",
+        "spans": [
+          "lactulose"
+        ],
+        "span_offsets": [
+          [
+            527,
+            536
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes lactulose for severe constipation.",
+        "spans": [
+          "lactulose for severe constipation"
+        ],
+        "span_offsets": [
+          [
+            527,
+            560
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not had a regular bowel movement in a while.",
+        "spans": [
+          "has not had a regular bowel movement in a while"
+        ],
+        "span_offsets": [
+          [
+            566,
+            613
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is hesitant to get the COVID-19 vaccine.",
+        "spans": [
+          "She is hesitant to get the COVID-19 vaccine"
+        ],
+        "span_offsets": [
+          [
+            615,
+            658
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's hesitation to get the COVID-19 vaccine is due to concerns about side effects.",
+        "spans": [
+          "due to concerns about side effects"
+        ],
+        "span_offsets": [
+          [
+            659,
+            693
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a past medical history of quadriplegia.",
+        "spans": [
+          "Quadriplegia due to a prior spinal cord injury"
+        ],
+        "span_offsets": [
+          [
+            718,
+            764
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a past medical history of constipation.",
+        "spans": [
+          "history of constipation"
+        ],
+        "span_offsets": [
+          [
+            766,
+            789
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient possibly has dysreflexia.",
+        "spans": [
+          "possibly dysreflexia"
+        ],
+        "span_offsets": [
+          [
+            795,
+            815
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms of spasms have resolved.",
+        "spans": [
+          "The patient's symptoms of spasms, lightheadedness, and diaphoresis have resolved"
+        ],
+        "span_offsets": [
+          [
+            837,
+            917
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms of lightheadedness have resolved.",
+        "spans": [
+          "The patient's symptoms of spasms, lightheadedness, and diaphoresis have resolved"
+        ],
+        "span_offsets": [
+          [
+            837,
+            917
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms of diaphoresis have resolved.",
+        "spans": [
+          "The patient's symptoms of spasms, lightheadedness, and diaphoresis have resolved"
+        ],
+        "span_offsets": [
+          [
+            837,
+            917
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is concerned about the potential for future urinary tract infections.",
+        "spans": [
+          "concerned about the potential for future urinary tract infections"
+        ],
+        "span_offsets": [
+          [
+            930,
+            995
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is concerned about COVID-19.",
+        "spans": [
+          "concerned about the potential for future urinary tract infections and COVID-19"
+        ],
+        "span_offsets": [
+          [
+            930,
+            1008
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's vital signs were not taken during the visit.",
+        "spans": [
+          "The patient's vital signs were not taken during the visit"
+        ],
+        "span_offsets": [
+          [
+            15,
+            72
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient did not report any pain during the examination.",
+        "spans": [
+          "she did not report any pain or discomfort during the examination"
+        ],
+        "span_offsets": [
+          [
+            78,
+            142
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient did not report any discomfort during the examination.",
+        "spans": [
+          "she did not report any pain or discomfort during the examination"
+        ],
+        "span_offsets": [
+          [
+            78,
+            142
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient has symptoms of spasms.",
+        "spans": [
+          "symptoms of spasms, lightheadedness, and diaphoresis"
+        ],
+        "span_offsets": [
+          [
+            26,
+            78
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has symptoms of lightheadedness.",
+        "spans": [
+          "symptoms of spasms, lightheadedness, and diaphoresis"
+        ],
+        "span_offsets": [
+          [
+            26,
+            78
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has symptoms of diaphoresis.",
+        "spans": [
+          "symptoms of spasms, lightheadedness, and diaphoresis"
+        ],
+        "span_offsets": [
+          [
+            26,
+            78
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms are likely due to dysreflexia.",
+        "spans": [
+          "were likely due to her dysreflexia"
+        ],
+        "span_offsets": [
+          [
+            79,
+            113
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "Dysreflexia is a common complication of the patient's quadriplegia.",
+        "spans": [
+          "which is a common complication of quadriplegia"
+        ],
+        "span_offsets": [
+          [
+            115,
+            161
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has quadriplegia.",
+        "spans": [
+          "Quadriplegia"
+        ],
+        "span_offsets": [
+          [
+            178,
+            190
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has constipation.",
+        "spans": [
+          "Constipation"
+        ],
+        "span_offsets": [
+          [
+            192,
+            204
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has dysreflexia.",
+        "spans": [
+          "Dysreflexia"
+        ],
+        "span_offsets": [
+          [
+            206,
+            217
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has leukocytosis.",
+        "spans": [
+          "Leukocytosis (status: confirmed)"
+        ],
+        "span_offsets": [
+          [
+            219,
+            251
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's leukocytosis is confirmed.",
+        "spans": [
+          "Leukocytosis (status: confirmed)"
+        ],
+        "span_offsets": [
+          [
+            219,
+            251
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's COVID-19 vaccine status is unknown.",
+        "spans": [
+          "COVID-19 vaccine status (status: unknown)"
+        ],
+        "span_offsets": [
+          [
+            253,
+            294
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient is recommended to return in three to four weeks for updated fasting labs.",
+        "spans": [
+          "I recommended that the patient return in three to four weeks for updated fasting labs"
+        ],
+        "span_offsets": [
+          [
+            0,
+            85
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's updated fasting labs will include a CBC.",
+        "spans": [
+          "including a CBC"
+        ],
+        "span_offsets": [
+          [
+            87,
+            102
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The purpose of the updated fasting labs is to ensure her white blood cell count is normalizing.",
+        "spans": [
+          "to ensure her white blood cell count is normalizing"
+        ],
+        "span_offsets": [
+          [
+            104,
+            155
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient was advised to get the COVID-19 vaccine.",
+        "spans": [
+          "I also discussed the importance of getting the COVID-19 vaccine with her"
+        ],
+        "span_offsets": [
+          [
+            157,
+            229
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The COVID-19 vaccine is believed to be the best preventative measure against COVID-19 for the patient.",
+        "spans": [
+          "as I believe it is the best preventative measure against COVID-19"
+        ],
+        "span_offsets": [
+          [
+            231,
+            296
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will return in two to three weeks for a follow-up appointment.",
+        "spans": [
+          "The patient will return in two to three weeks for a follow-up appointment"
+        ],
+        "span_offsets": [
+          [
+            352,
+            425
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The follow-up appointment will check the patient's CBC.",
+        "spans": [
+          "to check her CBC"
+        ],
+        "span_offsets": [
+          [
+            426,
+            442
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The follow-up appointment will check the patient's fasting labs.",
+        "spans": [
+          "to check her CBC and fasting labs"
+        ],
+        "span_offsets": [
+          [
+            426,
+            459
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

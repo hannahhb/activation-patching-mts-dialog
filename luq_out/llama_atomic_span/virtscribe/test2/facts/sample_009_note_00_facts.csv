@@ -1,0 +1,48 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Jacqueline Miller.,0.0,"[""Jacqueline Miller""]","[[18, 35]]","[""exact""]",True,False
+1,subjective,The patient presents with a rash on her face.,0.0,"[""a rash on her face""]","[[51, 69]]","[""exact""]",True,False
+2,subjective,The patient describes the rash as a small bit left over.,0.25,"[""a small bit left over""]","[[94, 115]]","[""exact""]",True,False
+3,subjective,The patient was taking doxycycline twice a day for the first two weeks.,1.0,"[""had been taking doxycycline twice a day for the first two weeks""]","[[138, 201]]","[""exact""]",True,False
+4,subjective,The patient reduced the dose of doxycycline to once a day.,0.5,"[""reduced the dose to once a day""]","[[212, 242]]","[""exact""]",True,False
+5,subjective,The patient believes the reduced dose of doxycycline has resulted in a plateau in her improvement.,0.25,"[""which she believes has resulted in a plateau in her improvement""]","[[244, 307]]","[""exact""]",True,False
+6,subjective,The patient denies any fever.,0.75,"[""denies any fever""]","[[313, 329]]","[""exact""]",True,False
+7,subjective,The patient is not breast-feeding.,0.25,"[""The patient is not breast-feeding""]","[[331, 364]]","[""exact""]",True,False
+8,subjective,The patient's past medical history is not mentioned.,0.75,"[""Past medical history is not mentioned""]","[[366, 403]]","[""exact""]",True,False
+9,subjective,The patient's review of systems is not mentioned.,0.25,"[""Review of systems is not mentioned""]","[[405, 439]]","[""exact""]",True,False
+10,subjective,The patient is taking doxycycline.,0.0,"[""doxycycline""]","[[154, 165]]","[""exact""]",True,False
+11,subjective,The patient is taking sulfacetamide wash.,0.25,"[""sulfacetamide wash""]","[[482, 500]]","[""exact""]",True,False
+12,subjective,The patient is taking metrocream.,0.25,"[""metrocream""]","[[506, 516]]","[""exact""]",True,False
+13,objective,The patient's Fitzpatrick skin type is IV.,0.0,"[""The patient's Fitzpatrick skin type is IV""]","[[15, 56]]","[""exact""]",True,False
+14,objective,The patient will not burn.,0.75,"[""indicating she will not burn""]","[[58, 86]]","[""exact""]",True,False
+15,objective,The patient will suntan easily.,0.5,"[""will suntan easily""]","[[91, 109]]","[""exact""]",True,False
+16,objective,The patient has faint erythematous papules on her bilateral medial cheeks.,0.0,"[""a few faint erythematous papules and redness on her bilateral medial cheeks and around her nostrils""]","[[121, 220]]","[""exact""]",True,False
+17,objective,The patient has redness on her bilateral medial cheeks.,0.5,"[""a few faint erythematous papules and redness on her bilateral medial cheeks and around her nostrils""]","[[121, 220]]","[""exact""]",True,False
+18,objective,The patient has faint erythematous papules around her nostrils.,0.75,"[""a few faint erythematous papules and redness on her bilateral medial cheeks and around her nostrils""]","[[121, 220]]","[""exact""]",True,False
+19,objective,The patient has redness around her nostrils.,0.0,"[""a few faint erythematous papules and redness on her bilateral medial cheeks and around her nostrils""]","[[121, 220]]","[""exact""]",True,False
+20,assessment,The patient has perioral dermatitis.,0.0,"[""The patient has perioral dermatitis, rosacea, including ocular rosacea""]","[[12, 82]]","[""exact""]",True,False
+21,assessment,The patient has rosacea.,0.0,"[""The patient has perioral dermatitis, rosacea, including ocular rosacea""]","[[12, 82]]","[""exact""]",True,False
+22,assessment,The patient has ocular rosacea.,0.0,"[""The patient has perioral dermatitis, rosacea, including ocular rosacea""]","[[12, 82]]","[""exact""]",True,False
+23,assessment,The patient's perioral dermatitis is of unknown status.,1.0,"[""unknown status on all three""]","[[144, 171]]","[""exact""]",True,False
+24,assessment,The patient's rosacea is of unknown status.,1.0,"[""unknown status on all three""]","[[144, 171]]","[""exact""]",True,False
+25,assessment,The patient's ocular rosacea is of unknown status.,1.0,"[""unknown status on all three""]","[[144, 171]]","[""exact""]",True,False
+26,assessment,Perioral dermatitis is on the patient's problem list.,0.0,"[""Perioral dermatitis; rosacea; ocular rosacea; unknown status on all three""]","[[98, 171]]","[""exact""]",True,False
+27,assessment,Rosacea is on the patient's problem list.,0.0,"[""Perioral dermatitis; rosacea; ocular rosacea; unknown status on all three""]","[[98, 171]]","[""exact""]",True,False
+28,assessment,Ocular rosacea is on the patient's problem list.,0.0,"[""Perioral dermatitis; rosacea; ocular rosacea; unknown status on all three""]","[[98, 171]]","[""exact""]",True,False
+29,plan,The patient was prescribed doxycycline.,0.25,"[""I prescribed doxycycline 100mg twice a day for the rash""]","[[0, 55]]","[""exact""]",True,False
+30,plan,The patient's doxycycline dose is 100mg.,1.0,"[""100mg""]","[[25, 30]]","[""exact""]",True,False
+31,plan,The patient's doxycycline frequency is twice a day.,0.0,"[""twice a day""]","[[31, 42]]","[""exact""]",True,False
+32,plan,The patient's doxycycline indication is for the rash.,0.5,"[""for the rash""]","[[43, 55]]","[""exact""]",True,False
+33,plan,The patient was instructed to continue using the sulfacetamide wash.,0.25,"[""I instructed the patient to continue using the sulfacetamide wash and metrocream""]","[[57, 137]]","[""exact""]",True,False
+34,plan,The patient was instructed to continue using metrocream.,0.0,"[""I instructed the patient to continue using the sulfacetamide wash and metrocream""]","[[57, 137]]","[""exact""]",True,False
+35,plan,The patient was recommended to apply tacrolimus ointment to the rash area.,0.0,"[""I recommended that she apply tacrolimus ointment to the rash area twice a day until it is resolved, and then once a day for a week before stopping""]","[[139, 285]]","[""exact""]",True,False
+36,plan,The patient's tacrolimus ointment frequency is twice a day until the rash is resolved.,0.25,"[""twice a day until it is resolved""]","[[205, 237]]","[""exact""]",True,False
+37,plan,The patient's tacrolimus ointment frequency is once a day for a week after the rash is resolved.,0.25,"[""and then once a day for a week before stopping""]","[[239, 285]]","[""exact""]",True,False
+38,plan,The patient was instructed to continue doxycycline for another week after the rash is gone.,0.5,"[""I instructed her to continue doxycycline for another week after the rash is gone, and then stop it""]","[[287, 385]]","[""exact""]",True,False
+39,plan,The patient was instructed to stop doxycycline after the rash is gone and one week has passed.,0.5,"[""and then stop it""]","[[369, 385]]","[""exact""]",True,False
+40,plan,The patient was instructed to continue using the wash and metrocream after stopping doxycycline.,0.25,"[""I told her to continue using the wash and metrocream after stopping doxycycline""]","[[387, 466]]","[""exact""]",True,False
+41,plan,The patient was instructed to hold off on using her old products until her next follow-up appointment.,1.0,"[""I instructed her to hold off on using her old products until her next follow-up appointment""]","[[468, 559]]","[""exact""]",True,False
+42,plan,The patient is scheduled for a follow-up appointment in 4 weeks.,0.0,"[""I provided her with a follow-up appointment in 4 weeks"", ""The patient is scheduled for a follow-up appointment in 4 weeks""]","[[561, 615], [812, 875]]","[""exact"", ""exact""]",True,True
+43,plan,The patient was recommended to use a basic moisturizer like vanicream or petroleum jelly.,0.75,"[""I recommended that she use a basic moisturizer like vanicream or petroleum jelly, and provided her with samples""]","[[617, 728]]","[""exact""]",True,False
+44,plan,The patient was provided with samples of vanicream or petroleum jelly.,0.75,"[""and provided her with samples""]","[[699, 728]]","[""exact""]",True,False
+45,plan,The patient was instructed to stay away from anti-aging products.,1.0,"[""I instructed her to stay away from anti-aging products and plant-based products""]","[[730, 809]]","[""exact""]",True,False
+46,plan,The patient was instructed to stay away from plant-based products.,1.0,"[""I instructed her to stay away from anti-aging products and plant-based products""]","[[730, 809]]","[""exact""]",True,False

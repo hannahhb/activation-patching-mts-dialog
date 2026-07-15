@@ -1,0 +1,569 @@
+sample_idx,gen_idx,word_idx,word_text,label,pathway,kind,baseline_logit_diff,ablated_logit_diff,delta_logit_diff
+1,0,7," male,",1,attn,real,6.5,6.5,0.0
+1,0,7," male,",1,attn,placebo,6.5,6.5,0.0
+1,0,7," male,",1,ffn,real,6.5,6.5,0.0
+1,0,7," male,",1,ffn,placebo,6.5,6.5,0.0
+1,0,100, [NOT,1,attn,real,5.625,5.625,0.0
+1,0,100, [NOT,1,attn,placebo,5.625,5.625,0.0
+1,0,100, [NOT,1,ffn,real,5.625,5.625,0.0
+1,0,100, [NOT,1,ffn,placebo,5.625,5.625,0.0
+1,0,98, medical,1,attn,real,2.625,2.625,0.0
+1,0,98, medical,1,attn,placebo,2.625,2.625,0.0
+1,0,98, medical,1,ffn,real,2.625,2.625,0.0
+1,0,98, medical,1,ffn,placebo,2.625,2.625,0.0
+1,0,97," infection.
+
+Past",1,attn,real,3.75,3.75,0.0
+1,0,97," infection.
+
+Past",1,attn,placebo,3.75,3.75,0.0
+1,0,97," infection.
+
+Past",1,ffn,real,3.75,3.75,0.0
+1,0,97," infection.
+
+Past",1,ffn,placebo,3.75,3.75,0.0
+1,0,4," Gutierrez,",0,attn,real,7.75,7.75,0.0
+1,0,4," Gutierrez,",0,attn,placebo,7.75,7.75,0.0
+1,0,4," Gutierrez,",0,ffn,real,7.75,7.75,0.0
+1,0,4," Gutierrez,",0,ffn,placebo,7.75,7.75,0.0
+1,0,245, stuffy,0,attn,real,11.25,11.25,0.0
+1,0,245, stuffy,0,attn,placebo,11.25,11.25,0.0
+1,0,245, stuffy,0,ffn,real,11.25,11.25,0.0
+1,0,245, stuffy,0,ffn,placebo,11.25,11.25,0.0
+1,0,54, his,0,attn,real,1.375,1.375,0.0
+1,0,54, his,0,attn,placebo,1.375,1.375,0.0
+1,0,54, his,0,ffn,real,1.375,1.375,0.0
+1,0,54, his,0,ffn,placebo,1.375,1.375,0.0
+1,0,198, upper,0,attn,real,1.625,1.625,0.0
+1,0,198, upper,0,attn,placebo,1.625,1.625,0.0
+1,0,198, upper,0,ffn,real,1.625,1.625,0.0
+1,0,198, upper,0,ffn,placebo,1.625,1.625,0.0
+2,0,156," normal.
+
+Test",1,attn,real,3.25,3.25,0.0
+2,0,156," normal.
+
+Test",1,attn,placebo,3.25,3.25,0.0
+2,0,156," normal.
+
+Test",1,ffn,real,3.25,3.25,0.0
+2,0,156," normal.
+
+Test",1,ffn,placebo,3.25,3.25,0.0
+2,0,159," MENTIONED]
+
+Assessment",1,attn,real,14.0,14.0,0.0
+2,0,159," MENTIONED]
+
+Assessment",1,attn,placebo,14.0,14.0,0.0
+2,0,159," MENTIONED]
+
+Assessment",1,ffn,real,14.0,14.0,0.0
+2,0,159," MENTIONED]
+
+Assessment",1,ffn,placebo,14.0,14.0,0.0
+2,0,92, [NOT,1,attn,real,7.375,7.375,0.0
+2,0,92, [NOT,1,attn,placebo,7.375,7.375,0.0
+2,0,92, [NOT,1,ffn,real,7.375,7.375,0.0
+2,0,92, [NOT,1,ffn,placebo,7.375,7.375,0.0
+2,0,93," MENTIONED]
+
+Physical",1,attn,real,6.875,6.875,0.0
+2,0,93," MENTIONED]
+
+Physical",1,attn,placebo,6.875,6.875,0.0
+2,0,93," MENTIONED]
+
+Physical",1,ffn,real,6.875,6.875,0.0
+2,0,93," MENTIONED]
+
+Physical",1,ffn,placebo,6.875,6.875,0.0
+2,0,0,"Subjective:
+HPI:",0,attn,real,8.25,8.25,0.0
+2,0,0,"Subjective:
+HPI:",0,attn,placebo,8.25,8.25,0.0
+2,0,0,"Subjective:
+HPI:",0,ffn,real,8.25,8.25,0.0
+2,0,0,"Subjective:
+HPI:",0,ffn,placebo,8.25,8.25,0.0
+2,0,241, non-comedogenic,0,attn,real,11.875,11.875,0.0
+2,0,241, non-comedogenic,0,attn,placebo,11.875,11.875,0.0
+2,0,241, non-comedogenic,0,ffn,real,11.875,11.875,0.0
+2,0,241, non-comedogenic,0,ffn,placebo,11.875,11.875,0.0
+2,0,202, week,0,attn,real,13.25,13.25,0.0
+2,0,202, week,0,attn,placebo,13.25,13.25,0.0
+2,0,202, week,0,ffn,real,13.25,13.25,0.0
+2,0,202, week,0,ffn,placebo,13.25,13.25,0.0
+2,0,120, Open,0,attn,real,11.125,11.125,0.0
+2,0,120, Open,0,attn,placebo,11.125,11.125,0.0
+2,0,120, Open,0,ffn,real,11.125,11.125,0.0
+2,0,120, Open,0,ffn,placebo,11.125,11.125,0.0
+3,0,268, needed,1,attn,real,2.375,2.375,0.0
+3,0,268, needed,1,attn,placebo,2.375,2.375,0.0
+3,0,268, needed,1,ffn,real,2.375,2.375,0.0
+3,0,268, needed,1,ffn,placebo,2.375,2.375,0.0
+3,0,107, alcohol,1,attn,real,0.5,0.5,0.0
+3,0,107, alcohol,1,attn,placebo,0.5,0.5,0.0
+3,0,107, alcohol,1,ffn,real,0.5,0.5,0.0
+3,0,107, alcohol,1,ffn,placebo,0.5,0.5,0.0
+3,0,266, Propranolol,1,attn,real,14.25,14.25,0.0
+3,0,266, Propranolol,1,attn,placebo,14.25,14.25,0.0
+3,0,266, Propranolol,1,ffn,real,14.25,14.25,0.0
+3,0,266, Propranolol,1,ffn,placebo,14.25,14.25,0.0
+3,0,223, [NOT,1,attn,real,7.25,7.25,0.0
+3,0,223, [NOT,1,attn,placebo,7.25,7.25,0.0
+3,0,223, [NOT,1,ffn,real,7.25,7.25,0.0
+3,0,223, [NOT,1,ffn,placebo,7.25,7.25,0.0
+3,0,122, of,0,attn,real,13.0,13.0,0.0
+3,0,122, of,0,attn,placebo,13.0,13.0,0.0
+3,0,122, of,0,ffn,real,13.0,13.0,0.0
+3,0,122, of,0,ffn,placebo,13.0,13.0,0.0
+3,0,214, breast,0,attn,real,10.125,10.125,0.0
+3,0,214, breast,0,attn,placebo,10.125,10.125,0.0
+3,0,214, breast,0,ffn,real,10.125,10.125,0.0
+3,0,214, breast,0,ffn,placebo,10.125,10.125,0.0
+3,0,189," breasts.
+
+Current",0,attn,real,5.25,5.25,0.0
+3,0,189," breasts.
+
+Current",0,attn,placebo,5.25,5.25,0.0
+3,0,189," breasts.
+
+Current",0,ffn,real,5.25,5.25,0.0
+3,0,189," breasts.
+
+Current",0,ffn,placebo,5.25,5.25,0.0
+3,0,29, approximately,0,attn,real,3.375,3.375,0.0
+3,0,29, approximately,0,attn,placebo,3.375,3.375,0.0
+3,0,29, approximately,0,ffn,real,3.375,3.375,0.0
+3,0,29, approximately,0,ffn,placebo,3.375,3.375,0.0
+4,0,139," daily.
+
+Objective:
+Vital",1,attn,real,10.25,10.25,0.0
+4,0,139," daily.
+
+Objective:
+Vital",1,attn,placebo,10.25,10.25,0.0
+4,0,139," daily.
+
+Objective:
+Vital",1,ffn,real,10.25,10.25,0.0
+4,0,139," daily.
+
+Objective:
+Vital",1,ffn,placebo,10.25,10.25,0.0
+4,0,80, and,1,attn,real,7.0,7.0,0.0
+4,0,80, and,1,attn,placebo,7.0,7.0,0.0
+4,0,80, and,1,ffn,real,7.0,7.0,0.0
+4,0,80, and,1,ffn,placebo,7.0,7.0,0.0
+4,0,81, has,1,attn,real,0.75,0.75,0.0
+4,0,81, has,1,attn,placebo,0.75,0.75,0.0
+4,0,81, has,1,ffn,real,0.75,0.75,0.0
+4,0,81, has,1,ffn,placebo,0.75,0.75,0.0
+4,0,141, [NOT,1,attn,real,5.75,5.75,0.0
+4,0,141, [NOT,1,attn,placebo,5.75,5.75,0.0
+4,0,141, [NOT,1,ffn,real,5.75,5.75,0.0
+4,0,141, [NOT,1,ffn,placebo,5.75,5.75,0.0
+4,0,233, due,0,attn,real,0.25,0.25,0.0
+4,0,233, due,0,attn,placebo,0.25,0.25,0.0
+4,0,233, due,0,ffn,real,0.25,0.25,0.0
+4,0,233, due,0,ffn,placebo,0.25,0.25,0.0
+4,0,287," daily,",0,attn,real,2.25,2.25,0.0
+4,0,287," daily,",0,attn,placebo,2.25,2.25,0.0
+4,0,287," daily,",0,ffn,real,2.25,2.25,0.0
+4,0,287," daily,",0,ffn,placebo,2.25,2.25,0.0
+4,0,150," normal,",0,attn,real,1.0,1.0,0.0
+4,0,150," normal,",0,attn,placebo,1.0,1.0,0.0
+4,0,150," normal,",0,ffn,real,1.0,1.0,0.0
+4,0,150," normal,",0,ffn,placebo,1.0,1.0,0.0
+4,0,179, pH,0,attn,real,6.375,6.375,0.0
+4,0,179, pH,0,attn,placebo,6.375,6.375,0.0
+4,0,179, pH,0,ffn,real,6.375,6.375,0.0
+4,0,179, pH,0,ffn,placebo,6.375,6.375,0.0
+5,0,176," 50mg/day.
+
+Objective:
+Vital",1,attn,real,11.625,11.625,0.0
+5,0,176," 50mg/day.
+
+Objective:
+Vital",1,attn,placebo,11.625,11.625,0.0
+5,0,176," 50mg/day.
+
+Objective:
+Vital",1,ffn,real,11.625,11.625,0.0
+5,0,176," 50mg/day.
+
+Objective:
+Vital",1,ffn,placebo,11.625,11.625,0.0
+5,0,177, signs:,1,attn,real,5.75,5.75,0.0
+5,0,177, signs:,1,attn,placebo,5.75,5.75,0.0
+5,0,177, signs:,1,ffn,real,5.75,5.75,0.0
+5,0,177, signs:,1,ffn,placebo,5.75,5.75,0.0
+5,0,179," MENTIONED]
+
+Physical",1,attn,real,5.0,5.0,0.0
+5,0,179," MENTIONED]
+
+Physical",1,attn,placebo,5.0,5.0,0.0
+5,0,179," MENTIONED]
+
+Physical",1,ffn,real,5.0,5.0,0.0
+5,0,179," MENTIONED]
+
+Physical",1,ffn,placebo,5.0,5.0,0.0
+5,0,178, [NOT,1,attn,real,5.625,5.625,0.0
+5,0,178, [NOT,1,attn,placebo,5.625,5.625,0.0
+5,0,178, [NOT,1,ffn,real,5.625,5.625,0.0
+5,0,178, [NOT,1,ffn,placebo,5.625,5.625,0.0
+5,0,253, ECG,0,attn,real,6.625,6.625,0.0
+5,0,253, ECG,0,attn,placebo,6.625,6.625,0.0
+5,0,253, ECG,0,ffn,real,6.625,6.625,0.0
+5,0,253, ECG,0,ffn,placebo,6.625,6.625,0.0
+5,0,138, negative,0,attn,real,3.25,3.25,0.0
+5,0,138, negative,0,attn,placebo,3.25,3.25,0.0
+5,0,138, negative,0,ffn,real,3.25,3.25,0.0
+5,0,138, negative,0,ffn,placebo,3.25,3.25,0.0
+5,0,48, chest,0,attn,real,0.25,0.25,0.0
+5,0,48, chest,0,attn,placebo,0.25,0.25,0.0
+5,0,48, chest,0,ffn,real,0.25,0.25,0.0
+5,0,48, chest,0,ffn,placebo,0.25,0.25,0.0
+5,0,315, continue,0,attn,real,8.0,8.0,0.0
+5,0,315, continue,0,attn,placebo,8.0,8.0,0.0
+5,0,315, continue,0,ffn,real,8.0,8.0,0.0
+5,0,315, continue,0,ffn,placebo,8.0,8.0,0.0
+6,0,167, I,1,attn,real,1.375,1.375,0.0
+6,0,167, I,1,attn,placebo,1.375,1.375,0.0
+6,0,167, I,1,ffn,real,1.375,1.375,0.0
+6,0,167, I,1,ffn,placebo,1.375,1.375,0.0
+6,0,175," MENTIONED]
+Physical",1,attn,real,4.25,4.25,0.0
+6,0,175," MENTIONED]
+Physical",1,attn,placebo,4.25,4.25,0.0
+6,0,175," MENTIONED]
+Physical",1,ffn,real,4.25,4.25,0.0
+6,0,175," MENTIONED]
+Physical",1,ffn,placebo,4.25,4.25,0.0
+6,0,174, [NOT,1,attn,real,5.75,5.75,0.0
+6,0,174, [NOT,1,attn,placebo,5.75,5.75,0.0
+6,0,174, [NOT,1,ffn,real,5.75,5.75,0.0
+6,0,174, [NOT,1,ffn,placebo,5.75,5.75,0.0
+6,0,164, taking,1,attn,real,-2.125,-2.125,0.0
+6,0,164, taking,1,attn,placebo,-2.125,-2.125,0.0
+6,0,164, taking,1,ffn,real,-2.125,-2.125,0.0
+6,0,164, taking,1,ffn,placebo,-2.125,-2.125,0.0
+6,0,100, tolerating,0,attn,real,1.0,1.0,0.0
+6,0,100, tolerating,0,attn,placebo,1.0,1.0,0.0
+6,0,100, tolerating,0,ffn,real,1.0,1.0,0.0
+6,0,100, tolerating,0,ffn,placebo,1.0,1.0,0.0
+6,0,20, she,0,attn,real,0.125,0.125,0.0
+6,0,20, she,0,attn,placebo,0.125,0.125,0.0
+6,0,20, she,0,ffn,real,0.125,0.125,0.0
+6,0,20, she,0,ffn,placebo,0.125,0.125,0.0
+6,0,275, work,0,attn,real,7.75,7.75,0.0
+6,0,275, work,0,attn,placebo,7.75,7.75,0.0
+6,0,275, work,0,ffn,real,7.75,7.75,0.0
+6,0,275, work,0,ffn,placebo,7.75,7.75,0.0
+6,0,148, first,0,attn,real,4.625,4.625,0.0
+6,0,148, first,0,attn,placebo,4.625,4.625,0.0
+6,0,148, first,0,ffn,real,4.625,4.625,0.0
+6,0,148, first,0,ffn,placebo,4.625,4.625,0.0
+8,0,114, saturation:,1,attn,real,10.375,10.375,0.0
+8,0,114, saturation:,1,attn,placebo,10.375,10.375,0.0
+8,0,114, saturation:,1,ffn,real,10.375,10.375,0.0
+8,0,114, saturation:,1,ffn,placebo,10.375,10.375,0.0
+8,0,109, Pulse,1,attn,real,4.75,4.75,0.0
+8,0,109, Pulse,1,attn,placebo,4.75,4.75,0.0
+8,0,109, Pulse,1,ffn,real,4.75,4.75,0.0
+8,0,109, Pulse,1,ffn,placebo,4.75,4.75,0.0
+8,0,116," MENTIONED]
+-",1,attn,real,8.0,8.0,0.0
+8,0,116," MENTIONED]
+-",1,attn,placebo,8.0,8.0,0.0
+8,0,116," MENTIONED]
+-",1,ffn,real,8.0,8.0,0.0
+8,0,116," MENTIONED]
+-",1,ffn,placebo,8.0,8.0,0.0
+8,0,118, [NOT,1,attn,real,9.0,9.0,0.0
+8,0,118, [NOT,1,attn,placebo,9.0,9.0,0.0
+8,0,118, [NOT,1,ffn,real,9.0,9.0,0.0
+8,0,118, [NOT,1,ffn,placebo,9.0,9.0,0.0
+8,0,60, managing,0,attn,real,-0.625,-0.625,0.0
+8,0,60, managing,0,attn,placebo,-0.625,-0.625,0.0
+8,0,60, managing,0,ffn,real,-0.625,-0.625,0.0
+8,0,60, managing,0,ffn,placebo,-0.625,-0.625,0.0
+8,0,85, mg,0,attn,real,9.625,9.625,0.0
+8,0,85, mg,0,attn,placebo,9.625,9.625,0.0
+8,0,85, mg,0,ffn,real,9.625,9.625,0.0
+8,0,85, mg,0,ffn,placebo,9.625,9.625,0.0
+8,0,257, down,0,attn,real,12.5,12.5,0.0
+8,0,257, down,0,attn,placebo,12.5,12.5,0.0
+8,0,257, down,0,ffn,real,12.5,12.5,0.0
+8,0,257, down,0,ffn,placebo,12.5,12.5,0.0
+8,0,69, as,0,attn,real,2.625,2.625,0.0
+8,0,69, as,0,attn,placebo,2.625,2.625,0.0
+8,0,69, as,0,ffn,real,2.625,2.625,0.0
+8,0,69, as,0,ffn,placebo,2.625,2.625,0.0
+9,0,388, the,1,attn,real,1.25,1.25,0.0
+9,0,388, the,1,attn,placebo,1.25,1.25,0.0
+9,0,388, the,1,ffn,real,1.25,1.25,0.0
+9,0,388, the,1,ffn,placebo,1.25,1.25,0.0
+9,0,391, of,1,attn,real,18.25,18.25,0.0
+9,0,391, of,1,attn,placebo,18.25,18.25,0.0
+9,0,391, of,1,ffn,real,18.25,18.25,0.0
+9,0,391, of,1,ffn,placebo,18.25,18.25,0.0
+9,0,387, determine,1,attn,real,-1.125,-1.125,0.0
+9,0,387, determine,1,attn,placebo,-1.125,-1.125,0.0
+9,0,387, determine,1,ffn,real,-1.125,-1.125,0.0
+9,0,387, determine,1,ffn,placebo,-1.125,-1.125,0.0
+9,0,389, next,1,attn,real,4.5,4.5,0.0
+9,0,389, next,1,attn,placebo,4.5,4.5,0.0
+9,0,389, next,1,ffn,real,4.5,4.5,0.0
+9,0,389, next,1,ffn,placebo,4.5,4.5,0.0
+9,0,304, an,0,attn,real,1.375,1.375,0.0
+9,0,304, an,0,attn,placebo,1.375,1.375,0.0
+9,0,304, an,0,ffn,real,1.375,1.375,0.0
+9,0,304, an,0,ffn,placebo,1.375,1.375,0.0
+9,0,22, doctor,0,attn,real,3.375,3.375,0.0
+9,0,22, doctor,0,attn,placebo,3.375,3.375,0.0
+9,0,22, doctor,0,ffn,real,3.375,3.375,0.0
+9,0,22, doctor,0,ffn,placebo,3.375,3.375,0.0
+9,0,337, possibility,0,attn,real,4.5,4.5,0.0
+9,0,337, possibility,0,attn,placebo,4.5,4.5,0.0
+9,0,337, possibility,0,ffn,real,4.5,4.5,0.0
+9,0,337, possibility,0,ffn,placebo,4.5,4.5,0.0
+9,0,30, severe,0,attn,real,-0.875,-0.875,0.0
+9,0,30, severe,0,attn,placebo,-0.875,-0.875,0.0
+9,0,30, severe,0,ffn,real,-0.875,-0.875,0.0
+9,0,30, severe,0,ffn,placebo,-0.875,-0.875,0.0
+10,0,140, Results:,1,attn,real,10.125,10.125,0.0
+10,0,140, Results:,1,attn,placebo,10.125,10.125,0.0
+10,0,140, Results:,1,ffn,real,10.125,10.125,0.0
+10,0,140, Results:,1,ffn,placebo,10.125,10.125,0.0
+10,0,84," symptoms.
+
+Current",1,attn,real,7.5,7.5,0.0
+10,0,84," symptoms.
+
+Current",1,attn,placebo,7.5,7.5,0.0
+10,0,84," symptoms.
+
+Current",1,ffn,real,7.5,7.5,0.0
+10,0,84," symptoms.
+
+Current",1,ffn,placebo,7.5,7.5,0.0
+10,0,88, signs:,1,attn,real,7.625,7.625,0.0
+10,0,88, signs:,1,attn,placebo,7.625,7.625,0.0
+10,0,88, signs:,1,ffn,real,7.625,7.625,0.0
+10,0,88, signs:,1,ffn,placebo,7.625,7.625,0.0
+10,0,160, list:,1,attn,real,8.0,8.0,0.0
+10,0,160, list:,1,attn,placebo,8.0,8.0,0.0
+10,0,160, list:,1,ffn,real,8.0,8.0,0.0
+10,0,160, list:,1,ffn,placebo,8.0,8.0,0.0
+10,0,169, which,0,attn,real,0.875,0.875,0.0
+10,0,169, which,0,attn,placebo,0.875,0.875,0.0
+10,0,169, which,0,ffn,real,0.875,0.875,0.0
+10,0,169, which,0,ffn,placebo,0.875,0.875,0.0
+10,0,14, her,0,attn,real,0.875,0.875,0.0
+10,0,14, her,0,attn,placebo,0.875,0.875,0.0
+10,0,14, her,0,ffn,real,0.875,0.875,0.0
+10,0,14, her,0,ffn,placebo,0.875,0.875,0.0
+10,0,223, few,0,attn,real,8.375,8.375,0.0
+10,0,223, few,0,attn,placebo,8.375,8.375,0.0
+10,0,223, few,0,ffn,real,8.375,8.375,0.0
+10,0,223, few,0,ffn,placebo,8.375,8.375,0.0
+10,0,118, the,0,attn,real,15.5,15.5,0.0
+10,0,118, the,0,attn,placebo,15.5,15.5,0.0
+10,0,118, the,0,ffn,real,15.5,15.5,0.0
+10,0,118, the,0,ffn,placebo,15.5,15.5,0.0
+11,0,113," medications:
+[NOT",1,attn,real,5.125,5.125,0.0
+11,0,113," medications:
+[NOT",1,attn,placebo,5.125,5.125,0.0
+11,0,113," medications:
+[NOT",1,ffn,real,5.125,5.125,0.0
+11,0,113," medications:
+[NOT",1,ffn,placebo,5.125,5.125,0.0
+11,0,269, in,1,attn,real,-1.125,-1.125,0.0
+11,0,269, in,1,attn,placebo,-1.125,-1.125,0.0
+11,0,269, in,1,ffn,real,-1.125,-1.125,0.0
+11,0,269, in,1,ffn,placebo,-1.125,-1.125,0.0
+11,0,270, 2-3,1,attn,real,1.0,1.0,0.0
+11,0,270, 2-3,1,attn,placebo,1.0,1.0,0.0
+11,0,270, 2-3,1,ffn,real,1.0,1.0,0.0
+11,0,270, 2-3,1,ffn,placebo,1.0,1.0,0.0
+11,0,263, a,1,attn,real,3.625,3.625,0.0
+11,0,263, a,1,attn,placebo,3.625,3.625,0.0
+11,0,263, a,1,ffn,real,3.625,3.625,0.0
+11,0,263, a,1,ffn,placebo,3.625,3.625,0.0
+11,0,259, with,0,attn,real,8.25,8.25,0.0
+11,0,259, with,0,attn,placebo,8.25,8.25,0.0
+11,0,259, with,0,ffn,real,8.25,8.25,0.0
+11,0,259, with,0,ffn,placebo,8.25,8.25,0.0
+11,0,209, referral,0,attn,real,7.875,7.875,0.0
+11,0,209, referral,0,attn,placebo,7.875,7.875,0.0
+11,0,209, referral,0,ffn,real,7.875,7.875,0.0
+11,0,209, referral,0,ffn,placebo,7.875,7.875,0.0
+11,0,52, denies,0,attn,real,-1.25,-1.25,0.0
+11,0,52, denies,0,attn,placebo,-1.25,-1.25,0.0
+11,0,52, denies,0,ffn,real,-1.25,-1.25,0.0
+11,0,52, denies,0,ffn,placebo,-1.25,-1.25,0.0
+11,0,243, also,0,attn,real,-0.125,-0.125,0.0
+11,0,243, also,0,attn,placebo,-0.125,-0.125,0.0
+11,0,243, also,0,ffn,real,-0.125,-0.125,0.0
+11,0,243, also,0,ffn,placebo,-0.125,-0.125,0.0
+12,0,207, I,1,attn,real,1.375,1.375,0.0
+12,0,207, I,1,attn,placebo,1.375,1.375,0.0
+12,0,207, I,1,ffn,real,1.375,1.375,0.0
+12,0,207, I,1,ffn,placebo,1.375,1.375,0.0
+12,0,97, prescribed,1,attn,real,0.75,0.75,0.0
+12,0,97, prescribed,1,attn,placebo,0.75,0.75,0.0
+12,0,97, prescribed,1,ffn,real,0.75,0.75,0.0
+12,0,97, prescribed,1,ffn,placebo,0.75,0.75,0.0
+12,0,187, I,1,attn,real,3.5,3.5,0.0
+12,0,187, I,1,attn,placebo,3.5,3.5,0.0
+12,0,187, I,1,ffn,real,3.5,3.5,0.0
+12,0,187, I,1,ffn,placebo,3.5,3.5,0.0
+12,0,228, The,1,attn,real,-1.125,-1.125,0.0
+12,0,228, The,1,attn,placebo,-1.125,-1.125,0.0
+12,0,228, The,1,ffn,real,-1.125,-1.125,0.0
+12,0,228, The,1,ffn,placebo,-1.125,-1.125,0.0
+12,0,130, He,0,attn,real,1.0,1.0,0.0
+12,0,130, He,0,attn,placebo,1.0,1.0,0.0
+12,0,130, He,0,ffn,real,1.0,1.0,0.0
+12,0,130, He,0,ffn,placebo,1.0,1.0,0.0
+12,0,50, formula,0,attn,real,1.25,1.25,0.0
+12,0,50, formula,0,attn,placebo,1.25,1.25,0.0
+12,0,50, formula,0,ffn,real,1.25,1.25,0.0
+12,0,50, formula,0,ffn,placebo,1.25,1.25,0.0
+12,0,258, and,0,attn,real,4.25,4.25,0.0
+12,0,258, and,0,attn,placebo,4.25,4.25,0.0
+12,0,258, and,0,ffn,real,4.25,4.25,0.0
+12,0,258, and,0,ffn,placebo,4.25,4.25,0.0
+12,0,122," infection,",0,attn,real,0.75,0.75,0.0
+12,0,122," infection,",0,attn,placebo,0.75,0.75,0.0
+12,0,122," infection,",0,ffn,real,0.75,0.75,0.0
+12,0,122," infection,",0,ffn,placebo,0.75,0.75,0.0
+13,0,141, known,1,attn,real,-1.25,-1.25,0.0
+13,0,141, known,1,attn,placebo,-1.25,-1.25,0.0
+13,0,141, known,1,ffn,real,-1.25,-1.25,0.0
+13,0,141, known,1,ffn,placebo,-1.25,-1.25,0.0
+13,0,241, Macromastia;,1,attn,real,3.25,3.25,0.0
+13,0,241, Macromastia;,1,attn,placebo,3.25,3.25,0.0
+13,0,241, Macromastia;,1,ffn,real,3.25,3.25,0.0
+13,0,241, Macromastia;,1,ffn,placebo,3.25,3.25,0.0
+13,0,191, [NOT,1,attn,real,4.625,4.625,0.0
+13,0,191, [NOT,1,attn,placebo,4.625,4.625,0.0
+13,0,191, [NOT,1,ffn,real,4.625,4.625,0.0
+13,0,191, [NOT,1,ffn,placebo,4.625,4.625,0.0
+13,0,218," palpable.
+
+Test",1,attn,real,0.375,0.375,0.0
+13,0,218," palpable.
+
+Test",1,attn,placebo,0.375,0.375,0.0
+13,0,218," palpable.
+
+Test",1,ffn,real,0.375,0.375,0.0
+13,0,218," palpable.
+
+Test",1,ffn,placebo,0.375,0.375,0.0
+13,0,149," pain,",0,attn,real,3.375,3.375,0.0
+13,0,149," pain,",0,attn,placebo,3.375,3.375,0.0
+13,0,149," pain,",0,ffn,real,3.375,3.375,0.0
+13,0,149," pain,",0,ffn,placebo,3.375,3.375,0.0
+13,0,308, each,0,attn,real,-0.25,-0.25,0.0
+13,0,308, each,0,attn,placebo,-0.25,-0.25,0.0
+13,0,308, each,0,ffn,real,-0.25,-0.25,0.0
+13,0,308, each,0,ffn,placebo,-0.25,-0.25,0.0
+13,0,181, rashes,0,attn,real,13.75,13.75,0.0
+13,0,181, rashes,0,attn,placebo,13.75,13.75,0.0
+13,0,181, rashes,0,ffn,real,13.75,13.75,0.0
+13,0,181, rashes,0,ffn,placebo,13.75,13.75,0.0
+13,0,282, have,0,attn,real,-0.125,-0.125,0.0
+13,0,282, have,0,attn,placebo,-0.125,-0.125,0.0
+13,0,282, have,0,ffn,real,-0.125,-0.125,0.0
+13,0,282, have,0,ffn,placebo,-0.125,-0.125,0.0
+14,0,300, the,1,attn,real,4.625,4.625,0.0
+14,0,300, the,1,attn,placebo,4.625,4.625,0.0
+14,0,300, the,1,ffn,real,4.625,4.625,0.0
+14,0,300, the,1,ffn,placebo,4.625,4.625,0.0
+14,0,66, taking,1,attn,real,-0.25,-0.25,0.0
+14,0,66, taking,1,attn,placebo,-0.25,-0.25,0.0
+14,0,66, taking,1,ffn,real,-0.25,-0.25,0.0
+14,0,66, taking,1,ffn,placebo,-0.25,-0.25,0.0
+14,0,70, COVID-19,1,attn,real,11.75,11.75,0.0
+14,0,70, COVID-19,1,attn,placebo,11.75,11.75,0.0
+14,0,70, COVID-19,1,ffn,real,11.75,11.75,0.0
+14,0,70, COVID-19,1,ffn,placebo,11.75,11.75,0.0
+14,0,296," follow-up.
+
+Follow-up:",1,attn,real,6.25,6.25,0.0
+14,0,296," follow-up.
+
+Follow-up:",1,attn,placebo,6.25,6.25,0.0
+14,0,296," follow-up.
+
+Follow-up:",1,ffn,real,6.25,6.25,0.0
+14,0,296," follow-up.
+
+Follow-up:",1,ffn,placebo,6.25,6.25,0.0
+14,0,33, particularly,0,attn,real,0.125,0.125,0.0
+14,0,33, particularly,0,attn,placebo,0.125,0.125,0.0
+14,0,33, particularly,0,ffn,real,0.125,0.125,0.0
+14,0,33, particularly,0,ffn,placebo,0.125,0.125,0.0
+14,0,274, methotrexate.,0,attn,real,2.375,2.375,0.0
+14,0,274, methotrexate.,0,attn,placebo,2.375,2.375,0.0
+14,0,274, methotrexate.,0,ffn,real,2.375,2.375,0.0
+14,0,274, methotrexate.,0,ffn,placebo,2.375,2.375,0.0
+14,0,53, once,0,attn,real,1.0,1.0,0.0
+14,0,53, once,0,attn,placebo,1.0,1.0,0.0
+14,0,53, once,0,ffn,real,1.0,1.0,0.0
+14,0,53, once,0,ffn,placebo,1.0,1.0,0.0
+14,0,271, continue,0,attn,real,5.375,5.375,0.0
+14,0,271, continue,0,attn,placebo,5.375,5.375,0.0
+14,0,271, continue,0,ffn,real,5.375,5.375,0.0
+14,0,271, continue,0,ffn,placebo,5.375,5.375,0.0
+15,0,144, left,1,attn,real,-0.125,-0.125,0.0
+15,0,144, left,1,attn,placebo,-0.125,-0.125,0.0
+15,0,144, left,1,ffn,real,-0.125,-0.125,0.0
+15,0,144, left,1,ffn,placebo,-0.125,-0.125,0.0
+15,0,140, 5,1,attn,real,9.0,9.0,0.0
+15,0,140, 5,1,attn,placebo,9.0,9.0,0.0
+15,0,140, 5,1,ffn,real,9.0,9.0,0.0
+15,0,140, 5,1,ffn,placebo,9.0,9.0,0.0
+15,0,145," kidney.
+
+Assessment",1,attn,real,15.0,15.0,0.0
+15,0,145," kidney.
+
+Assessment",1,attn,placebo,15.0,15.0,0.0
+15,0,145," kidney.
+
+Assessment",1,ffn,real,15.0,15.0,0.0
+15,0,145," kidney.
+
+Assessment",1,ffn,placebo,15.0,15.0,0.0
+15,0,142, in,1,attn,real,-0.625,-0.625,0.0
+15,0,142, in,1,attn,placebo,-0.625,-0.625,0.0
+15,0,142, in,1,ffn,real,-0.625,-0.625,0.0
+15,0,142, in,1,ffn,placebo,-0.625,-0.625,0.0
+15,0,232, the,0,attn,real,13.875,13.875,0.0
+15,0,232, the,0,attn,placebo,13.875,13.875,0.0
+15,0,232, the,0,ffn,real,13.875,13.875,0.0
+15,0,232, the,0,ffn,placebo,13.875,13.875,0.0
+15,0,267, and,0,attn,real,1.0,1.0,0.0
+15,0,267, and,0,attn,placebo,1.0,1.0,0.0
+15,0,267, and,0,ffn,real,1.0,1.0,0.0
+15,0,267, and,0,ffn,placebo,1.0,1.0,0.0
+15,0,21, bright,0,attn,real,11.375,11.375,0.0
+15,0,21, bright,0,attn,placebo,11.375,11.375,0.0
+15,0,21, bright,0,ffn,real,11.375,11.375,0.0
+15,0,21, bright,0,ffn,placebo,11.375,11.375,0.0
+15,0,272, if,0,attn,real,-0.25,-0.25,0.0
+15,0,272, if,0,attn,placebo,-0.25,-0.25,0.0
+15,0,272, if,0,ffn,real,-0.25,-0.25,0.0
+15,0,272, if,0,ffn,placebo,-0.25,-0.25,0.0

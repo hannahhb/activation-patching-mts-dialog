@@ -1,0 +1,55 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 36-year-old female.,0.25,"[""a 36-year-old female""]","[[18, 38]]","[""exact""]",True,False
+1,subjective,The patient has a several-year history of gastroesophageal reflux disease (GERD).,0.0,"[""a several-year history of gastroesophageal reflux disease (GERD)""]","[[54, 118]]","[""exact""]",True,False
+2,subjective,The patient's gastroesophageal reflux disease (GERD) has worsened over the past few years.,0.0,"[""which has worsened over the past few years""]","[[120, 162]]","[""exact""]",True,False
+3,subjective,The patient experiences a burning sensation in her chest and throat.,0.0,"[""burning sensation in her chest and throat""]","[[189, 230]]","[""exact""]",True,False
+4,subjective,The patient's burning sensation in her chest and throat is exacerbated by consuming spicy foods.,0.0,"[""particularly after consuming spicy foods""]","[[232, 272]]","[""exact""]",True,False
+5,subjective,The patient's burning sensation in her chest and throat is exacerbated by consuming carbonated beverages.,0.25,"[""carbonated beverages""]","[[274, 294]]","[""exact""]",True,False
+6,subjective,The patient's burning sensation in her chest and throat is exacerbated by consuming citrus products.,0.0,"[""citrus products""]","[[296, 311]]","[""exact""]",True,False
+7,subjective,The patient's burning sensation in her chest and throat is exacerbated by consuming tomato-based foods.,0.0,"[""tomato-based foods""]","[[317, 335]]","[""exact""]",True,False
+8,subjective,The patient is taking omeprazole.,0.0,"[""omeprazole 40 milligrams twice daily""]","[[357, 393]]","[""exact""]",True,False
+9,subjective,The patient's omeprazole dose is 40 milligrams.,0.0,"[""40 milligrams""]","[[368, 381]]","[""exact""]",True,False
+10,subjective,The patient takes omeprazole twice daily.,0.0,"[""twice daily""]","[[382, 393]]","[""exact""]",True,False
+11,subjective,The patient has been taking omeprazole for approximately a year.,0.75,"[""for approximately a year""]","[[394, 418]]","[""exact""]",True,False
+12,subjective,The patient's symptoms have not been adequately controlled by omeprazole.,0.0,"[""but her symptoms have not been adequately controlled""]","[[420, 472]]","[""exact""]",True,False
+13,subjective,The patient has a family history of GERD.,0.0,"[""a family history of GERD""]","[[491, 515]]","[""exact""]",True,False
+14,subjective,The patient has a family history of esophageal cancer on her mother's side.,0.25,"[""esophageal cancer on her mother's side""]","[[520, 558]]","[""exact""]",True,False
+15,subjective,The patient has a history of anxiety.,0.0,"[""a history of anxiety""]","[[599, 619]]","[""exact""]",True,False
+16,subjective,The patient has a history of seasonal allergies.,0.0,"[""seasonal allergies""]","[[624, 642]]","[""exact""]",True,False
+17,subjective,The patient has undergone surgery as an infant for intestinal twisting.,0.75,"[""undergone surgery as an infant for intestinal twisting""]","[[652, 706]]","[""exact""]",True,False
+18,subjective,The patient has abdominal surgical scars.,0.75,"[""abdominal surgical scars""]","[[726, 750]]","[""exact""]",True,False
+19,subjective,The patient denies abdominal pain.,0.0,"[""denies abdominal pain""]","[[784, 805]]","[""exact""]",True,False
+20,subjective,The patient denies nausea.,0.0,"[""nausea""]","[[807, 813]]","[""exact""]",True,False
+21,subjective,The patient denies vomiting.,0.0,"[""vomiting""]","[[815, 823]]","[""exact""]",True,False
+22,subjective,The patient denies changes in bowel movements.,0.0,"[""changes in bowel movements""]","[[825, 851]]","[""exact""]",True,False
+23,subjective,The patient denies constipation.,0.0,"[""constipation""]","[[853, 865]]","[""exact""]",True,False
+24,subjective,The patient denies diarrhea.,0.0,"[""diarrhea""]","[[867, 875]]","[""exact""]",True,False
+25,subjective,The patient denies rectal bleeding.,0.25,"[""rectal bleeding""]","[[881, 896]]","[""exact""]",True,False
+26,objective,The patient's physical exam is normal.,0.0,"[""The patient's physical exam was normal""]","[[15, 53]]","[""exact""]",True,False
+27,objective,The patient has well-healed abdominal surgical scars.,0.0,"[""well-healed abdominal surgical scars noted""]","[[66, 108]]","[""exact""]",True,False
+28,objective,The patient had surgery as an infant for intestinal twisting.,0.25,"[""which were from surgery performed as an infant for intestinal twisting""]","[[110, 180]]","[""exact""]",True,False
+29,assessment,The patient likely has GERD.,0.0,"[""The patient likely has GERD with an underlying functional etiology""]","[[12, 78]]","[""exact""]",True,False
+30,assessment,The patient's GERD has an underlying functional etiology.,0.75,"[""The patient likely has GERD with an underlying functional etiology""]","[[12, 78]]","[""exact""]",True,False
+31,assessment,The patient has active GERD.,0.25,"[""GERD active""]","[[94, 105]]","[""exact""]",True,False
+32,assessment,The patient has anxiety.,0.75,"[""Anxiety unknown""]","[[107, 122]]","[""exact""]",True,False
+33,assessment,The patient has seasonal allergies.,1.0,"[""Seasonal allergies unknown""]","[[124, 150]]","[""exact""]",True,False
+34,plan,The patient was prescribed Nexium.,0.0,"[""I prescribed Nexium 40 milligrams twice daily to replace omeprazole""]","[[0, 67]]","[""exact""]",True,False
+35,plan,The patient's Nexium dose is 40 milligrams.,0.0,"[""40 milligrams""]","[[20, 33]]","[""exact""]",True,False
+36,plan,The patient's Nexium frequency is twice daily.,0.0,"[""twice daily""]","[[34, 45]]","[""exact""]",True,False
+37,plan,The patient's Nexium is used to replace omeprazole.,0.75,"[""to replace omeprazole""]","[[46, 67]]","[""exact""]",True,False
+38,plan,The patient was recommended to change her diet to avoid trigger foods.,0.25,"[""I recommended that the patient change her diet to avoid trigger foods""]","[[69, 138]]","[""exact""]",True,False
+39,plan,The patient should avoid spicy foods.,0.25,"[""spicy foods""]","[[147, 158]]","[""exact""]",True,False
+40,plan,The patient should avoid carbonated beverages.,0.5,"[""carbonated beverages""]","[[160, 180]]","[""exact""]",True,False
+41,plan,The patient should avoid citrus products.,0.25,"[""citrus products""]","[[182, 197]]","[""exact""]",True,False
+42,plan,The patient should avoid tomato-based foods.,0.25,"[""tomato-based foods""]","[[203, 221]]","[""exact""]",True,False
+43,plan,The patient was suggested to work on managing stress.,0.0,"[""I also suggested that she work on managing stress""]","[[223, 272]]","[""exact""]",True,False
+44,plan,Stress may exacerbate the patient's symptoms.,0.0,"[""which may exacerbate her symptoms""]","[[274, 307]]","[""exact""]",True,False
+45,plan,The patient was ordered an upper endoscopy (EGD).,0.25,"[""I ordered an upper endoscopy (EGD)""]","[[309, 343]]","[""exact""]",True,False
+46,plan,The upper endoscopy (EGD) is to look for potential causes of the patient's GERD.,0.0,"[""to look for potential causes of her GERD""]","[[344, 384]]","[""exact""]",True,False
+47,plan,The upper endoscopy (EGD) is to look for ulcers.,1.0,"[""including ulcers""]","[[386, 402]]","[""exact""]",True,False
+48,plan,The upper endoscopy (EGD) is to look for precancerous conditions.,1.0,"[""precancerous or cancerous conditions""]","[[406, 442]]","[""exact""]",True,False
+49,plan,The upper endoscopy (EGD) is to look for cancerous conditions.,1.0,"[""precancerous or cancerous conditions""]","[[406, 442]]","[""exact""]",True,False
+50,plan,The patient will follow up with the doctor in the office.,0.0,"[""The patient will follow up with me in the office""]","[[607, 655]]","[""exact""]",True,False
+51,plan,The patient will follow up with the doctor for the EGD procedure.,0.0,"[""for the EGD procedure""]","[[656, 677]]","[""exact""]",True,False
+52,plan,The patient will follow up with the doctor to discuss the EGD results.,0.0,"[""to discuss the results""]","[[531, 553]]","[""exact""]",True,False
+53,plan,The patient's treatment plan will be adjusted as needed.,0.5,"[""and adjust her treatment plan as needed""]","[[554, 593]]","[""exact""]",True,False

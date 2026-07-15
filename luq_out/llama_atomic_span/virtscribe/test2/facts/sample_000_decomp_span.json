@@ -1,0 +1,573 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient is a 20-year-old female.",
+        "spans": [
+          "20-year-old female"
+        ],
+        "span_offsets": [
+          [
+            10,
+            28
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has asthma.",
+        "spans": [
+          "asthma"
+        ],
+        "span_offsets": [
+          [
+            71,
+            77
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has allergic rhinitis.",
+        "spans": [
+          "allergic rhinitis"
+        ],
+        "span_offsets": [
+          [
+            79,
+            96
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a food allergy.",
+        "spans": [
+          "food allergy"
+        ],
+        "span_offsets": [
+          [
+            102,
+            114
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Wixela 250/50 twice a day.",
+        "spans": [
+          "Wixela 250/50, twice a day"
+        ],
+        "span_offsets": [
+          [
+            619,
+            645
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is taking Zyrtec as needed.",
+        "spans": [
+          "Zyrtec, as needed"
+        ],
+        "span_offsets": [
+          [
+            648,
+            665
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a known peanut allergy.",
+        "spans": [
+          "known peanut allergy"
+        ],
+        "span_offsets": [
+          [
+            289,
+            309
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient tolerates almonds.",
+        "spans": [
+          "tolerates almonds and cashews"
+        ],
+        "span_offsets": [
+          [
+            314,
+            343
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient tolerates cashews.",
+        "spans": [
+          "tolerates almonds and cashews"
+        ],
+        "span_offsets": [
+          [
+            314,
+            343
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been trying to reduce her use of her albuterol inhaler.",
+        "spans": [
+          "has been trying to reduce her use of her albuterol inhaler"
+        ],
+        "span_offsets": [
+          [
+            349,
+            407
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes her albuterol inhaler only for strenuous activities.",
+        "spans": [
+          "taking it only for strenuous activities"
+        ],
+        "span_offsets": [
+          [
+            409,
+            448
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of vaping.",
+        "spans": [
+          "history of vaping and smoking"
+        ],
+        "span_offsets": [
+          [
+            460,
+            489
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a history of smoking.",
+        "spans": [
+          "history of vaping and smoking"
+        ],
+        "span_offsets": [
+          [
+            460,
+            489
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is currently trying to quit smoking and vaping.",
+        "spans": [
+          "is currently trying to quit"
+        ],
+        "span_offsets": [
+          [
+            494,
+            521
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's current medication regimen is well-tolerated.",
+        "spans": [
+          "has been tolerating her current medication regimen well"
+        ],
+        "span_offsets": [
+          [
+            137,
+            192
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's ears had a little bit of wax on both sides.",
+        "spans": [
+          "The patient's ears had a little bit of wax on both sides"
+        ],
+        "span_offsets": [
+          [
+            15,
+            71
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's lungs sounded terrific.",
+        "spans": [
+          "her lungs sounded terrific"
+        ],
+        "span_offsets": [
+          [
+            77,
+            103
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's breathing test results are about the same as they were a couple of years ago.",
+        "spans": [
+          "Her breathing test results are about the same as they were a couple of years ago"
+        ],
+        "span_offsets": [
+          [
+            105,
+            185
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's breathing test results look a little bit better.",
+        "spans": [
+          "look a little bit better"
+        ],
+        "span_offsets": [
+          [
+            190,
+            214
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient's asthma is well-controlled.",
+        "spans": [
+          "The patient's asthma is well-controlled, and she is tolerating her current medication regimen well"
+        ],
+        "span_offsets": [
+          [
+            12,
+            110
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is tolerating her current medication regimen well.",
+        "spans": [
+          "The patient's asthma is well-controlled, and she is tolerating her current medication regimen well"
+        ],
+        "span_offsets": [
+          [
+            12,
+            110
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a peanut allergy.",
+        "spans": [
+          "Asthma; Allergic rhinitis; Food allergy; Peanut allergy."
+        ],
+        "span_offsets": [
+          [
+            126,
+            182
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient will be prescribed Alvesco 80 mcg.",
+        "spans": [
+          "Alvesco 80 mcg"
+        ],
+        "span_offsets": [
+          [
+            38,
+            52
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's Alvesco prescription will be for two puffs twice a day.",
+        "spans": [
+          "two puffs twice a day"
+        ],
+        "span_offsets": [
+          [
+            54,
+            75
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will continue using her albuterol inhaler as needed.",
+        "spans": [
+          "continue using her albuterol inhaler as needed"
+        ],
+        "span_offsets": [
+          [
+            105,
+            151
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's albuterol inhaler prescription will be continued.",
+        "spans": [
+          "continue using her albuterol inhaler as needed"
+        ],
+        "span_offsets": [
+          [
+            105,
+            151
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will have her epipen prescription renewed.",
+        "spans": [
+          "renew her epipen"
+        ],
+        "span_offsets": [
+          [
+            165,
+            181
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will have her Zyrtec prescription renewed.",
+        "spans": [
+          "renew her Zyrtec prescription"
+        ],
+        "span_offsets": [
+          [
+            186,
+            205
+          ]
+        ],
+        "span_match_methods": [
+          "word"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is advised to avoid peanuts.",
+        "spans": [
+          "stay away from peanuts and tree nuts"
+        ],
+        "span_offsets": [
+          [
+            250,
+            286
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is advised to avoid tree nuts.",
+        "spans": [
+          "stay away from peanuts and tree nuts"
+        ],
+        "span_offsets": [
+          [
+            250,
+            286
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will return in four months for a follow-up appointment.",
+        "spans": [
+          "The patient will return in four months for a follow-up appointment"
+        ],
+        "span_offsets": [
+          [
+            300,
+            366
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's breathing test will be repeated at the follow-up appointment.",
+        "spans": [
+          "repeat her breathing test"
+        ],
+        "span_offsets": [
+          [
+            370,
+            395
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's asthma control will be assessed at the follow-up appointment.",
+        "spans": [
+          "assess her asthma control"
+        ],
+        "span_offsets": [
+          [
+            400,
+            425
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

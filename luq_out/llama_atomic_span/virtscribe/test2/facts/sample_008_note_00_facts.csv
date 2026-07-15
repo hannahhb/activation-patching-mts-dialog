@@ -1,0 +1,49 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient's name is Jordan Roberts.,0.75,"[""Jordan Roberts""]","[[13, 27]]","[""exact""]",True,False
+1,subjective,The patient is a 49-year-old male.,0.0,"[""49-year-old male""]","[[34, 50]]","[""exact""]",True,False
+2,subjective,The patient has a history of hypertension.,0.0,"[""history of hypertension""]","[[58, 81]]","[""exact""]",True,False
+3,subjective,The patient has a history of palpitations.,0.0,"[""history of hypertension and palpitations""]","[[58, 98]]","[""exact""]",True,False
+4,subjective,The patient presents with resistant hypertension.,1.0,"[""resistant hypertension""]","[[117, 139]]","[""exact""]",True,False
+5,subjective,The patient is taking three medications at maximum dose.,1.0,"[""despite being on three medications at maximum dose""]","[[141, 191]]","[""exact""]",True,False
+6,subjective,The patient had a few cups of coffee on the day of his previous emergency room visit.,0.25,"[""having a few cups of coffee""]","[[204, 231]]","[""exact""]",True,False
+7,subjective,The patient had no breakfast on the day of his previous emergency room visit.,0.25,"[""no breakfast""]","[[236, 248]]","[""exact""]",True,False
+8,subjective,The patient attributes his previous emergency room visit to a panic attack.,0.0,"[""which he attributes to a panic attack""]","[[298, 335]]","[""exact""]",True,False
+9,subjective,The patient's girlfriend discussed his panic attack with him.,1.0,"[""His girlfriend and he discussed it""]","[[337, 371]]","[""exact""]",True,False
+10,subjective,The patient believes his panic attack was not related to his blood pressure.,0.5,"[""he believes it was not related to his blood pressure""]","[[377, 429]]","[""exact""]",True,False
+11,subjective,The patient has a family history of high blood pressure.,0.0,"[""family history of high blood pressure""]","[[445, 482]]","[""exact""]",True,False
+12,subjective,The patient's new primary doctor started him on Benicar HCT (hydrochlorothiazide) one month ago.,0.75,"[""his new primary doctor started him on a new medication, Benicar HCT (hydrochlorothiazide), one month ago""]","[[500, 604]]","[""exact""]",True,False
+13,subjective,The patient is taking Amlodipine.,0.0,"[""Amlodipine 10 mg daily""]","[[624, 646]]","[""exact""]",True,False
+14,subjective,The patient is taking Amlodipine 10 mg daily.,0.0,"[""Amlodipine 10 mg daily""]","[[624, 646]]","[""exact""]",True,False
+15,subjective,The patient denies any issues with his salt intake.,1.0,"[""denies any issues with his salt intake""]","[[651, 689]]","[""exact""]",True,False
+16,subjective,The patient is doing well with his salt intake.,0.75,"[""stating he is doing well with it""]","[[691, 723]]","[""exact""]",True,False
+17,subjective,The patient tries to walk on a treadmill when he can.,0.0,"[""trying to walk on a treadmill when he can""]","[[736, 777]]","[""exact""]",True,False
+18,subjective,The patient's potassium level is 4.0.,1.0,"[""potassium level of 4.0""]","[[788, 810]]","[""exact""]",True,False
+19,subjective,The patient's potassium level was checked one week ago.,1.0,"[""from one week ago""]","[[811, 828]]","[""exact""]",True,False
+20,subjective,The patient's potassium level has not been rechecked recently.,1.0,"[""but it has not been rechecked recently""]","[[830, 868]]","[""exact""]",True,False
+21,objective,The patient's blood pressure has been running at 146-155 lately.,0.25,"[""The patient's blood pressure has been running at 146-155 lately""]","[[13, 76]]","[""exact""]",True,False
+22,objective,The patient's blood pressure is not yet in the 120s.,0.25,"[""not yet in the 120s""]","[[78, 97]]","[""exact""]",True,False
+23,objective,The patient's heart sounds good.,0.0,"[""His heart and lungs sound good""]","[[143, 173]]","[""exact""]",True,False
+24,objective,The patient's lungs sound good.,0.0,"[""His heart and lungs sound good""]","[[143, 173]]","[""exact""]",True,False
+25,objective,There is no tenderness in the patient's ankles or feet.,0.5,"[""There is no tenderness or swelling in his ankles or feet""]","[[175, 231]]","[""exact""]",True,False
+26,objective,There is no swelling in the patient's ankles or feet.,0.25,"[""There is no tenderness or swelling in his ankles or feet""]","[[175, 231]]","[""exact""]",True,False
+27,assessment,The patient has resistant hypertension.,0.0,"[""The patient has resistant hypertension""]","[[12, 50]]","[""exact""]",True,False
+28,assessment,The patient is on three medications at maximum dose for hypertension.,0.25,"[""being on three medications at maximum dose""]","[[60, 102]]","[""exact""]",True,False
+29,assessment,The patient is a candidate for further evaluation and treatment for resistant hypertension.,0.0,"[""and is a candidate for further evaluation and treatment""]","[[104, 159]]","[""exact""]",True,False
+30,assessment,The patient has hypertension.,0.0,"[""Hypertension""]","[[176, 188]]","[""exact""]",True,False
+31,assessment,The patient has suspected resistant hypertension.,0.0,"[""Suspected resistant hypertension""]","[[190, 222]]","[""exact""]",True,False
+32,assessment,The patient has hypokalemia.,1.0,"[""Hypokalemia""]","[[224, 235]]","[""exact""]",True,False
+33,assessment,The patient has hyperaldosteronism.,1.0,"[""Hyperaldosteronism""]","[[237, 255]]","[""exact""]",True,False
+34,assessment,The patient has a potential for electrolyte imbalance.,0.75,"[""Potential for electrolyte imbalance""]","[[257, 292]]","[""exact""]",True,False
+35,assessment,The patient has a potential for dehydration.,1.0,"[""Potential for dehydration""]","[[294, 319]]","[""exact""]",True,False
+36,assessment,The patient has a potential for gynecomastia.,0.75,"[""Potential for gynecomastia""]","[[321, 347]]","[""exact""]",True,False
+37,plan,The patient is taking Spironolactone.,0.0,"[""I added Spironolactone to his regimen""]","[[0, 37]]","[""exact""]",True,False
+38,plan,The patient's Spironolactone is for lowering his blood pressure.,0.0,"[""to help lower his blood pressure""]","[[38, 70]]","[""exact""]",True,False
+39,plan,The patient's potassium levels will be monitored in 2 weeks.,0.0,"[""I will monitor his potassium and sodium levels in 2 weeks""]","[[72, 129]]","[""exact""]",True,False
+40,plan,The patient's sodium levels will be monitored in 2 weeks.,0.0,"[""I will monitor his potassium and sodium levels in 2 weeks""]","[[72, 129]]","[""exact""]",True,False
+41,plan,The patient will have a basic metabolic panel in 2 weeks.,0.0,"[""He will have a basic metabolic panel and blood pressure check in 2 weeks""]","[[131, 203]]","[""exact""]",True,False
+42,plan,The patient will have a blood pressure check in 2 weeks.,0.0,"[""He will have a basic metabolic panel and blood pressure check in 2 weeks""]","[[131, 203]]","[""exact""]",True,False
+43,plan,The patient may be referred to the resistant hypertension clinic if not controlled on Spironolactone.,0.0,"[""If he is not controlled on Spironolactone, I will refer him to the resistant hypertension clinic""]","[[205, 301]]","[""exact""]",True,False
+44,plan,The patient's potential treatment in the resistant hypertension clinic may include renal denervation.,0.5,"[""for further evaluation and potential treatment, including renal denervation""]","[[302, 377]]","[""exact""]",True,False
+45,plan,The patient will be seen in 2 weeks.,0.0,"[""I will see him in 2 weeks""]","[[380, 405]]","[""exact""]",True,False
+46,plan,The patient's blood pressure will be checked in 2 weeks.,0.0,"[""to check his blood pressure and electrolytes""]","[[406, 450]]","[""exact""]",True,False
+47,plan,The patient's electrolytes will be checked in 2 weeks.,0.0,"[""to check his blood pressure and electrolytes""]","[[406, 450]]","[""exact""]",True,False

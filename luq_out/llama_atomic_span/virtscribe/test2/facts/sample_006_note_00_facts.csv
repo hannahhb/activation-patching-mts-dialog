@@ -1,0 +1,54 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 73-year-old male.,0.25,"[""The patient is a 73-year-old male""]","[[0, 33]]","[""exact""]",True,False
+1,subjective,The patient's name is Mr. Nelson.,0.0,"[""Mr. Nelson""]","[[35, 45]]","[""exact""]",True,False
+2,subjective,The patient presents for ongoing management of rheumatoid arthritis.,0.0,"[""for ongoing management of rheumatoid arthritis""]","[[60, 106]]","[""exact""]",True,False
+3,subjective,The patient's knee has been swollen for approximately two months.,0.25,"[""his knee has been swollen for approximately two months""]","[[119, 173]]","[""exact""]",True,False
+4,subjective,The patient's pain level is 6 on a normal day.,0.5,"[""pain level of 6 on a normal day""]","[[180, 211]]","[""exact""]",True,False
+5,subjective,The patient's current pain level is 3.,0.25,"[""but currently at 3""]","[[213, 231]]","[""exact""]",True,False
+6,subjective,The patient denies improvement with compression socks.,0.5,"[""He denies improvement with compression socks""]","[[233, 277]]","[""exact""]",True,False
+7,subjective,The patient has difficulty getting up from a seated position due to stiffness.,0.0,"[""difficulty getting up from a seated position due to stiffness""]","[[290, 351]]","[""exact""]",True,False
+8,subjective,The patient uses a cane for support.,0.0,"[""uses a cane for support""]","[[356, 379]]","[""exact""]",True,False
+9,subjective,The patient takes Xeljanz 11 milligrams daily.,0.0,"[""Xeljanz 11 milligrams daily""]","[[400, 427]]","[""exact""]",True,False
+10,subjective,The patient takes Xeljanz for rheumatoid arthritis.,0.0,"[""for rheumatoid arthritis"", ""Xeljanz 11 milligrams daily for rheumatoid arthritis""]","[[1010, 1034], [982, 1034]]","[""exact"", ""exact""]",True,True
+11,subjective,The patient takes Celebrex 200 milligrams daily.,0.0,"[""Celebrex 200 milligrams daily""]","[[432, 461]]","[""exact""]",True,False
+12,subjective,The patient takes Celebrex for rheumatoid arthritis.,0.0,"[""for rheumatoid arthritis"", ""Celebrex 200 milligrams daily for rheumatoid arthritis""]","[[1010, 1034], [1037, 1091]]","[""exact"", ""exact""]",True,True
+13,subjective,The patient's pain level improves with medication.,0.75,"[""his pain level improves with medication""]","[[498, 537]]","[""exact""]",True,False
+14,subjective,The patient's pain level worsens with swelling.,1.0,"[""worsens with swelling""]","[[542, 563]]","[""exact""]",True,False
+15,subjective,The patient has a history of rheumatoid arthritis.,0.0,"[""a history of rheumatoid arthritis""]","[[603, 636]]","[""exact""]",True,False
+16,subjective,The patient has a history of previous steroid injections in the right knee.,0.5,"[""a history of previous steroid injections in the right knee""]","[[711, 769]]","[""exact""]",True,False
+17,subjective,The patient's previous steroid injections in the right knee provided temporary relief for a couple of weeks.,1.0,"[""which provided temporary relief for a couple of weeks""]","[[771, 824]]","[""exact""]",True,False
+18,subjective,The patient reports pain in the right knee.,0.25,"[""pain and swelling in the right knee""]","[[866, 901]]","[""exact""]",True,False
+19,subjective,The patient reports swelling in the right knee.,0.25,"[""pain and swelling in the right knee""]","[[866, 901]]","[""exact""]",True,False
+20,subjective,The patient reports stiffness in the right knee.,0.75,"[""with associated stiffness""]","[[903, 928]]","[""exact""]",True,False
+21,subjective,The patient has difficulty getting up from a seated position.,0.0,"[""with difficulty getting up from a seated position""]","[[290, 308]]","[""word""]",True,False
+22,subjective,The patient takes Xeljanz 11 milligrams daily for the past two months.,0.5,"[""He has been taking Xeljanz 11 milligrams daily for the past two months""]","[[393, 427]]","[""word""]",True,False
+23,subjective,The patient takes Celebrex 200 milligrams daily for the past two months.,0.5,"[""He has been taking Celebrex 200 milligrams daily for the past two months""]","[[393, 485]]","[""word""]",True,False
+24,objective,The patient's range of motion is slightly diminished in the right knee.,0.75,"[""Range of motion slightly diminished in the right knee""]","[[135, 188]]","[""exact""]",True,False
+25,objective,The patient has pitting around the knee and ankle.,0.0,"[""Pitting around the knee and ankle""]","[[191, 224]]","[""exact""]",True,False
+26,objective,The patient has normal capillary refill in the toes.,0.0,"[""Normal capillary refill in the toes""]","[[227, 262]]","[""exact""]",True,False
+27,objective,"The patient's knee is hot, indicating inflammation.",0.25,"[""Knee is hot, indicating inflammation""]","[[265, 301]]","[""exact""]",True,False
+28,assessment,The patient has ongoing rheumatoid arthritis.,0.0,"[""The patient presents with ongoing rheumatoid arthritis""]","[[12, 66]]","[""exact""]",True,False
+29,assessment,The patient's right knee is swollen.,0.0,"[""a swollen and painful right knee""]","[[73, 105]]","[""exact""]",True,False
+30,assessment,The patient's right knee is painful.,0.25,"[""a swollen and painful right knee""]","[[73, 105]]","[""exact""]",True,False
+31,assessment,The patient has decreased range of motion in the right knee.,0.5,"[""decreased range of motion""]","[[111, 136]]","[""exact""]",True,False
+32,assessment,The patient has rheumatoid arthritis.,0.0,"[""Rheumatoid arthritis""]","[[153, 173]]","[""exact""]",True,False
+33,assessment,The patient is suspected to have fluid accumulation in the right knee.,0.75,"[""Suspected fluid accumulation in the right knee""]","[[175, 221]]","[""exact""]",True,False
+34,assessment,The patient has active inflammation in the right knee.,0.0,"[""Active inflammation in the right knee""]","[[223, 260]]","[""exact""]",True,False
+35,plan,The patient was prescribed Celebrex.,0.25,"[""I prescribed Celebrex 200 milligrams daily for rheumatoid arthritis""]","[[0, 67]]","[""exact""]",True,False
+36,plan,The patient's Celebrex dose is 200 milligrams.,0.25,"[""200 milligrams""]","[[22, 36]]","[""exact""]",True,False
+37,plan,The patient's Celebrex frequency is daily.,0.25,"[""daily""]","[[37, 42]]","[""exact""]",True,False
+38,plan,The patient's Celebrex indication is rheumatoid arthritis.,0.25,"[""for rheumatoid arthritis""]","[[43, 67]]","[""exact""]",True,False
+39,plan,The patient received a steroid injection to the right knee.,0.0,"[""I administered a steroid injection to the right knee""]","[[69, 121]]","[""exact""]",True,False
+40,plan,The patient's steroid injection consisted of 80 milligrams of triamcinolone.,0.0,"[""80 milligrams of triamcinolone""]","[[137, 167]]","[""exact""]",True,False
+41,plan,The patient's steroid injection consisted of one milliliter of lidocaine.,0.0,"[""one milliliter of lidocaine""]","[[172, 199]]","[""exact""]",True,False
+42,plan,The patient was ordered an x-ray of the right knee.,0.5,"[""I also ordered an x-ray of the right knee""]","[[201, 242]]","[""exact""]",True,False
+43,plan,The x-ray of the right knee is to investigate the cause of the swelling.,0.25,"[""to investigate the cause of the swelling""]","[[243, 283]]","[""exact""]",True,False
+44,plan,The patient was recommended to wear compression socks.,1.0,"[""I recommended the patient wear compression socks""]","[[285, 333]]","[""exact""]",True,False
+45,plan,The patient was recommended to reduce salt intake.,0.0,"[""reduce salt intake""]","[[338, 356]]","[""exact""]",True,False
+46,plan,The patient was advised to prop their feet up.,0.25,"[""I also advised the patient to prop their feet up""]","[[380, 428]]","[""exact""]",True,False
+47,plan,The patient was advised to prop their feet up especially at night.,0.5,"[""especially at night""]","[[430, 449]]","[""exact""]",True,False
+48,plan,The patient was instructed to follow up with their primary care physician.,0.0,"[""I instructed the patient to follow up with their primary care physician""]","[[471, 542]]","[""exact""]",True,False
+49,plan,The patient was instructed to schedule a blood work appointment.,0.5,"[""to schedule a blood work appointment""]","[[547, 583]]","[""exact""]",True,False
+50,plan,The patient's blood work appointment is to check their Xeljanz levels.,0.75,"[""to check their Xeljanz levels""]","[[584, 613]]","[""exact""]",True,False
+51,plan,The patient will follow up with the physician for further management.,0.0,"[""The patient will follow up with me for further management""]","[[627, 684]]","[""exact""]",True,False
+52,plan,The patient will follow up with the physician to assess the effectiveness of the treatment plan.,0.25,"[""to assess the effectiveness of the treatment plan""]","[[689, 738]]","[""exact""]",True,False

@@ -1,0 +1,65 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,The patient is a 32-year-old female.,0.0,"[""a 32-year-old female""]","[[18, 38]]","[""exact""]",True,False
+1,subjective,The patient presents with symptoms of irritable bowel syndrome (IBS).,0.0,"[""symptoms of irritable bowel syndrome (IBS)""]","[[54, 96]]","[""exact""]",True,False
+2,subjective,The patient's irritable bowel syndrome (IBS) is characterized by functional abdominal pain.,0.25,"[""functional abdominal pain""]","[[114, 139]]","[""exact""]",True,False
+3,subjective,The patient's irritable bowel syndrome (IBS) is characterized by nausea.,0.0,"[""nausea""]","[[141, 147]]","[""exact""]",True,False
+4,subjective,The patient's irritable bowel syndrome (IBS) is characterized by vomiting.,0.5,"[""vomiting""]","[[153, 161]]","[""exact""]",True,False
+5,subjective,The patient has a history of flares of abdominal pain.,0.0,"[""a history of flares of abdominal pain""]","[[171, 208]]","[""exact""]",True,False
+6,subjective,The patient was previously diagnosed with IBS.,0.0,"[""previously diagnosed with IBS""]","[[220, 249]]","[""exact""]",True,False
+7,subjective,The patient was previously treated with bentyl for IBS.,0.0,"[""treated with bentyl""]","[[254, 273]]","[""exact""]",True,False
+8,subjective,The patient's symptoms are exacerbated by consuming spicy foods.,0.0,"[""worsening symptoms after consuming spicy foods""]","[[300, 346]]","[""exact""]",True,False
+9,subjective,The patient's symptoms are exacerbated by consuming shrimp.,0.25,"[""particularly shrimp""]","[[348, 367]]","[""exact""]",True,False
+10,subjective,The patient's symptoms are exacerbated by eating out.,0.25,"[""exacerbated by eating out""]","[[407, 432]]","[""exact""]",True,False
+11,subjective,The patient's symptoms are exacerbated by drinking alcohol.,0.25,"[""exacerbated by drinking alcohol""]","[[437, 453]]","[""word""]",True,False
+12,subjective,The patient has been experiencing diarrhea.,0.0,"[""experiencing diarrhea""]","[[468, 489]]","[""exact""]",True,False
+13,subjective,The patient has been experiencing abdominal pain.,0.0,"[""experiencing abdominal pain""]","[[468, 508]]","[""word""]",True,False
+14,subjective,The patient has been experiencing cramping.,0.0,"[""cramping""]","[[515, 523]]","[""exact""]",True,False
+15,subjective,The patient has been experiencing sharp pains.,0.25,"[""sharp pains""]","[[528, 539]]","[""exact""]",True,False
+16,subjective,The patient has been avoiding heavy foods.,0.75,"[""avoiding heavy foods""]","[[554, 574]]","[""exact""]",True,False
+17,subjective,"The patient has not been using the prescribed fiber supplement, citrucel, regularly.",0.25,"[""has not been using the prescribed fiber supplement, citrucel, regularly""]","[[597, 668]]","[""exact""]",True,False
+18,subjective,The patient has a past medical history of IBS.,0.0,"[""a history of IBS""]","[[708, 724]]","[""exact""]",True,False
+19,subjective,The patient's IBS was diagnosed in 2019.,0.5,"[""which was diagnosed in 2019""]","[[726, 753]]","[""exact""]",True,False
+20,subjective,The patient reports symptoms of diarrhea.,0.0,"[""symptoms of diarrhea""]","[[794, 814]]","[""exact""]",True,False
+21,subjective,The patient reports symptoms of nausea.,0.0,"[""nausea""]","[[141, 147]]","[""exact""]",True,False
+22,subjective,The patient reports symptoms of abdominal pain.,0.0,"[""abdominal pain""]","[[125, 139]]","[""exact""]",True,False
+23,subjective,The patient is taking Bentyl.,0.0,"[""Bentyl 20 milligrams as needed for intestinal cramping""]","[[865, 919]]","[""exact""]",True,False
+24,subjective,The patient's Bentyl dose is 20 milligrams.,0.0,"[""20 milligrams""]","[[872, 885]]","[""exact""]",True,False
+25,subjective,The patient takes Bentyl as needed.,0.0,"[""as needed""]","[[886, 895]]","[""exact""]",True,False
+26,subjective,The patient takes Bentyl for intestinal cramping.,0.25,"[""for intestinal cramping""]","[[896, 919]]","[""exact""]",True,False
+27,subjective,The patient is taking Zofran.,0.0,"[""Zofran as needed for nausea""]","[[921, 948]]","[""exact""]",True,False
+28,subjective,The patient takes Zofran as needed.,0.0,"[""as needed""]","[[886, 895]]","[""exact""]",True,False
+29,subjective,The patient takes Zofran for nausea.,0.0,"[""for nausea""]","[[938, 948]]","[""exact""]",True,False
+30,objective,The patient's abdomen is soft.,0.0,"[""The patient's abdomen is soft, non-tender, with no masses or organomegaly""]","[[15, 88]]","[""exact""]",True,False
+31,objective,The patient's abdomen is non-tender.,0.0,"[""The patient's abdomen is soft, non-tender, with no masses or organomegaly""]","[[15, 88]]","[""exact""]",True,False
+32,objective,The patient has no abdominal masses.,0.5,"[""The patient's abdomen is soft, non-tender, with no masses or organomegaly""]","[[15, 88]]","[""exact""]",True,False
+33,objective,The patient has no organomegaly.,0.75,"[""The patient's abdomen is soft, non-tender, with no masses or organomegaly""]","[[15, 88]]","[""exact""]",True,False
+34,objective,The patient has normal active bowel sounds.,0.0,"[""Normal active bowel sounds""]","[[90, 116]]","[""exact""]",True,False
+35,assessment,The patient's name is Brittany Edwards.,0.75,"[""Brittany Edwards""]","[[12, 28]]","[""exact""]",True,False
+36,assessment,The patient is a female.,0.75,"[""female""]","[[43, 49]]","[""exact""]",True,False
+37,assessment,The patient has IBS.,0.0,"[""IBS""]","[[55, 58]]","[""exact""]",True,False
+38,assessment,The patient has functional abdominal pain.,0.0,"[""functional abdominal pain""]","[[63, 88]]","[""exact""]",True,False
+39,assessment,IBS is confirmed in the patient.,0.0,"[""IBS confirmed""]","[[104, 117]]","[""exact""]",True,False
+40,assessment,Abdominal pain is suspected in the patient.,0.0,"[""abdominal pain suspected""]","[[119, 143]]","[""exact""]",True,False
+41,assessment,Diarrhea is suspected in the patient.,1.0,"[""diarrhea suspected""]","[[145, 163]]","[""exact""]",True,False
+42,assessment,Nausea is suspected in the patient.,0.5,"[""nausea suspected""]","[[165, 181]]","[""exact""]",True,False
+43,plan,The patient was prescribed citrucel.,0.0,"[""I prescribed citrucel""]","[[0, 21]]","[""exact""]",True,False
+44,plan,The patient was prescribed citrucel 2 tablets daily.,0.0,"[""citrucel 2 tablets daily""]","[[13, 37]]","[""exact""]",True,False
+45,plan,The patient was prescribed citrucel for regularity.,0.0,"[""for regularity""]","[[38, 52]]","[""exact""]",True,False
+46,plan,The patient was instructed to take citrucel twice daily.,0.0,"[""to start taking it twice daily""]","[[80, 110]]","[""exact""]",True,False
+47,plan,The patient was prescribed bentyl.,0.25,"[""I instructed the patient to use bentyl""]","[[112, 150]]","[""exact""]",True,False
+48,plan,The patient was prescribed bentyl 20 milligrams.,0.75,"[""bentyl 20 milligrams""]","[[144, 164]]","[""exact""]",True,False
+49,plan,The patient was instructed to take bentyl 30 to 45 minutes prior to eating out at a restaurant.,0.0,"[""30 to 45 minutes prior to eating out at a restaurant""]","[[165, 217]]","[""exact""]",True,False
+50,plan,The patient was instructed to take a second bentyl tablet at the restaurant.,0.75,"[""to take a second tablet at the restaurant""]","[[222, 263]]","[""exact""]",True,False
+51,plan,The patient was instructed to repeat bentyl as needed.,0.25,"[""and to repeat as needed""]","[[265, 288]]","[""exact""]",True,False
+52,plan,The patient was prescribed Zofran.,0.25,"[""I prescribed Zofran""]","[[290, 309]]","[""exact""]",True,False
+53,plan,The patient was prescribed Zofran as needed for nausea.,0.0,"[""as needed for nausea""]","[[310, 330]]","[""exact""]",True,False
+54,plan,The patient was encouraged to reduce triggers such as greasy and fatty foods.,0.0,"[""reduce triggers such as greasy and fatty foods""]","[[362, 408]]","[""exact""]",True,False
+55,plan,The patient was encouraged to reduce alcohol consumption.,0.0,"[""alcohol consumption""]","[[413, 432]]","[""exact""]",True,False
+56,plan,The patient was discussed for starting elavil.,0.0,"[""discussed starting a neuromodulator, elavil""]","[[441, 484]]","[""exact""]",True,False
+57,plan,The patient was prescribed elavil 25 milligrams.,0.25,"[""elavil 25 milligrams""]","[[478, 498]]","[""exact""]",True,False
+58,plan,The patient was instructed to take elavil at bedtime.,0.0,"[""at bedtime""]","[[500, 510]]","[""exact""]",True,False
+59,plan,The patient was prescribed elavil for IBS.,0.25,"[""for IBS""]","[[511, 518]]","[""exact""]",True,False
+60,plan,The patient will follow up in one month.,0.0,"[""The patient will follow up in one month""]","[[521, 560]]","[""exact""]",True,False
+61,plan,The patient will follow up via email through mychart.,0.5,"[""via email through mychart""]","[[561, 586]]","[""exact""]",True,False
+62,plan,The patient will discuss any side effects or issues with elavil during follow-up.,0.25,"[""to discuss any side effects or issues with elavil""]","[[587, 636]]","[""exact""]",True,False
+63,plan,The patient will discuss adjustments to elavil as needed during follow-up.,0.0,"[""or if adjustments are needed""]","[[637, 665]]","[""exact""]",True,False

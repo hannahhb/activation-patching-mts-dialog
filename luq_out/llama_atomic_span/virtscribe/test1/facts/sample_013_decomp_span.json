@@ -1,0 +1,953 @@
+[
+  {
+    "subjective": [
+      {
+        "fact": "The patient's name is Julia Jones.",
+        "spans": [
+          "Julia Jones"
+        ],
+        "span_offsets": [
+          [
+            18,
+            29
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is a 25-year-old female.",
+        "spans": [
+          "a 25-year-old female"
+        ],
+        "span_offsets": [
+          [
+            31,
+            51
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient presents for evaluation of breast reduction due to symptomatic macromastia.",
+        "spans": [
+          "presents for evaluation of breast reduction due to symptomatic macromastia"
+        ],
+        "span_offsets": [
+          [
+            53,
+            127
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing back pain due to her breast size.",
+        "spans": [
+          "back pain, neck pain, and discomfort due to her breast size"
+        ],
+        "span_offsets": [
+          [
+            155,
+            214
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing neck pain due to her breast size.",
+        "spans": [
+          "back pain, neck pain, and discomfort due to her breast size"
+        ],
+        "span_offsets": [
+          [
+            155,
+            214
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has been experiencing discomfort due to her breast size.",
+        "spans": [
+          "back pain, neck pain, and discomfort due to her breast size"
+        ],
+        "span_offsets": [
+          [
+            155,
+            214
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's symptoms have been a concern for about 7 years.",
+        "spans": [
+          "which has been a concern for about 7 years"
+        ],
+        "span_offsets": [
+          [
+            216,
+            258
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has tried nonsurgical treatments, including chiropractic care.",
+        "spans": [
+          "She has tried nonsurgical treatments, including chiropractic care"
+        ],
+        "span_offsets": [
+          [
+            260,
+            325
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has had minimal relief from nonsurgical treatments.",
+        "spans": [
+          "with minimal relief"
+        ],
+        "span_offsets": [
+          [
+            327,
+            346
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is an ideal candidate for bilateral reduction mammoplasty.",
+        "spans": [
+          "She is an ideal candidate for bilateral reduction mammoplasty"
+        ],
+        "span_offsets": [
+          [
+            348,
+            409
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is currently a student.",
+        "spans": [
+          "She is currently a student"
+        ],
+        "span_offsets": [
+          [
+            411,
+            437
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is studying psychology.",
+        "spans": [
+          "studying psychology"
+        ],
+        "span_offsets": [
+          [
+            439,
+            458
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has a family history of breast cancer.",
+        "spans": [
+          "a family history of breast cancer"
+        ],
+        "span_offsets": [
+          [
+            468,
+            501
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's mother was diagnosed with breast cancer at age 40.",
+        "spans": [
+          "with her mother diagnosed at age 40"
+        ],
+        "span_offsets": [
+          [
+            503,
+            538
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is otherwise healthy.",
+        "spans": [
+          "She is otherwise healthy"
+        ],
+        "span_offsets": [
+          [
+            540,
+            564
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has lost 10 pounds in the past few months.",
+        "spans": [
+          "having lost 10 pounds in the past few months"
+        ],
+        "span_offsets": [
+          [
+            566,
+            610
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient plans to lose an additional 20 pounds.",
+        "spans": [
+          "and plans to lose an additional 20 pounds"
+        ],
+        "span_offsets": [
+          [
+            611,
+            652
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's mother was diagnosed with breast cancer.",
+        "spans": [
+          "a family history of breast cancer",
+          "with her mother diagnosed at age 40"
+        ],
+        "span_offsets": [
+          [
+            468,
+            501
+          ],
+          [
+            503,
+            538
+          ]
+        ],
+        "span_match_methods": [
+          "exact",
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": true
+      },
+      {
+        "fact": "The patient has not had any mammograms.",
+        "spans": [
+          "She has not had any mammograms"
+        ],
+        "span_offsets": [
+          [
+            765,
+            795
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient plans to start having mammograms at age 30.",
+        "spans": [
+          "but plans to start at age 30"
+        ],
+        "span_offsets": [
+          [
+            797,
+            825
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient does not have any known allergies.",
+        "spans": [
+          "She does not have any known allergies"
+        ],
+        "span_offsets": [
+          [
+            827,
+            864
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's back pain improves with bra use.",
+        "spans": [
+          "which improves with bra use"
+        ],
+        "span_offsets": [
+          [
+            967,
+            994
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences neck pain due to her breast size.",
+        "spans": [
+          "back pain, neck pain, and discomfort due to her breast size"
+        ],
+        "span_offsets": [
+          [
+            155,
+            214
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences numbness and tingling in her hands.",
+        "spans": [
+          "numbness and tingling in her hands"
+        ],
+        "span_offsets": [
+          [
+            1012,
+            1046
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient experiences occasional nipple pain.",
+        "spans": [
+          "occasional nipple pain"
+        ],
+        "span_offsets": [
+          [
+            1051,
+            1073
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has not experienced any rashes or discharge.",
+        "spans": [
+          "She has not experienced any rashes or discharge"
+        ],
+        "span_offsets": [
+          [
+            1075,
+            1122
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes propranolol.",
+        "spans": [
+          "She takes propranolol"
+        ],
+        "span_offsets": [
+          [
+            1146,
+            1167
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient takes propranolol for migraines.",
+        "spans": [
+          "for migraines"
+        ],
+        "span_offsets": [
+          [
+            1168,
+            1181
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "objective": [
+      {
+        "fact": "The patient's breasts are asymmetrical.",
+        "spans": [
+          "asymmetrical breasts"
+        ],
+        "span_offsets": [
+          [
+            34,
+            54
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has severe ptosis bilaterally.",
+        "spans": [
+          "severe ptosis bilaterally"
+        ],
+        "span_offsets": [
+          [
+            60,
+            85
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no nipple retraction bilaterally.",
+        "spans": [
+          "no nipple retraction or discharge bilaterally"
+        ],
+        "span_offsets": [
+          [
+            96,
+            141
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no nipple discharge bilaterally.",
+        "spans": [
+          "no nipple retraction or discharge bilaterally"
+        ],
+        "span_offsets": [
+          [
+            96,
+            141
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no breast tenderness.",
+        "spans": [
+          "No breast tenderness, masses, or axillary lymphadenopathy is palpable"
+        ],
+        "span_offsets": [
+          [
+            143,
+            212
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no breast masses.",
+        "spans": [
+          "No breast tenderness, masses, or axillary lymphadenopathy is palpable"
+        ],
+        "span_offsets": [
+          [
+            143,
+            212
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has no axillary lymphadenopathy.",
+        "spans": [
+          "No breast tenderness, masses, or axillary lymphadenopathy is palpable"
+        ],
+        "span_offsets": [
+          [
+            143,
+            212
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "assessment": [
+      {
+        "fact": "The patient is 25 years old.",
+        "spans": [
+          "25-year-old"
+        ],
+        "span_offsets": [
+          [
+            29,
+            40
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient is female.",
+        "spans": [
+          "female"
+        ],
+        "span_offsets": [
+          [
+            41,
+            47
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient has symptomatic macromastia.",
+        "spans": [
+          "symptomatic macromastia"
+        ],
+        "span_offsets": [
+          [
+            53,
+            76
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ],
+    "plan": [
+      {
+        "fact": "The patient was prescribed no medications.",
+        "spans": [
+          "I prescribed no medications"
+        ],
+        "span_offsets": [
+          [
+            0,
+            27
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's documentation and photos will be submitted to the insurance company for approval.",
+        "spans": [
+          "I will submit the documentation and photos to the insurance company for approval"
+        ],
+        "span_offsets": [
+          [
+            29,
+            109
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will schedule the surgery after insurance approval.",
+        "spans": [
+          "Once approved, we will schedule the surgery"
+        ],
+        "span_offsets": [
+          [
+            111,
+            154
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will meet with the office again to discuss the procedure and answer any questions after insurance approval.",
+        "spans": [
+          "meet again to discuss the procedure and answer any questions"
+        ],
+        "span_offsets": [
+          [
+            159,
+            219
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will have a clear plastic tape over the incision after surgery.",
+        "spans": [
+          "The patient will need to have a clear plastic tape over the incision"
+        ],
+        "span_offsets": [
+          [
+            221,
+            289
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's incision may be red initially after surgery.",
+        "spans": [
+          "which may be red initially"
+        ],
+        "span_offsets": [
+          [
+            291,
+            317
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient's incision will mature in about a year after surgery.",
+        "spans": [
+          "but will mature in about a year"
+        ],
+        "span_offsets": [
+          [
+            318,
+            349
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will have drains in each breast for about a week after surgery.",
+        "spans": [
+          "The patient will have drains in each breast for about a week"
+        ],
+        "span_offsets": [
+          [
+            351,
+            411
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will need to avoid heavy lifting after surgery.",
+        "spans": [
+          "avoid heavy lifting"
+        ],
+        "span_offsets": [
+          [
+            429,
+            448
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will need to avoid driving after surgery.",
+        "spans": [
+          "avoid heavy lifting, driving, and strenuous activities"
+        ],
+        "span_offsets": [
+          [
+            429,
+            483
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will need to avoid strenuous activities after surgery.",
+        "spans": [
+          "avoid heavy lifting, driving, and strenuous activities"
+        ],
+        "span_offsets": [
+          [
+            429,
+            483
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will need to avoid heavy lifting, driving, and strenuous activities for 2-3 weeks after surgery.",
+        "spans": [
+          "for 2-3 weeks"
+        ],
+        "span_offsets": [
+          [
+            484,
+            497
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "There is a 30% chance of reduced nipple sensation after the surgery.",
+        "spans": [
+          "a 30% chance of reduced nipple sensation or no sensation after the surgery"
+        ],
+        "span_offsets": [
+          [
+            508,
+            582
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "There is a 30% chance of no nipple sensation after the surgery.",
+        "spans": [
+          "a 30% chance of reduced nipple sensation or no sensation after the surgery"
+        ],
+        "span_offsets": [
+          [
+            508,
+            582
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will need to follow up with the office after insurance approval and before the surgery.",
+        "spans": [
+          "The patient will need to follow up with the office after the insurance approval and before the surgery"
+        ],
+        "span_offsets": [
+          [
+            596,
+            698
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will review the instructions during the follow-up visit before the surgery.",
+        "spans": [
+          "to review the instructions and any last-minute questions"
+        ],
+        "span_offsets": [
+          [
+            699,
+            755
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      },
+      {
+        "fact": "The patient will have the opportunity to ask last-minute questions during the follow-up visit before the surgery.",
+        "spans": [
+          "to review the instructions and any last-minute questions"
+        ],
+        "span_offsets": [
+          [
+            699,
+            755
+          ]
+        ],
+        "span_match_methods": [
+          "exact"
+        ],
+        "span_verified": true,
+        "synthesized": false
+      }
+    ]
+  }
+]

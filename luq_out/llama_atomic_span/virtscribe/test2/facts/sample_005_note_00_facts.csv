@@ -1,0 +1,47 @@
+fact_idx,section,fact,uncertainty,spans,span_offsets,span_match_methods,span_verified,synthesized
+0,subjective,Ms. Ross presents with symptoms of discomfort in her vaginal region.,0.0,"[""symptoms of discomfort, a change in discharge, and odor in her vaginal region""]","[[28, 105]]","[""exact""]",True,False
+1,subjective,Ms. Ross presents with a change in discharge in her vaginal region.,0.0,"[""symptoms of discomfort, a change in discharge, and odor in her vaginal region""]","[[28, 105]]","[""exact""]",True,False
+2,subjective,Ms. Ross presents with odor in her vaginal region.,0.0,"[""symptoms of discomfort, a change in discharge, and odor in her vaginal region""]","[[28, 105]]","[""exact""]",True,False
+3,subjective,Ms. Ross's symptoms are particularly on the right side of her vaginal region.,0.0,"[""particularly on the right side""]","[[107, 137]]","[""exact""]",True,False
+4,subjective,Ms. Ross's vaginal region has become painful.,0.0,"[""which has become painful""]","[[139, 163]]","[""exact""]",True,False
+5,subjective,Ms. Ross denies any fevers.,0.0,"[""She denies any fevers or chills""]","[[165, 196]]","[""exact""]",True,False
+6,subjective,Ms. Ross denies any chills.,0.0,"[""She denies any fevers or chills""]","[[165, 196]]","[""exact""]",True,False
+7,subjective,Ms. Ross's partner has been having sexual encounters with other people.,0.0,"[""her partner has been having sexual encounters with other people""]","[[215, 278]]","[""exact""]",True,False
+8,subjective,Ms. Ross wants to be evaluated for all STDs.,0.75,"[""She wants to be evaluated for all STDs""]","[[284, 322]]","[""exact""]",True,False
+9,subjective,Ms. Ross recently learned of her partner's infidelity.,0.0,"[""she recently learned of her partner's infidelity""]","[[342, 390]]","[""exact""]",True,False
+10,subjective,Ms. Ross is worried about contracting an STD.,0.0,"[""is worried about contracting an STD""]","[[395, 430]]","[""exact""]",True,False
+11,subjective,Ms. Ross has been experiencing abnormal discharge.,0.0,"[""abnormal discharge""]","[[475, 493]]","[""exact""]",True,False
+12,subjective,Ms. Ross's abnormal discharge smells differently than usual.,0.0,"[""which smells differently""]","[[495, 519]]","[""exact""]",True,False
+13,subjective,Ms. Ross's abnormal discharge has a different consistency than usual.,0.25,"[""and has a different consistency than usual""]","[[520, 562]]","[""exact""]",True,False
+14,subjective,Ms. Ross has right-sided vaginal pain.,0.0,"[""right-sided vaginal pain""]","[[600, 624]]","[""exact""]",True,False
+15,subjective,Ms. Ross's right-sided vaginal pain has not resolved.,0.5,"[""that has not resolved""]","[[625, 646]]","[""exact""]",True,False
+16,subjective,Ms. Ross had an irregular Pap smear at age 20.,0.0,"[""She had an irregular Pap smear at age 20""]","[[671, 711]]","[""exact""]",True,False
+17,subjective,Ms. Ross's irregular Pap smear at age 20 was not followed up with further testing until her last Pap smear six months ago.,0.75,"[""which was not followed up with further testing until her last Pap smear six months ago""]","[[713, 799]]","[""exact""]",True,False
+18,subjective,Ms. Ross's last Pap smear came back normal.,0.0,"[""which came back normal""]","[[801, 823]]","[""exact""]",True,False
+19,objective,The patient's pelvic exam demonstrates no external lesions.,0.0,"[""no external lesions""]","[[44, 63]]","[""exact""]",True,False
+20,objective,The patient's labia majora is normal.,0.0,"[""normal labia majora and labia minora""]","[[65, 101]]","[""exact""]",True,False
+21,objective,The patient's labia minora is normal.,0.0,"[""normal labia majora and labia minora""]","[[65, 101]]","[""exact""]",True,False
+22,objective,The patient has normal physiological discharge.,0.0,"[""normal physiological discharge""]","[[103, 133]]","[""exact""]",True,False
+23,objective,The patient's discharge has a normal color.,0.0,"[""normal color""]","[[139, 151]]","[""exact""]",True,False
+24,objective,The patient's discharge has a normal smell.,0.0,"[""normal smell""]","[[139, 161]]","[""word""]",True,False
+25,objective,The patient's cervix is normal.,0.0,"[""The cervix is normal""]","[[163, 183]]","[""exact""]",True,False
+26,objective,The patient's vaginal wall is normal.,0.0,"[""the vaginal wall is normal""]","[[185, 211]]","[""exact""]",True,False
+27,objective,The patient has no cervical motion tenderness.,0.0,"[""no cervical motion tenderness""]","[[213, 242]]","[""exact""]",True,False
+28,objective,The patient has no adnexal tenderness.,0.0,"[""no adnexal tenderness or masses were noted""]","[[248, 290]]","[""exact""]",True,False
+29,objective,The patient has no adnexal masses.,0.0,"[""no adnexal tenderness or masses were noted""]","[[248, 290]]","[""exact""]",True,False
+30,assessment,The patient is at risk for STDs.,0.0,"[""The patient is at risk for STDs due to her partner's history of infidelity and her own history of an abnormal Pap smear""]","[[12, 131]]","[""exact""]",True,False
+31,assessment,The patient's partner has a history of infidelity.,0.0,"[""her partner's history of infidelity""]","[[51, 86]]","[""exact""]",True,False
+32,assessment,The patient has a history of an abnormal Pap smear.,0.0,"[""her own history of an abnormal Pap smear"", ""Abnormal Pap smear past""]","[[91, 131], [144, 167]]","[""exact"", ""exact""]",True,True
+33,assessment,The patient's partner has multiple sexual partners.,0.5,"[""Partner with multiple sexual partners""]","[[169, 206]]","[""exact""]",True,False
+34,assessment,The patient has vaginal discharge.,0.75,"[""Vaginal discharge""]","[[208, 225]]","[""exact""]",True,False
+35,assessment,The patient has vaginal pain.,0.75,"[""Vaginal pain""]","[[227, 239]]","[""exact""]",True,False
+36,assessment,The patient's partner has recent infidelity.,0.25,"[""Recent partner infidelity""]","[[241, 266]]","[""exact""]",True,False
+37,plan,The patient will undergo STD testing for gonorrhea.,0.0,"[""STD testing for gonorrhea, chlamydia, trichomoniasis, and blood tests for syphilis, HIV, and hepatitis C""]","[[54, 158]]","[""exact""]",True,False
+38,plan,The patient will undergo STD testing for chlamydia.,0.0,"[""STD testing for gonorrhea, chlamydia, trichomoniasis, and blood tests for syphilis, HIV, and hepatitis C""]","[[54, 158]]","[""exact""]",True,False
+39,plan,The patient will undergo STD testing for trichomoniasis.,0.0,"[""STD testing for gonorrhea, chlamydia, trichomoniasis, and blood tests for syphilis, HIV, and hepatitis C""]","[[54, 158]]","[""exact""]",True,False
+40,plan,The patient will undergo blood tests for syphilis.,0.0,"[""STD testing for gonorrhea, chlamydia, trichomoniasis, and blood tests for syphilis, HIV, and hepatitis C""]","[[54, 158]]","[""exact""]",True,False
+41,plan,The patient will undergo blood tests for HIV.,0.0,"[""STD testing for gonorrhea, chlamydia, trichomoniasis, and blood tests for syphilis, HIV, and hepatitis C""]","[[54, 158]]","[""exact""]",True,False
+42,plan,The patient will undergo blood tests for hepatitis C.,0.0,"[""STD testing for gonorrhea, chlamydia, trichomoniasis, and blood tests for syphilis, HIV, and hepatitis C""]","[[54, 158]]","[""exact""]",True,False
+43,plan,The patient has a history of abnormal Pap smear.,0.0,"[""past abnormal Pap smear""]","[[338, 361]]","[""exact""]",True,False
+44,plan,The patient is at high risk.,0.0,"[""she is at high risk""]","[[307, 326]]","[""exact""]",True,False
+45,plan,The patient will have a follow-up appointment at her next annual check-up if all results are normal.,0.25,"[""I will see her again at her next annual check-up if all results are normal""]","[[415, 489]]","[""exact""]",True,False
