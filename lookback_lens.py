@@ -40,8 +40,15 @@ loose phrasing):
     an ablation.
 
 Labels come from the span-judge CSVs (sentence_idx, sentence, label,
-note_span); a sentence is hallucinated iff any of its judged rows has
-label != "Faithful".
+note_span). Two units (paper §2.2), selected with --unit:
+  sentence : one unit per judged sentence, label 1 iff any judged row has
+             label != "Faithful". Sliding-window labeling at sentence size;
+             directly comparable to redeep_sentence.py's fig3_auroc.
+  span     : the paper's PREDEFINED-SPAN setting — positives are the exact
+             annotated hallucinated note_span substrings; negatives are clean
+             spans (fully-Faithful sentences, or before-first/after-last
+             segments with --clean-mode paper). Use this when the judge
+             annotations are span-level.
 
 Outputs (under --out)
 ---------------------
@@ -70,6 +77,124 @@ from redeep_sentence import (
     tokenize_prompt_and_note,
     find_sentence_token_spans,
 )
+# Whitespace/case-tolerant substring locator (independent, cursor-free) — used
+# to map annotated note_span strings to char ranges for the predefined-span unit.
+from redeep_word_plots import find_span_char_range
+
+
+def build_char_token_map(model, full_ids, transcript_len):
+    """
+    Build a cursor-free char->token mapping over the NOTE region.
+
+    Returns (note_text, char_to_tok, n_search):
+      note_text    reconstructed note string (special tokens stripped from tail)
+      char_to_tok  fn: char index in note_text -> note-relative token index
+      n_search     number of searchable (non-special) note tokens
+
+    Same prefix-decode reconstruction as find_sentence_token_spans, but WITHOUT
+    the monotonic search cursor, so arbitrary/overlapping spans (annotated
+    hallucinated substrings) each locate independently.
+    """
+    tokenizer = model.tokenizer
+    note_token_ids = full_ids[0, transcript_len:].tolist()
+    special_ids = set(tokenizer.all_special_ids or [])
+    n_search = len(note_token_ids)
+    while n_search > 0 and note_token_ids[n_search - 1] in special_ids:
+        n_search -= 1
+
+    cumulative_len = []
+    note_text = ""
+    for i in range(n_search):
+        note_text = tokenizer.decode(note_token_ids[: i + 1],
+                                     skip_special_tokens=False)
+        cumulative_len.append(len(note_text))
+
+    def char_to_tok(char_pos: int) -> int:
+        for i, clen in enumerate(cumulative_len):
+            if clen > char_pos:
+                return i
+        return max(0, n_search - 1)
+
+    return note_text, char_to_tok, n_search
+
+
+def _charrange_to_tokspan(cs, ce, char_to_tok, n_search):
+    """Half-open note-relative token span covering char range [cs, ce)."""
+    a = char_to_tok(cs)
+    b = char_to_tok(max(cs, ce - 1)) + 1
+    a = max(0, min(a, n_search - 1))
+    b = max(a + 1, min(b, n_search))
+    return a, b
+
+
+def note_span_units(df, note_text, char_to_tok, n_search, clean_mode: str):
+    """
+    Predefined-span units for ONE note (paper §2.2 setting 1).
+
+    Positives  = the annotated hallucinated note_span substrings (label 1).
+    Negatives  = clean spans:
+      clean_mode="sentence": every fully-Faithful sentence (all its rows
+                             Faithful) -> one clean span each. Better for long
+                             SOAP notes; keeps each span entirely clean.
+      clean_mode="paper":    the segment before the first and after the last
+                             hallucinated span; or the whole note if the note
+                             has no hallucinated span. (Text between spans is
+                             discarded, exactly as in the paper.)
+
+    Returns (tok_spans, labels, types, n_hallu_attempt, n_hallu_found).
+    """
+    tok_spans, labels, types = [], [], []
+    n_hallu_attempt = n_hallu_found = 0
+    hallu_ranges = []
+
+    # --- positives: annotated hallucinated spans ---
+    for _, row in df.iterrows():
+        lab = str(row.get("label", "")).strip()
+        span = str(row.get("note_span", "") or "").strip()
+        if lab.lower() == "faithful" or not span:
+            continue
+        n_hallu_attempt += 1
+        rng = find_span_char_range(note_text, span)
+        if rng is None:
+            continue
+        n_hallu_found += 1
+        cs, ce = rng
+        hallu_ranges.append((cs, ce))
+        a, b = _charrange_to_tokspan(cs, ce, char_to_tok, n_search)
+        tok_spans.append((a, b)); labels.append(1); types.append(lab or "Hallucinated")
+
+    # --- negatives: clean spans ---
+    if clean_mode == "paper":
+        if not hallu_ranges:
+            clean_ranges = [(0, len(note_text))]
+        else:
+            first = min(cs for cs, _ in hallu_ranges)
+            last = max(ce for _, ce in hallu_ranges)
+            clean_ranges = []
+            if first > 0:
+                clean_ranges.append((0, first))
+            if last < len(note_text):
+                clean_ranges.append((last, len(note_text)))
+        for cs, ce in clean_ranges:
+            if ce <= cs:
+                continue
+            a, b = _charrange_to_tokspan(cs, ce, char_to_tok, n_search)
+            tok_spans.append((a, b)); labels.append(0); types.append("Faithful")
+    else:  # "sentence": fully-Faithful sentences as clean spans
+        for _, grp in df.groupby("sentence_idx", sort=True):
+            fully_faithful = (grp["label"].astype(str).str.strip().str.lower()
+                              == "faithful").all()
+            if not fully_faithful:
+                continue
+            sent = str(grp["sentence"].iloc[0])
+            rng = find_span_char_range(note_text, sent)
+            if rng is None:
+                continue
+            cs, ce = rng
+            a, b = _charrange_to_tokspan(cs, ce, char_to_tok, n_search)
+            tok_spans.append((a, b)); labels.append(0); types.append("Faithful")
+
+    return tok_spans, labels, types, n_hallu_attempt, n_hallu_found
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -228,25 +353,33 @@ def build_dataset(
     context_transcript_only: bool,
     region_sum: bool,
     include_self: bool,
-) -> Tuple[np.ndarray, np.ndarray, np.ndarray, Tuple[int, int]]:
+    unit: str = "sentence",
+    clean_mode: str = "sentence",
+) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, Tuple[int, int]]:
     """
-    Returns (X, y, groups, (n_layers, n_heads)).
-    groups[i] is an integer note id (samples in the same note share it) so a
-    note never straddles a CV fold.
+    Returns (X, y, groups, types, (n_layers, n_heads)).
+
+    unit="sentence": one row per judged sentence; label 1 if the sentence
+                     overlaps any hallucinated span (paper §2.2 sliding-window
+                     labeling, sentence-sized). Comparable to ReDeEP fig3.
+    unit="span":     predefined-span setting (paper §2.2 setting 1) — positives
+                     are the annotated hallucinated note_span substrings,
+                     negatives are clean spans (see clean_mode). Use this when
+                     the judge annotations are span-level.
+
+    groups[i] is an integer note id (rows from the same note share it) so a note
+    never straddles a CV fold. types[i] is the CREOLA label for a positive unit
+    ("Faithful" for negatives).
     """
-    # Scaffold length: token count of the prompt WITHOUT any transcript, so
-    # context_start skips exactly the chat/instruction wrapper. Computed once
-    # via the same longest-common-prefix trick tokenize_prompt_and_note uses.
     scaffold_len = 0
     if context_transcript_only:
-        # Cheap probe: transcript_len for an empty transcript == scaffold size.
         _, scaffold_len = tokenize_prompt_and_note(model, "", "x", device)
-        scaffold_len = max(scaffold_len - 0, 0)
         print(f"  scaffold length (excluded from context): {scaffold_len} tokens")
 
     X_parts: List[np.ndarray] = []
     y_parts: List[np.ndarray] = []
     g_parts: List[np.ndarray] = []
+    t_parts: List[np.ndarray] = []
     shape: Optional[Tuple[int, int]] = None
 
     gen_cache: Dict[int, dict] = {}
@@ -259,8 +392,8 @@ def build_dataset(
             continue
         si, k = int(m.group(1)), int(m.group(2))
 
-        sentences, labels = load_labeled_sentences(span_csv)
-        if not sentences:
+        df = pd.read_csv(span_csv)
+        if df.empty or "sentence" not in df.columns:
             continue
 
         if si not in gen_cache:
@@ -286,13 +419,30 @@ def build_dataset(
             print(f"  [skip] sample_{si:03d}_note_{k:02d} tokenise: {exc}")
             continue
 
-        try:
-            spans, n_fail, n_fuzzy = find_sentence_token_spans(
-                model, full_ids, T, sentences
-            )
-        except Exception as exc:
-            print(f"  [skip] sample_{si:03d}_note_{k:02d} spans: {exc}")
-            continue
+        # --- unit-specific span/label/type construction ---
+        diag = ""
+        if unit == "span":
+            note_text, char_to_tok, n_search = build_char_token_map(
+                model, full_ids, T)
+            spans, lab_list, typ_list, n_att, n_found = note_span_units(
+                df, note_text, char_to_tok, n_search, clean_mode)
+            if not spans:
+                continue
+            lab = np.asarray(lab_list, dtype=int)
+            typ = np.asarray(typ_list, dtype=object)
+            diag = f"hallu_spans={n_found}/{n_att}"
+        else:  # "sentence"
+            sentences, lab = load_labeled_sentences(span_csv)
+            if len(sentences) == 0:
+                continue
+            try:
+                spans, n_fail, n_fuzzy = find_sentence_token_spans(
+                    model, full_ids, T, sentences)
+            except Exception as exc:
+                print(f"  [skip] sample_{si:03d}_note_{k:02d} spans: {exc}")
+                continue
+            typ = np.where(lab == 1, "Hallucinated", "Faithful").astype(object)
+            diag = f"span_fail={n_fail}, fuzzy={n_fuzzy}"
 
         context_start = scaffold_len if context_transcript_only else 0
         context_start = min(context_start, max(T - 1, 0))
@@ -306,14 +456,15 @@ def build_dataset(
             print(f"  [skip] sample_{si:03d}_note_{k:02d} forward: {exc}")
             continue
 
-        feats = sentence_features(lr, spans)  # (n_sent, L*H)
+        feats = sentence_features(lr, spans)  # (n_units, L*H)
 
-        # Drop sentences whose span was degenerate (all-NaN feature row).
+        # Drop units whose span was degenerate (all-NaN feature row).
         good = ~np.all(np.isnan(feats), axis=1)
         if not good.any():
             continue
         feats = feats[good]
-        lab = labels[good]
+        lab = lab[good]
+        typ = typ[good]
 
         # Impute any residual per-head NaNs with 0.5 (neutral lookback).
         feats = np.where(np.isnan(feats), 0.5, feats)
@@ -321,11 +472,12 @@ def build_dataset(
         X_parts.append(feats)
         y_parts.append(lab)
         g_parts.append(np.full(len(lab), note_id, dtype=int))
+        t_parts.append(typ)
         shape = (lr.shape[0], lr.shape[1])
         note_id += 1
         print(f"  sample_{si:03d}_note_{k:02d}: "
-              f"{len(lab)} sents, {int(lab.sum())} hallucinated  "
-              f"(T={T}, span_fail={n_fail}, fuzzy={n_fuzzy})")
+              f"{len(lab)} {unit}s, {int(lab.sum())} hallucinated  "
+              f"(T={T}, {diag})")
 
     if not X_parts:
         raise RuntimeError("no usable notes — check --spans / --generations paths")
@@ -333,7 +485,8 @@ def build_dataset(
     X = np.vstack(X_parts)
     y = np.concatenate(y_parts)
     groups = np.concatenate(g_parts)
-    return X, y, groups, shape
+    types = np.concatenate(t_parts)
+    return X, y, groups, types, shape
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -386,6 +539,7 @@ def run_probe(
     shape: Tuple[int, int], out_dir: Path,
     n_splits: int = 5, seed: int = 0,
     standardize: bool = True, class_weight=None,
+    types: Optional[np.ndarray] = None, unit: str = "sentence",
 ) -> None:
     from sklearn.model_selection import StratifiedGroupKFold
     from sklearn.metrics import roc_auc_score
@@ -421,10 +575,12 @@ def run_probe(
     # Persist.
     out_dir.mkdir(parents=True, exist_ok=True)
     head_idx = np.array([(l, h) for l in range(n_layers) for h in range(n_heads)])
+    if types is None:
+        types = np.where(y == 1, "Hallucinated", "Faithful").astype(object)
     np.savez(out_dir / "features.npz",
-             X=X, y=y, groups=groups, head_index=head_idx)
+             X=X, y=y, groups=groups, head_index=head_idx, types=types)
     pd.DataFrame({
-        "note_group": groups, "label": y, "oof_prob": oof,
+        "note_group": groups, "label": y, "type": types, "oof_prob": oof,
         "baseline_prob": base_oof,
     }).to_csv(out_dir / "oof_predictions.csv", index=False)
 
@@ -445,9 +601,9 @@ def run_probe(
     mean_coef = mean_abs_coef  # keep downstream report (top heads by magnitude)
 
     report = [
-        "Lookback Lens — sentence-level hallucination probe",
+        f"Lookback Lens — {unit}-level hallucination probe",
         "=" * 52,
-        f"sentences={len(y)}  notes={len(np.unique(groups))}  "
+        f"{unit}s={len(y)}  notes={len(np.unique(groups))}  "
         f"hallucinated={int(y.sum())} ({y.mean():.1%})",
         f"features = {n_layers}x{n_heads} = {X.shape[1]} lookback ratios",
         "",
@@ -455,9 +611,25 @@ def run_probe(
         f"{', '.join(f'{a:.3f}' for a in fold_aurocs)}",
         f"pooled OOF AUROC   = {point:.3f}  (95% CI {lo:.3f}-{hi:.3f})",
         f"aggregate baseline = {b_point:.3f}  (95% CI {b_lo:.3f}-{b_hi:.3f})",
-        "",
-        "Top-10 heads by |coef| (see head_coefficients.csv):",
     ]
+
+    # Per-CREOLA-type detectability: AUROC of each hallucination type's
+    # positives vs ALL faithful negatives (holding negatives fixed so the
+    # numbers are comparable across types).
+    neg = valid & (y == 0)
+    pos_types = sorted({t for t, yy in zip(types[valid], y[valid]) if yy == 1})
+    if len(pos_types) > 1:
+        report += ["", "Per-type AUROC (this type's positives vs all faithful):"]
+        for t in pos_types:
+            sel = neg | (valid & (y == 1) & (types == t))
+            ys, ps = y[sel], oof[sel]
+            n_t = int((valid & (y == 1) & (types == t)).sum())
+            if len(np.unique(ys)) == 2:
+                report.append(f"  {t:<14} AUROC={roc_auc_score(ys, ps):.3f}  (n={n_t})")
+            else:
+                report.append(f"  {t:<14} (n={n_t}, undefined)")
+
+    report += ["", "Top-10 heads by |coef| (see head_coefficients.csv):"]
     top = (pd.DataFrame({"layer": head_idx[:, 0], "head": head_idx[:, 1],
                          "c": mean_coef})
            .sort_values("c", ascending=False).head(10))
@@ -501,6 +673,16 @@ def main() -> None:
     ap.add_argument("--balance", action="store_true",
                     help="class_weight='balanced' for imbalanced clinical data "
                          "(paper uses sklearn default, i.e. no weighting)")
+    ap.add_argument("--unit", choices=["sentence", "span"], default="sentence",
+                    help="'sentence': one unit per judged sentence, label from "
+                         "span overlap (comparable to ReDeEP fig3). 'span': "
+                         "paper's predefined-span setting — positives are the "
+                         "annotated note_span substrings.")
+    ap.add_argument("--clean-mode", choices=["sentence", "paper"],
+                    default="sentence",
+                    help="[--unit span only] negatives from fully-Faithful "
+                         "sentences ('sentence', better for long notes) or the "
+                         "before-first/after-last segments ('paper').")
     args = ap.parse_args()
 
     span_files = sorted(Path(args.spans).glob("sample_*_span_judge.csv"))
@@ -511,19 +693,22 @@ def main() -> None:
     print(f"Loading {args.model} …")
     model = load_model(args.model, args.device)
 
-    print(f"Building features from {len(span_files)} labeled notes …")
-    X, y, groups, shape = build_dataset(
+    print(f"Building {args.unit}-level features from {len(span_files)} "
+          f"labeled notes …")
+    X, y, groups, types, shape = build_dataset(
         model, span_files, Path(args.generations), args.device,
         context_transcript_only=args.context_transcript_only,
         region_sum=args.region_sum,
         include_self=args.include_self_in_new,
+        unit=args.unit, clean_mode=args.clean_mode,
     )
     print(f"\nDataset: X={X.shape}  hallucinated={int(y.sum())}/{len(y)}  "
           f"notes={len(np.unique(groups))}")
     run_probe(X, y, groups, shape, Path(args.out),
               n_splits=args.n_splits, seed=args.seed,
               standardize=not args.no_standardize,
-              class_weight="balanced" if args.balance else None)
+              class_weight="balanced" if args.balance else None,
+              types=types, unit=args.unit)
 
 
 if __name__ == "__main__":
