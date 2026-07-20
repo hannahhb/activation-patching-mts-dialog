@@ -197,6 +197,36 @@ def note_span_units(df, note_text, char_to_tok, n_search, clean_mode: str):
     return tok_spans, labels, types, n_hallu_attempt, n_hallu_found
 
 
+def window_units(hallu_typed, n_search: int, w: int):
+    """
+    Non-overlapping w-token chunks over the note (paper §2.2 sliding window).
+    A chunk is positive iff it overlaps any hallucinated span token range.
+
+    hallu_typed : list of ((a, b), creola_type) hallucinated span token ranges.
+    Returns (tok_spans, labels, types) — a chunk's type is the CREOLA label of
+    the first hallucinated token it covers, else "Faithful".
+    """
+    hallu_mask = np.zeros(n_search, dtype=bool)
+    hallu_type = np.full(n_search, "Faithful", dtype=object)
+    for (a, b), t in hallu_typed:
+        a = max(0, a)
+        b = min(n_search, b)
+        if b > a:
+            hallu_mask[a:b] = True
+            hallu_type[a:b] = t
+    tok_spans, labels, types = [], [], []
+    for a in range(0, n_search, w):
+        b = min(n_search, a + w)
+        if b <= a:
+            continue
+        seg = hallu_mask[a:b]
+        pos = bool(seg.any())
+        tok_spans.append((a, b))
+        labels.append(1 if pos else 0)
+        types.append(str(hallu_type[a + int(np.argmax(seg))]) if pos else "Faithful")
+    return tok_spans, labels, types
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Label loading — one row-group per sentence from the span-judge CSV
 # ─────────────────────────────────────────────────────────────────────────────
@@ -355,6 +385,7 @@ def build_dataset(
     include_self: bool,
     unit: str = "sentence",
     clean_mode: str = "sentence",
+    window: int = 8,
 ) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, Tuple[int, int]]:
     """
     Returns (X, y, groups, types, (n_layers, n_heads)).
@@ -366,6 +397,10 @@ def build_dataset(
                      are the annotated hallucinated note_span substrings,
                      negatives are clean spans (see clean_mode). Use this when
                      the judge annotations are span-level.
+    unit="window":   paper §2.2 setting 2 — non-overlapping fixed `window`-token
+                     chunks, each labelled 1 iff it overlaps any hallucinated
+                     span. The annotation-free segmentation used for guided
+                     decoding; the honest sliding-window detector.
 
     groups[i] is an integer note id (rows from the same note share it) so a note
     never straddles a CV fold. types[i] is the CREOLA label for a positive unit
@@ -431,6 +466,20 @@ def build_dataset(
             lab = np.asarray(lab_list, dtype=int)
             typ = np.asarray(typ_list, dtype=object)
             diag = f"hallu_spans={n_found}/{n_att}"
+        elif unit == "window":
+            note_text, char_to_tok, n_search = build_char_token_map(
+                model, full_ids, T)
+            # Hallucinated span token ranges (positives from note_span_units).
+            h_spans, h_labs, h_typs, n_att, n_found = note_span_units(
+                df, note_text, char_to_tok, n_search, "sentence")
+            hallu_typed = [(sp, t) for sp, l, t in zip(h_spans, h_labs, h_typs)
+                           if l == 1]
+            spans, lab_list, typ_list = window_units(hallu_typed, n_search, window)
+            if not spans:
+                continue
+            lab = np.asarray(lab_list, dtype=int)
+            typ = np.asarray(typ_list, dtype=object)
+            diag = f"windows={len(spans)}, hallu_spans={n_found}/{n_att}"
         else:  # "sentence"
             sentences, lab = load_labeled_sentences(span_csv)
             if len(sentences) == 0:
@@ -517,7 +566,7 @@ def cluster_bootstrap_auroc(
 def _fit_predict(X_tr, y_tr, X_te, standardize, class_weight):
     """
     One train/predict cycle inside a Pipeline so any standardisation is fit on
-    train only. Returns (test_probabilities, coef_in_input_space).
+    train only. Returns (test_probabilities, train_probabilities, coef).
     """
     from sklearn.linear_model import LogisticRegression
     from sklearn.preprocessing import StandardScaler
@@ -530,8 +579,9 @@ def _fit_predict(X_tr, y_tr, X_te, standardize, class_weight):
         pipe = make_pipeline(StandardScaler(), logreg).fit(X_tr, y_tr)
     else:
         pipe = make_pipeline(logreg).fit(X_tr, y_tr)
-    p = pipe.predict_proba(X_te)[:, 1]
-    return p, logreg.coef_.ravel()
+    p_te = pipe.predict_proba(X_te)[:, 1]
+    p_tr = pipe.predict_proba(X_tr)[:, 1]
+    return p_te, p_tr, logreg.coef_.ravel()
 
 
 def run_probe(
@@ -547,24 +597,26 @@ def run_probe(
     n_layers, n_heads = shape
     oof = np.full(len(y), np.nan)
     coefs = []
-    fold_aurocs = []
+    fold_test, fold_train = [], []   # per-fold Test / Train AUROC (paper §2.3)
 
     skf = StratifiedGroupKFold(n_splits=n_splits, shuffle=True, random_state=seed)
     for fold, (tr, te) in enumerate(skf.split(X, y, groups)):
-        p, coef = _fit_predict(X[tr], y[tr], X[te], standardize, class_weight)
+        p, p_tr, coef = _fit_predict(X[tr], y[tr], X[te], standardize, class_weight)
         oof[te] = p
         coefs.append(coef)
-        if len(np.unique(y[te])) == 2:
-            a = roc_auc_score(y[te], p)
-            fold_aurocs.append(a)
-            print(f"  fold {fold}: AUROC={a:.3f}  (n_test={len(te)})")
+        a_te = roc_auc_score(y[te], p) if len(np.unique(y[te])) == 2 else float("nan")
+        a_tr = roc_auc_score(y[tr], p_tr) if len(np.unique(y[tr])) == 2 else float("nan")
+        fold_test.append(a_te)
+        fold_train.append(a_tr)
+        print(f"  fold {fold}: Train AUROC={a_tr:.3f}  Test AUROC={a_te:.3f}  "
+              f"(n_train={len(tr)}, n_test={len(te)})")
 
     # Aggregate context-reliance baseline: single feature = mean LR over heads.
     base_feat = X.mean(axis=1, keepdims=True)
     base_oof = np.full(len(y), np.nan)
     for tr, te in skf.split(base_feat, y, groups):
-        p, _ = _fit_predict(base_feat[tr], y[tr], base_feat[te],
-                            standardize, class_weight)
+        p, _, _ = _fit_predict(base_feat[tr], y[tr], base_feat[te],
+                               standardize, class_weight)
         base_oof[te] = p
 
     valid = ~np.isnan(oof)
@@ -607,8 +659,10 @@ def run_probe(
         f"hallucinated={int(y.sum())} ({y.mean():.1%})",
         f"features = {n_layers}x{n_heads} = {X.shape[1]} lookback ratios",
         "",
-        f"per-fold AUROC: "
-        f"{', '.join(f'{a:.3f}' for a in fold_aurocs)}",
+        f"mean Train AUROC   = {np.nanmean(fold_train):.3f}   "
+        f"(per fold: {', '.join(f'{a:.3f}' for a in fold_train)})",
+        f"mean Test  AUROC   = {np.nanmean(fold_test):.3f}   "
+        f"(per fold: {', '.join(f'{a:.3f}' for a in fold_test)})",
         f"pooled OOF AUROC   = {point:.3f}  (95% CI {lo:.3f}-{hi:.3f})",
         f"aggregate baseline = {b_point:.3f}  (95% CI {b_lo:.3f}-{b_hi:.3f})",
     ]
@@ -673,16 +727,21 @@ def main() -> None:
     ap.add_argument("--balance", action="store_true",
                     help="class_weight='balanced' for imbalanced clinical data "
                          "(paper uses sklearn default, i.e. no weighting)")
-    ap.add_argument("--unit", choices=["sentence", "span"], default="sentence",
+    ap.add_argument("--unit", choices=["sentence", "span", "window"],
+                    default="sentence",
                     help="'sentence': one unit per judged sentence, label from "
                          "span overlap (comparable to ReDeEP fig3). 'span': "
                          "paper's predefined-span setting — positives are the "
-                         "annotated note_span substrings.")
+                         "annotated note_span substrings. 'window': paper's "
+                         "sliding-window setting — non-overlapping --window-token "
+                         "chunks labelled by span overlap.")
     ap.add_argument("--clean-mode", choices=["sentence", "paper"],
                     default="sentence",
                     help="[--unit span only] negatives from fully-Faithful "
                          "sentences ('sentence', better for long notes) or the "
                          "before-first/after-last segments ('paper').")
+    ap.add_argument("--window", type=int, default=8,
+                    help="[--unit window] chunk size in tokens (paper uses 8).")
     args = ap.parse_args()
 
     span_files = sorted(Path(args.spans).glob("sample_*_span_judge.csv"))
@@ -700,7 +759,7 @@ def main() -> None:
         context_transcript_only=args.context_transcript_only,
         region_sum=args.region_sum,
         include_self=args.include_self_in_new,
-        unit=args.unit, clean_mode=args.clean_mode,
+        unit=args.unit, clean_mode=args.clean_mode, window=args.window,
     )
     print(f"\nDataset: X={X.shape}  hallucinated={int(y.sum())}/{len(y)}  "
           f"notes={len(np.unique(groups))}")

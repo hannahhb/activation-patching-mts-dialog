@@ -90,17 +90,19 @@ def map_spans_to_tokens(model, full_ids, T, span_strings):
     return out
 
 
-def sliding_window(tok_lb: np.ndarray, w: int) -> np.ndarray:
-    """Rolling mean of per-token lookback; win[i] centered on token i."""
+def chunk_lookback(tok_lb: np.ndarray, hallu_tok: np.ndarray, w: int):
+    """
+    Paper's sliding-window setting: NON-overlapping fixed-size chunks. Each chunk
+    is labeled hallucinated iff it overlaps any annotated span (token overlap).
+    Returns list of (a, b, mean_lookback, is_hallu).
+    """
     n = len(tok_lb)
-    out = np.full(n, np.nan)
-    half = w // 2
-    for i in range(n):
-        a = max(0, i - half)
+    chunks = []
+    for a in range(0, n, w):
         b = min(n, a + w)
-        a = max(0, b - w)
-        out[i] = np.nanmean(tok_lb[a:b])
-    return out
+        chunks.append((a, b, float(np.nanmean(tok_lb[a:b])),
+                       bool(hallu_tok[a:b].any())))
+    return chunks
 
 
 def _color_for(lb: float) -> str:
@@ -164,26 +166,37 @@ Coloured underline = span the LLM judge flagged as hallucinated.</p>
 <div class="note">{text_html}</div>
 <h2>2. Window-level (sliding window = {w}) and span-level lookback</h2>
 <img src="data:image/png;base64,{panels_png_b64}" style="max-width:100%">
-<p class="cap">Left: sliding-window lookback across the note (the annotation-free
-view); shaded bands are judge-flagged hallucinated spans. Right: mean lookback
-per annotated span — hallucinated (by CREOLA type) vs faithful.</p>
+<p class="cap">Left: sliding-window setting — non-overlapping {w}-token chunks, each
+labelled hallucinated (red) iff it overlaps a judge span; bar height = chunk
+mean lookback. Right: predefined-span setting — mean lookback per annotated
+span, hallucinated (by CREOLA type) vs faithful.</p>
 </body></html>"""
     out_path.write_text(html)
 
 
-def make_panels_png(tok_lb, win_lb, hallu_ranges_typed, span_rows, w) -> str:
+def make_panels_png(tok_lb, chunks, hallu_ranges_typed, span_rows, w) -> str:
     fig, (axL, axR) = plt.subplots(1, 2, figsize=(12, 4.2),
                                    gridspec_kw={"width_ratios": [2, 1]})
     n = len(tok_lb)
-    x = np.arange(n)
-    axL.plot(x, tok_lb, color="#bbb", lw=0.8, label="per-token")
-    axL.plot(x, win_lb, color="#111", lw=1.8, label=f"sliding window={w}")
-    axL.axhline(0.5, color="grey", ls=":", lw=0.8)
-    for (a, b, typ) in hallu_ranges_typed:
-        axL.axvspan(a, b, color=TYPE_COLOR.get(typ, "#d62728"), alpha=0.18)
+    # Faint per-token lookback for within-chunk context.
+    axL.plot(np.arange(n), tok_lb, color="#ccc", lw=0.6, alpha=0.7, zorder=1)
+    # Non-overlapping chunk bars; red = chunk overlaps a judge span.
+    centers = [(a + b) / 2 for a, b, _, _ in chunks]
+    widths = [(b - a) * 0.86 for a, b, _, _ in chunks]
+    vals = [lb for _, _, lb, _ in chunks]
+    cols = ["#d62728" if hal else "#7f9cb5" for _, _, _, hal in chunks]
+    axL.bar(centers, vals, width=widths, color=cols, edgecolor="white",
+            linewidth=0.8, zorder=2)
+    for a, _, _, _ in chunks[1:]:                       # chunk boundaries
+        axL.axvline(a, color="#eee", lw=0.6, zorder=0)
+    axL.axhline(0.5, color="grey", ls=":", lw=0.8, zorder=3)
     axL.set_xlabel("note token position")
-    axL.set_ylabel("lookback ratio")
-    axL.set_title("Window-level lookback (hallucinated spans shaded)")
+    axL.set_ylabel("chunk mean lookback")
+    axL.set_ylim(0, 1)
+    axL.set_title(f"Sliding window = {w} (non-overlapping chunks)\n"
+                  "red = chunk overlaps a judge span")
+    axL.bar(0, 0, color="#d62728", label="hallucinated chunk")
+    axL.bar(0, 0, color="#7f9cb5", label="faithful chunk")
     axL.legend(fontsize=8, loc="lower left")
 
     labels = [r["label"] for r in span_rows]
@@ -231,7 +244,6 @@ def main() -> None:
     tok_lb = np.nanmean(lr, axis=(0, 1))                     # (n_note,)
     tok_strs, n_search = per_token_strings(model, full_ids, T)
     tok_lb = tok_lb[:n_search]
-    win_lb = sliding_window(tok_lb, args.window)
 
     # Hallucinated spans (typed) + faithful sentences, mapped to token ranges.
     hallu_rows, faith_rows = [], []
@@ -272,19 +284,24 @@ def main() -> None:
         span_rows.append({"label": "faithful", "lb": float(np.nanmean(tok_lb[a:b])),
                           "short": f"[faith] {sent[:22]}"})
 
-    png_b64 = make_panels_png(tok_lb, win_lb, hallu_ranges_typed, span_rows, args.window)
+    chunks = chunk_lookback(tok_lb, hallu_tok, args.window)
+    png_b64 = make_panels_png(tok_lb, chunks, hallu_ranges_typed, span_rows, args.window)
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
     title = f"Lookback Lens worked example — sample_{si:03d}_note_{k:02d}"
     render_html(tok_strs[:n_search], tok_lb, hallu_tok, hallu_label,
                 png_b64, title, args.window, out_dir / "worked_example.html")
 
-    # Also dump the raw per-token series for reproducibility.
+    # Per-token series + per-chunk (sliding-window setting) series.
+    chunk_id = np.array([i // args.window for i in range(n_search)])
     pd.DataFrame({"pos": np.arange(n_search), "token": tok_strs[:n_search],
-                  "lookback": tok_lb, "window_lookback": win_lb,
-                  "hallucinated": hallu_tok,
-                  "type": hallu_label}).to_csv(
+                  "lookback": tok_lb, "chunk_id": chunk_id,
+                  "hallucinated": hallu_tok, "type": hallu_label}).to_csv(
         out_dir / "per_token_lookback.csv", index=False)
+    pd.DataFrame([{"chunk_id": i, "tok_start": a, "tok_end": b,
+                   "mean_lookback": lb, "hallucinated": hal}
+                  for i, (a, b, lb, hal) in enumerate(chunks)]).to_csv(
+        out_dir / "chunk_lookback.csv", index=False)
 
     print(f"\nWrote {out_dir/'worked_example.html'}")
     print(f"  hallucinated spans mapped: "
